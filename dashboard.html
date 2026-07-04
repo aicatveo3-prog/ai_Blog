@@ -472,7 +472,7 @@ function openItem(it){
   vbar.style.display = vs.length>1 ? 'flex' : 'none';
   vnote.style.display = 'none';
   if(vs.length>1){
-    const notes = { '자세히':'쉽고 자세하게 풀어 쓴 설명본', '정리본':'발표 내용만 압축한 요약본' };
+    const notes = { '자세히':'쉽고 자세하게 풀어 쓴 설명본', '정리본':'발표 내용만 압축한 요약본', '💬 반응':'커뮤니티·전문가·언론의 실제 반응 모음 (출처 링크 포함)' };
     function pick(i){
       vbar.querySelectorAll('.vchip').forEach((c,ci)=>c.classList.toggle('on',ci===i));
       const nt = notes[vs[i].v];
