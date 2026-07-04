@@ -140,6 +140,26 @@ const overlay = document.getElementById('overlay');
 const docEl = document.getElementById('doc');
 const rkind = document.getElementById('rkind');
 
+// 데이터는 raw.githubusercontent에서 읽는다 (GitHub Pages 빌드 대기 없이 몇 초 안에 반영).
+// 브랜치를 바꾸면 아래 한 줄만 수정. raw가 막히면(비공개 저장소 등) 자동으로 Pages 상대경로로 폴백.
+const RAW_BASE = 'https://raw.githubusercontent.com/aicatveo3-prog/ai_Blog/claude/github-upload-setup-vimtlp/';
+let RAW_OK = null;   // null=미판정, true=raw 사용, false=폴백만 (첫 요청에서 한 번만 판정)
+async function fetchData(path){
+  const bust = (path.includes('?')?'&':'?') + 't=' + Date.now();
+  if(RAW_OK === false) return fetch(path + bust, {cache:'no-store'});   // 이미 raw 불가로 판정됨
+  try{
+    const ctl = new AbortController();
+    const timer = setTimeout(()=>ctl.abort(), 4000);
+    const r = await fetch(RAW_BASE + path + bust, {cache:'no-store', signal: ctl.signal});
+    clearTimeout(timer);
+    if(r.ok){ RAW_OK = true; return r; }
+    throw new Error(r.status);
+  }catch(_){
+    RAW_OK = false;
+    return fetch(path + bust, {cache:'no-store'});   // 폴백: Pages 상대경로
+  }
+}
+
 function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
 
 // inline: code, links (markdown + bare url autolink), bold, italic (no external deps)
@@ -219,7 +239,7 @@ const vnote = document.getElementById('vnote');
 async function loadInto(path){
   docEl.innerHTML = '<div class="loading">불러오는 중…</div>';
   try{
-    const res = await fetch(path + (path.includes('?')?'&':'?') + 't=' + Date.now(), {cache:'no-store'});
+    const res = await fetchData(path);
     if(!res.ok) throw new Error(res.status);
     const raw = await res.text();
     const {fm, body} = splitFrontmatter(raw);
@@ -305,7 +325,7 @@ function card(p){
 
 async function boot(){
   try{
-    const res = await fetch('posts.json?t=' + Date.now(), {cache:'no-store'});
+    const res = await fetchData('posts.json');
     const data = await res.json();
     document.getElementById('updated').textContent = '마지막 업데이트 '+ (data.updated||'') ;
     const stages = data.stages || ['인박스','검토중','선정','조사중','작성중','검수중','발행'];
