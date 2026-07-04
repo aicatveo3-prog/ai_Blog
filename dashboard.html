@@ -66,6 +66,12 @@
     display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-radius:18px 18px 0 0}
   .reader .rhead .k{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.5px}
   .close{border:none;background:var(--soft);width:34px;height:34px;border-radius:50%;font-size:18px;padding:0}
+  .vbar{display:flex;gap:6px;flex-wrap:wrap;padding:12px 20px 0}
+  .vchip{font-size:12.5px;font-weight:600;padding:5px 12px;border-radius:20px;border:1px solid var(--line);background:var(--card);color:var(--muted)}
+  .vchip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .vchip:hover{border-color:var(--accent);color:var(--accent)}
+  .vchip.on:hover{color:#fff}
+  .vnote{display:none;margin:10px 20px 0;font-size:12.5px;color:var(--muted);background:var(--soft);border-radius:8px;padding:8px 12px}
   .doc{padding:24px 26px 40px}
   .doc h1{font-size:23px;line-height:1.35;margin:6px 0 16px;letter-spacing:-.3px}
   .doc h2{font-size:16px;text-transform:none;letter-spacing:0;color:var(--ink);margin:24px 0 8px}
@@ -114,6 +120,8 @@
 <div class="overlay" id="overlay">
   <div class="reader">
     <div class="rhead"><span class="k" id="rkind"></span><button class="close" id="close">×</button></div>
+    <div class="vbar" id="vbar"></div>
+    <div class="vnote" id="vnote"></div>
     <div class="doc" id="doc"><div class="loading">불러오는 중…</div></div>
   </div>
 </div>
@@ -186,11 +194,11 @@ function splitFrontmatter(md){
   return {fm:null, body:md};
 }
 
-async function openDoc(path, kindLabel){
-  rkind.textContent = kindLabel;
+const vbar = document.getElementById('vbar');
+const vnote = document.getElementById('vnote');
+
+async function loadInto(path){
   docEl.innerHTML = '<div class="loading">불러오는 중…</div>';
-  overlay.classList.add('on');
-  document.body.style.overflow='hidden';
   try{
     const res = await fetch(path + (path.includes('?')?'&':'?') + 't=' + Date.now(), {cache:'no-store'});
     if(!res.ok) throw new Error(res.status);
@@ -199,13 +207,37 @@ async function openDoc(path, kindLabel){
     let html = '';
     if(fm){ html += '<div class="fm">'+esc(fm).replace(/\n/g,'<br>')+'</div>'; }
     html += renderMD(body);
-    docEl.innerHTML = html;
-    docEl.scrollTop = 0;
-    document.querySelector('.reader').scrollIntoView({block:'start'});
+    docEl.innerHTML = html; docEl.scrollTop = 0;
   }catch(e){
     docEl.innerHTML = '<p class="loading">파일을 불러오지 못했어요 ('+e.message+').<br>'+
       '이 페이지는 GitHub Pages 주소로 열어야 작동해요 (파일을 직접 열면 안 돼요).</p>';
   }
+}
+function openReader(kindLabel){
+  rkind.textContent = kindLabel;
+  overlay.classList.add('on'); document.body.style.overflow='hidden';
+  document.querySelector('.reader').scrollIntoView({block:'start'});
+}
+// draft with version history
+function openDraft(post){
+  const vs = post.versions || [];
+  openReader('초안 · '+(post.type||''));
+  vbar.style.display = vs.length>1 ? 'flex' : 'none';
+  function pick(i){
+    vbar.querySelectorAll('.vchip').forEach((c,ci)=>c.classList.toggle('on',ci===i));
+    if(vs[i].note){ vnote.style.display='block'; vnote.textContent='변경 · '+vs[i].note; }
+    else vnote.style.display='none';
+    loadInto(vs[i].path);
+  }
+  vbar.innerHTML = vs.map((v,i)=>'<button class="vchip">'+v.v+(i===0?' · 최신':'')+'</button>').join('');
+  vbar.querySelectorAll('.vchip').forEach((c,i)=> c.onclick=()=>pick(i));
+  if(vs.length){ pick(0); } else { vnote.style.display='none'; loadInto(post.draft||''); }
+}
+// single doc (research note)
+function openSingle(path, label){
+  openReader(label);
+  vbar.style.display='none'; vnote.style.display='none';
+  loadInto(path);
 }
 function closeDoc(){ overlay.classList.remove('on'); document.body.style.overflow=''; }
 document.getElementById('close').onclick = closeDoc;
@@ -228,16 +260,21 @@ function renderPipe(stages, posts){
   }).join('');
 }
 
+const POSTS = {};
 function card(p){
   const lens = (p.lens||[]).join(' · ');
+  const nver = (p.versions||[]).length;
+  const latest = nver ? p.versions[0].v : '';
   let a = '<div class="actions">';
-  if(p.draft)    a += '<button class="primary" data-p="'+p.draft+'" data-k="초안 · '+(p.type||'')+'">📝 초안 보기</button>';
-  if(p.research) a += '<button data-p="'+p.research+'" data-k="조사 노트">🔍 조사 노트</button>';
+  if(nver || p.draft) a += '<button class="primary" data-draft="'+p.id+'">📝 초안 보기'+(latest?' ('+latest+')':'')+'</button>';
+  if(p.research)      a += '<button data-research="'+p.research+'">🔍 조사 노트</button>';
   a += '</div>';
+  const vtag = nver>1 ? '<span class="badge">버전 '+nver+'개</span>' : '';
   return '<div class="card">'+
     '<div class="top">'+
       '<span class="badge stage">'+p.stage+'</span>'+
       (p.type?'<span class="badge">'+p.type+'</span>':'')+
+      vtag+
       '<span class="badge date mono">'+(p.date||'')+'</span>'+
     '</div>'+
     '<h3>'+p.title+'</h3>'+
@@ -253,12 +290,16 @@ async function boot(){
     document.getElementById('updated').textContent = '마지막 업데이트 '+ (data.updated||'') ;
     const stages = data.stages || ['인박스','검토중','선정','조사중','작성중','검수중','발행'];
     const posts = data.posts || [];
+    posts.forEach(p=>{ POSTS[p.id]=p; });
     renderPipe(stages, posts);
     const list = document.getElementById('list');
     list.innerHTML = posts.length ? posts.map(card).join('') :
       '<div class="empty">아직 글이 없어요. 새 글을 만들면 여기에 나타납니다.</div>';
-    list.querySelectorAll('button[data-p]').forEach(b=>{
-      b.onclick = ()=> openDoc(b.getAttribute('data-p'), b.getAttribute('data-k'));
+    list.querySelectorAll('button[data-draft]').forEach(b=>{
+      b.onclick = ()=> openDraft(POSTS[b.getAttribute('data-draft')]);
+    });
+    list.querySelectorAll('button[data-research]').forEach(b=>{
+      b.onclick = ()=> openSingle(b.getAttribute('data-research'), '조사 노트');
     });
   }catch(e){
     document.getElementById('list').innerHTML =
