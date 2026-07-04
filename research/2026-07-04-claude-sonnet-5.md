@@ -1,7 +1,8 @@
 # 조사 노트: Claude Sonnet 5 출시
 
-- 원본 링크(1차): https://www.anthropic.com/news/claude-sonnet-5 (※ WebFetch 403 — 공식 페이지 직접 확인은 발행 전 재시도 필요)
+- 원본 링크(1차): [anthropic.com/news/claude-sonnet-5](https://www.anthropic.com/news/claude-sonnet-5) (※ 공식 페이지 직접 확인은 발행 전 재시도 필요)
 - 소스 티어: 1차(Anthropic 발표) + 2차(TechCrunch, MarkTechPost, DataCamp, llm-stats 등 교차확인)
+- 👉 전체 출처 링크는 맨 아래 **"출처 링크"** 섹션에 정리 (전부 클릭 가능)
 - 조사 날짜: 2026-07-04
 - 글 유형: A 속보 브리핑
 - 렌즈: ① "그래서 나한테?" (가격/손익분기)
@@ -39,3 +40,17 @@
 ## G. 미해결 질문 (글에 "모른다"고 솔직히 쓸 것)
 - 한국어 텍스트에서 새 토크나이저의 토큰 증가율은? (F4는 일반 수치, 한국어 특화 데이터 미확인)
 - F5의 "63.2%"가 agentic coding vs SWE-bench Pro 중 정확히 무엇인지 출처마다 명칭이 엇갈림 → 발행 전 공식 모델카드로 확정 필요. **[모순: 확정 전까지 벤치 수치는 "약 63%대"로 완충 표기]**
+
+## 출처 링크 (클릭)
+
+**1차 (공식)**
+- [Anthropic — Claude Sonnet 5 발표](https://www.anthropic.com/news/claude-sonnet-5) — F1, F8 (발표문·능력 설명)
+
+**2차 (교차확인)**
+- [TechCrunch — "cheaper way to run agents"](https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/) — F1, F2, F3 (출시·가격)
+- [MarkTechPost — Sonnet 5 vs 4.6 vs Opus 4.8 벤치·가격 비교](https://www.marktechpost.com/2026/06/30/anthropic-claude-sonnet-5-vs-sonnet-4-6-vs-opus-4-8-agentic-coding-benchmarks-api-pricing-and-cost-performance-tradeoffs-compared/) — F5 (벤치마크)
+- [llm-stats — LLM updates](https://llm-stats.com/llm-updates) — F2, F3, F4 (가격·토크나이저)
+- [buildfastwithai — Claude Sonnet 5 리뷰](https://www.buildfastwithai.com/blogs/claude-sonnet-5-review-benchmarks-pricing-2026) — F5, B (벤치·해석)
+
+> ⚠️ 발행 전 체크: 위 링크가 모두 살아 있고 올바른 문서를 가리키는지 재확인 (검수 체크리스트). 공식 페이지(1차)로 F2·F5 수치 최종 확정.
+

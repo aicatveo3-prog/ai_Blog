@@ -142,14 +142,24 @@ const rkind = document.getElementById('rkind');
 
 function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
 
-// inline: code, links, bold, italic (no external deps)
+// inline: code, links (markdown + bare url autolink), bold, italic (no external deps)
 function inline(s){
-  const codes=[];
-  s = esc(s).replace(/`([^`]+)`/g,(m,c)=>{codes.push(c);return '␞'+(codes.length-1)+'␞';});
-  s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+  const codes=[], links=[];
+  s = esc(s).replace(/`([^`]+)`/g,(m,c)=>{codes.push(c);return '␞C'+(codes.length-1)+'␞';});
+  // markdown links [text](url) first
+  s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,(m,t,u)=>{
+    links.push('<a href="'+u+'" target="_blank" rel="noopener">'+t+'</a>');
+    return '␞L'+(links.length-1)+'␞';
+  });
+  // then autolink any remaining bare http(s) urls
+  s = s.replace(/(https?:\/\/[^\s<>()]+[^\s<>().,;:])/g,(m)=>{
+    links.push('<a href="'+m+'" target="_blank" rel="noopener">'+m+'</a>');
+    return '␞L'+(links.length-1)+'␞';
+  });
   s = s.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
   s = s.replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<em>$2</em>');
-  s = s.replace(/␞(\d+)␞/g,(m,i)=>'<code>'+codes[+i]+'</code>');
+  s = s.replace(/␞C(\d+)␞/g,(m,i)=>'<code>'+codes[+i]+'</code>');
+  s = s.replace(/␞L(\d+)␞/g,(m,i)=>links[+i]);
   return s;
 }
 function splitRow(line){
