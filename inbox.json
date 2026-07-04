@@ -1,6 +1,6 @@
 {
   "generated": "2026-07-04",
-  "note": "firstSeen = 검증된 진짜 첫 등장일(1차 소스). surfaced = 2차 확산/우리가 눈에 띈 날. 둘이 다르면 gap 표시.",
+  "note": "지난 한 달 AI 소식 전방위 수집. firstSeen = 검증된 진짜 첫 등장일(1차/신뢰 소스). 일자 미확정은 verified:false로 '날짜 없음'에 대기. surfaced가 다르면 gap 표시.",
   "items": [
     {
       "title": "Claude Sonnet 5 출시",
@@ -10,8 +10,23 @@
       "verifyNote": "Anthropic·TechCrunch·MacRumors·Simon Willison 모두 6/30. 7/1~ 후속 기사 다수지만 원 발표는 6/30.",
       "source": "https://www.anthropic.com/news/claude-sonnet-5",
       "status": "검수중",
-      "tags": ["모델", "가격"],
+      "tags": [
+        "모델",
+        "Anthropic"
+      ],
       "postId": "claude-sonnet-5"
+    },
+    {
+      "title": "캘리포니아, 미 최대 규모 주정부 AI 도입 — 전 기관 Claude 50% 할인",
+      "firstSeen": "2026-06-29",
+      "verified": true,
+      "verifyNote": "Newsom 6/29 발표. 모든 주 기관·시·군이 Claude 접근. 미 역사상 최대 주정부 AI 배치.",
+      "source": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
+      "status": "인박스",
+      "tags": [
+        "정책",
+        "Anthropic"
+      ]
     },
     {
       "title": "OpenAI GPT-5.6 Sol·Terra·Luna 프리뷰",
@@ -22,17 +37,108 @@
       "source": "https://www.axios.com/2026/06/26/openai-gpt-sol-terra-luna-trump",
       "status": "폐기",
       "killReason": "프리뷰(제한 파트너)라 직접 검증 불가 — 킬 기준",
-      "tags": ["모델"]
+      "tags": [
+        "모델",
+        "OpenAI"
+      ]
+    },
+    {
+      "title": "AI CEO들 G7 정상회의(Évian) 소집 — Fable 5 탈옥·정부 셧다운 여파",
+      "firstSeen": "2026-06-17",
+      "verified": true,
+      "verifyNote": "6/17 G7. Fable 5 탈옥으로 미 정부가 Anthropic Fable 5·Mythos 5 셧다운, 12만자 시스템프롬프트 GitHub 공개 → 'AI 주권'이 조달 이슈로.",
+      "source": "https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026",
+      "status": "인박스",
+      "tags": [
+        "논란",
+        "안전"
+      ]
+    },
+    {
+      "title": "제3연방항소법원, 'AI 학습=공정이용' 첫 항소심 변론",
+      "firstSeen": "2026-06-11",
+      "verified": true,
+      "verifyNote": "6/11. 저작물로 AI를 학습시키는 게 공정이용인지 다투는 2026 최대 저작권 심리.",
+      "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
+      "status": "인박스",
+      "tags": [
+        "법률",
+        "저작권"
+      ]
+    },
+    {
+      "title": "법원, Google·xAI·Perplexity·Apple·Nvidia를 저작권 소송에서 분리",
+      "firstSeen": "2026-06-08",
+      "verified": true,
+      "verifyNote": "6/8 severance 결정.",
+      "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
+      "status": "인박스",
+      "tags": [
+        "법률",
+        "저작권"
+      ]
+    },
+    {
+      "title": "Anthropic, '글로벌 AI 일시중지(pause)' 제안 안전 논문",
+      "firstSeen": "2026-06-04",
+      "verified": true,
+      "verifyNote": "6/4 발표. 올해 가장 중요한 안전 제안. 압축(컴퓨트) 비용이 IPO를 압박한다는 대표 발언도.",
+      "source": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
+      "status": "인박스",
+      "tags": [
+        "연구",
+        "안전",
+        "Anthropic"
+      ]
+    },
+    {
+      "title": "Microsoft, 자체 'MAI' 모델 7종 공개 (MAI-Thinking-1, MAI-Code-1-Flash)",
+      "firstSeen": "2026-06-02",
+      "verified": true,
+      "verifyNote": "CNBC 6/2. OpenAI 의존도↓·개발자 비용↓ 목적. 추론·코딩 특화.",
+      "source": "https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html",
+      "status": "인박스",
+      "tags": [
+        "모델",
+        "Microsoft"
+      ]
+    },
+    {
+      "title": "미 행정부, 'AI 혁신·보안 촉진' 행정조치",
+      "firstSeen": "2026-06-02",
+      "verified": true,
+      "verifyNote": "6/2. 강제 라이선스 없이 프런티어 모델 벤치마킹(NSA)·30일 자발적 사전평가 프레임워크.",
+      "source": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/",
+      "status": "인박스",
+      "tags": [
+        "정책",
+        "미국"
+      ]
+    },
+    {
+      "title": "CNN, Perplexity 저작권 침해 소송",
+      "firstSeen": "2026-05-28",
+      "verified": true,
+      "verifyNote": "5/28 제소. (한 달 경계선 소식)",
+      "source": "https://www.cnn.com/2026/05/28/media/cnn-sues-perplexity-ai-copyright",
+      "status": "인박스",
+      "tags": [
+        "법률",
+        "저작권"
+      ]
     },
     {
       "title": "n8n, MCP 서버를 노드 패널에서 에이전트 도구로",
       "firstSeen": "2026-05-19",
       "surfaced": "2026-07-04",
       "verified": true,
-      "verifyNote": "n8n 공식 릴리즈 노트 5/19. 우리가 수집한 건 7/4 → 46일 늦음(에버그린이라 여전히 유효, 신선도 축에 반영).",
+      "verifyNote": "n8n 공식 릴리즈 노트 5/19. 우리가 수집한 건 7/4 → 46일 늦음(에버그린이라 여전히 유효).",
       "source": "https://docs.n8n.io/release-notes",
       "status": "검수중",
-      "tags": ["자동화", "MCP"],
+      "tags": [
+        "자동화",
+        "MCP"
+      ],
       "postId": "n8n-mcp-hub"
     },
     {
@@ -43,18 +149,141 @@
       "verifyNote": "Python·.NET 1.0 동시 출시 4/3 (2차 정리글 기준). 발행 전 1차 문서로 재확인 권장.",
       "source": "https://guptadeepak.com/tools/top-10-mcp-frameworks-2026/",
       "status": "검수중",
-      "tags": ["프레임워크", "MCP"],
+      "tags": [
+        "프레임워크",
+        "MCP"
+      ],
       "postId": "mcp-standard"
+    },
+    {
+      "title": "Google 6월 묶음: Nano Banana 2 Lite · Gemini Omni Flash(API 프리뷰) · Gemma 4 12B(로컬 16GB)",
+      "firstSeen": null,
+      "verified": false,
+      "verifyNote": "6월 (정확 일자 미확정). Google 공식 6월 라운드업 기준 — 개별 발표일 1차 확인 필요.",
+      "source": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/",
+      "status": "인박스",
+      "tags": [
+        "모델",
+        "Google"
+      ]
+    },
+    {
+      "title": "MiniMax M3 오픈웨이트 (1M 컨텍스트, SWE-Bench Pro 59.0%)",
+      "firstSeen": null,
+      "verified": false,
+      "verifyNote": "6월 출시. 오픈웨이트 최초로 프런티어 코딩+1M 컨텍스트+멀티모달 결합. 정확 일자 확인 필요.",
+      "source": "https://huggingface.co/blog/daya-shankar/open-source-llms",
+      "status": "인박스",
+      "tags": [
+        "오픈모델"
+      ]
+    },
+    {
+      "title": "Apple: Gemini 기반 Siri + Claude를 iPhone 옵션으로 (Tim Cook)",
+      "firstSeen": null,
+      "verified": false,
+      "verifyNote": "6월 발표. 멀티-AI Extensions로 Claude가 iPhone에 처음 옵션화. 정확 일자 확인 필요.",
+      "source": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
+      "status": "인박스",
+      "tags": [
+        "빅테크",
+        "Apple"
+      ]
+    },
+    {
+      "title": "OpenAI, Sora 중단 (하루 ~$15M 소진 vs 매출 $2.1M)",
+      "firstSeen": null,
+      "verified": false,
+      "verifyNote": "6월 중순. 비용 구조 붕괴로 중단. 정확 일자 확인 필요.",
+      "source": "https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026",
+      "status": "인박스",
+      "tags": [
+        "OpenAI"
+      ]
+    },
+    {
+      "title": "Meta, AI 재편으로 ~8,000명 정리해고 (+7,000명 AI팀 재배치)",
+      "firstSeen": null,
+      "verified": false,
+      "verifyNote": "6월. 정확 일자 미확정.",
+      "source": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
+      "status": "인박스",
+      "tags": [
+        "빅테크",
+        "Meta"
+      ]
+    },
+    {
+      "title": "일리노이, AI 안전 3자 감사 의무화 법 통과",
+      "firstSeen": null,
+      "verified": false,
+      "verifyNote": "6월. 연 1회 독립 감사·안전 프레임워크 공개 의무. 정확 일자 확인 필요.",
+      "source": "https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026",
+      "status": "인박스",
+      "tags": [
+        "정책",
+        "미국"
+      ]
+    },
+    {
+      "title": "NVIDIA Physical AI Data Factory + Isaac GR00T 업데이트 + LG AI 팩토리",
+      "firstSeen": null,
+      "verified": false,
+      "verifyNote": "6월 COMPUTEX/GTC Taipei. 휴머노이드·로보틱스용 데이터 파이프라인. 정확 일자 확인 필요.",
+      "source": "https://nvidianews.nvidia.com/news/nvidia-announces-open-physical-ai-data-factory-blueprint-to-accelerate-robotics-vision-ai-agents-and-autonomous-vehicle-development",
+      "status": "인박스",
+      "tags": [
+        "하드웨어",
+        "로봇"
+      ]
+    },
+    {
+      "title": "대형 펀딩(6월): Baseten $1.5B(F) · Supabase $500M($10.5B밸류) · Flourish $500M seed(Bezos 등)",
+      "firstSeen": null,
+      "verified": false,
+      "verifyNote": "techstartups 6/30 라운드업. 개별 발표일 확인 필요.",
+      "source": "https://techstartups.com/2026/06/30/venture-capital-startup-funding-roundup-june-30-2026/",
+      "status": "인박스",
+      "tags": [
+        "자금"
+      ]
+    },
+    {
+      "title": "Anthropic, $965B Series H 밸류에이션 (OpenAI $852B 상회)",
+      "firstSeen": null,
+      "verified": false,
+      "verifyNote": "5월 말. 정확 일자 확인 필요.",
+      "source": "https://www.digitalapplied.com/blog/ai-venture-funding-2026-where-242b-went-data-atlas",
+      "status": "인박스",
+      "tags": [
+        "자금",
+        "Anthropic"
+      ]
+    },
+    {
+      "title": "직장 내 AI 도입률 73% (2025년 34% → 2026년) — 연구",
+      "firstSeen": null,
+      "verified": false,
+      "trend": true,
+      "verifyNote": "6월 공개 연구 인용. 원 리서치·정의 확인 필요.",
+      "source": "https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026",
+      "status": "인박스",
+      "tags": [
+        "트렌드",
+        "연구"
+      ]
     },
     {
       "title": "로컬 LLM 자가호스팅이 쉬워진 흐름 (Gemma 3·Ollama 등)",
       "firstSeen": null,
       "verified": true,
       "trend": true,
-      "verifyNote": "단일 발표가 아닌 지속 흐름 — 대표 날짜 없음. 시의성 무관 에버그린으로 처리.",
+      "verifyNote": "단일 발표가 아닌 지속 흐름 — 대표 날짜 없음. 시의성 무관 에버그린.",
       "source": "https://huggingface.co/blog/daya-shankar/open-source-llm-models-to-run-locally",
       "status": "검수중",
-      "tags": ["오픈모델"],
+      "tags": [
+        "오픈모델"
+      ],
       "postId": "local-llm-selfhost"
     },
     {
@@ -65,7 +294,9 @@
       "verifyNote": "IDC 전망 수치(2차 인용). 단일 뉴스 날짜 아님. 원 리포트로 정의·수치 확인 필요.",
       "source": "https://www.cflowapps.com/ai-workflow-automation-trends/",
       "status": "검수중",
-      "tags": ["트렌드"],
+      "tags": [
+        "트렌드"
+      ],
       "postId": "agents-embedded-2026"
     },
     {
@@ -75,7 +306,9 @@
       "verifyNote": "출시일·가격·벤치 수치 미검증 → 인박스 대기. 1차 소스로 첫 등장일부터 확인해야 선별 가능.",
       "source": null,
       "status": "인박스",
-      "tags": ["모델"]
+      "tags": [
+        "모델"
+      ]
     }
   ]
 }
