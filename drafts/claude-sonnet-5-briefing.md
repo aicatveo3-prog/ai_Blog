@@ -1,10 +1,7 @@
----
-유형: A 속보 브리핑
-관점: 성능 뉴스가 아니라 "에이전트 상시 구동 비용의 손익분기점"이 내려간 사건. 단 토크나이저 함정 주의.
-상태: 검수중 (P5 사람 편집 대기)
----
-
 # Claude Sonnet 5, "싸게 굴리는 에이전트" — 근데 '반값'은 반만 믿자
+
+> **유형** · A 속보 브리핑  **상태** · 검수중(P5 사람 편집 대기)
+> **관점** · 성능 뉴스가 아니라 "에이전트 상시 구동 비용의 손익분기점"이 내려간 사건. 단, 토크나이저 함정 주의.
 
 Anthropic이 6월 30일 **Claude Sonnet 5**를 내놨다. [F1] 헤드라인은 하나로 요약된다. **최상위 모델(Opus)에 근접한 성능을, 중간 등급 가격에.** 도입가는 입력 100만 토큰당 $2, 출력 $10 — 8월 31일까지다. 그 뒤엔 $3 / $15로 오른다. [F2, F3]
 
@@ -25,9 +22,11 @@ Anthropic이 6월 30일 **Claude Sonnet 5**를 내놨다. [F1] 헤드라인은 �
 - **8월 31일**: 도입가 종료일. 장기 비용을 볼 거라면 $3/$15 기준으로 잡아야 한다. [F2, F3]
 
 ## 지켜볼 것
+
 한국어에서 토크나이저가 토큰을 얼마나 더 먹는지는 아직 공개 데이터로 확인을 못 했다(솔직히 모른다). [G] 다음 편에서 우리 표준 시나리오로 **직접 돌려보고 실제 토큰·비용을 재서** 이 "반값"이 한국어 워크로드에서 몇 값인지 숫자로 확인해볼 생각이다.
 
 [경험 삽입: 당신이 실제로 Sonnet 5를 한 번 써보고, 이전 대비 체감된 점 한 줄 — 이게 이 글을 'AI가 못 쓰는 글'로 만든다]
 
 ---
+
 *출처: [Anthropic 발표](https://www.anthropic.com/news/claude-sonnet-5) · [TechCrunch](https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/) · [MarkTechPost 벤치 비교](https://www.marktechpost.com/2026/06/30/anthropic-claude-sonnet-5-vs-sonnet-4-6-vs-opus-4-8-agentic-coding-benchmarks-api-pricing-and-cost-performance-tradeoffs-compared/) · [llm-stats](https://llm-stats.com/llm-updates)*
