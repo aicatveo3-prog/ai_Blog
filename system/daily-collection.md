@@ -20,9 +20,12 @@
    `prompts/H-reactions-multiangle.md`로 8각도 반응을 모아 `collect/reactions/<slug>.md`에 저장하고
    `inbox.json`의 `articleVersions`에 `💬 반응` 경로를 추가한다. (소식이 여럿이면 소식당 서브에이전트 병렬)
    반응은 **선택 단계** — 조용한 날엔 건너뛰고, 반응이 실제로 형성된 소식에만 적용한다.
-6. **인박스 반영** — `inbox.json`에 append, `generated` 날짜 갱신.
-7. **커밋·푸시** — `git commit` 후 designated 브랜치로 push. 대시보드는 raw 경로라 몇 초 내 반영.
-8. **요약 알림(선택)** — 그날 검증된 고신호 항목 3~5개를 한 줄씩.
+6. **종합 심층 글(사람 지시 시만)** — 사람이 "이 항목으로 글 써줘"라고 고른 항목에 한해
+   `prompts/I-synthesis-deepdive.md`로 세 소스(자세히·정리본·반응)를 합쳐 `drafts/<slug>/v1.md` 생성.
+   톤·구조 기준(골드 스탠다드)은 `drafts/anthropic-pause/final.md`. **선별·지시 없이는 자동 생성 금지.**
+7. **인박스 반영** — `inbox.json`에 append, `generated` 날짜 갱신.
+8. **커밋·푸시** — `git commit` 후 designated 브랜치로 push. 대시보드는 raw 경로라 몇 초 내 반영.
+9. **요약 알림(선택)** — 그날 검증된 고신호 항목 3~5개를 한 줄씩.
 
 ## 경계 (자동/사람)
 - **자동**: 수집·중복제거·날짜 검증·인박스 적재 (반복 노동)
@@ -39,5 +42,6 @@
 - **B. n8n 워크플로** — `automation/n8n-workflows.md`의 A/B/C. 상시 인프라, Claude 세션 비의존.
 
 ## 변경 로그
+- v3 (2026-07-04): '종합 심층 글'(프롬프트 I) 단계 추가. 골드 스탠다드 = anthropic-pause/final.md.
 - v2 (2026-07-04): 고신호 항목에 대한 '다각도 반응 수집'(프롬프트 H) 단계를 루틴에 편입.
 - v1 (2026-07-04): 최초 작성. 수동 검증 절차를 일일 자동 루틴으로 정식화.
