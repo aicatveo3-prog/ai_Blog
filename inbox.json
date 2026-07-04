@@ -169,10 +169,10 @@
     },
     {
       "title": "MiniMax M3 오픈웨이트 (1M 컨텍스트, SWE-Bench Pro 59.0%)",
-      "firstSeen": null,
-      "verified": false,
-      "verifyNote": "6월 출시. 오픈웨이트 최초로 프런티어 코딩+1M 컨텍스트+멀티모달 결합. 정확 일자 확인 필요.",
-      "source": "https://huggingface.co/blog/daya-shankar/open-source-llms",
+      "firstSeen": "2026-06-01",
+      "verified": true,
+      "verifyNote": "6/1 발표(API 즉시), 가중치 HF 6/7. ⚠️ SWE-Bench Pro 59.0%는 자체 주장 — 독립 검증 전(TechTimes 지적).",
+      "source": "https://datanorth.ai/news/minimax-launches-m3",
       "status": "인박스",
       "tags": [
         "오픈모델"
@@ -191,11 +191,11 @@
       ]
     },
     {
-      "title": "OpenAI, Sora 중단 (하루 ~$15M 소진 vs 매출 $2.1M)",
-      "firstSeen": null,
-      "verified": false,
-      "verifyNote": "6월 중순. 비용 구조 붕괴로 중단. 정확 일자 확인 필요.",
-      "source": "https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026",
+      "title": "OpenAI, Sora 중단 발표 (하루 ~$1M 소진 vs 매출 $2.1M)",
+      "firstSeen": "2026-03-24",
+      "verified": true,
+      "verifyNote": "발표 3/24, 웹·앱 종료 4/26, API 종료 9/24. 6월은 환불(Phase 2)일 뿐. ⚠️ 2차 라운드업의 '$15M/일'은 오류 — 1차 기준 약 $1M/일.",
+      "source": "https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/",
       "status": "인박스",
       "tags": [
         "OpenAI"
@@ -203,10 +203,10 @@
     },
     {
       "title": "Meta, AI 재편으로 ~8,000명 정리해고 (+7,000명 AI팀 재배치)",
-      "firstSeen": null,
-      "verified": false,
-      "verifyNote": "6월. 정확 일자 미확정.",
-      "source": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
+      "firstSeen": "2026-05-20",
+      "verified": true,
+      "verifyNote": "Al Jazeera·NPR·Variety·Quartz 모두 5/20~21(싱가포르부터 이메일). 6월 라운드업이 6월로 잘못 묶었지만 실제는 5/20. 6,000명 채용 취소 + 7,000명 AI 재배치.",
+      "source": "https://www.aljazeera.com/economy/2026/5/20/meta-cuts-8000-jobs-in-sweeping-global-layoffs",
       "status": "인박스",
       "tags": [
         "빅테크",
@@ -215,10 +215,10 @@
     },
     {
       "title": "일리노이, AI 안전 3자 감사 의무화 법 통과",
-      "firstSeen": null,
-      "verified": false,
-      "verifyNote": "6월. 연 1회 독립 감사·안전 프레임워크 공개 의무. 정확 일자 확인 필요.",
-      "source": "https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026",
+      "firstSeen": "2026-05-27",
+      "verified": true,
+      "verifyNote": "SB 315 하원 110-0 통과 5/27(상원 5/21). Pritzker 서명 예정·시행 2027-01-01. 미 최초 AI 안전 감사 의무. 6월 아님.",
+      "source": "https://www.nbcnews.com/tech/tech-news/illinois-legislature-passes-historic-ai-bill-rcna347191",
       "status": "인박스",
       "tags": [
         "정책",

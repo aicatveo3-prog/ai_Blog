@@ -451,7 +451,7 @@ function renderMonth(){
   for(let i=0;i<weeks*7;i++){
     const d=new Date(start); d.setDate(start.getDate()+i);
     const inM=d.getMonth()===mo;
-    const its=itemsByDate[ymd(d)]||[];
+    const its=inM ? (itemsByDate[ymd(d)]||[]) : [];
     cells+='<div class="cell'+(inM?'':' off')+'"><div class="dn">'+d.getDate()+'</div>'+its.map(it=>chipHTML(it)).join('')+'</div>';
   }
   return '<div class="mgrid">'+head+cells+'</div>';
