@@ -4,6 +4,7 @@
   "criteria": [
     { "name": "🎯 포지셔닝 (독자·범위·렌즈)", "path": "system/positioning.md" },
     { "name": "📡 수집 기준 (소스 리스트)", "path": "system/sources.md" },
+    { "name": "📅 날짜 검증 기준 (첫 등장일)", "path": "system/collection-dating.md" },
     { "name": "⚖️ 선별 기준 (루브릭 + 킬 기준)", "path": "system/scoring-rubric.md" },
     { "name": "🧠 관점 기준 (분석 프레임워크)", "path": "system/analysis-frameworks.md" },
     { "name": "✅ 검수 기준 (체크리스트)", "path": "system/checklists.md" }

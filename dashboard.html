@@ -30,6 +30,33 @@
   h2{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);margin:30px 0 14px;font-weight:600}
   .h2sub{text-transform:none;letter-spacing:0;font-weight:400;font-size:12px}
 
+  /* 수집 달력 */
+  .cal{display:flex;flex-direction:column;gap:2px}
+  .calday{display:flex;gap:14px;padding:12px 0;border-top:1px solid var(--line)}
+  .calday:first-child{border-top:none}
+  .caldate{flex:none;width:88px;text-align:right;padding-top:2px}
+  .caldate .d{font-size:15px;font-weight:700}
+  .caldate .y{font-size:11px;color:var(--muted)}
+  .caldate.trend .d,.caldate.warn .d{font-size:13px}
+  .calitems{flex:1;display:flex;flex-direction:column;gap:10px}
+  .calitem{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .calitem .h{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:5px}
+  .calitem .t{font-size:14.5px;font-weight:600}
+  .vchk{font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px}
+  .vchk.ok{background:rgba(31,157,107,.15);color:var(--ok)}
+  .vchk.warn{background:rgba(210,150,0,.16);color:#b8860b}
+  .calitem .gap{font-size:12.5px;color:var(--muted);margin:3px 0}
+  .calitem .gap b{color:var(--accent)}
+  .calitem .note{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
+  .calitem .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px;font-size:11.5px}
+  .calitem a.src{color:var(--accent);font-weight:600;text-decoration:none}
+  .calitem a.src:hover{text-decoration:underline}
+  .st{font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:var(--soft);color:var(--ink)}
+  .st.검수중{background:var(--accent);color:#fff}
+  .st.폐기{background:transparent;color:var(--muted);border:1px solid var(--line)}
+  .st.인박스{background:transparent;color:#b8860b;border:1px solid #d9c58a}
+  .caltag{font-size:11px;color:var(--muted);background:var(--soft);padding:2px 7px;border-radius:6px}
+
   .critbar{display:flex;flex-wrap:wrap;gap:8px}
   .critbtn{font:inherit;cursor:pointer;font-size:13px;font-weight:600;padding:9px 14px;border-radius:10px;
     border:1px solid var(--line);background:var(--card);color:var(--ink);transition:.15s}
@@ -113,6 +140,9 @@
 
   <h2>파이프라인</h2>
   <div class="pipe" id="pipe"></div>
+
+  <h2>수집 달력 <span class="h2sub">— 날짜 = 검증된 '진짜 첫 등장일'. 뉴스 뜬 날이 아닙니다</span></h2>
+  <div class="cal" id="cal"></div>
 
   <h2>판단 기준 <span class="h2sub">— 매번 이 규칙으로 판단합니다</span></h2>
   <div class="critbar" id="criteria"></div>
@@ -299,6 +329,59 @@ function renderPipe(stages, posts){
   }).join('');
 }
 
+// ---- 수집 달력 ----
+const WD = ['일','월','화','수','목','금','토'];
+function fmtDate(s){
+  const [y,m,d] = s.split('-').map(Number);
+  return {d:m+'월 '+d+'일', y:y+' ('+WD[new Date(y,m-1,d).getDay()]+')'};
+}
+function daysBetween(a,b){
+  return Math.round((new Date(b) - new Date(a)) / 86400000);
+}
+function calItem(it){
+  const vok = it.verified;
+  let gap;
+  if(it.firstSeen && it.surfaced && it.surfaced !== it.firstSeen){
+    const g = daysBetween(it.firstSeen, it.surfaced);
+    gap = '첫 등장 '+it.firstSeen+' · 확산 '+it.surfaced+' → ⏱ <b>'+g+'일 늦게 떴음</b>';
+  } else if(it.firstSeen){
+    gap = '첫 등장 '+it.firstSeen+' · 같은 날 확산';
+  } else {
+    gap = '단일 첫 등장일 없음';
+  }
+  const tags = (it.tags||[]).map(t=>'<span class="caltag">#'+esc(t)+'</span>').join('');
+  const src = it.source ? '<a class="src" href="'+it.source+'" target="_blank" rel="noopener">출처 ↗</a>' : '';
+  const post = it.postId ? '<span class="caltag">→ 글로 발전</span>' : '';
+  const kill = it.killReason ? '<span class="caltag">✕ '+esc(it.killReason)+'</span>' : '';
+  return '<div class="calitem">'+
+    '<div class="h"><span class="vchk '+(vok?'ok':'warn')+'">'+(vok?'✅ 검증됨':'⚠️ 검증 필요')+'</span>'+
+      '<span class="t">'+esc(it.title)+'</span></div>'+
+    '<div class="gap">'+gap+'</div>'+
+    (it.verifyNote?'<div class="note">🔎 '+esc(it.verifyNote)+'</div>':'')+
+    '<div class="meta"><span class="st '+it.status+'">'+it.status+'</span>'+tags+src+post+kill+'</div>'+
+  '</div>';
+}
+function renderInbox(data){
+  const el = document.getElementById('cal');
+  const items = (data && data.items) || [];
+  if(!items.length){ el.innerHTML='<div class="empty">수집된 소식이 없어요.</div>'; return; }
+  const dated = items.filter(i=>i.firstSeen);
+  const trend = items.filter(i=>!i.firstSeen && i.trend);
+  const warn  = items.filter(i=>!i.firstSeen && !i.trend);
+  // 날짜별 그룹, 최신순
+  const byDate = {};
+  dated.forEach(i=>{ (byDate[i.firstSeen]=byDate[i.firstSeen]||[]).push(i); });
+  const dates = Object.keys(byDate).sort().reverse();
+  let html = dates.map(dt=>{
+    const f = fmtDate(dt);
+    return '<div class="calday"><div class="caldate"><div class="d">'+f.d+'</div><div class="y">'+f.y+'</div></div>'+
+      '<div class="calitems">'+byDate[dt].map(calItem).join('')+'</div></div>';
+  }).join('');
+  if(trend.length) html += '<div class="calday"><div class="caldate trend"><div class="d">📌 트렌드</div><div class="y">단일 날짜 없음</div></div><div class="calitems">'+trend.map(calItem).join('')+'</div></div>';
+  if(warn.length)  html += '<div class="calday"><div class="caldate warn"><div class="d">⚠️ 날짜 미검증</div><div class="y">인박스 대기</div></div><div class="calitems">'+warn.map(calItem).join('')+'</div></div>';
+  el.innerHTML = html;
+}
+
 const POSTS = {};
 function card(p){
   const lens = (p.lens||[]).join(' · ');
@@ -332,6 +415,10 @@ async function boot(){
     const posts = data.posts || [];
     posts.forEach(p=>{ POSTS[p.id]=p; });
     renderPipe(stages, posts);
+
+    // 수집 달력
+    try{ const ir = await fetchData('inbox.json'); renderInbox(await ir.json()); }
+    catch(_){ document.getElementById('cal').innerHTML='<div class="empty">수집 달력을 불러오지 못했어요.</div>'; }
 
     // 판단 기준 (시스템 규칙)
     const crit = document.getElementById('criteria');

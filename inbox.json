@@ -1,0 +1,81 @@
+{
+  "generated": "2026-07-04",
+  "note": "firstSeen = 검증된 진짜 첫 등장일(1차 소스). surfaced = 2차 확산/우리가 눈에 띈 날. 둘이 다르면 gap 표시.",
+  "items": [
+    {
+      "title": "Claude Sonnet 5 출시",
+      "firstSeen": "2026-06-30",
+      "surfaced": "2026-06-30",
+      "verified": true,
+      "verifyNote": "Anthropic·TechCrunch·MacRumors·Simon Willison 모두 6/30. 7/1~ 후속 기사 다수지만 원 발표는 6/30.",
+      "source": "https://www.anthropic.com/news/claude-sonnet-5",
+      "status": "검수중",
+      "tags": ["모델", "가격"],
+      "postId": "claude-sonnet-5"
+    },
+    {
+      "title": "OpenAI GPT-5.6 Sol·Terra·Luna 프리뷰",
+      "firstSeen": "2026-06-26",
+      "surfaced": "2026-07-02",
+      "verified": true,
+      "verifyNote": "Axios·OpenAI·VentureBeat 6/26 발표. 7/1~7/2 라운드업에 재등장 → 뉴스만 보면 7월로 착각. 진짜는 6/26. (6일 늦게 떴음)",
+      "source": "https://www.axios.com/2026/06/26/openai-gpt-sol-terra-luna-trump",
+      "status": "폐기",
+      "killReason": "프리뷰(제한 파트너)라 직접 검증 불가 — 킬 기준",
+      "tags": ["모델"]
+    },
+    {
+      "title": "n8n, MCP 서버를 노드 패널에서 에이전트 도구로",
+      "firstSeen": "2026-05-19",
+      "surfaced": "2026-07-04",
+      "verified": true,
+      "verifyNote": "n8n 공식 릴리즈 노트 5/19. 우리가 수집한 건 7/4 → 46일 늦음(에버그린이라 여전히 유효, 신선도 축에 반영).",
+      "source": "https://docs.n8n.io/release-notes",
+      "status": "검수중",
+      "tags": ["자동화", "MCP"],
+      "postId": "n8n-mcp-hub"
+    },
+    {
+      "title": "Microsoft Agent Framework 1.0 (MCP 네이티브)",
+      "firstSeen": "2026-04-03",
+      "surfaced": "2026-07-04",
+      "verified": true,
+      "verifyNote": "Python·.NET 1.0 동시 출시 4/3 (2차 정리글 기준). 발행 전 1차 문서로 재확인 권장.",
+      "source": "https://guptadeepak.com/tools/top-10-mcp-frameworks-2026/",
+      "status": "검수중",
+      "tags": ["프레임워크", "MCP"],
+      "postId": "mcp-standard"
+    },
+    {
+      "title": "로컬 LLM 자가호스팅이 쉬워진 흐름 (Gemma 3·Ollama 등)",
+      "firstSeen": null,
+      "verified": true,
+      "trend": true,
+      "verifyNote": "단일 발표가 아닌 지속 흐름 — 대표 날짜 없음. 시의성 무관 에버그린으로 처리.",
+      "source": "https://huggingface.co/blog/daya-shankar/open-source-llm-models-to-run-locally",
+      "status": "검수중",
+      "tags": ["오픈모델"],
+      "postId": "local-llm-selfhost"
+    },
+    {
+      "title": "에이전트 내장 80% (IDC 전망) / 하이퍼오토메이션 트렌드",
+      "firstSeen": null,
+      "verified": false,
+      "trend": true,
+      "verifyNote": "IDC 전망 수치(2차 인용). 단일 뉴스 날짜 아님. 원 리포트로 정의·수치 확인 필요.",
+      "source": "https://www.cflowapps.com/ai-workflow-automation-trends/",
+      "status": "검수중",
+      "tags": ["트렌드"],
+      "postId": "agents-embedded-2026"
+    },
+    {
+      "title": "Unisound U2 — 초저가 에이전트용 MoE",
+      "firstSeen": null,
+      "verified": false,
+      "verifyNote": "출시일·가격·벤치 수치 미검증 → 인박스 대기. 1차 소스로 첫 등장일부터 확인해야 선별 가능.",
+      "source": null,
+      "status": "인박스",
+      "tags": ["모델"]
+    }
+  ]
+}
