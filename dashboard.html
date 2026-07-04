@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vector 운영 대시보드</title>
+<style>
+  :root{
+    --bg:#F7F5F0; --ink:#17171C; --accent:#4B47E8; --muted:#8A8A93;
+    --line:#E2DFD7; --card:#FFFFFF; --soft:#F0EDE6; --ok:#1F9D6B;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#121215; --ink:#ECECEF; --accent:#8C89FF; --muted:#9A9AA3;
+           --line:#2A2A30; --card:#1B1B20; --soft:#222228; --ok:#3FCF92; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:28px 20px 80px}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+
+  header{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+  .logo{width:34px;height:34px;border-radius:9px;background:var(--ink);position:relative;flex:none}
+  .logo::before{content:"";position:absolute;left:8px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--bg)}
+  .logo::after{content:"";position:absolute;right:7px;top:10px;width:8px;height:11px;border-radius:3px;background:var(--accent)}
+  h1{font-size:20px;letter-spacing:-.3px}
+  .sub{color:var(--muted);font-size:13px;margin:2px 0 26px}
+
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);margin:30px 0 14px;font-weight:600}
+
+  /* pipeline */
+  .pipe{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px}
+  .step{flex:1;min-width:88px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 10px;text-align:center;position:relative}
+  .step .n{font-size:11px;color:var(--muted)}
+  .step .name{font-size:13.5px;font-weight:600;margin-top:2px}
+  .step .cnt{margin-top:8px;font-size:12px;color:var(--accent);font-weight:600;min-height:16px}
+  .step.auto{border-style:dashed}
+
+  /* cards */
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:14px}
+  .card .top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+  .badge{font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:20px;background:var(--soft);color:var(--ink)}
+  .badge.stage{background:var(--accent);color:#fff}
+  .badge.date{background:transparent;color:var(--muted);padding-left:0}
+  .card h3{font-size:17px;letter-spacing:-.2px;margin:2px 0 8px;line-height:1.4}
+  .angle{font-size:13.5px;color:var(--muted);background:var(--soft);border-left:3px solid var(--accent);
+    padding:9px 12px;border-radius:0 8px 8px 0;margin:10px 0 14px}
+  .lens{font-size:12px;color:var(--accent);font-weight:600;margin-bottom:14px}
+  .actions{display:flex;gap:8px;flex-wrap:wrap}
+  button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--ink);
+    padding:8px 14px;border-radius:10px;font-size:13.5px;font-weight:600;transition:.15s}
+  button:hover{border-color:var(--accent);color:var(--accent)}
+  button.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  button.primary:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+
+  .empty{color:var(--muted);font-size:14px;padding:30px;text-align:center;border:1px dashed var(--line);border-radius:14px}
+
+  /* reader overlay */
+  .overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(2px);
+    display:none;align-items:flex-start;justify-content:center;padding:24px;z-index:50;overflow-y:auto}
+  .overlay.on{display:flex}
+  .reader{background:var(--bg);max-width:760px;width:100%;border-radius:18px;border:1px solid var(--line);
+    padding:0;margin:auto;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+  .reader .rhead{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-radius:18px 18px 0 0}
+  .reader .rhead .k{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+  .close{border:none;background:var(--soft);width:34px;height:34px;border-radius:50%;font-size:18px;padding:0}
+  .doc{padding:24px 26px 40px}
+  .doc h1{font-size:23px;line-height:1.35;margin:6px 0 16px;letter-spacing:-.3px}
+  .doc h2{font-size:16px;text-transform:none;letter-spacing:0;color:var(--ink);margin:24px 0 8px}
+  .doc h3{font-size:14.5px;margin:18px 0 6px}
+  .doc p{margin:10px 0}
+  .doc ul,.doc ol{margin:10px 0 10px 22px}
+  .doc li{margin:4px 0}
+  .doc a{color:var(--accent)}
+  .doc code{background:var(--soft);padding:2px 6px;border-radius:5px;font-size:.9em}
+  .doc pre{background:var(--soft);padding:14px;border-radius:10px;overflow-x:auto;margin:12px 0}
+  .doc pre code{background:none;padding:0}
+  .doc blockquote{border-left:3px solid var(--accent);padding:6px 14px;margin:12px 0;color:var(--muted);background:var(--soft);border-radius:0 8px 8px 0}
+  .doc hr{border:none;border-top:1px solid var(--line);margin:20px 0}
+  .doc table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px;display:block;overflow-x:auto}
+  .doc th,.doc td{border:1px solid var(--line);padding:7px 10px;text-align:left}
+  .doc th{background:var(--soft)}
+  .doc .fm{font-size:12.5px;color:var(--muted);background:var(--soft);border-radius:8px;padding:10px 14px;margin-bottom:16px}
+
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center}
+  footer a{color:var(--muted)}
+  .loading{color:var(--muted);font-size:14px;padding:20px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo"></div>
+    <div>
+      <h1>Vector 운영 대시보드</h1>
+    </div>
+  </header>
+  <div class="sub mono" id="updated">불러오는 중…</div>
+
+  <h2>파이프라인</h2>
+  <div class="pipe" id="pipe"></div>
+
+  <h2>글 목록</h2>
+  <div id="list"><div class="loading">불러오는 중…</div></div>
+
+  <footer>
+    수집 → 선별 → 조사 → 관점 → 초안 → 검수 → 발행 · Vector 운영 시스템<br>
+    <a href="index.html">← 블로그 사이트로</a>
+  </footer>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="reader">
+    <div class="rhead"><span class="k" id="rkind"></span><button class="close" id="close">×</button></div>
+    <div class="doc" id="doc"><div class="loading">불러오는 중…</div></div>
+  </div>
+</div>
+
+<script>
+const overlay = document.getElementById('overlay');
+const docEl = document.getElementById('doc');
+const rkind = document.getElementById('rkind');
+
+function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+
+// inline: code, links, bold, italic (no external deps)
+function inline(s){
+  const codes=[];
+  s = esc(s).replace(/`([^`]+)`/g,(m,c)=>{codes.push(c);return '␞'+(codes.length-1)+'␞';});
+  s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+  s = s.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+  s = s.replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<em>$2</em>');
+  s = s.replace(/␞(\d+)␞/g,(m,i)=>'<code>'+codes[+i]+'</code>');
+  return s;
+}
+function splitRow(line){
+  return line.replace(/^\||\|$/g,'').split('|').map(c=>c.trim());
+}
+// self-contained markdown renderer (headings, hr, code, quote, tables, lists, paragraphs)
+function renderMD(md){
+  const lines = md.replace(/\r/g,'').split('\n');
+  let out='', i=0;
+  while(i<lines.length){
+    let ln = lines[i];
+    if(/^```/.test(ln)){                                   // fenced code
+      let buf=[]; i++;
+      while(i<lines.length && !/^```/.test(lines[i])){ buf.push(lines[i]); i++; }
+      i++; out+='<pre><code>'+esc(buf.join('\n'))+'</code></pre>'; continue;
+    }
+    if(/^\s*$/.test(ln)){ i++; continue; }                 // blank
+    let h = ln.match(/^(#{1,4})\s+(.*)$/);                 // heading
+    if(h){ const n=h[1].length; out+='<h'+n+'>'+inline(h[2])+'</h'+n+'>'; i++; continue; }
+    if(/^\s*([-*_])\1{2,}\s*$/.test(ln)){ out+='<hr>'; i++; continue; }  // hr
+    if(/^\s*>/.test(ln)){                                  // blockquote
+      let buf=[];
+      while(i<lines.length && /^\s*>/.test(lines[i])){ buf.push(lines[i].replace(/^\s*>\s?/,'')); i++; }
+      out+='<blockquote>'+renderMD(buf.join('\n'))+'</blockquote>'; continue;
+    }
+    if(/\|/.test(ln) && i+1<lines.length && /^\s*\|?[\s:|-]+\|[\s:|-]*$/.test(lines[i+1])){ // table
+      const head=splitRow(ln); i+=2; let rows=[];
+      while(i<lines.length && /\|/.test(lines[i]) && lines[i].trim()!==''){ rows.push(splitRow(lines[i])); i++; }
+      out+='<table><thead><tr>'+head.map(c=>'<th>'+inline(c)+'</th>').join('')+'</tr></thead><tbody>'+
+        rows.map(r=>'<tr>'+r.map(c=>'<td>'+inline(c)+'</td>').join('')+'</tr>').join('')+'</tbody></table>'; continue;
+    }
+    if(/^\s*(?:[-*+]|\d+\.)\s+/.test(ln)){                 // list
+      const ordered=/^\s*\d+\./.test(ln); let buf=[];
+      while(i<lines.length && /^\s*(?:[-*+]|\d+\.)\s+/.test(lines[i])){
+        buf.push('<li>'+inline(lines[i].replace(/^\s*(?:[-*+]|\d+\.)\s+/,''))+'</li>'); i++;
+      }
+      out+=(ordered?'<ol>':'<ul>')+buf.join('')+(ordered?'</ol>':'</ul>'); continue;
+    }
+    let buf=[];                                            // paragraph
+    while(i<lines.length && !/^\s*$/.test(lines[i]) && !/^(#{1,4}\s|```|\s*>|\s*([-*_])\2{2,}\s*$)/.test(lines[i])
+          && !(/\|/.test(lines[i]) && i+1<lines.length && /^\s*\|?[\s:|-]+\|[\s:|-]*$/.test(lines[i+1]))
+          && !/^\s*(?:[-*+]|\d+\.)\s+/.test(lines[i])){ buf.push(lines[i]); i++; }
+    out+='<p>'+inline(buf.join(' '))+'</p>';
+  }
+  return out;
+}
+
+function splitFrontmatter(md){
+  const m = md.match(/^---\n([\s\S]*?)\n---\n?/);
+  if(m){ return {fm:m[1].trim(), body:md.slice(m[0].length)}; }
+  return {fm:null, body:md};
+}
+
+async function openDoc(path, kindLabel){
+  rkind.textContent = kindLabel;
+  docEl.innerHTML = '<div class="loading">불러오는 중…</div>';
+  overlay.classList.add('on');
+  document.body.style.overflow='hidden';
+  try{
+    const res = await fetch(path, {cache:'no-store'});
+    if(!res.ok) throw new Error(res.status);
+    const raw = await res.text();
+    const {fm, body} = splitFrontmatter(raw);
+    let html = '';
+    if(fm){ html += '<div class="fm">'+esc(fm).replace(/\n/g,'<br>')+'</div>'; }
+    html += renderMD(body);
+    docEl.innerHTML = html;
+    docEl.scrollTop = 0;
+    document.querySelector('.reader').scrollIntoView({block:'start'});
+  }catch(e){
+    docEl.innerHTML = '<p class="loading">파일을 불러오지 못했어요 ('+e.message+').<br>'+
+      '이 페이지는 GitHub Pages 주소로 열어야 작동해요 (파일을 직접 열면 안 돼요).</p>';
+  }
+}
+function closeDoc(){ overlay.classList.remove('on'); document.body.style.overflow=''; }
+document.getElementById('close').onclick = closeDoc;
+overlay.onclick = e=>{ if(e.target===overlay) closeDoc(); };
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeDoc(); });
+
+const STAGE_AUTO = {'인박스':1,'검토중':0,'선정':0,'조사중':0,'작성중':0,'검수중':0,'발행':0};
+
+function renderPipe(stages, posts){
+  const pipe = document.getElementById('pipe');
+  const counts = {};
+  stages.forEach(s=>counts[s]=0);
+  posts.forEach(p=>{ if(counts[p.stage]!==undefined) counts[p.stage]++; });
+  pipe.innerHTML = stages.map((s,i)=>{
+    const c = counts[s];
+    return '<div class="step'+(STAGE_AUTO[s]?' auto':'')+'">'+
+      '<div class="n mono">'+String(i+1).padStart(2,'0')+'</div>'+
+      '<div class="name">'+s+'</div>'+
+      '<div class="cnt">'+(c? c+'건':'')+'</div></div>';
+  }).join('');
+}
+
+function card(p){
+  const lens = (p.lens||[]).join(' · ');
+  let a = '<div class="actions">';
+  if(p.draft)    a += '<button class="primary" data-p="'+p.draft+'" data-k="초안 · '+(p.type||'')+'">📝 초안 보기</button>';
+  if(p.research) a += '<button data-p="'+p.research+'" data-k="조사 노트">🔍 조사 노트</button>';
+  a += '</div>';
+  return '<div class="card">'+
+    '<div class="top">'+
+      '<span class="badge stage">'+p.stage+'</span>'+
+      (p.type?'<span class="badge">'+p.type+'</span>':'')+
+      '<span class="badge date mono">'+(p.date||'')+'</span>'+
+    '</div>'+
+    '<h3>'+p.title+'</h3>'+
+    (p.angle?'<div class="angle">관점 · '+p.angle+'</div>':'')+
+    (lens?'<div class="lens">렌즈 '+lens+'</div>':'')+
+    a+'</div>';
+}
+
+async function boot(){
+  try{
+    const res = await fetch('posts.json', {cache:'no-store'});
+    const data = await res.json();
+    document.getElementById('updated').textContent = '마지막 업데이트 '+ (data.updated||'') ;
+    const stages = data.stages || ['인박스','검토중','선정','조사중','작성중','검수중','발행'];
+    const posts = data.posts || [];
+    renderPipe(stages, posts);
+    const list = document.getElementById('list');
+    list.innerHTML = posts.length ? posts.map(card).join('') :
+      '<div class="empty">아직 글이 없어요. 새 글을 만들면 여기에 나타납니다.</div>';
+    list.querySelectorAll('button[data-p]').forEach(b=>{
+      b.onclick = ()=> openDoc(b.getAttribute('data-p'), b.getAttribute('data-k'));
+    });
+  }catch(e){
+    document.getElementById('list').innerHTML =
+      '<div class="empty">목록을 불러오지 못했어요.<br>GitHub Pages 주소로 열었는지 확인해주세요.</div>';
+    document.getElementById('updated').textContent='';
+  }
+}
+boot();
+</script>
+</body>
+</html>

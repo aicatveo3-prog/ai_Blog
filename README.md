@@ -11,6 +11,8 @@ AI 자동화 소식을 **직접 돌려보고, 남다르게 해석해서** 쓰는
 
 | 위치 | 내용 |
 |---|---|
+| **`dashboard.html`** | 📊 **운영 대시보드** — 파이프라인·초안·조사노트를 한 화면에서 보기 (GitHub 안 들어가도 됨) |
+| `posts.json` | 대시보드가 읽는 글 목록 (새 글 추가 시 여기에 한 줄) |
 | `index.html` | 발행 사이트 (Vector 블로그, 단일 HTML) |
 | **`docs/manual.md`** | 📖 전체 설계서 v1 — **여기서 시작** (진실의 원천) |
 | `workflow.md` | 🗓️ 매주·매월 무엇을 하는가 (실행 체크리스트) |
@@ -47,10 +49,23 @@ AI 자동화 소식을 **직접 돌려보고, 남다르게 해석해서** 쓰는
 
 ---
 
+## 📊 대시보드로 보기 (GitHub 안 들어가도 됨)
+
+파이프라인·초안·조사노트를 예쁜 화면으로 보려면 **대시보드 주소 하나만** 북마크하세요:
+
+```
+https://aicatveo3-prog.github.io/ai_Blog/dashboard.html
+```
+
+- 폰·PC 어디서나 접속, 앱 설치 없음
+- 초안/조사노트를 클릭하면 그 자리에서 예쁘게 렌더링
+- 새 글을 만들 때 `posts.json`에 항목 한 줄만 추가하면 대시보드에 자동 반영
+- ⚠️ 파일을 직접 열지 말고 **위 GitHub Pages 주소로** 열어야 작동합니다
+
 ## 사이트 로컬 실행 / 배포
 
 ```bash
-python3 -m http.server 8000   # http://localhost:8000
+python3 -m http.server 8000   # http://localhost:8000/dashboard.html
 ```
 GitHub Pages: Settings → Pages → Deploy from a branch → 루트(`/`) 선택.
 
