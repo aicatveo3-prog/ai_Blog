@@ -1,36 +1,54 @@
-# Microsoft, 자체 개발 'MAI' 모델 7종 공개
+# Microsoft가 '자기 AI 모델'을 직접 만들기 시작했다 — MAI 7종, 쉽게 설명
 
 > **첫 등장일** 2026-06-02 (✅ 검증 · CNBC·Microsoft AI·Simon Willison)
 > **분류** 모델 출시 · Microsoft
-> *아래는 발표 내용을 있는 그대로 정리한 것입니다. (해석·의견 없음)*
+> *어려운 용어 없이, 배경부터 하나씩 풀어 설명합니다. 맨 아래 [용어 사전] 참고.*
 
-Microsoft가 2026년 6월 2일, 사내(Microsoft AI)에서 자체 개발한 **7종의 MAI 모델 패밀리**를 공개했다. 타 랩 모델에 대한 distillation 없이, 추적 가능하고 기업용 등급의 데이터로 학습했다고 밝혔다.
+## 한마디로
+그동안 Microsoft는 자기 제품(코파일럿 등)에 **OpenAI(ChatGPT 만든 회사)의 AI**를 빌려 썼습니다. 그런데 2026년 6월 2일, **"이제 우리도 우리 AI를 직접 만든다"**며 자체 개발 모델 **7개(MAI 시리즈)**를 한꺼번에 공개했습니다.
 
-## 공개된 7종
+## 배경부터 쉽게
+- Microsoft는 오랫동안 OpenAI에 큰돈을 투자하고, 그 AI를 가져다 자기 서비스(윈도우 코파일럿, 오피스 등)에 넣어 왔습니다.
+- 문제는 **남의 엔진을 빌려 쓰면 ① 비용이 계속 나가고 ② 남에게 의존하게 된다**는 점입니다.
+- 그래서 Microsoft가 **자체 엔진(모델)을 직접 만들어** 그 의존을 줄이려는 겁니다. 이번 발표가 그 신호탄이에요.
 
-| 모델 | 유형 |
+## 무슨 일이 있었나 — 7개 모델
+"MAI"는 Microsoft AI의 약자예요. 종류별로 7개를 냈습니다.
+
+| 모델 | 하는 일 |
 |---|---|
-| MAI-Thinking-1 | 추론 |
-| MAI-Code-1-Flash | 코딩 |
-| MAI-Image-2.5 / 2.5 Flash | 이미지 |
-| MAI-Transcribe-1.5 | 전사(STT) |
-| MAI-Voice-2 / Voice-2 Flash | 음성 |
+| **MAI-Thinking-1** | 어려운 문제를 '생각해서' 푸는 추론용 |
+| **MAI-Code-1-Flash** | 코딩(프로그래밍) 도우미 |
+| MAI-Image-2.5 / Flash | 이미지 생성 |
+| MAI-Transcribe-1.5 | 음성을 글로 받아쓰기 |
+| MAI-Voice-2 / Flash | 목소리(음성) 생성 |
 
-## MAI-Thinking-1 (추론)
-- 규모: **1T 파라미터 / 활성 35B** (중간 규모)
-- 벤치마크: **AIME 2025 97.0%**, **AIME 2026 94.5%**
-- 블라인드 인간 side-by-side 평가에서 **Claude Sonnet 4.6보다 선호**됨
-- 소프트웨어 엔지니어링 주요 벤치에서 동급 최강 모델들과 대등
+이 중 특히 주목받은 두 개를 자세히 볼게요.
 
-## MAI-Code-1-Flash (코딩)
-- 구조: **Sparse MoE, 137B 총 / 5B 활성, 256K 컨텍스트**
-- "adaptive thinking" — 단순 요청엔 간결하게, 복잡한 작업엔 추론 예산을 더 씀
-- **Claude Haiku 4.5**를 4개 핵심 코딩 벤치에서 모두 상회 (SWE-Bench Pro 16점 차), SWE-Bench Verified에서 최대 **60% 적은 토큰**으로 해결
-- **GitHub Copilot(VS Code)** 개인 사용자에게 롤아웃
-- 가격: 입력 **$0.75/M**, 캐시 입력 **$0.075/M**, 출력 **$4.50/M**
+### 🧠 MAI-Thinking-1 (생각하는 모델)
+- 크기: **1조(1T) 파라미터**. 파라미터는 쉽게 말해 **AI 뇌 속의 '연결점' 개수**예요 — 많을수록 대체로 똑똑하지만 무겁습니다.
+- 재밌는 점: 1조 개가 다 있지만 **한 번 답할 때 실제로 쓰는 건 350억(35B)개만** 씁니다. 필요한 부분만 켜서 효율적으로 돌리는 방식이에요(→ 용어 사전 'MoE').
+- 성적: 수학 경시대회 문제(AIME)에서 **97%**를 맞혔고, **사람이 직접 블라인드로 비교했을 때 Claude Sonnet 4.6보다 이 모델을 더 선호**했습니다.
+- 강조점: 다른 회사 AI의 답을 베껴 학습(distillation)하지 않고, **출처가 깨끗하고 추적 가능한 데이터**로만 훈련했다고 밝혔습니다.
 
-## 배경
-Microsoft가 밝힌 목적은 **OpenAI 의존도를 낮추고 개발자 비용을 내리는 것**이다.
+### 💻 MAI-Code-1-Flash (코딩 도우미)
+- **작고 빠른** 코딩 특화 모델입니다.
+- 똑똑한 점: **쉬운 요청엔 짧게, 어려운 요청엔 더 오래 '생각'**하도록 조절합니다(adaptive thinking).
+- 성적: 비슷한 급의 **Claude Haiku 4.5를 4개 코딩 시험에서 모두 앞섰고**, 같은 문제를 **최대 60% 더 적은 계산(토큰)**으로 풀었습니다 — 즉 더 싸고 빠르게.
+- 어디서 쓰나: 개발자 도구 **GitHub Copilot(VS Code)**에 들어가기 시작했습니다.
+- 가격: 입력 100만 토큰당 **$0.75**, 출력 **$4.50** (토큰 = 아래 사전 참고).
+
+## 왜 중요한가 (쉽게)
+- **"AI 회사가 아니어도 이제 자기 AI를 만든다"**는 흐름을 보여줍니다. Microsoft 같은 거대 기업이 OpenAI 의존을 줄이면, AI 시장의 힘의 균형이 바뀝니다.
+- 사용자 입장에선 **선택지가 늘고 가격 경쟁이 붙어** 결국 더 싸고 다양해질 수 있어요.
+
+## 용어 사전
+- **모델(model)**: AI의 '두뇌' 하나. ChatGPT, Claude 같은 것 각각이 모델입니다.
+- **파라미터**: 모델 두뇌 속 연결점 수. 많을수록 대체로 성능↑, 무게↑.
+- **MoE(전문가 혼합)**: 큰 두뇌를 여러 '전문가'로 나눠두고, 질문마다 **관련 전문가만 켜서** 답하는 방식. 그래서 "1조 개 중 350억 개만 쓴다"가 가능.
+- **토큰**: AI가 글을 세는 단위(대략 단어 조각). 가격·속도가 토큰 수로 계산됩니다.
+- **distillation(증류)**: 다른 잘하는 AI의 답을 베껴 배우는 학습법. Microsoft는 이걸 안 썼다고 강조.
+- **벤치마크**: AI들끼리 같은 시험을 보게 해 성적을 비교하는 것(AIME=수학, SWE-Bench=코딩).
 
 ---
-*출처: [Microsoft AI — 7종 발표](https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/) · [MAI-Thinking-1](https://microsoft.ai/news/introducing-mai-thinking-1/) · [MAI-Code-1-Flash](https://microsoft.ai/news/introducingmai-code-1-flash/) · [Simon Willison](https://simonwillison.net/2026/Jun/2/microsofts-new-models/) · [Neowin](https://www.neowin.net/news/microsoft-unveils-mai-thinking-1-reasoning-and-mai-code-1-coding-models/)*
+*출처: [Microsoft AI — 7종 발표](https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/) · [MAI-Thinking-1](https://microsoft.ai/news/introducing-mai-thinking-1/) · [MAI-Code-1-Flash](https://microsoft.ai/news/introducingmai-code-1-flash/) · [Simon Willison](https://simonwillison.net/2026/Jun/2/microsofts-new-models/)*
