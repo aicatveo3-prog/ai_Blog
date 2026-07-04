@@ -192,7 +192,7 @@ async function openDoc(path, kindLabel){
   overlay.classList.add('on');
   document.body.style.overflow='hidden';
   try{
-    const res = await fetch(path, {cache:'no-store'});
+    const res = await fetch(path + (path.includes('?')?'&':'?') + 't=' + Date.now(), {cache:'no-store'});
     if(!res.ok) throw new Error(res.status);
     const raw = await res.text();
     const {fm, body} = splitFrontmatter(raw);
@@ -248,7 +248,7 @@ function card(p){
 
 async function boot(){
   try{
-    const res = await fetch('posts.json', {cache:'no-store'});
+    const res = await fetch('posts.json?t=' + Date.now(), {cache:'no-store'});
     const data = await res.json();
     document.getElementById('updated').textContent = '마지막 업데이트 '+ (data.updated||'') ;
     const stages = data.stages || ['인박스','검토중','선정','조사중','작성중','검수중','발행'];
