@@ -25,7 +25,7 @@
 
   header{display:flex;align-items:center;gap:12px;margin-bottom:6px}
   .themebtn{margin-left:auto;font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--card);
-    color:var(--ink);width:38px;height:38px;border-radius:50%;font-size:16px;padding:0;box-shadow:var(--shadow)}
+    color:var(--ink);height:38px;padding:0 14px;border-radius:19px;font-size:13px;font-weight:600;box-shadow:var(--shadow);white-space:nowrap}
   .themebtn:hover{border-color:var(--accent)}
   .logo{width:34px;height:34px;border-radius:9px;background:var(--ink);position:relative;flex:none}
   .logo::before{content:"";position:absolute;left:8px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--bg)}
@@ -252,12 +252,14 @@ const overlay = document.getElementById('overlay');
 const docEl = document.getElementById('doc');
 const rkind = document.getElementById('rkind');
 
-// 테마 (기본: 애플풍 라이트. 선택은 localStorage에 저장)
+// 테마 (기본: 애플풍 라이트. URL ?theme=light|dark 로 강제 가능, 선택은 localStorage 저장)
 (function(){
   const root=document.documentElement, btn=document.getElementById('themeBtn');
   function apply(t){ if(t==='dark') root.setAttribute('data-theme','dark'); else root.removeAttribute('data-theme');
-    btn.textContent = t==='dark' ? '🌙' : '☀️'; }
-  let t = localStorage.getItem('vec-theme') || 'light';
+    btn.textContent = t==='dark' ? '🌙 다크' : '☀️ 라이트'; btn.title='클릭해 전환'; }
+  const q = new URLSearchParams(location.search).get('theme');
+  let t = (q==='light'||q==='dark') ? q : (localStorage.getItem('vec-theme') || 'light');
+  localStorage.setItem('vec-theme', t);   // URL 강제 시 저장값도 갱신 → 다음부터 유지
   apply(t);
   btn.onclick=()=>{ t=(t==='dark'?'light':'dark'); localStorage.setItem('vec-theme',t); apply(t); };
 })();
