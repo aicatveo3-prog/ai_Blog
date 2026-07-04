@@ -90,7 +90,7 @@
       "verified": true,
       "verifyNote": "6/4 발표. 올해 가장 중요한 안전 제안. 압축(컴퓨트) 비용이 IPO를 압박한다는 대표 발언도.",
       "source": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
-      "status": "인박스",
+      "status": "검수중",
       "tags": [
         "연구",
         "안전",
@@ -101,7 +101,8 @@
         { "v": "자세히", "path": "collect/anthropic-pause.md" },
         { "v": "정리본", "path": "collect/anthropic-pause-summary.md" },
         { "v": "💬 반응", "path": "collect/reactions/anthropic-pause.md" }
-      ]
+      ],
+      "postId": "anthropic-pause"
     },
     {
       "title": "Microsoft, 자체 'MAI' 모델 7종 공개 (MAI-Thinking-1, MAI-Code-1-Flash)",
