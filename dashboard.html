@@ -28,6 +28,12 @@
   .sub{color:var(--muted);font-size:13px;margin:2px 0 26px}
 
   h2{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);margin:30px 0 14px;font-weight:600}
+  .h2sub{text-transform:none;letter-spacing:0;font-weight:400;font-size:12px}
+
+  .critbar{display:flex;flex-wrap:wrap;gap:8px}
+  .critbtn{font:inherit;cursor:pointer;font-size:13px;font-weight:600;padding:9px 14px;border-radius:10px;
+    border:1px solid var(--line);background:var(--card);color:var(--ink);transition:.15s}
+  .critbtn:hover{border-color:var(--accent);color:var(--accent)}
 
   /* pipeline */
   .pipe{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px}
@@ -107,6 +113,9 @@
 
   <h2>파이프라인</h2>
   <div class="pipe" id="pipe"></div>
+
+  <h2>판단 기준 <span class="h2sub">— 매번 이 규칙으로 판단합니다</span></h2>
+  <div class="critbar" id="criteria"></div>
 
   <h2>글 목록</h2>
   <div id="list"><div class="loading">불러오는 중…</div></div>
@@ -267,7 +276,8 @@ function card(p){
   const latest = nver ? p.versions[0].v : '';
   let a = '<div class="actions">';
   if(nver || p.draft) a += '<button class="primary" data-draft="'+p.id+'">📝 초안 보기'+(latest?' ('+latest+')':'')+'</button>';
-  if(p.research)      a += '<button data-research="'+p.research+'">🔍 조사 노트</button>';
+  if(p.pipeline)      a += '<button data-doc="'+p.pipeline+'" data-label="🧭 제작 과정">🧭 제작 과정</button>';
+  if(p.research)      a += '<button data-doc="'+p.research+'" data-label="🔍 조사 노트">🔍 조사 노트</button>';
   a += '</div>';
   const vtag = nver>1 ? '<span class="badge">버전 '+nver+'개</span>' : '';
   return '<div class="card">'+
@@ -292,14 +302,20 @@ async function boot(){
     const posts = data.posts || [];
     posts.forEach(p=>{ POSTS[p.id]=p; });
     renderPipe(stages, posts);
+
+    // 판단 기준 (시스템 규칙)
+    const crit = document.getElementById('criteria');
+    const criteria = data.criteria || [];
+    crit.innerHTML = criteria.map(c=>'<button class="critbtn" data-doc="'+c.path+'" data-label="'+c.name+'">'+c.name+'</button>').join('');
+
     const list = document.getElementById('list');
     list.innerHTML = posts.length ? posts.map(card).join('') :
       '<div class="empty">아직 글이 없어요. 새 글을 만들면 여기에 나타납니다.</div>';
     list.querySelectorAll('button[data-draft]').forEach(b=>{
       b.onclick = ()=> openDraft(POSTS[b.getAttribute('data-draft')]);
     });
-    list.querySelectorAll('button[data-research]').forEach(b=>{
-      b.onclick = ()=> openSingle(b.getAttribute('data-research'), '조사 노트');
+    document.querySelectorAll('button[data-doc]').forEach(b=>{
+      b.onclick = ()=> openSingle(b.getAttribute('data-doc'), b.getAttribute('data-label')||'문서');
     });
   }catch(e){
     document.getElementById('list').innerHTML =

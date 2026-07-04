@@ -1,6 +1,13 @@
 {
   "updated": "2026-07-04",
   "stages": ["인박스", "검토중", "선정", "조사중", "작성중", "검수중", "발행"],
+  "criteria": [
+    { "name": "🎯 포지셔닝 (독자·범위·렌즈)", "path": "system/positioning.md" },
+    { "name": "📡 수집 기준 (소스 리스트)", "path": "system/sources.md" },
+    { "name": "⚖️ 선별 기준 (루브릭 + 킬 기준)", "path": "system/scoring-rubric.md" },
+    { "name": "🧠 관점 기준 (분석 프레임워크)", "path": "system/analysis-frameworks.md" },
+    { "name": "✅ 검수 기준 (체크리스트)", "path": "system/checklists.md" }
+  ],
   "posts": [
     {
       "id": "claude-sonnet-5",
@@ -10,6 +17,7 @@
       "stage": "검수중",
       "angle": "성능 뉴스가 아니라 '에이전트 상시 구동 비용의 손익분기점'이 내려간 사건. 단, 토크나이저 함정 주의.",
       "lens": ["① 그래서 나한테?"],
+      "pipeline": "pipeline/claude-sonnet-5.md",
       "research": "research/2026-07-04-claude-sonnet-5.md",
       "versions": [
         {
