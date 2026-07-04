@@ -26,7 +26,8 @@
       "tags": [
         "정책",
         "Anthropic"
-      ]
+      ],
+      "article": "collect/california-claude.md"
     },
     {
       "title": "OpenAI GPT-5.6 Sol·Terra·Luna 프리뷰",
@@ -89,7 +90,8 @@
         "연구",
         "안전",
         "Anthropic"
-      ]
+      ],
+      "article": "collect/anthropic-pause.md"
     },
     {
       "title": "Microsoft, 자체 'MAI' 모델 7종 공개 (MAI-Thinking-1, MAI-Code-1-Flash)",
@@ -101,7 +103,8 @@
       "tags": [
         "모델",
         "Microsoft"
-      ]
+      ],
+      "article": "collect/microsoft-mai.md"
     },
     {
       "title": "미 행정부, 'AI 혁신·보안 촉진' 행정조치",
@@ -113,7 +116,8 @@
       "tags": [
         "정책",
         "미국"
-      ]
+      ],
+      "article": "collect/us-ai-executive-order.md"
     },
     {
       "title": "CNN, Perplexity 저작권 침해 소송",
@@ -176,7 +180,8 @@
       "status": "인박스",
       "tags": [
         "오픈모델"
-      ]
+      ],
+      "article": "collect/minimax-m3.md"
     },
     {
       "title": "Apple: Gemini 기반 Siri + Claude를 iPhone 옵션으로 (Tim Cook)",

@@ -413,7 +413,7 @@ function parseYMD(s){ const [y,m,d]=s.split('-').map(Number); return new Date(y,
 function daysBetween(a,b){ return Math.round((parseYMD(b)-parseYMD(a))/86400000); }
 
 function chipHTML(it, wrap){
-  return '<button class="chip '+(it.verified?'ok':'warn')+(wrap?' wk':'')+'" data-idx="'+it._idx+'">'+esc(it.title)+'</button>';
+  return '<button class="chip '+(it.verified?'ok':'warn')+(wrap?' wk':'')+'" data-idx="'+it._idx+'">'+(it.article?'📄 ':'')+esc(it.title)+'</button>';
 }
 function itemDetailHTML(it){
   const vok = it.verified;
@@ -435,11 +435,11 @@ function itemDetailHTML(it){
   '</div>';
 }
 function openItem(it){
-  openReader('수집 항목');
+  openReader(it.article ? '수집 항목 · 정리' : '수집 항목');
   document.getElementById('vbar').style.display='none';
   document.getElementById('vnote').style.display='none';
-  docEl.innerHTML = itemDetailHTML(it);
-  docEl.scrollTop = 0;
+  if(it.article){ loadInto(it.article); }   // 자세히 정리한 글이 있으면 그걸 렌더
+  else { docEl.innerHTML = itemDetailHTML(it); docEl.scrollTop = 0; }
 }
 function renderMonth(){
   const a=calState.anchor, y=a.getFullYear(), mo=a.getMonth();
