@@ -30,32 +30,70 @@
   h2{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);margin:30px 0 14px;font-weight:600}
   .h2sub{text-transform:none;letter-spacing:0;font-weight:400;font-size:12px}
 
-  /* 수집 달력 */
-  .cal{display:flex;flex-direction:column;gap:2px}
-  .calday{display:flex;gap:14px;padding:12px 0;border-top:1px solid var(--line)}
-  .calday:first-child{border-top:none}
-  .caldate{flex:none;width:88px;text-align:right;padding-top:2px}
-  .caldate .d{font-size:15px;font-weight:700}
-  .caldate .y{font-size:11px;color:var(--muted)}
-  .caldate.trend .d,.caldate.warn .d{font-size:13px}
-  .calitems{flex:1;display:flex;flex-direction:column;gap:10px}
-  .calitem{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
-  .calitem .h{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:5px}
-  .calitem .t{font-size:14.5px;font-weight:600}
+  /* tabs */
+  .tabs{display:flex;gap:6px;margin:22px 0 6px;border-bottom:1px solid var(--line)}
+  .tab{font:inherit;cursor:pointer;background:none;border:none;padding:10px 14px;font-size:14px;font-weight:600;
+    color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px}
+  .tab.on{color:var(--ink);border-bottom-color:var(--accent)}
+  .tab:hover{color:var(--ink)}
+  .tabpanel[hidden]{display:none}
+
+  /* calendar controls */
+  .calhint{font-size:12.5px;color:var(--muted);margin:16px 0 12px}
+  .calctl{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;margin-bottom:14px}
+  .viewtoggle{display:inline-flex;background:var(--soft);border-radius:10px;padding:3px}
+  .vtg{font:inherit;cursor:pointer;border:none;background:none;color:var(--muted);font-size:13px;font-weight:600;padding:6px 14px;border-radius:8px}
+  .vtg.on{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+  .navrow{display:flex;align-items:center;gap:6px}
+  .navbtn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--ink);
+    width:34px;height:34px;border-radius:9px;font-size:13px;font-weight:600;padding:0}
+  .navbtn.today{width:auto;padding:0 12px}
+  .navbtn:hover{border-color:var(--accent);color:var(--accent)}
+  .callabel{font-size:15px;font-weight:700;min-width:130px;text-align:center}
+
+  /* month grid */
+  .mgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+  .mwd{text-align:center;font-size:11px;font-weight:600;color:var(--muted);padding:4px 0}
+  .mwd.sun{color:#d06666}
+  .cell{min-height:74px;background:var(--card);border:1px solid var(--line);border-radius:9px;padding:5px 5px 6px;overflow:hidden}
+  .cell.off{background:transparent;border-color:transparent}
+  .cell .dn{font-size:11px;color:var(--muted);font-weight:600;margin-bottom:3px}
+  .cell.off .dn{opacity:.35}
+  .cell.today0{border-color:var(--accent)}
+  .chip{display:block;width:100%;text-align:left;font:inherit;cursor:pointer;border:none;border-radius:6px;
+    padding:3px 6px;margin-bottom:3px;font-size:11px;font-weight:600;line-height:1.3;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .chip.ok{background:rgba(75,71,232,.14);color:var(--accent)}
+  .chip.warn{background:rgba(210,150,0,.16);color:#b8860b}
+
+  /* week view */
+  .wgrid{display:flex;flex-direction:column;gap:6px}
+  .wday{display:flex;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+  .wday.sun .wh{color:#d06666}
+  .wh{flex:none;width:74px;font-size:13px;font-weight:700}
+  .wh small{display:block;font-size:11px;color:var(--muted);font-weight:400}
+  .witems{flex:1;display:flex;flex-direction:column;gap:5px}
+  .wempty{color:var(--muted);opacity:.5}
+  .chip.wk{white-space:normal}
+
+  /* item detail (popup) + shared badges */
+  .idetail .drow{margin:8px 0;font-size:13.5px}
+  .idetail .glab{color:var(--muted);font-size:12px}
+  .idetail .gap b{color:var(--accent)}
+  .idetail .note{font-size:13px;color:var(--muted);background:var(--soft);border-radius:8px;padding:10px 12px;margin:10px 0;line-height:1.6}
+  .idetail .meta{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-top:12px}
+  .idetail a.src{color:var(--accent);font-weight:600}
   .vchk{font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px}
   .vchk.ok{background:rgba(31,157,107,.15);color:var(--ok)}
   .vchk.warn{background:rgba(210,150,0,.16);color:#b8860b}
-  .calitem .gap{font-size:12.5px;color:var(--muted);margin:3px 0}
-  .calitem .gap b{color:var(--accent)}
-  .calitem .note{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
-  .calitem .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px;font-size:11.5px}
-  .calitem a.src{color:var(--accent);font-weight:600;text-decoration:none}
-  .calitem a.src:hover{text-decoration:underline}
   .st{font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:var(--soft);color:var(--ink)}
   .st.검수중{background:var(--accent);color:#fff}
   .st.폐기{background:transparent;color:var(--muted);border:1px solid var(--line)}
   .st.인박스{background:transparent;color:#b8860b;border:1px solid #d9c58a}
   .caltag{font-size:11px;color:var(--muted);background:var(--soft);padding:2px 7px;border-radius:6px}
+  .undated{margin-top:22px}
+  .ulabel{font-size:13px;font-weight:600;margin-bottom:10px}
+  .uchips{display:flex;flex-wrap:wrap;gap:7px}
 
   .critbar{display:flex;flex-wrap:wrap;gap:8px}
   .critbtn{font:inherit;cursor:pointer;font-size:13px;font-weight:600;padding:9px 14px;border-radius:10px;
@@ -138,17 +176,42 @@
   </header>
   <div class="sub mono" id="updated">불러오는 중…</div>
 
-  <h2>파이프라인</h2>
-  <div class="pipe" id="pipe"></div>
+  <div class="tabs">
+    <button class="tab on" data-tab="overview">개요</button>
+    <button class="tab" data-tab="calendar">📅 수집 달력</button>
+  </div>
 
-  <h2>수집 달력 <span class="h2sub">— 날짜 = 검증된 '진짜 첫 등장일'. 뉴스 뜬 날이 아닙니다</span></h2>
-  <div class="cal" id="cal"></div>
+  <section id="tab-overview" class="tabpanel">
+    <h2>파이프라인</h2>
+    <div class="pipe" id="pipe"></div>
 
-  <h2>판단 기준 <span class="h2sub">— 매번 이 규칙으로 판단합니다</span></h2>
-  <div class="critbar" id="criteria"></div>
+    <h2>판단 기준 <span class="h2sub">— 매번 이 규칙으로 판단합니다</span></h2>
+    <div class="critbar" id="criteria"></div>
 
-  <h2>글 목록</h2>
-  <div id="list"><div class="loading">불러오는 중…</div></div>
+    <h2>글 목록</h2>
+    <div id="list"><div class="loading">불러오는 중…</div></div>
+  </section>
+
+  <section id="tab-calendar" class="tabpanel" hidden>
+    <p class="calhint">날짜 = 검증된 <b>진짜 첫 등장일</b> (뉴스 뜬 날이 아님).</p>
+    <div class="calctl">
+      <div class="viewtoggle">
+        <button class="vtg on" data-view="month">월별</button>
+        <button class="vtg" data-view="week">주간</button>
+      </div>
+      <div class="navrow">
+        <button class="navbtn" id="calPrev">◀</button>
+        <span id="calLabel" class="callabel"></span>
+        <button class="navbtn" id="calNext">▶</button>
+        <button class="navbtn today" id="calToday">최근</button>
+      </div>
+    </div>
+    <div id="calview"></div>
+    <div class="undated">
+      <div class="ulabel">📌 날짜 없음 <span class="h2sub">— 트렌드 · 미검증</span></div>
+      <div id="calUndated"></div>
+    </div>
+  </section>
 
   <footer>
     수집 → 선별 → 조사 → 관점 → 초안 → 검수 → 발행 · Vector 운영 시스템<br>
@@ -329,57 +392,117 @@ function renderPipe(stages, posts){
   }).join('');
 }
 
-// ---- 수집 달력 ----
-const WD = ['일','월','화','수','목','금','토'];
-function fmtDate(s){
-  const [y,m,d] = s.split('-').map(Number);
-  return {d:m+'월 '+d+'일', y:y+' ('+WD[new Date(y,m-1,d).getDay()]+')'};
+// ---- 탭 전환 ----
+document.querySelectorAll('.tab').forEach(t=>{
+  t.onclick = ()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on', x===t));
+    const which = t.getAttribute('data-tab');
+    document.getElementById('tab-overview').hidden = which!=='overview';
+    document.getElementById('tab-calendar').hidden = which!=='calendar';
+  };
+});
+
+// ---- 수집 달력 (월별/주간) ----
+const CWD = ['일','월','화','수','목','금','토'];
+let INBOX = [], itemsByDate = {}, UNDATED = [];
+let DEFAULT_ANCHOR = new Date();
+let calState = { mode:'month', anchor:new Date() };
+
+function ymd(d){ return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+function parseYMD(s){ const [y,m,d]=s.split('-').map(Number); return new Date(y,m-1,d); }
+function daysBetween(a,b){ return Math.round((parseYMD(b)-parseYMD(a))/86400000); }
+
+function chipHTML(it, wrap){
+  return '<button class="chip '+(it.verified?'ok':'warn')+(wrap?' wk':'')+'" data-idx="'+it._idx+'">'+esc(it.title)+'</button>';
 }
-function daysBetween(a,b){
-  return Math.round((new Date(b) - new Date(a)) / 86400000);
-}
-function calItem(it){
+function itemDetailHTML(it){
   const vok = it.verified;
   let gap;
-  if(it.firstSeen && it.surfaced && it.surfaced !== it.firstSeen){
-    const g = daysBetween(it.firstSeen, it.surfaced);
-    gap = '첫 등장 '+it.firstSeen+' · 확산 '+it.surfaced+' → ⏱ <b>'+g+'일 늦게 떴음</b>';
-  } else if(it.firstSeen){
-    gap = '첫 등장 '+it.firstSeen+' · 같은 날 확산';
-  } else {
-    gap = '단일 첫 등장일 없음';
-  }
+  if(it.firstSeen && it.surfaced && it.surfaced!==it.firstSeen){
+    gap = '첫 등장 <b>'+it.firstSeen+'</b> · 확산 '+it.surfaced+' → ⏱ <b>'+daysBetween(it.firstSeen,it.surfaced)+'일 늦게 떴음</b>';
+  } else if(it.firstSeen){ gap = '첫 등장 <b>'+it.firstSeen+'</b> · 같은 날 확산'; }
+  else { gap = '단일 첫 등장일 없음 (지속·트렌드 또는 미검증)'; }
   const tags = (it.tags||[]).map(t=>'<span class="caltag">#'+esc(t)+'</span>').join('');
   const src = it.source ? '<a class="src" href="'+it.source+'" target="_blank" rel="noopener">출처 ↗</a>' : '';
   const post = it.postId ? '<span class="caltag">→ 글로 발전</span>' : '';
   const kill = it.killReason ? '<span class="caltag">✕ '+esc(it.killReason)+'</span>' : '';
-  return '<div class="calitem">'+
-    '<div class="h"><span class="vchk '+(vok?'ok':'warn')+'">'+(vok?'✅ 검증됨':'⚠️ 검증 필요')+'</span>'+
-      '<span class="t">'+esc(it.title)+'</span></div>'+
-    '<div class="gap">'+gap+'</div>'+
+  return '<div class="idetail">'+
+    '<h1 style="font-size:19px">'+esc(it.title)+'</h1>'+
+    '<div class="drow"><span class="vchk '+(vok?'ok':'warn')+'">'+(vok?'✅ 검증됨':'⚠️ 검증 필요')+'</span></div>'+
+    '<div class="drow gap">'+gap+'</div>'+
     (it.verifyNote?'<div class="note">🔎 '+esc(it.verifyNote)+'</div>':'')+
     '<div class="meta"><span class="st '+it.status+'">'+it.status+'</span>'+tags+src+post+kill+'</div>'+
   '</div>';
 }
-function renderInbox(data){
-  const el = document.getElementById('cal');
-  const items = (data && data.items) || [];
-  if(!items.length){ el.innerHTML='<div class="empty">수집된 소식이 없어요.</div>'; return; }
-  const dated = items.filter(i=>i.firstSeen);
-  const trend = items.filter(i=>!i.firstSeen && i.trend);
-  const warn  = items.filter(i=>!i.firstSeen && !i.trend);
-  // 날짜별 그룹, 최신순
-  const byDate = {};
-  dated.forEach(i=>{ (byDate[i.firstSeen]=byDate[i.firstSeen]||[]).push(i); });
-  const dates = Object.keys(byDate).sort().reverse();
-  let html = dates.map(dt=>{
-    const f = fmtDate(dt);
-    return '<div class="calday"><div class="caldate"><div class="d">'+f.d+'</div><div class="y">'+f.y+'</div></div>'+
-      '<div class="calitems">'+byDate[dt].map(calItem).join('')+'</div></div>';
-  }).join('');
-  if(trend.length) html += '<div class="calday"><div class="caldate trend"><div class="d">📌 트렌드</div><div class="y">단일 날짜 없음</div></div><div class="calitems">'+trend.map(calItem).join('')+'</div></div>';
-  if(warn.length)  html += '<div class="calday"><div class="caldate warn"><div class="d">⚠️ 날짜 미검증</div><div class="y">인박스 대기</div></div><div class="calitems">'+warn.map(calItem).join('')+'</div></div>';
-  el.innerHTML = html;
+function openItem(it){
+  openReader('수집 항목');
+  document.getElementById('vbar').style.display='none';
+  document.getElementById('vnote').style.display='none';
+  docEl.innerHTML = itemDetailHTML(it);
+  docEl.scrollTop = 0;
+}
+function renderMonth(){
+  const a=calState.anchor, y=a.getFullYear(), mo=a.getMonth();
+  const firstDay=new Date(y,mo,1).getDay(), dim=new Date(y,mo+1,0).getDate();
+  const weeks=Math.ceil((firstDay+dim)/7);
+  const start=new Date(y,mo,1-firstDay);
+  let head=CWD.map((w,i)=>'<div class="mwd'+(i===0?' sun':'')+'">'+w+'</div>').join('');
+  let cells='';
+  for(let i=0;i<weeks*7;i++){
+    const d=new Date(start); d.setDate(start.getDate()+i);
+    const inM=d.getMonth()===mo;
+    const its=itemsByDate[ymd(d)]||[];
+    cells+='<div class="cell'+(inM?'':' off')+'"><div class="dn">'+d.getDate()+'</div>'+its.map(it=>chipHTML(it)).join('')+'</div>';
+  }
+  return '<div class="mgrid">'+head+cells+'</div>';
+}
+function renderWeek(){
+  const a=calState.anchor, sun=new Date(a); sun.setDate(a.getDate()-a.getDay());
+  let rows='';
+  for(let i=0;i<7;i++){ const d=new Date(sun); d.setDate(sun.getDate()+i);
+    const its=itemsByDate[ymd(d)]||[];
+    const body=its.length?its.map(it=>chipHTML(it,true)).join(''):'<span class="wempty">—</span>';
+    rows+='<div class="wday'+(i===0?' sun':'')+'"><div class="wh">'+CWD[d.getDay()]+'<small>'+(d.getMonth()+1)+'/'+d.getDate()+'</small></div><div class="witems">'+body+'</div></div>';
+  }
+  return '<div class="wgrid">'+rows+'</div>';
+}
+function renderCalendar(){
+  const view=document.getElementById('calview'); const a=calState.anchor;
+  let label;
+  if(calState.mode==='month'){ view.innerHTML=renderMonth(); label=a.getFullYear()+'년 '+(a.getMonth()+1)+'월'; }
+  else { view.innerHTML=renderWeek(); const s=new Date(a);s.setDate(a.getDate()-a.getDay()); const e=new Date(s);e.setDate(s.getDate()+6);
+    label=(s.getMonth()+1)+'/'+s.getDate()+' – '+(e.getMonth()+1)+'/'+e.getDate(); }
+  document.getElementById('calLabel').textContent=label;
+  view.querySelectorAll('.chip[data-idx]').forEach(b=>b.onclick=()=>openItem(INBOX[+b.getAttribute('data-idx')]));
+}
+function renderUndated(){
+  const el=document.getElementById('calUndated');
+  el.innerHTML = UNDATED.length ? '<div class="uchips">'+UNDATED.map(it=>chipHTML(it,true)).join('')+'</div>' : '<span class="wempty">없음</span>';
+  el.querySelectorAll('.chip[data-idx]').forEach(b=>b.onclick=()=>openItem(INBOX[+b.getAttribute('data-idx')]));
+}
+function initCalendar(data){
+  INBOX = (data && data.items) || [];
+  itemsByDate = {}; UNDATED = [];
+  INBOX.forEach((it,idx)=>{ it._idx=idx;
+    if(it.firstSeen){ (itemsByDate[it.firstSeen]=itemsByDate[it.firstSeen]||[]).push(it); }
+    else UNDATED.push(it);
+  });
+  const dates=Object.keys(itemsByDate).sort();
+  DEFAULT_ANCHOR = dates.length ? parseYMD(dates[dates.length-1]) : new Date();
+  calState = { mode:'month', anchor:new Date(DEFAULT_ANCHOR) };
+  // 컨트롤 배선 (한 번)
+  document.getElementById('calPrev').onclick = ()=>{ const a=calState.anchor;
+    if(calState.mode==='month') a.setMonth(a.getMonth()-1); else a.setDate(a.getDate()-7); renderCalendar(); };
+  document.getElementById('calNext').onclick = ()=>{ const a=calState.anchor;
+    if(calState.mode==='month') a.setMonth(a.getMonth()+1); else a.setDate(a.getDate()+7); renderCalendar(); };
+  document.getElementById('calToday').onclick = ()=>{ calState.anchor=new Date(DEFAULT_ANCHOR); renderCalendar(); };
+  document.querySelectorAll('.vtg').forEach(v=>{ v.onclick=()=>{
+    calState.mode=v.getAttribute('data-view');
+    document.querySelectorAll('.vtg').forEach(x=>x.classList.toggle('on', x===v));
+    renderCalendar();
+  }; });
+  renderCalendar();
+  renderUndated();
 }
 
 const POSTS = {};
@@ -417,8 +540,8 @@ async function boot(){
     renderPipe(stages, posts);
 
     // 수집 달력
-    try{ const ir = await fetchData('inbox.json'); renderInbox(await ir.json()); }
-    catch(_){ document.getElementById('cal').innerHTML='<div class="empty">수집 달력을 불러오지 못했어요.</div>'; }
+    try{ const ir = await fetchData('inbox.json'); initCalendar(await ir.json()); }
+    catch(_){ document.getElementById('calview').innerHTML='<div class="empty">수집 달력을 불러오지 못했어요.</div>'; }
 
     // 판단 기준 (시스템 규칙)
     const crit = document.getElementById('criteria');
