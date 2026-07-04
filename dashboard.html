@@ -467,10 +467,23 @@ function itemDetailHTML(it){
   '</div>';
 }
 function openItem(it){
+  const vs = it.articleVersions || (it.article ? [{v:'글',path:it.article}] : []);
   openReader(it.article ? '수집 항목 · 정리' : '수집 항목');
-  document.getElementById('vbar').style.display='none';
-  document.getElementById('vnote').style.display='none';
-  if(it.article){ loadInto(it.article); }   // 자세히 정리한 글이 있으면 그걸 렌더
+  vbar.style.display = vs.length>1 ? 'flex' : 'none';
+  vnote.style.display = 'none';
+  if(vs.length>1){
+    const notes = { '자세히':'쉽고 자세하게 풀어 쓴 설명본', '정리본':'발표 내용만 압축한 요약본' };
+    function pick(i){
+      vbar.querySelectorAll('.vchip').forEach((c,ci)=>c.classList.toggle('on',ci===i));
+      const nt = notes[vs[i].v];
+      if(nt){ vnote.style.display='block'; vnote.textContent = nt; } else vnote.style.display='none';
+      loadInto(vs[i].path);
+    }
+    vbar.innerHTML = vs.map((v,i)=>'<button class="vchip">'+v.v+'</button>').join('');
+    vbar.querySelectorAll('.vchip').forEach((c,i)=> c.onclick=()=>pick(i));
+    pick(0);
+  }
+  else if(vs.length===1){ loadInto(vs[0].path); }   // 단일 글
   else { docEl.innerHTML = itemDetailHTML(it); docEl.scrollTop = 0; }
 }
 function renderMonth(){

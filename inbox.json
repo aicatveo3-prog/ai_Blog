@@ -27,7 +27,11 @@
         "정책",
         "Anthropic"
       ],
-      "article": "collect/california-claude.md"
+      "article": "collect/california-claude.md",
+      "articleVersions": [
+        { "v": "자세히", "path": "collect/california-claude.md" },
+        { "v": "정리본", "path": "collect/california-claude-summary.md" }
+      ]
     },
     {
       "title": "OpenAI GPT-5.6 Sol·Terra·Luna 프리뷰",
@@ -91,7 +95,11 @@
         "안전",
         "Anthropic"
       ],
-      "article": "collect/anthropic-pause.md"
+      "article": "collect/anthropic-pause.md",
+      "articleVersions": [
+        { "v": "자세히", "path": "collect/anthropic-pause.md" },
+        { "v": "정리본", "path": "collect/anthropic-pause-summary.md" }
+      ]
     },
     {
       "title": "Microsoft, 자체 'MAI' 모델 7종 공개 (MAI-Thinking-1, MAI-Code-1-Flash)",
@@ -104,7 +112,11 @@
         "모델",
         "Microsoft"
       ],
-      "article": "collect/microsoft-mai.md"
+      "article": "collect/microsoft-mai.md",
+      "articleVersions": [
+        { "v": "자세히", "path": "collect/microsoft-mai.md" },
+        { "v": "정리본", "path": "collect/microsoft-mai-summary.md" }
+      ]
     },
     {
       "title": "미 행정부, 'AI 혁신·보안 촉진' 행정조치",
@@ -117,7 +129,11 @@
         "정책",
         "미국"
       ],
-      "article": "collect/us-ai-executive-order.md"
+      "article": "collect/us-ai-executive-order.md",
+      "articleVersions": [
+        { "v": "자세히", "path": "collect/us-ai-executive-order.md" },
+        { "v": "정리본", "path": "collect/us-ai-executive-order-summary.md" }
+      ]
     },
     {
       "title": "CNN, Perplexity 저작권 침해 소송",
@@ -181,7 +197,11 @@
       "tags": [
         "오픈모델"
       ],
-      "article": "collect/minimax-m3.md"
+      "article": "collect/minimax-m3.md",
+      "articleVersions": [
+        { "v": "자세히", "path": "collect/minimax-m3.md" },
+        { "v": "정리본", "path": "collect/minimax-m3-summary.md" }
+      ]
     },
     {
       "title": "Apple: Gemini 기반 Siri + Claude를 iPhone 옵션으로 (Tim Cook)",
