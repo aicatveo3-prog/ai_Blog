@@ -146,8 +146,13 @@
   .overlay.on{display:flex}
   .reader{background:var(--bg);max-width:760px;width:100%;border-radius:18px;border:1px solid var(--line);
     padding:0;margin:auto;box-shadow:0 20px 60px rgba(0,0,0,.25)}
-  .rtop{position:sticky;top:0;z-index:5;background:var(--bg);border-radius:18px 18px 0 0;
+  .rtop{background:var(--bg);border-radius:18px 18px 0 0;
     border-bottom:1px solid var(--line);padding-bottom:12px}
+  .totop{position:fixed;right:34px;bottom:34px;width:46px;height:46px;border-radius:50%;
+    border:1px solid var(--line);background:var(--accent);color:#fff;font-size:20px;line-height:1;
+    box-shadow:0 6px 20px rgba(0,0,0,.28);cursor:pointer;display:none;z-index:60;padding:0}
+  .totop.show{display:block}
+  .totop:hover{filter:brightness(1.08)}
   .reader .rhead{background:var(--bg);
     display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-radius:18px 18px 0 0}
   .reader .rhead .k{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.5px}
@@ -249,6 +254,7 @@
     </div>
     <div class="doc" id="doc"><div class="loading">불러오는 중…</div></div>
   </div>
+  <button class="totop" id="totop" title="맨 위로" aria-label="맨 위로">↑</button>
 </div>
 
 <script>
@@ -406,10 +412,13 @@ function openSingle(path, label){
   vbar.style.display='none'; vnote.style.display='none';
   loadInto(path);
 }
-function closeDoc(){ overlay.classList.remove('on'); document.body.style.overflow=''; }
+const totop = document.getElementById('totop');
+function closeDoc(){ overlay.classList.remove('on'); document.body.style.overflow=''; totop.classList.remove('show'); }
 document.getElementById('close').onclick = closeDoc;
 overlay.onclick = e=>{ if(e.target===overlay) closeDoc(); };
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeDoc(); });
+overlay.addEventListener('scroll', ()=>{ totop.classList.toggle('show', overlay.scrollTop>240); });
+totop.onclick = ()=>{ overlay.scrollTo({top:0, behavior:'smooth'}); };
 
 const STAGE_AUTO = {'인박스':1,'검토중':0,'선정':0,'조사중':0,'작성중':0,'검수중':0,'발행':0};
 
