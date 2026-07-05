@@ -12,6 +12,8 @@
       "status": "인박스",
       "tags": ["논란", "안전", "Anthropic", "정책"],
       "articleVersions": [
+        { "v": "정리본", "path": "collect/pentagon-anthropic-emails-summary.md" },
+        { "v": "자세히", "path": "collect/pentagon-anthropic-emails.md" },
         { "v": "💬 반응", "path": "collect/reactions/pentagon-anthropic-emails.md" }
       ]
     },
@@ -25,6 +27,8 @@
       "status": "인박스",
       "tags": ["논란", "정책", "Anthropic", "중국"],
       "articleVersions": [
+        { "v": "정리본", "path": "collect/anthropic-china-access-summary.md" },
+        { "v": "자세히", "path": "collect/anthropic-china-access.md" },
         { "v": "💬 반응", "path": "collect/reactions/anthropic-china-access.md" }
       ]
     },
@@ -38,6 +42,8 @@
       "status": "인박스",
       "tags": ["정책", "자금", "OpenAI"],
       "articleVersions": [
+        { "v": "정리본", "path": "collect/openai-government-stake-summary.md" },
+        { "v": "자세히", "path": "collect/openai-government-stake.md" },
         { "v": "💬 반응", "path": "collect/reactions/openai-government-stake.md" }
       ]
     },
@@ -51,6 +57,8 @@
       "status": "인박스",
       "tags": ["논란", "빅테크", "Tesla"],
       "articleVersions": [
+        { "v": "정리본", "path": "collect/tesla-ai-token-cap-summary.md" },
+        { "v": "자세히", "path": "collect/tesla-ai-token-cap.md" },
         { "v": "💬 반응", "path": "collect/reactions/tesla-ai-token-cap.md" }
       ]
     },
