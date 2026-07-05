@@ -119,8 +119,8 @@
       ],
       "article": "collect/california-claude.md",
       "articleVersions": [
-        { "v": "자세히", "path": "collect/california-claude.md" },
         { "v": "정리본", "path": "collect/california-claude-summary.md" },
+        { "v": "자세히", "path": "collect/california-claude.md" },
         { "v": "💬 반응", "path": "collect/reactions/california-claude.md" }
       ]
     },
@@ -188,8 +188,8 @@
       ],
       "article": "collect/anthropic-pause.md",
       "articleVersions": [
-        { "v": "자세히", "path": "collect/anthropic-pause.md" },
         { "v": "정리본", "path": "collect/anthropic-pause-summary.md" },
+        { "v": "자세히", "path": "collect/anthropic-pause.md" },
         { "v": "💬 반응", "path": "collect/reactions/anthropic-pause.md" }
       ],
       "postId": "anthropic-pause"
@@ -207,8 +207,8 @@
       ],
       "article": "collect/microsoft-mai.md",
       "articleVersions": [
-        { "v": "자세히", "path": "collect/microsoft-mai.md" },
         { "v": "정리본", "path": "collect/microsoft-mai-summary.md" },
+        { "v": "자세히", "path": "collect/microsoft-mai.md" },
         { "v": "💬 반응", "path": "collect/reactions/microsoft-mai.md" }
       ]
     },
@@ -225,8 +225,8 @@
       ],
       "article": "collect/us-ai-executive-order.md",
       "articleVersions": [
-        { "v": "자세히", "path": "collect/us-ai-executive-order.md" },
         { "v": "정리본", "path": "collect/us-ai-executive-order-summary.md" },
+        { "v": "자세히", "path": "collect/us-ai-executive-order.md" },
         { "v": "💬 반응", "path": "collect/reactions/us-ai-executive-order.md" }
       ]
     },
@@ -294,8 +294,8 @@
       ],
       "article": "collect/minimax-m3.md",
       "articleVersions": [
-        { "v": "자세히", "path": "collect/minimax-m3.md" },
         { "v": "정리본", "path": "collect/minimax-m3-summary.md" },
+        { "v": "자세히", "path": "collect/minimax-m3.md" },
         { "v": "💬 반응", "path": "collect/reactions/minimax-m3.md" }
       ]
     },
