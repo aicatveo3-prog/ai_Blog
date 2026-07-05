@@ -146,7 +146,9 @@
   .overlay.on{display:flex}
   .reader{background:var(--bg);max-width:760px;width:100%;border-radius:18px;border:1px solid var(--line);
     padding:0;margin:auto;box-shadow:0 20px 60px rgba(0,0,0,.25)}
-  .reader .rhead{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);
+  .rtop{position:sticky;top:0;z-index:5;background:var(--bg);border-radius:18px 18px 0 0;
+    border-bottom:1px solid var(--line);padding-bottom:12px}
+  .reader .rhead{background:var(--bg);
     display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-radius:18px 18px 0 0}
   .reader .rhead .k{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.5px}
   .close{border:none;background:var(--soft);width:34px;height:34px;border-radius:50%;font-size:18px;padding:0}
@@ -240,9 +242,11 @@
 
 <div class="overlay" id="overlay">
   <div class="reader">
-    <div class="rhead"><span class="k" id="rkind"></span><button class="close" id="close">×</button></div>
-    <div class="vbar" id="vbar"></div>
-    <div class="vnote" id="vnote"></div>
+    <div class="rtop">
+      <div class="rhead"><span class="k" id="rkind"></span><button class="close" id="close">×</button></div>
+      <div class="vbar" id="vbar"></div>
+      <div class="vnote" id="vnote"></div>
+    </div>
     <div class="doc" id="doc"><div class="loading">불러오는 중…</div></div>
   </div>
 </div>
@@ -370,7 +374,7 @@ async function loadInto(path){
     let html = '';
     if(fm){ html += '<div class="fm">'+esc(fm).replace(/\n/g,'<br>')+'</div>'; }
     html += renderMD(body);
-    docEl.innerHTML = html; docEl.scrollTop = 0;
+    docEl.innerHTML = html; docEl.scrollTop = 0; overlay.scrollTop = 0;
   }catch(e){
     docEl.innerHTML = '<p class="loading">파일을 불러오지 못했어요 ('+e.message+').<br>'+
       '이 페이지는 GitHub Pages 주소로 열어야 작동해요 (파일을 직접 열면 안 돼요).</p>';
