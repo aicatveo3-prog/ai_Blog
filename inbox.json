@@ -752,15 +752,29 @@
         "M&A",
         "xAI",
         "논란"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/spacex-cursor-acquisition-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/spacex-cursor-acquisition.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/spacex-cursor-acquisition.md"
+        }
       ]
     },
     {
       "title": "중국 'AI 의인화 서비스' 규제 시행 앞두고 Doubao·Qwen, 7/15 에이전트 기능 종료",
-      "firstSeen": "2026-04-10",
+      "firstSeen": "2026-07-04",
       "surfaced": "2026-07-06",
       "verified": true,
       "trend": true,
-      "verifyNote": "중국 국가인터넷정보판공실(CAC) 등 5개 부처가 2026-04-10 '임시조치' 발표, 시행일 2026-07-15(1차 소스: 정부 규제 문서, Bird&Bird·Wikipedia 요약으로 교차확인). 셧다운 공지 자체는 TechNode(2026-07-06)·SCMP·TechTimes(2026-07-04)가 보도 — 마감을 앞두고 확산 중인 진행형 이슈.",
+      "verifyNote": "규제 자체는 중국 CAC 등 5개 부처가 2026-04-10 발표(1차 소스), 시행일 2026-07-15. 셧다운 공지 확산(진짜 첫 등장일)은 TechTimes(2026-07-04)가 최초 보도, TechNode(2026-07-06)·SCMP·Bird&Bird·Wikipedia로 교차확인.",
       "source": "https://technode.com/2026/07/06/bytedances-doubao-and-alibabas-qwen-to-shut-down-ai-agent-features-on-july-15/",
       "status": "인박스",
       "tags": [
@@ -768,6 +782,20 @@
         "규제",
         "중국",
         "논란"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/china-ai-companion-shutdown-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/china-ai-companion-shutdown.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/china-ai-companion-shutdown.md"
+        }
       ]
     },
     {
@@ -781,6 +809,20 @@
         "정책",
         "규제",
         "논란"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/ftc-ai-accuracy-policy-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/ftc-ai-accuracy-policy.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/ftc-ai-accuracy-policy.md"
+        }
       ]
     }
   ]
