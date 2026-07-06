@@ -10,11 +10,25 @@
       "verifyNote": "캘리포니아 북부지방법원 문서 7/2 봉인 해제. TechTimes(7/4)·Gizmodo·RealClearDefense(7/3)·TheNextWeb·SecurityWeek 모두 7/2~7/4 교차확인. Amodei-Michael 이메일에서 국방부가 자율무기·국내감시 레드라인 제거를 요구했고, 블랙리스트 지정 다음날 '계약 매우 근접' 이메일을 보낸 이중성 지적. Michael의 1/9 xAI 주식 매도(이해충돌 의혹)도 함께 공개.",
       "source": "https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm",
       "status": "인박스",
-      "tags": ["논란", "안전", "Anthropic", "정책"],
+      "tags": [
+        "논란",
+        "안전",
+        "Anthropic",
+        "정책"
+      ],
       "articleVersions": [
-        { "v": "정리본", "path": "collect/pentagon-anthropic-emails-summary.md" },
-        { "v": "자세히", "path": "collect/pentagon-anthropic-emails.md" },
-        { "v": "💬 반응", "path": "collect/reactions/pentagon-anthropic-emails.md" }
+        {
+          "v": "정리본",
+          "path": "collect/pentagon-anthropic-emails-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/pentagon-anthropic-emails.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/pentagon-anthropic-emails.md"
+        }
       ]
     },
     {
@@ -25,11 +39,25 @@
       "verifyNote": "파이낸셜타임스(FT) 7/2(현지) 단독 보도, Investing.com·Seeking Alpha·BanklessTimes(7/3)·CryptoTimes(7/3)가 동일 내용 교차확인. Ant Financial(싱가포르 법인 계정)·ByteDance(VPN 개인구독 대납) 등 우회 사례. Anthropic은 4~6월 약 2.5만 부정계정·2880만 건 상호작용의 증류(distillation) 공격을 탐지했다고 별도 발표(6/10 상원 서한). ⚠️ 별개로 6/30 Reddit(r/ClaudeAI, LegitMichel777)이 Claude Code 내 중국 시간대/프록시 탐지용 은닉 코드를 발견해 프라이버시 논란도 병행 중 — 두 사안을 혼동하지 않도록 각 반응에 출처 명시 필요.",
       "source": "https://www.investing.com/news/stock-market-news/anthropic-targets-loopholes-used-by-chinese-firms-to-access-claude-ft-reports-4774998",
       "status": "인박스",
-      "tags": ["논란", "정책", "Anthropic", "중국"],
+      "tags": [
+        "논란",
+        "정책",
+        "Anthropic",
+        "중국"
+      ],
       "articleVersions": [
-        { "v": "정리본", "path": "collect/anthropic-china-access-summary.md" },
-        { "v": "자세히", "path": "collect/anthropic-china-access.md" },
-        { "v": "💬 반응", "path": "collect/reactions/anthropic-china-access.md" }
+        {
+          "v": "정리본",
+          "path": "collect/anthropic-china-access-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/anthropic-china-access.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/anthropic-china-access.md"
+        }
       ]
     },
     {
@@ -40,11 +68,24 @@
       "verifyNote": "CNBC·Coindesk·Axios·Semafor 모두 7/2 보도(FT 최초 보도 인용). 알래스카 영구기금 모델 본뜬 정부 투자기구 구상, 다른 AI 랩도 동참 유도. 초기 논의 단계, 의회 승인 필요. GPT-5.6 정부 지연 조치 직후 나온 타이밍이 논란.",
       "source": "https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html",
       "status": "인박스",
-      "tags": ["정책", "자금", "OpenAI"],
+      "tags": [
+        "정책",
+        "자금",
+        "OpenAI"
+      ],
       "articleVersions": [
-        { "v": "정리본", "path": "collect/openai-government-stake-summary.md" },
-        { "v": "자세히", "path": "collect/openai-government-stake.md" },
-        { "v": "💬 반응", "path": "collect/reactions/openai-government-stake.md" }
+        {
+          "v": "정리본",
+          "path": "collect/openai-government-stake-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/openai-government-stake.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/openai-government-stake.md"
+        }
       ]
     },
     {
@@ -55,11 +96,24 @@
       "verifyNote": "The Information 단독 보도, Electrek(7/2)·TechTimes(7/4)·WinBuzzer(7/4) 교차확인. 7/6부터 시행, 초과분은 관리자 승인 필요. Grok·Composer(xAI 베타) 제품은 상한 제외 — Musk가 xAI CEO 겸임 및 Tesla의 xAI 20억달러 투자와 맞물려 이해충돌 지적. 엔지니어들은 내부적으로 Claude 선호로 알려짐(Electrek 취재원 4명).",
       "source": "https://electrek.co/2026/07/02/tesla-caps-employee-ai-spending-200-week/",
       "status": "인박스",
-      "tags": ["논란", "빅테크", "Tesla"],
+      "tags": [
+        "논란",
+        "빅테크",
+        "Tesla"
+      ],
       "articleVersions": [
-        { "v": "정리본", "path": "collect/tesla-ai-token-cap-summary.md" },
-        { "v": "자세히", "path": "collect/tesla-ai-token-cap.md" },
-        { "v": "💬 반응", "path": "collect/reactions/tesla-ai-token-cap.md" }
+        {
+          "v": "정리본",
+          "path": "collect/tesla-ai-token-cap-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/tesla-ai-token-cap.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/tesla-ai-token-cap.md"
+        }
       ]
     },
     {
@@ -69,7 +123,11 @@
       "verifyNote": "미·영·캐나다·호주·뉴질랜드 정보기관 공동성명. CNN·Euronews·CBS News 모두 6/23 보도, \"시간표는 수년이 아니라 수개월\"이라는 문구 교차확인.",
       "source": "https://www.cnn.com/2026/06/23/world/ai-five-eyes-warning-cyber-threat-intl-hnk",
       "status": "인박스",
-      "tags": ["정책", "안전", "보안"]
+      "tags": [
+        "정책",
+        "안전",
+        "보안"
+      ]
     },
     {
       "title": "Meituan, LongCat-2.0 오픈소스 공개 — 1.6조 파라미터, 중국산 칩 5만개로만 학습",
@@ -78,7 +136,12 @@
       "verifyNote": "VentureBeat·SCMP·felloai·novalogiq 6/30 교차확인. MoE 구조(1.6T 총/약 480억 활성 파라미터), 100만 토큰 컨텍스트, MIT 라이선스 표방. OpenRouter에서 'Owl Alpha'라는 코드네임으로 이미 상위권 사용량을 기록 중이었음. ⚠️ 가중치는 '공개 예정'(coming soon) 상태로 추론 프레임워크·인프라 코드만 우선 공개 — 완전한 오픈소스 여부는 확인 필요.",
       "source": "https://venturebeat.com/technology/meituan-open-sources-longcat-2-0-the-1-6t-near-frontier-agentic-coding-model-thats-been-leading-openrouter-trained-entirely-on-chinese-chips",
       "status": "인박스",
-      "tags": ["모델", "오픈모델", "중국", "하드웨어"]
+      "tags": [
+        "모델",
+        "오픈모델",
+        "중국",
+        "하드웨어"
+      ]
     },
     {
       "title": "Menlo Ventures, 창사 이래 최대 $3B 펀드 조성 — Anthropic 지분가치 $14B",
@@ -87,7 +150,10 @@
       "verifyNote": "TechCrunch·Bloomberg 6/23 교차확인. Menlo은 2024년 Anthropic Series D를 주도(5억 달러+, 이후 총 약 10억 달러 투자)했고, 그 지분 가치가 현재 약 140억 달러로 평가. 50년 사력 최대 규모 펀드.",
       "source": "https://techcrunch.com/2026/06/23/after-betting-the-firm-on-anthropic-menlo-ventures-raises-victorious-3b-fund/",
       "status": "인박스",
-      "tags": ["자금", "Anthropic"]
+      "tags": [
+        "자금",
+        "Anthropic"
+      ]
     },
     {
       "title": "MCP 2026-07-28 스펙 릴리스 캔디데이트 — 세션 제거하고 완전 무상태(stateless)로",
@@ -98,7 +164,10 @@
       "source": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
       "status": "인박스",
       "trend": true,
-      "tags": ["프레임워크", "MCP"]
+      "tags": [
+        "프레임워크",
+        "MCP"
+      ]
     },
     {
       "title": "Claude Sonnet 5 출시",
@@ -127,9 +196,18 @@
       ],
       "article": "collect/california-claude.md",
       "articleVersions": [
-        { "v": "정리본", "path": "collect/california-claude-summary.md" },
-        { "v": "자세히", "path": "collect/california-claude.md" },
-        { "v": "💬 반응", "path": "collect/reactions/california-claude.md" }
+        {
+          "v": "정리본",
+          "path": "collect/california-claude-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/california-claude.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/california-claude.md"
+        }
       ]
     },
     {
@@ -196,9 +274,18 @@
       ],
       "article": "collect/anthropic-pause.md",
       "articleVersions": [
-        { "v": "정리본", "path": "collect/anthropic-pause-summary.md" },
-        { "v": "자세히", "path": "collect/anthropic-pause.md" },
-        { "v": "💬 반응", "path": "collect/reactions/anthropic-pause.md" }
+        {
+          "v": "정리본",
+          "path": "collect/anthropic-pause-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/anthropic-pause.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/anthropic-pause.md"
+        }
       ],
       "postId": "anthropic-pause"
     },
@@ -215,9 +302,18 @@
       ],
       "article": "collect/microsoft-mai.md",
       "articleVersions": [
-        { "v": "정리본", "path": "collect/microsoft-mai-summary.md" },
-        { "v": "자세히", "path": "collect/microsoft-mai.md" },
-        { "v": "💬 반응", "path": "collect/reactions/microsoft-mai.md" }
+        {
+          "v": "정리본",
+          "path": "collect/microsoft-mai-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/microsoft-mai.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/microsoft-mai.md"
+        }
       ]
     },
     {
@@ -233,9 +329,18 @@
       ],
       "article": "collect/us-ai-executive-order.md",
       "articleVersions": [
-        { "v": "정리본", "path": "collect/us-ai-executive-order-summary.md" },
-        { "v": "자세히", "path": "collect/us-ai-executive-order.md" },
-        { "v": "💬 반응", "path": "collect/reactions/us-ai-executive-order.md" }
+        {
+          "v": "정리본",
+          "path": "collect/us-ai-executive-order-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/us-ai-executive-order.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/us-ai-executive-order.md"
+        }
       ]
     },
     {
@@ -302,9 +407,18 @@
       ],
       "article": "collect/minimax-m3.md",
       "articleVersions": [
-        { "v": "정리본", "path": "collect/minimax-m3-summary.md" },
-        { "v": "자세히", "path": "collect/minimax-m3.md" },
-        { "v": "💬 반응", "path": "collect/reactions/minimax-m3.md" }
+        {
+          "v": "정리본",
+          "path": "collect/minimax-m3-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/minimax-m3.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/minimax-m3.md"
+        }
       ]
     },
     {
@@ -585,6 +699,88 @@
       "tags": [
         "트렌드",
         "xAI"
+      ]
+    },
+    {
+      "title": "Grok 4.5, SpaceX·Tesla 내부 비공개 베타 진입 (V9 1.5조 파라미터)",
+      "firstSeen": "2026-06-28",
+      "verified": true,
+      "verifyNote": "머스크가 X에서 발표(2026-06-28), SpaceX·Tesla 내부 전용 비공개 베타. Investing.com·TechTimes(6/29)·Cybernews 교차확인. 1.5조 파라미터 V9 파운데이션 모델(5/26 학습 완료)에 Cursor 데이터로 추가 학습. Opus에 근접·상회한다는 주장은 SpaceX·Tesla 사내 평가로, 독립 검증·공개 벤치마크 없음 — '자체 주장'으로 표기.",
+      "source": "https://www.techtimes.com/articles/319314/20260629/grok-45-enters-private-beta-spacex-tesla-no-public-access-no-independent-benchmark.htm",
+      "status": "인박스",
+      "tags": [
+        "모델",
+        "xAI"
+      ]
+    },
+    {
+      "title": "EU 이사회, AI법 간소화(Digital Omnibus) 최종 승인 — 고위험 규정 2027·2028로 순연",
+      "firstSeen": "2026-06-29",
+      "verified": true,
+      "verifyNote": "EU 이사회(Council) 공식 보도자료(1차 소스, consilium.europa.eu) 2026-06-29. EU Agenda·eubusiness.com·INSIGHT EU Monitoring 교차확인. 독립형 고위험 AI시스템 규정 시행일을 2027-12-02로, 제품 내장형은 2028-08-02로 순연. 비동의 성적 이미지·아동성착취물(CSAM) 생성 AI 금지 조항 신설(2026년 12월 시행). 정식 관보 게재 후 3일 뒤 발효.",
+      "source": "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/",
+      "status": "인박스",
+      "tags": [
+        "정책",
+        "규제",
+        "EU"
+      ]
+    },
+    {
+      "title": "Venice AI, 프라이버시 우선 AI 프록시로 6500만달러 시리즈A (밸류 10억달러)",
+      "firstSeen": "2026-07-01",
+      "verified": true,
+      "verifyNote": "Venice 공식 블로그(1차 소스, venice.ai/blog) + TechCrunch(2026-07-01) 교차확인. Dragonfly 주도, Coinbase Ventures·North Island Ventures 등 참여. 200개+ 모델에 프록시로 접근하며 OpenAI·Anthropic·xAI·Google 모델 이용 시 IP·계정·세션 정보 마스킹. 이용자 300만 명, 일 API 호출 170만 건, 연환산매출(ARR) 7000만달러, 흑자 전환 상태라고 자체 발표.",
+      "source": "https://venice.ai/blog/venice-raises-65-million-series-a",
+      "status": "인박스",
+      "tags": [
+        "자금",
+        "프라이버시"
+      ]
+    },
+    {
+      "title": "SpaceX, Cursor 개발사 Anysphere를 600억 달러(전량 주식)에 인수 — 역대 최대 스타트업 인수",
+      "firstSeen": "2026-06-16",
+      "surfaced": "2026-07-06",
+      "verified": true,
+      "trend": true,
+      "verifyNote": "Forbes(Sandy Carter, 2026-06-16)·qz.com(2026-06-16/17)·TechFundingNews·Yahoo Finance 교차확인. 벤처 투자 받은 스타트업 역대 최대 인수. 2026-04-21 옵션계약(인수가 600억달러/포기 시 위약금 약 100억달러) 후 정식화. 2026년 3분기 종료 예정(규제승인 전제)이라 진행형 이슈로 트렌드 표기.",
+      "source": "https://www.forbes.com/sites/sandycarter/2026/06/16/spacex-buys-cursor-in-largest-startup-acquisition-ever-at-60-billion/",
+      "status": "인박스",
+      "tags": [
+        "자금",
+        "M&A",
+        "xAI",
+        "논란"
+      ]
+    },
+    {
+      "title": "중국 'AI 의인화 서비스' 규제 시행 앞두고 Doubao·Qwen, 7/15 에이전트 기능 종료",
+      "firstSeen": "2026-04-10",
+      "surfaced": "2026-07-06",
+      "verified": true,
+      "trend": true,
+      "verifyNote": "중국 국가인터넷정보판공실(CAC) 등 5개 부처가 2026-04-10 '임시조치' 발표, 시행일 2026-07-15(1차 소스: 정부 규제 문서, Bird&Bird·Wikipedia 요약으로 교차확인). 셧다운 공지 자체는 TechNode(2026-07-06)·SCMP·TechTimes(2026-07-04)가 보도 — 마감을 앞두고 확산 중인 진행형 이슈.",
+      "source": "https://technode.com/2026/07/06/bytedances-doubao-and-alibabas-qwen-to-shut-down-ai-agent-features-on-july-15/",
+      "status": "인박스",
+      "tags": [
+        "정책",
+        "규제",
+        "중국",
+        "논란"
+      ]
+    },
+    {
+      "title": "美 FTC, 'AI 정확성 억제' 정책성명 초안 — 주(州) AI법 연방 선점 주장",
+      "firstSeen": "2026-07-01",
+      "verified": true,
+      "verifyNote": "FTC 공식 보도자료(1차 소스, ftc.gov, 2026-07-01) + AI Weekly·Forbes(Lance Eliot, 2026-07-06)·Consumer Financial Services Law Monitor 교차확인. 콜로라도 AI법을 대표 사례로 지목, FTC법 제5조 근거 연방 선점 주장. 위원회 표결 2대0, 의견수렴 마감 2026-07-31.",
+      "source": "https://www.ftc.gov/news-events/news/press-releases/2026/07/ftc-seeks-public-comment-policy-statement-addressing-ai-accuracy",
+      "status": "인박스",
+      "tags": [
+        "정책",
+        "규제",
+        "논란"
       ]
     }
   ]
