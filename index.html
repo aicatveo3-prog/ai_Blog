@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='8'%20fill='%2317171C'/%3E%3Ccircle%20cx='12'%20cy='13'%20r='4.5'%20fill='%23F7F5F0'/%3E%3Crect%20x='19'%20y='10'%20width='5'%20height='8'%20rx='2'%20fill='%234B47E8'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='8'%20fill='%231A1712'/%3E%3Ccircle%20cx='12'%20cy='13'%20r='4.5'%20fill='%23F3F3EE'/%3E%3Crect%20x='19'%20y='10'%20width='5'%20height='8'%20rx='2'%20fill='%230E9F6E'/%3E%3C/svg%3E">
 <title>Vector — AI 자동화 인사이트</title>
 <meta name="description" content="기계가 후보를 모으고 초안을 만들지만, 무엇을 쓸지 고르고·겪고·해석하는 건 사람입니다. 직접 돌려보고 남다르게 해석한 AI 자동화 소식.">
 <link rel="canonical" href="https://aicatveo3-prog.github.io/ai_Blog/">
@@ -56,26 +56,12 @@ var s=localStorage.getItem('vector-theme');if(s)root.setAttribute('data-theme',s
 function cur(){return root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');}
 function paint(){if(btn)btn.textContent=cur()==='dark'?'\u2600\uFE0F':'\uD83C\uDF19';}paint();
 if(btn)btn.onclick=function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);localStorage.setItem('vector-theme',n);paint();};
-// 홈에서만: 카테고리 필터 (data-cat-item이 있을 때만 하이재킹 — 글 페이지 nav는 일반 링크로 동작)
+// 홈에서만: 카테고리 필터 (data-cat-item이 있을 때만 하이재킹 — 글 페이지 nav는 일반 링크)
 if(document.querySelector('[data-cat-item]')){
   var links=document.querySelectorAll('#navlinks a');function setc(c){links.forEach(function(a){a.classList.toggle('on',a.dataset.cat===c);});
   document.querySelectorAll('[data-cat-item]').forEach(function(el){el.style.display=(c==='전체'||el.dataset.catItem===c)?'':'none';});
   var feat=document.getElementById('feat-wrap');if(feat){feat.style.display=(c==='전체'||feat.dataset.catItem===c)?'':'none';}}
   links.forEach(function(a){a.onclick=function(e){e.preventDefault();setc(a.dataset.cat);};});
-}
-// 글 페이지: 진행바 + 떠다니는 목차(h2 자동) — 본문은 이미 정적 HTML에 있음(크롤러 영향 0)
-var doc=document.querySelector('main.article .doc');
-if(doc){
-  var prog=document.getElementById('progress');
-  var toc=document.getElementById('toc');
-  var hs=Array.prototype.slice.call(doc.querySelectorAll('h2'));
-  if(toc&&hs.length){ toc.innerHTML='<div class="toc-h">목차</div>'+hs.map(function(h){return '<a href="#'+h.id+'">'+h.textContent+'</a>';}).join('');
-    toc.querySelectorAll('a').forEach(function(a){a.onclick=function(e){e.preventDefault();var t=document.getElementById(a.getAttribute('href').slice(1));if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-76,behavior:'smooth'});};}); }
-  function onScroll(){var st=window.scrollY||document.documentElement.scrollTop;var docH=document.documentElement.scrollHeight-window.innerHeight;
-    if(prog)prog.style.width=(docH>0?Math.min(100,st/docH*100):0)+'%';
-    if(toc){var cur=null;hs.forEach(function(h){if(h.getBoundingClientRect().top<130)cur=h.id;});
-      toc.querySelectorAll('a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur);});}}
-  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 }})();</script>
 </body>
 </html>
