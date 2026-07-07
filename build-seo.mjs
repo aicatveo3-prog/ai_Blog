@@ -90,9 +90,9 @@ function prepArticleBody(md){
 }
 
 // ---------- 공유 CSS / JS ----------
-const CSS = `:root{--paper:#F7F6F1;--ink:#1A1712;--ink2:#2A2620;--accent:#0E9F6E;--accentStrong:#0A6E4C;--accent2:#C2703D;--muted:#6B655B;--faint:#A49E90;--label:#8C887F;--line:#E6E4DB;--card:#FCFBF8;--soft:#EFEEE7;--shadow:0 1px 2px rgba(30,25,15,.03),0 8px 28px rgba(30,25,15,.05);--serif:-apple-system,"SF Pro Display","SF Pro Text","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;--sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif}
-:root[data-theme=dark]{--paper:#131311;--ink:#F2F0E9;--ink2:#DAD8D0;--accent:#34C088;--accentStrong:#3FCF92;--accent2:#E0A06B;--muted:#9A968C;--faint:#75726A;--line:#2E2C28;--card:#1C1B18;--soft:#242320;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.4)}
-@media (prefers-color-scheme:dark){:root:not([data-theme]){--paper:#131311;--ink:#F2F0E9;--ink2:#DAD8D0;--accent:#34C088;--accentStrong:#3FCF92;--accent2:#E0A06B;--muted:#9A968C;--faint:#75726A;--line:#2E2C28;--card:#1C1B18;--soft:#242320;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.4)}}
+const CSS = `:root{--paper:#F7F6F1;--ink:#1A1712;--ink2:#2A2620;--accent:#0E9F6E;--accentStrong:#0A6E4C;--accent2:#C2703D;--info:#3B5BD9;--infoBg:#EEF1FB;--muted:#6B655B;--faint:#A49E90;--label:#8C887F;--line:#E6E4DB;--card:#FCFBF8;--soft:#EFEEE7;--shadow:0 1px 2px rgba(30,25,15,.03),0 8px 28px rgba(30,25,15,.05);--serif:-apple-system,"SF Pro Display","SF Pro Text","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;--sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif}
+:root[data-theme=dark]{--paper:#131311;--ink:#F2F0E9;--ink2:#DAD8D0;--accent:#34C088;--accentStrong:#3FCF92;--accent2:#E0A06B;--info:#8CA0F0;--infoBg:#1C2030;--muted:#9A968C;--faint:#75726A;--line:#2E2C28;--card:#1C1B18;--soft:#242320;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.4)}
+@media (prefers-color-scheme:dark){:root:not([data-theme]){--paper:#131311;--ink:#F2F0E9;--ink2:#DAD8D0;--accent:#34C088;--accentStrong:#3FCF92;--accent2:#E0A06B;--info:#8CA0F0;--infoBg:#1C2030;--muted:#9A968C;--faint:#75726A;--line:#2E2C28;--card:#1C1B18;--soft:#242320;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.4)}}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word}
 a{color:inherit;text-decoration:none}
@@ -166,6 +166,9 @@ main.article{max-width:728px;margin:34px auto 64px;padding:44px 52px 68px;backgr
 .doc blockquote{border-left:4px solid var(--accent2);background:color-mix(in srgb,var(--accent2) 8%,var(--card));border-radius:0 14px 14px 0;padding:16px 22px;margin:26px 0}
 .doc blockquote p{margin:5px 0;font-size:18px;line-height:1.6;color:var(--ink2)}
 .doc blockquote strong{color:var(--ink)}
+.doc .callout{background:var(--infoBg);border-radius:14px;padding:15px 22px;margin:22px 0;font-size:17.5px;line-height:1.66;color:var(--ink2)}
+.doc .callout .c-lead{font-weight:700;color:var(--info)}
+.doc .callout strong{color:var(--ink)}
 .doc hr{border:none;height:24px;margin:26px 0;text-align:center}
 .doc hr::before{content:"* * *";letter-spacing:6px;color:var(--faint);font-size:14px}
 .doc code{font-family:ui-monospace,Menlo,monospace;font-size:.87em;background:color-mix(in srgb,var(--accent) 10%,var(--soft));padding:2px 6px;border-radius:6px;color:var(--accentStrong)}
@@ -294,12 +297,22 @@ ${featHtml}
 // ---------- 글 페이지(p/<slug>/index.html) ----------
 function addHeadingIds(html){ let n=0; return html.replace(/<h2>([\s\S]*?)<\/h2>/g, (m,t)=>{ n++; return `<h2 id="s${n}">${t}</h2>`; }); }
 
+// '= …' 로 시작하는 '설명 착지' 문단을 콜아웃 박스로. 리드(첫 절)는 굵은 인포색.
+function addCallouts(html){
+  return html.replace(/<p>=\s+([\s\S]*?)<\/p>/g, (m, body) => {
+    const mm = body.match(/^([\s\S]*?[,，:：])([\s\S]*)$/);
+    const lead = mm ? mm[1] : body;
+    const rest = mm ? mm[2] : '';
+    return `<div class="callout"><span class="c-lead">= ${lead}</span>${rest}</div>`;
+  });
+}
+
 function buildArticle(p, bodyMd, next) {
   const url = `${SITE}/p/${p.id}/`;
   const desc = metaDesc(p.angle || firstH1(bodyMd));
   const ogImg = `${SITE}/p/${p.id}/og.png`;
   const prepped = prepArticleBody(bodyMd);
-  const bodyHtml = addHeadingIds(renderMD(prepped));
+  const bodyHtml = addCallouts(addHeadingIds(renderMD(prepped)));
   const ld = {
     '@context':'https://schema.org','@type':'BlogPosting',
     'headline':p.title,'description':desc,'inLanguage':'ko',
