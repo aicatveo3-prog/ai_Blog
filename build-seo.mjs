@@ -152,8 +152,8 @@ main.article{max-width:728px;margin:34px auto 64px;padding:44px 52px 68px;backgr
 .article>hr{border:none;border-top:1px solid var(--line);margin:28px 0}
 .doc>p:first-of-type{font-size:19.5px;line-height:1.62;color:var(--ink);margin:6px 0 15px}
 .doc p{margin:15px 0;font-size:18px;line-height:1.72;color:var(--ink2);letter-spacing:-.011em}
-.doc strong{font-weight:700;color:var(--ink);background:linear-gradient(to top,color-mix(in srgb,var(--accent2) 24%,transparent) 34%,transparent 34%);padding:0 1px}
-.doc em{font-style:normal;color:var(--accentStrong);font-weight:600}
+.doc strong{font-weight:700;color:var(--ink)}
+.doc em{font-style:italic}
 .doc h2{font-size:25px;font-weight:750;letter-spacing:-.026em;margin:48px 0 14px;color:var(--ink);line-height:1.36;text-wrap:balance;position:relative;padding-top:17px}
 .doc h2::before{content:"";position:absolute;top:0;left:0;width:34px;height:3px;border-radius:3px;background:var(--accent)}
 .doc h3{font-size:19px;margin:28px 0 8px;font-weight:700;color:var(--ink);line-height:1.4}
@@ -165,7 +165,7 @@ main.article{max-width:728px;margin:34px auto 64px;padding:44px 52px 68px;backgr
 .doc ol>li::marker{color:var(--accentStrong);font-weight:700}
 .doc blockquote{border-left:4px solid var(--accent2);background:color-mix(in srgb,var(--accent2) 8%,var(--card));border-radius:0 14px 14px 0;padding:16px 22px;margin:26px 0}
 .doc blockquote p{margin:5px 0;font-size:18px;line-height:1.6;color:var(--ink2)}
-.doc blockquote strong{background:linear-gradient(to top,color-mix(in srgb,var(--accent2) 34%,transparent) 34%,transparent 34%)}
+.doc blockquote strong{color:var(--ink)}
 .doc hr{border:none;height:24px;margin:26px 0;text-align:center}
 .doc hr::before{content:"* * *";letter-spacing:6px;color:var(--faint);font-size:14px}
 .doc code{font-family:ui-monospace,Menlo,monospace;font-size:.87em;background:color-mix(in srgb,var(--accent) 10%,var(--soft));padding:2px 6px;border-radius:6px;color:var(--accentStrong)}
@@ -175,8 +175,8 @@ main.article{max-width:728px;margin:34px auto 64px;padding:44px 52px 68px;backgr
 .doc th,.doc td{border-bottom:1px solid var(--line);padding:12px 15px;text-align:left;vertical-align:top;color:var(--ink2)}
 .doc tbody tr:nth-child(even){background:color-mix(in srgb,var(--soft) 60%,var(--card))}
 .doc tbody tr:last-child td{border-bottom:none}
-.doc a{color:var(--accentStrong);word-break:break-word;text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 45%,transparent);text-decoration-thickness:2px;text-underline-offset:3px}
-.doc a:hover{text-decoration-color:var(--accent)}
+.doc a{color:var(--accentStrong);word-break:break-word;text-decoration:none;font-weight:500}
+.doc a:hover{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}
 .art-foot{margin:56px auto 0;padding-top:26px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
 .art-foot a{color:var(--accent);font-weight:600}
 .art-foot .next{display:block;margin-top:10px;font-size:18px;color:var(--ink);font-weight:700}
