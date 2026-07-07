@@ -67,6 +67,28 @@ function renderMD(md){const lines=md.replace(/\r/g,'').split('\n');let out='',i=
 function splitFrontmatter(md){const m=md.match(/^---\n([\s\S]*?)\n---\n?/);return m?md.slice(m[0].length):md;}
 function firstH1(md){const m=md.match(/^#\s+(.+)$/m);return m?m[1].trim():'';}
 
+// 글 본문을 발행용으로 정리:
+//  1) 리드 블록(제목 # + 유형/관점 메타 인용 + 첫 --- )을 제거 — 제목/카테고리는 art-head가 담당
+//  2) 남은 ATX heading을 한 단계 강등(#→##, ##→###, ###→####; h4 유지) — 페이지 h1은 하나만
+//  코드펜스(```) 안은 건드리지 않는다.
+function prepArticleBody(md){
+  let lines = splitFrontmatter(md).replace(/\r/g,'').split('\n');
+  while(lines.length && lines[0].trim()==='') lines.shift();
+  if(/^#\s+/.test(lines[0]||'')){
+    let hr=-1;
+    for(let k=1;k<Math.min(lines.length,12);k++){ if(/^\s*([-*_])\1{2,}\s*$/.test(lines[k])){ hr=k; break; } }
+    lines = hr>=0 ? lines.slice(hr+1) : lines.slice(1);
+  }
+  let fence=false, out=[];
+  for(let ln of lines){
+    if(/^```/.test(ln)) fence=!fence;
+    if(!fence){ const h=ln.match(/^(#{1,4})(\s+.*)$/); if(h){ ln = '#'.repeat(Math.min(4,h[1].length+1)) + h[2]; } }
+    out.push(ln);
+  }
+  while(out.length && out[0].trim()==='') out.shift();
+  return out.join('\n');
+}
+
 // ---------- 공유 CSS / JS ----------
 const CSS = `:root{--paper:#F7F5F0;--ink:#17171C;--accent:#4B47E8;--muted:#6B6B72;--line:#E5E2DA;--card:#FFF;--soft:#EFECE4;--shadow:0 1px 2px rgba(20,18,10,.03),0 10px 30px rgba(20,18,10,.05);--serif:"Iowan Old Style","Apple SD Gothic Neo",Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif}
 :root[data-theme=dark]{--paper:#111014;--ink:#F3F1EA;--accent:#9B98FF;--muted:#9A98A2;--line:#2C2A32;--card:#1A191F;--soft:#232128;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.4)}
@@ -157,6 +179,7 @@ links.forEach(function(a){a.onclick=function(e){e.preventDefault();setc(a.datase
 function head({ title, desc, url, ogImg, type='website', published, cssHref, extra='' }) {
   return `<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='8'%20fill='%2317171C'/%3E%3Ccircle%20cx='12'%20cy='13'%20r='4.5'%20fill='%23F7F5F0'/%3E%3Crect%20x='19'%20y='10'%20width='5'%20height='8'%20rx='2'%20fill='%234B47E8'/%3E%3C/svg%3E">
 <title>${escHtml(title)}</title>
 <meta name="description" content="${escAttr(desc)}">
 <link rel="canonical" href="${escAttr(url)}">
@@ -247,7 +270,7 @@ function buildArticle(p, bodyMd) {
   const url = `${SITE}/p/${p.id}/`;
   const desc = metaDesc(p.angle || firstH1(bodyMd));
   const ogImg = `${SITE}/p/${p.id}/og.png`;
-  const bodyHtml = renderMD(splitFrontmatter(bodyMd));
+  const bodyHtml = renderMD(prepArticleBody(bodyMd));
   const ld = {
     '@context':'https://schema.org','@type':'BlogPosting',
     'headline':p.title,'description':desc,'inLanguage':'ko',
