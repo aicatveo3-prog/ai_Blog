@@ -165,15 +165,65 @@ footer{margin:56px 0 40px;color:var(--muted);font-size:12.5px;text-align:center;
 @media(max-width:820px){.feat{grid-template-columns:1fr}.feat .cover{min-height:170px}.grid{grid-template-columns:1fr 1fr}.mast h1{font-size:34px}.navlinks{display:none}}
 @media(max-width:540px){.grid{grid-template-columns:1fr}}`;
 
+// ===== 매거진형 글 페이지 스타일 (baseline; 글마다 --art-accent / 전용 CSS로 오버라이드) =====
+const ACSS = `
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--art-accent,var(--accent));z-index:40;transition:width .08s linear}
+main.article{max-width:1120px;margin:0 auto;padding:24px 24px 96px}
+.back{display:inline-block;margin:4px 0 8px}
+.hero{max-width:760px;margin:14px auto 0}
+.hero .hero-cat{font-size:13px;font-weight:700;letter-spacing:.6px;color:var(--art-accent,var(--accent));text-transform:uppercase}
+.hero h1{font-family:var(--serif);font-size:clamp(31px,5.2vw,48px);line-height:1.12;letter-spacing:-.9px;margin:16px 0 16px;font-weight:800}
+.hero .standfirst{font-family:var(--serif);font-size:20px;line-height:1.55;color:var(--muted);margin-bottom:20px}
+.hero .byline{padding-bottom:22px;border-bottom:2px solid var(--ink)}
+.art-body{display:grid;grid-template-columns:210px minmax(0,720px);gap:48px;justify-content:center;margin-top:34px}
+.toc{position:sticky;top:86px;align-self:start;max-height:82vh;overflow:auto;font-size:12.5px}
+.toc-h{font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;font-size:11px;margin-bottom:12px}
+.toc a{display:block;color:var(--muted);padding:5px 0 5px 13px;border-left:2px solid var(--line);line-height:1.45;transition:color .12s,border-color .12s}
+.toc a:hover{color:var(--ink)}
+.toc a.on{color:var(--art-accent,var(--accent));border-left-color:var(--art-accent,var(--accent));font-weight:600}
+main.article .doc{margin-top:0;font-size:17.5px}
+main.article.dc .doc>p:first-of-type::first-letter{float:left;font-family:var(--serif);font-size:66px;line-height:.72;font-weight:800;margin:8px 14px 0 0;color:var(--art-accent,var(--accent))}
+main.article .doc h2{font-family:var(--serif);font-size:25px;margin:44px 0 14px;padding-top:0;border-top:none;position:relative;padding-left:20px;line-height:1.3}
+main.article .doc h2::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:5px;border-radius:3px;background:var(--art-accent,var(--accent))}
+main.article .doc h3{font-size:19px;margin:30px 0 10px}
+main.article .doc blockquote{border-left:0;background:var(--soft);border-radius:14px;padding:20px 24px;margin:24px 0;position:relative}
+main.article .doc blockquote::before{content:"\\201C";position:absolute;left:14px;top:2px;font-family:var(--serif);font-size:46px;color:var(--art-accent,var(--accent));opacity:.4}
+main.article .doc blockquote p{font-family:var(--serif);font-size:18px;line-height:1.6;padding-left:26px}
+main.article .doc table{font-size:14.5px;border:1px solid var(--line);border-radius:12px}
+main.article .doc th{background:var(--ink);color:var(--paper)}
+main.article .doc p{margin:16px 0;line-height:1.85}
+main.article .doc hr{margin:36px 0;border-top:1px solid var(--line)}
+.art-foot{max-width:760px;margin:56px auto 0;padding-top:26px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
+.art-foot a{color:var(--art-accent,var(--accent));font-weight:600}
+.art-foot .next{display:block;margin-top:10px;font-family:var(--serif);font-size:18px;color:var(--ink)}
+@media(max-width:900px){.art-body{grid-template-columns:1fr;max-width:720px;margin-left:auto;margin-right:auto}.toc{display:none}}`;
+
 const JS = `(function(){var root=document.documentElement,btn=document.getElementById('themeBtn');
 var s=localStorage.getItem('vector-theme');if(s)root.setAttribute('data-theme',s);
 function cur(){return root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');}
 function paint(){if(btn)btn.textContent=cur()==='dark'?'\\u2600\\uFE0F':'\\uD83C\\uDF19';}paint();
 if(btn)btn.onclick=function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);localStorage.setItem('vector-theme',n);paint();};
-var links=document.querySelectorAll('#navlinks a');function setc(c){links.forEach(function(a){a.classList.toggle('on',a.dataset.cat===c);});
-document.querySelectorAll('[data-cat-item]').forEach(function(el){el.style.display=(c==='전체'||el.dataset.catItem===c)?'':'none';});
-var feat=document.getElementById('feat-wrap');if(feat){feat.style.display=(c==='전체'||feat.dataset.catItem===c)?'':'none';}}
-links.forEach(function(a){a.onclick=function(e){e.preventDefault();setc(a.dataset.cat);};});})();`;
+// 홈에서만: 카테고리 필터 (data-cat-item이 있을 때만 하이재킹 — 글 페이지 nav는 일반 링크로 동작)
+if(document.querySelector('[data-cat-item]')){
+  var links=document.querySelectorAll('#navlinks a');function setc(c){links.forEach(function(a){a.classList.toggle('on',a.dataset.cat===c);});
+  document.querySelectorAll('[data-cat-item]').forEach(function(el){el.style.display=(c==='전체'||el.dataset.catItem===c)?'':'none';});
+  var feat=document.getElementById('feat-wrap');if(feat){feat.style.display=(c==='전체'||feat.dataset.catItem===c)?'':'none';}}
+  links.forEach(function(a){a.onclick=function(e){e.preventDefault();setc(a.dataset.cat);};});
+}
+// 글 페이지: 진행바 + 떠다니는 목차(h2 자동) — 본문은 이미 정적 HTML에 있음(크롤러 영향 0)
+var doc=document.querySelector('main.article .doc');
+if(doc){
+  var prog=document.getElementById('progress');
+  var toc=document.getElementById('toc');
+  var hs=Array.prototype.slice.call(doc.querySelectorAll('h2'));
+  if(toc&&hs.length){ toc.innerHTML='<div class="toc-h">목차</div>'+hs.map(function(h){return '<a href="#'+h.id+'">'+h.textContent+'</a>';}).join('');
+    toc.querySelectorAll('a').forEach(function(a){a.onclick=function(e){e.preventDefault();var t=document.getElementById(a.getAttribute('href').slice(1));if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-76,behavior:'smooth'});};}); }
+  function onScroll(){var st=window.scrollY||document.documentElement.scrollTop;var docH=document.documentElement.scrollHeight-window.innerHeight;
+    if(prog)prog.style.width=(docH>0?Math.min(100,st/docH*100):0)+'%';
+    if(toc){var cur=null;hs.forEach(function(h){if(h.getBoundingClientRect().top<130)cur=h.id;});
+      toc.querySelectorAll('a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur);});}}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+}})();`;
 
 // ---------- 페이지 <head> 공통 ----------
 function head({ title, desc, url, ogImg, type='website', published, cssHref, extra='' }) {
@@ -266,11 +316,17 @@ ${featHtml}
 }
 
 // ---------- 글 페이지(p/<slug>/index.html) ----------
-function buildArticle(p, bodyMd) {
+function addHeadingIds(html){ let n=0; return html.replace(/<h2>([\s\S]*?)<\/h2>/g, (m,t)=>{ n++; return `<h2 id="s${n}">${t}</h2>`; }); }
+
+function buildArticle(p, bodyMd, next) {
   const url = `${SITE}/p/${p.id}/`;
   const desc = metaDesc(p.angle || firstH1(bodyMd));
   const ogImg = `${SITE}/p/${p.id}/og.png`;
-  const bodyHtml = renderMD(prepArticleBody(bodyMd));
+  const prepped = prepArticleBody(bodyMd);
+  const bodyHtml = addHeadingIds(renderMD(prepped));
+  const accentStyle = p.accent ? `<style>:root{--art-accent:${p.accent}}</style>` : '';
+  const firstCh = (prepped.match(/[^\s#>*_`\-]/) || [''])[0];
+  const dcClass = /[가-힣A-Za-z]/.test(firstCh) ? ' dc' : '';   // 문자로 시작할 때만 드롭캡
   const ld = {
     '@context':'https://schema.org','@type':'BlogPosting',
     'headline':p.title,'description':desc,'inLanguage':'ko',
@@ -286,21 +342,30 @@ function buildArticle(p, bodyMd) {
       {'@type':'ListItem','position':2,'name':catOf(p),'item':SITE+'/'},
       {'@type':'ListItem','position':3,'name':p.title,'item':url}
     ]};
+  const heroCat = `${escHtml(catOf(p))}${p.readMin?`  ·  ${p.readMin}분 읽기`:''}${p.date?`  ·  ${escHtml(p.date)}`:''}`;
+  const nextHtml = next
+    ? `다음 읽을 글<a class="next" href="../${next.id}/">${escHtml(next.title)} →</a>`
+    : `<a href="../../">← 다른 글 보기</a>`;
   return `<!DOCTYPE html>
 <html lang="ko">
 <head>
 ${head({title:`${p.title} · ${BRAND}`, desc, url, ogImg, type:'article', published:isoKST(p.date), cssHref:'../../assets/blog.css',
-  extra:`<script type="application/ld+json">${JSON.stringify(ld)}</script>\n<script type="application/ld+json">${JSON.stringify(crumbs)}</script>`})}
+  extra:`${accentStyle}<script type="application/ld+json">${JSON.stringify(ld)}</script>\n<script type="application/ld+json">${JSON.stringify(crumbs)}</script>`})}
 </head>
 <body>
+<div class="progress" id="progress"></div>
 ${navHtml('../../')}
-<main class="article">
+<main class="article${dcClass}">
 <a class="icnbtn back" href="../../">← 목록으로</a>
-<header class="art-head"><div class="cat2">${escHtml(catOf(p))}</div>
+<header class="hero"><div class="hero-cat">${heroCat}</div>
 <h1>${escHtml(p.title)}</h1>
+${p.angle?`<p class="standfirst">${escHtml(p.angle)}</p>`:''}
 <div class="byline">${bylineHtml(p)}</div></header>
+<div class="art-body">
+<aside class="toc" id="toc"></aside>
 <article class="doc">${bodyHtml}</article>
-<footer>© 2026 ${BRAND} · <a href="../../">다른 글 보기</a> · <a href="../../dashboard.html">운영 대시보드</a></footer>
+</div>
+<footer class="art-foot">${nextHtml}<div style="margin-top:14px">© 2026 ${BRAND} · <a href="../../dashboard.html">운영 대시보드</a></div></footer>
 </main>
 <script>${JS}</script>
 </body>
@@ -376,14 +441,16 @@ const posts = JSON.parse(read('posts.json')).posts
 console.log(`발행 글 ${posts.length}편 빌드`);
 
 // 공유 자산
-write('assets/blog.css', CSS);
+write('assets/blog.css', CSS + ACSS);
 
 // 글 페이지 + 본문
 const ogJobs = [];
-for (const p of posts) {
+for (let i = 0; i < posts.length; i++) {
+  const p = posts[i];
+  const next = posts[i + 1] || posts[0] && (posts.length > 1 ? posts[(i + 1) % posts.length] : null);
   const mdPath = (p.versions && p.versions[0] && p.versions[0].path) || p.article;
   const md = read(mdPath);
-  write(`p/${p.id}/index.html`, buildArticle(p, md));
+  write(`p/${p.id}/index.html`, buildArticle(p, md, posts.length > 1 ? next : null));
   ogJobs.push({ id:p.id, title:p.title, cat:catOf(p) });
   console.log(`  ✓ p/${p.id}/index.html`);
 }

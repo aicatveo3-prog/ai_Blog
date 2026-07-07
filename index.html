@@ -56,9 +56,26 @@ var s=localStorage.getItem('vector-theme');if(s)root.setAttribute('data-theme',s
 function cur(){return root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');}
 function paint(){if(btn)btn.textContent=cur()==='dark'?'\u2600\uFE0F':'\uD83C\uDF19';}paint();
 if(btn)btn.onclick=function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);localStorage.setItem('vector-theme',n);paint();};
-var links=document.querySelectorAll('#navlinks a');function setc(c){links.forEach(function(a){a.classList.toggle('on',a.dataset.cat===c);});
-document.querySelectorAll('[data-cat-item]').forEach(function(el){el.style.display=(c==='전체'||el.dataset.catItem===c)?'':'none';});
-var feat=document.getElementById('feat-wrap');if(feat){feat.style.display=(c==='전체'||feat.dataset.catItem===c)?'':'none';}}
-links.forEach(function(a){a.onclick=function(e){e.preventDefault();setc(a.dataset.cat);};});})();</script>
+// 홈에서만: 카테고리 필터 (data-cat-item이 있을 때만 하이재킹 — 글 페이지 nav는 일반 링크로 동작)
+if(document.querySelector('[data-cat-item]')){
+  var links=document.querySelectorAll('#navlinks a');function setc(c){links.forEach(function(a){a.classList.toggle('on',a.dataset.cat===c);});
+  document.querySelectorAll('[data-cat-item]').forEach(function(el){el.style.display=(c==='전체'||el.dataset.catItem===c)?'':'none';});
+  var feat=document.getElementById('feat-wrap');if(feat){feat.style.display=(c==='전체'||feat.dataset.catItem===c)?'':'none';}}
+  links.forEach(function(a){a.onclick=function(e){e.preventDefault();setc(a.dataset.cat);};});
+}
+// 글 페이지: 진행바 + 떠다니는 목차(h2 자동) — 본문은 이미 정적 HTML에 있음(크롤러 영향 0)
+var doc=document.querySelector('main.article .doc');
+if(doc){
+  var prog=document.getElementById('progress');
+  var toc=document.getElementById('toc');
+  var hs=Array.prototype.slice.call(doc.querySelectorAll('h2'));
+  if(toc&&hs.length){ toc.innerHTML='<div class="toc-h">목차</div>'+hs.map(function(h){return '<a href="#'+h.id+'">'+h.textContent+'</a>';}).join('');
+    toc.querySelectorAll('a').forEach(function(a){a.onclick=function(e){e.preventDefault();var t=document.getElementById(a.getAttribute('href').slice(1));if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-76,behavior:'smooth'});};}); }
+  function onScroll(){var st=window.scrollY||document.documentElement.scrollTop;var docH=document.documentElement.scrollHeight-window.innerHeight;
+    if(prog)prog.style.width=(docH>0?Math.min(100,st/docH*100):0)+'%';
+    if(toc){var cur=null;hs.forEach(function(h){if(h.getBoundingClientRect().top<130)cur=h.id;});
+      toc.querySelectorAll('a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur);});}}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+}})();</script>
 </body>
 </html>
