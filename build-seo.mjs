@@ -1,0 +1,397 @@
+// build-seo.mjs — Vector 블로그 정적 SEO 빌드
+// posts.json의 '발행' 글을 정적 HTML(본문 프리렌더 + 메타/OG/JSON-LD)로 굽고,
+// 홈(index.html)·sitemap.xml·robots.txt·feed.xml·글별 OG 이미지를 생성한다.
+//
+// 실행:  node build-seo.mjs
+// 의존:  Node fs만 필수. OG 이미지(PNG)는 Playwright가 있으면 생성(없으면 건너뜀).
+//
+// GitHub Pages 프로젝트 사이트 기준. 커스텀 도메인 쓰면 SITE만 바꾸면 됨.
+
+import fs from 'fs';
+import path from 'path';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
+const ROOT = process.cwd();
+const SITE = 'https://aicatveo3-prog.github.io/ai_Blog';   // 배포 베이스 URL(끝에 / 없음)
+const BRAND = 'Vector';
+const TAGLINE = 'AI 자동화 소식 — 직접 돌려보고, 남다르게 해석해서';
+
+// ---------- 유틸 ----------
+const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
+const write = (p, s) => { fs.mkdirSync(path.dirname(path.join(ROOT, p)), { recursive: true }); fs.writeFileSync(path.join(ROOT, p), s); };
+const escHtml = (s='') => s.replace(/[&<>]/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;' }[c]));
+const escAttr = (s='') => s.replace(/[&<>"]/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[c]));
+const escXml  = (s='') => s.replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&apos;' }[c]));
+
+function metaDesc(s='') {
+  const t = s.replace(/\s+/g, ' ').replace(/[*_`#>]/g, '').trim();
+  return t.length > 155 ? t.slice(0, 152).trimEnd() + '…' : t;
+}
+function catOf(p) {
+  return p.category || (/(가이드|튜토리얼)/.test(p.type||'') ? '튜토리얼'
+    : /(주간|종합)/.test(p.type||'') ? '리서치' : '인사이트');
+}
+const CAT_EMOJI = { '인사이트':'🧭','리서치':'🔬','튜토리얼':'🛠️','뉴스레터':'📮' };
+function isoKST(date) { return `${date}T09:00:00+09:00`; }
+function rfc822(date) { return new Date(`${date}T09:00:00+09:00`).toUTCString(); }
+
+// ---------- 마크다운 렌더러 (index.html과 동일 규칙) ----------
+function inline(s){const codes=[],links=[];
+  s=escHtml(s).replace(/`([^`]+)`/g,(m,c)=>{codes.push(c);return '␞C'+(codes.length-1)+'␞';});
+  s=s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,(m,t,u)=>{links.push('<a href="'+escAttr(u)+'" target="_blank" rel="noopener">'+t+'</a>');return '␞L'+(links.length-1)+'␞';});
+  s=s.replace(/(https?:\/\/[^\s<>()]+[^\s<>().,;:])/g,(m)=>{links.push('<a href="'+escAttr(m)+'" target="_blank" rel="noopener">'+m+'</a>');return '␞L'+(links.length-1)+'␞';});
+  s=s.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+  s=s.replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<em>$2</em>');
+  s=s.replace(/␞C(\d+)␞/g,(m,i)=>'<code>'+codes[+i]+'</code>');
+  s=s.replace(/␞L(\d+)␞/g,(m,i)=>links[+i]);return s;}
+const splitRow=(l)=>l.replace(/^\||\|$/g,'').split('|').map(c=>c.trim());
+function renderMD(md){const lines=md.replace(/\r/g,'').split('\n');let out='',i=0;
+  while(i<lines.length){let ln=lines[i];
+    if(/^```/.test(ln)){let buf=[];i++;while(i<lines.length&&!/^```/.test(lines[i])){buf.push(lines[i]);i++;}i++;out+='<pre><code>'+escHtml(buf.join('\n'))+'</code></pre>';continue;}
+    if(/^\s*$/.test(ln)){i++;continue;}
+    let h=ln.match(/^(#{1,4})\s+(.*)$/);if(h){const n=h[1].length;out+='<h'+n+'>'+inline(h[2])+'</h'+n+'>';i++;continue;}
+    if(/^\s*([-*_])\1{2,}\s*$/.test(ln)){out+='<hr>';i++;continue;}
+    if(/^\s*>/.test(ln)){let buf=[];while(i<lines.length&&/^\s*>/.test(lines[i])){buf.push(lines[i].replace(/^\s*>\s?/,''));i++;}out+='<blockquote>'+renderMD(buf.join('\n'))+'</blockquote>';continue;}
+    if(/\|/.test(ln)&&i+1<lines.length&&/^\s*\|?[\s:|-]+\|[\s:|-]*$/.test(lines[i+1])){const head=splitRow(ln);i+=2;let rows=[];
+      while(i<lines.length&&/\|/.test(lines[i])&&lines[i].trim()!==''){rows.push(splitRow(lines[i]));i++;}
+      out+='<table><thead><tr>'+head.map(c=>'<th>'+inline(c)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map(c=>'<td>'+inline(c)+'</td>').join('')+'</tr>').join('')+'</tbody></table>';continue;}
+    if(/^\s*(?:[-*+]|\d+\.)\s+/.test(ln)){const ordered=/^\s*\d+\./.test(ln);let buf=[];
+      while(i<lines.length&&/^\s*(?:[-*+]|\d+\.)\s+/.test(lines[i])){buf.push('<li>'+inline(lines[i].replace(/^\s*(?:[-*+]|\d+\.)\s+/,''))+'</li>');i++;}
+      out+=(ordered?'<ol>':'<ul>')+buf.join('')+(ordered?'</ol>':'</ul>');continue;}
+    let buf=[];while(i<lines.length&&!/^\s*$/.test(lines[i])&&!/^(#{1,4}\s|```|\s*>|\s*([-*_])\2{2,}\s*$)/.test(lines[i])
+      &&!(/\|/.test(lines[i])&&i+1<lines.length&&/^\s*\|?[\s:|-]+\|[\s:|-]*$/.test(lines[i+1]))
+      &&!/^\s*(?:[-*+]|\d+\.)\s+/.test(lines[i])){buf.push(lines[i]);i++;}
+    out+='<p>'+inline(buf.join(' '))+'</p>';}
+  return out;}
+function splitFrontmatter(md){const m=md.match(/^---\n([\s\S]*?)\n---\n?/);return m?md.slice(m[0].length):md;}
+function firstH1(md){const m=md.match(/^#\s+(.+)$/m);return m?m[1].trim():'';}
+
+// ---------- 공유 CSS / JS ----------
+const CSS = `:root{--paper:#F7F5F0;--ink:#17171C;--accent:#4B47E8;--muted:#6B6B72;--line:#E5E2DA;--card:#FFF;--soft:#EFECE4;--shadow:0 1px 2px rgba(20,18,10,.03),0 10px 30px rgba(20,18,10,.05);--serif:"Iowan Old Style","Apple SD Gothic Neo",Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif}
+:root[data-theme=dark]{--paper:#111014;--ink:#F3F1EA;--accent:#9B98FF;--muted:#9A98A2;--line:#2C2A32;--card:#1A191F;--soft:#232128;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.4)}
+@media (prefers-color-scheme:dark){:root:not([data-theme]){--paper:#111014;--ink:#F3F1EA;--accent:#9B98FF;--muted:#9A98A2;--line:#2C2A32;--card:#1A191F;--soft:#232128;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.4)}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:26px;padding:15px 24px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:-.4px}
+.mark{width:30px;height:30px;border-radius:8px;background:var(--ink);position:relative;flex:none}
+.mark::before{content:"";position:absolute;left:7px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--paper)}
+.mark::after{content:"";position:absolute;right:6px;top:9px;width:7px;height:10px;border-radius:3px;background:var(--accent)}
+.navlinks{display:flex;gap:4px;margin-left:8px}
+.navlinks a{font-size:14px;font-weight:600;color:var(--muted);padding:7px 12px;border-radius:9px;cursor:pointer}
+.navlinks a:hover{color:var(--ink);background:var(--soft)}
+.navlinks a.on{color:var(--accent)}
+.nav-r{margin-left:auto;display:flex;gap:8px;align-items:center}
+.icnbtn{cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--ink);height:36px;min-width:36px;padding:0 12px;border-radius:18px;font:inherit;font-size:13px;font-weight:600;box-shadow:var(--shadow)}
+.icnbtn:hover{border-color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.mast{padding:52px 0 34px;border-bottom:1px solid var(--line);margin-bottom:40px}
+.mast .kick{font-size:12.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--accent)}
+.mast h1{font-family:var(--serif);font-size:44px;line-height:1.1;letter-spacing:-.5px;margin:14px 0 12px;font-weight:800}
+.mast p{color:var(--muted);font-size:16px;max-width:620px}
+.seclabel{display:flex;align-items:baseline;gap:10px;margin:8px 0 20px}
+.seclabel b{font-family:var(--serif);font-size:22px;letter-spacing:-.3px}
+.seclabel span{font-size:13px;color:var(--muted)}
+.feat{display:grid;grid-template-columns:1.15fr .85fr;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:44px;transition:transform .15s,border-color .15s}
+.feat:hover{transform:translateY(-2px);border-color:var(--accent)}
+.feat .cover{background:linear-gradient(135deg,var(--accent),#2b28a8);min-height:280px;position:relative;overflow:hidden}
+.feat .cover::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.22),transparent 55%)}
+.feat .cover .em{position:absolute;left:26px;bottom:22px;font-size:58px}
+.feat .body{padding:30px 32px;display:flex;flex-direction:column;justify-content:center}
+.cat{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.4px;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);padding:4px 10px;border-radius:20px;align-self:flex-start}
+.feat h2{font-family:var(--serif);font-size:29px;line-height:1.25;letter-spacing:-.4px;margin:14px 0 12px;font-weight:800}
+.feat .dek{color:var(--muted);font-size:14.5px;line-height:1.6;margin-bottom:18px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.byline{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}
+.byline .dot{width:3px;height:3px;border-radius:50%;background:var(--muted);opacity:.6}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:16px}
+.post{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s,border-color .15s}
+.post:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post .cover{height:130px;background:linear-gradient(135deg,var(--soft),var(--card));display:flex;align-items:center;justify-content:center;font-size:40px;border-bottom:1px solid var(--line)}
+.post .body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.post h3{font-family:var(--serif);font-size:18.5px;line-height:1.32;letter-spacing:-.3px;margin:10px 0 8px;font-weight:700}
+.post .dek{color:var(--muted);font-size:13px;line-height:1.55;flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:14px}
+.empty{grid-column:1/-1;color:var(--muted);font-size:14px;background:var(--soft);border-radius:14px;padding:22px}
+.news{margin:50px 0 10px;background:var(--ink);color:var(--paper);border-radius:20px;padding:34px;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.news h4{font-family:var(--serif);font-size:24px;letter-spacing:-.3px;margin-bottom:6px}
+.news p{font-size:14px;opacity:.75;max-width:440px}
+.news .cta{margin-left:auto}
+.news a.pill{background:var(--paper);color:var(--ink);font-weight:700;font-size:14px;padding:12px 20px;border-radius:24px}
+footer{margin:56px 0 40px;color:var(--muted);font-size:12.5px;text-align:center;line-height:1.9;border-top:1px solid var(--line);padding-top:26px}
+.article{max-width:760px;margin:0 auto;padding:34px 24px 90px}
+.back{display:inline-block;margin-bottom:22px}
+.art-head .cat2{color:var(--accent);font-weight:700;font-size:12.5px;letter-spacing:.4px}
+.art-head h1{font-family:var(--serif);font-size:34px;line-height:1.22;letter-spacing:-.6px;margin:12px 0 12px;font-weight:800}
+.art-head .byline{margin-bottom:8px}
+.doc{margin-top:26px}
+.doc h1{font-family:var(--serif);font-size:30px;line-height:1.25;margin:8px 0 14px;font-weight:800}
+.doc h2{font-family:var(--serif);font-size:23px;margin:38px 0 12px;letter-spacing:-.3px;padding-top:14px;border-top:1px solid var(--line)}
+.doc h3{font-size:18px;margin:26px 0 8px;font-weight:700}
+.doc h4{font-size:15px;margin:18px 0 6px;color:var(--muted)}
+.doc p{margin:14px 0;font-size:16.5px;line-height:1.8}
+.doc ul,.doc ol{margin:14px 0 14px 22px}.doc li{margin:6px 0;font-size:16.5px;line-height:1.75}
+.doc blockquote{border-left:3px solid var(--accent);background:var(--soft);border-radius:0 12px 12px 0;padding:14px 20px;margin:20px 0}
+.doc blockquote p{margin:6px 0;font-size:16px}
+.doc hr{border:none;border-top:1px solid var(--line);margin:30px 0}
+.doc code{font-family:ui-monospace,Menlo,monospace;font-size:.86em;background:var(--soft);padding:2px 6px;border-radius:5px}
+.doc pre{background:var(--soft);border-radius:12px;padding:16px 18px;overflow-x:auto;margin:18px 0}.doc pre code{background:none;padding:0}
+.doc table{border-collapse:collapse;width:100%;margin:18px 0;font-size:14px;display:block;overflow-x:auto}
+.doc th,.doc td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}.doc th{background:var(--soft);font-weight:700}
+.doc a{color:var(--accent);word-break:break-word}.doc a:hover{text-decoration:underline}
+@media(max-width:820px){.feat{grid-template-columns:1fr}.feat .cover{min-height:170px}.grid{grid-template-columns:1fr 1fr}.mast h1{font-size:34px}.navlinks{display:none}}
+@media(max-width:540px){.grid{grid-template-columns:1fr}}`;
+
+const JS = `(function(){var root=document.documentElement,btn=document.getElementById('themeBtn');
+var s=localStorage.getItem('vector-theme');if(s)root.setAttribute('data-theme',s);
+function cur(){return root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');}
+function paint(){if(btn)btn.textContent=cur()==='dark'?'\\u2600\\uFE0F':'\\uD83C\\uDF19';}paint();
+if(btn)btn.onclick=function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);localStorage.setItem('vector-theme',n);paint();};
+var links=document.querySelectorAll('#navlinks a');function setc(c){links.forEach(function(a){a.classList.toggle('on',a.dataset.cat===c);});
+document.querySelectorAll('[data-cat-item]').forEach(function(el){el.style.display=(c==='전체'||el.dataset.catItem===c)?'':'none';});
+var feat=document.getElementById('feat-wrap');if(feat){feat.style.display=(c==='전체'||feat.dataset.catItem===c)?'':'none';}}
+links.forEach(function(a){a.onclick=function(e){e.preventDefault();setc(a.dataset.cat);};});})();`;
+
+// ---------- 페이지 <head> 공통 ----------
+function head({ title, desc, url, ogImg, type='website', published, cssHref, extra='' }) {
+  return `<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${escHtml(title)}</title>
+<meta name="description" content="${escAttr(desc)}">
+<link rel="canonical" href="${escAttr(url)}">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:site_name" content="${BRAND}">
+<meta property="og:type" content="${type}">
+<meta property="og:title" content="${escAttr(title)}">
+<meta property="og:description" content="${escAttr(desc)}">
+<meta property="og:url" content="${escAttr(url)}">
+<meta property="og:image" content="${escAttr(ogImg)}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+${published ? `<meta property="article:published_time" content="${published}">\n` : ''}<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${escAttr(title)}">
+<meta name="twitter:description" content="${escAttr(desc)}">
+<meta name="twitter:image" content="${escAttr(ogImg)}">
+<link rel="alternate" type="application/rss+xml" title="${BRAND}" href="${SITE}/feed.xml">
+<link rel="stylesheet" href="${cssHref}">
+${extra}`;
+}
+
+const navHtml = (rel) => `<nav class="nav"><div class="nav-in">
+<a class="brand" href="${rel}"><span class="mark"></span>${BRAND}</a>
+<div class="navlinks" id="navlinks">
+<a data-cat="전체" class="on" href="${rel}">홈</a>
+<a data-cat="인사이트" href="${rel}">인사이트</a>
+<a data-cat="리서치" href="${rel}">리서치</a>
+<a data-cat="튜토리얼" href="${rel}">튜토리얼</a></div>
+<div class="nav-r"><button class="icnbtn" id="themeBtn">🌙</button><a class="icnbtn" href="${rel}dashboard.html">대시보드 →</a></div>
+</div></nav>`;
+
+const bylineHtml = (p) => {
+  const bits = [p.author||BRAND]; if(p.date) bits.push(p.date); if(p.readMin) bits.push(p.readMin+'분 읽기');
+  return bits.map(b=>`<span>${escHtml(b)}</span>`).join('<span class="dot"></span>');
+};
+
+// ---------- 홈(index.html) ----------
+function buildHome(posts) {
+  const featured = posts[0];
+  const rest = posts.slice(1);
+  const featHtml = featured ? `<div id="feat-wrap" data-cat-item="${escAttr(catOf(featured))}"><a class="feat" href="p/${featured.id}/">
+<div class="cover"><span class="em">${CAT_EMOJI[catOf(featured)]||'📝'}</span></div>
+<div class="body"><span class="cat">${escHtml(catOf(featured))}</span>
+<h2>${escHtml(featured.title)}</h2><div class="dek">${escHtml(featured.angle||'')}</div>
+<div class="byline">${bylineHtml(featured)}</div></div></a></div>` : '';
+  const cards = rest.map(p=>`<a class="post" data-cat-item="${escAttr(catOf(p))}" href="p/${p.id}/">
+<div class="cover">${CAT_EMOJI[catOf(p)]||'📝'}</div>
+<div class="body"><span class="cat">${escHtml(catOf(p))}</span>
+<h3>${escHtml(p.title)}</h3><div class="dek">${escHtml(p.angle||'')}</div>
+<div class="byline">${bylineHtml(p)}</div></div></a>`).join('\n');
+  const gridInner = rest.length ? cards : `<div class="empty">첫 글이 위에 있습니다. 다음 글이 곧 올라옵니다.</div>`;
+  const desc = '기계가 후보를 모으고 초안을 만들지만, 무엇을 쓸지 고르고·겪고·해석하는 건 사람입니다. 직접 돌려보고 남다르게 해석한 AI 자동화 소식.';
+
+  const blogLd = {
+    '@context':'https://schema.org','@type':'Blog','name':BRAND,'description':desc,
+    'url':SITE+'/','inLanguage':'ko',
+    'blogPost': posts.map(p=>({'@type':'BlogPosting','headline':p.title,'url':`${SITE}/p/${p.id}/`,'datePublished':isoKST(p.date)}))
+  };
+
+  return `<!DOCTYPE html>
+<html lang="ko">
+<head>
+${head({title:`${BRAND} — AI 자동화 인사이트`, desc, url:SITE+'/', ogImg:SITE+'/assets/og-default.png', type:'website', cssHref:'assets/blog.css',
+  extra:`<script type="application/ld+json">${JSON.stringify(blogLd)}</script>`})}
+</head>
+<body>
+${navHtml('')}
+<main class="wrap">
+<header class="mast"><div class="kick">AI 자동화 인사이트</div>
+<h1>직접 돌려보고,<br>남다르게 해석하는 AI 소식</h1>
+<p>${escHtml(desc)}</p></header>
+${featHtml}
+<div class="seclabel"><b>최신 글</b><span>· ${posts.length}편</span></div>
+<div class="grid" id="grid">${gridInner}</div>
+<section class="news"><div><h4>매주, 중요한 것만</h4>
+<p>지난 한 주의 중요한 AI 자동화 소식을 골라 정리해 드립니다. 전체 파이프라인은 운영 대시보드에서 볼 수 있어요.</p></div>
+<div class="cta"><a class="pill" href="dashboard.html">대시보드 열기</a></div></section>
+<footer>수집 → 선별 → 조사 → 관점 → 초안 → 검수 → 발행 · ${BRAND} 운영 시스템<br>© 2026 ${BRAND}</footer>
+</main>
+<script>${JS}</script>
+</body>
+</html>`;
+}
+
+// ---------- 글 페이지(p/<slug>/index.html) ----------
+function buildArticle(p, bodyMd) {
+  const url = `${SITE}/p/${p.id}/`;
+  const desc = metaDesc(p.angle || firstH1(bodyMd));
+  const ogImg = `${SITE}/p/${p.id}/og.png`;
+  const bodyHtml = renderMD(splitFrontmatter(bodyMd));
+  const ld = {
+    '@context':'https://schema.org','@type':'BlogPosting',
+    'headline':p.title,'description':desc,'inLanguage':'ko',
+    'datePublished':isoKST(p.date),'dateModified':isoKST(p.date),
+    'author':{'@type':'Organization','name':p.author||BRAND},
+    'publisher':{'@type':'Organization','name':BRAND,'logo':{'@type':'ImageObject','url':SITE+'/assets/og-default.png'}},
+    'mainEntityOfPage':{'@type':'WebPage','@id':url},
+    'image':ogImg,'url':url
+  };
+  const crumbs = {
+    '@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[
+      {'@type':'ListItem','position':1,'name':'홈','item':SITE+'/'},
+      {'@type':'ListItem','position':2,'name':catOf(p),'item':SITE+'/'},
+      {'@type':'ListItem','position':3,'name':p.title,'item':url}
+    ]};
+  return `<!DOCTYPE html>
+<html lang="ko">
+<head>
+${head({title:`${p.title} · ${BRAND}`, desc, url, ogImg, type:'article', published:isoKST(p.date), cssHref:'../../assets/blog.css',
+  extra:`<script type="application/ld+json">${JSON.stringify(ld)}</script>\n<script type="application/ld+json">${JSON.stringify(crumbs)}</script>`})}
+</head>
+<body>
+${navHtml('../../')}
+<main class="article">
+<a class="icnbtn back" href="../../">← 목록으로</a>
+<header class="art-head"><div class="cat2">${escHtml(catOf(p))}</div>
+<h1>${escHtml(p.title)}</h1>
+<div class="byline">${bylineHtml(p)}</div></header>
+<article class="doc">${bodyHtml}</article>
+<footer>© 2026 ${BRAND} · <a href="../../">다른 글 보기</a> · <a href="../../dashboard.html">운영 대시보드</a></footer>
+</main>
+<script>${JS}</script>
+</body>
+</html>`;
+}
+
+// ---------- sitemap / robots / rss ----------
+function buildSitemap(posts) {
+  const urls = [`${SITE}/`, ...posts.map(p=>`${SITE}/p/${p.id}/`)];
+  const items = urls.map((u,idx)=>{
+    const lastmod = idx===0 ? (posts[0]?.date||'') : posts[idx-1].date;
+    return `  <url><loc>${escXml(u)}</loc>${lastmod?`<lastmod>${lastmod}</lastmod>`:''}<changefreq>${idx===0?'daily':'monthly'}</changefreq><priority>${idx===0?'1.0':'0.8'}</priority></url>`;
+  }).join('\n');
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${items}
+</urlset>\n`;
+}
+function buildRobots() {
+  return `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;
+}
+function buildFeed(posts) {
+  const items = posts.map(p=>`  <item>
+    <title>${escXml(p.title)}</title>
+    <link>${SITE}/p/${p.id}/</link>
+    <guid isPermaLink="true">${SITE}/p/${p.id}/</guid>
+    <description>${escXml(metaDesc(p.angle||''))}</description>
+    <category>${escXml(catOf(p))}</category>
+    <pubDate>${rfc822(p.date)}</pubDate>
+  </item>`).join('\n');
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>${BRAND} — AI 자동화 인사이트</title>
+  <link>${SITE}/</link>
+  <atom:link href="${SITE}/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>${escXml(TAGLINE)}</description>
+  <language>ko</language>
+  <lastBuildDate>${posts[0]?rfc822(posts[0].date):new Date().toUTCString()}</lastBuildDate>
+${items}
+</channel>
+</rss>\n`;
+}
+
+// ---------- OG 이미지 HTML(플레이라이트로 PNG 캡처) ----------
+function ogHtml(title, cat) {
+  return `<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+  *{margin:0;box-sizing:border-box}
+  body{width:1200px;height:630px;background:#F7F5F0;font-family:"Apple SD Gothic Neo","Malgun Gothic",-apple-system,sans-serif;
+    padding:70px 76px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+  .bar{position:absolute;left:0;top:0;width:14px;height:100%;background:#4B47E8}
+  .cat{display:inline-block;font-size:22px;font-weight:800;color:#4B47E8;letter-spacing:1px}
+  .title{font-size:64px;line-height:1.18;font-weight:800;color:#17171C;letter-spacing:-1.5px;max-width:1000px;
+    display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+  .foot{display:flex;align-items:center;gap:14px}
+  .mk{width:44px;height:44px;border-radius:12px;background:#17171C;position:relative}
+  .mk::before{content:"";position:absolute;left:11px;top:11px;width:15px;height:15px;border-radius:50%;background:#F7F5F0}
+  .mk::after{content:"";position:absolute;right:9px;top:13px;width:9px;height:14px;border-radius:4px;background:#4B47E8}
+  .bn{font-size:30px;font-weight:800;color:#17171C}.bn small{display:block;font-size:16px;font-weight:500;color:#6B6B72}
+  </style></head><body>
+  <div class="bar"></div>
+  <div><div class="cat">${escHtml(cat)}</div></div>
+  <div class="title">${escHtml(title)}</div>
+  <div class="foot"><div class="mk"></div><div class="bn">Vector<small>AI 자동화 인사이트</small></div></div>
+  </body></html>`;
+}
+
+// ---------- 실행 ----------
+const posts = JSON.parse(read('posts.json')).posts
+  .filter(p => p.stage === '발행')
+  .sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+
+console.log(`발행 글 ${posts.length}편 빌드`);
+
+// 공유 자산
+write('assets/blog.css', CSS);
+
+// 글 페이지 + 본문
+const ogJobs = [];
+for (const p of posts) {
+  const mdPath = (p.versions && p.versions[0] && p.versions[0].path) || p.article;
+  const md = read(mdPath);
+  write(`p/${p.id}/index.html`, buildArticle(p, md));
+  ogJobs.push({ id:p.id, title:p.title, cat:catOf(p) });
+  console.log(`  ✓ p/${p.id}/index.html`);
+}
+
+// 홈 + sitemap/robots/feed
+write('index.html', buildHome(posts));
+write('sitemap.xml', buildSitemap(posts));
+write('robots.txt', buildRobots());
+write('feed.xml', buildFeed(posts));
+console.log('  ✓ index.html · sitemap.xml · robots.txt · feed.xml');
+
+// OG 이미지(PNG) — Playwright 있으면 생성
+try {
+  const { chromium } = require('/opt/node22/lib/node_modules/playwright');
+  const CHROME = ['/opt/pw-browsers/chromium-1194/chrome-linux/chrome','/opt/pw-browsers/chromium/chrome-linux/chrome']
+    .find(pp => fs.existsSync(pp));
+  const b = await chromium.launch(CHROME ? { executablePath: CHROME } : {});
+  const pg = await b.newPage();
+  await pg.setViewportSize({ width: 1200, height: 630 });
+  // 기본 OG
+  await pg.setContent(ogHtml(`${BRAND} — 직접 돌려보고, 남다르게 해석하는 AI 소식`, 'AI 자동화 인사이트'), { waitUntil:'load' });
+  await pg.screenshot({ path: path.join(ROOT,'assets/og-default.png') });
+  console.log('  ✓ assets/og-default.png');
+  for (const j of ogJobs) {
+    await pg.setContent(ogHtml(j.title, j.cat), { waitUntil:'load' });
+    await pg.screenshot({ path: path.join(ROOT, `p/${j.id}/og.png`) });
+    console.log(`  ✓ p/${j.id}/og.png`);
+  }
+  await b.close();
+} catch (e) {
+  console.log('  ⚠ OG 이미지 생성 건너뜀(Playwright 없음): ' + e.message);
+}
+
+console.log('빌드 완료.');

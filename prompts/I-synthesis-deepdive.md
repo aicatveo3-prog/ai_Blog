@@ -127,6 +127,17 @@
 3. `inbox.json`의 해당 항목에 `"postId":"<slug>"`, `"status":"검수중"` 반영.
 4. 커밋·푸시.
 
+## 📢 발행 절차 (사람이 "발행"을 지시할 때)
+
+1. `posts.json`의 `posts`에 항목 추가: `id`(=slug), `title`, `date`(발행일), `type`,
+   `category`(인사이트/리서치/튜토리얼), `stage:"발행"`, `readMin`, `author`, `angle`,
+   `versions:[{v,date,note,path}]`. `inbox.json`도 `status:"발행"`로.
+2. **정적 SEO 빌드 실행**: `node build-seo.mjs`
+   → `p/<slug>/index.html`(본문 프리렌더 + title·description·canonical·OG·트위터·JSON-LD),
+     홈 `index.html`(정적 링크 목록), `sitemap.xml`, `robots.txt`, `feed.xml`, `og.png` 생성.
+   이걸 안 돌리면 검색엔진·카카오톡 공유에 글이 안 잡힌다(반드시 실행).
+3. 생성물 전체를 커밋·푸시. (자세한 SEO 설계는 `system/seo.md` 참고)
+
 ## ⚡ 일괄 실행 — "한 번 요청하면 다른 글도 재탄생"
 
 사람이 **"나머지도 이 스타일로 써줘"** / **"전부"** 라고 하면:

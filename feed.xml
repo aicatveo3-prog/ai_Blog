@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Vector — AI 자동화 인사이트</title>
+  <link>https://aicatveo3-prog.github.io/ai_Blog/</link>
+  <atom:link href="https://aicatveo3-prog.github.io/ai_Blog/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>AI 자동화 소식 — 직접 돌려보고, 남다르게 해석해서</description>
+  <language>ko</language>
+  <lastBuildDate>Tue, 07 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>엔진을 남한테 사 오던 회사가, 드디어 자기 엔진을 꺼냈다 — 그런데 &quot;깨끗하다&quot;던 데이터에서 얼룩이 나왔다</title>
+    <link>https://aicatveo3-prog.github.io/ai_Blog/p/microsoft-mai/</link>
+    <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/microsoft-mai/</guid>
+    <description>성능보다, &quot;우리 건 깨끗하다&quot;는 마케팅 한마디가 어떻게 스스로 발목을 잡았는지가 더 흥미로운 사건 — &apos;실력은 진짜, 마케팅은 과했다&apos;는 두 진실은 충돌하지 않는다.</description>
+    <category>인사이트</category>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
+</channel>
+</rss>
