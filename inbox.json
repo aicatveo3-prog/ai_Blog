@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-06",
+  "generated": "2026-07-07",
   "note": "지난 한 달 AI 소식 전방위 수집. firstSeen = 검증된 진짜 첫 등장일(1차/신뢰 소스). 일자 미확정은 verified:false로 '날짜 없음'에 대기. surfaced가 다르면 gap 표시.",
   "items": [
     {
@@ -824,6 +824,170 @@
           "v": "💬 반응",
           "path": "collect/reactions/ftc-ai-accuracy-policy.md"
         }
+      ]
+    },
+    {
+      "title": "Sysdig, 첫 완전자율 'AI 에이전트 랜섬웨어' JADEPUFFER 포착 — Langflow RCE 악용",
+      "firstSeen": "2026-07-01",
+      "surfaced": "2026-07-07",
+      "verified": true,
+      "verifyNote": "Sysdig 위협 리서치팀 공식 블로그(1차 소스, 2026-07-01 공개) + BleepingComputer·The Hacker News·DarkReading·SecurityWeek·CSO Online·Infosecurity Magazine 교차확인. LLM 자율 에이전트가 CVE-2025-3248(Langflow 인증 누락, 2025-04-01 패치·2025-05 CISA KEV 등재)로 침투 후 정찰·자격증명 탈취·횡적이동·권한상승·암호화까지 사람 개입 없이 수행. 페이로드 600개+, Nacos 설정 1,342개 암호화, 키 미저장으로 복호화 불가 구조. 단, 후속 보도(TechCrunch·The Register)에서 Sysdig의 Michael Clark가 '표적 선정·인프라 구축·최초 자격증명 확보는 사람이 했다'고 인정해 '완전 자율' 프레이밍에 이견 있음 — 반응 탭에 명시.",
+      "source": "https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion",
+      "status": "인박스",
+      "tags": [
+        "보안",
+        "에이전트",
+        "논란"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/jadepuffer-ai-ransomware-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/jadepuffer-ai-ransomware.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/jadepuffer-ai-ransomware.md"
+        }
+      ]
+    },
+    {
+      "title": "Nvidia, \"Kyber 랙 2028년 지연\" SemiAnalysis 보도 정면 반박 — \"로드맵은 그대로\"",
+      "firstSeen": "2026-07-06",
+      "surfaced": "2026-07-07",
+      "verified": true,
+      "verifyNote": "SemiAnalysis가 Kyber NVL144(Rubin Ultra용 랙) PCB 미드플레인 제조 난항으로 2028년까지 12개월+ 지연, NVL72x2 백업안·4칩 Rubin Ultra 취소를 주장. Nvidia는 Bloomberg에 이메일 성명으로 \"로드맵은 그대로(intact)\"라 반박했으나 개별 기술 주장에는 답하지 않음. CNBC(2026-07-06)·Tom's Hardware·Yahoo Finance·Benzinga·Wccftech·TradingKey 교차확인. 양측 주장이 대립하는 미해결 쟁점 — 어느 쪽도 확정 사실로 단정하지 않음.",
+      "source": "https://www.cnbc.com/2026/07/06/nvidia-kyber-rack-system-delays-manufacturing-taiwan-rubin-chips-.html",
+      "status": "인박스",
+      "tags": [
+        "하드웨어",
+        "논란"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/nvidia-rubin-kyber-delay-denial-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/nvidia-rubin-kyber-delay-denial.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/nvidia-rubin-kyber-delay-denial.md"
+        }
+      ]
+    },
+    {
+      "title": "일리노이 주지사 프리츠커, 'AI 안전조치법(SB 315)' 정식 서명 — 미 최초 3자 안전감사 의무화 발효",
+      "firstSeen": "2026-07-06",
+      "surfaced": "2026-07-07",
+      "verified": true,
+      "verifyNote": "일리노이 주지사 JB 프리츠커가 2026-07-06 SB 315(Artificial Intelligence Safety Measures Act)에 정식 서명. 주지사실 공식 보도자료(1차 소스) + Chicago Sun-Times·StateScoop·The Hill·ABC7 Chicago·NPR Illinois 교차확인. 기존 인박스 항목(firstSeen 2026-05-27, 하원 통과·서명 예정 상태)의 후속 사건 — 법안이 실제 법률로 확정됨. 대형 AI 개발사에 안전관행 공개·중대사고 신고(24~72시간 이내)·내부고발자 보호·독립 3자 안전감사 의무화. 시행 2027-01-01.",
+      "source": "https://chicago.suntimes.com/politics/2026/07/06/ai-regulations-illinois-law-pritzker-signed",
+      "status": "인박스",
+      "tags": [
+        "정책",
+        "규제",
+        "미국"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/illinois-ai-safety-act-signed-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/illinois-ai-safety-act-signed.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/illinois-ai-safety-act-signed.md"
+        }
+      ]
+    },
+    {
+      "title": "우크라이나, AI 도입 기준으로 '자체 서버 구동(온프레미스)' 우선 — Anthropic·OpenAI류 모델은 배제 방향",
+      "firstSeen": "2026-07-07",
+      "surfaced": "2026-07-07",
+      "verified": true,
+      "verifyNote": "우크라이나 디지털전환부 최고AI책임자 Roman Kyslyi가 로이터에 밝힘(2026-07-07, Reuters 배포로 investing.com·US News·Yahoo Finance·Al-Monitor·933 The Drive 등 다수 매체 동시 게재). 정부·기업·군용 AI는 자국 인프라 구동(온프레미스) 모델을 우선하고 제공사가 통제권을 쥔 모델(Anthropic·OpenAI 주력 모델)은 제한하는 방향. \"미국 정부가 Anthropic에 강력 모델 접근을 축소하라고 명령했다\"는 부분은 Kyslyi의 발언 인용이며 이 기사가 별도로 확인한 1차 사실이 아님 — 정리본·자세히에서 인용으로만 표기. Diia 내 AI 비서는 현재 구글 Gemini(원격) 임시 사용 중, Kyivstar와 Gemma 기반 자체 모델을 올가을 공개 예정.",
+      "source": "https://www.usnews.com/news/world/articles/2026-07-07/ukraine-to-pick-ai-models-operated-without-provider-control-official-says",
+      "status": "인박스",
+      "tags": [
+        "정책",
+        "지정학",
+        "논란"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/ukraine-ai-onpremise-policy-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/ukraine-ai-onpremise-policy.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/ukraine-ai-onpremise-policy.md"
+        }
+      ]
+    },
+    {
+      "title": "EU 집행위, AI×사이버보안 액션플랜 발표",
+      "firstSeen": "2026-07-07",
+      "surfaced": "2026-07-07",
+      "verified": true,
+      "verifyNote": "유럽집행위원회 공식 뉴스룸(1차 소스, commission.europa.eu·digital-strategy.ec.europa.eu 동시 게시, 2026-07-07)에서 첨단 AI가 사이버보안에 미치는 위험·기회를 다루는 EU 액션플랜 발표 확인. WebFetch가 두 공식 도메인 모두 403으로 차단돼 본문 상세는 확인하지 못했고, 발표 사실과 날짜만 검증됨(공식 도메인 2곳 동시 게시로 날짜 확정). 상세 내용은 후속 확인 필요.",
+      "source": "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en",
+      "status": "인박스",
+      "tags": [
+        "정책",
+        "규제",
+        "유럽"
+      ]
+    },
+    {
+      "title": "SK하이닉스, 나스닥 $280억 규모 미국 상장(IPO) 개시 — 역대 두 번째 규모",
+      "firstSeen": "2026-07-06",
+      "surfaced": "2026-07-07",
+      "verified": true,
+      "verifyNote": "SK하이닉스가 SEC 제출서류로 보통주 1,779만주 규모 나스닥 상장 절차를 2026-07-06 개시. TechCrunch·Yahoo Finance·Investing.com(Reuters)·Bloomberg·Seeking Alpha 교차확인. 가격 확정 목요일, 거래 시작 2026-07-10 예정. SpaceX $857억 IPO 다음으로 역대 두 번째 규모, 사우디 아람코($256억)·알리바바 상회. 조달자금은 한국 내 생산시설 확장·EUV 노광장비 구입 용도.",
+      "source": "https://techcrunch.com/2026/07/06/us-investors-will-soon-get-access-to-sk-hynix-another-memory-maker-riding-the-ai-boom/",
+      "status": "인박스",
+      "tags": [
+        "하드웨어",
+        "자금"
+      ]
+    },
+    {
+      "title": "Microsoft, AI 도입 전담 신설조직 'Frontier Company' 출범 — $25억·전문인력 6,000명 투입",
+      "firstSeen": "2026-07-02",
+      "surfaced": "2026-07-07",
+      "verified": true,
+      "verifyNote": "Microsoft 공식 블로그(1차 소스, blogs.microsoft.com, 2026-07-02) + CNBC·TechCrunch·HPCwire·TechTimes 교차확인. 기업 AI 도입을 공동설계·배치하는 컨설팅 조직, $25억 투자·엔지니어링/산업전문가 6,000명 투입. LSEG·Land O'Lakes·Unilever·Novo Nordisk 등 초기 고객. MIT Project NANDA의 '기업 생성AI 파일럿 95%가 손익에 측정 가능한 영향 없음' 연구가 배경으로 언급됨.",
+      "source": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/",
+      "status": "인박스",
+      "tags": [
+        "자동화",
+        "자금"
+      ]
+    },
+    {
+      "title": "Together AI, $8억 시리즈C 유치 — 밸류에이션 $83억로 상승(오픈소스 AI 인프라)",
+      "firstSeen": "2026-07-01",
+      "surfaced": "2026-07-07",
+      "verified": true,
+      "verifyNote": "Together AI 공식 블로그(1차 소스, together.ai, 2026-07-01) + TechCrunch·Businesswire·Yahoo Finance 교차확인. Aramco Ventures 주도, Vista Equity Partners·General Catalyst·Emergence Capital·Nvidia·SentinelOne S Ventures 등 참여. 연간 예약매출 전분기 $11.5억 돌파, 오픈소스 모델 사용량 12개월간 3배 증가. 지분 투자 외 500MW+ 컴퓨트 용량 확보 별도 약정.",
+      "source": "https://www.together.ai/blog/announcing-our-series-c",
+      "status": "인박스",
+      "tags": [
+        "자금",
+        "인프라"
       ]
     }
   ]
