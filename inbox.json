@@ -295,7 +295,8 @@
       "verified": true,
       "verifyNote": "CNBC 6/2. OpenAI 의존도↓·개발자 비용↓ 목적. 추론·코딩 특화.",
       "source": "https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html",
-      "status": "인박스",
+      "status": "발행",
+      "postId": "microsoft-mai",
       "tags": [
         "모델",
         "Microsoft"
