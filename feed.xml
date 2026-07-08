@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>Vector — AI 자동화 인사이트</title>
+  <title>AI 쉽게 알려주는 집 — 학생도 쉽게 보는 AI 최신소식</title>
   <link>https://aicatveo3-prog.github.io/ai_Blog/</link>
   <atom:link href="https://aicatveo3-prog.github.io/ai_Blog/feed.xml" rel="self" type="application/rss+xml"/>
-  <description>AI 자동화 소식 — 직접 돌려보고, 남다르게 해석해서</description>
+  <description>어려운 AI 뉴스, 학생도 이해하게 쉽게 알려드려요</description>
   <language>ko</language>
   <lastBuildDate>Tue, 07 Jul 2026 00:00:00 GMT</lastBuildDate>
   <item>

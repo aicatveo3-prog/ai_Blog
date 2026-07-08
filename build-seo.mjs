@@ -1,4 +1,4 @@
-// build-seo.mjs — Vector 블로그 정적 SEO 빌드
+// build-seo.mjs — 'AI 쉽게 알려주는 집' 블로그 정적 SEO 빌드
 // posts.json의 '발행' 글을 정적 HTML(본문 프리렌더 + 메타/OG/JSON-LD)로 굽고,
 // 홈(index.html)·sitemap.xml·robots.txt·feed.xml·글별 OG 이미지를 생성한다.
 //
@@ -14,8 +14,8 @@ const require = createRequire(import.meta.url);
 
 const ROOT = process.cwd();
 const SITE = 'https://aicatveo3-prog.github.io/ai_Blog';   // 배포 베이스 URL(끝에 / 없음)
-const BRAND = 'Vector';
-const TAGLINE = 'AI 자동화 소식 — 직접 돌려보고, 남다르게 해석해서';
+const BRAND = 'AI 쉽게 알려주는 집';
+const TAGLINE = '어려운 AI 뉴스, 학생도 이해하게 쉽게 알려드려요';
 
 // ---------- 유틸 ----------
 const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
@@ -90,40 +90,40 @@ function prepArticleBody(md){
 }
 
 // ---------- 공유 CSS / JS ----------
-const CSS = `:root{--paper:#F5F7F9;--ink:#191F28;--ink2:#333A43;--accent:#3182F6;--accentStrong:#1B64DA;--accent2:#3182F6;--info:#3182F6;--infoBg:#EAF2FE;--muted:#6B7684;--faint:#8B95A1;--label:#8B95A1;--line:#E8EBEE;--cardBorder:#D3DAE2;--tline:#C4CDD8;--tedge:#A3AEBC;--red:#D14343;--redBg:#FEF2F2;--warnBg:#FFF7ED;--warnBd:#FBCF97;--warnInk:#B4620A;--card:#FFFFFF;--soft:#EEF1F5;--shadow:0 1px 2px rgba(20,30,50,.03),0 5px 14px rgba(20,30,50,.045),0 18px 44px rgba(20,30,50,.05);--ring:rgba(20,30,50,.045);--hair:rgba(255,255,255,.7);--serif:"Noto Sans KR",-apple-system,"SF Pro Display","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;--sans:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif}
-:root[data-theme=dark]{--paper:#17181C;--ink:#EDEFF2;--ink2:#C5CAD1;--accent:#4B93F8;--accentStrong:#6BA5FF;--accent2:#4B93F8;--info:#4B93F8;--infoBg:#18243A;--muted:#8B95A1;--faint:#6B7280;--label:#8B95A1;--line:#2A2E35;--cardBorder:#3A404A;--tline:#3E444E;--tedge:#565E6B;--red:#F0817F;--redBg:#241A1B;--warnBg:#241C10;--warnBd:#463714;--warnInk:#DDA24C;--card:#1E2026;--soft:#25282F;--shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.4),0 24px 54px rgba(0,0,0,.45);--ring:rgba(0,0,0,.5);--hair:rgba(255,255,255,.05)}
-@media (prefers-color-scheme:dark){:root:not([data-theme]){--paper:#17181C;--ink:#EDEFF2;--ink2:#C5CAD1;--accent:#4B93F8;--accentStrong:#6BA5FF;--accent2:#4B93F8;--info:#4B93F8;--infoBg:#18243A;--muted:#8B95A1;--faint:#6B7280;--label:#8B95A1;--line:#2A2E35;--cardBorder:#3A404A;--tline:#3E444E;--tedge:#565E6B;--red:#F0817F;--redBg:#241A1B;--warnBg:#241C10;--warnBd:#463714;--warnInk:#DDA24C;--card:#1E2026;--soft:#25282F;--shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.4),0 24px 54px rgba(0,0,0,.45);--ring:rgba(0,0,0,.5);--hair:rgba(255,255,255,.05)}}
+const CSS = `:root{--paper:#F5F7F9;--ink:#191F28;--ink2:#333A43;--accent:#3182F6;--accentStrong:#1B64DA;--accent2:#3182F6;--info:#3182F6;--infoBg:#EAF2FE;--muted:#6B7684;--faint:#8B95A1;--label:#8B95A1;--line:#E8EBEE;--cardBorder:#D3DAE2;--tline:#C4CDD8;--tedge:#A3AEBC;--red:#D14343;--redBg:#FEF2F2;--warnBg:#FFF7ED;--warnBd:#FBCF97;--warnInk:#B4620A;--brand:#F2994A;--brandD:#C7752B;--brandBg:#FDF1E6;--card:#FFFFFF;--soft:#EEF1F5;--shadow:0 1px 2px rgba(20,30,50,.03),0 5px 14px rgba(20,30,50,.045),0 18px 44px rgba(20,30,50,.05);--ring:rgba(20,30,50,.045);--hair:rgba(255,255,255,.7);--serif:"Noto Sans KR",-apple-system,"SF Pro Display","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;--sans:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif}
+:root[data-theme=dark]{--paper:#17181C;--ink:#EDEFF2;--ink2:#C5CAD1;--accent:#4B93F8;--accentStrong:#6BA5FF;--accent2:#4B93F8;--info:#4B93F8;--infoBg:#18243A;--muted:#8B95A1;--faint:#6B7280;--label:#8B95A1;--line:#2A2E35;--cardBorder:#3A404A;--tline:#3E444E;--tedge:#565E6B;--red:#F0817F;--redBg:#241A1B;--warnBg:#241C10;--warnBd:#463714;--warnInk:#DDA24C;--brand:#F2A661;--brandD:#F4B072;--brandBg:#2A2016;--card:#1E2026;--soft:#25282F;--shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.4),0 24px 54px rgba(0,0,0,.45);--ring:rgba(0,0,0,.5);--hair:rgba(255,255,255,.05)}
+@media (prefers-color-scheme:dark){:root:not([data-theme]){--paper:#17181C;--ink:#EDEFF2;--ink2:#C5CAD1;--accent:#4B93F8;--accentStrong:#6BA5FF;--accent2:#4B93F8;--info:#4B93F8;--infoBg:#18243A;--muted:#8B95A1;--faint:#6B7280;--label:#8B95A1;--line:#2A2E35;--cardBorder:#3A404A;--tline:#3E444E;--tedge:#565E6B;--red:#F0817F;--redBg:#241A1B;--warnBg:#241C10;--warnBd:#463714;--warnInk:#DDA24C;--brand:#F2A661;--brandD:#F4B072;--brandBg:#2A2016;--card:#1E2026;--soft:#25282F;--shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.4),0 24px 54px rgba(0,0,0,.45);--ring:rgba(0,0,0,.5);--hair:rgba(255,255,255,.05)}}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word}
 a{color:inherit;text-decoration:none}
 .nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
 .nav-in{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:26px;padding:15px 24px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:-.4px}
-.mark{width:30px;height:30px;border-radius:8px;background:var(--ink);position:relative;flex:none}
-.mark::before{content:"";position:absolute;left:7px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--paper)}
-.mark::after{content:"";position:absolute;right:6px;top:9px;width:7px;height:10px;border-radius:3px;background:var(--accent)}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:18px;letter-spacing:-.5px}
+.mark{width:32px;height:32px;border-radius:10px 10px 10px 3px;background:linear-gradient(135deg,#F9B45E,#E07B2E);display:flex;align-items:center;justify-content:center;font-size:17px;flex:none}
+.brand .wm b{color:var(--brand);font-weight:800}
 .navlinks{display:flex;gap:4px;margin-left:8px}
 .navlinks a{font-size:14px;font-weight:600;color:var(--muted);padding:7px 12px;border-radius:9px;cursor:pointer}
 .navlinks a:hover{color:var(--ink);background:var(--soft)}
-.navlinks a.on{color:var(--accent)}
+.navlinks a.on{color:var(--brand)}
 .nav-r{margin-left:auto;display:flex;gap:8px;align-items:center}
 .icnbtn{cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--ink);height:36px;min-width:36px;padding:0 12px;border-radius:18px;font:inherit;font-size:13px;font-weight:600;box-shadow:var(--shadow)}
-.icnbtn:hover{border-color:var(--accent)}
+.icnbtn:hover{border-color:var(--brand)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 .mast{padding:52px 0 34px;border-bottom:1px solid var(--line);margin-bottom:40px}
-.mast .kick{font-size:12.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--accent)}
-.mast h1{font-family:var(--serif);font-size:44px;line-height:1.14;letter-spacing:-.5px;margin:14px 0 12px;font-weight:800;text-wrap:balance}
+.mast .kick{font-size:12.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--brand)}
+.mast h1{font-family:var(--serif);font-size:44px;line-height:1.16;letter-spacing:-.5px;margin:14px 0 12px;font-weight:900;text-wrap:balance}
+.mast h1 .hlk{background:linear-gradient(transparent 56%,color-mix(in srgb,var(--brand) 34%,#fff) 56%);padding:0 3px}
 .mast p{color:var(--muted);font-size:16px;max-width:620px}
 .seclabel{display:flex;align-items:baseline;gap:10px;margin:8px 0 20px}
 .seclabel b{font-family:var(--serif);font-size:22px;letter-spacing:-.3px}
 .seclabel span{font-size:13px;color:var(--muted)}
 .feat{display:grid;grid-template-columns:1.15fr .85fr;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:44px;transition:transform .15s,border-color .15s}
-.feat:hover{transform:translateY(-2px);border-color:var(--accent)}
-.feat .cover{background:linear-gradient(150deg,#4B93F8,#1B64DA);min-height:280px;position:relative;overflow:hidden}
+.feat:hover{transform:translateY(-2px);border-color:var(--brand)}
+.feat .cover{background:linear-gradient(150deg,#F9B45E,#E07B2E);min-height:280px;position:relative;overflow:hidden}
 .feat .cover::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.22),transparent 55%)}
 .feat .cover .cov-cat{position:absolute;left:30px;bottom:26px;font-family:var(--sans);font-size:44px;font-weight:800;letter-spacing:-.02em;color:rgba(255,255,255,.92)}
 .feat .cover::before{content:"";position:absolute;right:-40px;top:-40px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.10)}
-.post .cover .cov-cat{font-size:15px;font-weight:700;color:var(--accentStrong);letter-spacing:.2px}
+.post .cover .cov-cat{font-size:15px;font-weight:700;color:var(--brandD);letter-spacing:.2px}
 .feat .body{padding:30px 32px;display:flex;flex-direction:column;justify-content:center}
 .cat{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.4px;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);padding:4px 10px;border-radius:20px;align-self:flex-start}
 .feat h2{font-family:var(--serif);font-size:28px;line-height:1.28;letter-spacing:-.4px;margin:14px 0 12px;font-weight:800;text-wrap:balance}
@@ -133,7 +133,7 @@ a{color:inherit;text-decoration:none}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:16px}
 .post{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s,border-color .15s}
 .post:hover{transform:translateY(-2px);border-color:var(--accent)}
-.post .cover{height:96px;background:color-mix(in srgb,var(--accent) 7%,var(--card));display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line)}
+.post .cover{height:96px;background:color-mix(in srgb,var(--brand) 9%,var(--card));display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line)}
 .post .body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
 .post h3{font-family:var(--serif);font-size:18.5px;line-height:1.36;letter-spacing:-.3px;margin:10px 0 8px;font-weight:700;text-wrap:balance}
 .post .dek{color:var(--muted);font-size:13px;line-height:1.55;flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:14px}
@@ -226,7 +226,7 @@ if(document.querySelector('[data-cat-item]')){
 function head({ title, desc, url, ogImg, type='website', published, cssHref, extra='' }) {
   return `<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='8'%20fill='%231A1712'/%3E%3Ccircle%20cx='12'%20cy='13'%20r='4.5'%20fill='%23F3F3EE'/%3E%3Crect%20x='19'%20y='10'%20width='5'%20height='8'%20rx='2'%20fill='%233182F6'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='8'%20fill='%23F2994A'/%3E%3Cpath%20d='M16%206L25%2013L25%2026L7%2026L7%2013Z'%20fill='%23ffffff'/%3E%3Crect%20x='13.5'%20y='18'%20width='5'%20height='8'%20rx='1'%20fill='%23F2994A'/%3E%3C/svg%3E">
 <title>${escHtml(title)}</title>
 <meta name="description" content="${escAttr(desc)}">
 <link rel="canonical" href="${escAttr(url)}">
@@ -253,7 +253,7 @@ ${extra}`;
 }
 
 const navHtml = (rel) => `<nav class="nav"><div class="nav-in">
-<a class="brand" href="${rel}"><span class="mark"></span>${BRAND}</a>
+<a class="brand" href="${rel}"><span class="mark">🏠</span><span class="wm">AI <b>쉽게 알려주는</b> 집</span></a>
 <div class="navlinks" id="navlinks">
 <a data-cat="전체" class="on" href="${rel}">홈</a>
 <a data-cat="인사이트" href="${rel}">인사이트</a>
@@ -282,7 +282,7 @@ function buildHome(posts) {
 <h3>${escHtml(p.title)}</h3><div class="dek">${escHtml(p.angle||'')}</div>
 <div class="byline">${bylineHtml(p)}</div></div></a>`).join('\n');
   const gridInner = rest.length ? cards : `<div class="empty">첫 글이 위에 있습니다. 다음 글이 곧 올라옵니다.</div>`;
-  const desc = '기계가 후보를 모으고 초안을 만들지만, 무엇을 쓸지 고르고·겪고·해석하는 건 사람입니다. 직접 돌려보고 남다르게 해석한 AI 자동화 소식.';
+  const desc = '매일 나오는 AI 최신 소식을 학생도 이해하도록 쉽게 풀어드려요. 어려운 용어는 빼고, 핵심만 세 줄 요약과 쉬운 해설로.';
 
   const blogLd = {
     '@context':'https://schema.org','@type':'Blog','name':BRAND,'description':desc,
@@ -293,20 +293,20 @@ function buildHome(posts) {
   return `<!DOCTYPE html>
 <html lang="ko">
 <head>
-${head({title:`${BRAND} — AI 자동화 인사이트`, desc, url:SITE+'/', ogImg:SITE+'/assets/og-default.png', type:'website', cssHref:'assets/blog.css',
+${head({title:`${BRAND} — 학생도 쉽게 보는 AI 최신소식`, desc, url:SITE+'/', ogImg:SITE+'/assets/og-default.png', type:'website', cssHref:'assets/blog.css',
   extra:`<script type="application/ld+json">${JSON.stringify(blogLd)}</script>`})}
 </head>
 <body>
 ${navHtml('')}
 <main class="wrap">
-<header class="mast"><div class="kick">AI 자동화 인사이트</div>
-<h1>직접 돌려보고,<br>남다르게 해석하는 AI 소식</h1>
+<header class="mast"><div class="kick">학생도 쉽게 보는 AI 소식</div>
+<h1>어려운 AI 뉴스,<br><span class="hlk">여기선 쉽게</span> 알려드려요</h1>
 <p>${escHtml(desc)}</p></header>
 ${featHtml}
 <div class="seclabel"><b>최신 글</b><span>· ${posts.length}편</span></div>
 <div class="grid" id="grid">${gridInner}</div>
 <section class="news"><div><h4>매주, 중요한 것만</h4>
-<p>지난 한 주의 중요한 AI 자동화 소식을 골라 정리해 드립니다. 전체 파이프라인은 운영 대시보드에서 볼 수 있어요.</p></div>
+<p>매주 중요한 AI 소식만 골라 학생 눈높이로 쉽게 정리해 드려요. 전체 파이프라인은 운영 대시보드에서 볼 수 있어요.</p></div>
 <div class="cta"><a class="pill" href="dashboard.html">대시보드 열기</a></div></section>
 <footer>수집 → 선별 → 조사 → 관점 → 초안 → 검수 → 발행 · ${BRAND} 운영 시스템<br>© 2026 ${BRAND}</footer>
 </main>
@@ -418,7 +418,7 @@ function buildFeed(posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>${BRAND} — AI 자동화 인사이트</title>
+  <title>${BRAND} — 학생도 쉽게 보는 AI 최신소식</title>
   <link>${SITE}/</link>
   <atom:link href="${SITE}/feed.xml" rel="self" type="application/rss+xml"/>
   <description>${escXml(TAGLINE)}</description>
@@ -435,20 +435,20 @@ function ogHtml(title, cat) {
   *{margin:0;box-sizing:border-box}
   body{width:1200px;height:630px;background:#FFFFFF;font-family:"Apple SD Gothic Neo","Malgun Gothic",-apple-system,sans-serif;
     padding:70px 76px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
-  .bar{position:absolute;left:0;top:0;width:14px;height:100%;background:#3182F6}
-  .cat{display:inline-block;font-size:22px;font-weight:800;color:#1B64DA;letter-spacing:1px}
+  .bar{position:absolute;left:0;top:0;width:14px;height:100%;background:#F2994A}
+  .cat{display:inline-block;font-size:22px;font-weight:800;color:#C7752B;letter-spacing:1px}
   .title{font-size:64px;line-height:1.18;font-weight:800;color:#191F28;letter-spacing:-1.5px;max-width:1000px;
     display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
   .foot{display:flex;align-items:center;gap:14px}
-  .mk{width:44px;height:44px;border-radius:12px;background:#191F28;position:relative}
-  .mk::before{content:"";position:absolute;left:11px;top:11px;width:15px;height:15px;border-radius:50%;background:#FFFFFF}
-  .mk::after{content:"";position:absolute;right:9px;top:13px;width:9px;height:14px;border-radius:4px;background:#3182F6}
-  .bn{font-size:30px;font-weight:800;color:#191F28}.bn small{display:block;font-size:16px;font-weight:500;color:#6B7684}
+  .mk{width:48px;height:48px;border-radius:14px 14px 14px 4px;background:linear-gradient(135deg,#F9B45E,#E07B2E);position:relative}
+  .mk::before{content:"";position:absolute;left:12px;top:22px;width:24px;height:16px;background:#fff}
+  .mk::after{content:"";position:absolute;left:24px;top:9px;width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-bottom:15px solid #fff;transform:translateX(-16px)}
+  .bn{font-size:28px;font-weight:800;color:#191F28}.bn small{display:block;font-size:16px;font-weight:500;color:#6B7684}
   </style></head><body>
   <div class="bar"></div>
   <div><div class="cat">${escHtml(cat)}</div></div>
   <div class="title">${escHtml(title)}</div>
-  <div class="foot"><div class="mk"></div><div class="bn">Vector<small>AI 자동화 인사이트</small></div></div>
+  <div class="foot"><div class="mk"></div><div class="bn">AI 쉽게 알려주는 집<small>학생도 쉽게 보는 AI 최신소식</small></div></div>
   </body></html>`;
 }
 
@@ -490,7 +490,7 @@ try {
   const pg = await b.newPage();
   await pg.setViewportSize({ width: 1200, height: 630 });
   // 기본 OG
-  await pg.setContent(ogHtml(`${BRAND} — 직접 돌려보고, 남다르게 해석하는 AI 소식`, 'AI 자동화 인사이트'), { waitUntil:'load' });
+  await pg.setContent(ogHtml('어려운 AI 뉴스, 여기선 쉽게 알려드려요', '학생도 쉽게 보는 AI 소식'), { waitUntil:'load' });
   await pg.screenshot({ path: path.join(ROOT,'assets/og-default.png') });
   console.log('  ✓ assets/og-default.png');
   for (const j of ogJobs) {
