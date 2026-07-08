@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>시안 A+B · 하이브리드</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&family=Noto+Serif+KR:wght@700;900&family=JetBrains+Mono:wght@700&display=swap">
+<style>
+:root{--ink:#191F28;--ink2:#333A43;--muted:#6B7684;--faint:#8B95A1;--accent:#3182F6;--accentD:#1B64DA;--red:#D14343;--line:#E8EBEE;--card:#fff;--soft:#F2F4F6;--paper:#F7F8FA;--mono:"JetBrains Mono",monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans KR",sans-serif;word-break:keep-all;-webkit-font-smoothing:antialiased;line-height:1.5;letter-spacing:-.01em}
+.switch{position:sticky;top:0;z-index:50;display:flex;gap:6px;padding:10px 14px;background:rgba(247,248,250,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);font-size:12.5px;font-weight:700}
+.switch a{padding:6px 11px;border-radius:999px;color:var(--muted);border:1px solid var(--line)}
+.switch a.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.prog{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accentD));z-index:60;width:0}
+.wrap{max-width:716px;margin:0 auto;padding:0 24px 120px}
+.hero{padding:60px 0 36px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--accentD);text-transform:uppercase}
+h1.t{font-family:"Noto Serif KR",serif;font-weight:900;font-size:42px;line-height:1.3;letter-spacing:-.02em;margin:18px 0 18px;text-wrap:pretty}
+.sf{font-size:18.5px;line-height:1.6;color:var(--muted);max-width:40ch}
+.meta{display:flex;gap:10px;font-size:13px;color:var(--faint);margin-top:22px;font-family:var(--mono)}
+.callout{margin:30px 0;padding:18px 22px;background:#EAF2FE;border-left:4px solid var(--accent);border-radius:0 14px 14px 0;font-size:15.5px;line-height:1.6;color:var(--ink2)}
+.callout b{color:var(--accentD)}
+.sum{margin:38px 0;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:8px 24px;box-shadow:0 6px 20px rgba(20,30,50,.04)}
+.sum li{list-style:none;display:flex;gap:14px;padding:15px 0;border-top:1px solid var(--line);font-size:16px;font-weight:500;line-height:1.5}
+.sum li:first-child{border-top:none}
+.sum .n{font-family:var(--mono);font-weight:700;color:var(--accent)}
+.chap{margin:74px 0 6px;display:flex;align-items:baseline;gap:16px}
+.chap .num{font-family:"Noto Serif KR",serif;font-weight:900;font-size:56px;line-height:.8;color:transparent;-webkit-text-stroke:1.5px var(--faint)}
+.chap h2{font-size:25px;font-weight:800;letter-spacing:-.02em;line-height:1.3}
+p.b{font-size:17px;line-height:1.72;color:var(--ink2);margin:18px 0}
+p.b b{color:var(--ink)}
+.pull{margin:40px 0;padding:6px 0 6px 28px;border-left:4px solid var(--accent)}
+.pull q{quotes:none;font-family:"Noto Serif KR",serif;font-weight:700;font-size:25px;line-height:1.45;color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:40px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 16px;text-align:center;box-shadow:0 6px 20px rgba(20,30,50,.04)}
+.stat .v{font-family:"Noto Serif KR",serif;font-weight:900;font-size:32px;color:var(--accentD);letter-spacing:-.02em}
+.stat .k{font-size:12px;color:var(--muted);margin-top:8px}
+.trap{margin:38px 0;padding:22px 24px;background:#FFF7ED;border:1px solid #FCD9A8;border-radius:16px}
+.trap .tag{font-family:var(--mono);font-size:11.5px;font-weight:700;color:#B4620A;letter-spacing:.08em;text-transform:uppercase}
+.trap p{font-size:16.5px;line-height:1.6;color:var(--ink2);margin-top:10px}
+.trap b{color:var(--ink)}
+.hl{background:linear-gradient(transparent 55%,#FFE58A 55%);font-weight:700;padding:0 2px}
+.vs{margin:40px 0;border:2px solid var(--red);border-radius:18px;overflow:hidden;position:relative}
+.vs .top{background:var(--red);color:#fff;font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.1em;padding:9px 16px;text-transform:uppercase}
+.vs .grid{display:grid;grid-template-columns:1fr 1fr}
+.vs .c{padding:22px}
+.vs .l{background:var(--card)}.vs .r{background:#FEF2F2;border-left:1px dashed #F0B8B8}
+.vs .h{font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+.vs .l .h{color:var(--muted)}.vs .r .h{color:var(--red)}
+.vs .row{font-size:14.5px;line-height:1.5;padding:9px 0;border-top:1px dashed var(--line);color:var(--ink2)}
+.verdict{margin:64px 0 0;padding:36px 0 0;border-top:2px solid var(--ink)}
+.verdict p{font-family:"Noto Serif KR",serif;font-weight:700;font-size:24px;line-height:1.5}
+@media(max-width:640px){h1.t{font-size:31px}.chap .num{font-size:42px}.stats{grid-template-columns:1fr}.vs .grid{grid-template-columns:1fr}.vs .r{border-left:none;border-top:1px dashed #F0B8B8}}
+</style></head>
+<body>
+<div class="prog" id="prog"></div>
+<nav class="switch"><a href="index.html">← 비교</a><a href="a.html">A 에디토리얼</a><a href="b.html">B 수사파일</a><a href="c.html">C 스크롤리텔링</a><a href="d.html">D 챕터드</a><a class="on" href="ab.html">A+B 하이브리드</a></nav>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">인사이트 · 9분 읽기</div>
+    <h1 class="t">마이크로소프트가 자기 AI 7개를 만들었어요 — 그런데 설명서 한 줄이 화제가 됐어요</h1>
+    <p class="sf">"우리 건 깨끗한 자료로만 배웠다"던 자랑이 실제 설명서와 어긋났어요. 무슨 일인지 쉽게 풀었어요.</p>
+    <div class="meta"><span>VECTOR</span><span>·</span><span>2026.06</span><span>·</span><span>9 MIN</span></div>
+  </header>
+
+  <div class="callout"><b>하나만 짚고 갈게요.</b> 여기 점수·성능은 대부분 마이크로소프트가 "우리가 이만큼 한다"고 발표한 값이에요. 그대로 믿기보다, 링크로 직접 확인을 추천해요.</div>
+
+  <ul class="sum">
+    <li><span class="n">01</span><span>마이크로소프트가 자기가 만든 AI 7개를 처음 공개했어요.</span></li>
+    <li><span class="n">02</span><span>"깨끗한 자료로만 배웠다"고 자랑했어요.</span></li>
+    <li><span class="n">03</span><span>그런데 설명서를 보니, 다른 AI들이 다 쓰는 그 자료를 똑같이 쓰고 있었어요.</span></li>
+  </ul>
+
+  <div class="chap"><span class="num">01</span><h2>남의 AI 빌려 쓰던 회사가, 드디어 자기 걸 만들었어요</h2></div>
+  <p class="b">10년 넘게 남의 엔진(OpenAI)을 빌려 쓰던 마이크로소프트가, 6월 2일 무대에 올라 자기가 만든 AI를 한 번에 <b>일곱 개</b> 꺼내 놨어요. 이름은 <b>MAI</b>. 그러고는 이렇게 덧붙였죠.</p>
+  <div class="pull"><q>우리 건 남의 걸 베끼지 않았어요. 깨끗하고, 출처가 확실한 자료로만 배웠어요.</q></div>
+  <div class="stats">
+    <div class="stat"><div class="v">97점</div><div class="k">수학 시험 (자체 발표)</div></div>
+    <div class="stat"><div class="v">7개</div><div class="k">한 번에 공개한 모델</div></div>
+    <div class="stat"><div class="v">3.5%</div><div class="k">1조 중 350억만 사용</div></div>
+  </div>
+
+  <div class="trap">
+    <div class="tag">⚠ 근데 잠깐, 함정이 있어요</div>
+    <p>이 점수, <b>전부 마이크로소프트가 스스로 시험 보고 발표한 거예요.</b> 학생이 시험지도 만들고, 채점도 하고, 점수도 발표한 셈이죠.</p>
+  </div>
+
+  <div class="chap"><span class="num">04</span><h2>자, 아까 그 설명서 이야기예요</h2></div>
+  <p class="b">한 개발자가 그 '깨끗한 자료'의 설명서를 109쪽까지 읽었어요. 그리고 자료 목록에서 <span class="hl">Common Crawl — 24억 페이지</span>를 발견했죠. 다른 AI들이 다 쓰는, 인터넷 통째로 긁은 그 자료요.</p>
+  <div class="vs">
+    <div class="top">▶ 진술 대조 · 모순 발견</div>
+    <div class="grid">
+      <div class="c l"><div class="h">마이크로소프트가 한 말</div><div class="row">"깨끗하고 허락받은 자료"</div><div class="row">"남의 것 안 베꼈다"</div></div>
+      <div class="c r"><div class="h">실제 설명서엔</div><div class="row">인터넷 긁은 자료 24억 페이지</div><div class="row">남들 다 쓰는 자료를 똑같이 씀</div></div>
+    </div>
+  </div>
+
+  <div class="verdict"><p>"잘 만들었다"와 "광고가 컸다"는 둘 다 사실일 수 있어요. 서로 안 부딪혀요.</p></div>
+</div>
+<script>addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';});</script>
+</body></html>

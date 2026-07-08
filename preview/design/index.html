@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>글 디자인 시안 비교 — Vector</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap">
+<style>
+:root{--ink:#191F28;--muted:#6B7684;--accent:#3182F6;--line:#E8EBEE;--card:#fff;--paper:#F5F7F9}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans KR",sans-serif;word-break:keep-all;-webkit-font-smoothing:antialiased;line-height:1.5;letter-spacing:-.01em}
+.top{padding:40px 22px 8px;max-width:1120px;margin:0 auto}
+.top h1{font-size:26px;font-weight:900;letter-spacing:-.02em}
+.top p{color:var(--muted);font-size:14.5px;margin-top:8px;max-width:60ch;line-height:1.6}
+.note{margin:14px 0 0;font-size:12.5px;color:#1B64DA;background:#EAF2FE;border:1px solid #cfe0fb;padding:9px 13px;border-radius:10px;display:inline-block}
+.grid{max-width:1120px;margin:24px auto 90px;padding:0 22px;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 8px 26px rgba(20,30,50,.05);display:flex;flex-direction:column}
+.card.rec{border:2px solid var(--accent);box-shadow:0 10px 30px rgba(49,130,246,.14)}
+.frameWrap{position:relative;height:300px;overflow:hidden;border-bottom:1px solid var(--line);background:#fff}
+.frameWrap iframe{position:absolute;top:0;left:0;width:1000px;height:750px;border:0;transform:scale(.66);transform-origin:top left;pointer-events:none}
+.meta{padding:18px 22px 22px}
+.badge{display:inline-block;font-size:11px;font-weight:800;color:var(--accent);background:#EAF2FE;border-radius:999px;padding:3px 10px;letter-spacing:.04em;margin-bottom:8px}
+.card h2{font-size:19px;font-weight:800;letter-spacing:-.01em}
+.card p{font-size:13.5px;color:var(--muted);margin-top:6px;line-height:1.6}
+.card a.open{display:inline-block;margin-top:14px;font-size:13.5px;font-weight:800;color:#fff;background:var(--accent);padding:10px 18px;border-radius:999px;text-decoration:none}
+.tags{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 9px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+</style></head>
+<body>
+<div class="top">
+  <h1>🎨 글 디자인 시안 비교</h1>
+  <p>같은 글(마이크로소프트 MAI)의 대표 구간을 5가지 디자인으로 만들었어요. 아래 미리보기를 눌러 전체 화면으로 보세요. 이 글 전용(일회성)입니다.</p>
+  <div class="note">⚠ 폰트는 실제 브라우저에서만 제대로 보여요(샌드박스 미리보기엔 폴백). 카드를 눌러 열어보세요.</div>
+</div>
+<div class="grid">
+  <div class="card rec">
+    <div class="frameWrap"><iframe src="ab.html" scrolling="no"></iframe></div>
+    <div class="meta"><span class="badge">추천</span><h2>A+B · 하이브리드</h2>
+      <p>에디토리얼 롱폼을 뼈대로, "주장 vs 실제" 대조와 반전 콜아웃만 수사 스타일. 토스 감성 유지하며 임팩트.</p>
+      <div class="tags"><span class="tag">세리프 제목</span><span class="tag">스탯 타일</span><span class="tag">모순 대조</span><span class="tag">진행바</span></div>
+      <a class="open" href="ab.html">전체로 열기 →</a></div>
+  </div>
+  <div class="card">
+    <div class="frameWrap"><iframe src="a.html" scrolling="no"></iframe></div>
+    <div class="meta"><span class="badge">A</span><h2>에디토리얼 롱폼</h2>
+      <p>타이포 중심 고급 잡지. 큰 챕터 번호·풀쿼트·스탯 타일·읽기 진행바. 안전하게 세련됨.</p>
+      <div class="tags"><span class="tag">클린</span><span class="tag">프리미엄</span></div>
+      <a class="open" href="a.html">전체로 열기 →</a></div>
+  </div>
+  <div class="card">
+    <div class="frameWrap"><iframe src="b.html" scrolling="no"></iframe></div>
+    <div class="meta"><span class="badge">B</span><h2>수사 파일 / 증거 보드</h2>
+      <p>사건 파일 컨셉. 증거 카드·형광펜·진술 대조·평결 스탬프. 주제에 착붙, 개성 최강.</p>
+      <div class="tags"><span class="tag">모노 폰트</span><span class="tag">실험적</span></div>
+      <a class="open" href="b.html">전체로 열기 →</a></div>
+  </div>
+  <div class="card">
+    <div class="frameWrap"><iframe src="c.html" scrolling="no"></iframe></div>
+    <div class="meta"><span class="badge">C</span><h2>스크롤리텔링</h2>
+      <p>다크 풀스크린. 스크롤하면 숫자 카운트업·페이드 인·톤 전환. 임팩트 최고(인터랙티브).</p>
+      <div class="tags"><span class="tag">다크</span><span class="tag">애니메이션</span></div>
+      <a class="open" href="c.html">전체로 열기 →</a></div>
+  </div>
+  <div class="card">
+    <div class="frameWrap"><iframe src="d.html" scrolling="no"></iframe></div>
+    <div class="meta"><span class="badge">D</span><h2>챕터드 매거진</h2>
+      <p>섹션마다 색 테마 다른 챕터 커버 + 좌측 스티키 목차. 제품 페이지 느낌, 깔끔+개성.</p>
+      <div class="tags"><span class="tag">컬러 챕터</span><span class="tag">목차 레일</span></div>
+      <a class="open" href="d.html">전체로 열기 →</a></div>
+  </div>
+</div>
+</body></html>
