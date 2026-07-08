@@ -39,7 +39,7 @@ function rfc822(date) { return new Date(`${date}T09:00:00+09:00`).toUTCString();
 // ---------- 마크다운 렌더러 (index.html과 동일 규칙) ----------
 function inline(s){const codes=[],links=[];
   s=escHtml(s).replace(/`([^`]+)`/g,(m,c)=>{codes.push(c);return '␞C'+(codes.length-1)+'␞';});
-  s=s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,(m,t,u)=>{links.push('<a href="'+escAttr(u)+'" target="_blank" rel="noopener">'+t+'</a>');return '␞L'+(links.length-1)+'␞';});
+  s=s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,(m,t,u)=>{t=t.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<em>$2</em>');links.push('<a href="'+escAttr(u)+'" target="_blank" rel="noopener">'+t+'</a>');return '␞L'+(links.length-1)+'␞';});
   s=s.replace(/(https?:\/\/[^\s<>()]+[^\s<>().,;:])/g,(m)=>{links.push('<a href="'+escAttr(m)+'" target="_blank" rel="noopener">'+m+'</a>');return '␞L'+(links.length-1)+'␞';});
   s=s.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
   s=s.replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<em>$2</em>');
