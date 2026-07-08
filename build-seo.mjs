@@ -90,9 +90,9 @@ function prepArticleBody(md){
 }
 
 // ---------- 공유 CSS / JS ----------
-const CSS = `:root{--paper:#F5F7F9;--ink:#191F28;--ink2:#333A43;--accent:#3182F6;--accentStrong:#1B64DA;--accent2:#3182F6;--info:#3182F6;--infoBg:#EAF2FE;--muted:#6B7684;--faint:#8B95A1;--label:#8B95A1;--line:#E8EBEE;--cardBorder:#D3DAE2;--tline:#C4CDD8;--tedge:#A3AEBC;--card:#FFFFFF;--soft:#EEF1F5;--shadow:0 1px 2px rgba(20,30,50,.03),0 5px 14px rgba(20,30,50,.045),0 18px 44px rgba(20,30,50,.05);--ring:rgba(20,30,50,.045);--hair:rgba(255,255,255,.7);--serif:"Noto Sans KR",-apple-system,"SF Pro Display","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;--sans:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif}
-:root[data-theme=dark]{--paper:#17181C;--ink:#EDEFF2;--ink2:#C5CAD1;--accent:#4B93F8;--accentStrong:#6BA5FF;--accent2:#4B93F8;--info:#4B93F8;--infoBg:#18243A;--muted:#8B95A1;--faint:#6B7280;--label:#8B95A1;--line:#2A2E35;--cardBorder:#3A404A;--tline:#3E444E;--tedge:#565E6B;--card:#1E2026;--soft:#25282F;--shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.4),0 24px 54px rgba(0,0,0,.45);--ring:rgba(0,0,0,.5);--hair:rgba(255,255,255,.05)}
-@media (prefers-color-scheme:dark){:root:not([data-theme]){--paper:#17181C;--ink:#EDEFF2;--ink2:#C5CAD1;--accent:#4B93F8;--accentStrong:#6BA5FF;--accent2:#4B93F8;--info:#4B93F8;--infoBg:#18243A;--muted:#8B95A1;--faint:#6B7280;--label:#8B95A1;--line:#2A2E35;--cardBorder:#3A404A;--tline:#3E444E;--tedge:#565E6B;--card:#1E2026;--soft:#25282F;--shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.4),0 24px 54px rgba(0,0,0,.45);--ring:rgba(0,0,0,.5);--hair:rgba(255,255,255,.05)}}
+const CSS = `:root{--paper:#F5F7F9;--ink:#191F28;--ink2:#333A43;--accent:#3182F6;--accentStrong:#1B64DA;--accent2:#3182F6;--info:#3182F6;--infoBg:#EAF2FE;--muted:#6B7684;--faint:#8B95A1;--label:#8B95A1;--line:#E8EBEE;--cardBorder:#D3DAE2;--tline:#C4CDD8;--tedge:#A3AEBC;--red:#D14343;--redBg:#FEF2F2;--warnBg:#FFF7ED;--warnBd:#FBCF97;--warnInk:#B4620A;--card:#FFFFFF;--soft:#EEF1F5;--shadow:0 1px 2px rgba(20,30,50,.03),0 5px 14px rgba(20,30,50,.045),0 18px 44px rgba(20,30,50,.05);--ring:rgba(20,30,50,.045);--hair:rgba(255,255,255,.7);--serif:"Noto Sans KR",-apple-system,"SF Pro Display","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;--sans:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif}
+:root[data-theme=dark]{--paper:#17181C;--ink:#EDEFF2;--ink2:#C5CAD1;--accent:#4B93F8;--accentStrong:#6BA5FF;--accent2:#4B93F8;--info:#4B93F8;--infoBg:#18243A;--muted:#8B95A1;--faint:#6B7280;--label:#8B95A1;--line:#2A2E35;--cardBorder:#3A404A;--tline:#3E444E;--tedge:#565E6B;--red:#F0817F;--redBg:#241A1B;--warnBg:#241C10;--warnBd:#463714;--warnInk:#DDA24C;--card:#1E2026;--soft:#25282F;--shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.4),0 24px 54px rgba(0,0,0,.45);--ring:rgba(0,0,0,.5);--hair:rgba(255,255,255,.05)}
+@media (prefers-color-scheme:dark){:root:not([data-theme]){--paper:#17181C;--ink:#EDEFF2;--ink2:#C5CAD1;--accent:#4B93F8;--accentStrong:#6BA5FF;--accent2:#4B93F8;--info:#4B93F8;--infoBg:#18243A;--muted:#8B95A1;--faint:#6B7280;--label:#8B95A1;--line:#2A2E35;--cardBorder:#3A404A;--tline:#3E444E;--tedge:#565E6B;--red:#F0817F;--redBg:#241A1B;--warnBg:#241C10;--warnBd:#463714;--warnInk:#DDA24C;--card:#1E2026;--soft:#25282F;--shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.4),0 24px 54px rgba(0,0,0,.45);--ring:rgba(0,0,0,.5);--hair:rgba(255,255,255,.05)}}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word}
 a{color:inherit;text-decoration:none}
@@ -191,6 +191,18 @@ main.article>*{position:relative}
 .art-foot .next{display:block;margin-top:10px;font-size:16px;color:var(--ink);font-weight:700}
 body.cat-research{--accent:#5B6EF5;--accentStrong:#4353D9}
 body.cat-tutorial{--accent:#7C6FF0;--accentStrong:#6A4FE0}
+/* ---- 피처 레이아웃 (layout:feature) — A+B 하이브리드 ---- */
+body.feature .doc h2.chap{display:flex;align-items:flex-start;gap:15px}
+body.feature .doc h2.chap .gn{font-size:44px;font-weight:900;line-height:.82;letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1.5px var(--faint);flex:none}
+body.feature .doc h2.chap .ct{flex:1;padding-top:5px}
+body.feature .doc table.vs{border-color:var(--red)}
+body.feature .doc table.vs thead th{border-bottom-color:var(--red)}
+body.feature .doc table.vs thead th:last-child{color:var(--red)}
+body.feature .doc table.vs tbody td:last-child{color:var(--red);font-weight:700;background:var(--redBg)}
+body.feature .doc .trap{background:var(--warnBg);border:1px solid var(--warnBd);border-radius:16px;padding:16px 22px;margin:26px 0}
+body.feature .doc .trap p{margin:4px 0;color:var(--ink2)}
+body.feature .doc .trap .trap-h strong{color:var(--warnInk)}
+@media(max-width:640px){body.feature .doc h2.chap .gn{font-size:34px}}
 @media(max-width:820px){.feat{grid-template-columns:1fr}.feat .cover{min-height:170px}.grid{grid-template-columns:1fr 1fr}.mast h1{font-size:34px}.navlinks{display:none}}
 @media(max-width:640px){main.article{padding:32px 22px 52px;margin:16px 14px 40px;border-radius:18px}main.article::before{border-radius:18px 18px 0 0}}
 @media(max-width:540px){.grid{grid-template-columns:1fr}}`;
@@ -316,12 +328,27 @@ function addCallouts(html){
   });
 }
 
+// 피처 레이아웃 변환: 챕터 고스트 번호 + 주장/실제 빨강 대조 + 반전 콜아웃
+function featurize(html){
+  html = html.replace(/<h2 id="(s\d+)">(\d+)\.\s*([\s\S]*?)<\/h2>/g,
+    (m,id,num,rest)=>`<h2 id="${id}" class="chap"><span class="gn">${String(num).padStart(2,'0')}</span><span class="ct">${rest}</span></h2>`);
+  html = html.replace(/<table>([\s\S]*?)<\/table>/g,(m,inner)=>{
+    const ths=[...inner.matchAll(/<th>([\s\S]*?)<\/th>/g)].map(x=>x[1]);
+    return (ths.length===2 && /설명서|실제/.test(ths[1])) ? `<table class="vs">${inner}</table>` : m;
+  });
+  html = html.replace(/<p>(<strong>근데 잠깐[\s\S]*?<\/strong>)<\/p>\s*<p>([\s\S]*?)<\/p>/,
+    '<div class="trap"><p class="trap-h">$1</p><p>$2</p></div>');
+  return html;
+}
+
 function buildArticle(p, bodyMd, next) {
   const url = `${SITE}/p/${p.id}/`;
   const desc = metaDesc(p.angle || firstH1(bodyMd));
   const ogImg = `${SITE}/p/${p.id}/og.png`;
+  const feat = p.layout === 'feature';
   const prepped = prepArticleBody(bodyMd);
-  const bodyHtml = addCallouts(addHeadingIds(renderMD(prepped)));
+  const rendered = addCallouts(addHeadingIds(renderMD(prepped)));
+  const bodyHtml = feat ? featurize(rendered) : rendered;
   const ld = {
     '@context':'https://schema.org','@type':'BlogPosting',
     'headline':p.title,'description':desc,'inLanguage':'ko',
@@ -347,7 +374,7 @@ function buildArticle(p, bodyMd, next) {
 ${head({title:`${p.title} · ${BRAND}`, desc, url, ogImg, type:'article', published:isoKST(p.date), cssHref:'../../assets/blog.css',
   extra:`<script type="application/ld+json">${JSON.stringify(ld)}</script>\n<script type="application/ld+json">${JSON.stringify(crumbs)}</script>`})}
 </head>
-<body${({'리서치':' class="cat-research"','튜토리얼':' class="cat-tutorial"'}[catOf(p)])||''}>
+<body${(()=>{const c=[{'리서치':'cat-research','튜토리얼':'cat-tutorial'}[catOf(p)],feat?'feature':''].filter(Boolean).join(' ');return c?` class="${c}"`:'';})()}>
 ${navHtml('../../')}
 <main class="article">
 <a class="icnbtn back" href="../../">← 목록으로</a>
