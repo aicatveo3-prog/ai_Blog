@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>폰트 비교 — Vector</title>
+
+<!-- 후보 폰트들 (실제 브라우저에서만 로드됨) -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/css/SpoqaHanSansNeo.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=IBM+Plex+Sans+KR:wght@400;500;700&family=Gothic+A1:wght@400;500;700;800&display=swap">
+
+<style>
+:root{
+  --paper:#F5F7F9;--ink:#191F28;--ink2:#333A43;--muted:#6B7684;--faint:#8B95A1;
+  --accent:#3182F6;--accentStrong:#1B64DA;--infoBg:#EAF2FE;
+  --line:#E8EBEE;--cardBorder:#D3DAE2;--card:#FFFFFF;--soft:#F2F4F6;
+  --shadow:0 1px 2px rgba(20,30,50,.03),0 5px 14px rgba(20,30,50,.045),0 18px 44px rgba(20,30,50,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);word-break:keep-all;overflow-wrap:break-word;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  letter-spacing:-.01em}
+
+/* 상단 바 */
+.top{position:sticky;top:0;z-index:20;background:rgba(245,247,249,.86);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);padding:16px 20px}
+.top .in{max-width:1240px;margin:0 auto}
+.top h1{font-size:17px;font-weight:800;letter-spacing:-.02em}
+.top p{font-size:13px;color:var(--muted);margin-top:3px}
+.note{margin-top:10px;font-size:12.5px;color:var(--accentStrong);background:var(--infoBg);
+  border:1px solid color-mix(in srgb,var(--accent) 22%,transparent);padding:8px 12px;border-radius:10px;display:inline-block}
+
+.wrap{max-width:1240px;margin:26px auto 80px;padding:0 20px}
+
+/* A/B 스위처 */
+.switcher{background:var(--card);border:1px solid var(--cardBorder);border-radius:18px;box-shadow:var(--shadow);
+  padding:20px 22px;margin-bottom:34px}
+.sw-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.sw-head b{font-size:14px;font-weight:800}
+.sw-head span{font-size:12.5px;color:var(--muted)}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+.btns button{font:inherit;font-size:13px;font-weight:700;cursor:pointer;border:1px solid var(--cardBorder);
+  background:var(--card);color:var(--ink2);padding:8px 13px;border-radius:999px;transition:.14s}
+.btns button:hover{border-color:var(--accent);color:var(--accent)}
+.btns button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.controls{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-bottom:16px;font-size:12.5px;color:var(--muted)}
+.controls label{display:flex;align-items:center;gap:7px}
+.controls input[type=range]{accent-color:var(--accent)}
+
+/* 샘플(기사 카드) */
+.sample{max-width:720px;margin:0 auto;padding:8px 4px}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.4px;color:var(--accent);text-transform:uppercase}
+.title{font-size:31px;font-weight:800;letter-spacing:-.028em;line-height:1.26;margin:12px 0 12px;text-wrap:balance}
+.standfirst{font-size:17px;line-height:1.5;color:var(--muted);margin-bottom:18px;text-wrap:pretty}
+.h2{font-size:22px;font-weight:800;letter-spacing:-.028em;line-height:1.32;margin:30px 0 12px}
+.p{font-size:16px;line-height:1.62;color:var(--ink2);margin:13px 0}
+.p strong{font-weight:700;color:var(--ink)}
+.p a{color:var(--accentStrong);font-weight:500;text-decoration:none}
+.p a:hover{text-decoration:underline}
+ul.pl{list-style:none;margin:14px 0;padding:0}
+ul.pl li{position:relative;padding-left:22px;margin:5px 0;font-size:16px;line-height:1.56;color:var(--ink2)}
+ul.pl li::before{content:"";position:absolute;left:5px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.callout{background:var(--infoBg);border-radius:14px;padding:14px 20px;margin:20px 0;font-size:15.5px;line-height:1.58;color:var(--ink2)}
+.callout b{color:var(--accentStrong)}
+
+/* 전체 나열 비교 */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.fcard{background:var(--card);border:1px solid var(--cardBorder);border-radius:18px;box-shadow:var(--shadow);
+  padding:24px 26px 28px;position:relative;overflow:hidden}
+.fcard::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--accentStrong))}
+.fcard .fname{display:flex;align-items:center;gap:9px;margin-bottom:4px}
+.fcard .fname b{font-size:16px;font-weight:800;letter-spacing:-.02em}
+.badge{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;border:1px solid}
+.badge.ok{color:#0B7A3B;background:#E7F7EE;border-color:#B7E6CC}
+.badge.fb{color:#B4431F;background:#FCEEE8;border-color:#F3CDBC}
+.fcard .fdesc{font-size:12px;color:var(--faint);margin-bottom:14px}
+.fcard .ft{font-size:20px;font-weight:800;letter-spacing:-.028em;line-height:1.28;margin-bottom:9px}
+.fcard .fp{font-size:15.5px;line-height:1.6;color:var(--ink2)}
+.fcard .fp strong{color:var(--ink)}
+.fcard .fmix{font-size:14px;color:var(--muted);margin-top:9px}
+.secttl{font-size:14px;font-weight:800;color:var(--muted);letter-spacing:.02em;margin:0 2px 16px;text-transform:uppercase}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="in">
+  <h1>🔤 폰트 비교 — Vector 블로그</h1>
+  <p>같은 기사 문단을 후보 폰트로 렌더했어요. 위쪽은 버튼으로 즉시 바꿔보는 A/B, 아래는 한눈에 나열 비교.</p>
+  <span class="note" id="envnote">폰트 로드 확인 중…</span>
+</div></div>
+
+<div class="wrap">
+
+  <!-- A/B 스위처 -->
+  <div class="switcher">
+    <div class="sw-head"><b>① 하나씩 바꿔보기 (A/B)</b><span>버튼을 눌러 같은 글의 폰트만 교체</span>
+      <div class="btns" id="btns"></div>
+    </div>
+    <div class="controls">
+      <label>글자 크기 <input type="range" id="fs" min="14" max="19" step="0.5" value="16"><span id="fsv">16px</span></label>
+      <label>줄간격 <input type="range" id="lh" min="1.45" max="1.9" step="0.02" value="1.62"><span id="lhv">1.62</span></label>
+      <label>현재 폰트: <b id="cur" style="color:var(--accent)">Pretendard</b></label>
+    </div>
+    <div class="sample" id="sample">
+      <div class="eyebrow">인사이트 · 9분 읽기</div>
+      <div class="title">마이크로소프트가 자기 AI 7개를 만들었어요 — 그런데 "우리 건 깨끗해요"라는 말이 걸렸어요</div>
+      <div class="standfirst">마이크로소프트가 처음으로 자기 AI 7개를 공개했어요. 그런데 "우리 건 깨끗한 자료로만 배웠다"던 자랑이 실제 설명서와 어긋났어요. 무슨 일인지 학생도 이해할 수 있게 쉽게 풀었어요.</div>
+      <div class="callout"><b>읽기 전에 딱 하나만.</b> 이 글에 나오는 점수나 "누가 더 잘한다"는 얘기는 대부분 <b>마이크로소프트가 자기 입으로 한 말</b>이에요. 다른 데서 확인한 게 아니에요.</div>
+      <div class="h2">1. 무슨 일이에요?</div>
+      <div class="p"><strong>한 줄로:</strong> 남의 AI를 빌려 쓰던 회사가, 드디어 자기 AI를 만들었어요.</div>
+      <div class="p">우리가 쓰는 ChatGPT 같은 걸 <strong>AI</strong>라고 해요. 회사마다 자기 AI를 만들어요. 그런데 마이크로소프트는 좀 달랐어요. 자기 AI를 안 만들고, <a href="#">OpenAI</a>(ChatGPT 만든 회사)한테서 <strong>빌려다</strong> 썼어요. 윈도우나 오피스 같은 자기 프로그램에 넣어서요.</div>
+      <div class="p">그러다 2026년 6월 2일, 드디어 자기가 만든 AI 7개를 한 번에 공개했어요. 이름은 <strong>MAI</strong>예요. 수학 시험도 100점 중 97점을 받았대요.</div>
+      <ul class="pl">
+        <li>마이크로소프트가 자기가 만든 AI 7개를 처음 공개했어요.</li>
+        <li>"우리 AI는 남의 거 안 베끼고 깨끗한 자료로만 배웠어요"라고 자랑했어요.</li>
+        <li>그런데 설명서를 읽어보니, 다른 AI들이 쓰는 그 자료를 똑같이 쓰고 있었어요.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 전체 나열 -->
+  <div class="secttl">② 한눈에 나열 비교</div>
+  <div class="grid" id="grid"></div>
+
+</div>
+
+<script>
+const FONTS = [
+  { key:'pretendard', name:'Pretendard', desc:'현재 적용 중 · 토스/모던 한국 웹 표준', css:'"Pretendard Variable", Pretendard', fam:'Pretendard Variable' },
+  { key:'wanted',     name:'Wanted Sans', desc:'원티드 · Pretendard 대안, 살짝 더 단단함', css:'"Wanted Sans Variable","Wanted Sans"', fam:'Wanted Sans Variable' },
+  { key:'spoqa',      name:'Spoqa Han Sans Neo', desc:'스포카 · 얇고 깔끔, 담백한 인상', css:'"Spoqa Han Sans Neo"', fam:'Spoqa Han Sans Neo' },
+  { key:'noto',       name:'Noto Sans KR', desc:'구글 · 가장 표준적, 안정적 가독성', css:'"Noto Sans KR"', fam:'Noto Sans KR' },
+  { key:'plex',       name:'IBM Plex Sans KR', desc:'IBM · 개성 있는 형태, 테크 느낌', css:'"IBM Plex Sans KR"', fam:'IBM Plex Sans KR' },
+  { key:'gothica1',   name:'Gothic A1', desc:'구글 · 둥글고 부드러운 인상', css:'"Gothic A1"', fam:'Gothic A1' },
+  { key:'system',     name:'시스템 기본', desc:'웹폰트 없음 · 애플 SD 산돌고딕 / 맑은고딕', css:'-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic"', fam:null },
+];
+const FB = ',-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif';
+
+// A/B 버튼
+const btns = document.getElementById('btns');
+const sample = document.getElementById('sample');
+const cur = document.getElementById('cur');
+FONTS.forEach((f,i)=>{
+  const b=document.createElement('button');
+  b.textContent=f.name; b.dataset.k=f.key; if(i===0)b.classList.add('on');
+  b.onclick=()=>{ document.querySelectorAll('#btns button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); sample.style.fontFamily=f.css+FB; cur.textContent=f.name; };
+  btns.appendChild(b);
+});
+sample.style.fontFamily=FONTS[0].css+FB;
+
+// 슬라이더
+const fs=document.getElementById('fs'), lh=document.getElementById('lh');
+function applyVars(){ sample.style.setProperty('--x','0');
+  sample.querySelectorAll('.p,ul.pl li').forEach(el=>{el.style.fontSize=fs.value+'px';el.style.lineHeight=lh.value;});
+  document.getElementById('fsv').textContent=fs.value+'px'; document.getElementById('lhv').textContent=lh.value; }
+fs.oninput=applyVars; lh.oninput=applyVars;
+
+// 나열 카드
+const grid=document.getElementById('grid');
+FONTS.forEach(f=>{
+  const c=document.createElement('div'); c.className='fcard';
+  c.innerHTML=`<div class="fname"><b>${f.name}</b><span class="badge" data-k="${f.key}">…</span></div>
+    <div class="fdesc">${f.desc}</div>
+    <div class="ft">깨끗하다던 데이터에서 얼룩이 나왔다</div>
+    <div class="fp">우리가 쓰는 ChatGPT 같은 걸 <strong>AI</strong>라고 해요. 회사마다 자기 AI를 만들어요. 그런데 마이크로소프트는 좀 달랐어요 — 자기 것도 하나 만든 거예요.</div>
+    <div class="fmix">MAI-Thinking-1 · 97점 · 24억 페이지 · Claude · 2026</div>`;
+  c.style.fontFamily=f.css+FB;
+  grid.appendChild(c);
+});
+
+// 실제 렌더 폭으로 웹폰트 로드 여부를 판정 (document.fonts.check는 CDN 실패 시 오판)
+function fontLoaded(fam){
+  const test='WgQ한글깨끗데이터MAI2026'; const bases=['monospace','serif','sans-serif'];
+  const s=document.createElement('span');
+  s.style.cssText='position:absolute;left:-9999px;top:-9999px;font-size:48px;white-space:nowrap;';
+  s.textContent=test; document.body.appendChild(s);
+  let loaded=false;
+  for(const base of bases){
+    s.style.fontFamily=base; const w0=s.offsetWidth;
+    s.style.fontFamily='"'+fam+'",'+base; const w1=s.offsetWidth;
+    if(Math.abs(w1-w0)>0.5){ loaded=true; break; }
+  }
+  document.body.removeChild(s); return loaded;
+}
+function paintBadges(){
+  let okCount=0, real=[];
+  FONTS.forEach(f=>{
+    const badges=document.querySelectorAll('.badge[data-k="'+f.key+'"]');
+    const ok = f.fam ? fontLoaded(f.fam) : null;
+    badges.forEach(b=>{ b.classList.remove('ok','fb');
+      if(f.fam===null){ b.textContent='내장'; b.classList.add('ok'); }
+      else if(ok){ b.textContent='✓ 로드됨'; b.classList.add('ok'); }
+      else { b.textContent='⚠ 폴백(미로드)'; b.classList.add('fb'); }
+    });
+    if(ok){ okCount++; real.push(f.name); }
+  });
+  const note=document.getElementById('envnote');
+  const webCount=FONTS.filter(f=>f.fam).length;
+  if(okCount>=webCount) note.textContent='✓ 후보 웹폰트가 모두 로드됐어요 — 지금 보이는 게 진짜 폰트예요.';
+  else if(okCount===0) note.textContent='⚠ 웹폰트가 하나도 로드되지 않았어요(전부 시스템 폴백). 이 환경이 CDN을 막고 있어요 — 일반 브라우저/실제 사이트에서 열면 다 보여요.';
+  else note.textContent='일부만 로드됨 — 로드된 것: '+real.join(', ')+'. (⚠ 표시는 폴백)';
+}
+(async()=>{
+  try{ await document.fonts.ready; }catch(e){}
+  paintBadges();
+  // dynamic-subset/지연 로드 대비 재확인
+  setTimeout(paintBadges, 1200);
+  setTimeout(paintBadges, 3000);
+})();
+</script>
+</body>
+</html>
