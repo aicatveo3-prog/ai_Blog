@@ -90,9 +90,9 @@ function prepArticleBody(md){
 }
 
 // ---------- 공유 CSS / JS ----------
-const CSS = `:root{--paper:#F5F7F9;--ink:#191F28;--ink2:#333A43;--accent:#3182F6;--accentStrong:#1B64DA;--accent2:#3182F6;--info:#3182F6;--infoBg:#EAF2FE;--muted:#6B7684;--faint:#8B95A1;--label:#8B95A1;--line:#E8EBEE;--cardBorder:#D3DAE2;--card:#FFFFFF;--soft:#F2F4F6;--shadow:0 1px 2px rgba(20,30,50,.03),0 5px 14px rgba(20,30,50,.045),0 18px 44px rgba(20,30,50,.05);--ring:rgba(20,30,50,.045);--hair:rgba(255,255,255,.7);--serif:"Noto Sans KR",-apple-system,"SF Pro Display","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;--sans:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif}
-:root[data-theme=dark]{--paper:#17181C;--ink:#EDEFF2;--ink2:#C5CAD1;--accent:#4B93F8;--accentStrong:#6BA5FF;--accent2:#4B93F8;--info:#4B93F8;--infoBg:#18243A;--muted:#8B95A1;--faint:#6B7280;--label:#8B95A1;--line:#2A2E35;--cardBorder:#3A404A;--card:#1E2026;--soft:#25282F;--shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.4),0 24px 54px rgba(0,0,0,.45);--ring:rgba(0,0,0,.5);--hair:rgba(255,255,255,.05)}
-@media (prefers-color-scheme:dark){:root:not([data-theme]){--paper:#17181C;--ink:#EDEFF2;--ink2:#C5CAD1;--accent:#4B93F8;--accentStrong:#6BA5FF;--accent2:#4B93F8;--info:#4B93F8;--infoBg:#18243A;--muted:#8B95A1;--faint:#6B7280;--label:#8B95A1;--line:#2A2E35;--cardBorder:#3A404A;--card:#1E2026;--soft:#25282F;--shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.4),0 24px 54px rgba(0,0,0,.45);--ring:rgba(0,0,0,.5);--hair:rgba(255,255,255,.05)}}
+const CSS = `:root{--paper:#F5F7F9;--ink:#191F28;--ink2:#333A43;--accent:#3182F6;--accentStrong:#1B64DA;--accent2:#3182F6;--info:#3182F6;--infoBg:#EAF2FE;--muted:#6B7684;--faint:#8B95A1;--label:#8B95A1;--line:#E8EBEE;--cardBorder:#D3DAE2;--tline:#C4CDD8;--tedge:#A3AEBC;--card:#FFFFFF;--soft:#EEF1F5;--shadow:0 1px 2px rgba(20,30,50,.03),0 5px 14px rgba(20,30,50,.045),0 18px 44px rgba(20,30,50,.05);--ring:rgba(20,30,50,.045);--hair:rgba(255,255,255,.7);--serif:"Noto Sans KR",-apple-system,"SF Pro Display","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;--sans:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif}
+:root[data-theme=dark]{--paper:#17181C;--ink:#EDEFF2;--ink2:#C5CAD1;--accent:#4B93F8;--accentStrong:#6BA5FF;--accent2:#4B93F8;--info:#4B93F8;--infoBg:#18243A;--muted:#8B95A1;--faint:#6B7280;--label:#8B95A1;--line:#2A2E35;--cardBorder:#3A404A;--tline:#3E444E;--tedge:#565E6B;--card:#1E2026;--soft:#25282F;--shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.4),0 24px 54px rgba(0,0,0,.45);--ring:rgba(0,0,0,.5);--hair:rgba(255,255,255,.05)}
+@media (prefers-color-scheme:dark){:root:not([data-theme]){--paper:#17181C;--ink:#EDEFF2;--ink2:#C5CAD1;--accent:#4B93F8;--accentStrong:#6BA5FF;--accent2:#4B93F8;--info:#4B93F8;--infoBg:#18243A;--muted:#8B95A1;--faint:#6B7280;--label:#8B95A1;--line:#2A2E35;--cardBorder:#3A404A;--tline:#3E444E;--tedge:#565E6B;--card:#1E2026;--soft:#25282F;--shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.4),0 24px 54px rgba(0,0,0,.45);--ring:rgba(0,0,0,.5);--hair:rgba(255,255,255,.05)}}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word}
 a{color:inherit;text-decoration:none}
@@ -149,7 +149,7 @@ main.article::before{content:"";position:absolute;left:0;right:0;top:0;height:5p
 main.article>*{position:relative}
 .back{display:inline-block;margin-bottom:24px}
 .article .eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.6px;color:var(--accent);text-transform:uppercase}
-.article h1.title{font-size:33px;line-height:1.26;letter-spacing:-.028em;font-weight:800;margin:14px 0 14px;color:var(--ink);text-wrap:balance}
+.article h1.title{font-size:31px;line-height:1.3;letter-spacing:-.028em;font-weight:800;margin:14px 0 14px;color:var(--ink);text-wrap:pretty;word-break:keep-all}
 .article .standfirst{font-size:17px;line-height:1.48;color:var(--muted);font-weight:400;letter-spacing:-.01em;text-wrap:pretty}
 .article .abyline{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--faint);margin-top:16px}
 .article .abyline .dot{width:3px;height:3px;border-radius:50%;background:var(--faint);opacity:.7}
@@ -177,10 +177,11 @@ main.article>*{position:relative}
 .doc hr::before{content:"* * *";letter-spacing:6px;color:var(--faint);font-size:14px}
 .doc code{font-family:ui-monospace,Menlo,monospace;font-size:.87em;background:var(--soft);padding:2px 6px;border-radius:6px;color:var(--accentStrong)}
 .doc pre{background:#1B1E24;color:#E6E9ED;border-radius:12px;padding:16px 18px;overflow-x:auto;margin:20px 0}.doc pre code{background:none;padding:0;color:inherit}
-.doc table{border-collapse:separate;border-spacing:0;width:100%;margin:26px 0;font-size:15px;display:block;overflow-x:auto;border:1px solid var(--line);border-radius:12px}
-.doc thead th{background:var(--soft);color:var(--muted);font-weight:700;font-size:12.5px;text-transform:uppercase;letter-spacing:.3px}
-.doc th,.doc td{border-bottom:1px solid var(--line);padding:12px 15px;text-align:left;vertical-align:top;color:var(--ink2)}
-.doc tbody tr:nth-child(even){background:color-mix(in srgb,var(--soft) 50%,var(--card))}
+.doc table{border-collapse:separate;border-spacing:0;width:100%;margin:26px 0;font-size:15px;display:block;overflow-x:auto;border:2px solid var(--tedge);border-radius:12px}
+.doc thead th{background:var(--soft);color:var(--ink);font-weight:800;font-size:13px;letter-spacing:.1px;border-bottom:2px solid var(--tedge);border-right:1.5px solid var(--tline)}
+.doc th,.doc td{border-bottom:1.5px solid var(--tline);border-right:1.5px solid var(--tline);padding:12px 15px;text-align:left;vertical-align:top;color:var(--ink2);font-weight:500}
+.doc th:last-child,.doc td:last-child{border-right:none}
+.doc tbody tr:nth-child(even){background:var(--soft)}
 .doc tbody tr:last-child td{border-bottom:none}
 .doc a{color:var(--accentStrong);word-break:break-word;text-decoration:none;font-weight:500}
 .doc a:hover{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}
