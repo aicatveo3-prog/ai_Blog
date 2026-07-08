@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>모션 시안 비교 — Vector</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap">
+<style>
+:root{--ink:#191F28;--muted:#6B7684;--accent:#3182F6;--accentD:#1B64DA;--line:#E8EBEE;--card:#fff;--paper:#F5F7F9}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans KR",sans-serif;word-break:keep-all;-webkit-font-smoothing:antialiased;line-height:1.5;letter-spacing:-.01em}
+.top{padding:40px 22px 8px;max-width:1000px;margin:0 auto}
+.top h1{font-size:26px;font-weight:900;letter-spacing:-.02em}
+.top p{color:var(--muted);font-size:14.5px;margin-top:8px;max-width:64ch;line-height:1.6}
+.note{margin:14px 0 0;font-size:12.5px;color:var(--accentD);background:#EAF2FE;border:1px solid #cfe0fb;padding:9px 13px;border-radius:10px;display:inline-block}
+.grid{max-width:1000px;margin:24px auto 90px;padding:0 22px;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px 24px 26px;box-shadow:0 8px 26px rgba(20,30,50,.05);display:flex;flex-direction:column}
+.card.rec{border:2px solid var(--accent);box-shadow:0 10px 30px rgba(49,130,246,.14)}
+.badge{align-self:flex-start;font-size:11px;font-weight:800;color:var(--accent);background:#EAF2FE;border-radius:999px;padding:3px 10px;letter-spacing:.04em;margin-bottom:10px}
+.card h2{font-size:20px;font-weight:800;letter-spacing:-.01em}
+.card p{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.65}
+.feat{margin-top:12px;display:flex;gap:6px;flex-wrap:wrap}
+.feat span{font-size:11.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+.card a.open{margin-top:16px;align-self:flex-start;font-size:13.5px;font-weight:800;color:#fff;background:var(--accent);padding:10px 20px;border-radius:999px;text-decoration:none}
+@media(max-width:720px){.grid{grid-template-columns:1fr}}
+</style></head>
+<body>
+<div class="top">
+  <h1>✨ 모션 디자인 시안 비교</h1>
+  <p><b>현재 라이브 글 디자인을 그대로 유지</b>하고, 그 위에 애니메이션만 얹은 4가지 버전이에요. 공통: 상단 진행바 · 스크롤 등장 · 숫자 카운트업. 각 버전이 시그니처 모션을 하나씩 추가해요. 이 글 전용(일회성).</p>
+  <div class="note">⚠ 애니메이션은 <b>스크롤해야</b> 보여요. 폰트는 실제 브라우저에서만 제대로 나옵니다. 카드를 눌러 열어보세요.</div>
+</div>
+<div class="grid">
+  <div class="card rec">
+    <span class="badge">추천</span><h2>V2 · 포커스 하이라이트</h2>
+    <p>등장 애니메이션 + <b>형광펜 스윕</b>(핵심 문구가 좌→우로 칠해짐) + "주장 vs 실제" 표가 <b>시차로 등장</b>하며 '실제' 칸이 빨강으로 강조 + 반전 문단 글로우. 스토리의 대비·반전이 살아남.</p>
+    <div class="feat"><span>형광펜 스윕</span><span>대조 시차</span><span>반전 글로우</span></div>
+    <a class="open" href="v2.html">전체로 열기 →</a>
+  </div>
+  <div class="card">
+    <span class="badge">V1</span><h2>스크롤 리빌</h2>
+    <p>가장 은은. 스크롤하면 문단·카드가 살짝 떠오르며 페이드 인, 히어로 스태거 등장, 숫자 카운트업, 상단 진행바. <b>현재 디자인 훼손 0</b>, 그냥 '살아있는' 느낌.</p>
+    <div class="feat"><span>페이드 인</span><span>진행바</span><span>카운트업</span></div>
+    <a class="open" href="v1.html">전체로 열기 →</a>
+  </div>
+  <div class="card">
+    <span class="badge">V3</span><h2>데이터 모션</h2>
+    <p>V1 + 숫자를 <b>작은 그래픽으로</b>. 3.5%는 채워지는 <b>도넛 링</b>, 1조 vs 350억은 늘어나는 <b>비율 막대</b>. 숫자 많은 이 글과 궁합 좋음(인포그래픽 느낌).</p>
+    <div class="feat"><span>도넛 링</span><span>비율 막대</span></div>
+    <a class="open" href="v3.html">전체로 열기 →</a>
+  </div>
+  <div class="card">
+    <span class="badge">V4</span><h2>챕터 내비</h2>
+    <p>V1 + 우측 <b>챕터 도트 레일</b>. 스크롤 위치 따라 현재 챕터가 블루로 점등, 호버하면 제목, 클릭하면 부드럽게 이동. 긴 글을 '제품처럼' 탐색.</p>
+    <div class="feat"><span>도트 레일</span><span>스크롤 연동</span><span>부드러운 이동</span></div>
+    <a class="open" href="v4.html">전체로 열기 →</a>
+  </div>
+</div>
+</body></html>
