@@ -55,7 +55,9 @@
   .lrow{display:flex;align-items:center;gap:10px;width:100%;text-align:left;font:inherit;cursor:pointer;
     background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--ink);transition:.12s}
   .lrow:hover{border-color:var(--accent);box-shadow:0 1px 6px rgba(20,30,50,.06)}
-  .lrow .ldate{flex:none;width:84px;font-size:12px;color:var(--muted)}
+  .lrow .ldate{flex:none;width:112px;display:flex;flex-direction:column;gap:1px}
+  .lrow .ldate .dv{font-size:12px;color:var(--muted)}
+  .lrow .ldate .dk{font-size:10px;color:var(--muted);opacity:.72;font-weight:600}
   .lrow .ldot{flex:none;font-size:12.5px}
   .lrow .ltitle{flex:1;min-width:0;font-size:13.5px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .lrow .lpost{flex:none;font-size:11px;color:var(--accent);font-weight:700}
@@ -583,11 +585,14 @@ function renderList(){
   });
   if(!items.length) return '<div class="empty">표시할 항목이 없어요.</div>';
   const row = it=>{
-    const d = it.firstSeen || it.surfaced;
+    const primary = it.firstSeen || it.surfaced;
+    const kind = it.firstSeen ? '첫 등장' : '확산';   // 달력에 어느 날짜로 들어갔는지
+    const gap = (it.firstSeen && it.surfaced && it.surfaced!==it.firstSeen)
+      ? ' · 확산 '+it.surfaced.slice(5) : '';           // 첫 등장 ≠ 확산이면 확산일(MM-DD)도
     const dot = it.article ? '📄' : (it.verified ? '✅' : '⚠️');
     const post = it.postId ? '<span class="lpost">→ 글</span>' : '';
     return '<button class="lrow" data-idx="'+it._idx+'">'+
-      '<span class="ldate mono">'+d+'</span>'+
+      '<span class="ldate"><span class="dv mono">'+primary+'</span><span class="dk">'+kind+gap+'</span></span>'+
       '<span class="ldot">'+dot+'</span>'+
       '<span class="ltitle">'+esc(it.title)+'</span>'+
       '<span class="st '+it.status+'">'+it.status+'</span>'+post+
