@@ -121,6 +121,18 @@
   .step .cnt{margin-top:8px;font-size:12px;color:var(--accent);font-weight:600;min-height:16px}
   .step.auto{border-style:dashed}
 
+  /* 상태 요약 (인박스→선정→발행) */
+  .statusbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 20px}
+  .scell{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:104px;padding:12px 18px;border-radius:14px;background:var(--soft);border:1px solid var(--line)}
+  .scell .sico{font-size:17px}
+  .scell .snum{font-size:23px;font-weight:800;line-height:1}
+  .scell .slab{font-size:12px;color:var(--muted);font-weight:600}
+  .scell.inbox{background:rgba(184,134,11,.12);border-color:rgba(184,134,11,.35)}
+  .scell.prog{background:rgba(49,130,246,.12);border-color:rgba(49,130,246,.32)}
+  .scell.pub{background:rgba(31,157,107,.14);border-color:rgba(31,157,107,.34)}
+  .sarrow{color:var(--muted);font-weight:700}
+  @media(max-width:560px){.scell{min-width:0;flex:1;padding:10px 6px}.scell .snum{font-size:19px}.scell .slab{font-size:11px}}
+
   /* cards */
   .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:14px;box-shadow:var(--shadow)}
   .card .top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
@@ -203,6 +215,9 @@
   </div>
 
   <section id="tab-overview" class="tabpanel">
+    <h2>상태 요약 <span class="h2sub">— 지금 어디까지 왔나</span></h2>
+    <div class="statusbar" id="statusbar"></div>
+
     <h2>파이프라인</h2>
     <div class="pipe" id="pipe"></div>
 
@@ -240,7 +255,7 @@
   </section>
 
   <footer>
-    수집 → 선별 → 조사 → 관점 → 초안 → 검수 → 발행 · Vector 운영 시스템<br>
+    수집 → 선별 → 조사 → 관점 → 초안 → 검수 → 발행 · AI 쉽게 알려주는 집 운영 시스템<br>
     <a href="index.html">← 블로그 사이트로</a>
   </footer>
 </div>
@@ -422,10 +437,11 @@ totop.onclick = ()=>{ overlay.scrollTo({top:0, behavior:'smooth'}); };
 
 const STAGE_AUTO = {'인박스':1,'검토중':0,'선정':0,'조사중':0,'작성중':0,'검수중':0,'발행':0};
 
-function renderPipe(stages, posts){
+function renderPipe(stages, posts, inbox){
   const pipe = document.getElementById('pipe');
   const counts = {};
   stages.forEach(s=>counts[s]=0);
+  (inbox||[]).forEach(it=>{ if(!it.postId && counts[it.status]!==undefined) counts[it.status]++; }); // 아직 글로 안 발전한 후보
   posts.forEach(p=>{ if(counts[p.stage]!==undefined) counts[p.stage]++; });
   pipe.innerHTML = stages.map((s,i)=>{
     const c = counts[s];
@@ -434,6 +450,30 @@ function renderPipe(stages, posts){
       '<div class="name">'+s+'</div>'+
       '<div class="cnt">'+(c? c+'건':'')+'</div></div>';
   }).join('');
+}
+
+// 상태 요약 (인박스 → 선정·작업중 → 발행). inbox.json + posts.json 합산.
+function renderStatusSummary(posts, inbox){
+  const box = document.getElementById('statusbar');
+  if(!box) return;
+  const prog = {'선정':1,'조사중':1,'작성중':1,'검수중':1};   // 골라서 작업 중인 단계들
+  let nInbox=0, nProg=0, nPub=0;
+  (inbox||[]).forEach(it=>{
+    if(it.postId) return;                                  // 글로 발전한 건 posts에서 집계(중복 방지)
+    if(it.status==='인박스' || it.status==='검토중') nInbox++;
+    else if(prog[it.status]) nProg++;
+  });
+  posts.forEach(p=>{
+    if(p.stage==='발행') nPub++;
+    else if(prog[p.stage]) nProg++;
+  });
+  const cell=(cls,ico,lab,n)=>'<div class="scell '+cls+'"><span class="sico">'+ico+'</span><span class="snum">'+n+'</span><span class="slab">'+lab+'</span></div>';
+  box.innerHTML =
+    cell('inbox','📥','인박스',nInbox)+
+    '<span class="sarrow">→</span>'+
+    cell('prog','✍️','선정·작업중',nProg)+
+    '<span class="sarrow">→</span>'+
+    cell('pub','✅','발행',nPub);
 }
 
 // ---- 탭 전환 ----
@@ -595,11 +635,13 @@ async function boot(){
     const stages = data.stages || ['인박스','검토중','선정','조사중','작성중','검수중','발행'];
     const posts = data.posts || [];
     posts.forEach(p=>{ POSTS[p.id]=p; });
-    renderPipe(stages, posts);
-
-    // 수집 달력
-    try{ const ir = await fetchData('inbox.json'); initCalendar(await ir.json()); }
+    // 인박스 후보 먼저 로드 (상태 요약·파이프라인·달력 공용)
+    let inbox = [];
+    try{ const ir = await fetchData('inbox.json'); const idata = await ir.json(); inbox = idata.items||[]; initCalendar(idata); }
     catch(_){ document.getElementById('calview').innerHTML='<div class="empty">수집 달력을 불러오지 못했어요.</div>'; }
+
+    renderStatusSummary(posts, inbox);
+    renderPipe(stages, posts, inbox);
 
     // 판단 기준 (시스템 규칙)
     const crit = document.getElementById('criteria');
