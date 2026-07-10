@@ -861,7 +861,8 @@
       "verified": true,
       "verifyNote": "SemiAnalysis가 Kyber NVL144(Rubin Ultra용 랙) PCB 미드플레인 제조 난항으로 2028년까지 12개월+ 지연, NVL72x2 백업안·4칩 Rubin Ultra 취소를 주장. Nvidia는 Bloomberg에 이메일 성명으로 \"로드맵은 그대로(intact)\"라 반박했으나 개별 기술 주장에는 답하지 않음. CNBC(2026-07-06)·Tom's Hardware·Yahoo Finance·Benzinga·Wccftech·TradingKey 교차확인. 양측 주장이 대립하는 미해결 쟁점 — 어느 쪽도 확정 사실로 단정하지 않음.",
       "source": "https://www.cnbc.com/2026/07/06/nvidia-kyber-rack-system-delays-manufacturing-taiwan-rubin-chips-.html",
-      "status": "인박스",
+      "status": "발행",
+      "postId": "nvidia-kyber-delay",
       "tags": [
         "하드웨어",
         "논란"

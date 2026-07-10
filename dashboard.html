@@ -62,6 +62,10 @@
   .lrow .ldot{flex:none;font-size:12.5px}
   .lrow .ltitle{flex:1;min-width:0;font-size:13.5px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .lrow .lpost{flex:none;font-size:11px;color:var(--accent);font-weight:700}
+  .lrow.pub{border-color:rgba(31,157,107,.5);background:rgba(31,157,107,.07)}
+  .lrow.pub:hover{border-color:rgba(31,157,107,.78)}
+  .lrow.pub .ltitle{color:var(--ink)}
+  .lpub{flex:none;font-size:11px;font-weight:800;color:#fff;background:#1f9d6b;padding:3px 10px;border-radius:20px;white-space:nowrap}
   @media(max-width:560px){.lrow{align-items:flex-start;flex-wrap:wrap}.lrow .ltitle{white-space:normal;flex-basis:100%;order:3}.lrow .ldates{gap:10px}.lrow .dcol{min-width:60px}}
   .navrow{display:flex;align-items:center;gap:6px}
   .navbtn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--ink);
@@ -585,21 +589,24 @@ function renderList(){
     .sort((a,b)=>{ const da=later(a), db=later(b); return db<da?-1:db>da?1:0; });
   if(!items.length) return '<div class="empty">표시할 항목이 없어요.</div>';
   const cell=(d,lab)=>'<span class="dcol"><span class="dv mono">'+d+'</span><span class="dk">'+lab+'</span></span>';
+  const isPub = it => it.status==='발행' || (it.postId && POSTS[it.postId] && POSTS[it.postId].stage==='발행');
   const row = it=>{
     let dates;
     if(it.firstSeen && it.surfaced && it.firstSeen!==it.surfaced){
-      dates = cell(it.surfaced,'확산') + cell(it.firstSeen,'소식');   // 왼쪽 확산(퍼진 날) · 오른쪽 소식(원래 날)
+      dates = cell(it.surfaced,'포착') + cell(it.firstSeen,'소식');   // 왼쪽 포착(우리가 캐치한 날) · 오른쪽 소식(원래 날)
     } else {
-      dates = cell(it.firstSeen||it.surfaced, it.firstSeen?'소식일':'확산일');
+      dates = cell(it.firstSeen||it.surfaced, it.firstSeen?'소식일':'포착일');
     }
     const dot = it.article ? '📄' : (it.verified ? '✅' : '⚠️');
-    const post = it.postId ? '<span class="lpost">→ 글</span>' : '';
-    const stat = (it.status && it.status!=='인박스') ? '<span class="st '+it.status+'">'+it.status+'</span>' : '';  // '인박스'(기본)는 숨김
-    return '<button class="lrow" data-idx="'+it._idx+'">'+
+    const pub = isPub(it);
+    const tail = pub ? '<span class="lpub">✅ 발행</span>'
+      : ((it.status && it.status!=='인박스' ? '<span class="st '+it.status+'">'+it.status+'</span>' : '')
+         + (it.postId ? '<span class="lpost">→ 글</span>' : ''));
+    return '<button class="lrow'+(pub?' pub':'')+'" data-idx="'+it._idx+'">'+
       '<span class="ldates">'+dates+'</span>'+
       '<span class="ldot">'+dot+'</span>'+
       '<span class="ltitle">'+esc(it.title)+'</span>'+
-      stat+post+
+      tail+
     '</button>';
   };
   return '<div class="llist">'+items.map(row).join('')+'</div>';
