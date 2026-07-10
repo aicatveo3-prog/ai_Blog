@@ -45,6 +45,11 @@
 - [California Gov.](https://www.gov.ca.gov/2026/03/30/as-trump-rolls-back-protections-governor-newsom-signs-first-of-its-kind-executive-order-to-strengthen-ai-protections-and-responsible-use/): 뉴섬은 "트럼프가 보호장치를 걷어내는 동안" 주 차원의 AI 조달 인증 강화 행정명령으로 맞대응(연방 선점에 대한 주 저항).
 - [Forbes "Washington Blinked"](https://www.forbes.com/sites/craigsmith/2026/07/01/washington-blinked-18-days-that-bent-the-us-china-ai-race/): 앤트로픽 수출통제 이후 오히려 중국 오픈소스로 수요가 쏠려, 미국의 통제가 경쟁을 촉진했다는 분석.
 
+---
+
+## 출처
+- [White House - Presidential Actions](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/)
+
 ## 🏢 경쟁 기업·CEO 반응
 - [SecurityWeek](https://www.securityweek.com/openai-and-anthropic-limit-new-ai-models-to-trump-approved-customers-during-cybersecurity-review/): OpenAI는 신모델 'GPT-5.6 Sol'을 승인 고객에게만 우선 개방하며 준수하되 "정부가 고객을 고르는 절차가 장기 기본값이 되어선 안 된다"는 입장. 앤트로픽은 최상위 모델의 제한적 공개가 승인되자 "기쁘다"며 협력 확대 의사.
 - [The Hill](https://thehill.com/policy/technology/5948098-trump-openai-ai-policy-confusion/): Chamber of Progress CEO 애덤 코바세비치가 X에서 "미국 AI 혁신이 트럼프의 후원·조공(patronage-and-tribute) 행정부와 부딪히는 건 별로다(no bueno)"라고 비판.

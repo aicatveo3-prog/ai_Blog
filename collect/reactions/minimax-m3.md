@@ -66,3 +66,8 @@
 - [r/LocalLLaMA 기류 (검색 종합)](https://byteiota.com/minimax-m3-open-weights-run-locally/): 로컬 진영은 '자가호스팅 로망 vs 현실' — bf16 원본 약 855GB, 1비트 GGUF로도 128GB라 "컨슈머 단일 GPU로는 안 돌아간다"는 체념. "또 하나의 거대 중국 MoE"라는 6월 오픈 블리츠 피로감도 감지.
 - **'뉴스에 팔아라' 주가 반응** [(BigGo)](https://finance.biggo.com/news/NjbnzJ0Bq7sy_YQMkefA): 출시 당일 미니맥스(홍콩 0100) 주가 급락(주간 약 12%)을 두고 "전형적 sell the news"라는 냉소. 다만 실제 동인은 7월 락업 해제 물량 우려가 겹친 영향.
 - *종합*: 확인 가능한 '까는' 정서는 ① 벤더 자체채점 벤치 회의, ② 100만 컨텍스트 과장론, ③ "또 중국 오픈모델" 양산 냉소, ④ 로컬 구동 하드웨어 현실론으로 요약됩니다.
+
+---
+
+## 출처
+- [DataNorth - MiniMax Launches M3](https://datanorth.ai/news/minimax-launches-m3)

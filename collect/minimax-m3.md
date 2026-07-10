@@ -8,7 +8,7 @@
 
 ## 한마디로 요약
 
-2026년 6월 1일, 중국 상하이의 AI 회사 **MiniMax**가 고성능 AI 모델 **M3**를 공개했습니다. 이 모델의 가장 큰 특징은 **누구나 무료로 내려받아 자기 컴퓨터에서 직접 돌릴 수 있다**는 것입니다.
+2026년 6월 1일, 중국 상하이의 AI 회사 **[MiniMax](https://datanorth.ai/news/minimax-launches-m3)**가 고성능 AI 모델 **M3**를 공개했습니다. 이 모델의 가장 큰 특징은 **누구나 무료로 내려받아 자기 컴퓨터에서 직접 돌릴 수 있다**는 것입니다.
 
 ChatGPT나 Claude 같은 유명 AI와 비슷하거나 더 나은 성능을 주장하면서, **값은 훨씬 싸고, 원한다면 아예 공짜**입니다.
 
@@ -49,7 +49,7 @@ MiniMax는 M3가 **"세 가지를 한 모델에 처음으로 다 담았다"**고
 **'컨텍스트'**란 AI가 한 번에 읽고 기억할 수 있는 양을 말합니다.
 
 - 일반적인 AI: 대화 몇 페이지분만 기억 → 앞부분을 까먹습니다.
-- M3: **약 100만 토큰** → 책 여러 권(대략 750,000단어) 분량을 **통째로 기억하면서** 답합니다.
+- M3: **[약 100만 토큰](https://datanorth.ai/news/minimax-launches-m3)** → 책 여러 권(대략 750,000단어) 분량을 **통째로 기억하면서** 답합니다.
 
 **이게 왜 중요한가요?**
 
@@ -63,7 +63,7 @@ M3는 **MSA(Multiscale Sparse Attention)**라는 기술로 이 문제를 해결�
 
 쉽게 비유하면: 두꺼운 책에서 답을 찾을 때, **한 글자 한 글자 다 읽는 게 아니라**, 목차를 보고 관련 챕터를 찾은 뒤 **그 부분만 정독**하는 것과 같습니다.
 
-결과적으로 100만 토큰을 처리하는 비용이 **이전 세대의 약 1/20 수준**이라고 합니다.
+결과적으로 100만 토큰을 처리하는 비용이 **[이전 세대의 약 1/20 수준](https://datanorth.ai/news/minimax-launches-m3)**이라고 합니다.
 
 ### 특별한 점 3: 글뿐 아니라 이미지·영상도 이해한다 (멀티모달)
 
@@ -79,7 +79,7 @@ M3는 **텍스트 + 이미지 + 비디오**를 모두 입력으로 받을 수 �
 
 MiniMax가 공개한 벤치마크(시험 점수) 일부입니다:
 
-- **코딩 시험(SWE-Bench Pro)**: 59%
+- **[코딩 시험(SWE-Bench Pro): 59%](https://datanorth.ai/news/minimax-launches-m3)**
 - 일부 매체에서는 이 점수가 **유료 최상급 모델(GPT, Gemini 계열)보다 높다**고 보도했습니다.
 
 **그런데 여기서 중요한 주의점이 있습니다:**
@@ -101,7 +101,7 @@ MiniMax가 공개한 벤치마크(시험 점수) 일부입니다:
 
 | | 입력 100만 토큰 | 출력 100만 토큰 |
 |---|---|---|
-| **M3** | **$0.30** | **$1.20** |
+| **[M3](https://datanorth.ai/news/minimax-launches-m3)** | **$0.30** | **$1.20** |
 | 참고: Claude 급 | $3~15 | $15~75 |
 
 유료 최상급 모델과 비교하면 **5배~50배 저렴**합니다.
@@ -138,4 +138,8 @@ MiniMax가 공개한 벤치마크(시험 점수) 일부입니다:
 | **API** | 다른 프로그램이 AI를 호출해 사용할 수 있게 해주는 인터페이스. "빌려 쓰는 통로." |
 
 ---
-*출처: [VentureBeat](https://venturebeat.com/technology/minimax-m3-debuts-eclipsing-gpt-5-5-and-gemini-3-1-pro-on-key-benchmark-performance-for-just-5-10-of-the-cost) · [llm-stats](https://llm-stats.com/models/minimax-m3) · [Artificial Analysis](https://artificialanalysis.ai/models/minimax-m3) · [DataNorth](https://datanorth.ai/news/minimax-launches-m3)*
+# 출처
+- [DataNorth - MiniMax Launches M3](https://datanorth.ai/news/minimax-launches-m3)
+- [VentureBeat](https://venturebeat.com/technology/minimax-m3-debuts-eclipsing-gpt-5-5-and-gemini-3-1-pro-on-key-benchmark-performance-for-just-5-10-of-the-cost)
+- [llm-stats](https://llm-stats.com/models/minimax-m3)
+- [Artificial Analysis](https://artificialanalysis.ai/models/minimax-m3)
