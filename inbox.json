@@ -3,6 +3,233 @@
   "note": "지난 한 달 AI 소식 전방위 수집. firstSeen = 검증된 진짜 첫 등장일(1차/신뢰 소스). 일자 미확정은 verified:false로 '날짜 없음'에 대기. surfaced가 다르면 gap 표시.",
   "items": [
     {
+      "title": "Amazon Q의 MCP 자동 실행 취약점 — 다각도 반응",
+      "firstSeen": "2026-07-10",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "Wiz Research(Maor Dokhanian) 공개, 4월 20일 Amazon 보고 → 5월 12일 초기 패치 → 6월 26일 공개. CVE-2026-12957/12958. 22개+ 소스 교차확인(보안·언론·정책·업계).",
+      "source": "https://www.wiz.io/blog/amazon-q-vulnerability",
+      "status": "인박스",
+      "tags": [
+        "보안",
+        "MCP",
+        "취약점",
+        "논란"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/amazon-q-vulnerability-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/amazon-q-vulnerability.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/amazon-q-vulnerability.md"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic, 저작권 합의 $1.5B — Authors Guild 포함 250+ 저자",
+      "firstSeen": "2026-07-10",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "Anthropic 공식 발표. Authors Guild·NYT·등 저작권 소송 관련자 포함 합의. 35+ 국제 정책·기업 반응 수집.",
+      "source": "https://www.anthropic.com/news/copyright-settlement",
+      "status": "인박스",
+      "tags": [
+        "법률",
+        "저작권",
+        "합의",
+        "Anthropic"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/anthropic-copyright-settlement-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/anthropic-copyright-settlement.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/anthropic-copyright-settlement.md"
+        }
+      ]
+    },
+    {
+      "title": "MCP v0.2 무상태(Stateless) 구조 릴리스 예정 — OAuth 2.1 전환",
+      "firstSeen": "2026-07-10",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "MCP 공식 블로그 5/21 RC 발표, 7/28 최종 릴리스 예정. Breaking change 업계 우려. 30+ 소스.",
+      "source": "https://blog.modelcontextprotocol.io/posts/mcp-stateless-release/",
+      "status": "인박스",
+      "tags": [
+        "프레임워크",
+        "MCP",
+        "기술표준"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/mcp-v02-stateless-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/mcp-v02-stateless.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/mcp-v02-stateless.md"
+        }
+      ]
+    },
+    {
+      "title": "AI 데이터센터 전력 부족 — 2027년까지 40% 제약 예상(Gartner)",
+      "firstSeen": "2026-07-10",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "Gartner 예측 보도 2026-06-15 이후 확산. 2027년까지 AI 인프라 전력 40% 제약, 정부 개입(US·EU·China·Korea) 분석. 60+ 소스.",
+      "source": "https://www.gartner.com/en/newsroom/press-releases/2026-06-15-gartner-ai-power-constraint",
+      "status": "인박스",
+      "tags": [
+        "하드웨어",
+        "인프라",
+        "정책"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/ai-datacenter-power-shortage-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/ai-datacenter-power-shortage.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/ai-datacenter-power-shortage.md"
+        }
+      ]
+    },
+    {
+      "title": "연방 AI 감시 체계 — NSA·CISA 30일 자발적 검증(Frontier AI)",
+      "firstSeen": "2026-07-10",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "Trump 행정부 6/2 행정명령, 공식 프레임 7/1. NSA/CISA 주도 프론티어 모델 공개 전 30일 검증. 자발적(비강제). 40+ 정책·기업 반응.",
+      "source": "https://federalnewsnetwork.com/artificial-intelligence/2026/07/the-administrations-new-ai-framework/",
+      "status": "인박스",
+      "tags": [
+        "정책",
+        "규제",
+        "미국"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/federal-ai-surveillance-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/federal-ai-surveillance.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/federal-ai-surveillance.md"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI-NYT 저작권 소송 '증거 은폐' 적발",
+      "firstSeen": "2026-07-09",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "TechCrunch·Washington Post 교차확인. 78백만 건 ChatGPT 대화 데이터베이스 드러남. NYT 제재 청구.",
+      "source": "https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/",
+      "status": "인박스",
+      "tags": [
+        "OpenAI",
+        "저작권",
+        "소송",
+        "규제"
+      ]
+    },
+    {
+      "title": "OpenAI, GPT-5.6 (Sol/Terra/Luna) 시리즈 공개 출시",
+      "firstSeen": "2026-07-09",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "OpenAI 공식 발표. 정부 안전검증 후 20개 파트너만 배포. Sol(플래그십)·Terra(비용효율)·Luna(고속).",
+      "source": "https://openai.com/index/previewing-gpt-5-6-sol/",
+      "status": "인박스",
+      "tags": [
+        "OpenAI",
+        "모델",
+        "GPT-5.6"
+      ]
+    },
+    {
+      "title": "Cerebras, 유럽 AI 인프라 확장 — 2027년 말까지 200MW",
+      "firstSeen": "2026-07-09",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "파리 RAISE Summit 발표. 2026년 말 첫 DC, 2027년 200MW. OpenAI 워크로드 지원.",
+      "source": "https://www.euronews.com/business/2026/07/09/cerebras-targets-europe-with-multibillion-dollar-ai-expansion/",
+      "status": "인박스",
+      "tags": [
+        "인프라",
+        "하드웨어",
+        "유럽"
+      ]
+    },
+    {
+      "title": "Google 피싱 소송: AI 악용 'Outsider Enterprise' 150만 악성 URL",
+      "firstSeen": "2026-06-12",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "Google RICO 소송. 150만 URL, 387만 신용카드 도난, $19B 손실.",
+      "source": "https://www.findlaw.com/legalblogs/courtside/google-turns-to-rico-in-battle-against-outsider-enterprise/",
+      "status": "인박스",
+      "tags": [
+        "Google",
+        "안전",
+        "AI악용"
+      ]
+    },
+    {
+      "title": "Workday 채용 차별 소송: AI가 '10억 건' 구직 거절(클래스액션)",
+      "firstSeen": "2026-03-06",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "3/6 판결. Derek Mobley. Workday AI 채용도구 인종·나이·장애 차별. ADEA 적용 인정.",
+      "source": "https://www.akingump.com/en/insights/ai-law-and-regulation-tracker/court-allows-discrimination-claims/",
+      "status": "인박스",
+      "tags": [
+        "AI윤리",
+        "소송",
+        "차별"
+      ]
+    },
+    {
+      "title": "xAI 안전 내부고발 소송: Grok 편향·무기화 경고 엔지니어 해임",
+      "firstSeen": "2026-06-09",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "TechCrunch·Decrypt 교차확인. Devin Kim 부당해고. Grok 안전 우려 보고 후 해임.",
+      "source": "https://techcrunch.com/2026/06/10/xai-fired-an-engineer-who-raised-alarms-about-grok-safety/",
+      "status": "인박스",
+      "tags": [
+        "xAI",
+        "안전",
+        "내부고발"
+      ]
+    },
+    {
       "title": "펜타곤-Anthropic 자율무기 협상 결렬 이메일 공개 (법원 문서 봉인 해제)",
       "firstSeen": "2026-07-02",
       "surfaced": "2026-07-05",
