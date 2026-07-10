@@ -50,6 +50,16 @@
   .viewtoggle{display:inline-flex;background:var(--soft);border-radius:10px;padding:3px}
   .vtg{font:inherit;cursor:pointer;border:none;background:none;color:var(--muted);font-size:13px;font-weight:600;padding:6px 14px;border-radius:8px}
   .vtg.on{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+  /* 최신순 리스트 뷰 */
+  .llist{display:flex;flex-direction:column;gap:6px}
+  .lrow{display:flex;align-items:center;gap:10px;width:100%;text-align:left;font:inherit;cursor:pointer;
+    background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--ink);transition:.12s}
+  .lrow:hover{border-color:var(--accent);box-shadow:0 1px 6px rgba(20,30,50,.06)}
+  .lrow .ldate{flex:none;width:84px;font-size:12px;color:var(--muted)}
+  .lrow .ldot{flex:none;font-size:12.5px}
+  .lrow .ltitle{flex:1;min-width:0;font-size:13.5px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .lrow .lpost{flex:none;font-size:11px;color:var(--accent);font-weight:700}
+  @media(max-width:560px){.lrow{align-items:flex-start;flex-wrap:wrap}.lrow .ltitle{white-space:normal;flex-basis:100%;order:3}.lrow .ldate{width:auto}}
   .navrow{display:flex;align-items:center;gap:6px}
   .navbtn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--ink);
     width:34px;height:34px;border-radius:9px;font-size:13px;font-weight:600;padding:0}
@@ -234,6 +244,7 @@
       <div class="viewtoggle">
         <button class="vtg on" data-view="month">월별</button>
         <button class="vtg" data-view="week">주간</button>
+        <button class="vtg" data-view="list">📰 최신순</button>
       </div>
       <div class="navrow">
         <button class="navbtn" id="calPrev">◀</button>
@@ -564,14 +575,38 @@ function renderWeek(){
   }
   return '<div class="wgrid">'+rows+'</div>';
 }
+function renderList(){
+  // 날짜 있는 항목만, 최신(firstSeen 우선, 없으면 surfaced) 내림차순. (날짜 없는 건 아래 '날짜 없음' 박스에 별도 표시)
+  const items = INBOX.filter(it=>it.firstSeen||it.surfaced).slice().sort((a,b)=>{
+    const da=a.firstSeen||a.surfaced, db=b.firstSeen||b.surfaced;
+    return db<da?-1:db>da?1:0;
+  });
+  if(!items.length) return '<div class="empty">표시할 항목이 없어요.</div>';
+  const row = it=>{
+    const d = it.firstSeen || it.surfaced;
+    const dot = it.article ? '📄' : (it.verified ? '✅' : '⚠️');
+    const post = it.postId ? '<span class="lpost">→ 글</span>' : '';
+    return '<button class="lrow" data-idx="'+it._idx+'">'+
+      '<span class="ldate mono">'+d+'</span>'+
+      '<span class="ldot">'+dot+'</span>'+
+      '<span class="ltitle">'+esc(it.title)+'</span>'+
+      '<span class="st '+it.status+'">'+it.status+'</span>'+post+
+    '</button>';
+  };
+  return '<div class="llist">'+items.map(row).join('')+'</div>';
+}
 function renderCalendar(){
   const view=document.getElementById('calview'); const a=calState.anchor;
+  const isList = calState.mode==='list';
+  // 리스트 모드에선 이전/다음/최근 버튼 숨김(라벨은 유지)
+  ['calPrev','calNext','calToday'].forEach(id=>{ const el=document.getElementById(id); if(el) el.style.display=isList?'none':''; });
   let label;
-  if(calState.mode==='month'){ view.innerHTML=renderMonth(); label=a.getFullYear()+'년 '+(a.getMonth()+1)+'월'; }
+  if(isList){ view.innerHTML=renderList(); label='최신순 · '+INBOX.filter(it=>it.firstSeen||it.surfaced).length+'건'; }
+  else if(calState.mode==='month'){ view.innerHTML=renderMonth(); label=a.getFullYear()+'년 '+(a.getMonth()+1)+'월'; }
   else { view.innerHTML=renderWeek(); const s=new Date(a);s.setDate(a.getDate()-a.getDay()); const e=new Date(s);e.setDate(s.getDate()+6);
     label=(s.getMonth()+1)+'/'+s.getDate()+' – '+(e.getMonth()+1)+'/'+e.getDate(); }
   document.getElementById('calLabel').textContent=label;
-  view.querySelectorAll('.chip[data-idx]').forEach(b=>b.onclick=()=>openItem(INBOX[+b.getAttribute('data-idx')]));
+  view.querySelectorAll('.chip[data-idx],.lrow[data-idx]').forEach(b=>b.onclick=()=>openItem(INBOX[+b.getAttribute('data-idx')]));
 }
 function renderUndated(){
   const el=document.getElementById('calUndated');
