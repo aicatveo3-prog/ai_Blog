@@ -74,5 +74,6 @@ Claude 같은 미국 최고급 AI는 여러 규제와 회사 정책 때문에 �
 | 스테가노그래피 (steganography) | 정보를 눈에 잘 안 띄는 곳(예: 특수 문자)에 숨겨 몰래 실어 보내는 기술. |
 | 수출통제 | 특정 국가·기업에 첨단 기술·제품 판매를 정부가 제한하는 정책. |
 
----
-*출처: [Financial Times (X)](https://x.com/FT/status/2072901316104380676) · [Investing.com](https://www.investing.com/news/stock-market-news/anthropic-targets-loopholes-used-by-chinese-firms-to-access-claude-ft-reports-4774998) · [Anthropic — 증류 공격 탐지·방지](https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks) · [CyberSecurityNews (은닉 코드)](https://cybersecuritynews.com/anthropic-claude-hidden-code/) · [Yahoo Finance (위선 비판)](https://finance.yahoo.com/news/critics-mock-anthropics-claims-chinese-224040472.html) · [위키트리](https://www.wikitree.co.kr/articles/1144679)*
+# 출처
+- [Investing.com · Anthropic, 중국 기업의 Claude 우회 접근과 증류 캠페인 차단](https://www.investing.com/news/stock-market-news/anthropic-targets-loopholes-used-by-chinese-firms-to-access-claude-ft-reports-4774998)
+  https://www.investing.com/news/stock-market-news/anthropic-targets-loopholes-used-by-chinese-firms-to-access-claude-ft-reports-4774998

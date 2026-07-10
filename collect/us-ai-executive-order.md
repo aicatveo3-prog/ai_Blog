@@ -8,7 +8,7 @@
 
 ## 한마디로 요약
 
-2026년 6월 2일, 미국 대통령이 **AI에 대한 정부 방침을 공식 문서로 발표**했습니다. 이 문서의 핵심 메시지는 딱 두 줄로 정리됩니다:
+2026년 6월 2일, 미국 대통령이 **[AI에 대한 정부 방침을 공식 문서로 발표](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/)**했습니다. 이 문서의 핵심 메시지는 딱 두 줄로 정리됩니다:
 
 > **"AI 개발은 최대한 자유롭게 놔두겠다. 단, 나라를 지키는 보안만큼은 철저히 챙기겠다."**
 
@@ -52,14 +52,14 @@ AI가 1년 사이에 **폭발적으로 강해졌기 때문**입니다.
 
 ### 2. "사이버 보안은 30일 안에 강화하라" (안보 최우선)
 
-규제는 안 하지만, **방어는 철저히** 합니다.
+규제는 안 하지만, **[방어는 철저히](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/)** 합니다.
 
 - **30일 이내에** 국가 안보 관련 정부 전산망의 방어 태세를 점검하고 강화하라고 지시.
 - AI 시대에는 해킹 공격도 AI로 하기 때문에, **방패도 AI 수준으로 올려야** 한다는 논리입니다.
 
 ### 3. "최신 AI, 출시 전에 정부에 보여줄 수 있다 — 단, 자발적으로" (사전 검토)
 
-가장 강력한 최신 AI(**프런티어 모델**)를 세상에 내놓기 전에, **회사가 원하면 최대 30일간 정부에 먼저 보여주는 절차**를 만들라고 했습니다.
+가장 강력한 최신 AI(**[프런티어 모델](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/**)를 세상에 내놓기 전에, **회사가 원하면 최대 30일간 정부에 먼저 보여주는 절차**를 만들라고 했습니다.
 
 핵심은 **"자발적(voluntary)"**이라는 단어입니다.
 - 강제가 아닙니다. 회사가 원할 때만 참여합니다.
@@ -120,4 +120,8 @@ AI 자체를 규제하는 대신, **AI를 이용한 범죄에 대한 처벌을 �
 | **EU AI Act** | 유럽연합이 만든 세계 최초의 포괄적 AI 규제법. |
 
 ---
-*출처: [백악관 행정명령 원문](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/) · [백악관 Fact Sheet](https://www.whitehouse.gov/fact-sheets/2026/06/fact-sheet-president-donald-j-trump-promotes-advanced-artificial-intelligence-innovation-and-security/) · [Federal Register](https://www.federalregister.gov/documents/2026/06/05/2026-11415/promoting-advanced-artificial-intelligence-innovation-and-security) · [DLA Piper 요약](https://www.dlapiper.com/en-us/insights/publications/2026/06/promoting-advanced-ai-innovation-and-security-executive-order-top-points)*
+# 출처
+- [White House - Presidential Actions](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/)
+- [백악관 Fact Sheet](https://www.whitehouse.gov/fact-sheets/2026/06/fact-sheet-president-donald-j-trump-promotes-advanced-artificial-intelligence-innovation-and-security/)
+- [Federal Register](https://www.federalregister.gov/documents/2026/06/05/2026-11415/promoting-advanced-artificial-intelligence-innovation-and-security)
+- [DLA Piper 요약](https://www.dlapiper.com/en-us/insights/publications/2026/06/promoting-advanced-ai-innovation-and-security-executive-order-top-points)

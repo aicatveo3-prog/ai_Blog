@@ -61,3 +61,7 @@
 
 ## 🔭 종합 — 반응의 큰 흐름
 미국 쪽(Anthropic·의회)은 "중국 기업이 약관·안보 규범을 조직적으로 우회해 미국 AI 자산을 증류·탈취한다"는 안보·지재권 프레임을 강하게 밀고 있고, 중국 관영매체·개발자 사회·중국어권 소셜은 "정작 Anthropic도 저작권 침해로 거액 합의금을 문 회사면서 '도둑이 도둑이야' 외치는 위선"이라는 반박·냉소로 맞선다. 특히 같은 시기 터진 '클로드 코드 중국 사용자 은닉 추적 코드' 사건은 원래 의도(중국 겨냥)를 넘어 전 세계 개발자의 신뢰 문제로 번져 알리바바의 클로드 코드 전면 금지라는 실질적 보복으로 이어졌다. 한국에서는 이 사건 자체보다 "AI가 국적 기반 전략자산이 됐다"는 인접 담론과 백도어 논란에 반응이 집중돼, FT발 우회접근·증류 이슈에 대한 국내 커뮤니티의 직접 반응은 상대적으로 얇다(갭).
+
+## 출처
+- [Investing.com · Anthropic, 중국 기업의 Claude 우회 접근 차단](https://www.investing.com/news/stock-market-news/anthropic-targets-loopholes-used-by-chinese-firms-to-access-claude-ft-reports-4774998)
+  https://www.investing.com/news/stock-market-news/anthropic-targets-loopholes-used-by-chinese-firms-to-access-claude-ft-reports-4774998
