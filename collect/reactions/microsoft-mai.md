@@ -59,3 +59,8 @@
 - **"토큰포칼립스(Tokenpocalypse)"**: [AI타임스](https://www.aitimes.com/news/articleView.html?idxno=211449) 등에 따르면 레딧·커뮤니티에서 코파일럿 요금 개편을 이렇게 부르기 시작. "이제 OpenRouter나 직접 API가 낫겠다"는 이탈 정서 확산.
 - [디시인사이드 '특이점이 온다' 갤러리](https://gall.dcinside.com/mgallery/board/view/?id=thesingularity&no=1149002): "Github copilot 과금 방식 변경" 스레드로 종량제 전환을 논의(MAI 모델 자체보다 요금 이슈 중심).
 - *갭*: MAI를 겨냥한 전용 밈은 뚜렷이 확인되지 않았고, 대신 MS AI 어시스턴트 전반에 대한 "Clippy 2.0" 류의 프라이버시 조롱 밈이 배경 정서로 존재.
+
+---
+
+## 출처
+- [CNBC - Microsoft Unveils New AI Models](https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html)

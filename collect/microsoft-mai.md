@@ -8,7 +8,7 @@
 
 ## 한마디로 요약
 
-Microsoft가 2026년 6월 2일, **자체 개발한 AI 모델 7종(MAI 시리즈)**을 한꺼번에 공개했습니다. 지금까지 Microsoft는 OpenAI(ChatGPT를 만든 회사)의 AI를 '빌려 쓰는' 입장이었는데, 이제 **"우리 것도 있다"**고 선언한 겁니다. 이것이 왜 큰 뉴스인지, 하나씩 풀어보겠습니다.
+Microsoft가 2026년 6월 2일, **[자체 개발한 AI 모델 7종(MAI 시리즈)](https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html)**을 한꺼번에 공개했습니다. 지금까지 Microsoft는 OpenAI(ChatGPT를 만든 회사)의 AI를 '빌려 쓰는' 입장이었는데, 이제 **"우리 것도 있다"**고 선언한 겁니다. 이것이 왜 큰 뉴스인지, 하나씩 풀어보겠습니다.
 
 ---
 
@@ -68,7 +68,7 @@ MAI-Thinking-1도 같은 원리입니다. 1조 개의 방대한 지식을 갖고
 
 ### 성적은?
 
-- 수학 경시대회 문제(AIME)에서 **97% 정답률.**
+- 수학 경시대회 문제(AIME)에서 **[97% 정답률](https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html).**
 - 사람들이 직접 블라인드 테스트를 했을 때(어느 AI의 답인지 모르는 상태로 비교), **Claude Sonnet 4.6보다 MAI-Thinking-1의 답을 더 선호**했다고 발표.
 
 ### 하나 더 — "베끼지 않았다"
@@ -98,7 +98,7 @@ Microsoft는 **출처가 깨끗하고 추적 가능한 데이터로만 훈련**�
 
 ### 성적은?
 
-- 비슷한 급의 **Claude Haiku 4.5를 코딩 시험 4개에서 전부 앞섰습니다.**
+- 비슷한 급의 **[Claude Haiku 4.5](https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html)를 코딩 시험 4개에서 전부 앞섰습니다.**
 - 같은 문제를 푸는 데 **최대 60% 적은 토큰(계산량)**을 사용. 즉, **더 싸고 더 빠릅니다.**
 
 ### 가격과 사용처
@@ -134,4 +134,9 @@ Microsoft의 움직임은 "아무리 큰 회사라도 핵심 AI를 남에게 의
 | **GitHub Copilot** | Microsoft가 만든 코딩 도우미 서비스. VS Code 등 개발 도구에서 사용. |
 
 ---
-*출처: [Microsoft AI — 7종 발표](https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/) · [MAI-Thinking-1](https://microsoft.ai/news/introducing-mai-thinking-1/) · [MAI-Code-1-Flash](https://microsoft.ai/news/introducingmai-code-1-flash/) · [Simon Willison](https://simonwillison.net/2026/Jun/2/microsofts-new-models/)*
+# 출처
+- [CNBC - Microsoft Unveils New AI Models](https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html)
+- [Microsoft AI — 7종 발표](https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/)
+- [MAI-Thinking-1](https://microsoft.ai/news/introducing-mai-thinking-1/)
+- [MAI-Code-1-Flash](https://microsoft.ai/news/introducingmai-code-1-flash/)
+- [Simon Willison](https://simonwillison.net/2026/Jun/2/microsofts-new-models/)

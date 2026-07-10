@@ -16,11 +16,17 @@ AI 시스템이 **재귀적 자기개선(recursive self-improvement)** 능력에
 - 여러 나라의 자금력 있는 랩들이 같은 조건·감독 주체·종료 규칙에 합의해야 한다.
 
 ## 근거로 제시한 데이터
-- 2026년 5월 기준, Anthropic 프로덕션 코드베이스에 병합된 코드의 **80% 이상을 Claude가 작성**(2025년 2월 이전엔 한 자릿수%).
+- 2026년 5월 기준, Anthropic 프로덕션 코드베이스에 병합된 코드의 **[80% 이상을 Claude가 작성](https://www.crescendo.ai/news/latest-ai-news-and-updates)**(2025년 2월 이전엔 한 자릿수%).
 - 엔지니어 1인당 하루 병합 코드량이 2024년의 **약 8배**.
 
 ## 시점 맥락
 Anthropic은 이 제안 발표 며칠 전인 **6월 1일경 IPO를 비공개 신청**한 것으로 알려졌다.
 
 ---
-*출처: [Anthropic — When AI builds itself](https://www.anthropic.com/institute/recursive-self-improvement) · [Al Jazeera](https://www.aljazeera.com/economy/2026/6/5/anthropic-urges-ai-labs-to-pause-warns-humans-risk-losing-control) · [SiliconANGLE](https://siliconangle.com/2026/06/04/anthropic-calls-global-pause-ai-development-humans-lose-control/) · [Crypto Briefing](https://cryptobriefing.com/anthropic-global-pause-ai-self-improvement/)*
+
+# 출처
+- [Crescendo AI News](https://www.crescendo.ai/news/latest-ai-news-and-updates)
+- [Anthropic — When AI builds itself](https://www.anthropic.com/institute/recursive-self-improvement)
+- [Al Jazeera](https://www.aljazeera.com/economy/2026/6/5/anthropic-urges-ai-labs-to-pause-warns-humans-risk-losing-control)
+- [SiliconANGLE](https://siliconangle.com/2026/06/04/anthropic-calls-global-pause-ai-development-humans-lose-control/)
+- [Crypto Briefing](https://cryptobriefing.com/anthropic-global-pause-ai-self-improvement/)

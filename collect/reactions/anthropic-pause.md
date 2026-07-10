@@ -61,3 +61,8 @@
 - [태 김(via AI타임스)](https://www.aitimes.com/news/articleView.html?idxno=211463): 블룸버그 칼럼니스트 태 김의 "앤트로픽이 대중을 겁주기 위한 FUD를 퍼뜨린다"는 직설이 대표적 '조롱형 소감'으로 회자.
 - [SemiWiki 포럼](https://semiwiki.com/forum/threads/anthropic-calls-for-pause-of-global-ai-development.25236/): 반도체/엔지니어 커뮤니티가 '진짜 위험 vs 마케팅'을 두고 갑론을박(스레드 수준).
 - *솔직한 갭*: r/singularity·r/accelerate 등 레딧 스레드, 스레드/디시/아카라이브의 밈·조롱은 검증 원문을 확보하지 못해 보류. 'e/acc vs 두머 전쟁'은 정황상 벌어졌을 것으로 보이나 특정 게시물 원문이 없어 서술 보류.
+
+---
+
+## 출처
+- [Crescendo AI News](https://www.crescendo.ai/news/latest-ai-news-and-updates)

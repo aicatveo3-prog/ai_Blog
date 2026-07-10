@@ -8,9 +8,9 @@
 
 ## 한마디로 요약
 
-2026년 6월 4일, Claude를 만드는 회사 **Anthropic**이 놀라운 보고서를 발표했습니다:
+2026년 6월 4일, Claude를 만드는 회사 **[Anthropic](https://www.crescendo.ai/news/latest-ai-news-and-updates)**이 놀라운 보고서를 발표했습니다:
 
-> **"전 세계가 힘을 합쳐, 최첨단 AI 개발을 필요하면 잠깐 멈출 수 있는 장치를 만들어야 한다."**
+> **"전 세계가 힘을 합쳐, 최첨단 AI 개발을 필요하면 잠깐 멈플 수 있는 장치를 만들어야 한다."**
 
 **AI를 만들어서 파는 회사가 스스로 "브레이크가 필요하다"**고 말한 겁니다. 마치 자동차 회사가 "우리 차가 너무 빨라서 위험할 수 있으니, 전 세계적으로 속도 제한 장치를 논의하자"고 나선 것과 같습니다.
 
@@ -32,7 +32,7 @@
 
 ### 그런데 지금, 뭔가가 바뀌고 있습니다
 
-최근 AI가 **AI를 만드는 일 자체를 돕기** 시작했습니다. 코드를 작성하고, 실험을 설계하고, 데이터를 분석하는 과정에 AI가 투입되고 있습니다.
+최근 AI가 **[AI를 만드는 일 자체를 돕기](https://www.crescendo.ai/news/latest-ai-news-and-updates)** 시작했습니다. 코드를 작성하고, 실험을 설계하고, 데이터를 분석하는 과정에 AI가 투입되고 있습니다.
 
 여기서 한 단계 더 나아간 시나리오가 있습니다:
 
@@ -50,7 +50,7 @@ AI가 → 자기보다 더 나은 AI를 만들고 → 그 AI가 또 더 나은 A
 
 어느 순간 **아무도 멈출 수 없는 크기**가 될 수 있습니다.
 
-Anthropic은 AI 개발이 바로 이 **"눈덩이가 스스로 굴러가기 시작하는 지점"**에 가까워지고 있다고 경고하는 겁니다.
+Anthropic은 AI 개발이 바로 이 **["눈덩이가 스스로 굴러가기 시작하는 지점"](https://www.crescendo.ai/news/latest-ai-news-and-updates)**에 가까워지고 있다고 경고하는 겁니다.
 
 ---
 
@@ -60,7 +60,7 @@ Anthropic은 "이건 먼 미래 이야기가 아니라 지금 벌어지고 있�
 
 ### 증거 1: 코드의 80%를 AI가 쓴다
 
-2026년 5월 기준, Anthropic 제품 코드의 **80% 이상을 AI(Claude)가 작성**했습니다.
+2026년 5월 기준, Anthropic 제품 코드의 **[80% 이상을 AI(Claude)가 작성](https://www.crescendo.ai/news/latest-ai-news-and-updates)**했습니다.
 
 - **2025년 2월 이전**: AI가 쓴 코드 비율 → 한 자릿수 % (거의 없음)
 - **2026년 5월**: → **80% 이상**
@@ -111,7 +111,7 @@ Anthropic은 "이건 먼 미래 이야기가 아니라 지금 벌어지고 있�
 
 ## 이 타이밍이 좀 묘합니다 — 알아둘 맥락
 
-이 보고서가 나오기 며칠 전, Anthropic은 **주식시장 상장(IPO)을 비공개로 신청**한 것으로 알려졌습니다.
+이 보고서가 나오기 며칠 전, Anthropic은 **[주식시장 상장(IPO)을 비공개로 신청](https://www.crescendo.ai/news/latest-ai-news-and-updates)**한 것으로 알려졌습니다.
 
 - IPO란: 회사 주식을 일반 투자자에게 팔기 시작하는 것. 성공하면 회사에 막대한 자금이 들어옵니다.
 - 시선: **"안전이 걱정된다면서, 동시에 상장으로 돈을 더 벌겠다는 건가?"**
@@ -150,11 +150,17 @@ Anthropic은 "이건 먼 미래 이야기가 아니라 지금 벌어지고 있�
 
 | 용어 | 뜻 |
 |---|---|
-| **Anthropic** | AI 회사. Claude를 만든 곳. 'AI 안전'을 핵심 가치로 내세웁니다. |
+| **[Anthropic](https://www.crescendo.ai/news/latest-ai-news-and-updates)** | AI 회사. Claude를 만든 곳. 'AI 안전'을 핵심 가치로 내세웁니다. |
 | **재귀적 자기개선** | AI가 자기보다 나은 다음 AI를 만들고, 그게 반복되는 것. 눈덩이가 스스로 커지는 상황에 비유. |
 | **프런티어 AI** | 현재 시점에서 가장 앞선 최첨단 AI를 부르는 말. |
 | **검증 가능한(verifiable)** | 상대가 약속을 진짜 지켰는지 확인할 수 있다는 뜻. 군축 협정에서 핵심 개념. |
 | **IPO(기업공개)** | 회사가 주식시장에 상장해 일반 투자자에게 주식을 파는 것. |
 
 ---
-*출처: [Anthropic — When AI builds itself](https://www.anthropic.com/institute/recursive-self-improvement) · [Al Jazeera](https://www.aljazeera.com/economy/2026/6/5/anthropic-urges-ai-labs-to-pause-warns-humans-risk-losing-control) · [SiliconANGLE](https://siliconangle.com/2026/06/04/anthropic-calls-global-pause-ai-development-humans-lose-control/) · [Crypto Briefing](https://cryptobriefing.com/anthropic-global-pause-ai-self-improvement/)*
+
+# 출처
+- [Crescendo AI News](https://www.crescendo.ai/news/latest-ai-news-and-updates)
+- [Anthropic — When AI builds itself](https://www.anthropic.com/institute/recursive-self-improvement)
+- [Al Jazeera](https://www.aljazeera.com/economy/2026/6/5/anthropic-urges-ai-labs-to-pause-warns-humans-risk-losing-control)
+- [SiliconANGLE](https://siliconangle.com/2026/06/04/anthropic-calls-global-pause-ai-development-humans-lose-control/)
+- [Crypto Briefing](https://cryptobriefing.com/anthropic-global-pause-ai-self-improvement/)

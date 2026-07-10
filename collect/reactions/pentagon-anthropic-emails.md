@@ -69,3 +69,7 @@
 
 ## 🔭 종합 — 반응의 큰 흐름
 "아모데이는 소신을 지켰다"는 동정론이 미국 여론(민주당 상원의원, AI 안전 연구자, HN·X 커뮤니티, 연방판사)에서 우세하며, 에밀 마이클의 xAI 주식 매도(400~4800% 차익)와 블랙리스트 다음날 "매우 근접했다"는 이메일이 동시에 드러나며 국방부·마이클 개인의 이중성·이해충돌 비판이 집중된다. 반대편에는 팔란티어·xAI 등 '테크 라이트' 진영의 실용주의적 비판론이 존재하며, OpenAI·xAI는 국방부 조건을 수용해 그 자리를 차지하는 '행동'으로 응답했다. 국제적으로 유럽은 이를 미국 기술의존 탈피의 계기로 삼는 반면 중국 관영매체는 미국의 자중지란으로 프레이밍한다. 국내(한국)에서는 이번 7/2 이메일 봉인해제 자체를 정면으로 다룬 보도·커뮤니티 반응이 뚜렷하지 않다는 것이 핵심 갭이다.
+
+## 출처
+- [TechTimes · 펜타곤-Anthropic 자율무기 협상 결렬 이메일 공개](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm)
+  https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm
