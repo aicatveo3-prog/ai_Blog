@@ -6,14 +6,14 @@
 
 ---
 ## 한마디로 요약
-OpenAI가 ChatGPT를 만들 때 수집한 7,800만 개의 사용자 대화를 법정에서 숨기려다 들켰습니다. 뉴욕타임스와 다른 저작권자들이 이를 증거로 삼아 법원에 OpenAI에 대한 제재를 요청했습니다.
+[OpenAI가 ChatGPT를 만들 때 수집한 7,800만 개의 사용자 대화를 법정에서 숨기려다 들켰습니다.](https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/) [뉴욕타임스와 다른 저작권자들이 이를 증거로 삼아 법원에 OpenAI에 대한 제재를 요청했습니다.](https://www.washingtonpost.com/business/2026/07/09/openai-new-york-times-ai-copyright-lawsuit/)
 
 ---
 ## 무슨 일이 벌어졌나?
 
-**상황**: 뉴욕타임스가 OpenAI를 상대로 "우리 기사를 무단으로 학습 데이터로 썼다"며 소송을 걸었습니다. 이 재판 과정에서 OpenAI의 엔지니어가 증언했는데, 그 증언에서 생각보다 훨씬 많은 데이터를 보유하고 있었다는 게 드러났습니다.
+**상황**: [뉴욕타임스가 OpenAI를 상대로 "우리 기사를 무단으로 학습 데이터로 썼다"며 소송을 걸었습니다.](https://www.washingtonpost.com/business/2026/07/09/openai-new-york-times-ai-copyright-lawsuit/) 이 재판 과정에서 [OpenAI의 엔지니어가 증언했는데, 그 증언에서 생각보다 훨씬 많은 데이터를 보유하고 있었다는 게 드러났습니다.](https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/)
 
-**구체적으로**: 78백만 개의 ChatGPT 대화 기록이 저장된 데이터베이스가 존재했던 겁니다. 이전에 OpenAI가 이 규모를 공개하지 않았거나, 법정에서 이를 숨기려고 시도했다는 의혹이 나옵니다.
+**구체적으로**: [78백만 개의 ChatGPT 대화 기록이 저장된 데이터베이스가 존재했던 겁니다.](https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/) [이전에 OpenAI가 이 규모를 공개하지 않았거나, 법정에서 이를 숨기려고 시도했다는 의혹이 나옵니다.](https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/)
 
 ---
 ## 왜 이게 문제일까?
@@ -22,8 +22,8 @@ OpenAI가 ChatGPT를 만들 때 수집한 7,800만 개의 사용자 대화를 �
 당신이 일기장을 쓰는데, 누군가 그 일기장을 몰래 복사해서 수백만 권의 책을 만드는 데 사용했다고 상상해보세요. 그리고 법정에 가서 "내가 당신 일기를 몰라요"라고 거짓말한 셈입니다.
 
 **실제 문제점**:
-- 뉴욕타임스 같은 콘텐츠 제작자들이 자신의 저작물이 무단으로 학습 데이터에 포함된 걸 증명하려 하고 있습니다
-- OpenAI가 이 과정에서 데이터 규모를 과소 보고했거나 증거를 숨긴 혐의가 생김
+- [뉴욕타임스 같은 콘텐츠 제작자들이 자신의 저작물이 무단으로 학습 데이터에 포함된 걸 증명하려 하고 있습니다](https://www.washingtonpost.com/business/2026/07/09/openai-new-york-times-ai-copyright-lawsuit/)
+- [OpenAI가 이 과정에서 데이터 규모를 과소 보고했거나 증거를 숨긴 혐의가 생김](https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/)
 - 법정에서 법적 제재(벌금, 손해배상 등)로 이어질 수 있습니다
 
 ---
