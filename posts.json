@@ -14,18 +14,18 @@
   "posts": [
     {
       "id": "nvidia-kyber-delay",
-      "title": "엔비디아 차세대 AI 서버 'Kyber'가 1년 늦는다? — 근데 반박은 딱 한 문장이었어요",
+      "title": "엔비디아 차세대 AI 서버랙 'Kyber'가 1년 늦어진다는 소문, 사실일까?",
       "date": "2026-07-06",
       "type": "B 심층 분석",
       "category": "인사이트",
       "stage": "발행",
       "layout": "feature",
-      "readMin": 8,
+      "readMin": 6,
       "author": "AI 쉽게 알려주는 집",
-      "angle": "리서치 회사 SemiAnalysis가 \"엔비디아 차세대 AI 서버랙 Kyber가 1년 늦는다\"고 근거를 잔뜩 폭로했어요. 엔비디아는 딱 한 문장으로 반박했고요. 상세한 주장 vs 짧은 부인 — 누가 맞는지 아직 모르는 논쟁을 학생도 이해하게 풀었어요.",
+      "angle": "리서치 회사 SemiAnalysis가 \"엔비디아 차세대 AI 서버랙 Kyber가 2028년으로 1년 이상 늦어진다\"고 구체적으로 주장했어요. 엔비디아는 \"로드맵은 그대로\"라는 한 문장으로 반박했고요. 아직 양쪽 주장뿐, 누가 맞는지 모르는 이 논쟁을 학생도 이해하게 쉽게 풀었어요.",
       "lens": ["① 그래서 나한테?"],
       "versions": [
-        { "v": "v1", "date": "2026-07-10", "note": "최초 발행 — 후크+앵커 도입, 주장 vs 실제 대조표, 인라인 출처(SemiAnalysis·Tom's Hardware·CNBC 등)", "path": "drafts/nvidia-kyber-delay/v1.md" }
+        { "v": "v1", "date": "2026-07-10", "note": "최초 발행 — 확정한 쉬운 버전 원문 그대로 + 인라인 출처(SemiAnalysis·Yahoo·Tom's Hardware·CNBC·뉴스핌·FourWeekMBA)", "path": "drafts/nvidia-kyber-delay/v1.md" }
       ]
     },
     {
