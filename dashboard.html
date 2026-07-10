@@ -56,9 +56,9 @@
     background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--ink);transition:.12s}
   .lrow:hover{border-color:var(--accent);box-shadow:0 1px 6px rgba(20,30,50,.06)}
   .lrow .ldates{flex:none;display:flex;gap:14px}
-  .lrow .dcol{display:flex;flex-direction:column;gap:1px;min-width:70px}
+  .lrow .dcol{display:flex;flex-direction:column;gap:1px;min-width:80px}
   .lrow .dcol .dv{font-size:12px;color:var(--muted)}
-  .lrow .dcol .dk{font-size:10px;color:var(--muted);opacity:.7;font-weight:600}
+  .lrow .dcol .dk{font-size:10px;color:var(--muted);opacity:.7;font-weight:600;white-space:nowrap}
   .lrow .ldot{flex:none;font-size:12.5px}
   .lrow .ltitle{flex:1;min-width:0;font-size:13.5px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .lrow .lpost{flex:none;font-size:11px;color:var(--accent);font-weight:700}
@@ -593,9 +593,9 @@ function renderList(){
   const row = it=>{
     let dates;
     if(it.firstSeen && it.surfaced && it.firstSeen!==it.surfaced){
-      dates = cell(it.surfaced,'포착') + cell(it.firstSeen,'소식');   // 왼쪽 포착(우리가 캐치한 날) · 오른쪽 소식(원래 날)
+      dates = cell(it.surfaced,'추가한 날짜') + cell(it.firstSeen,'소식 날짜');   // 왼쪽 추가(우리 레이더에 뜬 날) · 오른쪽 소식(원래 날)
     } else {
-      dates = cell(it.firstSeen||it.surfaced, it.firstSeen?'소식일':'포착일');
+      dates = cell(it.firstSeen||it.surfaced, it.firstSeen?'소식 날짜':'추가한 날짜');
     }
     const dot = it.article ? '📄' : (it.verified ? '✅' : '⚠️');
     const pub = isPub(it);
