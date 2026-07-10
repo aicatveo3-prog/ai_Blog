@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-07",
+  "generated": "2026-07-10",
   "note": "지난 한 달 AI 소식 전방위 수집. firstSeen = 검증된 진짜 첫 등장일(1차/신뢰 소스). 일자 미확정은 verified:false로 '날짜 없음'에 대기. surfaced가 다르면 gap 표시.",
   "items": [
     {
@@ -988,6 +988,96 @@
       "tags": [
         "자금",
         "인프라"
+      ]
+    },
+    {
+      "title": "OpenAI-NYT 저작권 소송 '증거 은폐' 적발",
+      "firstSeen": "2026-07-09",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "TechCrunch·Washington Post·Al Jazeera·Yahoo Finance 5곳+ 교차확인. OpenAI 데이터 프라이버시 엔지니어 법정 증언으로 78백만 개 ChatGPT 대화 데이터베이스 존재 드러남. NYT 등이 법원에 제재 청구.",
+      "source": "https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/",
+      "status": "인박스",
+      "tags": [
+        "OpenAI",
+        "저작권",
+        "소송",
+        "증거은폐",
+        "규제"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/openai-nyt-lawsuit-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/openai-nyt-lawsuit.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/openai-nyt-lawsuit.md"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI, GPT-5.6 (Sol/Terra/Luna) 시리즈 공개 출시",
+      "firstSeen": "2026-07-09",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "OpenAI 공식 발표 + Neowin·TechCrunch·Nextgov 교차확인. Sol(플래그십, 750 tokens/sec)·Terra(비용효율)·Luna(최고속도) 3버전. 정부 안전검증 후 20개 파트너만 배포.",
+      "source": "https://openai.com/index/previewing-gpt-5-6-sol/",
+      "status": "인박스",
+      "tags": [
+        "OpenAI",
+        "모델",
+        "GPT-5.6",
+        "기술",
+        "정부검증"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/openai-gpt56-launch-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/openai-gpt56-launch.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/openai-gpt56-launch.md"
+        }
+      ]
+    },
+    {
+      "title": "Cerebras, 유럽 AI 인프라 확장 발표 — 2027년 말까지 200MW 목표",
+      "firstSeen": "2026-07-09",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "Euronews·GlobeNewswire·Yahoo Finance·Seeking Alpha 교차확인. 파리 RAISE Summit 발표. 2026년 말 첫 데이터센터, 2027년 말 200MW 용량. OpenAI 워크로드 지원 계획.",
+      "source": "https://www.euronews.com/business/2026/07/09/cerebras-targets-europe-with-multibillion-dollar-ai-expansion-challenging-nvidia",
+      "status": "인박스",
+      "tags": [
+        "Cerebras",
+        "인프라",
+        "하드웨어",
+        "유럽",
+        "OpenAI"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/cerebras-europe-expansion-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/cerebras-europe-expansion.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/cerebras-europe-expansion.md"
+        }
       ]
     }
   ]
