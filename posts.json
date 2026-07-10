@@ -8,6 +8,7 @@
     { "name": "🤖 일일 수집 자동화 (플레이북)", "path": "system/daily-collection.md" },
     { "name": "⚖️ 선별 기준 (루브릭 + 킬 기준)", "path": "system/scoring-rubric.md" },
     { "name": "🧠 관점 기준 (분석 프레임워크)", "path": "system/analysis-frameworks.md" },
+    { "name": "✍️ 글쓰기 가이드 (문체·구조·디자인 연동)", "path": "system/writing-guide.md" },
     { "name": "✅ 검수 기준 (체크리스트)", "path": "system/checklists.md" }
   ],
   "posts": [
