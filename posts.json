@@ -13,6 +13,22 @@
   ],
   "posts": [
     {
+      "id": "nvidia-kyber-delay",
+      "title": "엔비디아 차세대 AI 서버 'Kyber'가 1년 늦는다? — 근데 반박은 딱 한 문장이었어요",
+      "date": "2026-07-06",
+      "type": "B 심층 분석",
+      "category": "인사이트",
+      "stage": "발행",
+      "layout": "feature",
+      "readMin": 8,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "리서치 회사 SemiAnalysis가 \"엔비디아 차세대 AI 서버랙 Kyber가 1년 늦는다\"고 근거를 잔뜩 폭로했어요. 엔비디아는 딱 한 문장으로 반박했고요. 상세한 주장 vs 짧은 부인 — 누가 맞는지 아직 모르는 논쟁을 학생도 이해하게 풀었어요.",
+      "lens": ["① 그래서 나한테?"],
+      "versions": [
+        { "v": "v1", "date": "2026-07-10", "note": "최초 발행 — 후크+앵커 도입, 주장 vs 실제 대조표, 인라인 출처(SemiAnalysis·Tom's Hardware·CNBC 등)", "path": "drafts/nvidia-kyber-delay/v1.md" }
+      ]
+    },
+    {
       "id": "microsoft-mai",
       "title": "마이크로소프트가 자기 AI 7개를 만들었어요 — 그런데 설명서 한 줄이 화제가 됐어요",
       "date": "2026-07-07",
