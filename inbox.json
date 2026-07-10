@@ -1079,6 +1079,122 @@
           "path": "collect/reactions/cerebras-europe-expansion.md"
         }
       ]
+    },
+    {
+      "title": "Google 피싱 소송: AI 악용 'Outsider Enterprise' 150만 개 악성 URL",
+      "firstSeen": "2026-06-12",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "FindLaw·TechCrunch·Tech Insider·SecurityWeek 모두 6/12 교차확인. Google이 중국 사이버범죄 조직 Outsider Enterprise를 RICO 혐의로 소송. 150만 개 악성 URL 생성, 387만 개 신용카드 도난, 19억 달러 손실. FBI Operation Riptide 연계 단속.",
+      "source": "https://www.findlaw.com/legalblogs/courtside/google-turns-to-rico-in-battle-against-outsider-enterprise-cybercriminals/",
+      "status": "인박스",
+      "tags": [
+        "논란",
+        "안전",
+        "Google",
+        "AI악용"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/google-phishing-lawsuit-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/google-phishing-lawsuit.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/google-phishing-lawsuit.md"
+        }
+      ]
+    },
+    {
+      "title": "Workday 채용 차별 소송: AI가 '10억 건' 구직 거절 (클래스액션)",
+      "firstSeen": "2026-03-06",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "Akin Gump·Forbes·EEOC·Duane Morris 모두 3/6 판결 교차확인. Derek Mobley가 Workday AI 채용 도구 인종·나이·장애 차별로 소송. 3/6 판사가 Workday 기각 신청 기각, ADEA 구직자 적용 인정. 10,000개 회사 Workday 사용, 약 10억 건 거절.",
+      "source": "https://www.akingump.com/en/insights/ai-law-and-regulation-tracker/court-allows-discrimination-claims-against-ai-hiring-tool-to-proceed-or-mobley-v-workday-inc",
+      "status": "인박스",
+      "tags": [
+        "논란",
+        "안전",
+        "AI윤리",
+        "소송"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/workday-hiring-discrimination-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/workday-hiring-discrimination.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/workday-hiring-discrimination.md"
+        }
+      ]
+    },
+    {
+      "title": "xAI 안전 내부고발 소송: Grok 편향·무기화 경고 엔지니어 해임",
+      "firstSeen": "2026-06-09",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "TechCrunch·Decrypt·CryptoBriefing 모두 6/9~6/10 교차확인. Devin Kim이 Grok 안전 문제(편향·허위정보·무기화) 보고 후 해임, 6/9 부당해고·보복 소송 제기. SpaceX IPO 직전 타이밍. Kim은 현재 Center for AI Safety 회장.",
+      "source": "https://techcrunch.com/2026/06/10/xai-fired-an-engineer-who-raised-alarms-about-grok-safety-new-lawsuit-claims/",
+      "status": "인박스",
+      "tags": [
+        "논란",
+        "안전",
+        "xAI",
+        "내부고발"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/xai-safety-whistleblower-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/xai-safety-whistleblower.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/xai-safety-whistleblower.md"
+        }
+      ]
+    },
+    {
+      "title": "Illinois AI 안전법 서명: 미국 최초 연간 독립감사 의무화",
+      "firstSeen": "2026-07-06",
+      "surfaced": "2026-07-10",
+      "verified": true,
+      "verifyNote": "Capitol News Illinois·WTTW·Gov. Pritzker·Transparency Coalition·JURIST 모두 7/6 교차확인. Gov. Pritzker가 SB315 서명, 연 매출 5억달러+ AI 기업에 독립감시감사 의무화. 재앙적 위험(50명+ 사망·100만달러+ 재산피해) 파악 요구. 72시간 보고(긴급 24시간). 위반 시 최대 300만달러. OpenAI·Anthropic 지지, 하원 110대 0 만장일치.",
+      "source": "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-signs-nation-leading-artificial-intelligence-safety-law",
+      "status": "인박스",
+      "tags": [
+        "정책",
+        "안전",
+        "규제",
+        "미국"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/illinois-ai-safety-law-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/illinois-ai-safety-law.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/illinois-ai-safety-law.md"
+        }
+      ]
     }
   ]
 }
