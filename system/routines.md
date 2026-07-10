@@ -48,7 +48,7 @@
 | **트리거** | 게이트를 통과한 항목에 대해 내가 "이 slug로 글 써줘" 지시. |
 | **하는 일** | ⓐ **교차검증 패스**(자료 간 모순·함정 찾기) → ⓑ 종합 초안 → ⓒ 자기검수·비판 → `drafts/<slug>/v1.md` 저장 |
 | **모델** | **Opus 4.8** (교차검증·집필·검수 = 품질 결정 구간). 공통 접두부(`writing-guide.md` + 골드 스탠다드)는 **프롬프트 캐싱**(~90%↓). |
-| **프롬프트** | 교차검증 `prompts/K-crosscheck.md` *(신설 예정)* · 초안 `prompts/I` · 검수 `prompts/F` |
+| **프롬프트** | 교차검증 `prompts/K-crosscheck.md` · 초안 `prompts/I` · 검수 `prompts/F` |
 | **기준** | 문체·구조·정직성은 `system/writing-guide.md` 통과 필수. 골드 스탠다드 = `drafts/microsoft-mai/v1.md`. |
 | **끝점** | "검수 통과한 원고" — 아직 배포 전. |
 
@@ -83,7 +83,7 @@
 ## 만들 것 (구축 체크리스트)
 
 - [x] **1. `system/routines.md`** — 이 문서 (기획 확정본)
-- [ ] **2. 루틴 ② 교차검증 프롬프트** — `prompts/K-crosscheck.md` 신설 (지금 없음)
+- [x] **2. 루틴 ② 교차검증 프롬프트** — `prompts/K-crosscheck.md` 신설 완료
 - [ ] **3. 루틴 ① 스케줄 트리거 등록** — Claude 스케줄 트리거(매일), 프롬프트=`daily-collection.md`
 - [ ] 4.(선택) 대시보드 상태 뱃지(인박스→선정→발행)
 
