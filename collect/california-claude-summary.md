@@ -25,4 +25,10 @@
 주 AI 도구 'Poppy'가 **[67개 부서, 2,800명 이상](https://www.crescendo.ai/news/latest-ai-news-and-updates)** 직원과 파일럿을 거쳐 **2026년 7월 전면 롤아웃** 예정.
 
 ---
-*출처: [캘리포니아 주지사실 발표](https://www.gov.ca.gov/2026/06/29/governor-newsom-announces-a-first-of-its-kind-partnership-providing-anthropic-tools-to-state-agencies-and-improving-services-for-californians/) · [TechCrunch](https://techcrunch.com/2026/06/29/anthropic-and-gov-newsom-forge-deal-allowing-california-government-to-use-claude-at-half-price/) · [CBS Sacramento](https://www.cbsnews.com/sacramento/news/california-claude-deal-gavin-newsom/) · [Fox Business](https://www.foxbusiness.com/politics/newsoms-office-touts-anthropic-partnership-50-discount-claude-ai-california-agencies-localities)*
+
+# 출처
+- [Crescendo AI News](https://www.crescendo.ai/news/latest-ai-news-and-updates)
+- [캘리포니아 주지사실 발표](https://www.gov.ca.gov/2026/06/29/governor-newsom-announces-a-first-of-its-kind-partnership-providing-anthropic-tools-to-state-agencies-and-improving-services-for-californians/)
+- [TechCrunch](https://techcrunch.com/2026/06/29/anthropic-and-gov-newsom-forge-deal-allowing-california-government-to-use-claude-at-half-price/)
+- [CBS Sacramento](https://www.cbsnews.com/sacramento/news/california-claude-deal-gavin-newsom/)
+- [Fox Business](https://www.foxbusiness.com/politics/newsoms-office-touts-anthropic-partnership-50-discount-claude-ai-california-agencies-localities)

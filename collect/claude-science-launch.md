@@ -67,4 +67,13 @@ AI로 신약을 찾는 경쟁은 이미 치열해요. 구글 딥마인드 계열
 | 전임상(단계) | 사람을 대상으로 한 임상시험에 들어가기 전, 실험실·동물 실험 등으로 약효와 안전성을 살피는 초기 연구 단계예요. |
 
 ---
-*출처: [Anthropic 공식 발표](https://www.anthropic.com/news/claude-science-ai-workbench) · [CNBC](https://www.cnbc.com/2026/06/30/anthropic-launches-ai-drug-discovery-program-claude-science.html) · [MIT Technology Review](https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/) · [Northeastern Global News](https://news.northeastern.edu/2026/06/30/anthropic-claude-science-launch/) · [Pharmaceutical Technology](https://www.pharmaceutical-technology.com/news/anthropic-launches-claude-science-ai-tool-drug-discovery/) · [pharmaphorum](https://pharmaphorum.com/news/anthropic-launches-claude-science-pharma-researchers) · [Inc.com](https://www.inc.com/kevin-haynes/the-new-anthropic-tool-that-could-change-how-drugs-are-developed/91369690)*
+
+# 출처
+
+- [Anthropic 공식 발표](https://www.anthropic.com/news/claude-science-ai-workbench)
+- [CNBC](https://www.cnbc.com/2026/06/30/anthropic-launches-ai-drug-discovery-program-claude-science.html)
+- [MIT Technology Review](https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/)
+- [Northeastern Global News](https://news.northeastern.edu/2026/06/30/anthropic-claude-science-launch/)
+- [Pharmaceutical Technology](https://www.pharmaceutical-technology.com/news/anthropic-launches-claude-science-ai-tool-drug-discovery/)
+- [pharmaphorum](https://pharmaphorum.com/news/anthropic-launches-claude-science-pharma-researchers)
+- [Inc.com](https://www.inc.com/kevin-haynes/the-new-anthropic-tool-that-could-change-how-drugs-are-developed/91369690)

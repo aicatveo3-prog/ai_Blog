@@ -14,12 +14,12 @@ Cerebras라는 AI 칩 회사가 "유럽에 대규모 AI 데이터센터를 짓�
 **배경**: 
 - 현재 AI 학습과 운영에는 엄청난 컴퓨팅 파워가 필요합니다
 - 이 파워를 제공하는 곳은 주로 미국(Nvidia 중심) 또는 중국입니다
-- 유럽은 "자신만의 AI 인프라를 만들고 싶다"는 강한 의지를 가지고 있습니다
+- [유럽은 "자신만의 AI 인프라를 만들고 싶다"는 강한 의지를 가지고 있습니다](https://www.euronews.com/business/2026/07/09/cerebras-targets-europe-with-multibillion-dollar-ai-expansion-challenging-nvidia)
 
 **Cerebras의 전략**: 
-- Cerebras는 Nvidia와 다른 방식의 칩(웨이퍼스케일 엔진)을 만드는 회사
-- Nvidia 독점을 피하고 싶어하는 유럽의 필요와 딱 맞습니다
-- 유럽에 기지를 세우면, 유럽뿐 아니라 전 세계에서 고객을 받을 수 있습니다
+- [Cerebras는 Nvidia와 다른 방식의 칩(웨이퍼스케일 엔진)을 만드는 회사](https://www.globenewswire.com/news-release/2026/07/09/3324566/0/en/Cerebras-Systems-Accelerates-European-Expansion-with-200MW-of-AI-Compute-Capacity-by-End-of-2027.html)
+- [Nvidia 독점을 피하고 싶어하는 유럽의 필요와 딱 맞습니다](https://www.euronews.com/business/2026/07/09/cerebras-targets-europe-with-multibillion-dollar-ai-expansion-challenging-nvidia)
+- [유럽에 기지를 세우면, 유럽뿐 아니라 전 세계에서 고객을 받을 수 있습니다](https://www.globenewswire.com/news-release/2026/07/09/3324566/0/en/Cerebras-Systems-Accelerates-European-Expansion-with-200MW-of-AI-Compute-Capacity-by-End-of-2027.html)
 
 ---
 ## 구체적으로 뭘 하겠다는 거?
@@ -46,8 +46,8 @@ Cerebras라는 AI 칩 회사가 "유럽에 대규모 AI 데이터센터를 짓�
 - Cerebras의 유럽 센터 = 유럽의 "AI 자주권" 확보
 
 **OpenAI의 입장**:
-- OpenAI가 Cerebras 하드웨어를 사용 중 (GPT-5.6 Sol 모델 운영)
-- 이제 OpenAI도 유럽에서 직접 운영할 수 있게 됨
+- [OpenAI가 Cerebras 하드웨어를 사용 중 (GPT-5.6 Sol 모델 운영)](https://ca.finance.yahoo.com/news/cerebras-targets-europe-multibillion-dollar-094538665.html)
+- [이제 OpenAI도 유럽에서 직접 운영할 수 있게 됨](https://ca.finance.yahoo.com/news/cerebras-targets-europe-multibillion-dollar-094538665.html)
 
 **Nvidia의 입장**:
 - Nvidia의 독점적 지위가 약해질 수 있음

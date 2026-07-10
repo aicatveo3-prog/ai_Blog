@@ -58,4 +58,13 @@
 | 국가안보(national security) | 정부가 이번 수출통제의 근거로 든 이유. AI가 사이버공격 등에 악용될 수 있다는 우려를 담고 있어요. |
 
 ---
-*출처: [Anthropic 공식 블로그 "Redeploying Fable 5"](https://www.anthropic.com/news/redeploying-fable-5) · [CNBC](https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html) · [TheHackerNews](https://thehackernews.com/2026/07/anthropic-restores-claude-fable-5-after.html) · [FoxBusiness](https://www.foxbusiness.com/technology/trump-administration-lifts-claude-mythos-5-fable-5-export-restrictions-after-anthropic-works-government) · [9to5Mac](https://9to5mac.com/2026/07/01/claude-fable-5-cleared-to-return-as-us-lifts-anthropics-export-control-restriction/) · [Hacker News 토론](https://news.ycombinator.com/item?id=48740771) · [cybersecuritynews.com](https://cybersecuritynews.com/export-controls-fable-5-and-mythos-5/)*
+
+# 출처
+
+- [Anthropic 공식 블로그 "Redeploying Fable 5"](https://www.anthropic.com/news/redeploying-fable-5)
+- [CNBC](https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html)
+- [TheHackerNews](https://thehackernews.com/2026/07/anthropic-restores-claude-fable-5-after.html)
+- [FoxBusiness](https://www.foxbusiness.com/technology/trump-administration-lifts-claude-mythos-5-fable-5-export-restrictions-after-anthropic-works-government)
+- [9to5Mac](https://9to5mac.com/2026/07/01/claude-fable-5-cleared-to-return-as-us-lifts-anthropics-export-control-restriction/)
+- [Hacker News 토론](https://news.ycombinator.com/item?id=48740771)
+- [cybersecuritynews.com](https://cybersecuritynews.com/export-controls-fable-5-and-mythos-5/)

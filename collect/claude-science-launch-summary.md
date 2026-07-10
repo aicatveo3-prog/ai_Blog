@@ -45,4 +45,13 @@
 - 경쟁 구도로는 구글 딥마인드 계열 Isomorphic Labs가 자체 AI로 설계한 신약 후보의 임상 진입을 앞두고 있고, 구글은 AlphaFold·AlphaGenome과 30개 이상의 생명과학 데이터베이스를 묶은 'Gemini for Science'를, 오픈AI는 지난 4월 생물학적 추론에 특화된 모델 'GPT-Rosalind'를 내놓은 바 있다고 보도됐다.
 
 ---
-*출처: [Anthropic 공식 발표](https://www.anthropic.com/news/claude-science-ai-workbench) · [CNBC](https://www.cnbc.com/2026/06/30/anthropic-launches-ai-drug-discovery-program-claude-science.html) · [MIT Technology Review](https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/) · [Northeastern Global News](https://news.northeastern.edu/2026/06/30/anthropic-claude-science-launch/) · [Pharmaceutical Technology](https://www.pharmaceutical-technology.com/news/anthropic-launches-claude-science-ai-tool-drug-discovery/) · [pharmaphorum](https://pharmaphorum.com/news/anthropic-launches-claude-science-pharma-researchers) · [Inc.com](https://www.inc.com/kevin-haynes/the-new-anthropic-tool-that-could-change-how-drugs-are-developed/91369690)*
+
+# 출처
+
+- [Anthropic 공식 발표](https://www.anthropic.com/news/claude-science-ai-workbench)
+- [CNBC](https://www.cnbc.com/2026/06/30/anthropic-launches-ai-drug-discovery-program-claude-science.html)
+- [MIT Technology Review](https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/)
+- [Northeastern Global News](https://news.northeastern.edu/2026/06/30/anthropic-claude-science-launch/)
+- [Pharmaceutical Technology](https://www.pharmaceutical-technology.com/news/anthropic-launches-claude-science-ai-tool-drug-discovery/)
+- [pharmaphorum](https://pharmaphorum.com/news/anthropic-launches-claude-science-pharma-researchers)
+- [Inc.com](https://www.inc.com/kevin-haynes/the-new-anthropic-tool-that-could-change-how-drugs-are-developed/91369690)

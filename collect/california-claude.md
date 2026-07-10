@@ -8,9 +8,9 @@
 
 ## 한마디로 요약
 
-2026년 6월 29일, 미국 **캘리포니아 주정부**가 AI 챗봇 **Claude**(Anthropic이 만든 AI)를 **모든 주 기관 공무원이 업무에 사용할 수 있도록** 공식 도입했습니다.
+2026년 6월 29일, 미국 **[캘리포니아 주정부](https://www.crescendo.ai/news/latest-ai-news-and-updates)**가 AI 챗봇 **[Claude](https://www.crescendo.ai/news/latest-ai-news-and-updates)**(Anthropic이 만든 AI)를 **모든 주 기관 공무원이 업무에 사용할 수 있도록** 공식 도입했습니다.
 
-여기에 더해 **정가의 절반(50% 할인)** 조건이라는 파격적인 가격까지 받아냈습니다.
+여기에 더해 **[정가의 절반(50% 할인)](https://www.crescendo.ai/news/latest-ai-news-and-updates)** 조건이라는 파격적인 가격까지 받아냈습니다.
 
 ---
 
@@ -19,7 +19,7 @@
 이 소식이 단순한 "한 고객이 AI를 샀다" 수준이 아닌 이유가 있습니다.
 
 **캘리포니아는 보통 주(州)가 아닙니다:**
-- 미국 50개 주 중 **인구 1위** (약 3,900만 명, 한국 인구의 75%)
+- 미국 50개 주 중 **[인구 1위](https://www.crescendo.ai/news/latest-ai-news-and-updates)** (약 3,900만 명, 한국 인구의 75%)
 - **경제 규모 1위** — 만약 캘리포니아가 독립 국가라면, GDP 기준 **세계 5위** 경제 대국
 - **실리콘밸리**가 여기 있어서, 전 세계 기술 산업의 중심지
 

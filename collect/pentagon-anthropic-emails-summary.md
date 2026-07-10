@@ -28,5 +28,6 @@
 - [2026년 3월 26일, 연방판사 Rita Lin은 예비 금지명령을 내리며 "공급망 위험 지정과 '매우 근접했다'는 이메일을 함께 놓고 보면 둘을 결부시키기 매우 어렵다"고 지적하고, 국방부의 '오웰식' 논리는 관련 법 어디에도 근거가 없다고 명시했다](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm).
 - [7월 2일의 이번 봉인 해제는 이 소송 과정에서 오간 이메일 원문이 공개된 것이다](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm).
 
----
-*출처: [TechTimes](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm) · [Gizmodo](https://gizmodo.com/read-the-tense-emails-between-the-pentagon-former-uber-exec-and-anthropic-dario-amodei-2000780849) · [RealClearDefense](https://www.realcleardefense.com/2026/07/03/the_emails_revealing_how_anthropics_pentagon_relationship_fell_apart_1192428.html) · [The Next Web](https://thenextweb.com/news/anthropic-pentagon-emails-amodei-michael-guardrails) · [SecurityWeek](https://www.securityweek.com/pentagons-chief-tech-officer-says-he-clashed-with-ai-company-anthropic-over-autonomous-warfare/)*
+# 출처
+- [TechTimes · 펜타곤이 Anthropic을 공급망 위험으로 지정한 후 "매우 근접했다" 이메일 시점 모순 보도](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm)
+  https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm
