@@ -24,6 +24,11 @@
 - Cerebras는 2026년 5월 IPO로 $5.5B 조성
 - 유럽 진출은 글로벌 인프라 다변화 전략의 일환
 - [OpenAI와의 제휴로 GPT-5.6 Sol 추론 운영 중](https://ca.finance.yahoo.com/news/cerebras-targets-europe-multibillion-dollar-094538665.html)
+- [유럽 확장으로 Nvidia 독점 상태 도전](https://www.euronews.com/business/2026/07/09/cerebras-targets-europe-with-multibillion-dollar-ai-expansion-challenging-nvidia)
 
 ---
-*출처: Euronews · GlobeNewswire · Yahoo Finance · Seeking Alpha · Cerebras Investor Relations*
+
+# 출처
+- [Euronews](https://www.euronews.com/business/2026/07/09/cerebras-targets-europe-with-multibillion-dollar-ai-expansion-challenging-nvidia)
+- [GlobeNewswire](https://www.globenewswire.com/news-release/2026/07/09/3324566/0/en/Cerebras-Systems-Accelerates-European-Expansion-with-200MW-of-AI-Compute-Capacity-by-End-of-2027.html)
+- [Yahoo Finance](https://ca.finance.yahoo.com/news/cerebras-targets-europe-multibillion-dollar-094538665.html)

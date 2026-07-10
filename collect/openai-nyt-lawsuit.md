@@ -58,4 +58,7 @@
 | **소송** | 법원에 가서 분쟁을 해결하는 과정 |
 
 ---
-*출처: TechCrunch · Washington Post · Al Jazeera · Yahoo Finance*
+
+# 출처
+- [TechCrunch](https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/)
+- [Washington Post](https://www.washingtonpost.com/business/2026/07/09/openai-new-york-times-ai-copyright-lawsuit/)

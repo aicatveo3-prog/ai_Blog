@@ -33,4 +33,14 @@
 - 이번 사태의 최초 보고자는 Amazon 최고경영자 Andy Jassy로 알려졌으며, Amazon은 Anthropic의 최대 외부 투자자이기도 하다는 점이 여러 매체에서 함께 언급됐다.
 
 ---
-*출처: [Anthropic 공식 블로그 "Redeploying Fable 5"](https://www.anthropic.com/news/redeploying-fable-5) · [CNBC](https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html) · [TheHackerNews](https://thehackernews.com/2026/07/anthropic-restores-claude-fable-5-after.html) · [FoxBusiness](https://www.foxbusiness.com/technology/trump-administration-lifts-claude-mythos-5-fable-5-export-restrictions-after-anthropic-works-government) · [9to5Mac](https://9to5mac.com/2026/07/01/claude-fable-5-cleared-to-return-as-us-lifts-anthropics-export-control-restriction/) · [Hacker News 토론](https://news.ycombinator.com/item?id=48740771) · [cybersecuritynews.com](https://cybersecuritynews.com/export-controls-fable-5-and-mythos-5/) · [MarkTechPost](https://www.marktechpost.com/2026/07/01/anthropic-redeploys-claude-fable-5-on-july-1-after-us-export-controls-lift-adds-new-cybersecurity-classifier/)*
+
+# 출처
+
+- [Anthropic 공식 블로그 "Redeploying Fable 5"](https://www.anthropic.com/news/redeploying-fable-5)
+- [CNBC](https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html)
+- [TheHackerNews](https://thehackernews.com/2026/07/anthropic-restores-claude-fable-5-after.html)
+- [FoxBusiness](https://www.foxbusiness.com/technology/trump-administration-lifts-claude-mythos-5-fable-5-export-restrictions-after-anthropic-works-government)
+- [9to5Mac](https://9to5mac.com/2026/07/01/claude-fable-5-cleared-to-return-as-us-lifts-anthropics-export-control-restriction/)
+- [Hacker News 토론](https://news.ycombinator.com/item?id=48740771)
+- [cybersecuritynews.com](https://cybersecuritynews.com/export-controls-fable-5-and-mythos-5/)
+- [MarkTechPost](https://www.marktechpost.com/2026/07/01/anthropic-redeploys-claude-fable-5-on-july-1-after-us-export-controls-lift-adds-new-cybersecurity-classifier/)

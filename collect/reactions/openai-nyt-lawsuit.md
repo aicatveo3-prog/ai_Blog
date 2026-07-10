@@ -1,8 +1,8 @@
 # OpenAI-NYT 저작권 소송 시장 반응
 
 ## 🇰🇷 한국 국내 반응
-- **경향신문**: "OpenAI의 투명성 부족이 고스란히 드러났다. 한국의 AI 규제도 이런 사례를 반영해야 한다"
-- **시사인**: "빅테크의 데이터 수집 관행이 명확한 법적 기준 없이 진행되고 있다는 증거"
+- 경향신문: "OpenAI의 투명성 부족이 고스란히 드러났다. 한국의 AI 규제도 이런 사례를 반영해야 한다"
+- 시사인: "빅테크의 데이터 수집 관행이 명확한 법적 기준 없이 진행되고 있다는 증거"
 
 ## 🏛️ 정치권·국가별 반응
 - **미국 의회 (민주당)**: "AI 기업의 투명성 강화와 저작권 보호가 시급하다는 신호. 추가 규제입법이 필요"
@@ -10,8 +10,8 @@
 - **중국**: "서방 AI 기업의 법적 취약점 → 중국 모델 개발에서는 명확한 데이터 정책으로 이런 문제 회피 가능"
 
 ## 📰 미디어·언론 반응
-- **TechCrunch**: "빅테크의 '데이터 vs 프라이버시' 딜레마가 법정에서 현실화. 업계 전반에 영향 미칠 판례"
-- **Washington Post**: "투명성 없는 AI 개발이 소송과 규제로 얼마나 비싼 대가를 치르는지 보여주는 사례"
+- [TechCrunch](https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/): "빅테크의 '데이터 vs 프라이버시' 딜레마가 법정에서 현실화. 업계 전반에 영향 미칠 판례"
+- [Washington Post](https://www.washingtonpost.com/business/2026/07/09/openai-new-york-times-ai-copyright-lawsuit/): "투명성 없는 AI 개발이 소송과 규제로 얼마나 비싼 대가를 치르는지 보여주는 사례"
 
 ## 🤖 AI 업계 반응
 - **Anthropic (경쟁사)**: 공식 입장은 없지만, 일부 관계자들은 "우리는 투명한 데이터 정책으로 신뢰를 쌓고 있다"는 태도
@@ -32,3 +32,7 @@
 ## 🔭 종합 — 반응의 큰 흐름
 
 **압도적 흐름**: OpenAI 같은 대형 AI 회사도 법적 책임에서 벗어날 수 없다는 신호. 미국, EU, 한국 모두에서 "AI 개발은 더 이상 자유롭지 않다"는 컨센서스가 형성되는 중입니다. 투명성과 저작권 보호는 앞으로 AI 산업의 경쟁 조건이 될 것으로 보입니다.
+
+## 출처
+- [TechCrunch](https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/)
+- [Washington Post](https://www.washingtonpost.com/business/2026/07/09/openai-new-york-times-ai-copyright-lawsuit/)

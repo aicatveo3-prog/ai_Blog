@@ -10,8 +10,8 @@
 - **중국**: "OpenAI의 다층화 전략이 중국 시장 진출 차단용일 수 있다"
 
 ## 📰 미디어·언론 반응
-- **TechCrunch**: "GPT-5.6 출시는 OpenAI의 시장 점유율 확대 신호. Anthropic, Google의 대응 카드 주목"
-- **ExplainX.ai**: "Sol의 추론 능력이 과대평가되는 경향. 실제 성능 검증 필요"
+- [TechCrunch](https://techcrunch.com/2026/07/09/openai-releases-gpt-5-6-sol-terra-luna/): "GPT-5.6 출시는 OpenAI의 시장 점유율 확대 신호. Anthropic, Google의 대응 카드 주목"
+- ExplainX.ai: "Sol의 추론 능력이 과대평가되는 경향. 실제 성능 검증 필요"
 
 ## 🤖 AI 업계 반응
 - **Anthropic**: "우리의 Claude는 비용-성능 비율에서 Terra보다 우수하다" (간접 평가)
@@ -34,3 +34,7 @@
 ## 🔭 종합 — 반응의 큰 흐름
 
 **가장 강한 신호**: OpenAI가 단순한 "더 똑똑한 AI"에서 "다양한 고객을 위한 AI 인프라 제공자"로 진화했다는 점입니다. 가격대 다양화와 정부 검증 통과는 시장에서의 지배력 확대를 의미하며, 동시에 경쟁사들과 신생 AI 회사들에게는 생존 압박으로 작용할 가능성이 높습니다.
+
+## 출처
+- [TechCrunch](https://techcrunch.com/2026/07/09/openai-releases-gpt-5-6-sol-terra-luna/)
+- [CryptoBriefing](https://cryptobriefing.com/openai-gpt-56-cerebras/)

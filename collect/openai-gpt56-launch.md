@@ -75,4 +75,8 @@ OpenAI가 새로운 GPT-5.6을 출시하는데, 고민하는 사람용(Sol), 검
 | **정부 검증** | 국가기관이 제품의 안전성을 확인하는 과정 |
 
 ---
-*출처: OpenAI 공식 · Neowin · ExplainX.ai · CryptoBriefing · Nextgov*
+
+# 출처
+- [OpenAI 공식](https://openai.com/index/previewing-gpt-5-6-sol/)
+- [TechCrunch](https://techcrunch.com/2026/07/09/openai-releases-gpt-5-6-sol-terra-luna/)
+- [CryptoBriefing](https://cryptobriefing.com/openai-gpt-56-cerebras/)

@@ -19,4 +19,7 @@
 - 향후 유사 소송에서 선례로 작용할 가능성
 
 ---
-*출처: TechCrunch · Washington Post · Al Jazeera · Yahoo Finance*
+
+# 출처
+- [TechCrunch](https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/)
+- [Washington Post](https://www.washingtonpost.com/business/2026/07/09/openai-new-york-times-ai-copyright-lawsuit/)
