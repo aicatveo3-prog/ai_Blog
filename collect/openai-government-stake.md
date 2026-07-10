@@ -65,18 +65,18 @@ ChatGPT를 만든 회사 OpenAI가, 미국 정부에 [**자기 회사 지분 5%(
 
 아직 전혀 아닙니다. 지금 상태를 정확히 말하면 이렇습니다.
 
-- **초기 논의 단계**입니다. "이렇게 하면 어떨까" 하는 이야기가 오가는 중입니다.
-- 실제로 하려면 **미국 의회의 승인**이 필요합니다. 정부 마음대로 되는 게 아닙니다.
-- OpenAI·정부가 **다음 주 백악관에서 만날 예정**이라고 전해졌습니다.
-- 경쟁사인 **앤트로픽은 "우리는 그런 논의를 한 적 없다"**고 선을 그었습니다. 백악관도 앤트로픽과는 논의한 바 없다고 했고요. 지금으로선 **OpenAI 혼자 꺼낸 카드**입니다.
+- [**초기 논의 단계**입니다. "이렇게 하면 어떨까" 하는 이야기가 오가는 중입니다](https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html).
+- [실제로 하려면 **미국 의회의 승인**이 필요합니다](https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html). 정부 마음대로 되는 게 아닙니다.
+- [OpenAI·정부가 **다음 주 백악관에서 만날 예정**이라고 전해졌습니다](https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html).
+- [경쟁사인 **앤트로픽은 "우리는 그런 논의를 한 적 없다"**고 선을 그었습니다](https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html). 백악관도 앤트로픽과는 논의한 바 없다고 했고요. 지금으로선 **OpenAI 혼자 꺼낸 카드**입니다.
 
 ---
 
 ## 이게 우리한테 어떤 의미인가?
 
-- **AI 회사와 정부의 관계가 새로운 실험대에 올랐습니다.** 정부가 규제자에서 '동업자'로 바뀌면 어떤 일이 생길지, 세계가 주목하는 첫 사례가 될 수 있습니다.
+- [**AI 회사와 정부의 관계가 새로운 실험대에 올랐습니다.** 정부가 규제자에서 '동업자'로 바뀌면 어떤 일이 생길지, 세계가 주목하는 첫 사례가 될 수 있습니다](https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html).
 - **"AI가 번 돈을 어떻게 나눌 것인가"**라는 질문이 본격적으로 공론장에 올라왔습니다. 한국에서도 노르웨이 국부펀드 모델을 참고한 'AI 국민배당금' 같은 논의가 나온 적이 있어, 남의 나라 얘기만은 아닙니다.
-- 다만 아직 **초기 논의 단계**이므로, 지금 결론을 내기보다는 앞으로 의회·백악관에서 어떻게 진행되는지 지켜볼 사안입니다.
+- 다만 [아직 **초기 논의 단계**이므로, 지금 결론을 내기보다는 앞으로 의회·백악관에서 어떻게 진행되는지 지켜볼 사안입니다](https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html).
 
 ---
 
@@ -92,5 +92,6 @@ ChatGPT를 만든 회사 OpenAI가, 미국 정부에 [**자기 회사 지분 5%(
 | **이해충돌(conflict of interest)** | 심판이 특정 팀 주식을 가진 것처럼, 공정해야 할 위치에 있는 쪽이 사적 이해관계를 함께 갖게 되어 판단이 흔들릴 수 있는 상황. |
 | **FTC** | 미국 연방거래위원회. 기업의 불공정 거래·독과점을 감시하는 규제 기관. |
 
----
-*출처: [CNBC](https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html) · [Axios](https://www.axios.com/2026/07/02/openai-stake-trump-altman) · [Semafor](https://www.semafor.com/article/07/02/2026/openai-considers-giving-us-government-5-stake) · [Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-floats-5-percent-government-stake-days-after-washington-delayed-gpt-5-6)*
+# 출처
+- [CNBC · OpenAI, 미 정부에 지분 5% 제공 제안](https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html)
+  https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html

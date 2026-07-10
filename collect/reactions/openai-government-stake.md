@@ -66,3 +66,7 @@
 
 ## 🔭 종합 — 반응의 큰 흐름
 "AI 부의 공유"라는 명분과 "정치적 보험/뇌물"이라는 냉소가 정면 충돌한다. 트럼프는 우호적이고 샌더스 등 진보 진영은 "5%로는 부족하다"며 더 급진적 국유화를 요구하는 이례적 좌우 동시 관심을 보이는 반면, 우파 일각과 자유시장론자는 "정경유착"이라 비판하고 소비자단체·영국 매체는 "규제기관이 곧 주주가 되는 이해상충"과 "대중을 매수하려는 냉소적 제스처"라며 날을 세운다. 앤트로픽의 즉각적 선긋기, 구글·메타의 침묵, 국내 커뮤니티 반응의 부재는 이 사안이 여전히 "초기 제안 단계"로 소비되고 있음을 보여준다. 전반적으로 지지보다 회의·경계 정서가 우세하다.
+
+## 출처
+- [CNBC · OpenAI, 미 정부에 지분 5% 제공 제안](https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html)
+  https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html
