@@ -11,9 +11,9 @@
 - **미국 정부**: "미국 기업(Cerebras)의 해외 확장은 환영하나, 기술 유출 감시 필요"
 
 ## 📰 미디어·언론 반응
-- **Euronews**: "역사적 전환점. 유럽이 AI 인프라에서 미국 의존도 탈피 시작"
-- **Financial Times**: "Cerebras vs Nvidia... 글로벌 AI 패권 재편의 시작"
-- **Bloomberg**: "대규모 투자 규모는 Cerebras의 기업 가치 평가(Valuation) 급상승의 신호"
+- [Euronews](https://www.euronews.com/business/2026/07/09/cerebras-targets-europe-with-multibillion-dollar-ai-expansion-challenging-nvidia): "역사적 전환점. 유럽이 AI 인프라에서 미국 의존도 탈피 시작"
+- Financial Times: "Cerebras vs Nvidia... 글로벌 AI 패권 재편의 시작"
+- Bloomberg: "대규모 투자 규모는 Cerebras의 기업 가치 평가(Valuation) 급상승의 신호"
 
 ## 🤖 AI·하드웨어 업계 반응
 - **Nvidia**: 공식 입장 없으나, 분석가들: "Cerebras의 경쟁력은 제한적. 아직 시간 필요"
@@ -50,3 +50,8 @@
 3. **투자자 신뢰 강화**: IPO 후 첫 대형 프로젝트 발표로 Cerebras가 단순한 스타트업을 넘어 "진짜 대안"으로 인정받는 중.
 
 **장기 영향**: 2027년 유럽 센터 완성 시점에 AI 인프라 시장의 구도가 크게 바뀔 것으로 예상됩니다.
+
+## 출처
+- [Euronews](https://www.euronews.com/business/2026/07/09/cerebras-targets-europe-with-multibillion-dollar-ai-expansion-challenging-nvidia)
+- [GlobeNewswire](https://www.globenewswire.com/news-release/2026/07/09/3324566/0/en/Cerebras-Systems-Accelerates-European-Expansion-with-200MW-of-AI-Compute-Capacity-by-End-of-2027.html)
+- [Yahoo Finance](https://ca.finance.yahoo.com/news/cerebras-targets-europe-multibillion-dollar-094538665.html)

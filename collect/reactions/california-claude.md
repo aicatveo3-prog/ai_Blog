@@ -56,3 +56,8 @@
 - [Awesome Agents(소셜 집계)](https://awesomeagents.ai/news/anthropic-california-claude-half-price-newsom/): SNS 대표 냉소 — "곧 재정적으로 붕괴할 산업에 스스로를 묶어놓고, 그들이 무너지면 '필수 인프라'라며 납세자 돈으로 구제하려는 거냐?" 반면 일부는 "AI 도입·사용성 확대의 진전"이라며 옹호.
 - [X 트렌딩](https://x.com/i/trending/2071629226567168188): "California Partners with Anthropic for Discounted Claude AI"가 X 트렌딩 토픽으로 형성된 것은 확인. ※ 개별 트윗 원문/작성자는 미검증(과장 방지 차원 명시).
 - *갭*: 레딧(r/California·r/sacramento)의 구체적 스레드는 이번 조사에서 검증되지 않아, '일자리 공포 밈'·'내 세금' 류 개별 게시물은 지어내지 않고 위 집계 매체가 전한 '납세자 구제' 냉소로 한정합니다.
+
+---
+
+## 출처
+- [Crescendo AI News](https://www.crescendo.ai/news/latest-ai-news-and-updates)

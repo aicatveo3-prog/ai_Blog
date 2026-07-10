@@ -8,7 +8,7 @@
 
 ## 한마디로 요약
 
-미국 국방부와, Claude를 만든 AI 회사 Anthropic이 계약을 놓고 크게 다퉜습니다. 그 다툼 과정에서 두 사람(Anthropic 대표와 국방부 협상 담당자)이 주고받은 이메일이 2026년 7월 2일 법원 문서 봉인 해제로 공개됐습니다.
+미국 국방부와, Claude를 만든 AI 회사 Anthropic이 계약을 놓고 크게 다퉜습니다. 그 다툼 과정에서 두 사람(Anthropic 대표와 국방부 협상 담당자)이 주고받은 이메일이 [2026년 7월 2일 법원 문서 봉인 해제로 공개됐습니다](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm).
 
 > 핵심은 "AI 성능"이 아니라 "누가 선을 긋느냐"였습니다. 국방부는 "우리가 원하는 대로 쓰게 해달라"고 했고, Anthropic은 "자율무기와 감시에는 우리가 정한 선을 못 넘는다"고 버텼습니다.
 
@@ -20,9 +20,9 @@
 
 이렇게 생각하면 쉽습니다. 어떤 회사(Anthropic)가 아주 큰 고객(국방부)에게 자기 제품(AI, Claude)을 팔려고 협상 중이었습니다.
 
-그런데 이 고객이 조건을 붙였습니다. **"우리가 이 도구를 어디에 쓰든 막지 마라."** 여기엔 자율무기(사람 없이 AI가 판단하는 무기)와 국내 감시 같은 민감한 용도까지 포함됐습니다.
+그런데 이 고객이 조건을 붙였습니다. **"우리가 이 도구를 어디에 쓰든 막지 마라."** 여기엔 [자율무기](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm)(사람 없이 AI가 판단하는 무기)와 [국내 감시](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm) 같은 민감한 용도까지 포함됐습니다.
 
-회사는 답했습니다. **"다른 건 다 되는데, 그 두 가지는 안 됩니다. 그건 우리가 정한 넘지 말아야 할 선(레드라인)입니다."**
+회사는 답했습니다. **"다른 건 다 되는데, 그 두 가지는 안 됩니다. 그건 우리가 정한 넘지 말아야 할 선([레드라인](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm))입니다."**
 
 결국 협상은 틀어졌습니다.
 
@@ -32,13 +32,13 @@
 
 여기서부터가 진짜 쟁점입니다.
 
-국방부는 Anthropic을 **'공급망 위험(supply chain risk)'**으로 지정했습니다. 쉽게 말하면 **"이 업체는 믿고 거래하기 어렵다"고 공식 낙인(블랙리스트)을 찍은** 셈입니다.
+국방부는 Anthropic을 [**'공급망 위험(supply chain risk)'**](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm)으로 지정했습니다. 쉽게 말하면 **"이 업체는 믿고 거래하기 어렵다"고 공식 낙인(블랙리스트)을 찍은** 셈입니다.
 
-그런데 이번에 공개된 이메일을 보면, **낙인을 찍은 바로 다음 날** 국방부 측이 "계약이 거의 다 됐다, 아주 근접했다"는 취지의 메시지를 보낸 정황이 나옵니다.
+그런데 [이번에 공개된 이메일을 보면, **낙인을 찍은 바로 다음 날** 국방부 측이 "계약이 거의 다 됐다, 아주 근접했다"는 취지의 메시지를 보낸 정황](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm)이 나옵니다.
 
 이건 마치 **거래처에 "당신들과는 거래 못 한다"고 통보한 다음 날, 같은 거래처에 "계약 곧 될 것 같아요!"라고 문자를 보낸** 격입니다. 앞뒤가 맞지 않죠. 이 모순이 사람들의 이목을 끈 핵심 지점입니다.
 
-실제로 2026년 3월 담당 연방판사(Rita Lin)도 예비 금지명령을 내리면서, "위험 업체로 지정한 것과 '거의 계약될 뻔했다'는 이메일을 나란히 놓고 보면 둘을 연결해 이해하기가 매우 어렵다"고 지적했습니다.
+실제로 [2026년 3월 담당 연방판사(Rita Lin)도 예비 금지명령을 내리면서, "위험 업체로 지정한 것과 '거의 계약될 뻔했다'는 이메일을 나란히 놓고 보면 둘을 연결해 이해하기가 매우 어렵다"고 지적했습니다](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm).
 
 ---
 
@@ -46,13 +46,13 @@
 
 또 하나 불거진 게 이해충돌 의혹입니다.
 
-국방부 쪽 협상 담당자는 **Emil Michael(전직 우버 임원, 펜타곤 최고기술책임자)**입니다. 그런데 그가 Anthropic의 **경쟁사인 xAI(일론 머스크의 AI 회사)의 주식**을 갖고 있다가 팔았다는 정황이 함께 드러났습니다.
+국방부 쪽 협상 담당자는 [**Emil Michael**(전직 우버 임원, 펜타곤 최고기술책임자)](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm)입니다. 그런데 그가 Anthropic의 **[경쟁사인 xAI](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm)(일론 머스크의 AI 회사)의 주식**을 갖고 있다가 팔았다는 정황이 함께 드러났습니다.
 
 쉽게 비유하면, **A제품과 B제품 중 뭘 살지 결정하는 심사위원이, 알고 보니 B제품 회사의 주주였던** 상황입니다. 심사가 공정했는지 의심을 받을 수밖에 없습니다.
 
-실제로 Elizabeth Warren 상원의원은 Michael에게 윤리 서약과 4년간 관련 업무 회피(recusal)를 요구하는 편지를 보내며, 주식을 판 시점의 이해충돌 소지를 문제 삼았습니다.
+실제로 [Elizabeth Warren 상원의원은 Michael에게 윤리 서약과 4년간 관련 업무 회피(recusal)를 요구하는 편지를 보내며, 주식을 판 시점의 이해충돌 소지를 문제 삼았습니다](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm).
 
-그리고 Anthropic이 빠진 자리는 어떻게 됐을까요? xAI가 국방부의 "모든 용도 허용" 조건을 받아들이고, 자사 AI인 Grok을 기밀 네트워크에 넣는 계약으로 그 자리를 차지한 것으로 보도됐습니다.
+그리고 [Anthropic이 빠진 자리는 어떻게 됐을까요? xAI가 국방부의 "모든 용도 허용" 조건을 받아들이고, 자사 AI인 Grok을 기밀 네트워크에 넣는 계약으로 그 자리를 차지한 것으로 보도됐습니다](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm).
 
 ---
 
@@ -97,5 +97,6 @@
 | **recusal(회피)** | 이해관계가 있는 사안에서 스스로 손을 떼는 것. |
 | **xAI / Grok** | 일론 머스크의 AI 회사(xAI)와 그 AI(Grok). Anthropic의 경쟁사. |
 
----
-*출처: [TechTimes](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm) · [Gizmodo](https://gizmodo.com/read-the-tense-emails-between-the-pentagon-former-uber-exec-and-anthropic-dario-amodei-2000780849) · [RealClearDefense](https://www.realcleardefense.com/2026/07/03/the_emails_revealing_how_anthropics_pentagon_relationship_fell_apart_1192428.html) · [The Next Web](https://thenextweb.com/news/anthropic-pentagon-emails-amodei-michael-guardrails) · [SecurityWeek](https://www.securityweek.com/pentagons-chief-tech-officer-says-he-clashed-with-ai-company-anthropic-over-autonomous-warfare/)*
+# 출처
+- [TechTimes · 펜타곤-Anthropic 자율무기 협상 결렬과 Emil Michael의 이해충돌](https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm)
+  https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm

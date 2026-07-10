@@ -4,7 +4,7 @@
 > **분류** 연구·안전 · Anthropic
 > *발표 내용을 있는 그대로 정리한 것입니다.*
 
-2026년 6월 4일, Anthropic이 **"When AI builds itself"**를 발표하며, 프런티어 AI 개발에 대한 **전 세계 협조적 일시중지 또는 감속**을 제안했다.
+2026년 6월 4일, Anthropic이 **["When AI builds itself"](https://www.crescendo.ai/news/latest-ai-news-and-updates)**를 발표하며, 프런티어 AI 개발에 대한 **전 세계 협조적 일시중지 또는 감속**을 제안했다.
 
 ## 핵심 논거
 AI 시스템이 **재귀적 자기개선(recursive self-improvement)** 능력에 근접하고 있으며, 인간이 그 과정을 의미 있게 감독할 능력을 잃고 있다는 것. 트리거로 지목한 지점은 **AI가 인간 개입 거의 없이 자신의 후계 모델을 설계·구축하는 순간**이다.

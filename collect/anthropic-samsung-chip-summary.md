@@ -27,4 +27,12 @@
 - 삼성전자 입장에서는 테슬라·Nvidia·Apple 등 기존 파운드리 고객에 이어 대형 AI 기업을 추가로 유치할 수 있는 사안으로, TSMC 의존도가 높은 첨단 파운드리 시장에 도전할 계기로 국내 매체들이 조명하고 있다.
 
 ---
-*출처: [TechCrunch](https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/) · [The Information](https://www.theinformation.com/articles/anthropic-talks-samsung-manufacture-custom-ai-chip) · [Yahoo Finance(The Information 인용)](https://finance.yahoo.com/technology/ai/articles/anthropic-explores-samsung-2nm-chip-144844786.html) · [stocktwits](https://stocktwits.com/news-articles/markets/equity/anthropic-takes-first-step-toward-in-house-ai-chip-talks-with-samsung-underway-says-report/cZmeqsUR7Sz) · [Bloomberg](https://www.bloomberg.com/news/articles/2026-07-02/anthropic-in-talks-with-samsung-for-custom-ai-chip-information-mr3l34t4) · [MLQ News](https://mlq.ai/news/anthropic-in-early-talks-with-samsung-to-manufacture-custom-ai-chip-on-2nm-process/)*
+
+# 출처
+
+- [TechCrunch](https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/)
+- [The Information](https://www.theinformation.com/articles/anthropic-talks-samsung-manufacture-custom-ai-chip)
+- [Yahoo Finance(The Information 인용)](https://finance.yahoo.com/technology/ai/articles/anthropic-explores-samsung-2nm-chip-144844786.html)
+- [stocktwits](https://stocktwits.com/news-articles/markets/equity/anthropic-takes-first-step-toward-in-house-ai-chip-talks-with-samsung-underway-says-report/cZmeqsUR7Sz)
+- [Bloomberg](https://www.bloomberg.com/news/articles/2026-07-02/anthropic-in-talks-with-samsung-for-custom-ai-chip-information-mr3l34t4)
+- [MLQ News](https://mlq.ai/news/anthropic-in-early-talks-with-samsung-to-manufacture-custom-ai-chip-on-2nm-process/)

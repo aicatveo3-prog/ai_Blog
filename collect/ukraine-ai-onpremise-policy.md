@@ -92,4 +92,12 @@
 | **커모디티(commodity)** | 브랜드나 원산지보다 "쓸 수 있느냐 없느냐"가 더 중요한, 상호 대체 가능한 상품이라는 뜻. 키슬리는 AI 모델을 이렇게 표현했다. |
 
 ---
-*출처: [U.S. News (Reuters)](https://www.usnews.com/news/world/articles/2026-07-07/ukraine-to-pick-ai-models-operated-without-provider-control-official-says) · [investing.com (Reuters)](https://www.investing.com/news/stock-market-news/ukraine-to-pick-ai-models-operated-without-provider-control-official-says-4779745) · [Yahoo Finance](https://finance.yahoo.com/news/ukraine-pick-ai-models-operated-155125788.html) · [Al-Monitor](https://www.al-monitor.com/originals/2026/07/ukraine-pick-ai-models-operated-without-provider-control-official-says) · [93.3 The Drive](https://www.933thedrive.com/2026/07/07/ukraine-to-pick-ai-models-operated-without-provider-control-official-says/) · [Kyivstar 투자자 보도자료(2025-12-01, 배경)](https://investors.kyivstar.ua/news-releases/news-release-details/kyivstar-ministry-digital-transformation-ukraine-select-googles)*
+
+# 출처
+
+- [U.S. News (Reuters)](https://www.usnews.com/news/world/articles/2026-07-07/ukraine-to-pick-ai-models-operated-without-provider-control-official-says)
+- [investing.com (Reuters)](https://www.investing.com/news/stock-market-news/ukraine-to-pick-ai-models-operated-without-provider-control-official-says-4779745)
+- [Yahoo Finance](https://finance.yahoo.com/news/ukraine-pick-ai-models-operated-155125788.html)
+- [Al-Monitor](https://www.al-monitor.com/originals/2026/07/ukraine-pick-ai-models-operated-without-provider-control-official-says)
+- [93.3 The Drive](https://www.933thedrive.com/2026/07/07/ukraine-to-pick-ai-models-operated-without-provider-control-official-says/)
+- [Kyivstar 투자자 보도자료(2025-12-01, 배경)](https://investors.kyivstar.ua/news-releases/news-release-details/kyivstar-ministry-digital-transformation-ukraine-select-googles)

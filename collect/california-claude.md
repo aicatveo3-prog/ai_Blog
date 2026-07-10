@@ -35,7 +35,7 @@
 
 ### 범위: 특정 부서가 아니라 '전체'
 
-- **모든 주 기관** (67개 부서)
+- **[모든 주 기관](https://www.crescendo.ai/news/latest-ai-news-and-updates)** (67개 부서)
 - **지방정부 (시·군)**까지 포함
 
 즉, 캘리포니아에서 공무원으로 일하는 사람이라면 **누구나** 신청해서 쓸 수 있습니다.
@@ -62,11 +62,11 @@ Anthropic이 제공하는 것:
 
 ### 사례 1: DMV 대기시간 단축
 
-**DMV(Department of Motor Vehicles)**는 자동차 등록과 운전면허를 담당하는 기관입니다. 미국에서 **"줄이 길기로 악명 높은 곳"**이죠. 여기서 Claude를 활용해 민원 처리 속도를 높이고 있습니다.
+**[DMV](https://www.crescendo.ai/news/latest-ai-news-and-updates)**(Department of Motor Vehicles)는 자동차 등록과 운전면허를 담당하는 기관입니다. 미국에서 **"줄이 길기로 악명 높은 곳"**이죠. 여기서 Claude를 활용해 민원 처리 속도를 높이고 있습니다.
 
 ### 사례 2: 의료보장 업무 최적화
 
-**Medicaid(메디케이드)**는 미국의 저소득층 의료보장 제도입니다. 신청서 검토, 자격 판단 같은 반복 업무에 AI를 투입해 처리 시간을 줄이고 있습니다.
+**[Medicaid](https://www.crescendo.ai/news/latest-ai-news-and-updates)**(메디케이드)는 미국의 저소득층 의료보장 제도입니다. 신청서 검토, 자격 판단 같은 반복 업무에 AI를 투입해 처리 시간을 줄이고 있습니다.
 
 ### 사례 3: 사이버 보안 패치 자동화
 
@@ -94,7 +94,7 @@ Anthropic이 제공하는 것:
 
 갑자기 덜컥 도입한 게 아닙니다. 순서가 있었습니다:
 
-1. **'Poppy'라는 주정부 내부 AI 도구**로 시범 운영
+1. **['Poppy'라는 주정부 내부 AI 도구](https://www.crescendo.ai/news/latest-ai-news-and-updates)**로 시범 운영
 2. **67개 부서, 2,800명 이상**의 공무원이 실제로 테스트
 3. 성과를 확인한 후 → **2026년 7월 전면 확대** 결정
 
@@ -130,7 +130,7 @@ Anthropic이 제공하는 것:
 
 | 용어 | 뜻 |
 |---|---|
-| **Claude** | Anthropic이 만든 AI 챗봇. ChatGPT, Gemini와 같은 종류의 서비스. |
+| **[Claude](https://www.crescendo.ai/news/latest-ai-news-and-updates)** | Anthropic이 만든 AI 챗봇. ChatGPT, Gemini와 같은 종류의 서비스. |
 | **Anthropic** | Claude를 개발한 AI 회사. 'AI 안전'을 핵심 가치로 내세웁니다. |
 | **주(州) 정부** | 미국은 연방 아래 50개 주가 있고, 각 주가 자체 정부를 운영합니다. 캘리포니아가 그중 최대. |
 | **DMV** | Department of Motor Vehicles. 자동차 등록·운전면허를 담당하는 기관. 미국에서 긴 대기줄로 유명. |
@@ -139,4 +139,10 @@ Anthropic이 제공하는 것:
 | **Poppy** | 캘리포니아 주정부가 시범 운영한 내부 AI 도구의 이름. |
 
 ---
-*출처: [캘리포니아 주지사실 발표](https://www.gov.ca.gov/2026/06/29/governor-newsom-announces-a-first-of-its-kind-partnership-providing-anthropic-tools-to-state-agencies-and-improving-services-for-californians/) · [TechCrunch](https://techcrunch.com/2026/06/29/anthropic-and-gov-newsom-forge-deal-allowing-california-government-to-use-claude-at-half-price/) · [CBS Sacramento](https://www.cbsnews.com/sacramento/news/california-claude-deal-gavin-newsom/) · [Fox Business](https://www.foxbusiness.com/politics/newsoms-office-touts-anthropic-partnership-50-discount-claude-ai-california-agencies-localities)*
+
+# 출처
+- [Crescendo AI News](https://www.crescendo.ai/news/latest-ai-news-and-updates)
+- [캘리포니아 주지사실 발표](https://www.gov.ca.gov/2026/06/29/governor-newsom-announces-a-first-of-its-kind-partnership-providing-anthropic-tools-to-state-agencies-and-improving-services-for-californians/)
+- [TechCrunch](https://techcrunch.com/2026/06/29/anthropic-and-gov-newsom-forge-deal-allowing-california-government-to-use-claude-at-half-price/)
+- [CBS Sacramento](https://www.cbsnews.com/sacramento/news/california-claude-deal-gavin-newsom/)
+- [Fox Business](https://www.foxbusiness.com/politics/newsoms-office-touts-anthropic-partnership-50-discount-claude-ai-california-agencies-localities)

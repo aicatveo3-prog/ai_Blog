@@ -53,4 +53,13 @@ Anthropic과 삼성전자의 인연은 이번이 처음이 아니에요. 지난 
 | ARM 기반 NPU | 스마트폰 등에 흔히 쓰이는 ARM 설계 방식을 바탕으로 만든, AI 연산에 특화된 처리장치. |
 
 ---
-*출처: [TechCrunch](https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/) · [The Information](https://www.theinformation.com/articles/anthropic-talks-samsung-manufacture-custom-ai-chip) · [Yahoo Finance(The Information 인용)](https://finance.yahoo.com/technology/ai/articles/anthropic-explores-samsung-2nm-chip-144844786.html) · [stocktwits](https://stocktwits.com/news-articles/markets/equity/anthropic-takes-first-step-toward-in-house-ai-chip-talks-with-samsung-underway-says-report/cZmeqsUR7Sz) · [Bloomberg](https://www.bloomberg.com/news/articles/2026-07-02/anthropic-in-talks-with-samsung-for-custom-ai-chip-information-mr3l34t4) · [SamMobile](https://www.sammobile.com/news/openai-ceo-cancels-planned-korea-trip-as-chip-work-with-samsung-cools-down/) · [OpenAI(Jalapeño 발표)](https://openai.com/index/openai-broadcom-jalapeno-inference-chip/)*
+
+# 출처
+
+- [TechCrunch](https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/)
+- [The Information](https://www.theinformation.com/articles/anthropic-talks-samsung-manufacture-custom-ai-chip)
+- [Yahoo Finance(The Information 인용)](https://finance.yahoo.com/technology/ai/articles/anthropic-explores-samsung-2nm-chip-144844786.html)
+- [stocktwits](https://stocktwits.com/news-articles/markets/equity/anthropic-takes-first-step-toward-in-house-ai-chip-talks-with-samsung-underway-says-report/cZmeqsUR7Sz)
+- [Bloomberg](https://www.bloomberg.com/news/articles/2026-07-02/anthropic-in-talks-with-samsung-for-custom-ai-chip-information-mr3l34t4)
+- [SamMobile](https://www.sammobile.com/news/openai-ceo-cancels-planned-korea-trip-as-chip-work-with-samsung-cools-down/)
+- [OpenAI(Jalapeño 발표)](https://openai.com/index/openai-broadcom-jalapeno-inference-chip/)

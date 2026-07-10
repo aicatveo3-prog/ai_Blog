@@ -96,4 +96,8 @@ Cerebras라는 AI 칩 회사가 "유럽에 대규모 AI 데이터센터를 짓�
 | **GDPR** | 유럽의 개인정보보호법 |
 
 ---
-*출처: Euronews · GlobeNewswire · Yahoo Finance · Seeking Alpha · Cerebras 공식*
+
+# 출처
+- [Euronews](https://www.euronews.com/business/2026/07/09/cerebras-targets-europe-with-multibillion-dollar-ai-expansion-challenging-nvidia)
+- [GlobeNewswire](https://www.globenewswire.com/news-release/2026/07/09/3324566/0/en/Cerebras-Systems-Accelerates-European-Expansion-with-200MW-of-AI-Compute-Capacity-by-End-of-2027.html)
+- [Yahoo Finance](https://ca.finance.yahoo.com/news/cerebras-targets-europe-multibillion-dollar-094538665.html)

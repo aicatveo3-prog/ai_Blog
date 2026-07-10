@@ -26,4 +26,12 @@
 - 키슬리가 언급한 "미국 정부의 Anthropic 접근 축소 명령"은 이 기사가 별도로 검증한 사실이 아니라 우크라이나 관료의 발언 속 인용이며, 정리본에서는 이를 우크라이나 정책의 배경 설명으로만 다룬다.
 
 ---
-*출처: [U.S. News (Reuters)](https://www.usnews.com/news/world/articles/2026-07-07/ukraine-to-pick-ai-models-operated-without-provider-control-official-says) · [investing.com (Reuters)](https://www.investing.com/news/stock-market-news/ukraine-to-pick-ai-models-operated-without-provider-control-official-says-4779745) · [Yahoo Finance](https://finance.yahoo.com/news/ukraine-pick-ai-models-operated-155125788.html) · [Al-Monitor](https://www.al-monitor.com/originals/2026/07/ukraine-pick-ai-models-operated-without-provider-control-official-says) · [93.3 The Drive](https://www.933thedrive.com/2026/07/07/ukraine-to-pick-ai-models-operated-without-provider-control-official-says/) · [Kyivstar 투자자 보도자료(2025-12-01, 배경)](https://investors.kyivstar.ua/news-releases/news-release-details/kyivstar-ministry-digital-transformation-ukraine-select-googles)*
+
+# 출처
+
+- [U.S. News (Reuters)](https://www.usnews.com/news/world/articles/2026-07-07/ukraine-to-pick-ai-models-operated-without-provider-control-official-says)
+- [investing.com (Reuters)](https://www.investing.com/news/stock-market-news/ukraine-to-pick-ai-models-operated-without-provider-control-official-says-4779745)
+- [Yahoo Finance](https://finance.yahoo.com/news/ukraine-pick-ai-models-operated-155125788.html)
+- [Al-Monitor](https://www.al-monitor.com/originals/2026/07/ukraine-pick-ai-models-operated-without-provider-control-official-says)
+- [93.3 The Drive](https://www.933thedrive.com/2026/07/07/ukraine-to-pick-ai-models-operated-without-provider-control-official-says/)
+- [Kyivstar 투자자 보도자료(2025-12-01, 배경)](https://investors.kyivstar.ua/news-releases/news-release-details/kyivstar-ministry-digital-transformation-ukraine-select-googles)
