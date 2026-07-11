@@ -1,7 +1,49 @@
 {
-  "generated": "2026-07-10",
+  "generated": "2026-07-11",
   "note": "지난 한 달 AI 소식 전방위 수집. firstSeen = 검증된 진짜 첫 등장일(1차/신뢰 소스). 일자 미확정은 verified:false로 '날짜 없음'에 대기. surfaced가 다르면 gap 표시.",
   "items": [
+    {
+      "title": "Ant Group의 Robbyant, LingBot-VA 2.0 공개 — 로봇 제어용 비디오-액션 기초모델",
+      "firstSeen": "2026-07-11",
+      "surfaced": "2026-07-11",
+      "verified": true,
+      "verifyNote": "MarkTechPost·ArXiv·GitHub 교차확인. Ant Group Robbyant가 2026-07-11 LingBot-VA 2.0 공개. 단일 GPU에서 150Hz 실시간 추론, 20개 시연으로 새 작업 일반화 가능한 비디오-액션 모델.",
+      "source": "https://www.marktechpost.com/2026/07/11/ant-groups-robbyant-unveils-lingbot-va-2-0/",
+      "status": "인박스",
+      "tags": [
+        "모델",
+        "로봇",
+        "중국"
+      ]
+    },
+    {
+      "title": "Meta Superintelligence, Muse Spark 1.1 공개 — 멀티모달 추론·에이전트 최적화",
+      "firstSeen": "2026-07-09",
+      "surfaced": "2026-07-11",
+      "verified": true,
+      "verifyNote": "Meta AI 공식 블로그(2026-07-09), TechCrunch·CNBC·Fortune 교차확인. Muse Spark 1.1은 1M 토큰 컨텍스트 윈도우, 메인-서브 에이전트 위임 구조, 도구/컴퓨터 사용 및 코딩 강화. Meta Model API 공개 프리뷰.",
+      "source": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+      "status": "인박스",
+      "tags": [
+        "모델",
+        "에이전트",
+        "프레임워크"
+      ]
+    },
+    {
+      "title": "Anthropic, Claude Cowork를 모바일·웹으로 확대 — 크로스 디바이스 에이전트",
+      "firstSeen": "2026-07-07",
+      "surfaced": "2026-07-11",
+      "verified": true,
+      "verifyNote": "Anthropic 공식 발표(2026-07-07), 9to5Mac·TechCrunch·MacRumors 교차확인. 데스크톱 전용에서 iPhone·웹으로 확대. Max 플랜부터 단계적 롤아웃, 8월 5일까지 사용 한도 2배 제공.",
+      "source": "https://www.anthropic.com/product/claude-cowork",
+      "status": "인박스",
+      "tags": [
+        "Anthropic",
+        "프로덕트",
+        "에이전트"
+      ]
+    },
     {
       "title": "Amazon Q의 MCP 자동 실행 취약점 — 다각도 반응",
       "firstSeen": "2026-07-10",
