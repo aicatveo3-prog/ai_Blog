@@ -1,7 +1,80 @@
 {
-  "generated": "2026-07-11",
+  "generated": "2026-07-13",
   "note": "지난 한 달 AI 소식 전방위 수집. firstSeen = 검증된 진짜 첫 등장일(1차/신뢰 소스). 일자 미확정은 verified:false로 '날짜 없음'에 대기. surfaced가 다르면 gap 표시.",
   "items": [
+    {
+      "title": "Apple, OpenAI 거래 비밀 도용 소송 — 하드웨어 설계·기술 명세 절취 혐의",
+      "firstSeen": "2026-07-10",
+      "surfaced": "2026-07-13",
+      "verified": true,
+      "verifyNote": "CNBC·Bloomberg·TechCrunch·CNN·Axios·Euronews·Fortune 7개 매체 7/10 동시 교차확인. Apple이 미 북부 캘리포니아 연방법원에 OpenAI·io Products 고소. Tang Tan(전 Apple VP, 현 OpenAI HW책임자)이 채용과정에서 Apple 직원들에게 비밀 정보·부품 제공 강요. Chang Liu(ex-Apple 엔지니어, 2026-01 OpenAI 이직)가 미공개 하드웨어 파일·기술 명세 대량 다운로드.",
+      "source": "https://www.cnbc.com/2026/07/10/apple-openai-lawsuit-trade-secrets.html",
+      "status": "인박스",
+      "tags": [
+        "소송",
+        "거래비밀",
+        "OpenAI",
+        "하드웨어"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/apple-openai-lawsuit-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/apple-openai-lawsuit.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/apple-openai-lawsuit.md"
+        }
+      ]
+    },
+    {
+      "title": "ICML 2026 서울 개최 — 기록 23,918 투고, 60+ 워크샵에서 '에이전트AI' 독점",
+      "firstSeen": "2026-07-06",
+      "surfaced": "2026-07-13",
+      "verified": true,
+      "verifyNote": "TechTimes·Atoms dev blog·ICML 공식 사이트(icml.cc) 교차확인. 7/6~7/11 COEX 컨벤션센터 서울 개최. 23,918 투고(역대 최다), 6,352 승인(26.6% 통과율), 60+ 워크샵 제목에 '에이전트AI' 포함 — 'agentic AI'가 학술 분야의 중심축이 됨을 신호. 2% 논문(497건) LLM 위반으로 데스크 거절.",
+      "source": "https://www.techtimes.com/articles/319243/20260628/icml-2026-opens-seoul-next-week-record-23918-submissions-signal-ai-agent-safety-era.htm",
+      "status": "인박스",
+      "tags": [
+        "학술대회",
+        "에이전트",
+        "연구",
+        "아시아"
+      ]
+    },
+    {
+      "title": "LeapXpert, $1.8억 시리즈 라운드 유치 — AI 통신 거버넌스 플랫폼",
+      "firstSeen": "2026-06-30",
+      "surfaced": "2026-07-13",
+      "verified": true,
+      "verifyNote": "PR Newswire·SiliconANGLE·Foley & Lardner법무 공식 발표 6/30. Riverwood Capital 주도, Epoch Ventures·Accel 참여. AI 커뮤니케이션 거버넌스(Slack·Email·Teams 감시·준법심사·리스크관리) 솔루션. 기업용 고객 600+ (CVE-2024-27351 취약점으로 보안 우려도 있었음, 해결됨).",
+      "source": "https://www.prnewswire.com/news-releases/leapxpert-raises-180-million-to-lead-ai-powered-governed-communications-302814485.html",
+      "status": "인박스",
+      "tags": [
+        "자금",
+        "거버넌스",
+        "엔터프라이즈"
+      ]
+    },
+    {
+      "title": "DeepSeek, 자체 AI칩 개발 시작 — NVIDIA 의존도 감소 전략",
+      "firstSeen": "2026-07-07",
+      "surfaced": "2026-07-13",
+      "verified": true,
+      "verifyNote": "TechNode·Semafor·Cybernews·Yahoo Finance 7/7~7/8 교차확인. 중국 AI 스타트업 DeepSeek이 추론(inference) 최적화 자체 칩 개발 중. 약 1년 전 프로젝트 시작, 최근 인력 채용 가속. NVIDIA·Huawei 칩 의존도 낮추기 전략. 초기 단계, 상업화 일정 미정.",
+      "source": "https://technode.com/2026/07/08/deepseek-begins-in-house-ai-chip-development-to-cut-reliance-on-nvidia-sources-say/",
+      "status": "인박스",
+      "tags": [
+        "칩",
+        "기술개발",
+        "중국",
+        "하드웨어"
+      ]
+    },
     {
       "title": "Ant Group의 Robbyant, LingBot-VA 2.0 공개 — 로봇 제어용 비디오-액션 기초모델",
       "firstSeen": "2026-07-11",
