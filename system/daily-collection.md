@@ -28,8 +28,13 @@
    `prompts/I-synthesis-deepdive.md`로 세 탭(정리본·자세히·반응)을 합쳐 `drafts/<slug>/v1.md` 생성.
    톤·구조 기준은 `system/writing-guide.md`, 골드 스탠다드(실물 예시)는 `drafts/microsoft-mai/v1.md`. **선별·지시 없이는 자동 생성 금지.**
 7. **인박스 반영** — `inbox.json`에 append, `generated` 날짜 갱신.
-8. **커밋·푸시** — `git commit` 후 designated 브랜치로 push. 대시보드는 raw 경로라 몇 초 내 반영.
-9. **요약 알림(선택)** — 그날 검증된 고신호 항목 3~5개를 한 줄씩.
+8. **커밋·푸시** — `git commit` 후 designated(지정 작업) 브랜치로 push.
+9. **브랜치 동기화 (완료 조건 — 반드시)** — 대시보드([GitHub Pages](https://aicatveo3-prog.github.io/ai_Blog/dashboard.html))는 저장소 **기본 브랜치**에서 빌드된다. 자동 세션은 지정 작업 브랜치가 임시 브랜치(예: `claude/quirky-…`)로 바뀌어 있을 수 있어, 커밋이 기본 브랜치에 안 올라가면 사람이 새 항목을 못 본다.
+   - 실행 전 매번 `git ls-remote --symref origin HEAD`로 **현재 기본 브랜치**를 확인한다. (현재 `claude/github-upload-setup-vimtlp` — 바뀌었으면 그 이름으로 대체.)
+   - 작업 브랜치가 기본 브랜치와 **다르면**, 방금 만든 커밋을 기본 브랜치에도 **반드시 반영**한다:
+     `git fetch origin` → 기본 브랜치 checkout/최신화 → `git cherry-pick <새 커밋>` → push (실패 시 2s·4s·8s·16s 백오프로 최대 4회 재시도).
+   - **이 동기화까지 끝나야 루틴 "완료"** 다. (대시보드는 raw 경로라 반영은 몇 초 내.)
+10. **요약 알림(선택)** — 그날 검증된 고신호 항목 3~5개를 한 줄씩.
 
 ## 경계 (자동/사람)
 - **자동**: 수집·중복제거·날짜 검증·인박스 적재 (반복 노동)
