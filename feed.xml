@@ -6,7 +6,15 @@
   <atom:link href="https://aicatveo3-prog.github.io/ai_Blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>어려운 AI 뉴스, 학생도 이해하게 쉽게 알려드려요</description>
   <language>ko</language>
-  <lastBuildDate>Tue, 07 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 10 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>AI가 전기를 너무 많이 먹어요 — 2027년이면 데이터센터 10곳 중 4곳이 전력 부족이래요</title>
+    <link>https://aicatveo3-prog.github.io/ai_Blog/p/ai-datacenter-power/</link>
+    <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/ai-datacenter-power/</guid>
+    <description>GPU가 아니라 &apos;전기&apos;가 AI의 새 병목이 됐어요. Gartner는 2027년까지 데이터센터 40%가 전력 부족에 빠질 거라고 해요. 왜 이렇게 됐고, 우리한테 어떤 영향이 있는지 짚었어요.</description>
+    <category>인사이트</category>
+    <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
   <item>
     <title>마이크로소프트가 자기 AI 7개를 만들었어요 — 그런데 설명서 한 줄이 화제가 됐어요</title>
     <link>https://aicatveo3-prog.github.io/ai_Blog/p/microsoft-mai/</link>
