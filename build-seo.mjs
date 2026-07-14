@@ -307,6 +307,10 @@ const bylineHtml = (p) => {
   const bits = [p.author||BRAND]; if(p.date) bits.push(p.date); if(p.readMin) bits.push(p.readMin+'분 읽기');
   return bits.map(b=>`<span>${escHtml(b)}</span>`).join('<span class="dot"></span>');
 };
+// 발행(업로드) 날짜 — posts.json의 published 우선, 없으면 최신 버전 날짜, 그것도 없으면 date(뉴스 날짜)로 대체.
+const pubDate = (p) => p.published
+  || (Array.isArray(p.versions) ? p.versions.map(v=>v&&v.date).filter(Boolean).sort().slice(-1)[0] : '')
+  || p.date || '';
 
 // ---------- 홈(index.html) ----------
 function buildHome(posts) {
@@ -405,7 +409,6 @@ function buildArticle(p, bodyMd, next) {
       {'@type':'ListItem','position':2,'name':catOf(p),'item':SITE+'/'},
       {'@type':'ListItem','position':3,'name':p.title,'item':url}
     ]};
-  const heroCat = `${escHtml(catOf(p))}${p.readMin?`  ·  ${p.readMin}분 읽기`:''}${p.date?`  ·  ${escHtml(p.date)}`:''}`;
   const nextHtml = next
     ? `다음 읽을 글<a class="next" href="../${next.id}/">${escHtml(next.title)} →</a>`
     : `<a href="../../">← 다른 글 보기</a>`;
@@ -419,9 +422,8 @@ ${head({title:`${p.title} · ${BRAND}`, desc, url, ogImg, type:'article', publis
 ${navHtml('../../')}
 <main class="article">
 <a class="icnbtn back" href="../../">← 목록으로</a>
-<div class="eyebrow">${heroCat}</div>
 <h1 class="title">${escHtml(p.title)}</h1>
-<div class="abyline">${bylineHtml(p)}</div>
+<div class="abyline">${escHtml(pubDate(p))}</div>
 <hr>
 <article class="doc">${bodyHtml}</article>
 <footer class="art-foot">${nextHtml}<div style="margin-top:14px">© 2026 ${BRAND} · <a href="../../dashboard.html">운영 대시보드</a></div></footer>

@@ -193,8 +193,11 @@
 
 1. 원고를 `drafts/<slug>/v1.md`에 저장.
 2. `posts.json`의 `posts`에 항목 추가:
-   `id, title, date, type, category(인사이트/리서치/튜토리얼), stage:"발행", layout:"feature", readMin, author:"AI 쉽게 알려주는 집", angle, versions:[…]`.
+   `id, title, date, published, type, category(인사이트/리서치/튜토리얼), stage:"발행", layout:"feature", readMin, author:"AI 쉽게 알려주는 집", angle, versions:[…]`.
    - `angle` = SEO 메타 description(155자 내 권장) + 홈 카드 설명(`.dek`). **글 페이지 본문엔 안 나온다.**
+   - `date` = 뉴스 **첫 등장일**(달력·정렬 기준). `published` = **글을 올린 날짜**(발행일).
+     - **글 페이지 바이라인엔 `published`(업로드 날짜)만 표시**된다. 작가명·읽기 시간·상단 eyebrow 줄은 안 나온다.
+     - `published`를 안 넣으면 최신 버전 날짜 → `date` 순으로 대체된다. 되도록 명시할 것.
    - `layout:"feature"` = A+B 하이브리드(고스트 번호·빨강 대조·앰버 반전).
 3. **`node build-seo.mjs` 실행** — 정적 페이지·OG·sitemap·feed 생성. (안 돌리면 검색·공유에 안 잡힘)
 4. 생성물 전체 커밋·푸시. (SEO 설계는 `system/seo.md`)
@@ -224,6 +227,9 @@
 ---
 
 ## 변경 로그
+- v6 (2026-07-14): 글 페이지 상단 eyebrow(카테고리·읽기시간·날짜) 제거, 하단 바이라인은 **업로드 날짜만** 표시.
+  posts.json에 `published`(발행일) 필드 도입 — 뉴스 첫 등장일(`date`)과 분리. 바이라인은 `published` 사용.
+  (build-seo.mjs에서 eyebrow·author·readMin 렌더 제거, pubDate 헬퍼 추가.)
 - v5 (2026-07-14): 글 페이지 standfirst(제목 아래 요약문) 제거를 규칙화. 세 줄 요약과 겹쳐 군더더기.
   `angle`은 홈 카드·SEO 메타로만 사용. 상단 메타 블록(`> 유형·관점`)도 선택 사항으로 명시.
   (build-seo.mjs에서 standfirst 렌더 제거 + 메타 블록 없는 글도 세 줄 요약 안 잘리게 수정 완료.)
