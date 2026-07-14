@@ -75,9 +75,17 @@ function prepArticleBody(md){
   let lines = splitFrontmatter(md).replace(/\r/g,'').split('\n');
   while(lines.length && lines[0].trim()==='') lines.shift();
   if(/^#\s+/.test(lines[0]||'')){
-    let hr=-1;
-    for(let k=1;k<Math.min(lines.length,12);k++){ if(/^\s*([-*_])\1{2,}\s*$/.test(lines[k])){ hr=k; break; } }
-    lines = hr>=0 ? lines.slice(hr+1) : lines.slice(1);
+    // 제목 다음에 메타 인용(>) 블록이 오면 첫 --- 까지를 리드 블록으로 보고 제거.
+    // 메타 블록이 없으면(제목 바로 뒤가 본문/세 줄 요약이면) 제목 한 줄만 제거한다.
+    let j=1;
+    while(j<lines.length && lines[j].trim()==='') j++;
+    if(/^>/.test(lines[j]||'')){
+      let hr=-1;
+      for(let k=j;k<Math.min(lines.length,12);k++){ if(/^\s*([-*_])\1{2,}\s*$/.test(lines[k])){ hr=k; break; } }
+      lines = hr>=0 ? lines.slice(hr+1) : lines.slice(1);
+    } else {
+      lines = lines.slice(1);
+    }
   }
   let fence=false, out=[];
   for(let ln of lines){
