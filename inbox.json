@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-13",
+  "generated": "2026-07-14",
   "note": "지난 한 달 AI 소식 전방위 수집. firstSeen = 검증된 진짜 첫 등장일(1차/신뢰 소스). 일자 미확정은 verified:false로 '날짜 없음'에 대기. surfaced가 다르면 gap 표시.",
   "items": [
     {
@@ -1536,6 +1536,64 @@
         {
           "v": "💬 반응",
           "path": "collect/reactions/illinois-ai-safety-law.md"
+        }
+      ]
+    },
+    {
+      "title": "Meta, Iris 칩 양산 개시(2026년 9월) — 14GW 컴퓨팅 목표",
+      "firstSeen": "2026-07-09",
+      "surfaced": "2026-07-14",
+      "verified": true,
+      "verifyNote": "CNBC·Yahoo Finance·Reuters·Let's Data Science·Broadcom·Digitimes·DCD 8개+ 매체 7/9 동시 교차확인. Meta가 자체 설계 AI 칩 Iris를 9월부터 양산 개시, 2027년까지 14GW 컴퓨팅 용량 목표. Broadcom 공동설계, TSMC 제조. 6주 테스트 완료.",
+      "source": "https://www.cnbc.com/2026/07/09/meta-to-put-ai-chip-into-production-in-september-report.html",
+      "status": "인박스",
+      "tags": [
+        "하드웨어",
+        "칩",
+        "Meta",
+        "인프라"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/meta-iris-chip-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/meta-iris-chip.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/meta-iris-chip.md"
+        }
+      ]
+    },
+    {
+      "title": "삼성전자, GAIA AI 칩 개발 — AI PC 시장 진출(2027년 양산 목표)",
+      "firstSeen": "2026-07-09",
+      "surfaced": "2026-07-14",
+      "verified": true,
+      "verifyNote": "Seoul Economic Daily·Trendforce·wccftech·gHacks·Memeburn·Samsung Fans·Phandroid·Digital Trends 8개+ 매체 7/9~7/13 교차확인. 삼성이 4나노 공정 AI 가속기 GAIA 개발 중, 2027년 초 양산 목표. HP·Lenovo가 프로토타입 테스트 중. PIM(Processing-in-Memory) 기술 결합 예정.",
+      "source": "https://www.trendforce.com/news/2026/07/10/news-samsung-reportedly-developing-4nm-gaia-ai-pc-chip-mass-production-targeted-as-early-as-2027/",
+      "status": "인박스",
+      "tags": [
+        "하드웨어",
+        "칩",
+        "삼성",
+        "AI PC"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/samsung-gaia-chip-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/samsung-gaia-chip.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/samsung-gaia-chip.md"
         }
       ]
     }
