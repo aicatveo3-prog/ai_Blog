@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07",
+  "updated": "2026-07-14",
   "stages": ["인박스", "검토중", "선정", "조사중", "작성중", "검수중", "발행"],
   "criteria": [
     { "name": "🎯 포지셔닝 (독자·범위·렌즈)", "path": "system/positioning.md" },
@@ -13,6 +13,23 @@
     { "name": "⚙️ 루틴 운영 (3-루틴 자동화)", "path": "system/routines.md" }
   ],
   "posts": [
+    {
+      "id": "illinois-ai-law",
+      "title": "일리노이가 AI 회사한테 '외부 안전검사' 시키는 법을 만들었어요 — 그런데 OpenAI가 환영했어요",
+      "date": "2026-07-06",
+      "type": "A 속보 브리핑",
+      "category": "인사이트",
+      "stage": "발행",
+      "layout": "feature",
+      "readMin": 4,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "일리노이가 대형 AI 회사한테 외부 안전검사를 시키는 미국 첫 법을 만들었어요. 규제 대상인 OpenAI·앤트로픽이 오히려 환영한 이유와 그 계산, 그리고 '미국 최초'라는 말의 정확한 범위를 짚었어요.",
+      "lens": ["① 그래서 나한테?"],
+      "research": "research/2026-07-06-illinois-ai-law.md",
+      "versions": [
+        { "v": "v4", "date": "2026-07-14", "note": "v1 소제목 복원 + 어려운 표현 쉽게 + 핵심 압축", "path": "drafts/illinois-ai-law/v4.md" }
+      ]
+    },
     {
       "id": "nvidia-kyber-delay",
       "title": "엔비디아 차세대 AI 서버랙 'Kyber'가 1년 늦어진다는 소문, 사실일까?",
