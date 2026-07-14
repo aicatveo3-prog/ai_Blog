@@ -309,7 +309,7 @@ const rkind = document.getElementById('rkind');
 
 // 데이터는 raw.githubusercontent에서 읽는다 (GitHub Pages 빌드 대기 없이 몇 초 안에 반영).
 // 브랜치를 바꾸면 아래 한 줄만 수정. raw가 막히면(비공개 저장소 등) 자동으로 Pages 상대경로로 폴백.
-const RAW_BASE = 'https://raw.githubusercontent.com/aicatveo3-prog/ai_Blog/claude/github-upload-setup-vimtlp/';
+const RAW_BASE = 'https://raw.githubusercontent.com/aicatveo3-prog/ai_Blog/claude/fervent-mayer-1d0t3i/';
 let RAW_OK = null;   // null=미판정, true=raw 사용, false=폴백만 (첫 요청에서 한 번만 판정)
 async function fetchData(path){
   const bust = (path.includes('?')?'&':'?') + 't=' + Date.now();
