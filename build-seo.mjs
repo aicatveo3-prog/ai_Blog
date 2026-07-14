@@ -421,7 +421,6 @@ ${navHtml('../../')}
 <a class="icnbtn back" href="../../">← 목록으로</a>
 <div class="eyebrow">${heroCat}</div>
 <h1 class="title">${escHtml(p.title)}</h1>
-${p.angle?`<p class="standfirst">${escHtml(p.angle)}</p>`:''}
 <div class="abyline">${bylineHtml(p)}</div>
 <hr>
 <article class="doc">${bodyHtml}</article>
