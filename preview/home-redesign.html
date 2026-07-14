@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>홈 리디자인 비교 — A · B · C</title>
+<style>
+:root{--paper:#F5F7F9;--ink:#191F28;--ink2:#333A43;--accent:#3182F6;--accentStrong:#1B64DA;--muted:#6B7684;--faint:#8B95A1;--line:#E8EBEE;--cardBorder:#D3DAE2;--card:#FFFFFF;--soft:#EEF1F5;--brand:#F2994A;--brandD:#C7752B;--brandBg:#FDF1E6;--shadow:0 1px 2px rgba(20,30,50,.03),0 5px 14px rgba(20,30,50,.045),0 18px 44px rgba(20,30,50,.05);--serif:"Noto Sans KR",-apple-system,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;--sans:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit;text-decoration:none}
+.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:20px;padding:14px 20px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:18px;letter-spacing:-.5px}
+.mark{width:32px;height:32px;border-radius:10px 10px 10px 3px;background:linear-gradient(135deg,#F9B45E,#E07B2E);display:flex;align-items:center;justify-content:center;font-size:17px;flex:none}
+.brand .wm b{color:var(--brand)}
+.navlinks{display:flex;gap:4px;margin-left:8px}
+.navlinks a{font-size:14px;font-weight:600;color:var(--muted);padding:9px 13px;border-radius:10px}
+.navlinks a.on{color:var(--brand)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.mast{padding:38px 0 26px;border-bottom:1px solid var(--line);margin-bottom:30px}
+.mast .kick{font-size:12.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--brand)}
+.mast h1{font-family:var(--serif);font-size:34px;line-height:1.18;letter-spacing:-.5px;margin:13px 0 11px;font-weight:900}
+.mast h1 .hlk{background:linear-gradient(transparent 56%,color-mix(in srgb,var(--brand) 34%,#fff) 56%);padding:0 3px}
+.mast p{color:var(--muted);font-size:16px;max-width:620px}
+.cat{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.4px;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);padding:4px 10px;border-radius:20px}
+
+/* ===== 디자인 구분 라벨 ===== */
+.demo-band{background:var(--ink);color:#fff;margin-top:60px}
+.demo-band .wrap{padding-top:22px;padding-bottom:22px}
+.demo-band h2{font-family:var(--serif);font-size:23px;font-weight:800;letter-spacing:-.3px}
+.demo-band p{font-size:14px;opacity:.72;margin-top:6px;max-width:560px}
+.demo-tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:1px;background:var(--brand);color:#fff;padding:3px 10px;border-radius:20px;margin-bottom:10px}
+.demo-body{padding:36px 0 10px}
+
+/* ===== A. 매거진 리스트 ===== */
+.magA .lead{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:6px}
+.magA .lead .cat{margin-bottom:14px}
+.magA .lead h3{font-family:var(--serif);font-size:29px;line-height:1.28;font-weight:800;letter-spacing:-.4px;margin:12px 0 12px;text-wrap:balance}
+.magA .lead .dek{color:var(--muted);font-size:15.5px;line-height:1.62;max-width:640px}
+.magA .lead .meta{margin-top:16px;font-size:13px;color:var(--faint)}
+.magA .row{display:flex;gap:20px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line)}
+.magA .row .rmain{flex:1}
+.magA .row .cat{transform:scale(.9);transform-origin:left;margin-bottom:9px}
+.magA .row h4{font-family:var(--serif);font-size:20px;line-height:1.34;font-weight:700;letter-spacing:-.3px;margin:9px 0 7px;text-wrap:balance}
+.magA .row .dek{color:var(--muted);font-size:14px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.magA .row .date{flex:none;font-size:13px;color:var(--faint);white-space:nowrap;padding-top:2px}
+.magA .row:hover h4{color:var(--brandD)}
+
+/* ===== B. 컴팩트 카드 그리드 (색상 액센트) ===== */
+.gridB{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.cardB{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,border-color .15s}
+.cardB:hover{transform:translateY(-2px);border-color:var(--accent)}
+.cardB .bar{height:6px;background:linear-gradient(90deg,var(--accent),var(--accentStrong))}
+.cardB .body{padding:18px 20px 18px;display:flex;flex-direction:column;flex:1}
+.cardB .cat{align-self:flex-start;margin-bottom:11px}
+.cardB h4{font-family:var(--serif);font-size:18.5px;line-height:1.36;font-weight:700;letter-spacing:-.3px;margin-bottom:9px;text-wrap:balance}
+.cardB .dek{color:var(--muted);font-size:13px;line-height:1.55;flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:14px}
+.cardB .date{font-size:12.5px;color:var(--faint)}
+
+/* ===== C. 넘버링 인덱스 ===== */
+.idxC .item{display:flex;gap:22px;align-items:flex-start;padding:24px 0;border-bottom:1px solid var(--line)}
+.idxC .num{font-family:var(--serif);font-size:34px;font-weight:900;line-height:.9;letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1.4px var(--faint);flex:none;width:54px}
+.idxC .imain{flex:1}
+.idxC .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.idxC h4{font-family:var(--serif);font-size:21px;line-height:1.32;font-weight:700;letter-spacing:-.3px;text-wrap:balance}
+.idxC .date{flex:none;font-size:13px;color:var(--faint);white-space:nowrap}
+.idxC .dek{color:var(--muted);font-size:13.5px;line-height:1.55;margin-top:8px;max-height:0;overflow:hidden;opacity:0;transition:max-height .25s,opacity .25s,margin-top .25s}
+.idxC .item:hover .dek{max-height:60px;opacity:1;margin-top:9px}
+.idxC .item:hover h4{color:var(--brandD)}
+.idxC .item:hover .num{-webkit-text-stroke-color:var(--brand)}
+.hint{font-size:12.5px;color:var(--faint);margin-top:14px;font-style:italic}
+
+@media(max-width:640px){.gridB{grid-template-columns:1fr}.navlinks{display:none}.mast h1{font-size:27px}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-in">
+<div class="brand"><span class="mark">🏠</span><span class="wm">AI <b>쉽게 알려주는</b> 집</span></div>
+<div class="navlinks"><a class="on">홈</a><a>인사이트</a><a>리서치</a><a>튜토리얼</a></div>
+</div></nav>
+
+<div class="wrap">
+<header class="mast">
+<div class="kick">학생도 쉽게 보는 AI 소식</div>
+<h1>어려운 AI 뉴스,<br><span class="hlk">여기선 쉽게</span> 알려드려요</h1>
+<p>매일 나오는 AI 최신 소식을 학생도 이해하도록 쉽게 풀어드려요. 어려운 용어는 빼고, 핵심만 세 줄 요약과 쉬운 해설로.</p>
+</header>
+</div>
+
+<!-- ============ A ============ -->
+<div class="demo-band"><div class="wrap">
+<span class="demo-tag">디자인 A</span>
+<h2>매거진 리스트형</h2>
+<p>큰 커버 없이 텍스트가 주인공. 맨 위 최신글 1개만 크게, 나머지는 훑기 좋은 세로 리스트. 오른쪽에 날짜.</p>
+</div></div>
+<div class="wrap demo-body"><div class="magA">
+<div class="lead">
+<span class="cat">인사이트</span>
+<h3>AI가 전기를 너무 많이 먹어요 — 2027년이면 데이터센터 10곳 중 4곳이 전력 부족이래요</h3>
+<div class="dek">GPU가 아니라 '전기'가 AI의 새 병목이 됐어요. Gartner는 2027년까지 데이터센터 40%가 전력 부족에 빠질 거라고 해요. 왜 이렇게 됐고, 우리한테 어떤 영향이 있는지 짚었어요.</div>
+<div class="meta">2026-07-14 · 7분 읽기</div>
+</div>
+<div class="row"><div class="rmain"><span class="cat">인사이트</span><h4>일리노이가 AI 회사한테 '외부 안전검사' 시키는 법을 만들었어요 — 그런데 OpenAI가 환영했어요</h4><div class="dek">대형 AI 회사한테 외부 안전검사를 시키는 미국 첫 법. '미국 최초'의 정확한 범위를 짚었어요.</div></div><div class="date">2026-07-14</div></div>
+<div class="row"><div class="rmain"><span class="cat">인사이트</span><h4>엔비디아 차세대 AI 서버랙 'Kyber'가 1년 늦어진다는 소문, 사실일까?</h4><div class="dek">SemiAnalysis는 "2028년으로 지연" 주장, 엔비디아는 "로드맵 그대로" 반박. 양쪽 주장을 쉽게 풀었어요.</div></div><div class="date">2026-07-10</div></div>
+<div class="row"><div class="rmain"><span class="cat">인사이트</span><h4>마이크로소프트가 자기 AI 7개를 만들었어요 — 그런데 설명서 한 줄이 화제가 됐어요</h4><div class="dek">"깨끗한 자료로만 배웠다"던 자랑이 실제 설명서와 어긋났어요. 무슨 일인지 쉽게 풀었어요.</div></div><div class="date">2026-07-08</div></div>
+</div></div>
+
+<!-- ============ B ============ -->
+<div class="demo-band"><div class="wrap">
+<span class="demo-tag">디자인 B</span>
+<h2>컴팩트 카드 그리드</h2>
+<p>카드는 유지하되 큰 이미지 대신 얇은 색 띠로 액센트. 2열 균일 그리드, 카테고리 색으로 구분.</p>
+</div></div>
+<div class="wrap demo-body"><div class="gridB">
+<div class="cardB"><div class="bar"></div><div class="body"><span class="cat">인사이트</span><h4>AI가 전기를 너무 많이 먹어요 — 2027년이면 데이터센터 10곳 중 4곳이 전력 부족이래요</h4><div class="dek">GPU가 아니라 '전기'가 AI의 새 병목이 됐어요. Gartner는 2027년까지 데이터센터 40%가 전력 부족에 빠질 거라고 해요.</div><div class="date">2026-07-14 · 7분 읽기</div></div></div>
+<div class="cardB"><div class="bar"></div><div class="body"><span class="cat">인사이트</span><h4>일리노이가 AI 회사한테 '외부 안전검사' 시키는 법을 만들었어요</h4><div class="dek">대형 AI 회사한테 외부 안전검사를 시키는 미국 첫 법. '미국 최초'의 정확한 범위를 짚었어요.</div><div class="date">2026-07-14 · 4분 읽기</div></div></div>
+<div class="cardB"><div class="bar"></div><div class="body"><span class="cat">인사이트</span><h4>엔비디아 차세대 AI 서버랙 'Kyber'가 1년 늦어진다는 소문, 사실일까?</h4><div class="dek">SemiAnalysis는 "2028년으로 지연" 주장, 엔비디아는 "로드맵 그대로" 반박. 양쪽 주장을 쉽게 풀었어요.</div><div class="date">2026-07-10 · 6분 읽기</div></div></div>
+<div class="cardB"><div class="bar"></div><div class="body"><span class="cat">인사이트</span><h4>마이크로소프트가 자기 AI 7개를 만들었어요 — 그런데 설명서 한 줄이 화제가 됐어요</h4><div class="dek">"깨끗한 자료로만 배웠다"던 자랑이 실제 설명서와 어긋났어요. 무슨 일인지 쉽게 풀었어요.</div><div class="date">2026-07-08 · 9분 읽기</div></div></div>
+</div></div>
+
+<!-- ============ C ============ -->
+<div class="demo-band"><div class="wrap">
+<span class="demo-tag">디자인 C</span>
+<h2>넘버링 인덱스</h2>
+<p>번호를 매긴 미니멀 목록. 큰 제목 + 오른쪽 날짜. 마우스를 올리면 설명이 펼쳐져요.</p>
+</div></div>
+<div class="wrap demo-body"><div class="idxC">
+<div class="item"><div class="num">01</div><div class="imain"><div class="top"><h4>AI가 전기를 너무 많이 먹어요 — 2027년이면 데이터센터 10곳 중 4곳이 전력 부족이래요</h4><div class="date">2026-07-14</div></div><div class="dek">GPU가 아니라 '전기'가 AI의 새 병목이 됐어요. Gartner는 2027년까지 데이터센터 40%가 전력 부족에 빠질 거라고 해요.</div></div></div>
+<div class="item"><div class="num">02</div><div class="imain"><div class="top"><h4>일리노이가 AI 회사한테 '외부 안전검사' 시키는 법을 만들었어요</h4><div class="date">2026-07-14</div></div><div class="dek">대형 AI 회사한테 외부 안전검사를 시키는 미국 첫 법. '미국 최초'의 정확한 범위를 짚었어요.</div></div></div>
+<div class="item"><div class="num">03</div><div class="imain"><div class="top"><h4>엔비디아 차세대 AI 서버랙 'Kyber'가 1년 늦어진다는 소문, 사실일까?</h4><div class="date">2026-07-10</div></div><div class="dek">SemiAnalysis는 "2028년으로 지연" 주장, 엔비디아는 "로드맵 그대로" 반박. 양쪽 주장을 쉽게 풀었어요.</div></div></div>
+<div class="item"><div class="num">04</div><div class="imain"><div class="top"><h4>마이크로소프트가 자기 AI 7개를 만들었어요 — 그런데 설명서 한 줄이 화제가 됐어요</h4><div class="date">2026-07-08</div></div><div class="dek">"깨끗한 자료로만 배웠다"던 자랑이 실제 설명서와 어긋났어요. 무슨 일인지 쉽게 풀었어요.</div></div></div>
+</div>
+<p class="hint">↑ 각 줄에 마우스를 올리면 설명이 펼쳐집니다.</p>
+</div>
+
+<div style="height:60px"></div>
+</body>
+</html>
