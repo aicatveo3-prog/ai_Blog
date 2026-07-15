@@ -125,27 +125,21 @@ a{color:inherit;text-decoration:none}
 .seclabel{display:flex;align-items:baseline;gap:10px;margin:8px 0 20px}
 .seclabel b{font-family:var(--serif);font-size:22px;letter-spacing:-.3px}
 .seclabel span{font-size:13px;color:var(--muted)}
-.feat{display:grid;grid-template-columns:1.15fr .85fr;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:44px;transition:transform .15s,border-color .15s}
-.feat:hover{transform:translateY(-2px);border-color:var(--brand)}
-.feat .cover{background:linear-gradient(150deg,#F9B45E,#E07B2E);min-height:220px;position:relative;overflow:hidden}
-.feat .cover::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.22),transparent 55%)}
-.feat .cover .cov-cat{position:absolute;left:30px;bottom:26px;font-family:var(--sans);font-size:44px;font-weight:800;letter-spacing:-.02em;color:rgba(255,255,255,.92)}
-.feat .cover::before{content:"";position:absolute;right:-40px;top:-40px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.10)}
-.post .cover .cov-cat{font-size:15px;font-weight:700;color:var(--brandD);letter-spacing:.2px}
-.feat .body{padding:30px 32px;display:flex;flex-direction:column;justify-content:center}
-.cat{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.4px;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);padding:4px 10px;border-radius:20px;align-self:flex-start}
-.feat h2{font-family:var(--serif);font-size:28px;line-height:1.28;letter-spacing:-.4px;margin:14px 0 12px;font-weight:800;text-wrap:balance}
-.feat .dek{color:var(--muted);font-size:14.5px;line-height:1.6;margin-bottom:18px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.byline{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}
-.byline .dot{width:3px;height:3px;border-radius:50%;background:var(--muted);opacity:.6}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:16px}
-.post{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s,border-color .15s}
-.post:hover{transform:translateY(-2px);border-color:var(--accent)}
-.post .cover{height:96px;background:color-mix(in srgb,var(--brand) 9%,var(--card));display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line)}
-.post .body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
-.post h3{font-family:var(--serif);font-size:18.5px;line-height:1.36;letter-spacing:-.3px;margin:10px 0 8px;font-weight:700;text-wrap:balance}
-.post .dek{color:var(--muted);font-size:13px;line-height:1.55;flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:14px}
-.empty{grid-column:1/-1;color:var(--muted);font-size:14px;background:var(--soft);border-radius:14px;padding:22px}
+.cat{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.4px;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);padding:4px 10px;border-radius:20px}
+/* 넘버링 인덱스 (홈 글 목록) — 숫자는 CSS 카운터라 필터 후 자동 재번호 */
+.ixlist{display:flex;flex-direction:column;margin-bottom:16px;counter-reset:idx;border-top:1px solid var(--line)}
+.ixrow{display:flex;gap:20px;align-items:center;padding:20px 4px;border-bottom:1px solid var(--line);counter-increment:idx}
+.ixrow .num{font-family:var(--serif);font-size:30px;font-weight:800;line-height:1;letter-spacing:-.02em;color:var(--brand);flex:none;width:52px;text-align:center;font-variant-numeric:tabular-nums}
+.ixrow .num::before{content:counter(idx,decimal-leading-zero)}
+.ixrow .imain{flex:1;min-width:0}
+.ixrow .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.ixrow .ttl{font-family:var(--serif);font-size:20px;line-height:1.32;font-weight:700;letter-spacing:-.3px;color:var(--ink);text-wrap:balance}
+.ixrow .date{flex:none;font-size:13px;color:var(--faint);white-space:nowrap;font-variant-numeric:tabular-nums}
+.ixrow .dek{display:block;color:var(--muted);font-size:13.5px;line-height:1.55;overflow:hidden}
+.ixrow:hover .ttl,.ixrow:hover .num{color:var(--brandD)}
+@media(hover:hover){.ixrow .dek{max-height:0;opacity:0;margin-top:0;transition:max-height .25s,opacity .25s,margin-top .25s}.ixrow:hover .dek{max-height:64px;opacity:1;margin-top:9px}}
+@media(hover:none){.ixrow{align-items:flex-start}.ixrow .num{padding-top:2px}.ixrow .dek{margin-top:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}}
+.empty{color:var(--muted);font-size:14px;background:var(--soft);border-radius:14px;padding:22px}
 .news{margin:50px 0 10px;background:var(--ink);color:var(--paper);border-radius:20px;padding:34px;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
 .news h4{font-family:var(--serif);font-size:24px;letter-spacing:-.3px;margin-bottom:6px}
 .news p{font-size:14px;opacity:.75;max-width:440px}
@@ -227,6 +221,9 @@ body.feature .doc .trap .trap-h strong{color:var(--warnInk)}
   .feat .dek{font-size:13.5px}
   .feat .cover .cov-cat{font-size:28px;left:22px;bottom:20px}
   .post h3{font-size:15.5px}
+  .ixrow{gap:14px;padding:17px 2px}
+  .ixrow .num{font-size:25px;width:42px}
+  .ixrow .ttl{font-size:16.5px}
   .seclabel b{font-size:19px}
   .news h4{font-size:20px}
   .article .eyebrow{font-size:11.5px}
@@ -314,19 +311,11 @@ const pubDate = (p) => p.published
 
 // ---------- 홈(index.html) ----------
 function buildHome(posts) {
-  const featured = posts[0];
-  const rest = posts.slice(1);
-  const featHtml = featured ? `<div id="feat-wrap" data-cat-item="${escAttr(catOf(featured))}"><a class="feat" href="p/${featured.id}/">
-<div class="cover"><span class="cov-cat">${escHtml(catOf(featured))}</span></div>
-<div class="body"><span class="cat">${escHtml(catOf(featured))}</span>
-<h2>${escHtml(featured.title)}</h2><div class="dek">${escHtml(featured.angle||'')}</div>
-<div class="byline">${bylineHtml(featured)}</div></div></a></div>` : '';
-  const cards = rest.map(p=>`<a class="post" data-cat-item="${escAttr(catOf(p))}" href="p/${p.id}/">
-<div class="cover"><span class="cov-cat">${escHtml(catOf(p))}</span></div>
-<div class="body"><span class="cat">${escHtml(catOf(p))}</span>
-<h3>${escHtml(p.title)}</h3><div class="dek">${escHtml(p.angle||'')}</div>
-<div class="byline">${bylineHtml(p)}</div></div></a>`).join('\n');
-  const gridInner = rest.length ? cards : `<div class="empty">첫 글이 위에 있습니다. 다음 글이 곧 올라옵니다.</div>`;
+  const rows = posts.map(p=>`<a class="ixrow" data-cat-item="${escAttr(catOf(p))}" href="p/${p.id}/">
+<span class="num"></span>
+<span class="imain"><span class="top"><span class="ttl">${escHtml(p.title)}</span><span class="date">${escHtml(pubDate(p))}</span></span>
+<span class="dek">${escHtml(p.angle||'')}</span></span></a>`).join('\n');
+  const listInner = posts.length ? rows : `<div class="empty">첫 글이 곧 올라옵니다.</div>`;
   const desc = '매일 나오는 AI 최신 소식을 학생도 이해하도록 쉽게 풀어드려요. 어려운 용어는 빼고, 핵심만 세 줄 요약과 쉬운 해설로.';
 
   const blogLd = {
@@ -347,9 +336,8 @@ ${navHtml('')}
 <header class="mast"><div class="kick">학생도 쉽게 보는 AI 소식</div>
 <h1>어려운 AI 뉴스,<br><span class="hlk">여기선 쉽게</span> 알려드려요</h1>
 <p>${escHtml(desc)}</p></header>
-${featHtml}
 <div class="seclabel"><b>최신 글</b><span>· ${posts.length}편</span></div>
-<div class="grid" id="grid">${gridInner}</div>
+<div class="ixlist" id="grid">${listInner}</div>
 <section class="news"><div><h4>매주, 중요한 것만</h4>
 <p>매주 중요한 AI 소식만 골라 학생 눈높이로 쉽게 정리해 드려요. 전체 파이프라인은 운영 대시보드에서 볼 수 있어요.</p></div>
 <div class="cta"><a class="pill" href="dashboard.html">대시보드 열기</a></div></section>
