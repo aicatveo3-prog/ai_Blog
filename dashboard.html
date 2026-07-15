@@ -175,7 +175,11 @@
   .overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(2px);
     display:none;align-items:flex-start;justify-content:center;padding:24px;z-index:50;overflow-y:auto}
   .overlay.on{display:flex}
-  .reader{background:var(--bg);max-width:760px;width:100%;border-radius:18px;border:1px solid var(--line);
+  /* 리더 모달은 테마와 무관하게 항상 밝은 '종이' 색 — 다크모드에서도 검게 뜨지 않게 변수를 밝은 값으로 고정 */
+  .reader{
+    --bg:#FFFFFF; --ink:#1D1D1F; --muted:#48484D; --line:#E7E7EC;
+    --card:#FFFFFF; --soft:#F1F1F4; --accent:#4B47E8;
+    background:var(--bg);color:var(--ink);max-width:760px;width:100%;border-radius:18px;border:1px solid var(--line);
     padding:0;margin:auto;box-shadow:0 20px 60px rgba(0,0,0,.25)}
   .rtop{background:var(--bg);border-radius:18px 18px 0 0;
     border-bottom:1px solid var(--line);padding-bottom:12px}
