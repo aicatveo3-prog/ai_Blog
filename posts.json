@@ -27,7 +27,8 @@
       "angle": "Apple이 OpenAI를 거래 비밀 도용으로 고소했어요. 2년 전 파트너에서 법정 싸움으로 — AI 회사가 하드웨어에 뛰어들면서 빅테크와 충돌하는 시대가 왔어요.",
       "lens": ["① 그래서 나한테?"],
       "versions": [
-        { "v": "v1", "date": "2026-07-15", "note": "최초 발행 — CNBC·Bloomberg·Fortune·TechCrunch 교차확인, 거래 비밀 개념·양측 입장·업계 반응·법적 시나리오 분석", "path": "drafts/2026.07.15_apple-openai-lawsuit/v1.md" }
+        { "v": "v2", "date": "2026-07-15", "note": "수정 후 — Chang Liu·io Products 혐의(공동 피고·소장 개념) 풀이, Elon Musk 배경·말장난 풀이, 예비적 금지명령 개념 설명 추가", "path": "drafts/2026.07.15_apple-openai-lawsuit/v2.md" },
+        { "v": "v1", "date": "2026-07-15", "note": "수정 전 최초 발행 — CNBC·Bloomberg·Fortune·TechCrunch 교차확인, 거래 비밀 개념·양측 입장·업계 반응·법적 시나리오 분석", "path": "drafts/2026.07.15_apple-openai-lawsuit/v1.md" }
       ]
     },
     {
