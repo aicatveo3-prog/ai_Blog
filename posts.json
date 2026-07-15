@@ -45,7 +45,7 @@
       "angle": "GPU가 아니라 '전기'가 AI의 새 병목이 됐어요. Gartner는 2027년까지 데이터센터 40%가 전력 부족에 빠질 거라고 해요. 왜 이렇게 됐고, 우리한테 어떤 영향이 있는지 짚었어요.",
       "lens": ["① 그래서 나한테?"],
       "versions": [
-        { "v": "v1", "date": "2026-07-14", "note": "최초 발행 — Gartner·IEA·Spheron 교차확인, 나라별 전략 비교, 한국 전력 갈등", "path": "drafts/ai-datacenter-power/v1.md" }
+        { "v": "v1", "date": "2026-07-14", "note": "최초 발행 — Gartner·IEA·Spheron 교차확인, 나라별 전략 비교, 한국 전력 갈등", "path": "drafts/2026.07.14_ai-datacenter-power/v1.md" }
       ]
     },
     {
@@ -63,7 +63,7 @@
       "lens": ["① 그래서 나한테?"],
       "research": "research/2026-07-06-illinois-ai-law.md",
       "versions": [
-        { "v": "v4", "date": "2026-07-14", "note": "v1 소제목 복원 + 어려운 표현 쉽게 + 핵심 압축", "path": "drafts/illinois-ai-law/v4.md" }
+        { "v": "v4", "date": "2026-07-14", "note": "v1 소제목 복원 + 어려운 표현 쉽게 + 핵심 압축", "path": "drafts/2026.07.14_illinois-ai-law/v4.md" }
       ]
     },
     {
@@ -80,7 +80,7 @@
       "angle": "리서치 회사 SemiAnalysis가 \"엔비디아 차세대 AI 서버랙 Kyber가 2028년으로 1년 이상 늦어진다\"고 구체적으로 주장했어요. 엔비디아는 \"로드맵은 그대로\"라는 한 문장으로 반박했고요. 아직 양쪽 주장뿐, 누가 맞는지 모르는 이 논쟁을 학생도 이해하게 쉽게 풀었어요.",
       "lens": ["① 그래서 나한테?"],
       "versions": [
-        { "v": "v1", "date": "2026-07-10", "note": "최초 발행 — 확정한 쉬운 버전 원문 그대로 + 인라인 출처(SemiAnalysis·Yahoo·Tom's Hardware·CNBC·뉴스핌·FourWeekMBA)", "path": "drafts/nvidia-kyber-delay/v1.md" }
+        { "v": "v1", "date": "2026-07-10", "note": "최초 발행 — 확정한 쉬운 버전 원문 그대로 + 인라인 출처(SemiAnalysis·Yahoo·Tom's Hardware·CNBC·뉴스핌·FourWeekMBA)", "path": "drafts/2026.07.10_nvidia-kyber-delay/v1.md" }
       ]
     },
     {
@@ -97,7 +97,7 @@
       "angle": "마이크로소프트가 처음으로 자기 AI 7개를 공개했어요. 그런데 \"우리 건 깨끗한 자료로만 배웠다\"던 자랑이 실제 설명서와 어긋났어요. 무슨 일인지 학생도 이해할 수 있게 쉽고 재밌게 풀었어요.",
       "lens": ["① 그래서 나한테?"],
       "versions": [
-        { "v": "v5", "date": "2026-07-08", "note": "문단 재구성 — 강조·전환·펀치라인엔 줄바꿈 유지, 이어지는 설명은 한 문단으로 묶어 리듬 조절", "path": "drafts/microsoft-mai/v1.md" }
+        { "v": "v5", "date": "2026-07-08", "note": "문단 재구성 — 강조·전환·펀치라인엔 줄바꿈 유지, 이어지는 설명은 한 문단으로 묶어 리듬 조절", "path": "drafts/2026.07.08_microsoft-mai/v1.md" }
       ]
     },
     {
