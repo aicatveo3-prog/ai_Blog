@@ -45,6 +45,10 @@ function inline(s){const codes=[],links=[];
   s=s.replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<em>$2</em>');
   s=s.replace(/␞C(\d+)␞/g,(m,i)=>'<code>'+codes[+i]+'</code>');
   s=s.replace(/␞L(\d+)␞/g,(m,i)=>links[+i]);return s;}
+// 모바일 전용 문장 줄바꿈: 문장 끝(…요./…다./…죠./…까? 등) 뒤에 마커 삽입.
+// PC에선 CSS로 숨겨(display:none) 현재 줄바꿈 그대로, 모바일에서만 줄바꿈+간격으로 표시.
+// 닫는 따옴표·괄호·인라인 태그(</a> 등)까지 넘긴 뒤 공백 앞에 넣어 링크/굵은글씨 안쪽을 깨지 않는다.
+function msent(h){return h.replace(/([다요죠까네][.!?]["'”’)\]]*(?:<\/(?:a|strong|em|code)>)*)(\s+)(?=\S)/g,'$1<span class="mbr"></span>$2');}
 const splitRow=(l)=>l.replace(/^\||\|$/g,'').split('|').map(c=>c.trim());
 function renderMD(md){const lines=md.replace(/\r/g,'').split('\n');let out='',i=0;
   while(i<lines.length){let ln=lines[i];
@@ -57,12 +61,12 @@ function renderMD(md){const lines=md.replace(/\r/g,'').split('\n');let out='',i=
       while(i<lines.length&&/\|/.test(lines[i])&&lines[i].trim()!==''){rows.push(splitRow(lines[i]));i++;}
       out+='<div class="tbl"><table><thead><tr>'+head.map(c=>'<th>'+inline(c)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map(c=>'<td>'+inline(c)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>';continue;}
     if(/^\s*(?:[-*+]|\d+\.)\s+/.test(ln)){const ordered=/^\s*\d+\./.test(ln);let buf=[];
-      while(i<lines.length&&/^\s*(?:[-*+]|\d+\.)\s+/.test(lines[i])){buf.push('<li>'+inline(lines[i].replace(/^\s*(?:[-*+]|\d+\.)\s+/,''))+'</li>');i++;}
+      while(i<lines.length&&/^\s*(?:[-*+]|\d+\.)\s+/.test(lines[i])){buf.push('<li>'+msent(inline(lines[i].replace(/^\s*(?:[-*+]|\d+\.)\s+/,'')))+'</li>');i++;}
       out+=(ordered?'<ol>':'<ul>')+buf.join('')+(ordered?'</ol>':'</ul>');continue;}
     let buf=[];while(i<lines.length&&!/^\s*$/.test(lines[i])&&!/^(#{1,4}\s|```|\s*>|\s*([-*_])\2{2,}\s*$)/.test(lines[i])
       &&!(/\|/.test(lines[i])&&i+1<lines.length&&/^\s*\|?[\s:|-]+\|[\s:|-]*$/.test(lines[i+1]))
       &&!/^\s*(?:[-*+]|\d+\.)\s+/.test(lines[i])){buf.push(lines[i]);i++;}
-    out+='<p>'+inline(buf.join(' '))+'</p>';}
+    out+='<p>'+msent(inline(buf.join(' ')))+'</p>';}
   return out;}
 function splitFrontmatter(md){const m=md.match(/^---\n([\s\S]*?)\n---\n?/);return m?md.slice(m[0].length):md;}
 function firstH1(md){const m=md.match(/^#\s+(.+)$/m);return m?m[1].trim():'';}
@@ -157,6 +161,7 @@ main.article>*{position:relative}
 .article .abyline .dot{width:3px;height:3px;border-radius:50%;background:var(--faint);opacity:.7}
 .article>hr{border:none;border-top:1px solid var(--line);margin:28px 0}
 .doc{font-weight:500}
+.doc .mbr{display:none}
 .doc>p:first-of-type{font-size:17px;line-height:1.5;color:var(--ink);margin:2px 0 11px}
 .doc p{margin:9px 0;font-size:16px;line-height:1.5;color:var(--ink2);letter-spacing:-.011em}
 .doc strong{font-weight:700;color:var(--ink)}
@@ -240,6 +245,7 @@ body.feature .doc .trap .trap-h strong{color:var(--warnInk)}
   .doc .callout{font-size:17px;line-height:1.68}
   .doc table{font-size:14.5px}
   .doc thead th{font-size:12.5px}
+  .doc .mbr{display:block;height:.62em}
   .doc th,.doc td{padding:10px 12px}
   .art-foot .next{font-size:15px}
   body.feature .doc h2.chap{gap:10px}

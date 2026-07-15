@@ -57,6 +57,7 @@ main.article>*{position:relative}
 .article .abyline .dot{width:3px;height:3px;border-radius:50%;background:var(--faint);opacity:.7}
 .article>hr{border:none;border-top:1px solid var(--line);margin:28px 0}
 .doc{font-weight:500}
+.doc .mbr{display:none}
 .doc>p:first-of-type{font-size:17px;line-height:1.5;color:var(--ink);margin:2px 0 11px}
 .doc p{margin:9px 0;font-size:16px;line-height:1.5;color:var(--ink2);letter-spacing:-.011em}
 .doc strong{font-weight:700;color:var(--ink)}
@@ -140,6 +141,7 @@ body.feature .doc .trap .trap-h strong{color:var(--warnInk)}
   .doc .callout{font-size:17px;line-height:1.68}
   .doc table{font-size:14.5px}
   .doc thead th{font-size:12.5px}
+  .doc .mbr{display:block;height:.62em}
   .doc th,.doc td{padding:10px 12px}
   .art-foot .next{font-size:15px}
   body.feature .doc h2.chap{gap:10px}
