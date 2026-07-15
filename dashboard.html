@@ -215,6 +215,9 @@
   .doc th,.doc td{border:1px solid var(--line);padding:7px 10px;text-align:left}
   .doc th{background:var(--soft)}
   .doc .fm{font-size:12.5px;color:var(--muted);background:var(--soft);border-radius:8px;padding:10px 14px;margin-bottom:16px}
+  .doc .fig{margin:22px 0;text-align:center}
+  .doc .fig svg{width:100%;max-width:460px;height:auto}
+  .doc .fig figcaption{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.5}
   /* 모바일 — 좌우 여백을 줄여 글 폭을 넓힌다 */
   @media(max-width:560px){
     .overlay{padding:10px 6px}
@@ -376,10 +379,11 @@ function renderMD(md){
   let out='', i=0;
   while(i<lines.length){
     let ln = lines[i];
-    if(/^```/.test(ln)){                                   // fenced code
+    if(/^```/.test(ln)){                                   // fenced code (svg passthrough)
+      const lang=(ln.match(/^```\s*([\w-]+)/)||[])[1]||'';
       let buf=[]; i++;
       while(i<lines.length && !/^```/.test(lines[i])){ buf.push(lines[i]); i++; }
-      i++; out+='<pre><code>'+esc(buf.join('\n'))+'</code></pre>'; continue;
+      i++; out+=(lang==='svg')?'<figure class="fig">'+buf.join('\n')+'</figure>':'<pre><code>'+esc(buf.join('\n'))+'</code></pre>'; continue;
     }
     if(/^\s*$/.test(ln)){ i++; continue; }                 // blank
     let h = ln.match(/^(#{1,4})\s+(.*)$/);                 // heading
