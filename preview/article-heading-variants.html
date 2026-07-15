@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>글 소제목 — 번호 스타일 변형 비교</title>
+<style>
+:root{--paper:#F5F7F9;--ink:#191F28;--ink2:#333A43;--accent:#3182F6;--accentStrong:#1B64DA;--muted:#6B7684;--faint:#8B95A1;--line:#E8EBEE;--cardBorder:#D3DAE2;--card:#FFFFFF;--soft:#EEF1F5;--brand:#F2994A;--brandD:#C7752B;--brandBg:#FDF1E6;--shadow:0 1px 2px rgba(20,30,50,.03),0 5px 14px rgba(20,30,50,.045),0 18px 44px rgba(20,30,50,.05);--serif:"Noto Sans KR",-apple-system,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;--sans:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;letter-spacing:-.01em;word-break:keep-all}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+.pageh{padding:32px 0 6px}
+.pageh h1{font-family:var(--serif);font-size:25px;font-weight:900;letter-spacing:-.4px}
+.pageh p{color:var(--muted);font-size:14px;margin-top:8px}
+.card{background:var(--card);border:1px solid var(--cardBorder);border-radius:18px;box-shadow:var(--shadow);padding:14px 30px 26px;margin:20px 0 8px;position:relative;overflow:hidden}
+.tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.6px;background:var(--ink);color:#fff;padding:4px 12px;border-radius:20px;margin:16px 0 6px}
+.tag.cur{background:var(--brand)}
+.note{color:var(--muted);font-size:13px;margin-bottom:4px}
+.doc p{margin:9px 0;font-size:16px;line-height:1.5;color:var(--ink2)}
+.doc p strong{font-weight:700;color:var(--ink)}
+
+/* 공통 제목 베이스 */
+.doc h2{font-size:22px;font-weight:800;letter-spacing:-.028em;margin:26px 0 12px;color:var(--ink);line-height:1.3}
+
+/* V1 현재 — 아웃라인 고스트 숫자 */
+.v1 h2{display:flex;align-items:flex-start;gap:15px}
+.v1 .gn{font-size:44px;font-weight:900;line-height:.82;letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1.5px var(--faint);flex:none}
+.v1 .ct{flex:1;padding-top:5px}
+
+/* A 브랜드 솔리드 숫자 (홈 V2와 통일, 세리프) */
+.A h2{display:flex;align-items:flex-start;gap:14px}
+.A .gn{font-family:var(--serif);font-size:34px;font-weight:800;line-height:.9;letter-spacing:-.02em;color:var(--brand);flex:none}
+.A .ct{flex:1;padding-top:3px}
+
+/* B 작은 번호 배지 */
+.B h2{display:flex;align-items:center;gap:12px}
+.B .gn{font-family:var(--serif);font-size:15px;font-weight:800;line-height:1;color:var(--brandD);background:var(--brandBg);border:1px solid color-mix(in srgb,var(--brand) 32%,transparent);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none}
+.B .ct{flex:1}
+
+/* C 숫자 없이 좌측 악센트 바 */
+.C h2{border-left:3px solid var(--brand);padding-left:15px}
+.C .gn{display:none}
+
+/* D 인라인 미니 번호 */
+.D h2 .gn{font-size:16px;font-weight:800;color:var(--brand);margin-right:9px;letter-spacing:0}
+.D h2 .gn::after{content:"."}
+
+/* E 밑줄 악센트 (숫자 없음) */
+.E h2{display:inline-block;padding-bottom:9px;position:relative}
+.E h2 .gn{display:none}
+.E h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;background:var(--brand);border-radius:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="pageh">
+<h1>글 소제목 — 번호 스타일 6가지</h1>
+<p>실제 글 문단에 얹어 비교해요. 같은 소제목·본문을 각 스타일로만 다르게 보여줍니다.</p>
+</div>
+
+<span class="tag cur">V1 · 현재</span>
+<div class="note">큰 아웃라인(속 빈) 숫자. 지금 발행 글의 기본값.</div>
+<div class="card doc v1">
+<h2><span class="gn">01</span><span class="ct">무슨 일이 있었냐면요</span></h2>
+<p>ChatGPT한테 질문 5번 하면, 스마트폰 한 번 충전할 만큼의 전기가 들어요. 이걸 매일 수백만 명이 하고 있어요. <strong>AI가 먹는 전기가 감당이 안 되는 수준으로 늘고 있는 거예요.</strong></p>
+</div>
+
+<span class="tag">A · 브랜드 솔리드 숫자</span>
+<div class="note">홈과 똑같이 채운 주황 숫자(세리프). 사이트 전체 톤이 통일돼요.</div>
+<div class="card doc A">
+<h2><span class="gn">01</span><span class="ct">무슨 일이 있었냐면요</span></h2>
+<p>ChatGPT한테 질문 5번 하면, 스마트폰 한 번 충전할 만큼의 전기가 들어요. 이걸 매일 수백만 명이 하고 있어요. <strong>AI가 먹는 전기가 감당이 안 되는 수준으로 늘고 있는 거예요.</strong></p>
+</div>
+
+<span class="tag">B · 작은 번호 배지</span>
+<div class="note">작은 둥근 주황 배지 안에 번호. 아기자기하고 정돈된 느낌.</div>
+<div class="card doc B">
+<h2><span class="gn">01</span><span class="ct">무슨 일이 있었냐면요</span></h2>
+<p>ChatGPT한테 질문 5번 하면, 스마트폰 한 번 충전할 만큼의 전기가 들어요. 이걸 매일 수백만 명이 하고 있어요. <strong>AI가 먹는 전기가 감당이 안 되는 수준으로 늘고 있는 거예요.</strong></p>
+</div>
+
+<span class="tag">C · 숫자 없이 좌측 악센트 바</span>
+<div class="note">번호를 빼고 제목 왼쪽에 짧은 주황 세로바. 가장 에디토리얼하고 깔끔.</div>
+<div class="card doc C">
+<h2><span class="gn">01</span><span class="ct">무슨 일이 있었냐면요</span></h2>
+<p>ChatGPT한테 질문 5번 하면, 스마트폰 한 번 충전할 만큼의 전기가 들어요. 이걸 매일 수백만 명이 하고 있어요. <strong>AI가 먹는 전기가 감당이 안 되는 수준으로 늘고 있는 거예요.</strong></p>
+</div>
+
+<span class="tag">D · 인라인 미니 번호</span>
+<div class="note">제목 앞에 작게 "01." 같은 줄에. 존재감을 최소화한 담백한 스타일.</div>
+<div class="card doc D">
+<h2><span class="gn">01</span><span class="ct">무슨 일이 있었냐면요</span></h2>
+<p>ChatGPT한테 질문 5번 하면, 스마트폰 한 번 충전할 만큼의 전기가 들어요. 이걸 매일 수백만 명이 하고 있어요. <strong>AI가 먹는 전기가 감당이 안 되는 수준으로 늘고 있는 거예요.</strong></p>
+</div>
+
+<span class="tag">E · 밑줄 악센트 (숫자 없음)</span>
+<div class="note">번호를 빼고 제목 아래 짧은 주황 밑줄. 심플하면서 브랜드색 포인트.</div>
+<div class="card doc E">
+<h2><span class="gn">01</span><span class="ct">무슨 일이 있었냐면요</span></h2>
+<p>ChatGPT한테 질문 5번 하면, 스마트폰 한 번 충전할 만큼의 전기가 들어요. 이걸 매일 수백만 명이 하고 있어요. <strong>AI가 먹는 전기가 감당이 안 되는 수준으로 늘고 있는 거예요.</strong></p>
+</div>
+
+<div style="height:40px"></div>
+</div>
+</body>
+</html>
