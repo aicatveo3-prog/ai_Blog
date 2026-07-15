@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>디자인 C — 숫자 스타일 변형 비교</title>
+<style>
+:root{--paper:#F5F7F9;--ink:#191F28;--ink2:#333A43;--accent:#3182F6;--accentStrong:#1B64DA;--muted:#6B7684;--faint:#8B95A1;--line:#E8EBEE;--card:#FFFFFF;--soft:#EEF1F5;--brand:#F2994A;--brandD:#C7752B;--brandBg:#FDF1E6;--shadow:0 1px 2px rgba(20,30,50,.03),0 5px 14px rgba(20,30,50,.045),0 18px 44px rgba(20,30,50,.05);--serif:"Noto Sans KR",-apple-system,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;--sans:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;letter-spacing:-.01em;word-break:keep-all}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.pageh{padding:34px 0 10px}
+.pageh h1{font-family:var(--serif);font-size:26px;font-weight:900;letter-spacing:-.4px}
+.pageh p{color:var(--muted);font-size:14.5px;margin-top:8px}
+.band{background:var(--ink);color:var(--paper);margin-top:34px;border-radius:14px}
+.band .inr{padding:16px 22px}
+.band .tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.5px;background:var(--brand);color:#fff;padding:3px 10px;border-radius:20px;margin-bottom:8px}
+.band h2{font-family:var(--serif);font-size:19px;font-weight:800}
+.band p{font-size:13px;opacity:.72;margin-top:4px}
+
+/* 공통 인덱스 레이아웃 */
+.idx .item{display:flex;gap:20px;align-items:center;padding:20px 4px;border-bottom:1px solid var(--line)}
+.idx .imain{flex:1;min-width:0}
+.idx .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.idx h4{font-family:var(--serif);font-size:20px;line-height:1.32;font-weight:700;letter-spacing:-.3px;text-wrap:balance}
+.idx .date{flex:none;font-size:13px;color:var(--faint);white-space:nowrap}
+.idx .item:hover h4{color:var(--brandD)}
+.demo{padding:18px 0 6px}
+
+/* V1 — 현재: 아웃라인 세리프 */
+.v1 .num{font-family:var(--serif);font-size:34px;font-weight:900;line-height:.9;letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1.4px var(--faint);flex:none;width:50px;text-align:center}
+.v1 .item:hover .num{-webkit-text-stroke-color:var(--brand)}
+
+/* V2 — 브랜드 솔리드 세리프 (채운 주황, 얇게) */
+.v2 .num{font-family:var(--serif);font-size:30px;font-weight:800;line-height:1;letter-spacing:-.02em;color:var(--brand);flex:none;width:50px;text-align:center}
+.v2 .item:hover .num{color:var(--brandD)}
+
+/* V3 — 소프트 틴트 원형 배지 */
+.v3 .num{font-family:var(--serif);font-size:16px;font-weight:800;line-height:1;color:var(--brandD);background:var(--brandBg);border:1px solid color-mix(in srgb,var(--brand) 30%,transparent);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none}
+.v3 .item:hover .num{background:var(--brand);color:#fff;border-color:var(--brand)}
+
+/* V4 — 미니멀 muted (작고 연하게) */
+.v4 .num{font-family:var(--serif);font-size:15px;font-weight:700;line-height:1;color:var(--faint);letter-spacing:.5px;flex:none;width:34px;padding-top:3px}
+.v4 .item:hover .num{color:var(--brand)}
+
+/* V5 — 브랜드 짧은 바 + 숫자 */
+.v5 .num{display:flex;align-items:center;gap:9px;flex:none;width:50px}
+.v5 .num i{width:3px;height:24px;background:var(--brand);border-radius:2px;flex:none}
+.v5 .num b{font-family:var(--serif);font-size:19px;font-weight:800;color:var(--ink2)}
+.v5 .item:hover .num b{color:var(--brandD)}
+
+@media(max-width:640px){.idx h4{font-size:17px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="pageh">
+<h1>디자인 C — 숫자 스타일 5가지</h1>
+<p>같은 넘버링 인덱스인데 왼쪽 숫자 처리만 달라요. 마우스를 올리면 각 변형의 호버 색도 바뀝니다.</p>
+</div>
+
+<!-- V1 -->
+<div class="band"><div class="inr"><span class="tag">V1 · 현재</span><h2>아웃라인 세리프</h2><p>속이 빈 큰 숫자에 얇은 회색 테두리. 지금 미리보기의 기본값.</p></div></div>
+<div class="demo idx v1">
+<div class="item"><div class="num">01</div><div class="imain"><div class="top"><h4>AI가 전기를 너무 많이 먹어요 — 2027년이면 전력 부족이래요</h4><div class="date">2026-07-14</div></div></div></div>
+<div class="item"><div class="num">02</div><div class="imain"><div class="top"><h4>일리노이가 AI 회사한테 '외부 안전검사' 시키는 법을 만들었어요</h4><div class="date">2026-07-14</div></div></div></div>
+<div class="item"><div class="num">03</div><div class="imain"><div class="top"><h4>엔비디아 'Kyber'가 1년 늦어진다는 소문, 사실일까?</h4><div class="date">2026-07-10</div></div></div></div>
+</div>
+
+<!-- V2 -->
+<div class="band"><div class="inr"><span class="tag">V2</span><h2>브랜드 솔리드 세리프</h2><p>속을 브랜드 주황으로 채운 숫자. 따뜻하고 브랜드색과 바로 이어져요.</p></div></div>
+<div class="demo idx v2">
+<div class="item"><div class="num">01</div><div class="imain"><div class="top"><h4>AI가 전기를 너무 많이 먹어요 — 2027년이면 전력 부족이래요</h4><div class="date">2026-07-14</div></div></div></div>
+<div class="item"><div class="num">02</div><div class="imain"><div class="top"><h4>일리노이가 AI 회사한테 '외부 안전검사' 시키는 법을 만들었어요</h4><div class="date">2026-07-14</div></div></div></div>
+<div class="item"><div class="num">03</div><div class="imain"><div class="top"><h4>엔비디아 'Kyber'가 1년 늦어진다는 소문, 사실일까?</h4><div class="date">2026-07-10</div></div></div></div>
+</div>
+
+<!-- V3 -->
+<div class="band"><div class="inr"><span class="tag">V3</span><h2>소프트 틴트 원형 배지</h2><p>동그란 브랜드 톤 배경 안에 작은 숫자. 부드럽고 정돈된 느낌, 호버 시 꽉 찬 주황으로.</p></div></div>
+<div class="demo idx v3">
+<div class="item"><div class="num">01</div><div class="imain"><div class="top"><h4>AI가 전기를 너무 많이 먹어요 — 2027년이면 전력 부족이래요</h4><div class="date">2026-07-14</div></div></div></div>
+<div class="item"><div class="num">02</div><div class="imain"><div class="top"><h4>일리노이가 AI 회사한테 '외부 안전검사' 시키는 법을 만들었어요</h4><div class="date">2026-07-14</div></div></div></div>
+<div class="item"><div class="num">03</div><div class="imain"><div class="top"><h4>엔비디아 'Kyber'가 1년 늦어진다는 소문, 사실일까?</h4><div class="date">2026-07-10</div></div></div></div>
+</div>
+
+<!-- V4 -->
+<div class="band"><div class="inr"><span class="tag">V4</span><h2>미니멀 muted</h2><p>작고 연한 회색 숫자. 존재감을 확 낮춰 제목이 주인공. 가장 담백해요.</p></div></div>
+<div class="demo idx v4">
+<div class="item"><div class="num">01</div><div class="imain"><div class="top"><h4>AI가 전기를 너무 많이 먹어요 — 2027년이면 전력 부족이래요</h4><div class="date">2026-07-14</div></div></div></div>
+<div class="item"><div class="num">02</div><div class="imain"><div class="top"><h4>일리노이가 AI 회사한테 '외부 안전검사' 시키는 법을 만들었어요</h4><div class="date">2026-07-14</div></div></div></div>
+<div class="item"><div class="num">03</div><div class="imain"><div class="top"><h4>엔비디아 'Kyber'가 1년 늦어진다는 소문, 사실일까?</h4><div class="date">2026-07-10</div></div></div></div>
+</div>
+
+<!-- V5 -->
+<div class="band"><div class="inr"><span class="tag">V5</span><h2>브랜드 바 + 숫자</h2><p>짧은 주황 세로 막대와 숫자를 나란히. 리스트에 리듬을 주는 액센트.</p></div></div>
+<div class="demo idx v5">
+<div class="item"><div class="num"><i></i><b>01</b></div><div class="imain"><div class="top"><h4>AI가 전기를 너무 많이 먹어요 — 2027년이면 전력 부족이래요</h4><div class="date">2026-07-14</div></div></div></div>
+<div class="item"><div class="num"><i></i><b>02</b></div><div class="imain"><div class="top"><h4>일리노이가 AI 회사한테 '외부 안전검사' 시키는 법을 만들었어요</h4><div class="date">2026-07-14</div></div></div></div>
+<div class="item"><div class="num"><i></i><b>03</b></div><div class="imain"><div class="top"><h4>엔비디아 'Kyber'가 1년 늦어진다는 소문, 사실일까?</h4><div class="date">2026-07-10</div></div></div></div>
+</div>
+
+<div style="height:50px"></div>
+</div>
+</body>
+</html>
