@@ -677,12 +677,14 @@ function initCalendar(data){
 }
 
 const POSTS = {};
+const COLLECT_BY_POST = {};   // postId → 연결된 수집 항목(정리본·자세히·반응). 달력의 같은 글을 카드에서 바로 열게 함.
 function card(p){
   const lens = (p.lens||[]).join(' · ');
   const nver = (p.versions||[]).length;
   const latest = nver ? p.versions[0].v : '';
   let a = '<div class="actions">';
   if(nver || p.draft) a += '<button class="primary" data-draft="'+p.id+'">📝 초안 보기'+(latest?' ('+latest+')':'')+'</button>';
+  if(COLLECT_BY_POST[p.id]) a += '<button data-collect="'+p.id+'">📚 수집 자료 (정리·자세히·반응)</button>';
   if(p.pipeline)      a += '<button data-doc="'+p.pipeline+'" data-label="🧭 제작 과정">🧭 제작 과정</button>';
   if(p.research)      a += '<button data-doc="'+p.research+'" data-label="🔍 조사 노트">🔍 조사 노트</button>';
   a += '</div>';
@@ -713,6 +715,9 @@ async function boot(){
     try{ const ir = await fetchData('inbox.json'); const idata = await ir.json(); inbox = idata.items||[]; initCalendar(idata); }
     catch(_){ document.getElementById('calview').innerHTML='<div class="empty">수집 달력을 불러오지 못했어요.</div>'; }
 
+    // 글 ↔ 수집 항목 연결: postId로 연결된 항목의 정리본·자세히·반응을 카드에서 바로 열 수 있게 매핑
+    inbox.forEach(it=>{ if(it.postId && ((it.articleVersions&&it.articleVersions.length) || it.article)) COLLECT_BY_POST[it.postId]=it; });
+
     renderStatusSummary(posts, inbox);
     renderPipe(stages, posts, inbox);
 
@@ -726,6 +731,9 @@ async function boot(){
       '<div class="empty">아직 글이 없어요. 새 글을 만들면 여기에 나타납니다.</div>';
     list.querySelectorAll('button[data-draft]').forEach(b=>{
       b.onclick = ()=> openDraft(POSTS[b.getAttribute('data-draft')]);
+    });
+    list.querySelectorAll('button[data-collect]').forEach(b=>{
+      b.onclick = ()=> openItem(COLLECT_BY_POST[b.getAttribute('data-collect')]);
     });
     document.querySelectorAll('button[data-doc]').forEach(b=>{
       b.onclick = ()=> openSingle(b.getAttribute('data-doc'), b.getAttribute('data-label')||'문서');
