@@ -207,7 +207,7 @@ body.feature .doc .trap p{margin:4px 0;color:var(--ink2)}
 body.feature .doc .trap .trap-h strong{color:var(--warnInk)}
 @media(max-width:640px){body.feature .doc h2.chap .gn{width:28px;height:28px;font-size:14px}}
 @media(max-width:820px){.feat{grid-template-columns:1fr}.feat .cover{min-height:170px}.grid{grid-template-columns:1fr 1fr}.mast h1{font-size:34px}.navlinks{display:none}}
-@media(max-width:640px){main.article{padding:32px 22px 52px;margin:16px 14px 40px;border-radius:18px}main.article::before{border-radius:18px 18px 0 0}}
+@media(max-width:640px){main.article{padding:32px 14px 52px;margin:16px 5px 40px;border-radius:18px}main.article::before{border-radius:18px 18px 0 0}}
 @media(max-width:540px){.grid{grid-template-columns:1fr}}
 /* ---- 모바일 글자 전반 축소 ---- */
 @media(max-width:640px){
