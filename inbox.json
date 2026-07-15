@@ -9,7 +9,8 @@
       "verified": true,
       "verifyNote": "CNBC·Bloomberg·TechCrunch·CNN·Axios·Euronews·Fortune 7개 매체 7/10 동시 교차확인. Apple이 미 북부 캘리포니아 연방법원에 OpenAI·io Products 고소. Tang Tan(전 Apple VP, 현 OpenAI HW책임자)이 채용과정에서 Apple 직원들에게 비밀 정보·부품 제공 강요. Chang Liu(ex-Apple 엔지니어, 2026-01 OpenAI 이직)가 미공개 하드웨어 파일·기술 명세 대량 다운로드.",
       "source": "https://www.cnbc.com/2026/07/10/apple-openai-lawsuit-trade-secrets.html",
-      "status": "인박스",
+      "status": "발행",
+      "postId": "apple-openai-lawsuit",
       "tags": [
         "소송",
         "거래비밀",

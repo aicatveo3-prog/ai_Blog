@@ -14,6 +14,23 @@
   ],
   "posts": [
     {
+      "id": "apple-openai-lawsuit",
+      "title": "Apple이 OpenAI를 고소했어요 — \"우리 비밀 설계도 훔쳐갔잖아\"",
+      "date": "2026-07-10",
+      "published": "2026-07-15",
+      "type": "B 심층 분석",
+      "category": "인사이트",
+      "stage": "발행",
+      "layout": "feature",
+      "readMin": 7,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "Apple이 OpenAI를 거래 비밀 도용으로 고소했어요. 2년 전 파트너에서 법정 싸움으로 — AI 회사가 하드웨어에 뛰어들면서 빅테크와 충돌하는 시대가 왔어요.",
+      "lens": ["① 그래서 나한테?"],
+      "versions": [
+        { "v": "v1", "date": "2026-07-15", "note": "최초 발행 — CNBC·Bloomberg·Fortune·TechCrunch 교차확인, 거래 비밀 개념·양측 입장·업계 반응·법적 시나리오 분석", "path": "drafts/2026.07.15_apple-openai-lawsuit/v1.md" }
+      ]
+    },
+    {
       "id": "meta-iris-chip",
       "title": "Meta가 드디어 자기 AI 칩을 만들었어요 — 6년 걸렸어요",
       "date": "2026-07-09",
