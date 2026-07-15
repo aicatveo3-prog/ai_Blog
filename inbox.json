@@ -210,7 +210,7 @@
       "verified": true,
       "verifyNote": "Gartner 예측 보도 2026-06-15 이후 확산. 2027년까지 AI 인프라 전력 40% 제약, 정부 개입(US·EU·China·Korea) 분석. 60+ 소스.",
       "source": "https://www.gartner.com/en/newsroom/press-releases/2026-06-15-gartner-ai-power-constraint",
-      "status": "인박스",
+      "status": "발행",
       "tags": [
         "하드웨어",
         "인프라",
@@ -229,7 +229,8 @@
           "v": "💬 반응",
           "path": "collect/reactions/ai-datacenter-power-shortage.md"
         }
-      ]
+      ],
+      "postId": "ai-datacenter-power"
     },
     {
       "title": "연방 AI 감시 체계 — NSA·CISA 30일 자발적 검증(Frontier AI)",
@@ -1231,7 +1232,7 @@
       "verified": true,
       "verifyNote": "일리노이 주지사 JB 프리츠커가 2026-07-06 SB 315(Artificial Intelligence Safety Measures Act)에 정식 서명. 주지사실 공식 보도자료(1차 소스) + Chicago Sun-Times·StateScoop·The Hill·ABC7 Chicago·NPR Illinois 교차확인. 기존 인박스 항목(firstSeen 2026-05-27, 하원 통과·서명 예정 상태)의 후속 사건 — 법안이 실제 법률로 확정됨. 대형 AI 개발사에 안전관행 공개·중대사고 신고(24~72시간 이내)·내부고발자 보호·독립 3자 안전감사 의무화. 시행 2027-01-01.",
       "source": "https://chicago.suntimes.com/politics/2026/07/06/ai-regulations-illinois-law-pritzker-signed",
-      "status": "인박스",
+      "status": "발행",
       "tags": [
         "정책",
         "규제",
@@ -1250,7 +1251,8 @@
           "v": "💬 반응",
           "path": "collect/reactions/illinois-ai-safety-act-signed.md"
         }
-      ]
+      ],
+      "postId": "illinois-ai-law"
     },
     {
       "title": "우크라이나, AI 도입 기준으로 '자체 서버 구동(온프레미스)' 우선 — Anthropic·OpenAI류 모델은 배제 방향",
@@ -1546,7 +1548,7 @@
       "verified": true,
       "verifyNote": "CNBC·Yahoo Finance·Reuters·Let's Data Science·Broadcom·Digitimes·DCD 8개+ 매체 7/9 동시 교차확인. Meta가 자체 설계 AI 칩 Iris를 9월부터 양산 개시, 2027년까지 14GW 컴퓨팅 용량 목표. Broadcom 공동설계, TSMC 제조. 6주 테스트 완료.",
       "source": "https://www.cnbc.com/2026/07/09/meta-to-put-ai-chip-into-production-in-september-report.html",
-      "status": "인박스",
+      "status": "발행",
       "tags": [
         "하드웨어",
         "칩",
@@ -1566,7 +1568,8 @@
           "v": "💬 반응",
           "path": "collect/reactions/meta-iris-chip.md"
         }
-      ]
+      ],
+      "postId": "meta-iris-chip"
     },
     {
       "title": "삼성전자, GAIA AI 칩 개발 — AI PC 시장 진출(2027년 양산 목표)",

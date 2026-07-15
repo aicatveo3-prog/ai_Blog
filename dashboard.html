@@ -89,12 +89,14 @@
   .chip.art{background:rgba(75,71,232,.14);color:var(--accent);font-weight:700;border-left:3px solid var(--accent)}
   .chip.ok{background:var(--soft);color:var(--ink);border:1px solid var(--line)}
   .chip.warn{background:rgba(210,150,0,.14);color:#b8860b}
+  .chip.pub{background:rgba(31,157,107,.16);color:var(--ok);font-weight:800;border-left:3px solid var(--ok)}
   .callegend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);margin:0 0 14px}
   .callegend span{display:inline-flex;align-items:center;gap:5px}
   .lgd{width:16px;height:12px;border-radius:4px;display:inline-block}
   .lgd.art{background:rgba(75,71,232,.2);border-left:3px solid var(--accent)}
   .lgd.ok{background:var(--soft);border:1px solid var(--line)}
   .lgd.warn{background:rgba(210,150,0,.2)}
+  .lgd.pub{background:rgba(31,157,107,.24);border-left:3px solid var(--ok)}
 
   /* week view */
   .wgrid{display:flex;flex-direction:column;gap:6px}
@@ -261,7 +263,8 @@
       </div>
     </div>
     <div class="callegend">
-      <span><i class="lgd art"></i>📄 정리 글 작성됨 (클릭해 읽기)</span>
+      <span><i class="lgd pub"></i>✅ 발행 완료 (클릭해 읽기)</span>
+      <span><i class="lgd art"></i>📄 정리 글 작성됨</span>
       <span><i class="lgd ok"></i>수집만 (요약 카드)</span>
       <span><i class="lgd warn"></i>⚠️ 날짜 미검증</span>
     </div>
@@ -514,9 +517,13 @@ function ymd(d){ return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0
 function parseYMD(s){ const [y,m,d]=s.split('-').map(Number); return new Date(y,m-1,d); }
 function daysBetween(a,b){ return Math.round((parseYMD(b)-parseYMD(a))/86400000); }
 
+// 발행 판정은 posts.json이 단일 진실원(SSOT). inbox 항목의 postId가 '발행' 글을 가리키면 발행으로 본다.
+function isPublished(it){ return it.status==='발행' || (it.postId && POSTS[it.postId] && POSTS[it.postId].stage==='발행'); }
 function chipHTML(it, wrap){
-  const cls = it.article ? 'art' : (it.verified ? 'ok' : 'warn');
-  return '<button class="chip '+cls+(wrap?' wk':'')+'" data-idx="'+it._idx+'">'+(it.article?'📄 ':'')+esc(it.title)+'</button>';
+  const pub = isPublished(it);
+  const cls = pub ? 'pub' : (it.article ? 'art' : (it.verified ? 'ok' : 'warn'));
+  const icon = pub ? '✅ ' : (it.article ? '📄 ' : '');
+  return '<button class="chip '+cls+(wrap?' wk':'')+'" data-idx="'+it._idx+'">'+icon+esc(it.title)+'</button>';
 }
 function itemDetailHTML(it){
   const vok = it.verified;
@@ -589,7 +596,7 @@ function renderList(){
     .sort((a,b)=>{ const da=later(a), db=later(b); return db<da?-1:db>da?1:0; });
   if(!items.length) return '<div class="empty">표시할 항목이 없어요.</div>';
   const cell=(d,lab)=>'<span class="dcol"><span class="dv mono">'+d+'</span><span class="dk">'+lab+'</span></span>';
-  const isPub = it => it.status==='발행' || (it.postId && POSTS[it.postId] && POSTS[it.postId].stage==='발행');
+  const isPub = isPublished;
   const row = it=>{
     let dates;
     if(it.firstSeen && it.surfaced && it.firstSeen!==it.surfaced){

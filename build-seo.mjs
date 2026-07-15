@@ -489,6 +489,20 @@ const posts = JSON.parse(read('posts.json')).posts
 
 console.log(`발행 글 ${posts.length}편 빌드`);
 
+// 발행↔수집달력 연결 점검: 발행 글은 inbox.json의 대응 항목에 postId가 연결돼 있어야
+// 대시보드 '수집 달력'에 ✅ 발행으로 표시된다. 빠진 게 있으면 경고(규칙: 발행 시 항상 연결).
+try {
+  const inbox = JSON.parse(read('inbox.json'));
+  const linked = new Set((inbox.items || []).filter(it => it.postId).map(it => it.postId));
+  const missing = posts.filter(p => !linked.has(p.id));
+  if (missing.length) {
+    console.warn(`  ⚠️ 수집 달력 미연결 발행 글 ${missing.length}편 — inbox.json 항목에 "postId":"<id>" 추가 필요:`);
+    missing.forEach(p => console.warn(`     · ${p.id}  (${p.title})`));
+  } else {
+    console.log(`  ✓ 발행 글 ${posts.length}편 모두 수집 달력에 연결됨`);
+  }
+} catch (_) { /* inbox.json 없으면 건너뜀 */ }
+
 // 공유 자산
 write('assets/blog.css', CSS + ACSS);
 

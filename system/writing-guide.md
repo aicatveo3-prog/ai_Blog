@@ -191,16 +191,22 @@
 
 ## 발행 절차
 
-1. 원고를 `drafts/<slug>/v1.md`에 저장.
+1. 원고를 **`drafts/YYYY.MM.DD_<slug>/v1.md`** 에 저장(폴더명 = 발행일_제목).
+   - 고칠 때마다 같은 폴더에 `v2.md`, `v3.md`… 로 **버전을 쌓는다**(수정 전/후 이력 보존). 원본을 덮어쓰지 않는다.
 2. `posts.json`의 `posts`에 항목 추가:
    `id, title, date, published, type, category(인사이트/리서치/튜토리얼), stage:"발행", layout:"feature", readMin, author:"AI 쉽게 알려주는 집", angle, versions:[…]`.
+   - `versions[0]`이 **발행본**(빌드가 이걸 렌더). 최신본을 배열 맨 앞에 둔다.
    - `angle` = SEO 메타 description(155자 내 권장) + 홈 카드 설명(`.dek`). **글 페이지 본문엔 안 나온다.**
    - `date` = 뉴스 **첫 등장일**(달력·정렬 기준). `published` = **글을 올린 날짜**(발행일).
      - **글 페이지 바이라인엔 `published`(업로드 날짜)만 표시**된다. 작가명·읽기 시간·상단 eyebrow 줄은 안 나온다.
      - `published`를 안 넣으면 최신 버전 날짜 → `date` 순으로 대체된다. 되도록 명시할 것.
    - `layout:"feature"` = A+B 하이브리드(고스트 번호·빨강 대조·앰버 반전).
-3. **`node build-seo.mjs` 실행** — 정적 페이지·OG·sitemap·feed 생성. (안 돌리면 검색·공유에 안 잡힘)
-4. 생성물 전체 커밋·푸시. (SEO 설계는 `system/seo.md`)
+3. **[필수] `inbox.json`의 대응 수집 항목에 `"postId":"<글 id>"` 연결.** (발행 시 항상)
+   - 이게 있어야 **운영 대시보드 '수집 달력'에 ✅ 발행으로 표시**된다(월별·주간·최신순 전부).
+   - 발행 판정의 단일 진실원은 `posts.json`의 `stage:"발행"`. 대시보드는 `postId`로 항목을 글에 연결해 발행 여부를 **자동으로** 끌어온다.
+   - 빠뜨리면 `node build-seo.mjs`가 **⚠️ 미연결 경고**를 출력한다. 경고가 뜨면 해당 항목에 `postId`를 추가한다.
+4. **`node build-seo.mjs` 실행** — 정적 페이지·OG·sitemap·feed 생성 + 수집 달력 연결 점검. (안 돌리면 검색·공유에 안 잡힘)
+5. 생성물 전체 커밋·푸시. (SEO 설계는 `system/seo.md`)
 
 ---
 
@@ -227,6 +233,9 @@
 ---
 
 ## 변경 로그
+- v7 (2026-07-15): 발행 절차에 **수집 달력 연결(필수)** 추가 — 발행 시 `inbox.json` 대응 항목에 `postId` 연결,
+  운영 대시보드 '수집 달력'(월별·주간·최신순)에 ✅ 발행이 자동 표시되게 함. 빌드가 미연결 발행 글을 경고.
+  드래프트 폴더명 규칙(`YYYY.MM.DD_<slug>`)과 버전 누적(v1,v2…) 명문화. 본문 표는 내용 크기+왼쪽 정렬로 변경.
 - v6 (2026-07-14): 글 페이지 상단 eyebrow(카테고리·읽기시간·날짜) 제거, 하단 바이라인은 **업로드 날짜만** 표시.
   posts.json에 `published`(발행일) 필드 도입 — 뉴스 첫 등장일(`date`)과 분리. 바이라인은 `published` 사용.
   (build-seo.mjs에서 eyebrow·author·readMin 렌더 제거, pubDate 헬퍼 추가.)
