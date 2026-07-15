@@ -194,9 +194,9 @@ main.article>*{position:relative}
 body.cat-research{--accent:#5B6EF5;--accentStrong:#4353D9}
 body.cat-tutorial{--accent:#7C6FF0;--accentStrong:#6A4FE0}
 /* ---- 피처 레이아웃 (layout:feature) — A+B 하이브리드 ---- */
-body.feature .doc h2.chap{display:flex;align-items:flex-start;gap:15px}
-body.feature .doc h2.chap .gn{font-size:44px;font-weight:900;line-height:.82;letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1.5px var(--faint);flex:none}
-body.feature .doc h2.chap .ct{flex:1;padding-top:5px}
+body.feature .doc h2.chap{display:flex;align-items:center;gap:12px}
+body.feature .doc h2.chap .gn{font-family:var(--serif);font-size:15px;font-weight:800;line-height:1;color:var(--brandD);background:var(--brandBg);border:1px solid color-mix(in srgb,var(--brand) 32%,transparent);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;font-variant-numeric:tabular-nums}
+body.feature .doc h2.chap .ct{flex:1}
 body.feature .doc table.vs{border-color:var(--red)}
 body.feature .doc table.vs thead th{border-bottom-color:var(--red)}
 body.feature .doc table.vs thead th:last-child{color:var(--red)}
@@ -204,7 +204,7 @@ body.feature .doc table.vs tbody td:last-child{color:var(--red);font-weight:700;
 body.feature .doc .trap{background:var(--warnBg);border:1px solid var(--warnBd);border-radius:16px;padding:16px 22px;margin:26px 0}
 body.feature .doc .trap p{margin:4px 0;color:var(--ink2)}
 body.feature .doc .trap .trap-h strong{color:var(--warnInk)}
-@media(max-width:640px){body.feature .doc h2.chap .gn{font-size:34px}}
+@media(max-width:640px){body.feature .doc h2.chap .gn{width:28px;height:28px;font-size:14px}}
 @media(max-width:820px){.feat{grid-template-columns:1fr}.feat .cover{min-height:170px}.grid{grid-template-columns:1fr 1fr}.mast h1{font-size:34px}.navlinks{display:none}}
 @media(max-width:640px){main.article{padding:32px 22px 52px;margin:16px 14px 40px;border-radius:18px}main.article::before{border-radius:18px 18px 0 0}}
 @media(max-width:540px){.grid{grid-template-columns:1fr}}
@@ -241,8 +241,7 @@ body.feature .doc .trap .trap-h strong{color:var(--warnInk)}
   .doc thead th{font-size:12px}
   .doc th,.doc td{padding:10px 12px}
   .art-foot .next{font-size:15px}
-  body.feature .doc h2.chap{gap:11px}
-  body.feature .doc h2.chap .gn{font-size:30px}
+  body.feature .doc h2.chap{gap:10px}
 }`;
 
 const ACSS = ``;   // 매거진 스타일 제거 — 클린 레이아웃은 CSS에 통합됨
