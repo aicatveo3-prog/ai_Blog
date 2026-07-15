@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-14",
+  "generated": "2026-07-15",
   "note": "지난 한 달 AI 소식 전방위 수집. firstSeen = 검증된 진짜 첫 등장일(1차/신뢰 소스). 일자 미확정은 verified:false로 '날짜 없음'에 대기. surfaced가 다르면 gap 표시.",
   "items": [
     {
@@ -1599,6 +1599,88 @@
         {
           "v": "💬 반응",
           "path": "collect/reactions/samsung-gaia-chip.md"
+        }
+      ]
+    },
+    {
+      "title": "ByteDance Seedream 5.0 Pro",
+      "firstSeen": "2026-07-08",
+      "surfaced": "2026-07-15",
+      "verified": true,
+      "verifyNote": "공식 발표 2026-07-08. ByteDance·TechCrunch·MagicShot 2곳+ 교차확인.",
+      "source": "https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro",
+      "status": "인박스",
+      "tags": [
+        "모델출시",
+        "이미지생성",
+        "ByteDance",
+        "다국어",
+        "창작도구"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/bytedance-seedream-5-0-pro-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/bytedance-seedream-5-0-pro.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/bytedance-seedream-5-0-pro.md"
+        }
+      ]
+    },
+    {
+      "title": "China AI Virtual Companion Regulations — Effective July 15",
+      "firstSeen": "2026-07-15",
+      "surfaced": "2026-07-15",
+      "verified": true,
+      "verifyNote": "시행일 2026-07-15. 규정 발표 2026-04-10 (CAC, NDRC, MIIT). 2곳+ 교차확인.",
+      "source": "https://www.techtimes.com/articles/320525/20260715/china-ai-companion-law-takes-effect-doubao-qwen-shut-down-millions-lose-chat-data.htm",
+      "status": "인박스",
+      "tags": [
+        "정책규제",
+        "중국",
+        "AI윤리",
+        "업계영향",
+        "미성년자보호"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/china-ai-companion-regulations-summary.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/china-ai-companion-regulations.md"
+        }
+      ]
+    },
+    {
+      "title": "Publishers File Class Action Against Google Over Gemini AI Training",
+      "firstSeen": "2026-07-14",
+      "surfaced": "2026-07-15",
+      "verified": true,
+      "verifyNote": "소송 제기 2026-07-14. 원고: Hachette, Cengage, Elsevier, Scott Turow. 2곳+ 교차확인.",
+      "source": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/",
+      "status": "인박스",
+      "tags": [
+        "저작권",
+        "소송",
+        "Google",
+        "Gemini",
+        "AI윤리"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/google-publisher-lawsuit-summary.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/google-publisher-lawsuit.md"
         }
       ]
     }
