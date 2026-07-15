@@ -27,7 +27,8 @@
       "angle": "Meta가 6년 동안 실패했던 AI 칩 프로젝트가 드디어 양산에 들어가요. 엔비디아를 대체하는 건 아니지만, 비용 35% 절감과 14GW 컴퓨팅 목표의 핵심이에요.",
       "lens": ["① 그래서 나한테?"],
       "versions": [
-        { "v": "v1", "date": "2026-07-15", "note": "최초 발행 — CNBC·Yahoo·Deutsche Bank 교차확인, 비용 구조·공급망·투자 반응 분석", "path": "drafts/meta-iris-chip/v1.md" }
+        { "v": "v2", "date": "2026-07-15", "note": "수정 후 — 칩 개념(CPU/GPU/ASIC)·발표일(7/9)·Capex 풀이·경쟁사 칩 설명 보강", "path": "drafts/2026.07.15_meta-iris-chip/v2.md" },
+        { "v": "v1", "date": "2026-07-15", "note": "수정 전 최초 발행 — CNBC·Yahoo·Deutsche Bank 교차확인, 비용 구조·공급망·투자 반응 분석", "path": "drafts/2026.07.15_meta-iris-chip/v1.md" }
       ]
     },
     {
