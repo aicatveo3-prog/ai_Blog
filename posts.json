@@ -14,6 +14,23 @@
   ],
   "posts": [
     {
+      "id": "samsung-gaia-chip",
+      "title": "삼성전자가 AI 칩을 만들고 있어요 — 10년 만에 PC 시장에 돌아오려고요",
+      "date": "2026-07-09",
+      "published": "2026-07-15",
+      "type": "B 심층 분석",
+      "category": "인사이트",
+      "stage": "발행",
+      "layout": "feature",
+      "readMin": 7,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "삼성전자가 'GAIA'라는 AI 전용 칩을 만들고 있어요. 10년 만에 PC 시장에 돌아오는 건데, HP·Lenovo가 이미 시제품을 테스트 중이에요. 중저가 AI PC 시장을 노리는 전략과 한계를 짚었어요.",
+      "lens": ["① 그래서 나한테?"],
+      "versions": [
+        { "v": "v1", "date": "2026-07-15", "note": "최초 발행 — Seoul Economic Daily·Trendforce·wccftech·gHacks·Memeburn 교차확인, NPU·PIM 개념 풀이, 중저가 시장 전략·독립 벤치마크 부재 분석", "path": "drafts/2026.07.15_samsung-gaia-chip/v1.md" }
+      ]
+    },
+    {
       "id": "apple-openai-lawsuit",
       "title": "Apple이 OpenAI를 고소했어요 — \"거래 비밀 훔쳐갔다\"며",
       "date": "2026-07-10",
