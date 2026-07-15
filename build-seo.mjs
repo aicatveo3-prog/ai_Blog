@@ -55,7 +55,7 @@ function renderMD(md){const lines=md.replace(/\r/g,'').split('\n');let out='',i=
     if(/^\s*>/.test(ln)){let buf=[];while(i<lines.length&&/^\s*>/.test(lines[i])){buf.push(lines[i].replace(/^\s*>\s?/,''));i++;}out+='<blockquote>'+renderMD(buf.join('\n'))+'</blockquote>';continue;}
     if(/\|/.test(ln)&&i+1<lines.length&&/^\s*\|?[\s:|-]+\|[\s:|-]*$/.test(lines[i+1])){const head=splitRow(ln);i+=2;let rows=[];
       while(i<lines.length&&/\|/.test(lines[i])&&lines[i].trim()!==''){rows.push(splitRow(lines[i]));i++;}
-      out+='<table><thead><tr>'+head.map(c=>'<th>'+inline(c)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map(c=>'<td>'+inline(c)+'</td>').join('')+'</tr>').join('')+'</tbody></table>';continue;}
+      out+='<div class="tbl"><table><thead><tr>'+head.map(c=>'<th>'+inline(c)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map(c=>'<td>'+inline(c)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>';continue;}
     if(/^\s*(?:[-*+]|\d+\.)\s+/.test(ln)){const ordered=/^\s*\d+\./.test(ln);let buf=[];
       while(i<lines.length&&/^\s*(?:[-*+]|\d+\.)\s+/.test(lines[i])){buf.push('<li>'+inline(lines[i].replace(/^\s*(?:[-*+]|\d+\.)\s+/,''))+'</li>');i++;}
       out+=(ordered?'<ol>':'<ul>')+buf.join('')+(ordered?'</ol>':'</ul>');continue;}
@@ -180,7 +180,8 @@ main.article>*{position:relative}
 .doc hr + h2{margin-top:18px}
 .doc code{font-family:ui-monospace,Menlo,monospace;font-size:.87em;background:var(--soft);padding:2px 6px;border-radius:6px;color:var(--accentStrong)}
 .doc pre{background:#1B1E24;color:#E6E9ED;border-radius:12px;padding:16px 18px;overflow-x:auto;margin:20px 0}.doc pre code{background:none;padding:0;color:inherit}
-.doc table{border-collapse:separate;border-spacing:0;width:100%;margin:26px 0;font-size:15px;display:block;overflow-x:auto;border:2px solid var(--tedge);border-radius:12px}
+.doc .tbl{margin:26px 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.doc table{border-collapse:separate;border-spacing:0;width:100%;font-size:15px;border:2px solid var(--tedge);border-radius:12px}
 .doc thead th{background:var(--soft);color:var(--ink);font-weight:800;font-size:13px;letter-spacing:.1px;border-bottom:2px solid var(--tedge);border-right:1.5px solid var(--tline)}
 .doc th,.doc td{border-bottom:1.5px solid var(--tline);border-right:1.5px solid var(--tline);padding:12px 15px;text-align:left;vertical-align:top;color:var(--ink2);font-weight:500}
 .doc th:last-child,.doc td:last-child{border-right:none}
