@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14",
+  "updated": "2026-07-15",
   "stages": ["인박스", "검토중", "선정", "조사중", "작성중", "검수중", "발행"],
   "criteria": [
     { "name": "🎯 포지셔닝 (독자·범위·렌즈)", "path": "system/positioning.md" },
@@ -13,6 +13,23 @@
     { "name": "⚙️ 루틴 운영 (3-루틴 자동화)", "path": "system/routines.md" }
   ],
   "posts": [
+    {
+      "id": "meta-iris-chip",
+      "title": "Meta가 드디어 자기 AI 칩을 만들었어요 — 6년 걸렸어요",
+      "date": "2026-07-09",
+      "published": "2026-07-15",
+      "type": "B 심층 분석",
+      "category": "인사이트",
+      "stage": "발행",
+      "layout": "feature",
+      "readMin": 7,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "Meta가 6년 동안 실패했던 AI 칩 프로젝트가 드디어 양산에 들어가요. 엔비디아를 대체하는 건 아니지만, 비용 35% 절감과 14GW 컴퓨팅 목표의 핵심이에요.",
+      "lens": ["① 그래서 나한테?"],
+      "versions": [
+        { "v": "v1", "date": "2026-07-15", "note": "최초 발행 — CNBC·Yahoo·Deutsche Bank 교차확인, 비용 구조·공급망·투자 반응 분석", "path": "drafts/meta-iris-chip/v1.md" }
+      ]
+    },
     {
       "id": "ai-datacenter-power",
       "title": "AI가 전기를 너무 많이 먹어요 — 2027년이면 데이터센터 10곳 중 4곳이 전력 부족이래요",
