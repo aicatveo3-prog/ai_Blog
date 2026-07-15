@@ -231,15 +231,15 @@ body.feature .doc .trap .trap-h strong{color:var(--warnInk)}
   .article h1.title{font-size:24px}
   .article .standfirst{font-size:15.5px}
   .article .abyline{font-size:13px}
-  .doc>p:first-of-type{font-size:16px}
-  .doc p{font-size:15px}
-  .doc h2{font-size:19.5px;margin:44px 0 12px}
-  .doc h3{font-size:16.5px}
-  .doc ul>li,.doc ol>li{font-size:15px}
-  .doc blockquote p{font-size:15px}
-  .doc .callout{font-size:14.5px}
-  .doc table{font-size:13.5px}
-  .doc thead th{font-size:12px}
+  .doc>p:first-of-type{font-size:19px;line-height:1.7}
+  .doc p{font-size:18px;line-height:1.75}
+  .doc h2{font-size:21px;margin:46px 0 13px}
+  .doc h3{font-size:18.5px}
+  .doc ul>li,.doc ol>li{font-size:18px;line-height:1.68}
+  .doc blockquote p{font-size:17.5px;line-height:1.68}
+  .doc .callout{font-size:17px;line-height:1.68}
+  .doc table{font-size:14.5px}
+  .doc thead th{font-size:12.5px}
   .doc th,.doc td{padding:10px 12px}
   .art-foot .next{font-size:15px}
   body.feature .doc h2.chap{gap:10px}
