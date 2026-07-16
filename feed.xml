@@ -16,14 +16,6 @@
     <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
   </item>
   <item>
-    <title>AI가 전기를 너무 많이 먹어요 — 2027년이면 데이터센터 10곳 중 4곳이 전력 부족이래요</title>
-    <link>https://aicatveo3-prog.github.io/ai_Blog/p/ai-datacenter-power/</link>
-    <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/ai-datacenter-power/</guid>
-    <description>GPU가 아니라 &apos;전기&apos;가 AI의 새 병목이 됐어요. Gartner는 2027년까지 데이터센터 40%가 전력 부족에 빠질 거라고 해요. 왜 이렇게 됐고, 우리한테 어떤 영향이 있는지 짚었어요.</description>
-    <category>인사이트</category>
-    <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
-  </item>
-  <item>
     <title>삼성전자가 AI 칩을 만들고 있어요 — 10년 만에 PC 시장에 돌아오려고요</title>
     <link>https://aicatveo3-prog.github.io/ai_Blog/p/samsung-gaia-chip/</link>
     <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/samsung-gaia-chip/</guid>
@@ -40,12 +32,12 @@
     <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
   </item>
   <item>
-    <title>마이크로소프트가 자기 AI 7개를 만들었어요 — 그런데 설명서 한 줄이 화제가 됐어요</title>
-    <link>https://aicatveo3-prog.github.io/ai_Blog/p/microsoft-mai/</link>
-    <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/microsoft-mai/</guid>
-    <description>마이크로소프트가 처음으로 자기 AI 7개를 공개했어요. 그런데 &quot;우리 건 깨끗한 자료로만 배웠다&quot;던 자랑이 실제 설명서와 어긋났어요. 무슨 일인지 학생도 이해할 수 있게 쉽고 재밌게 풀었어요.</description>
+    <title>AI가 전기를 너무 많이 먹어요 — 2027년이면 데이터센터 10곳 중 4곳이 전력 부족이래요</title>
+    <link>https://aicatveo3-prog.github.io/ai_Blog/p/ai-datacenter-power/</link>
+    <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/ai-datacenter-power/</guid>
+    <description>GPU가 아니라 &apos;전기&apos;가 AI의 새 병목이 됐어요. Gartner는 2027년까지 데이터센터 40%가 전력 부족에 빠질 거라고 해요. 왜 이렇게 됐고, 우리한테 어떤 영향이 있는지 짚었어요.</description>
     <category>인사이트</category>
-    <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+    <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
   </item>
   <item>
     <title>일리노이가 AI 회사한테 &apos;외부 안전검사&apos; 시키는 법을 만들었어요 — 그런데 OpenAI가 환영했어요</title>
@@ -62,6 +54,14 @@
     <description>리서치 회사 SemiAnalysis가 &quot;엔비디아 차세대 AI 서버랙 Kyber가 2028년으로 1년 이상 늦어진다&quot;고 구체적으로 주장했어요. 엔비디아는 &quot;로드맵은 그대로&quot;라는 한 문장으로 반박했고요. 아직 양쪽 주장뿐, 누가 맞는지 모르는 이 논쟁을 학생도 이해하게 쉽게…</description>
     <category>인사이트</category>
     <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>마이크로소프트가 자기 AI 7개를 만들었어요 — 그런데 설명서 한 줄이 화제가 됐어요</title>
+    <link>https://aicatveo3-prog.github.io/ai_Blog/p/microsoft-mai/</link>
+    <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/microsoft-mai/</guid>
+    <description>마이크로소프트가 처음으로 자기 AI 7개를 공개했어요. 그런데 &quot;우리 건 깨끗한 자료로만 배웠다&quot;던 자랑이 실제 설명서와 어긋났어요. 무슨 일인지 학생도 이해할 수 있게 쉽고 재밌게 풀었어요.</description>
+    <category>인사이트</category>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
   </item>
 </channel>
 </rss>

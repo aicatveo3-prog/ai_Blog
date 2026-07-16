@@ -494,7 +494,9 @@ function ogHtml(title, cat) {
 // ---------- 실행 ----------
 const posts = JSON.parse(read('posts.json')).posts
   .filter(p => p.stage === '발행')
-  .sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  // 홈에 표시되는 날짜(발행일)와 정렬 기준을 일치시킨다 — 최신 발행 글이 항상 위로.
+  // 발행일이 같으면 뉴스 날짜(date)로 2차 정렬.
+  .sort((a,b)=>(pubDate(b)||'').localeCompare(pubDate(a)||'') || (b.date||'').localeCompare(a.date||''));
 
 console.log(`발행 글 ${posts.length}편 빌드`);
 
