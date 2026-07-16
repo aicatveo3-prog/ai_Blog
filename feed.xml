@@ -6,7 +6,15 @@
   <atom:link href="https://aicatveo3-prog.github.io/ai_Blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>어려운 AI 뉴스, 학생도 이해하게 쉽게 알려드려요</description>
   <language>ko</language>
-  <lastBuildDate>Fri, 10 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 07 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>딥시크가 AI 칩을 직접 만든대요 — 엔비디아·화웨이 없이 되려나요?</title>
+    <link>https://aicatveo3-prog.github.io/ai_Blog/p/deepseek-chip/</link>
+    <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/deepseek-chip/</guid>
+    <description>중국 AI 기업 딥시크가 엔비디아·화웨이 칩 의존을 줄이려고 자체 추론 칩을 개발 중이래요. 아직 소식통 기반 보도지만, 세 가지 현실적 장벽과 업계 전체의 &apos;칩 내재화&apos; 트렌드를 짚었어요.</description>
+    <category>인사이트</category>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
   <item>
     <title>Apple이 OpenAI를 고소했어요 — &quot;거래 비밀 훔쳐갔다&quot;며</title>
     <link>https://aicatveo3-prog.github.io/ai_Blog/p/apple-openai-lawsuit/</link>
