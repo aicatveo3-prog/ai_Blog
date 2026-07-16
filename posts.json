@@ -49,6 +49,27 @@
   ],
   "posts": [
     {
+      "id": "bytedance-seedream",
+      "title": "바이트댄스가 '디자인을 이해하는 AI'를 내놨어요 — 한글 포스터도 만든다는데",
+      "date": "2026-07-08",
+      "type": "A 속보 브리핑",
+      "category": "인사이트",
+      "stage": "작성중",
+      "layout": "feature",
+      "readMin": 4,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "틱톡 모회사 바이트댄스가 '디자인 원칙을 이해하는' 이미지 AI Seedream 5.0 Pro를 공개했어요. 한글 텍스트도 된다는데, 독립 검증은 아직 없고 중국 우선 출시라 지켜볼 단계예요.",
+      "lens": ["① 그래서 나한테?"],
+      "versions": [
+        {
+          "v": "v1",
+          "date": "2026-07-16",
+          "note": "최초 초안 — ByteDance 공식 블로그·TechCrunch 교차확인, 디자인 이해 주장·다국어 텍스트 강점·독립 검증 부재 분석",
+          "path": "drafts/2026.07.16_bytedance-seedream/v1.md"
+        }
+      ]
+    },
+    {
       "id": "china-ai-companion-regulation",
       "title": "중국이 'AI 친구' 서비스 규제를 시작했어요 — 바이트댄스·알리바바가 감정 대화 AI를 닫았어요",
       "date": "2026-07-16",

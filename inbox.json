@@ -1625,7 +1625,8 @@
       "verified": true,
       "verifyNote": "공식 발표 2026-07-08. ByteDance·TechCrunch·MagicShot 2곳+ 교차확인.",
       "source": "https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro",
-      "status": "인박스",
+      "status": "작성중",
+      "postId": "bytedance-seedream",
       "tags": [
         "모델출시",
         "이미지생성",
