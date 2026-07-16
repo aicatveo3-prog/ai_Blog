@@ -14,6 +14,22 @@
   ],
   "posts": [
     {
+      "id": "deepseek-chip",
+      "title": "딥시크가 AI 칩을 직접 만든대요 — 엔비디아·화웨이 없이 되려나요?",
+      "date": "2026-07-07",
+      "type": "B 심층 분석",
+      "category": "인사이트",
+      "stage": "검수중",
+      "layout": "feature",
+      "readMin": 6,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "중국 AI 기업 딥시크가 엔비디아·화웨이 칩 의존을 줄이려고 자체 추론 칩을 개발 중이래요. 아직 소식통 기반 보도지만, 세 가지 현실적 장벽과 업계 전체의 '칩 내재화' 트렌드를 짚었어요.",
+      "lens": ["① 그래서 나한테?"],
+      "versions": [
+        { "v": "v1", "date": "2026-07-16", "note": "최초 초안 — 로이터·TechNode·Yahoo Finance·wccftech·Investing.com 교차확인, 추론칩 개념·4단계 여정·CUDA 해자·업계 트렌드 분석", "path": "drafts/2026.07.16_deepseek-chip/v1.md" }
+      ]
+    },
+    {
       "id": "samsung-gaia-chip",
       "title": "삼성전자가 AI 칩을 만들고 있어요 — 10년 만에 PC 시장에 돌아오려고요",
       "date": "2026-07-09",
