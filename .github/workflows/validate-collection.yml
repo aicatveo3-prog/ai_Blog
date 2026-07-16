@@ -1,0 +1,29 @@
+# 수집 3탭 품질 게이트 (CI) — 루틴 ①이 검증기 실행을 건너뛰어도 여기서 잡는다.
+# system/daily-collection.md 8단계의 `node validate-collection.mjs`를 푸시/PR마다 자동 실행.
+# 참고: 아직 복원 안 된 항목이 있으면 이 워크플로는 '실패(빨간불)'로 뜬다 — 그게 남은 할 일 목록이다.
+name: validate-collection
+
+on:
+  push:
+    paths:
+      - 'inbox.json'
+      - 'collect/**'
+      - 'validate-collection.mjs'
+      - '.github/workflows/validate-collection.yml'
+  pull_request:
+    paths:
+      - 'inbox.json'
+      - 'collect/**'
+      - 'validate-collection.mjs'
+  workflow_dispatch: {}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: 수집 3탭 검증
+        run: node validate-collection.mjs
