@@ -54,13 +54,19 @@
       "date": "2026-07-08",
       "type": "A 속보 브리핑",
       "category": "인사이트",
-      "stage": "작성중",
+      "stage": "검수중",
       "layout": "feature",
       "readMin": 4,
       "author": "AI 쉽게 알려주는 집",
       "angle": "틱톡 모회사 바이트댄스가 '디자인 원칙을 이해하는' 이미지 AI Seedream 5.0 Pro를 공개했어요. 한글 텍스트도 된다는데, 독립 검증은 아직 없고 중국 우선 출시라 지켜볼 단계예요.",
       "lens": ["① 그래서 나한테?"],
       "versions": [
+        {
+          "v": "v2",
+          "date": "2026-07-16",
+          "note": "루틴③ 검사 — 웹 재검증으로 경쟁 모델명 오류 정정(GPT-4V·Gemini Pro Vision→실제 비교 대상인 GPT-Image 2, 3곳), 미출처 구체 사실(샘플 이미지 언어 구성) 삭제, 근거 없는 최상급 완화.",
+          "path": "drafts/2026.07.16_bytedance-seedream/v2.md"
+        },
         {
           "v": "v1",
           "date": "2026-07-16",
