@@ -3,12 +3,20 @@
 > 용도: 하나의 소식에 모인 **세 소스**(자세히·정리본·💬 반응)를
 > 하나의 **재미있고 쉬운 심층 분석 글**로 합친다. 결과물은 `drafts/<slug>/v1.md`.
 >
-> **표준(골드 스탠다드)**: `drafts/anthropic-pause/final.md` (= v3).
-> 새 글은 이 글의 **톤·리듬·구조**를 그대로 재현해야 한다. 애매하면 이 파일을 열어 문장 리듬을 흉내 낸다.
+> **⚠️ 규칙의 단일 진실원 = `system/writing-guide.md`** (현재 **17규칙** + 문단 리듬 + 과단정 스캔 + 발행 전 체크리스트).
+> 이 프롬프트는 **구조 뼈대(스캐폴드)일 뿐**이다. 아래 개별 항목이 writing-guide와 충돌하면 **언제나 writing-guide를 따른다.**
+> 특히 이 프롬프트 작성(2026-07-04) *이후* 추가·강화된 규칙을 반드시 반영한다:
+> **12**(반복 금지) · **13**(압축·관련성 테스트) · **14**(팩트/분석 비중·낯선 항목 표엔 설명 열) ·
+> **15**(진행 중 사건 = "주장/미확정" 프레이밍·리스크 자문·양쪽 말) · **16**(날짜는 연·월·일·첫 등장 이름에 한글 병기) ·
+> **17**(과단정 스캔 — 소스보다 세게 말하지 않기). 아래 B·C의 하드코딩된 예시·비유는 *참고일 뿐*이며,
+> v8 이후 "사례 하드코딩 금지"·"편향된 비유 금지(규칙 6)"가 우선한다.
+>
+> **골드 스탠다드**: writing-guide가 지정한 파일(`drafts/microsoft-mai/v1.md`). 원리(후크·앵커·리듬)만 가져오고 **문장은 베끼지 않는다.**
+> 구조 템플릿(아래 12섹션)도 고정이 아니라 소식에 맞게 늘리고 줄인다(최근 글은 6~9섹션도 많다).
 >
 > 전제: `collect/<slug>.md`(자세히), `collect/<slug>-summary.md`(정리본),
 > `collect/reactions/<slug>.md`(반응)이 이미 있어야 한다. 셋 중 하나라도 없으면 먼저 프롬프트 H로 반응부터 채운다.
-> 관련: 프롬프트 H(반응 수집), `system/daily-collection.md`(수집 루틴).
+> 관련: `system/writing-guide.md`(규칙 정본) · `system/routine-write.md`(루틴 ②) · 프롬프트 H(반응 수집) · K(교차검증).
 
 ---
 
@@ -122,21 +130,16 @@
 
 ## 실행 절차 (1편)
 
-1. 위 프롬프트의 `{...}`에 해당 slug의 세 소스 + 골드 스탠다드(`final.md`)를 채운다.
-2. 결과물을 `drafts/<slug>/v1.md`로 저장.
-3. `inbox.json`의 해당 항목에 `"postId":"<slug>"`, `"status":"검수중"` 반영.
+1. 위 프롬프트의 `{...}`에 해당 slug의 세 소스 + 골드 스탠다드(`drafts/microsoft-mai/v1.md`) + K 교차검증 노트를 채운다.
+2. 결과물을 `drafts/YYYY.MM.DD_<slug>/v1.md`로 저장.
+3. `posts.json`에 **`stage:"작성중"`**으로 등재(`published` 넣지 말 것), `inbox.json` 해당 항목에 `"postId":"<slug>"` 연결.
 4. 커밋·푸시.
 
-## 📢 발행 절차 (사람이 "발행"을 지시할 때)
+## 📢 발행은 이 단계가 아니다 (자동 글쓰기 루틴에서는 특히 금지)
 
-1. `posts.json`의 `posts`에 항목 추가: `id`(=slug), `title`, `date`(발행일), `type`,
-   `category`(인사이트/리서치/튜토리얼), `stage:"발행"`, `readMin`, `author`, `angle`,
-   `versions:[{v,date,note,path}]`. `inbox.json`도 `status:"발행"`로.
-2. **정적 SEO 빌드 실행**: `node build-seo.mjs`
-   → `p/<slug>/index.html`(본문 프리렌더 + title·description·canonical·OG·트위터·JSON-LD),
-     홈 `index.html`(정적 링크 목록), `sitemap.xml`, `robots.txt`, `feed.xml`, `og.png` 생성.
-   이걸 안 돌리면 검색엔진·카카오톡 공유에 글이 안 잡힌다(반드시 실행).
-3. 생성물 전체를 커밋·푸시. (자세한 SEO 설계는 `system/seo.md` 참고)
+- 초안의 끝은 **`stage:"작성중"`**까지다. 여기서 `node build-seo.mjs`를 돌리거나 `stage`를 `검수중`/`발행`으로 올리지 **않는다.**
+- 검사(`검수중`)는 루틴 ③(Opus 4.8)이, **발행은 사람이 최종검토 후에만** 한다 — writing-guide 대원칙 + `system/routines.md`.
+- 자동 글쓰기 루틴은 **어떤 경우에도 발행하지 않는다.** (SEO 빌드 절차는 발행 시 사람이 참고: `system/seo.md`)
 
 ## ⚡ 일괄 실행 — "한 번 요청하면 다른 글도 재탄생"
 

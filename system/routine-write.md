@@ -32,10 +32,11 @@
 ## 한 편을 쓰는 순서 (대상마다 반복)
 
 1. **교차검증** — `prompts/K-crosscheck.md`로 자료(정리본·자세히·반응) 간 모순·과장·함정을 먼저 훑는다. 앵글·렌즈를 잡는다.
-2. **초안 집필** — `prompts/I-synthesis-deepdive.md` + `system/writing-guide.md`(16규칙 + 문단 리듬 + 과단정 스캔) 기준으로 종합 심층 글을 쓴다. 골드 스탠다드 = `drafts/microsoft-mai/v1.md`(원리만, 베끼지 말 것).
-3. **저장** — `drafts/YYYY.MM.DD_<slug>/v1.md` 에 저장(폴더명 = 오늘 날짜_슬러그).
-4. **posts.json 등재** — `posts`에 항목 추가, **`stage:"작성중"`**(발행·검수중 아님). 필드: `id, title, date(=뉴스 firstSeen), type, category, stage:"작성중", layout:"feature", readMin, author:"AI 쉽게 알려주는 집", angle, versions:[{v:"v1", date:오늘, note, path}]`. `published`는 넣지 않는다(발행 아님).
-5. **inbox.json 연결** — 대응 수집 항목에 **`"postId":"<글 id>"`** 를 붙인다(이게 "이 뉴스는 글로 착수됨" 표시이자, 중복 집필 방지).
+2. **초안 집필** — **규칙의 단일 진실원은 `system/writing-guide.md`**(현재 **17규칙 전체** + 문단 리듬 + 과단정 스캔). `prompts/I-synthesis-deepdive.md`는 구조 뼈대로만 쓰고, 프롬프트와 writing-guide가 충돌하면 **writing-guide를 따른다.** 특히 12(반복)·13(압축)·14(비중)·15(진행 중 사건=주장·리스크)·16(정밀표기)·17(과단정)을 빠짐없이 반영. 골드 스탠다드 = `drafts/microsoft-mai/v1.md`(원리만, 베끼지 말 것).
+3. **자기 점검** — 저장 전, writing-guide의 **발행 전 체크리스트**를 스스로 훑는다(해요체·후크+앵커·세 줄 요약·용어 풀이·양쪽 말·인라인 출처·과단정 스캔 등). 걸리면 고친 뒤 저장.
+4. **저장** — `drafts/YYYY.MM.DD_<slug>/v1.md` 에 저장(폴더명 = 오늘 날짜_슬러그).
+5. **posts.json 등재** — `posts`에 항목 추가, **`stage:"작성중"`**(발행·검수중 아님). 필드: `id, title, date(=뉴스 firstSeen), type, category, stage:"작성중", layout:"feature", readMin, author:"AI 쉽게 알려주는 집", angle, versions:[{v:"v1", date:오늘, note, path}]`. `published`는 넣지 않는다(발행 아님).
+6. **inbox.json 연결** — 대응 수집 항목에 **`"postId":"<글 id>"`** 를 붙인다(이게 "이 뉴스는 글로 착수됨" 표시이자, 중복 집필 방지).
 
 ## 절대 규칙 (예외 없음)
 
