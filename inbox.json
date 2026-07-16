@@ -1136,7 +1136,8 @@
       "trend": true,
       "verifyNote": "규제 자체는 중국 CAC 등 5개 부처가 2026-04-10 발표(1차 소스), 시행일 2026-07-15. 셧다운 공지 확산(진짜 첫 등장일)은 TechTimes(2026-07-04)가 최초 보도, TechNode(2026-07-06)·SCMP·Bird&Bird·Wikipedia로 교차확인.",
       "source": "https://technode.com/2026/07/06/bytedances-doubao-and-alibabas-qwen-to-shut-down-ai-agent-features-on-july-15/",
-      "status": "인박스",
+      "status": "작성중",
+      "postId": "china-ai-companion-regulation",
       "tags": [
         "정책",
         "규제",
@@ -1654,7 +1655,8 @@
       "verified": true,
       "verifyNote": "시행일 2026-07-15. 규정 발표 2026-04-10 (CAC, NDRC, MIIT). 2곳+ 교차확인.",
       "source": "https://www.techtimes.com/articles/320525/20260715/china-ai-companion-law-takes-effect-doubao-qwen-shut-down-millions-lose-chat-data.htm",
-      "status": "인박스",
+      "status": "작성중",
+      "postId": "china-ai-companion-regulation",
       "tags": [
         "정책규제",
         "중국",
@@ -1684,7 +1686,8 @@
       "verified": true,
       "verifyNote": "소송 제기 2026-07-14. 원고: Hachette, Cengage, Elsevier, Scott Turow. 2곳+ 교차확인.",
       "source": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/",
-      "status": "인박스",
+      "status": "작성중",
+      "postId": "google-publisher-lawsuit",
       "tags": [
         "저작권",
         "소송",
