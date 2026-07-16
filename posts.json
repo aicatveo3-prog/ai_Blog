@@ -1,37 +1,112 @@
 {
   "updated": "2026-07-16",
-  "stages": ["인박스", "검토중", "선정", "조사중", "작성중", "검수중", "발행"],
+  "stages": [
+    "인박스",
+    "검토중",
+    "선정",
+    "조사중",
+    "작성중",
+    "검수중",
+    "발행"
+  ],
   "criteria": [
-    { "name": "🎯 포지셔닝 (독자·범위·렌즈)", "path": "system/positioning.md" },
-    { "name": "📡 수집 기준 (소스 리스트)", "path": "system/sources.md" },
-    { "name": "📅 날짜 검증 기준 (첫 등장일)", "path": "system/collection-dating.md" },
-    { "name": "🤖 일일 수집 자동화 (플레이북)", "path": "system/daily-collection.md" },
-    { "name": "⚖️ 선별 기준 (루브릭 + 킬 기준)", "path": "system/scoring-rubric.md" },
-    { "name": "🧠 관점 기준 (분석 프레임워크)", "path": "system/analysis-frameworks.md" },
-    { "name": "✍️ 글쓰기 가이드 (문체·구조·디자인 연동)", "path": "system/writing-guide.md" },
-    { "name": "✅ 검수 기준 (체크리스트)", "path": "system/checklists.md" },
-    { "name": "⚙️ 루틴 운영 (3-루틴 자동화)", "path": "system/routines.md" }
+    {
+      "name": "🎯 포지셔닝 (독자·범위·렌즈)",
+      "path": "system/positioning.md"
+    },
+    {
+      "name": "📡 수집 기준 (소스 리스트)",
+      "path": "system/sources.md"
+    },
+    {
+      "name": "📅 날짜 검증 기준 (첫 등장일)",
+      "path": "system/collection-dating.md"
+    },
+    {
+      "name": "🤖 일일 수집 자동화 (플레이북)",
+      "path": "system/daily-collection.md"
+    },
+    {
+      "name": "⚖️ 선별 기준 (루브릭 + 킬 기준)",
+      "path": "system/scoring-rubric.md"
+    },
+    {
+      "name": "🧠 관점 기준 (분석 프레임워크)",
+      "path": "system/analysis-frameworks.md"
+    },
+    {
+      "name": "✍️ 글쓰기 가이드 (문체·구조·디자인 연동)",
+      "path": "system/writing-guide.md"
+    },
+    {
+      "name": "✅ 검수 기준 (체크리스트)",
+      "path": "system/checklists.md"
+    },
+    {
+      "name": "⚙️ 루틴 운영 (3-루틴 자동화)",
+      "path": "system/routines.md"
+    }
   ],
   "posts": [
     {
       "id": "china-ai-companion-regulation",
-      "title": "중국이 'AI 친구' 서비스를 규제하기 시작했어요 — 더우바오·통이치엔원이 캐릭터 기능을 닫았어요",
+      "title": "중국이 'AI 친구' 서비스 규제를 시작했어요 — 바이트댄스·알리바바가 감정 대화 AI를 닫았어요",
       "date": "2026-07-16",
       "type": "B 심층 분석",
       "category": "인사이트",
-      "stage": "검수중",
+      "stage": "발행",
       "layout": "feature",
       "readMin": 5,
       "author": "AI 쉽게 알려주는 집",
       "angle": "중국 정부가 'AI 의인화 서비스' 규제를 시행하면서 ByteDance·Alibaba가 AI 캐릭터 기능을 종료했어요. 수백만 명의 대화 기록이 삭제되지만, 원래 돈이 안 되던 사업이라 규제가 '적자 사업 정리 명분'이 됐다는 분석도 있어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        { "v": "v5", "date": "2026-07-16", "note": "사람 검토 3차 — 중립화. 금지 행위를 'AI가 그런 짓을 한다'→'규정이 정한 금지 목록'으로 정확히 프레이밍(근거 없는 단정 제거), 세 줄 요약·본문의 동정·가치평가 표현을 사실 위주로('옮길 방법 없다'·'통째로 날아간다' 등 정리), '돈이 안 됐다'를 분석으로 귀속, 10/15 지켜볼 항목 삭제(지켜볼 것 2개로).", "path": "drafts/2026.07.16_china-ai-companion-regulation/v5.md" },
-        { "v": "v4", "date": "2026-07-16", "note": "사람 검토 2차 — 쉬운 주제답게 더 쉽고 짧게. ARPPU 수치를 표로 전환, 전문용어 제거(ARPPU·MAU·긴 규제명·한자 병기 정리), 전문가 분석·한국 매체 문단 등 무거운 부분 덜어냄(7→6섹션, 6→5분), 반응은 '그래서 나한테' 앞에 2문장으로 흡수.", "path": "drafts/2026.07.16_china-ai-companion-regulation/v4.md" },
-        { "v": "v3", "date": "2026-07-16", "note": "사람 검토 반영 — 제목의 과한 비유·'금지' 과장 톤을 사실적 제목으로 교체(규제 시작+서비스 종료 명시), 1번 소제목의 비유('잘 가') 제거, 자판기/단골집 비유 문단 삭제. 쉬운 주제인데 늘어진 것 전면 압축(9→7섹션, 8→6분): 표 반복 산문·중복 비유·과잉 설명 정리, 한국 시각은 짧게 흡수.", "path": "drafts/2026.07.16_china-ai-companion-regulation/v3.md" },
-        { "v": "v2", "date": "2026-07-16", "note": "루틴③ 검사 — 每经网 인용을 가짜 인용에서 귀속 서술로 완화(과단정 스캔). '7개 범주' 등 로컬 미출처 수치는 웹 재검증해 정확함 확인. 제목의 '금지' 톤은 앵글 사안이라 REVIEW.md에 플래그만.", "path": "drafts/2026.07.16_china-ai-companion-regulation/v2.md" },
-        { "v": "v1", "date": "2026-07-16", "note": "최초 초안 — TechNode·SCMP·Bird&Bird·Forbes·Carnegie·TechPolicy.Press 교차확인, 회사별 대응 비교·수익성 앵글·기술적 안전장치 분석", "path": "drafts/2026.07.16_china-ai-companion-regulation/v1.md" }
-      ]
+        {
+          "v": "v7",
+          "date": "2026-07-16",
+          "note": "사람 검토 4차 — 제목을 객관·설명형으로 교체. 앱 이름(더우바오·통이치엔원)은 모르는 독자에게 정보가 안 돼, 알려진 회사명(바이트댄스·알리바바)+'감정 대화 AI'로 바꿔 제목만 봐도 규제 주체·대상·결과가 드러나게 함. (v6에서 제목만 변경, 발행)",
+          "path": "drafts/2026.07.16_china-ai-companion-regulation/v7.md"
+        },
+        {
+          "v": "v6",
+          "date": "2026-07-16",
+          "note": "사람 검토 4차 — 문장 단위 전면 압축. 세 줄 요약의 늘어진 삭제 안내 1문장으로, 각 섹션 도입부 군더더기(궁금한 점이 하나 있어요 등) 제거, 뜻은 유지하며 표현만 조여냄.",
+          "path": "drafts/2026.07.16_china-ai-companion-regulation/v6.md"
+        },
+        {
+          "v": "v5",
+          "date": "2026-07-16",
+          "note": "사람 검토 3차 — 중립화. 금지 행위를 'AI가 그런 짓을 한다'→'규정이 정한 금지 목록'으로 정확히 프레이밍(근거 없는 단정 제거), 세 줄 요약·본문의 동정·가치평가 표현을 사실 위주로('옮길 방법 없다'·'통째로 날아간다' 등 정리), '돈이 안 됐다'를 분석으로 귀속, 10/15 지켜볼 항목 삭제(지켜볼 것 2개로).",
+          "path": "drafts/2026.07.16_china-ai-companion-regulation/v5.md"
+        },
+        {
+          "v": "v4",
+          "date": "2026-07-16",
+          "note": "사람 검토 2차 — 쉬운 주제답게 더 쉽고 짧게. ARPPU 수치를 표로 전환, 전문용어 제거(ARPPU·MAU·긴 규제명·한자 병기 정리), 전문가 분석·한국 매체 문단 등 무거운 부분 덜어냄(7→6섹션, 6→5분), 반응은 '그래서 나한테' 앞에 2문장으로 흡수.",
+          "path": "drafts/2026.07.16_china-ai-companion-regulation/v4.md"
+        },
+        {
+          "v": "v3",
+          "date": "2026-07-16",
+          "note": "사람 검토 반영 — 제목의 과한 비유·'금지' 과장 톤을 사실적 제목으로 교체(규제 시작+서비스 종료 명시), 1번 소제목의 비유('잘 가') 제거, 자판기/단골집 비유 문단 삭제. 쉬운 주제인데 늘어진 것 전면 압축(9→7섹션, 8→6분): 표 반복 산문·중복 비유·과잉 설명 정리, 한국 시각은 짧게 흡수.",
+          "path": "drafts/2026.07.16_china-ai-companion-regulation/v3.md"
+        },
+        {
+          "v": "v2",
+          "date": "2026-07-16",
+          "note": "루틴③ 검사 — 每经网 인용을 가짜 인용에서 귀속 서술로 완화(과단정 스캔). '7개 범주' 등 로컬 미출처 수치는 웹 재검증해 정확함 확인. 제목의 '금지' 톤은 앵글 사안이라 REVIEW.md에 플래그만.",
+          "path": "drafts/2026.07.16_china-ai-companion-regulation/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-16",
+          "note": "최초 초안 — TechNode·SCMP·Bird&Bird·Forbes·Carnegie·TechPolicy.Press 교차확인, 회사별 대응 비교·수익성 앵글·기술적 안전장치 분석",
+          "path": "drafts/2026.07.16_china-ai-companion-regulation/v1.md"
+        }
+      ],
+      "published": "2026-07-16"
     },
     {
       "id": "google-publisher-lawsuit",
@@ -44,10 +119,22 @@
       "readMin": 5,
       "author": "AI 쉽게 알려주는 집",
       "angle": "세계 3대 출판사가 구글을 클래스액션으로 고소했어요. Google Books 1,500만 권이 Gemini 학습에 쓰였다는 혐의인데, 같은 도서관이 2015년엔 공정 이용으로 인정받았어요. Anthropic 15억 달러 합의가 선례가 되고 있어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        { "v": "v2", "date": "2026-07-16", "note": "루틴③ 검사 — 웹 재검증으로 팩트 오류 2건 정정: Authors Guild v. Google 판례 심급 오류(대법원→제2순회 항소법원+2016 상고기각), Anthropic 합의 내용 과장(학습배제→해적파일 폐기). Google 입장 서술 내부 모순 정정 + 미출처 항소법원 문단에 출처 추가.", "path": "drafts/2026.07.16_google-publisher-lawsuit/v2.md" },
-        { "v": "v1", "date": "2026-07-16", "note": "최초 초안 — TechCrunch·Publishers Weekly·AAP·Norton Rose·Cryptonomist 교차확인, 공정 이용 쟁점·소송 물결 타임라인 분석", "path": "drafts/2026.07.16_google-publisher-lawsuit/v1.md" }
+        {
+          "v": "v2",
+          "date": "2026-07-16",
+          "note": "루틴③ 검사 — 웹 재검증으로 팩트 오류 2건 정정: Authors Guild v. Google 판례 심급 오류(대법원→제2순회 항소법원+2016 상고기각), Anthropic 합의 내용 과장(학습배제→해적파일 폐기). Google 입장 서술 내부 모순 정정 + 미출처 항소법원 문단에 출처 추가.",
+          "path": "drafts/2026.07.16_google-publisher-lawsuit/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-16",
+          "note": "최초 초안 — TechCrunch·Publishers Weekly·AAP·Norton Rose·Cryptonomist 교차확인, 공정 이용 쟁점·소송 물결 타임라인 분석",
+          "path": "drafts/2026.07.16_google-publisher-lawsuit/v1.md"
+        }
       ]
     },
     {
@@ -62,10 +149,22 @@
       "readMin": 6,
       "author": "AI 쉽게 알려주는 집",
       "angle": "중국 AI 기업 딥시크가 엔비디아·화웨이 칩 의존을 줄이려고 자체 추론 칩을 개발 중이래요. 아직 소식통 기반 보도지만, 세 가지 현실적 장벽과 업계 전체의 '칩 내재화' 트렌드를 짚었어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        { "v": "v2", "date": "2026-07-16", "note": "객관성·리스크 점검 — 미출처 수치(수백조원) 제거, 검증 안 된 경쟁사 칩 상세표(메타 IRIS·TPU 세대·제품명) 삭제하고 소스가 명시한 회사군만 귀속, CUDA '가장 높은 벽' 등 작성자 단정 완화, io-fund 강세 시각 추가로 양쪽 균형", "path": "drafts/2026.07.16_deepseek-chip/v2.md" },
-        { "v": "v1", "date": "2026-07-16", "note": "최초 초안 — 로이터·TechNode·Yahoo Finance·wccftech·Investing.com 교차확인, 추론칩 개념·4단계 여정·CUDA 해자·업계 트렌드 분석", "path": "drafts/2026.07.16_deepseek-chip/v1.md" }
+        {
+          "v": "v2",
+          "date": "2026-07-16",
+          "note": "객관성·리스크 점검 — 미출처 수치(수백조원) 제거, 검증 안 된 경쟁사 칩 상세표(메타 IRIS·TPU 세대·제품명) 삭제하고 소스가 명시한 회사군만 귀속, CUDA '가장 높은 벽' 등 작성자 단정 완화, io-fund 강세 시각 추가로 양쪽 균형",
+          "path": "drafts/2026.07.16_deepseek-chip/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-16",
+          "note": "최초 초안 — 로이터·TechNode·Yahoo Finance·wccftech·Investing.com 교차확인, 추론칩 개념·4단계 여정·CUDA 해자·업계 트렌드 분석",
+          "path": "drafts/2026.07.16_deepseek-chip/v1.md"
+        }
       ]
     },
     {
@@ -80,16 +179,58 @@
       "readMin": 6,
       "author": "AI 쉽게 알려주는 집",
       "angle": "삼성전자가 'GAIA'라는 AI 전용 칩을 만들고 있어요. 10년 만에 PC 시장에 돌아오는 건데, HP·Lenovo가 이미 시제품을 테스트 중이에요. 중저가 AI PC 시장을 노리는 전략과 한계를 짚었어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        { "v": "v8", "date": "2026-07-15", "note": "PIM 설명에 그림(SVG) 추가 — '지금까지: 메모리↔칩 왕복' vs 'PIM: 메모리 안에서 바로 계산' 비교도. 빌드·대시보드 렌더러에 ```svg 통과 기능 추가", "path": "drafts/2026.07.15_samsung-gaia-chip/v8.md" },
-        { "v": "v7", "date": "2026-07-15", "note": "지켜볼 것 3번 수정 — 소스에 없는 '배터리 약속'(과장) 제거, 글의 핵심인 '값싼 노트북에서 실제로 쓸 수 있나'로 교체", "path": "drafts/2026.07.15_samsung-gaia-chip/v7.md" },
-        { "v": "v6", "date": "2026-07-15", "note": "'왜 클라우드 놔두고 기기 안에서?' 답 추가(온디바이스 AI 이유: 오프라인·즉각·프라이버시) — 글 전체 relevance 확보. 지켜볼 것 3번을 독자 체감(속도·배터리)으로 재구성", "path": "drafts/2026.07.15_samsung-gaia-chip/v6.md" },
-        { "v": "v5", "date": "2026-07-15", "note": "4번 소제목 중립화(깎아내림·가치평가 제거 → '뭘 다르게 하는 걸까요?'), 지켜볼 것 3번 핵심 질문으로 압축", "path": "drafts/2026.07.15_samsung-gaia-chip/v5.md" },
-        { "v": "v4", "date": "2026-07-15", "note": "소제목 재미있게(4·6번) + '지켜볼 것' 2·3번 쉬운 질문으로(벤치마크·PIM 전문용어 풀어씀)", "path": "drafts/2026.07.15_samsung-gaia-chip/v4.md" },
-        { "v": "v3", "date": "2026-07-15", "note": "PIM 설명 쉽게 — '보관하는 곳/계산하는 곳'으로 풀고 짧은 문장으로 분리, 창고-책상 비유로 착지", "path": "drafts/2026.07.15_samsung-gaia-chip/v3.md" },
-        { "v": "v2", "date": "2026-07-15", "note": "검토 반영 — 웹 전체 팩트검증(모든 핵심 주장 교차확인). 쓸데없는 주방 비유 삭제, 경쟁 칩(Snapdragon X2·RTX Spark·GAIA)을 표로 정리, 반복 문장·긴 인용 압축", "path": "drafts/2026.07.15_samsung-gaia-chip/v2.md" },
-        { "v": "v1", "date": "2026-07-15", "note": "최초 초안 — Seoul Economic Daily·Trendforce·wccftech·gHacks·Memeburn 교차확인, NPU·PIM 개념 풀이, 중저가 시장 전략·독립 벤치마크 부재 분석", "path": "drafts/2026.07.15_samsung-gaia-chip/v1.md" }
+        {
+          "v": "v8",
+          "date": "2026-07-15",
+          "note": "PIM 설명에 그림(SVG) 추가 — '지금까지: 메모리↔칩 왕복' vs 'PIM: 메모리 안에서 바로 계산' 비교도. 빌드·대시보드 렌더러에 ```svg 통과 기능 추가",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v8.md"
+        },
+        {
+          "v": "v7",
+          "date": "2026-07-15",
+          "note": "지켜볼 것 3번 수정 — 소스에 없는 '배터리 약속'(과장) 제거, 글의 핵심인 '값싼 노트북에서 실제로 쓸 수 있나'로 교체",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v7.md"
+        },
+        {
+          "v": "v6",
+          "date": "2026-07-15",
+          "note": "'왜 클라우드 놔두고 기기 안에서?' 답 추가(온디바이스 AI 이유: 오프라인·즉각·프라이버시) — 글 전체 relevance 확보. 지켜볼 것 3번을 독자 체감(속도·배터리)으로 재구성",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v6.md"
+        },
+        {
+          "v": "v5",
+          "date": "2026-07-15",
+          "note": "4번 소제목 중립화(깎아내림·가치평가 제거 → '뭘 다르게 하는 걸까요?'), 지켜볼 것 3번 핵심 질문으로 압축",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v5.md"
+        },
+        {
+          "v": "v4",
+          "date": "2026-07-15",
+          "note": "소제목 재미있게(4·6번) + '지켜볼 것' 2·3번 쉬운 질문으로(벤치마크·PIM 전문용어 풀어씀)",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v4.md"
+        },
+        {
+          "v": "v3",
+          "date": "2026-07-15",
+          "note": "PIM 설명 쉽게 — '보관하는 곳/계산하는 곳'으로 풀고 짧은 문장으로 분리, 창고-책상 비유로 착지",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v3.md"
+        },
+        {
+          "v": "v2",
+          "date": "2026-07-15",
+          "note": "검토 반영 — 웹 전체 팩트검증(모든 핵심 주장 교차확인). 쓸데없는 주방 비유 삭제, 경쟁 칩(Snapdragon X2·RTX Spark·GAIA)을 표로 정리, 반복 문장·긴 인용 압축",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-15",
+          "note": "최초 초안 — Seoul Economic Daily·Trendforce·wccftech·gHacks·Memeburn 교차확인, NPU·PIM 개념 풀이, 중저가 시장 전략·독립 벤치마크 부재 분석",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v1.md"
+        }
       ]
     },
     {
@@ -104,12 +245,34 @@
       "readMin": 7,
       "author": "AI 쉽게 알려주는 집",
       "angle": "Apple이 OpenAI를 거래 비밀 도용 혐의로 고소했어요. 2년 전 iPhone 파트너였던 두 회사가 법정에 서게 된 배경과, 아직 입증되지 않은 양측 주장을 사실 위주로 정리했어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        { "v": "v4", "date": "2026-07-15", "note": "정확성·중립 보강 — 요약서 무관 문장 제거, 가치판단 담긴 비유(편의점) 삭제, '한쪽의 반응' 표현 쉽게, '역사상 최대' 과장→소스대로 블룸버그 'blockbuster'로 수정(웹 검증)", "path": "drafts/2026.07.15_apple-openai-lawsuit/v4.md" },
-        { "v": "v3", "date": "2026-07-15", "note": "리스크 축소 개정 — 전 혐의를 '주장/미확정'으로 명확히 프레이밍, 주관적 평가·자극적 인용(Musk 발언 원문) 제거, 이름 한글 병기", "path": "drafts/2026.07.15_apple-openai-lawsuit/v3.md" },
-        { "v": "v2", "date": "2026-07-15", "note": "수정 후 — Chang Liu·io Products 혐의(공동 피고·소장 개념) 풀이, Elon Musk 배경·말장난 풀이, 예비적 금지명령 개념 설명 추가", "path": "drafts/2026.07.15_apple-openai-lawsuit/v2.md" },
-        { "v": "v1", "date": "2026-07-15", "note": "수정 전 최초 발행 — CNBC·Bloomberg·Fortune·TechCrunch 교차확인, 거래 비밀 개념·양측 입장·업계 반응·법적 시나리오 분석", "path": "drafts/2026.07.15_apple-openai-lawsuit/v1.md" }
+        {
+          "v": "v4",
+          "date": "2026-07-15",
+          "note": "정확성·중립 보강 — 요약서 무관 문장 제거, 가치판단 담긴 비유(편의점) 삭제, '한쪽의 반응' 표현 쉽게, '역사상 최대' 과장→소스대로 블룸버그 'blockbuster'로 수정(웹 검증)",
+          "path": "drafts/2026.07.15_apple-openai-lawsuit/v4.md"
+        },
+        {
+          "v": "v3",
+          "date": "2026-07-15",
+          "note": "리스크 축소 개정 — 전 혐의를 '주장/미확정'으로 명확히 프레이밍, 주관적 평가·자극적 인용(Musk 발언 원문) 제거, 이름 한글 병기",
+          "path": "drafts/2026.07.15_apple-openai-lawsuit/v3.md"
+        },
+        {
+          "v": "v2",
+          "date": "2026-07-15",
+          "note": "수정 후 — Chang Liu·io Products 혐의(공동 피고·소장 개념) 풀이, Elon Musk 배경·말장난 풀이, 예비적 금지명령 개념 설명 추가",
+          "path": "drafts/2026.07.15_apple-openai-lawsuit/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-15",
+          "note": "수정 전 최초 발행 — CNBC·Bloomberg·Fortune·TechCrunch 교차확인, 거래 비밀 개념·양측 입장·업계 반응·법적 시나리오 분석",
+          "path": "drafts/2026.07.15_apple-openai-lawsuit/v1.md"
+        }
       ]
     },
     {
@@ -124,10 +287,22 @@
       "readMin": 7,
       "author": "AI 쉽게 알려주는 집",
       "angle": "Meta가 6년 동안 실패했던 AI 칩 프로젝트가 드디어 양산에 들어가요. 엔비디아를 대체하는 건 아니지만, 비용 35% 절감과 14GW 컴퓨팅 목표의 핵심이에요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        { "v": "v2", "date": "2026-07-15", "note": "수정 후 — 칩 개념(CPU/GPU/ASIC)·발표일(7/9)·Capex 풀이·경쟁사 칩 설명 보강", "path": "drafts/2026.07.15_meta-iris-chip/v2.md" },
-        { "v": "v1", "date": "2026-07-15", "note": "수정 전 최초 발행 — CNBC·Yahoo·Deutsche Bank 교차확인, 비용 구조·공급망·투자 반응 분석", "path": "drafts/2026.07.15_meta-iris-chip/v1.md" }
+        {
+          "v": "v2",
+          "date": "2026-07-15",
+          "note": "수정 후 — 칩 개념(CPU/GPU/ASIC)·발표일(7/9)·Capex 풀이·경쟁사 칩 설명 보강",
+          "path": "drafts/2026.07.15_meta-iris-chip/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-15",
+          "note": "수정 전 최초 발행 — CNBC·Yahoo·Deutsche Bank 교차확인, 비용 구조·공급망·투자 반응 분석",
+          "path": "drafts/2026.07.15_meta-iris-chip/v1.md"
+        }
       ]
     },
     {
@@ -142,9 +317,16 @@
       "readMin": 7,
       "author": "AI 쉽게 알려주는 집",
       "angle": "GPU가 아니라 '전기'가 AI의 새 병목이 됐어요. Gartner는 2027년까지 데이터센터 40%가 전력 부족에 빠질 거라고 해요. 왜 이렇게 됐고, 우리한테 어떤 영향이 있는지 짚었어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        { "v": "v1", "date": "2026-07-14", "note": "최초 발행 — Gartner·IEA·Spheron 교차확인, 나라별 전략 비교, 한국 전력 갈등", "path": "drafts/2026.07.14_ai-datacenter-power/v1.md" }
+        {
+          "v": "v1",
+          "date": "2026-07-14",
+          "note": "최초 발행 — Gartner·IEA·Spheron 교차확인, 나라별 전략 비교, 한국 전력 갈등",
+          "path": "drafts/2026.07.14_ai-datacenter-power/v1.md"
+        }
       ]
     },
     {
@@ -159,10 +341,17 @@
       "readMin": 4,
       "author": "AI 쉽게 알려주는 집",
       "angle": "일리노이가 대형 AI 회사한테 외부 안전검사를 시키는 미국 첫 법을 만들었어요. '미국 최초'라는 말의 정확한 범위를 짚었어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "research": "research/2026-07-06-illinois-ai-law.md",
       "versions": [
-        { "v": "v4", "date": "2026-07-14", "note": "v1 소제목 복원 + 어려운 표현 쉽게 + 핵심 압축", "path": "drafts/2026.07.14_illinois-ai-law/v4.md" }
+        {
+          "v": "v4",
+          "date": "2026-07-14",
+          "note": "v1 소제목 복원 + 어려운 표현 쉽게 + 핵심 압축",
+          "path": "drafts/2026.07.14_illinois-ai-law/v4.md"
+        }
       ]
     },
     {
@@ -177,9 +366,16 @@
       "readMin": 6,
       "author": "AI 쉽게 알려주는 집",
       "angle": "리서치 회사 SemiAnalysis가 \"엔비디아 차세대 AI 서버랙 Kyber가 2028년으로 1년 이상 늦어진다\"고 구체적으로 주장했어요. 엔비디아는 \"로드맵은 그대로\"라는 한 문장으로 반박했고요. 아직 양쪽 주장뿐, 누가 맞는지 모르는 이 논쟁을 학생도 이해하게 쉽게 풀었어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        { "v": "v1", "date": "2026-07-10", "note": "최초 발행 — 확정한 쉬운 버전 원문 그대로 + 인라인 출처(SemiAnalysis·Yahoo·Tom's Hardware·CNBC·뉴스핌·FourWeekMBA)", "path": "drafts/2026.07.10_nvidia-kyber-delay/v1.md" }
+        {
+          "v": "v1",
+          "date": "2026-07-10",
+          "note": "최초 발행 — 확정한 쉬운 버전 원문 그대로 + 인라인 출처(SemiAnalysis·Yahoo·Tom's Hardware·CNBC·뉴스핌·FourWeekMBA)",
+          "path": "drafts/2026.07.10_nvidia-kyber-delay/v1.md"
+        }
       ]
     },
     {
@@ -194,9 +390,16 @@
       "readMin": 9,
       "author": "AI 쉽게 알려주는 집",
       "angle": "마이크로소프트가 처음으로 자기 AI 7개를 공개했어요. 그런데 \"우리 건 깨끗한 자료로만 배웠다\"던 자랑이 실제 설명서와 어긋났어요. 무슨 일인지 학생도 이해할 수 있게 쉽고 재밌게 풀었어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        { "v": "v5", "date": "2026-07-08", "note": "문단 재구성 — 강조·전환·펀치라인엔 줄바꿈 유지, 이어지는 설명은 한 문단으로 묶어 리듬 조절", "path": "drafts/2026.07.08_microsoft-mai/v1.md" }
+        {
+          "v": "v5",
+          "date": "2026-07-08",
+          "note": "문단 재구성 — 강조·전환·펀치라인엔 줄바꿈 유지, 이어지는 설명은 한 문단으로 묶어 리듬 조절",
+          "path": "drafts/2026.07.08_microsoft-mai/v1.md"
+        }
       ]
     },
     {
@@ -206,12 +409,24 @@
       "type": "A 속보 브리핑",
       "stage": "검수중",
       "angle": "성능 뉴스가 아니라 '에이전트 상시 구동 비용의 손익분기점'이 내려간 사건. 단, 토크나이저 함정 주의.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "pipeline": "pipeline/claude-sonnet-5.md",
       "research": "research/2026-07-04-claude-sonnet-5.md",
       "versions": [
-        { "v": "v2", "date": "2026-07-04", "note": "가독성 개선 — 한 줄 요약 + 가격표 + 성능 비교표 + 경고 콜아웃 추가", "path": "drafts/claude-sonnet-5/v2.md" },
-        { "v": "v1", "date": "2026-07-04", "note": "최초 초안 — 팩트·관점은 확정, 구조는 문단 위주", "path": "drafts/claude-sonnet-5/v1.md" }
+        {
+          "v": "v2",
+          "date": "2026-07-04",
+          "note": "가독성 개선 — 한 줄 요약 + 가격표 + 성능 비교표 + 경고 콜아웃 추가",
+          "path": "drafts/claude-sonnet-5/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-04",
+          "note": "최초 초안 — 팩트·관점은 확정, 구조는 문단 위주",
+          "path": "drafts/claude-sonnet-5/v1.md"
+        }
       ]
     },
     {
@@ -221,11 +436,19 @@
       "type": "A 속보 브리핑",
       "stage": "검수중",
       "angle": "2.0은 보안·성능 릴리즈일 뿐. 진짜 변화는 MCP 양방향 지원 — n8n이 에이전트 도구 허브가 됐다.",
-      "lens": ["① 그래서 나한테?", "② 직접 써봤다"],
+      "lens": [
+        "① 그래서 나한테?",
+        "② 직접 써봤다"
+      ],
       "pipeline": "pipeline/2026-07-04-batch.md",
       "research": "research/2026-07-04-n8n-mcp-hub.md",
       "versions": [
-        { "v": "v1", "date": "2026-07-04", "note": "최초 초안", "path": "drafts/n8n-mcp-hub/v1.md" }
+        {
+          "v": "v1",
+          "date": "2026-07-04",
+          "note": "최초 초안",
+          "path": "drafts/n8n-mcp-hub/v1.md"
+        }
       ]
     },
     {
@@ -235,11 +458,18 @@
       "type": "B 심층",
       "stage": "검수중",
       "angle": "작년까진 프레임워크마다 도구를 새로 붙였다. 이제 MCP 하나로 어디든 — 지금 MCP 지원 도구를 고르면 나중에 안 갈아엎는다.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "pipeline": "pipeline/2026-07-04-batch.md",
       "research": "research/2026-07-04-mcp-standard.md",
       "versions": [
-        { "v": "v1", "date": "2026-07-04", "note": "최초 초안", "path": "drafts/mcp-standard/v1.md" }
+        {
+          "v": "v1",
+          "date": "2026-07-04",
+          "note": "최초 초안",
+          "path": "drafts/mcp-standard/v1.md"
+        }
       ]
     },
     {
@@ -249,11 +479,19 @@
       "type": "C 가이드",
       "stage": "검수중",
       "angle": "'GPT 살 돈·프라이버시 걱정?'의 답은 모델명이 아니라 내 VRAM 기준으로 뭘 돌릴 수 있나다.",
-      "lens": ["② 직접 써봤다", "① 그래서 나한테?"],
+      "lens": [
+        "② 직접 써봤다",
+        "① 그래서 나한테?"
+      ],
       "pipeline": "pipeline/2026-07-04-batch.md",
       "research": "research/2026-07-04-local-llm-selfhost.md",
       "versions": [
-        { "v": "v1", "date": "2026-07-04", "note": "최초 초안", "path": "drafts/local-llm-selfhost/v1.md" }
+        {
+          "v": "v1",
+          "date": "2026-07-04",
+          "note": "최초 초안",
+          "path": "drafts/local-llm-selfhost/v1.md"
+        }
       ]
     },
     {
@@ -263,11 +501,18 @@
       "type": "B 심층",
       "stage": "검수중",
       "angle": "'80%' 숫자의 상당수는 마케팅 래핑. 멀티에이전트가 진짜 필요한 선을 긋자 — 당신 업무엔 아직 오버킬일 수 있다.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "pipeline": "pipeline/2026-07-04-batch.md",
       "research": "research/2026-07-04-agents-embedded.md",
       "versions": [
-        { "v": "v1", "date": "2026-07-04", "note": "최초 초안", "path": "drafts/agents-embedded-2026/v1.md" }
+        {
+          "v": "v1",
+          "date": "2026-07-04",
+          "note": "최초 초안",
+          "path": "drafts/agents-embedded-2026/v1.md"
+        }
       ]
     },
     {
@@ -277,10 +522,17 @@
       "type": "D 주간 종합",
       "stage": "검수중",
       "angle": "이번 주는 '에이전트를 싸고·표준화된 방식으로·내가 직접 돌리는' 인프라가 한꺼번에 갖춰진 주.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "pipeline": "pipeline/2026-07-04-batch.md",
       "versions": [
-        { "v": "v1", "date": "2026-07-04", "note": "최초 초안 — 이번 주 5편 묶음", "path": "drafts/weekly-digest-2026-07-04/v1.md" }
+        {
+          "v": "v1",
+          "date": "2026-07-04",
+          "note": "최초 초안 — 이번 주 5편 묶음",
+          "path": "drafts/weekly-digest-2026-07-04/v1.md"
+        }
       ]
     }
   ]

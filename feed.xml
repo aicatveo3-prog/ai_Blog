@@ -6,7 +6,15 @@
   <atom:link href="https://aicatveo3-prog.github.io/ai_Blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>어려운 AI 뉴스, 학생도 이해하게 쉽게 알려드려요</description>
   <language>ko</language>
-  <lastBuildDate>Tue, 07 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 16 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>중국이 &apos;AI 친구&apos; 서비스 규제를 시작했어요 — 바이트댄스·알리바바가 감정 대화 AI를 닫았어요</title>
+    <link>https://aicatveo3-prog.github.io/ai_Blog/p/china-ai-companion-regulation/</link>
+    <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/china-ai-companion-regulation/</guid>
+    <description>중국 정부가 &apos;AI 의인화 서비스&apos; 규제를 시행하면서 ByteDance·Alibaba가 AI 캐릭터 기능을 종료했어요. 수백만 명의 대화 기록이 삭제되지만, 원래 돈이 안 되던 사업이라 규제가 &apos;적자 사업 정리 명분&apos;이 됐다는 분석도 있어요.</description>
+    <category>인사이트</category>
+    <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
   <item>
     <title>딥시크가 AI 칩을 직접 만든대요 — 엔비디아·화웨이 없이 되려나요?</title>
     <link>https://aicatveo3-prog.github.io/ai_Blog/p/deepseek-chip/</link>
