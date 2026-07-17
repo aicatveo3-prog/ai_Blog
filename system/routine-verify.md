@@ -22,6 +22,15 @@
 
 ---
 
+## 0단계 — 발행 브랜치로 강제 이동 (첫 동작 · 반드시)
+
+검사를 시작하기 **전에** 발행 브랜치로 옮긴다. 자동 세션은 임시 브랜치(`claude/…-xxxx`)로 스폰되고, 거기 커밋하면 push는 돼도 대시보드(기본 브랜치 빌드)엔 안 뜬다(2026-07-16 수집 루틴 사고).
+```bash
+git fetch origin
+git checkout -B claude/github-upload-setup-vimtlp origin/claude/github-upload-setup-vimtlp
+```
+(기본 브랜치가 바뀌었으면 `git ls-remote --symref origin HEAD`로 확인해 그 이름으로.) 이후 모든 커밋·push가 곧장 발행 브랜치로 간다 → 별도 cherry-pick 동기화 불필요.
+
 ## 한 편을 검사하는 순서 (대상마다 반복)
 
 1. **자료 재수집** — 그 글의 draft와, 대응하는 `collect/<slug>*.md`(정리본·자세히·반응) 원자료를 나란히 연다.
@@ -43,8 +52,8 @@
 - ❌ **`node build-seo.mjs` 실행·발행 금지.** 검사의 끝은 `검수중`. 발행은 사람이 최종검토 후.
 - ❌ **`stage`를 `발행`으로 올리지 않는다.**
 - ❌ **사실을 지어내지 않는다** — 소스에 없으면 채우지 말고 낮추거나 "확인 못 했다".
-- ✅ v2·REVIEW.md·posts.json을 작업 브랜치로 **commit & push.**
-- ✅ **브랜치 동기화**(글쓰기 루틴과 동일) — 커밋이 대시보드 기본 브랜치에 반드시 반영되게.
+- ✅ v2·REVIEW.md·posts.json을 **발행 브랜치로 commit & push** (0단계에서 이미 그 브랜치): `git push -u origin claude/github-upload-setup-vimtlp`. non-fast-forward면 `git pull --rebase` 후 재push.
+- ✅ **0단계(발행 브랜치 강제 이동)를 지켰는지가 곧 동기화다.** 0단계만 지키면 커밋은 자동으로 대시보드 브랜치에 오른다(옛 cherry-pick 동기화 폐지).
 
 ## 마지막 보고
 

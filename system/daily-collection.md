@@ -8,6 +8,15 @@
 
 ## 매일 실행 순서
 
+0. **발행 브랜치로 강제 이동 (첫 동작 — 반드시)** — 자동 세션은 매번 임시 작업 브랜치(`claude/…-xxxx`)로 스폰된다. 그 브랜치에 커밋하면 push는 되지만 대시보드(**기본 브랜치**에서 빌드)엔 영영 안 뜬다(2026-07-16 사고: 수집물이 `claude/jolly-feynman`에 갇힘). 그래서 **작업을 시작하기 전에** 발행 브랜치로 옮긴다:
+   ```bash
+   git fetch origin
+   git checkout -B claude/github-upload-setup-vimtlp origin/claude/github-upload-setup-vimtlp
+   ```
+   (기본 브랜치가 바뀌었으면 `git ls-remote --symref origin HEAD`로 확인해 그 이름으로 대체.)
+   이제 모든 작업·커밋·push가 **곧장 발행 브랜치**로 간다 → 옛 '동기화(cherry-pick)' 단계는 불필요.
+   빠뜨려도 검증기(`validate-collection.mjs`)가 발행 브랜치가 아니면 커밋을 **HARD FAIL로 막는다**(8단계).
+
 1. **검색 (수집)** — 여러 각도로 지난 24시간 AI 소식을 웹 검색:
    모델 출시 · 자동화/노코드 · 에이전트/프레임워크 · 정책/규제 · 연구/논문 · 자금/M&A · 논란/소송 · 하드웨어. (한 각도만 보면 놓친다)
 2. **후보 추출 + 중복 제거** — 제목·URL을 `inbox.json` 기존 항목과 대조해 이미 있는 건 버림.
@@ -38,13 +47,12 @@
    - **HARD FAIL이 하나라도 있으면 커밋 금지.** 3탭 미완·반응 각도 5개 미만·경로 없음 등을 그 자리에서 고치고 재실행한다.
    - 초록불(exit 0)이 나올 때까지 반복. **빨간불인 채로 "완료" 보고 금지.**
    - 경고(WARN)는 차단하지 않지만 확인 권장(얇은 반응·출처 블록 누락 등).
-9. **커밋·푸시** — `git commit` 후 designated(지정 작업) 브랜치로 push.
-10. **브랜치 동기화 (완료 조건 — 반드시)** — 대시보드([GitHub Pages](https://aicatveo3-prog.github.io/ai_Blog/dashboard.html))는 저장소 **기본 브랜치**에서 빌드된다. 자동 세션은 지정 작업 브랜치가 임시 브랜치(예: `claude/quirky-…`)로 바뀌어 있을 수 있어, 커밋이 기본 브랜치에 안 올라가면 사람이 새 항목을 못 본다.
-   - 실행 전 매번 `git ls-remote --symref origin HEAD`로 **현재 기본 브랜치**를 확인한다. (현재 `claude/github-upload-setup-vimtlp` — 바뀌었으면 그 이름으로 대체.)
-   - 작업 브랜치가 기본 브랜치와 **다르면**, 방금 만든 커밋을 기본 브랜치에도 **반드시 반영**한다:
-     `git fetch origin` → 기본 브랜치 checkout/최신화 → `git cherry-pick <새 커밋>` → push (실패 시 2s·4s·8s·16s 백오프로 최대 4회 재시도).
-   - **이 동기화까지 끝나야 루틴 "완료"** 다. (대시보드는 raw 경로라 반영은 몇 초 내.)
-11. **요약 알림(선택)** — 그날 검증된 항목 3~5개를 한 줄씩.
+9. **커밋·푸시 (발행 브랜치)** — 0단계에서 **이미 발행 브랜치에 있으므로**, `git commit` 후 그대로 그 브랜치로 push한다:
+   `git push -u origin claude/github-upload-setup-vimtlp` (실패 시 2s·4s·8s·16s 백오프로 최대 4회 재시도).
+   - non-fast-forward로 거절되면 `git pull --rebase origin claude/github-upload-setup-vimtlp` 후 재push.
+   - 커밋이 **곧장 대시보드 브랜치**에 올라가므로, 옛 'cherry-pick 동기화(구 10단계)'는 **폐지**했다. (0단계 강제 이동 + 검증기 브랜치 가드로 대체.)
+   - 대시보드([GitHub Pages](https://aicatveo3-prog.github.io/ai_Blog/dashboard.html))는 raw 경로라 반영은 몇 초 내.
+10. **요약 알림(선택)** — 그날 검증된 항목 3~5개를 한 줄씩.
 
 ## 경계 (자동/사람)
 - **자동**: 수집·중복제거·날짜 검증·인박스 적재 (반복 노동)
@@ -52,7 +60,7 @@
 - 즉 이 자동화는 "아침에 열면 검증된 후보가 쌓여 있는 상태"까지만 만든다.
 
 ## 품질 가드
-- **커밋 전 `node validate-collection.mjs` 통과가 완료 조건** — 3탭 완비·반응 5각도·경로 실존을 기계가 강제한다. HARD FAIL이면 커밋 금지(위 8단계). 산문 규칙만으로는 대충 작업이 통과했던 문제(자세히 누락·반응 각도 축약)를 이 게이트가 막는다.
+- **커밋 전 `node validate-collection.mjs` 통과가 완료 조건** — **발행 브랜치 확인**·3탭 완비·반응 5각도·경로 실존을 기계가 강제한다. HARD FAIL이면 커밋 금지(위 8단계). 산문 규칙만으로는 대충 작업이 통과했던 문제(임시 브랜치 커밋·자세히 누락·반응 각도 축약)를 이 게이트가 막는다. (임시 브랜치에 있으면 검증기가 곧바로 HARD FAIL — 옮길 명령을 알려준다.)
 - 날짜/수치는 **1차 미확인 시 verified:false** — 오보 방지 최우선.
 - 벤치마크·가격·출시일은 특히 조심(환각·과장 다발 지점).
 - 각 항목에 `verifyNote`(어떻게 확인했나)와 `source`를 반드시 남긴다.

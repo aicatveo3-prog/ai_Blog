@@ -29,6 +29,15 @@
 
 ---
 
+## 0단계 — 발행 브랜치로 강제 이동 (첫 동작 · 반드시)
+
+대상 선별·집필을 시작하기 **전에** 발행 브랜치로 옮긴다. 자동 세션은 임시 브랜치(`claude/…-xxxx`)로 스폰되고, 거기 커밋하면 push는 돼도 대시보드(기본 브랜치 빌드)엔 안 뜬다(2026-07-16 수집 루틴 사고).
+```bash
+git fetch origin
+git checkout -B claude/github-upload-setup-vimtlp origin/claude/github-upload-setup-vimtlp
+```
+(기본 브랜치가 바뀌었으면 `git ls-remote --symref origin HEAD`로 확인해 그 이름으로.) 이후 모든 커밋·push가 곧장 발행 브랜치로 간다 → 별도 cherry-pick 동기화 불필요.
+
 ## 한 편을 쓰는 순서 (대상마다 반복)
 
 1. **교차검증** — `prompts/K-crosscheck.md`로 자료(정리본·자세히·반응) 간 모순·과장·함정을 먼저 훑는다. 앵글·렌즈를 잡는다.
@@ -44,8 +53,8 @@
 - ❌ **`node build-seo.mjs` 실행·발행 금지.** 이 루틴은 초안까지만. 정적 페이지·OG·sitemap 굽지 않는다.
 - ❌ **`stage`를 `검수중`/`발행`으로 올리지 않는다.** 글쓰기의 끝은 `작성중`. (검사 루틴이 `검수중`으로, 사람이 `발행`으로 올린다.)
 - ❌ **하루 2편 초과 금지.**
-- ✅ 초안·posts.json·inbox.json을 **작업 브랜치로 commit & push.**
-- ✅ **브랜치 동기화** — 자동 세션이 임시 브랜치에서 돌 수 있으니, 커밋이 대시보드 기본 브랜치(`git ls-remote --symref origin HEAD`로 확인, 현재 `claude/github-upload-setup-vimtlp`)에 반드시 반영되게 한다(다르면 cherry-pick+push).
+- ✅ 초안·posts.json·inbox.json을 **발행 브랜치로 commit & push** (0단계에서 이미 그 브랜치에 있음): `git push -u origin claude/github-upload-setup-vimtlp`. non-fast-forward면 `git pull --rebase` 후 재push.
+- ✅ **0단계(발행 브랜치 강제 이동)를 빠뜨리지 않았는지가 곧 동기화다.** 0단계만 지키면 커밋은 자동으로 대시보드 브랜치에 오른다(옛 cherry-pick 동기화 폐지).
 
 ## 마지막 보고
 

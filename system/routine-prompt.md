@@ -20,6 +20,14 @@ system/daily-collection.md 플레이북을 그대로 따른다.
 작업 브랜치: claude/github-upload-setup-vimtlp (이 브랜치에서 작업하고 여기로 push).
 
 순서:
+0. 발행 브랜치로 강제 이동(첫 동작 — 반드시). 자동 세션은 매번 임시 브랜치(claude/…-xxxx)로
+   스폰되고, 거기에 커밋하면 push는 돼도 대시보드(기본 브랜치 빌드)엔 안 뜬다(2026-07-16 사고).
+   그러니 무엇보다 먼저:
+     git fetch origin
+     git checkout -B claude/github-upload-setup-vimtlp origin/claude/github-upload-setup-vimtlp
+   (기본 브랜치가 바뀌었으면 git ls-remote --symref origin HEAD로 확인해 그 이름으로.)
+   이제 모든 커밋·push가 곧장 발행 브랜치로 간다. 빠뜨려도 7단계 검증기가 발행 브랜치가
+   아니면 커밋을 HARD FAIL로 막는다.
 1. 수집 — 지난 24시간 AI 소식을 8각도로 웹검색(모델 출시·자동화/노코드·에이전트/
    프레임워크·정책/규제·연구/논문·자금/M&A·논란/소송·하드웨어).
 2. 후보 추출 + 중복 제거 — 제목·URL을 inbox.json 기존 항목과 대조해 이미 있는 건 버린다.
@@ -40,11 +48,12 @@ system/daily-collection.md 플레이북을 그대로 따른다.
      (빈 3탭 미완 금지).
 6. 인박스 반영 — inbox.json에 append하고 generated 날짜를 갱신.
 7. 검증 게이트(커밋 전 — 반드시) — node validate-collection.mjs 실행.
-   HARD FAIL이 하나라도 있으면 커밋 금지. 3탭 미완·반응 각도 5개 미만·경로 없음 등을
-   그 자리에서 고치고 재실행한다. 초록불(exit 0)이 나올 때까지 반복.
+   HARD FAIL이 하나라도 있으면 커밋 금지. 발행 브랜치 아님·3탭 미완·반응 각도 5개 미만·
+   경로 없음 등을 그 자리에서 고치고 재실행한다. 초록불(exit 0)이 나올 때까지 반복.
    빨간불인 채로 "완료" 보고 금지.
-8. 커밋·푸시 — 위 브랜치로 commit & push. (지정 브랜치가 대시보드 기본 브랜치와 다르면
-   system/daily-collection.md 10단계대로 cherry-pick + push로 기본 브랜치에도 반영.)
+8. 커밋·푸시 — 0단계에서 이미 발행 브랜치에 있으므로 그대로
+   git push -u origin claude/github-upload-setup-vimtlp. non-fast-forward면
+   git pull --rebase 후 재push. (옛 cherry-pick 동기화 단계는 폐지 — 0단계로 대체.)
 
 🔗 출처 링크(필수 · 철칙 0): 3탭(정리본·자세히·반응)의 모든 사실·수치·인용에 그 자리
 인라인 링크 [텍스트](URL)를 단다. 특히 반응은 항목마다 - [출처](URL): 요약 형식으로

@@ -10,10 +10,36 @@
 
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 
 const ROOT = process.cwd();
 const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
 const exists = (p) => fs.existsSync(path.join(ROOT, p));
+
+// ---------- 발행 브랜치 (단일 정본) ----------
+// 대시보드/사이트가 빌드되는 저장소 '기본 브랜치'. 수집물은 반드시 여기로 커밋돼야
+//   대시보드에 뜬다. 자동 세션은 매번 임시 작업 브랜치(claude/…-xxxx)로 스폰되므로,
+//   그 브랜치에 커밋하면 푸시는 되지만 대시보드엔 영영 안 보인다(2026-07-16 사고).
+// 그래서 '틀린 브랜치면 커밋 자체를 막는' 하드 가드를 여기(유일한 강제 관문)에 둔다.
+//   기본 브랜치가 바뀌면 이 상수만 고친다. 로컬 개발용 우회: ALLOW_ANY_BRANCH=1.
+const PUBLISH_BRANCH = 'claude/github-upload-setup-vimtlp';
+
+const gitTry = (cmd) => {
+  try { return execSync(cmd, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'] }).trim(); }
+  catch { return null; }
+};
+// 현재 브랜치
+const curBranch = gitTry('git rev-parse --abbrev-ref HEAD');
+// 원격 기본 브랜치(권위 있음, 네트워크). 안 되면 로컬 심볼릭레프 → 그것도 없으면 상수.
+const remoteDefault = (() => {
+  const ls = gitTry('git ls-remote --symref origin HEAD');
+  const m = ls && ls.match(/^ref:\s+refs\/heads\/(\S+)\s+HEAD/m);
+  if (m) return m[1];
+  const sym = gitTry('git symbolic-ref --short refs/remotes/origin/HEAD');
+  if (sym && sym.startsWith('origin/')) return sym.slice('origin/'.length);
+  return null;
+})();
+const expectedBranch = remoteDefault || PUBLISH_BRANCH;
 
 // ---------- 규칙 상수 ----------
 // 반응(H)은 여러 각도(섹션)를 담아야 한다. HARD 기준은 '각도 섹션 개수'다 —
@@ -37,6 +63,23 @@ const hard = []; // 커밋 차단
 const warn = []; // 참고
 const H = (item, msg) => hard.push(`❌ [${item}] ${msg}`);
 const W = (item, msg) => warn.push(`⚠️  [${item}] ${msg}`);
+
+// ---------- 브랜치 가드 (커밋 전 최우선) ----------
+// 임시 브랜치에 수집물을 커밋하는 사고(대시보드 미반영)를 '기계가' 차단한다.
+if (process.env.ALLOW_ANY_BRANCH === '1') {
+  W('브랜치', `ALLOW_ANY_BRANCH=1 — 브랜치 가드 우회(로컬 개발용). 현재: ${curBranch || '?'}`);
+} else if (!curBranch) {
+  W('브랜치', 'git 브랜치를 확인할 수 없음 — git 저장소가 맞는지 확인');
+} else if (curBranch === 'HEAD') {
+  H('브랜치', `detached HEAD 상태 — 발행 브랜치(${expectedBranch})로 checkout 후 작업하세요.`);
+} else if (curBranch !== expectedBranch) {
+  H('브랜치',
+    `현재 '${curBranch}' — 수집물은 반드시 발행 브랜치 '${expectedBranch}'에 커밋해야 대시보드에 뜬다. ` +
+    `해결: git fetch origin && git checkout -B ${expectedBranch} origin/${expectedBranch}  (작업 파일은 따라온다) → 재검증 후 커밋.`);
+} else if (remoteDefault && remoteDefault !== PUBLISH_BRANCH) {
+  // 브랜치는 맞지만 상수가 원격 기본과 어긋남 — 정본 갱신 필요(차단은 안 함).
+  W('브랜치', `PUBLISH_BRANCH 상수('${PUBLISH_BRANCH}')가 원격 기본('${remoteDefault}')과 다름 — validate-collection.mjs 상수를 갱신하세요.`);
+}
 
 // ---------- 로드 ----------
 const inbox = JSON.parse(read('inbox.json'));
