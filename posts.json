@@ -49,6 +49,27 @@
   ],
   "posts": [
     {
+      "id": "aisphere-series-c",
+      "title": "Sora 없는 AI 비디오 시장, 중국 PixVerse가 4억 달러 받고 뛰어들었어요",
+      "date": "2026-07-14",
+      "type": "A 속보 브리핑",
+      "category": "인사이트",
+      "stage": "작성중",
+      "layout": "feature",
+      "readMin": 4,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "OpenAI Sora가 비용 문제로 물러난 AI 비디오 시장에 중국 스타트업 AIsphere(PixVerse)가 알리바바 주도 4억 3,900만 달러 투자를 받고 들어왔어요. 3년 만에 20억 달러 기업이 됐는데, 사용자 수는 미검증이고 AI 게임 엔진이라는 목표는 아직 시연조차 없어요.",
+      "lens": ["① 그래서 나한테?"],
+      "versions": [
+        {
+          "v": "v1",
+          "date": "2026-07-17",
+          "note": "최초 초안 — Caixin Global·TechCrunch·Techtimes·MLQ 교차확인, Sora 퇴장 타이밍·AI 게임 엔진 주장 vs 검증·한국 미래에셋 참여 분석",
+          "path": "drafts/2026.07.17_aisphere-series-c/v1.md"
+        }
+      ]
+    },
+    {
       "id": "bytedance-seedream",
       "title": "바이트댄스가 '디자인을 이해하는 AI'를 내놨어요 — 한글 포스터도 만든다는데",
       "date": "2026-07-08",
