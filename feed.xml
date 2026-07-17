@@ -6,7 +6,15 @@
   <atom:link href="https://aicatveo3-prog.github.io/ai_Blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>어려운 AI 뉴스, 학생도 이해하게 쉽게 알려드려요</description>
   <language>ko</language>
-  <lastBuildDate>Thu, 16 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 08 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>바이트댄스가 &apos;디자인을 이해하는 AI&apos;를 내놨어요 — 한글 포스터도 만든다는데</title>
+    <link>https://aicatveo3-prog.github.io/ai_Blog/p/bytedance-seedream/</link>
+    <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/bytedance-seedream/</guid>
+    <description>틱톡 모회사 바이트댄스가 &apos;디자인 원칙을 이해하는&apos; 이미지 AI Seedream 5.0 Pro를 공개했어요. 한글 텍스트도 된다는데, 독립 검증은 아직 없고 중국 우선 출시라 지켜볼 단계예요.</description>
+    <category>인사이트</category>
+    <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
   <item>
     <title>중국이 &apos;AI 친구&apos; 서비스 규제를 시작했어요 — 바이트댄스·알리바바가 감정 대화 AI를 닫았어요</title>
     <link>https://aicatveo3-prog.github.io/ai_Blog/p/china-ai-companion-regulation/</link>
