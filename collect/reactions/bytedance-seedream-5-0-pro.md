@@ -15,6 +15,14 @@
 
 - [Fortune · Altman new world order](https://fortune.com/2026/07/02/sam-altman-new-world-order-ai-openai-google-anthropic/): OpenAI의 전략적 반응
 
+## ⚖️ 당사자·윤리
+
+- 확인 안 됨(갭) — 창작자·이용자 등 당사자 관점, 저작권·딥페이크 등 윤리 쟁점의 뚜렷한 반응은 수집 시점에 확인하지 못했어요.
+
+## 📱 소셜
+
+- 확인 안 됨(갭) — 레딧·X 등 커뮤니티의 두드러진 반응은 확인하지 못했어요.
+
 ## 🔭 종합
 
 중국-미국 AI 경쟁의 상징으로 평가. 기술 평가는 호평이나, 정책 긴장은 심화 중.

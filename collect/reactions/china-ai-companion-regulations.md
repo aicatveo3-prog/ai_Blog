@@ -9,6 +9,11 @@
 
 - [State-level · US regulations](https://app.stationx.net/articles/ai-regulations-around-the-world): 미국 주 정부 선제적 규제
 
+## 🏢 경쟁/업계
+
+- [TechNode · 회사별 대응](https://technode.com/2026/07/06/bytedances-doubao-and-alibabas-qwen-to-shut-down-ai-agent-features-on-july-15/): 바이트댄스·알리바바는 캐릭터 기능을 종료했지만, MiniMax는 서비스를 유지 — 대응이 갈렸어요.
+- [Pandaily · MiniMax 유지](https://pandaily.com/doubao-qwen-sunset-ai-agents-hype-follows-jul2026-v2): 감정 대화가 핵심 사업인 MiniMax는 문제 캐릭터만 정리하고 규제에 맞추는 쪽을 택했어요.
+
 ## ⚖️ 당사자·윤리
 
 - [UNICEF · Welcome China regulations](https://www.unicef.cn/en/press-releases/unicef-welcomes-chinas-groundbreaking-regulations-protect-children-ai-related-risks): UNICEF 지지

@@ -1,7 +1,36 @@
 {
-  "generated": "2026-07-15",
+  "generated": "2026-07-17",
   "note": "지난 한 달 AI 소식 전방위 수집. firstSeen = 검증된 진짜 첫 등장일(1차/신뢰 소스). 일자 미확정은 verified:false로 '날짜 없음'에 대기. surfaced가 다르면 gap 표시.",
   "items": [
+    {
+      "title": "AIsphere Series C $439M 펀딩 라운드 완료 (Alibaba 주도)",
+      "firstSeen": "2026-07-14",
+      "surfaced": "2026-07-16",
+      "verified": true,
+      "verifyNote": "Caixin Global(7/15) + TechCrunch(7/13) + Techtimes(7/15) 3곳 교차확인. PixVerse 플랫폼, 창업자 Wang Changhu(전 MS Research Asia, ByteDance). 1.5억+ 사용자, 177개국. AI 게임 엔진 개발 목표.",
+      "source": "https://www.caixinglobal.com/2026-07-15/alibaba-leads-439-million-funding-round-for-ai-video-startup-aisphere-102464241.html",
+      "status": "인박스",
+      "tags": [
+        "자금",
+        "AI 비디오",
+        "스타트업",
+        "Alibaba"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/aisphere-series-c-funding-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/aisphere-series-c-funding.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/aisphere-series-c-funding.md"
+        }
+      ]
+    },
     {
       "title": "Apple, OpenAI 거래 비밀 도용 소송 — 하드웨어 설계·기술 명세 절취 혐의",
       "firstSeen": "2026-07-10",

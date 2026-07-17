@@ -1,5 +1,13 @@
 # Google Publisher Lawsuit — 반응 요약
 
+## 🇰🇷 한국
+
+- 확인 안 됨(갭) — 이 소송에 대한 한국 내 뚜렷한 반응은 수집 시점에 확인하지 못했어요.
+
+## 🏛️ 정치권
+
+- 확인 안 됨(갭) — 정부·규제당국 차원의 공식 반응은 확인하지 못했어요. (소송은 민간 출판사·저자들이 제기.)
+
 ## 📰 언론·저작권 커뮤니티
 
 - [TechCrunch · Google faces lawsuit](https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/): 미디어 보도
