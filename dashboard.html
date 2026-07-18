@@ -737,13 +737,9 @@ async function boot(){
     crit.innerHTML = criteria.map(c=>'<button class="critbtn" data-doc="'+c.path+'" data-label="'+c.name+'">'+c.name+'</button>').join('');
 
     const list = document.getElementById('list');
-    // 최신 버전 날짜 내림차순 정렬(최신 글이 위로). versions[0]=최신본이 원칙이나,
-    // 안전하게 versions의 최대 날짜를 쓰고, 없으면 published→date로 대체.
-    const sortKey = p => {
-      const vdates = (p.versions||[]).map(v=>v.date).filter(Boolean);
-      return (vdates.length ? vdates.sort().slice(-1)[0] : '') || p.published || p.date || '';
-    };
-    const ordered = posts.slice().sort((a,b)=>{ const ka=sortKey(a), kb=sortKey(b); return kb<ka?-1:kb>ka?1:0; });
+    // 추가된 순서 역순(최근 추가된 글이 위로). 글쓰기 루틴이 새 글을 posts 배열
+    // 끝에 붙이므로, 배열을 뒤집으면 가장 최근에 추가된 글이 맨 위에 온다.
+    const ordered = posts.slice().reverse();
     list.innerHTML = ordered.length ? ordered.map(card).join('') :
       '<div class="empty">아직 글이 없어요. 새 글을 만들면 여기에 나타납니다.</div>';
     list.querySelectorAll('button[data-draft]').forEach(b=>{
