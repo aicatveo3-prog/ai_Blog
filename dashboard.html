@@ -470,7 +470,8 @@ function openSingle(path, label){
 const totop = document.getElementById('totop');
 function closeDoc(){ overlay.classList.remove('on'); document.body.style.overflow=''; totop.classList.remove('show'); }
 document.getElementById('close').onclick = closeDoc;
-overlay.onclick = e=>{ if(e.target===overlay) closeDoc(); };
+// 바깥 배경 클릭으로는 닫지 않는다(실수로 꺼지는 것 방지). 닫기는 X 버튼 또는 Esc 키.
+document.addEventListener('keydown', e=>{ if(e.key==='Escape' && overlay.classList.contains('on')) closeDoc(); });
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeDoc(); });
 overlay.addEventListener('scroll', ()=>{ totop.classList.toggle('show', overlay.scrollTop>240); });
 totop.onclick = ()=>{ overlay.scrollTo({top:0, behavior:'smooth'}); };
