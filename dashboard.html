@@ -162,6 +162,12 @@
   .card.pub{border-color:rgba(31,157,107,.45);background:rgba(31,157,107,.05);box-shadow:inset 4px 0 0 var(--ok), var(--shadow)}
   .card.pub h3{color:var(--ink)}
   .badge.date{background:transparent;color:var(--muted);padding-left:0}
+  /* SNS(스레드) 보관함 */
+  .snscard .snsthread{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+  .snspart{display:flex;gap:10px;background:var(--soft);border-radius:12px;padding:12px 14px}
+  .snsnum{flex:none;font-size:11px;font-weight:800;color:var(--accent);background:var(--card);border:1px solid var(--line);border-radius:20px;padding:2px 9px;height:fit-content}
+  .snstext{font-size:14px;line-height:1.65;white-space:pre-wrap;word-break:break-word}
+  .badge.plat{background:#111;color:#fff}
   .card h3{font-size:17px;letter-spacing:-.2px;margin:2px 0 8px;line-height:1.4}
   .angle{font-size:13.5px;color:var(--muted);background:var(--soft);border-left:3px solid var(--accent);
     padding:9px 12px;border-radius:0 8px 8px 0;margin:10px 0 14px}
@@ -253,6 +259,7 @@
   <div class="tabs">
     <button class="tab on" data-tab="overview">개요</button>
     <button class="tab" data-tab="calendar">📅 수집 달력</button>
+    <button class="tab" data-tab="sns">📱 스레드</button>
   </div>
 
   <section id="tab-overview" class="tabpanel">
@@ -295,6 +302,12 @@
       <div class="ulabel">📌 날짜 없음 <span class="h2sub">— 트렌드 · 미검증</span></div>
       <div id="calUndated"></div>
     </div>
+  </section>
+
+  <section id="tab-sns" class="tabpanel" hidden>
+    <h2>스레드 보관함 <span class="h2sub">— SNS에 올린 글 기록</span></h2>
+    <p class="calhint">스레드·SNS에 발행한 글을 여기 보관해요. 원문 글과 연결됩니다.</p>
+    <div id="snslist"><div class="loading">불러오는 중…</div></div>
   </section>
 
   <footer>
@@ -528,6 +541,7 @@ document.querySelectorAll('.tab').forEach(t=>{
     const which = t.getAttribute('data-tab');
     document.getElementById('tab-overview').hidden = which!=='overview';
     document.getElementById('tab-calendar').hidden = which!=='calendar';
+    document.getElementById('tab-sns').hidden = which!=='sns';
   };
 });
 
@@ -712,6 +726,30 @@ function card(p){
     a+'</div>';
 }
 
+// ---- SNS(스레드) 보관함 ----
+function renderSNS(sns){
+  const el = document.getElementById('snslist');
+  const posts = (sns && sns.posts) || [];
+  if(!posts.length){ el.innerHTML='<div class="empty">아직 저장된 스레드가 없어요.</div>'; return; }
+  el.innerHTML = posts.map(s=>{
+    const src = POSTS[s.postId];
+    const n = (s.parts||[]).length;
+    const parts = (s.parts||[]).map((p,i)=>
+      '<div class="snspart"><span class="snsnum">'+(i+1)+'/'+n+'</span><div class="snstext">'+p+'</div></div>').join('');
+    const link = src ? '<div class="actions"><button class="primary" data-draft="'+s.postId+'">📄 원문 글 보기</button></div>' : '';
+    return '<div class="card snscard">'+
+      '<div class="top">'+
+        '<span class="badge plat">📱 '+(s.platform||'스레드')+'</span>'+
+        '<span class="badge">@'+(s.account||'')+'</span>'+
+        (src?'<span class="badge">원문: '+src.title.slice(0,22)+'…</span>':'')+
+        '<span class="badge">'+n+'개 이어짐</span>'+
+        '<span class="badge date mono">'+(s.date||'')+'</span>'+
+      '</div>'+
+      '<div class="snsthread">'+parts+'</div>'+link+'</div>';
+  }).join('');
+  el.querySelectorAll('[data-draft]').forEach(b=> b.onclick=()=>openDraft(POSTS[b.getAttribute('data-draft')]));
+}
+
 async function boot(){
   try{
     const res = await fetchData('posts.json');
@@ -736,6 +774,10 @@ async function boot(){
 
     renderStatusSummary(posts, inbox);
     renderPipe(stages, posts, inbox);
+
+    // 스레드 보관함 (POSTS 준비된 뒤 로드)
+    try{ const sr = await fetchData('sns.json'); const sdata = await sr.json(); renderSNS(sdata); }
+    catch(_){ document.getElementById('snslist').innerHTML='<div class="empty">스레드 보관함을 불러오지 못했어요.</div>'; }
 
     // 판단 기준 (시스템 규칙)
     const crit = document.getElementById('criteria');
