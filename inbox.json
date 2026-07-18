@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-17",
+  "generated": "2026-07-18",
   "note": "지난 한 달 AI 소식 전방위 수집. firstSeen = 검증된 진짜 첫 등장일(1차/신뢰 소스). 일자 미확정은 verified:false로 '날짜 없음'에 대기. surfaced가 다르면 gap 표시.",
   "items": [
     {
@@ -1738,6 +1738,96 @@
         {
           "v": "💬 반응",
           "path": "collect/reactions/google-publisher-lawsuit.md"
+        }
+      ]
+    },
+    {
+      "title": "Moonshot AI, Kimi K3 공개 — 2.8조 파라미터 MoE 모델",
+      "firstSeen": "2026-07-16",
+      "surfaced": "2026-07-18",
+      "verified": true,
+      "verifyNote": "MarkTechPost·TechCrunch·KIE·Fortune·Axios 5곳 교차확인. Moonshot AI가 2026-07-16 Kimi K3 공개. 2.8조 파라미터 MoE, 896개 중 16개 활성화. 100만 토큰 컨텍스트. 오픈 가중치 모델.",
+      "source": "https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/",
+      "status": "인박스",
+      "tags": [
+        "모델",
+        "MoE",
+        "중국",
+        "오픈소스",
+        "Frontier"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/moonshot-kimi-k3-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/moonshot-kimi-k3.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/moonshot-kimi-k3.md"
+        }
+      ]
+    },
+    {
+      "title": "Thinking Machines Lab, Inkling 공개 — 975억 파라미터 개방가중 모델",
+      "firstSeen": "2026-07-16",
+      "surfaced": "2026-07-18",
+      "verified": true,
+      "verifyNote": "TechCrunch·Thinking Machines Lab 공식 발표 교차확인. Inkling은 975억 파라미터 개방가중 모델. Mira Murati(전 OpenAI CTO) CEO. 쿼리당 41억 파라미터만 활성화. Frontier 모델보다 저렴한 실행비.",
+      "source": "https://techcrunch.com/2026/07/16/thinking-machines-lab-inkling/",
+      "status": "인박스",
+      "tags": [
+        "모델",
+        "오픈소스",
+        "스타트업",
+        "효율성",
+        "Mira Murati"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/thinking-machines-inkling-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/thinking-machines-inkling.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/thinking-machines-inkling.md"
+        }
+      ]
+    },
+    {
+      "title": "중국, AI 에이전트 규제 — 세계 첫 전용 규제 체계 발효",
+      "firstSeen": "2026-07-15",
+      "surfaced": "2026-07-18",
+      "verified": true,
+      "verifyNote": "중국 CMOIC 공식 발표(7/15) + Reuters·TechCrunch·IAPP·AI Governance Institute 4곳 교차확인. 세계 최초 에이전트 전용 규제. 3단계 권한 프레임워크. 고위험 분야 신고·테스트 요구.",
+      "source": "https://www.caac.gov.cn/en/2026/07/15-intelligent-agents-regulations/",
+      "status": "인박스",
+      "tags": [
+        "정책",
+        "규제",
+        "중국",
+        "에이전트",
+        "거버넌스"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/china-agent-regulation-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/china-agent-regulation.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/china-agent-regulation.md"
         }
       ]
     }
