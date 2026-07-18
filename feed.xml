@@ -6,7 +6,15 @@
   <atom:link href="https://aicatveo3-prog.github.io/ai_Blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>어려운 AI 뉴스, 학생도 이해하게 쉽게 알려드려요</description>
   <language>ko</language>
-  <lastBuildDate>Wed, 08 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 14 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Sora 없는 AI 비디오 시장, 중국 PixVerse가 4억 달러 받고 뛰어들었어요</title>
+    <link>https://aicatveo3-prog.github.io/ai_Blog/p/aisphere-series-c/</link>
+    <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/aisphere-series-c/</guid>
+    <description>OpenAI Sora가 비용 문제로 물러난 AI 비디오 시장에 중국 스타트업 AIsphere(PixVerse)가 알리바바 주도 4억 3,900만 달러 투자를 받고 들어왔어요. 3년 만에 20억 달러 기업이 됐는데, 사용자 수는 미검증이고 AI 게임 엔진이라는 목표는 아직…</description>
+    <category>인사이트</category>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
   <item>
     <title>바이트댄스가 &apos;디자인을 이해하는 AI&apos;를 내놨어요 — 한글 포스터도 만든다는데</title>
     <link>https://aicatveo3-prog.github.io/ai_Blog/p/bytedance-seedream/</link>

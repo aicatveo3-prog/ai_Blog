@@ -54,7 +54,7 @@
       "date": "2026-07-14",
       "type": "A 속보 브리핑",
       "category": "인사이트",
-      "stage": "검수중",
+      "stage": "발행",
       "layout": "feature",
       "readMin": 4,
       "author": "AI 쉽게 알려주는 집",
@@ -63,6 +63,12 @@
         "① 그래서 나한테?"
       ],
       "versions": [
+        {
+          "v": "v7",
+          "date": "2026-07-18",
+          "note": "발행 — v6에서 3번을 표→불릿(확인/미확인 서술)으로 되돌림(사람 지정). 1·2번 표는 유지. stage 검수중→발행.",
+          "path": "drafts/2026.07.17_aisphere-series-c/v7.md"
+        },
         {
           "v": "v6",
           "date": "2026-07-18",
@@ -99,7 +105,8 @@
           "note": "최초 초안 — Caixin Global·TechCrunch·Techtimes·MLQ 교차확인, Sora 퇴장 타이밍·AI 게임 엔진 주장 vs 검증·한국 미래에셋 참여 분석",
           "path": "drafts/2026.07.17_aisphere-series-c/v1.md"
         }
-      ]
+      ],
+      "published": "2026-07-18"
     },
     {
       "id": "bytedance-seedream",
