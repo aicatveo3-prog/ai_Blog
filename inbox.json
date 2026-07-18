@@ -569,8 +569,7 @@
       "tags": [
         "모델",
         "Anthropic"
-      ],
-      "postId": "claude-sonnet-5"
+      ]
     },
     {
       "title": "캘리포니아, 미 최대 규모 주정부 AI 도입 — 전 기관 Claude 50% 할인",
@@ -756,8 +755,7 @@
       "tags": [
         "자동화",
         "MCP"
-      ],
-      "postId": "n8n-mcp-hub"
+      ]
     },
     {
       "title": "Microsoft Agent Framework 1.0 (MCP 네이티브)",
@@ -770,8 +768,7 @@
       "tags": [
         "프레임워크",
         "MCP"
-      ],
-      "postId": "mcp-standard"
+      ]
     },
     {
       "title": "Google 6월 묶음: Nano Banana 2 Lite · Gemini Omni Flash(API 프리뷰) · Gemma 4 12B(로컬 16GB)",
@@ -916,8 +913,7 @@
       "status": "검수중",
       "tags": [
         "오픈모델"
-      ],
-      "postId": "local-llm-selfhost"
+      ]
     },
     {
       "title": "에이전트 내장 80% (IDC 전망) / 하이퍼오토메이션 트렌드",
@@ -929,8 +925,7 @@
       "status": "검수중",
       "tags": [
         "트렌드"
-      ],
-      "postId": "agents-embedded-2026"
+      ]
     },
     {
       "title": "Unisound U2 — 초저가 에이전트용 MoE",
