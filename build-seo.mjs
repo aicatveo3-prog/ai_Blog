@@ -491,14 +491,32 @@ function ogHtml(title, cat) {
   </body></html>`;
 }
 
-// ---------- 실행 ----------
-const posts = JSON.parse(read('posts.json')).posts
-  .filter(p => p.stage === '발행')
+// ---------- 발행 승인 게이트 (L1 자물쇠) ----------
+// "발행하지 마"를 산문 규칙이 아니라 '기계'로 강제한다. (임시 브랜치 사고를 검증기로 막은 것과 같은 원리.)
+// 글이 실제로 사이트에 올라가려면 두 가지가 모두 있어야 한다:
+//   ① posts.json의 stage === '발행'   ② publish-approvals.json에 그 글 id가 등록됨
+// 승인 등록(②)은 '사람이 발행해라고 명시적으로 지시할 때만' 한다.
+//   → 루틴(②③)이나 실수로 stage만 '발행'으로 바뀌어도, 승인이 없으면 사이트에 안 나간다.
+const approvedIds = (() => {
+  try { return new Set((JSON.parse(read('publish-approvals.json')).approved || []).map(a => a.id)); }
+  catch { console.warn('  ⚠️ publish-approvals.json 없음/오류 — 승인된 글이 하나도 없는 것으로 처리(발행 0편).'); return new Set(); }
+})();
+
+const stagedForPublish = JSON.parse(read('posts.json')).posts.filter(p => p.stage === '발행');
+const blocked = stagedForPublish.filter(p => !approvedIds.has(p.id));
+if (blocked.length) {
+  console.warn(`\n🔒 발행 승인 없음 ${blocked.length}편 — 사이트에 올리지 않고 건너뜁니다:`);
+  blocked.forEach(p => console.warn(`   · ${p.id} (${p.title}) — 발행하려면 사람 지시("발행해") 후 publish-approvals.json에 등록`));
+  console.warn('');
+}
+
+const posts = stagedForPublish
+  .filter(p => approvedIds.has(p.id))
   // 홈에 표시되는 날짜(발행일)와 정렬 기준을 일치시킨다 — 최신 발행 글이 항상 위로.
   // 발행일이 같으면 뉴스 날짜(date)로 2차 정렬.
   .sort((a,b)=>(pubDate(b)||'').localeCompare(pubDate(a)||'') || (b.date||'').localeCompare(a.date||''));
 
-console.log(`발행 글 ${posts.length}편 빌드`);
+console.log(`발행 글 ${posts.length}편 빌드 (승인 통과)`);
 
 // 발행↔수집달력 연결 점검: 발행 글은 inbox.json의 대응 항목에 postId가 연결돼 있어야
 // 대시보드 '수집 달력'에 ✅ 발행으로 표시된다. 빠진 게 있으면 경고(규칙: 발행 시 항상 연결).

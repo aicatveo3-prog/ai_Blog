@@ -713,6 +713,12 @@ async function boot(){
     document.getElementById('updated').textContent = '마지막 업데이트 '+ (data.updated||'') ;
     const stages = data.stages || ['인박스','검토중','선정','조사중','작성중','검수중','발행'];
     const posts = data.posts || [];
+    // 발행 승인 게이트(자물쇠) — publish-approvals.json에 등록된 글만 '발행'으로 인정한다.
+    // 사람이 "발행해" 지시로 승인해야만 대시보드·사이트에 발행으로 반영된다. 승인 없는 '발행'은 검수중으로 되돌려 표시.
+    let approvedIds = new Set();
+    try{ const ar = await fetchData('publish-approvals.json'); const adata = await ar.json(); approvedIds = new Set((adata.approved||[]).map(a=>a.id)); }
+    catch(_){ /* 승인 파일 없으면 승인 0으로 간주 */ }
+    posts.forEach(p=>{ if(p.stage==='발행' && !approvedIds.has(p.id)){ p.stage='검수중'; p._awaitPublish=true; } });
     posts.forEach(p=>{ POSTS[p.id]=p; });
     // 인박스 후보 먼저 로드 (상태 요약·파이프라인·달력 공용)
     let inbox = [];

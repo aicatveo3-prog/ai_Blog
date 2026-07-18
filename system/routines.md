@@ -64,8 +64,8 @@
 ## 🚦 사람 게이트 — 발행 (자동화 금지 구역)
 
 - `검수중`의 **v2 + REVIEW.md**를 읽고 최종검토·피드백(필요시 v3).
-- OK하면: `posts.json` `stage:"검수중" → "발행"` + `published`(오늘) → **`node build-seo.mjs`** → 커밋·푸시.
-- **여기가 유일한 사람 게이트.** 승인 없이는 어떤 글도 라이브로 안 나간다(writing-guide 대원칙).
+- OK하면: `posts.json` `stage:"검수중" → "발행"` + `published`(오늘) + **🔒 `publish-approvals.json`에 승인 등록** → **`node build-seo.mjs`** → 커밋·푸시.
+- **여기가 유일한 사람 게이트.** 승인 없이는 어떤 글도 라이브로 안 나간다 — 이제 **산문이 아니라 기계가 강제**한다: `stage:"발행"`이어도 `publish-approvals.json`에 없으면 build가 건너뛰고 대시보드도 발행으로 안 띄운다. **승인 등록은 사람이 "발행해" 지시할 때만**(루틴·자동 금지).
 
 ---
 

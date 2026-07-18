@@ -1,0 +1,60 @@
+{
+  "_설명": "발행 승인 대장(자물쇠). 여기 id가 있어야만 build-seo가 사이트에 올린다. 사람이 '발행해' 지시할 때만 추가한다. 루틴·에이전트가 임의로 추가 금지.",
+  "approved": [
+    {
+      "id": "aisphere-series-c",
+      "approvedOn": "2026-07-18",
+      "note": "기존 발행분 일괄 승인(백필)"
+    },
+    {
+      "id": "bytedance-seedream",
+      "approvedOn": "2026-07-17",
+      "note": "기존 발행분 일괄 승인(백필)"
+    },
+    {
+      "id": "china-ai-companion-regulation",
+      "approvedOn": "2026-07-16",
+      "note": "기존 발행분 일괄 승인(백필)"
+    },
+    {
+      "id": "deepseek-chip",
+      "approvedOn": "2026-07-16",
+      "note": "기존 발행분 일괄 승인(백필)"
+    },
+    {
+      "id": "samsung-gaia-chip",
+      "approvedOn": "2026-07-15",
+      "note": "기존 발행분 일괄 승인(백필)"
+    },
+    {
+      "id": "apple-openai-lawsuit",
+      "approvedOn": "2026-07-15",
+      "note": "기존 발행분 일괄 승인(백필)"
+    },
+    {
+      "id": "meta-iris-chip",
+      "approvedOn": "2026-07-15",
+      "note": "기존 발행분 일괄 승인(백필)"
+    },
+    {
+      "id": "ai-datacenter-power",
+      "approvedOn": "2026-07-14",
+      "note": "기존 발행분 일괄 승인(백필)"
+    },
+    {
+      "id": "illinois-ai-law",
+      "approvedOn": "2026-07-14",
+      "note": "기존 발행분 일괄 승인(백필)"
+    },
+    {
+      "id": "nvidia-kyber-delay",
+      "approvedOn": "2026-07-10",
+      "note": "기존 발행분 일괄 승인(백필)"
+    },
+    {
+      "id": "microsoft-mai",
+      "approvedOn": "2026-07-08",
+      "note": "기존 발행분 일괄 승인(백필)"
+    }
+  ]
+}
