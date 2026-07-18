@@ -162,6 +162,18 @@
   .card.pub{border-color:rgba(31,157,107,.45);background:rgba(31,157,107,.05);box-shadow:inset 4px 0 0 var(--ok), var(--shadow)}
   .card.pub h3{color:var(--ink)}
   .badge.date{background:transparent;color:var(--muted);padding-left:0}
+  /* 글 목록 2단(블로그 | 스레드) */
+  .artrow{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:14px;align-items:start;margin-bottom:14px}
+  .artrow .card{margin-bottom:0}
+  .arthead{margin-bottom:2px}
+  .arthead>div{font-size:11.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding-left:6px}
+  .sns-side .snsthread{max-height:360px;overflow-y:auto}
+  .sns-empty{border:1.5px dashed var(--line);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:6px;padding:26px 16px;text-align:center;color:var(--muted);min-height:150px;background:linear-gradient(0deg,var(--soft),var(--soft))}
+  .sns-empty-ic{font-size:26px;opacity:.45}
+  .sns-empty-t{font-size:14px;font-weight:600}
+  .sns-empty-s{font-size:12px;opacity:.72}
+  @media(max-width:860px){.artrow{grid-template-columns:1fr}.arthead{display:none}}
   /* SNS(스레드) 보관함 */
   .snscard .snsthread{display:flex;flex-direction:column;gap:8px;margin-top:12px}
   .snspart{display:flex;gap:10px;background:var(--soft);border-radius:12px;padding:12px 14px}
@@ -701,6 +713,7 @@ function initCalendar(data){
 
 const POSTS = {};
 const COLLECT_BY_POST = {};   // postId → 연결된 수집 항목(정리본·자세히·반응). 달력의 같은 글을 카드에서 바로 열게 함.
+const SNS_BY_POST = {};       // postId → 그 글의 스레드(sns.json). 글 목록 오른쪽 칸에 붙인다.
 function card(p){
   const lens = (p.lens||[]).join(' · ');
   const nver = (p.versions||[]).length;
@@ -750,6 +763,31 @@ function renderSNS(sns){
   el.querySelectorAll('[data-draft]').forEach(b=> b.onclick=()=>openDraft(POSTS[b.getAttribute('data-draft')]));
 }
 
+// 글 목록 한 행 = [왼쪽 블로그 글 카드] + [오른쪽 스레드 칸(있으면 채움/없으면 빈 안내)]
+function threadSide(p){
+  const s = SNS_BY_POST[p.id];
+  if(!s){
+    return '<div class="sns-empty">'+
+      '<div class="sns-empty-ic">📱</div>'+
+      '<div class="sns-empty-t">아직 스레드 글이 없어요</div>'+
+      '<div class="sns-empty-s">이 글의 스레드를 올리면 여기 채워져요</div>'+
+    '</div>';
+  }
+  const n = (s.parts||[]).length;
+  const parts = (s.parts||[]).map((t,i)=>
+    '<div class="snspart"><span class="snsnum">'+(i+1)+'/'+n+'</span><div class="snstext">'+t+'</div></div>').join('');
+  return '<div class="card snscard sns-side">'+
+    '<div class="top">'+
+      '<span class="badge plat">📱 '+(s.platform||'스레드')+'</span>'+
+      '<span class="badge">@'+(s.account||'')+'</span>'+
+      '<span class="badge">'+n+'개 이어짐</span>'+
+      '<span class="badge date mono">'+(s.date||'')+'</span>'+
+    '</div>'+
+    '<div class="snsthread">'+parts+'</div>'+
+  '</div>';
+}
+function artRow(p){ return '<div class="artrow">'+card(p)+threadSide(p)+'</div>'; }
+
 async function boot(){
   try{
     const res = await fetchData('posts.json');
@@ -775,8 +813,12 @@ async function boot(){
     renderStatusSummary(posts, inbox);
     renderPipe(stages, posts, inbox);
 
-    // 스레드 보관함 (POSTS 준비된 뒤 로드)
-    try{ const sr = await fetchData('sns.json'); const sdata = await sr.json(); renderSNS(sdata); }
+    // 스레드 보관함 (POSTS 준비된 뒤 로드). postId→스레드 매핑도 만들어 글 목록 오른쪽 칸에 쓴다.
+    try{
+      const sr = await fetchData('sns.json'); const sdata = await sr.json();
+      (sdata.posts||[]).forEach(s=>{ if(s.postId) SNS_BY_POST[s.postId]=s; });
+      renderSNS(sdata);
+    }
     catch(_){ document.getElementById('snslist').innerHTML='<div class="empty">스레드 보관함을 불러오지 못했어요.</div>'; }
 
     // 판단 기준 (시스템 규칙)
@@ -788,7 +830,9 @@ async function boot(){
     // 추가된 순서 역순(최근 추가된 글이 위로). 글쓰기 루틴이 새 글을 posts 배열
     // 끝에 붙이므로, 배열을 뒤집으면 가장 최근에 추가된 글이 맨 위에 온다.
     const ordered = posts.slice().reverse();
-    list.innerHTML = ordered.length ? ordered.map(card).join('') :
+    list.innerHTML = ordered.length ?
+      '<div class="artrow arthead"><div>📝 블로그 글</div><div>📱 스레드 글</div></div>' +
+      ordered.map(artRow).join('') :
       '<div class="empty">아직 글이 없어요. 새 글을 만들면 여기에 나타납니다.</div>';
     list.querySelectorAll('button[data-draft]').forEach(b=>{
       b.onclick = ()=> openDraft(POSTS[b.getAttribute('data-draft')]);
