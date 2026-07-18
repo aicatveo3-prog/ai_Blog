@@ -614,11 +614,11 @@
     },
     {
       "id": "google-publishers-lawsuit",
-      "title": "Google, \"위험한 줄 알면서\" 출판사 책으로 Gemini를 학습시켰다",
+      "title": "출판사들, Google이 \"위험한 줄 알면서\" 책으로 Gemini 학습시켰다며 집단소송",
       "date": "2026-07-14",
       "type": "A 속보 브리핑",
       "category": "인사이트",
-      "stage": "작성중",
+      "stage": "검수중",
       "layout": "feature",
       "readMin": 5,
       "author": "AI 쉽게 알려주는 집",
@@ -627,6 +627,12 @@
         "① 그래서 나한테?"
       ],
       "versions": [
+        {
+          "v": "v2",
+          "date": "2026-07-18",
+          "note": "루틴③ 검사 — 가짜 인용 수정(내부문서 문구를 원고측 주장으로 재귀속), 법원명·접수일 정정(뉴욕남부연방지방법원·7/10 접수), S.C.R.I.B.E. 정체 정정(Turow가 세운 회사), 미검증 ZDNet 인용 교체(SBS·미주중앙일보 실링크), 무출처 \"법학자들의 분석\" 귀속 제거, 언런닝 기술주장 낮추기",
+          "path": "drafts/2026.07.18_google-publishers-lawsuit/v2.md"
+        },
         {
           "v": "v1",
           "date": "2026-07-18",
@@ -637,19 +643,25 @@
     },
     {
       "id": "thinking-machines-inkling",
-      "title": "OpenAI를 떠난 CTO가 만든 첫 모델, 누구나 쓸 수 있어요",
+      "title": "OpenAI를 떠난 CTO가 만든 첫 모델, 누구나 내려받을 수 있어요",
       "date": "2026-07-16",
       "type": "A 속보 브리핑",
       "category": "인사이트",
-      "stage": "작성중",
+      "stage": "검수중",
       "layout": "feature",
       "readMin": 4,
       "author": "AI 쉽게 알려주는 집",
-      "angle": "OpenAI 전 CTO Mira Murati가 세운 Thinking Machines Lab이 975억 파라미터 개방가중 모델 Inkling을 공개했어요. 질문당 41억 개만 활성화해 비용을 줄인 MoE 구조인데, 독립 벤치마크는 아직 나오지 않았어요.",
+      "angle": "OpenAI 전 CTO Mira Murati가 세운 Thinking Machines Lab이 9,750억(975B) 파라미터 개방가중 모델 Inkling을 공개했어요. 질문당 410억(41B) 개만 활성화해 비용을 줄인 MoE 구조인데, 독립 벤치마크는 아직 나오지 않았어요.",
       "lens": [
         "① 그래서 나한테?"
       ],
       "versions": [
+        {
+          "v": "v2",
+          "date": "2026-07-18",
+          "note": "루틴③ 검사 — 파라미터 수치 10배 오류 정정(975억→9,750억/975B, 41억→410억/41B, 웹 재검 확인), TechCrunch 출처 URL·제목 오류 정정(실제 기사로 교체), \"누구나 쓸 수 있다\"는 과단정 낮추기(내려받기는 가능하나 실행엔 대규모 서버 필요 명시)",
+          "path": "drafts/2026.07.18_thinking-machines-inkling/v2.md"
+        },
         {
           "v": "v1",
           "date": "2026-07-18",
