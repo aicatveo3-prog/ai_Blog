@@ -1795,7 +1795,8 @@
           "v": "💬 반응",
           "path": "collect/reactions/thinking-machines-inkling.md"
         }
-      ]
+      ],
+      "postId": "thinking-machines-inkling"
     },
     {
       "title": "중국, AI 에이전트 규제 — 세계 첫 전용 규제 체계 발효",
@@ -1856,7 +1857,8 @@
           "v": "💬 반응",
           "path": "collect/reactions/google-publishers-lawsuit.md"
         }
-      ]
+      ],
+      "postId": "google-publishers-lawsuit"
     },
     {
       "title": "Meta Muse Image 공개 — 에이전트형 이미지 생성 AI",

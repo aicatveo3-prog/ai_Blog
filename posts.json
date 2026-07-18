@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16",
+  "updated": "2026-07-18",
   "stages": [
     "인박스",
     "검토중",
@@ -609,6 +609,52 @@
           "date": "2026-07-18",
           "note": "최초 초안",
           "path": "drafts/2026.07.18_china-agent-regulation/v1.md"
+        }
+      ]
+    },
+    {
+      "id": "google-publishers-lawsuit",
+      "title": "Google, \"위험한 줄 알면서\" 출판사 책으로 Gemini를 학습시켰다",
+      "date": "2026-07-14",
+      "type": "A 속보 브리핑",
+      "category": "인사이트",
+      "stage": "작성중",
+      "layout": "feature",
+      "readMin": 5,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "세계 3대 출판사가 Google을 집단소송했어요. Gemini 학습에 책을 무단으로 쓴 혐의인데, Google 내부 문서에 \"$100B 벌금 위험\"이 적혀 있었다는 증거가 나왔어요. 알면서도 진행하고 흔적까지 지웠다는 게 핵심이에요.",
+      "lens": [
+        "① 그래서 나한테?"
+      ],
+      "versions": [
+        {
+          "v": "v1",
+          "date": "2026-07-18",
+          "note": "최초 초안 — TechCrunch·AlJazeera·SearchEngineJournal·TheBookSeller·Engadget·GoodEReader 교차확인, 내부 문서 증거·공정이용 논점·EU AI Act 연계 분석",
+          "path": "drafts/2026.07.18_google-publishers-lawsuit/v1.md"
+        }
+      ]
+    },
+    {
+      "id": "thinking-machines-inkling",
+      "title": "OpenAI를 떠난 CTO가 만든 첫 모델, 누구나 쓸 수 있어요",
+      "date": "2026-07-16",
+      "type": "A 속보 브리핑",
+      "category": "인사이트",
+      "stage": "작성중",
+      "layout": "feature",
+      "readMin": 4,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "OpenAI 전 CTO Mira Murati가 세운 Thinking Machines Lab이 975억 파라미터 개방가중 모델 Inkling을 공개했어요. 질문당 41억 개만 활성화해 비용을 줄인 MoE 구조인데, 독립 벤치마크는 아직 나오지 않았어요.",
+      "lens": [
+        "① 그래서 나한테?"
+      ],
+      "versions": [
+        {
+          "v": "v1",
+          "date": "2026-07-18",
+          "note": "최초 초안 — TechCrunch 단일 소스 기반, MoE 구조·개방가중 의미·미확인 사항 정리",
+          "path": "drafts/2026.07.18_thinking-machines-inkling/v1.md"
         }
       ]
     }
