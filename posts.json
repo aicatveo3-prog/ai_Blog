@@ -636,6 +636,52 @@
           "path": "drafts/weekly-digest-2026-07-04/v1.md"
         }
       ]
+    },
+    {
+      "id": "moonshot-kimi-k3",
+      "title": "미국이 3년간 칩을 막았는데 — 중국에서 '세계 4위' AI가 나왔어요",
+      "date": "2026-07-16",
+      "type": "B 심층 분석",
+      "category": "모델",
+      "stage": "작성중",
+      "layout": "feature",
+      "readMin": 9,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "미국 수출 통제 3년 → 중국 Kimi K3 프론티어급 등장. '자체 벤치마크'라는 단서, 독립 검증 부재, 7/27 가중치 공개 대기.",
+      "lens": [
+        "① 그래서 나한테?"
+      ],
+      "versions": [
+        {
+          "v": "v1",
+          "date": "2026-07-18",
+          "note": "최초 초안",
+          "path": "drafts/2026.07.18_moonshot-kimi-k3/v1.md"
+        }
+      ]
+    },
+    {
+      "id": "china-agent-regulation",
+      "title": "중국이 AI 에이전트 14,000개를 지웠어요 — '혁신을 위해서'래요",
+      "date": "2026-07-15",
+      "type": "B 심층 분석",
+      "category": "정책",
+      "stage": "작성중",
+      "layout": "feature",
+      "readMin": 9,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "'혁신 장려' 명분의 에이전트 규제가 14,000개 삭제로 시작. 세계 최초 전용 규제 vs 미국 규제 부재 대비.",
+      "lens": [
+        "① 그래서 나한테?"
+      ],
+      "versions": [
+        {
+          "v": "v1",
+          "date": "2026-07-18",
+          "note": "최초 초안",
+          "path": "drafts/2026.07.18_china-agent-regulation/v1.md"
+        }
+      ]
     }
   ]
 }
