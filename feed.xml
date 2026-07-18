@@ -6,7 +6,15 @@
   <atom:link href="https://aicatveo3-prog.github.io/ai_Blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>어려운 AI 뉴스, 학생도 이해하게 쉽게 알려드려요</description>
   <language>ko</language>
-  <lastBuildDate>Wed, 15 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 16 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>미국이 3년간 칩을 막았는데 — 중국에서 &apos;세계 4위&apos; AI가 나왔어요</title>
+    <link>https://aicatveo3-prog.github.io/ai_Blog/p/moonshot-kimi-k3/</link>
+    <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/moonshot-kimi-k3/</guid>
+    <description>미국 수출 통제 3년 → 중국 Kimi K3 프론티어급 등장. &apos;자체 벤치마크&apos;라는 단서, 독립 검증 부재, 7/27 가중치 공개 대기.</description>
+    <category>모델</category>
+    <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
   <item>
     <title>중국이 AI 에이전트 전용 규제를 시행했어요 — 발효 전 14,000개가 삭제됐어요</title>
     <link>https://aicatveo3-prog.github.io/ai_Blog/p/china-agent-regulation/</link>

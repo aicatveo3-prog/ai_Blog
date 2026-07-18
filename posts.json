@@ -510,7 +510,7 @@
       "date": "2026-07-16",
       "type": "B 심층 분석",
       "category": "모델",
-      "stage": "검수중",
+      "stage": "발행",
       "layout": "feature",
       "readMin": 9,
       "author": "AI 쉽게 알려주는 집",
@@ -549,7 +549,8 @@
           "note": "최초 초안",
           "path": "drafts/2026.07.18_moonshot-kimi-k3/v1.md"
         }
-      ]
+      ],
+      "published": "2026-07-18"
     },
     {
       "id": "china-agent-regulation",
