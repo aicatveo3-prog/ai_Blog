@@ -1827,6 +1827,100 @@
           "path": "collect/reactions/china-agent-regulation.md"
         }
       ]
+    },
+    {
+      "title": "Google, Hachette·Cengage·Elsevier 저작권 소송 — Gemini 학습용 도용 적발",
+      "firstSeen": "2026-07-14",
+      "surfaced": "2026-07-18",
+      "verified": true,
+      "verifyNote": "TechCrunch·SearchEngineJournal·AlJazeera·TheWrap 4곳 7/14~15 동시 보도. 남동구 뉴욕 연방법원 제출. Hachette Book Group, Scott Turow, Cengage Learning, Elsevier, S.C.R.I.B.E. 공동 원고. Google Books 및 Google Play Store 도서를 Gemini 학습에 무단 사용, 저작권 정보 의도적 제거. 내부 문서 '$100B 규모 벌금 위험' 인용.",
+      "source": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/",
+      "status": "인박스",
+      "tags": [
+        "소송",
+        "저작권",
+        "Gemini",
+        "Google",
+        "규제"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/google-publishers-lawsuit-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/google-publishers-lawsuit.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/google-publishers-lawsuit.md"
+        }
+      ]
+    },
+    {
+      "title": "Meta Muse Image 공개 — 에이전트형 이미지 생성 AI",
+      "firstSeen": "2026-07-07",
+      "surfaced": "2026-07-18",
+      "verified": true,
+      "verifyNote": "Meta AI 공식 블로그·TechCrunch·CNBC·Axios 4곳 7/7 동시 보도. Meta Superintelligence Labs 발표. 코드명 Mango. 에이전트형 생성으로 웹 검색 기반 그라운딩. ChatGPT 이미지 생성기에만 미치지 못하고 Google Nano Banana 2 능가. Meta AI·WhatsApp·Instagram에 무료 공개.",
+      "source": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
+      "status": "인박스",
+      "tags": [
+        "모델",
+        "이미지생성",
+        "Meta",
+        "멀티모달",
+        "에이전트"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/meta-muse-image-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/meta-muse-image.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/meta-muse-image.md"
+        }
+      ]
+    },
+    {
+      "title": "Autonomous Ghost, 노코드 AI 자동화 플랫폼 공개",
+      "firstSeen": "2026-07-17",
+      "surfaced": "2026-07-18",
+      "verified": true,
+      "verifyNote": "FinancialContent·MarketersMedia 7/16~17 보도. 평문 자동화, 브라우저 자동화, 데스크톱 봇, AI 에이전트 워크플로우. Google Sheets·Gmail·Slack·Stripe·HubSpot 등 수백 개 통합. 기업 자동화용 엔터프라이즈 보안.",
+      "source": "https://www.financialcontent.com/article/marketersmedia-2026-7-16-autonomous-ghost-launches-no-code-ai-automation-platform-for-business",
+      "status": "인박스",
+      "tags": [
+        "자동화",
+        "노코드",
+        "에이전트",
+        "스타트업",
+        "워크플로우"
+      ],
+      "articleVersions": []
+    },
+    {
+      "title": "Gloo Holdings IPO 제안 — 7백만 주 공개 모집",
+      "firstSeen": "2026-07-12",
+      "surfaced": "2026-07-18",
+      "verified": true,
+      "verifyNote": "SaaS M&A Tracker·Yahoo Finance·Seeking Alpha 등 7/12 보도. 신규 7백만 주 공개 모집으로 AI 인수 자금 조성. CEO Scott Beck 투표권 53.3% 유지. 2026년 매출 가이던스 $195M 상향(238% YoY 증가). 신청서 상 '지속 능력 의문' 명시.",
+      "source": "https://www.saasrise.com/deals/gloo-announces-proposed-public-offering-of-7-million-class-a-common-shares-3c4a9fc5-8772-4de5-b05b-d7cf46286867",
+      "status": "인박스",
+      "tags": [
+        "자금",
+        "IPO",
+        "스타트업",
+        "AI",
+        "신앙기반SaaS"
+      ],
+      "articleVersions": []
     }
   ]
 }
