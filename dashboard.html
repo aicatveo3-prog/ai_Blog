@@ -157,6 +157,10 @@
   .card .top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
   .badge{font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:20px;background:var(--soft);color:var(--ink)}
   .badge.stage{background:var(--accent);color:#fff}
+  .badge.stage.pub{background:var(--ok)}
+  /* 발행 글 강조 — 초록 왼쪽 바 + 옅은 초록 배경으로 검수중과 확실히 구분 */
+  .card.pub{border-color:rgba(31,157,107,.45);background:rgba(31,157,107,.05);box-shadow:inset 4px 0 0 var(--ok), var(--shadow)}
+  .card.pub h3{color:var(--ink)}
   .badge.date{background:transparent;color:var(--muted);padding-left:0}
   .card h3{font-size:17px;letter-spacing:-.2px;margin:2px 0 8px;line-height:1.4}
   .angle{font-size:13.5px;color:var(--muted);background:var(--soft);border-left:3px solid var(--accent);
@@ -694,9 +698,10 @@ function card(p){
   if(p.research)      a += '<button data-doc="'+p.research+'" data-label="🔍 조사 노트">🔍 조사 노트</button>';
   a += '</div>';
   const vtag = nver>1 ? '<span class="badge">버전 '+nver+'개</span>' : '';
-  return '<div class="card">'+
+  const isPub = p.stage==='발행';
+  return '<div class="card'+(isPub?' pub':'')+'">'+
     '<div class="top">'+
-      '<span class="badge stage">'+p.stage+'</span>'+
+      '<span class="badge stage'+(isPub?' pub':'')+'">'+(isPub?'✅ ':'')+p.stage+'</span>'+
       (p.type?'<span class="badge">'+p.type+'</span>':'')+
       vtag+
       '<span class="badge date mono">'+(p.date||'')+'</span>'+
