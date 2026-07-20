@@ -54,7 +54,7 @@
       "date": "2026-07-08",
       "type": "B 심층 분석",
       "category": "최신 AI 소식",
-      "stage": "작성중",
+      "stage": "검수중",
       "layout": "feature",
       "readMin": 8,
       "author": "AI 쉽게 알려주는 집",
@@ -63,6 +63,12 @@
         "① 그래서 나한테?"
       ],
       "versions": [
+        {
+          "v": "v2",
+          "date": "2026-07-20",
+          "note": "루틴② Part B 검사 — 과단정 스캔·정직성 수정(낮추기 위주)",
+          "path": "drafts/2026.07.20_grok-4-5/v2.md"
+        },
         {
           "v": "v1",
           "date": "2026-07-20",
@@ -77,7 +83,7 @@
       "date": "2026-07-07",
       "type": "B 심층 분석",
       "category": "최신 AI 소식",
-      "stage": "작성중",
+      "stage": "검수중",
       "layout": "feature",
       "readMin": 6,
       "author": "AI 쉽게 알려주는 집",
@@ -86,6 +92,12 @@
         "① 그래서 나한테?"
       ],
       "versions": [
+        {
+          "v": "v2",
+          "date": "2026-07-20",
+          "note": "루틴② Part B 검사 — 과단정 스캔·정직성 수정(낮추기 위주)",
+          "path": "drafts/2026.07.20_meta-muse-image/v2.md"
+        },
         {
           "v": "v1",
           "date": "2026-07-20",
