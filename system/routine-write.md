@@ -1,5 +1,7 @@
 # 🟠 루틴 ② 정본 — 자동 글쓰기 (Opus 4.6)
 
+> ⚠️ **폐지(2026-07-20)** — 이 문서는 `system/routine-write-verify.md`(글쓰기+검사 통합, Sonnet 5)로 **대체됨**. 아래 내용은 통합 전 기록용. 실제 루틴은 통합 정본을 따른다.
+
 > 이 파일이 **글쓰기 루틴의 정본**. 트리거는 "이 파일을 읽고 그대로 실행하라"만 담아 드리프트를 막는다.
 > 짝 문서: `system/routine-verify.md`(검사 루틴) · `system/routines.md`(전체 파이프라인) · `system/writing-guide.md`(글쓰기 기준).
 
