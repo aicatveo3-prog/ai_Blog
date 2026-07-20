@@ -279,9 +279,20 @@ const CALCSS = `
 .dgrow .dek{color:var(--muted);font-size:13px;line-height:1.55;margin-top:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .dgrow:hover .ttl{color:var(--brandD)}
 @media(max-width:560px){.calbox{padding:13px 12px 11px}.mcg{gap:4px}.dgrow .ttl{font-size:15.5px}}
-/* 북마크(추천) 페이지 */
-.bmnote{font-size:12.5px;color:var(--brand);font-weight:600;line-height:1.5;margin-top:6px;background:var(--brandBg);border-radius:8px;padding:6px 10px;display:inline-block}
-.bmrow{padding-top:17px;padding-bottom:17px}
+/* 북마크(개인 링크 모음) 페이지 */
+.bmgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:16px;margin-top:4px}
+.bmcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:15px 15px 8px;box-shadow:var(--shadow)}
+.bmc-h{display:flex;align-items:center;gap:8px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.bmc-h .bmc-ic{font-size:18px}
+.bmc-h b{font-size:15.5px;color:var(--ink)}
+.bmc-h .bmc-n{margin-left:auto;font-size:12px;color:var(--faint);background:var(--soft);border-radius:999px;padding:2px 9px;font-weight:700}
+.bmc-links{padding-top:4px}
+.bmlink{display:flex;flex-direction:column;padding:11px 6px;border-radius:9px;text-decoration:none;color:inherit}
+.bmlink:hover{background:var(--soft)}
+.bmlink .bl-t{font-size:14px;font-weight:600;color:var(--ink);line-height:1.35}
+.bmlink:hover .bl-t{color:var(--brand)}
+.bmlink .bl-u{font-size:11.5px;color:var(--faint);margin-top:2px}
+.bl-empty{color:var(--faint);font-size:13px;padding:12px 6px}
 /* 메뉴를 모바일에서도 보이게 (기존 max-820에서 숨김 처리 override) */
 @media(max-width:820px){.navlinks{display:flex}.navlinks a{padding:8px 10px;font-size:13px}}
 @media(max-width:560px){.brand .wm{display:none}.nav-in{gap:8px;padding:11px 13px}.navlinks{gap:2px;margin-left:0}.navlinks a{padding:7px 8px;font-size:12px}}
@@ -418,17 +429,19 @@ ${listInner}
 </html>`;
 }
 
-// ---------- 북마크(운영자 추천 글) 페이지 ----------
-function buildBookmarks(picks, byId) {
-  const desc = '운영자가 직접 고른, 다시 볼 만한 AI 소식 모음이에요.';
-  const items = picks.map(pk => ({ pk, p: byId[pk.id] })).filter(x => x.p); // 발행된 글만
-  const rows = items.map(({pk,p})=>`<a class="dgrow bmrow" href="p/${p.id}/">
-<span class="ttl">${escHtml(p.title)}</span>
-${pk.note?`<span class="bmnote">🔖 ${escHtml(pk.note)}</span>`:''}
-<span class="dek">${escHtml(p.angle||'')}</span></a>`).join('\n');
-  const inner = items.length
-    ? `<div class="bmlist">${rows}</div>`
-    : `<div class="empty">아직 추천 글이 없어요. 운영자가 고른 글이 여기에 모입니다.</div>`;
+// ---------- 북마크(개인 링크 모음) 페이지 ----------
+function hostOf(u){ try { return new URL(u).hostname.replace(/^www\./,''); } catch { return ''; } }
+function buildBookmarks(cats) {
+  const desc = '자주 가는 사이트를 카테고리로 모아둔 링크 북마크예요.';
+  const total = cats.reduce((n,c)=> n + ((c.links&&c.links.length)||0), 0);
+  const cards = cats.map(c=>{
+    const links = (c.links||[]).map(l=>`<a class="bmlink" href="${escAttr(l.url)}" target="_blank" rel="noopener"><span class="bl-t">${escHtml(l.title||l.url)}</span><span class="bl-u">${escHtml(hostOf(l.url))}</span></a>`).join('');
+    const body = links || `<div class="bl-empty">아직 링크가 없어요</div>`;
+    return `<section class="bmcard"><div class="bmc-h"><span class="bmc-ic">${escHtml(c.icon||'🔖')}</span><b>${escHtml(c.name)}</b><span class="bmc-n">${(c.links||[]).length}</span></div><div class="bmc-links">${body}</div></section>`;
+  }).join('\n');
+  const inner = cats.length
+    ? `<div class="bmgrid">${cards}</div>`
+    : `<div class="empty">아직 북마크가 없어요. 자주 가는 사이트를 카테고리별로 걸어둘 수 있어요.</div>`;
   const bmLd = { '@context':'https://schema.org','@type':'CollectionPage','name':`북마크 · ${BRAND}`,'description':desc,'url':SITE+'/bookmarks.html','inLanguage':'ko' };
   return `<!DOCTYPE html>
 <html lang="ko">
@@ -439,14 +452,11 @@ ${head({title:`🔖 북마크 — ${BRAND}`, desc, url:SITE+'/bookmarks.html', o
 <body>
 ${navHtml('', 'bookmark')}
 <main class="wrap">
-<header class="mast"><div class="kick">운영자 추천</div>
+<header class="mast"><div class="kick">자주 가는 곳</div>
 <h1>🔖 <span class="hlk">북마크</span></h1>
 <p>${escHtml(desc)}</p></header>
-<div class="seclabel"><b>추천 글</b><span>· ${items.length}편</span></div>
+<div class="seclabel"><b>링크</b><span>· 전체 ${total}개</span></div>
 ${inner}
-<section class="news"><div><h4>최신 소식도 있어요</h4>
-<p>매일 올라오는 AI 소식은 '최신 AI 소식'에서 날짜별로 볼 수 있어요.</p></div>
-<div class="cta"><a class="pill" href="index.html">최신 소식 보기</a></div></section>
 <footer>수집 → 선별 → 조사 → 관점 → 초안 → 검수 → 발행 · ${BRAND} 운영 시스템<br>© 2026 ${BRAND}</footer>
 </main>
 <script>${JS}</script>
@@ -646,14 +656,14 @@ for (let i = 0; i < posts.length; i++) {
 
 // 홈 + 북마크 + sitemap/robots/feed
 write('index.html', buildHome(posts));
-let bookmarkPicks = [];
-try { bookmarkPicks = (JSON.parse(read('bookmarks.json')).picks) || []; } catch (_) { /* 없으면 빈 목록 */ }
-const byId = Object.fromEntries(posts.map(p => [p.id, p]));
-write('bookmarks.html', buildBookmarks(bookmarkPicks, byId));
+let bmCats = [];
+try { bmCats = (JSON.parse(read('bookmarks.json')).categories) || []; } catch (_) { /* 없으면 빈 목록 */ }
+write('bookmarks.html', buildBookmarks(bmCats));
 write('sitemap.xml', buildSitemap(posts));
 write('robots.txt', buildRobots());
 write('feed.xml', buildFeed(posts));
-console.log(`  ✓ index.html · bookmarks.html(추천 ${bookmarkPicks.filter(pk=>byId[pk.id]).length}편) · sitemap.xml · robots.txt · feed.xml`);
+const bmTotal = bmCats.reduce((n,c)=>n+((c.links&&c.links.length)||0),0);
+console.log(`  ✓ index.html · bookmarks.html(${bmCats.length}카테고리·${bmTotal}링크) · sitemap.xml · robots.txt · feed.xml`);
 
 // OG 이미지(PNG) — Playwright 있으면 생성
 try {
