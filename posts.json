@@ -371,6 +371,7 @@
       "angle": "xAI가 Grok 4.5를 공개했어요. Opus급 성능을 더 빠르고 저렴하게 제공하며 코딩·에이전트에 특화됐다는 주장이에요.",
       "lens": ["① 그래서 나한테?"],
       "versions": [
+        {"v": "v3", "date": "2026-07-20", "note": "본문 확장 — collect 소스 기반 full draft. writing-guide 적용, 과단정 낮춤·출처 귀속 유지", "path": "drafts/2026.07.20_grok-4-5/v3.md"},
         {"v": "v2", "date": "2026-07-20", "note": "루틴 ③ 자동 검사(검증) — 과단정 스캔·정직성·정밀표기 적용, v1 수정하여 저장", "path": "drafts/2026.07.20_grok-4-5/v2.md"},
         {"v": "v1", "date": "2026-07-20", "note": "루틴 ② 초안 — writing-guide 17규칙 적용, crosscheck 후 synthesis", "path": "drafts/2026.07.20_grok-4-5/v1.md"}
       ]
@@ -388,6 +389,7 @@
       "angle": "Meta가 Muse Image를 공개했어요. 에이전트 구조로 검색·편집까지 자동 처리하는 이미지 생성 모델입니다.",
       "lens": ["① 그래서 나한테?"],
       "versions": [
+        {"v": "v3", "date": "2026-07-20", "note": "본문 확장 — collect 소스 기반 full draft. writing-guide 적용, 과단정 낮춤·출처 귀속 유지", "path": "drafts/2026.07.20_meta-muse-image/v3.md"},
         {"v": "v2", "date": "2026-07-20", "note": "루틴 ③ 자동 검사(검증) — 과단정 스캔·정직성·정밀표기 적용, v1 수정하여 저장", "path": "drafts/2026.07.20_meta-muse-image/v2.md"},
         {"v": "v1", "date": "2026-07-20", "note": "루틴 ② 초안 — writing-guide 17규칙 적용, crosscheck 후 synthesis", "path": "drafts/2026.07.20_meta-muse-image/v1.md"}
       ]
