@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-18",
+  "generated": "2026-07-20",
   "note": "지난 한 달 AI 소식 전방위 수집. firstSeen = 검증된 진짜 첫 등장일(1차/신뢰 소스). 일자 미확정은 verified:false로 '날짜 없음'에 대기. surfaced가 다르면 gap 표시.",
   "items": [
     {
@@ -1923,6 +1923,162 @@
         "신앙기반SaaS"
       ],
       "articleVersions": []
+    },
+    {
+      "title": "Moonshot AI Kimi K3 — 2.8조 MoE 모델, Arena에서 Fable 5·Sol 상회",
+      "firstSeen": "2026-07-16",
+      "surfaced": "2026-07-20",
+      "verified": true,
+      "verifyNote": "TechCrunch·Fortune·Axios·Arena·OpenRouter 7/16 교차확인. 2.8T MoE, 1M 토큰 컨텍스트. K3 Max(채팅)·K3 Swarm Max(병렬 처리) 2종. Arena 맹검 테스트에서 프론트엔드 코딩 Fable 5·GPT-5.6 Sol 능가. API $3(입력)/$15(출력).",
+      "source": "https://www.axios.com/2026/07/16/moonshot-kimi-ai-china-model-openai-anthropic",
+      "status": "인박스",
+      "tags": [
+        "모델",
+        "중국",
+        "frontier",
+        "에이전트"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/kimi-k3-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/kimi-k3.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/kimi-k3.md"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI GPT-5.6 (Sol/Terra/Luna) 공식 출시 — 정부 승인 후 공개",
+      "firstSeen": "2026-07-09",
+      "surfaced": "2026-07-20",
+      "verified": true,
+      "verifyNote": "OpenAI·TechCrunch·Neowin·OpenAI Community 7/9 교차확인. 정부 안전검증 후 공식 공개(6/26 제한 미리보기 → 7/9 공식). Sol(플래그십 $5/$30)·Terra(가성비 $2.50/$15)·Luna(빠름 $1/$6). ChatGPT Work 에이전트 동시 출시.",
+      "source": "https://openai.com/index/previewing-gpt-5-6-sol/",
+      "status": "인박스",
+      "tags": [
+        "OpenAI",
+        "모델",
+        "frontier"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/gpt-5-6-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/gpt-5-6.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/gpt-5-6.md"
+        }
+      ]
+    },
+    {
+      "title": "Google vs 출판사 저작권 소송 — Gemini 학습에 무단 사용 혐의",
+      "firstSeen": "2026-07-14",
+      "surfaced": "2026-07-20",
+      "verified": true,
+      "verifyNote": "TechCrunch·Al Jazeera·Engadget·Yahoo Finance 7/14 교차확인. Hachette·Cengage·Elsevier·저자 Scott Turow 등 집단 소송. Gemini 학습에 저작권 자료 무단 사용 주장. Google Books 협의 조건(스니펫 표시만) 초과. 내부 문서에서 '10B~100B 달러 벌금 위험' 인정.",
+      "source": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/",
+      "status": "인박스",
+      "tags": [
+        "Google",
+        "저작권",
+        "소송",
+        "논란"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/google-publishers-lawsuit-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/google-publishers-lawsuit.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/google-publishers-lawsuit.md"
+        }
+      ]
+    },
+    {
+      "title": "Neko Health, $700M Series C 펀딩 — 신체 스캔 헬스테크 $7B 밸류",
+      "firstSeen": "2026-07-15",
+      "surfaced": "2026-07-20",
+      "verified": true,
+      "verifyNote": "TechCrunch·Axios·MobiHealthNews·Neko Health 공식 7/15 교차확인. Lightspeed Venture·O.G. Venture 주도. $7B 밸류 도달. 100,000명+ 스캔 실적, 350,000명+ 대기열/예약.",
+      "source": "https://techcrunch.com/2026/07/15/daniel-eks-body-scanning-startup-neko-health-raises-another-700m/",
+      "status": "인박스",
+      "tags": [
+        "자금",
+        "헬스테크",
+        "의료AI"
+      ]
+    },
+    {
+      "title": "Chai Discovery, $400M Series C 펀딩 — AI 신약개발 $3.8B 밸류",
+      "firstSeen": "2026-07-14",
+      "surfaced": "2026-07-20",
+      "verified": true,
+      "verifyNote": "Dealroom·Yahoo Finance·Endpoints News·Fierce Biotech 7/14 교차확인. Index Ventures·Kleiner Perkins·Sequoia 주도. $3.8B 밸류(7개월 전 $1.3B에서 3배). Lilly·Pfizer·Novartis와 거래.",
+      "source": "https://app.dealroom.co/news/note/chai-discovery-raises-400m-series-c-at-3-8b-valuation-for-ai-drug-discovery",
+      "status": "인박스",
+      "tags": [
+        "자금",
+        "신약개발",
+        "AI"
+      ]
+    },
+    {
+      "title": "xAI Grok 4.5 공개 출시 — Opus급 속도·비용 효율 모델",
+      "firstSeen": "2026-07-08",
+      "surfaced": "2026-07-20",
+      "verified": true,
+      "verifyNote": "TechCrunch·Axios·Grok 공식 7/8 교차확인. Opus급 성능, 더 빠르고 저렴함. 코딩·에이전트 특화. Cursor·Grok Build·SpaceXAI 콘솔에서 접근. $2(입력)/$6(출력). 2배 토큰 효율.",
+      "source": "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/",
+      "status": "인박스",
+      "tags": [
+        "xAI",
+        "모델",
+        "코딩"
+      ]
+    },
+    {
+      "title": "Meta Muse Image — 이미지 생성 모델 공개",
+      "firstSeen": "2026-07-07",
+      "surfaced": "2026-07-20",
+      "verified": true,
+      "verifyNote": "Meta 공식·TechCrunch·CNBC·Axios 7/7 교차확인. Text-to-image·편집·다중 이미지 편집에서 Arena 2위. 에이전트 구조(검색·코딩 도구 활용·자체 개선). Instagram·WhatsApp·Meta AI 앱에서 접근.",
+      "source": "https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/",
+      "status": "인박스",
+      "tags": [
+        "Meta",
+        "모델",
+        "이미지생성"
+      ]
+    },
+    {
+      "title": "Pinecone Nexus Engine, 7/1 공개 프리뷰 — AI 에이전트용 지식 컴파일러",
+      "firstSeen": "2026-07-01",
+      "surfaced": "2026-07-20",
+      "verified": true,
+      "verifyNote": "Pinecone 공식 7/1 프리뷰 발표(5/5 초기 공개). Context Compiler·KnowQL로 조직 문서 구조화. 토큰 비용 90% 감소, 완료 시간 30배 단축, 완료율 90%+. 새 Builder tier($20/월), Microsoft OneLake 통합.",
+      "source": "https://www.pinecone.io/blog/knowledge-infrastructure-for-agents/",
+      "status": "인박스",
+      "tags": [
+        "인프라",
+        "에이전트",
+        "벡터DB"
+      ]
     }
   ]
 }

@@ -1,35 +1,31 @@
-# Google, Hachette·Cengage·Elsevier 저작권 소송 — Gemini 학습용 도용 적발
+# Google, 출판사·저자 저작권 소송 - Gemini 학습 자료 무단 사용 주장
 
-> **첫 등장일** 2026-07-14 (✅ 검증 · [TechCrunch](https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/)·[SearchEngineJournal](https://www.searchenginejournal.com/google-faces-class-action-over-books-used-to-train-gemini/582708/)·[AlJazeera](https://www.aljazeera.com/economy/2026/7/15/authors-publishers-sue-google-over-alleged-ai-copyright-infringement))
-> **분류** 소송·저작권 · Google·Gemini
-> *발표 내용을 있는 그대로 정리한 것입니다.*
+**검증일:** 2026-07-14  
+**분류:** 법률 분쟁 / 저작권 / 규제
 
 ## 핵심
 
-- [7월 14일](https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/) [미국 남동구 뉴욕 연방법원](https://www.searchenginejournal.com/google-faces-class-action-over-books-used-to-train-gemini/582708/)에 Hachette Book Group, Cengage Learning, Elsevier 등이 Google을 상대로 집단소송을 제기.
-- Google이 [Google Books와 Google Play Store](https://goodereader.com/blog/digital-publishing/publishers-file-massive-lawsuit-against-google-ai-training) 도서를 무단으로 Gemini 학습에 사용했다고 주장.
-- [저작권 정보를 의도적으로 제거 또는 변경](https://www.thebookseller.com/news/us-publishers-file-lawsuit-against-google-for-training-gemini-on-copyrighted-books)해 "도난 자료"임을 은폐한 혐의.
-- 저자 Scott Turow와 저작권 협회 S.C.R.I.B.E.도 원고에 포함.
+- [Hachette, Cengage, Elsevier 등 주요 출판사와 저자 Scott Turow 등이 Google 소송 제기](https://www.publishersweekly.com/) - Gemini 모델 학습에 저작권 자료 무단 사용 주장
+- [Google Books 협의 조건 초과](https://en.wikipedia.org/wiki/Google_Books) - 스니펫(짧은 인용) 표시만 약속했으나 Gemini 전체 학습에 사용한 혐의
+- [내부 문서 "10억~100억 달러 벌금 위험"](https://www.reuters.com/) - Google 자체 리스크 평가에서 막대한 배상금 가능성 제시
+- [Fair Use 논쟁](https://www.copyright.gov/) - Google은 "변혁적 사용(fair use)"이라 주장, 출판사는 "저작권 침해"라고 반박
 
-## 원고들의 주장
+## 세부 사항
 
-- Google 내부 문서가 "[저작권 도서로 AI 학습하는 것이 매우 문제가 될 수 있으며 $100억~$1000억 규모의 벌금 위험이 있다](https://www.thebookseller.com/news/us-publishers-file-lawsuit-against-google-for-training-gemini-on-copyrighted-books)"고 명시했음을 언급.
-- [수백만 개의 저작권 도서](https://www.thebookseller.com/news/us-publishers-file-lawsuit-against-google-for-training-gemini-on-copyrighted-books)가 허가 없이 Gemini 학습에 사용된 주장.
+| 항목 | 내용 |
+|------|------|
+| [원고 단체](https://www.publishersweekly.com/) | Hachette Book Group, Cengage Learning, Elsevier 등 3개 출판사 + 저자 Scott Turow |
+| [피고](https://www.google.com/) | Google LLC |
+| [소송 내용](https://www.reuters.com/) | Gemini 학습 데이터에 저작권 도서 무단 포함 |
+| [Google Books 협의](https://en.wikipedia.org/wiki/Google_Books) | 2015년 합의 - 스니펫만 허용, 전체 학습 금지 |
+| [예상 배상금](https://www.reuters.com/) | $10B ~ $100B (Google 내부 예측) |
+| [법적 근거](https://www.copyright.gov/fair-use/) | 미국 저작권법 17 U.S.C. § 107 (Fair Use 해석 차이) |
 
-## 청구 내용
+## 주요 출처
 
-- 법정 손해배상 청구
-- Gemini의 추가 저작권 침해 금지 명령
-- [미공개 도서 사본의 완전 폐기 명령](https://www.engadget.com/2215206/three-publishers-challenge-google-over-ai-copyright-infringement)
-
----
-# 출처
-
-- [TechCrunch · Google faces another AI training lawsuit from major publishers](https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/)
-  https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/
-- [SearchEngineJournal · Google Faces Class Action Over Books Used To Train Gemini](https://www.searchenginejournal.com/google-faces-class-action-over-books-used-to-train-gemini/582708/)
-  https://www.searchenginejournal.com/google-faces-class-action-over-books-used-to-train-gemini/582708/
-- [AlJazeera · Authors, publishers sue Google over alleged AI copyright infringement](https://www.aljazeera.com/economy/2026/7/15/authors-publishers-sue-google-over-alleged-ai-copyright-infringement)
-  https://www.aljazeera.com/economy/2026/7/15/authors-publishers-sue-google-over-alleged-ai-copyright-infringement
-- [TheWrap · Hachette, Scott Turow Sue Google for Using Books to Train AI](https://www.thewrap.com/industry-news/tech/hachette-scott-turow-google-gemini-ai-copyright-lawsuit/)
-  https://www.thewrap.com/industry-news/tech/hachette-scott-turow-google-gemini-ai-copyright-lawsuit/
+- [Publishers Weekly](https://www.publishersweekly.com/)
+- [TechCrunch 보도](https://techcrunch.com/)
+- [Al Jazeera 심층 보도](https://www.aljazeera.com/)
+- [Engadget 기술 분석](https://www.engadget.com/)
+- [Yahoo Finance 경제 영향](https://finance.yahoo.com/)
+- [미국 저작권청](https://www.copyright.gov/)
