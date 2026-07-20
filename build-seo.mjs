@@ -279,6 +279,12 @@ const CALCSS = `
 .dgrow .dek{color:var(--muted);font-size:13px;line-height:1.55;margin-top:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .dgrow:hover .ttl{color:var(--brandD)}
 @media(max-width:560px){.calbox{padding:13px 12px 11px}.mcg{gap:4px}.dgrow .ttl{font-size:15.5px}}
+/* 북마크(추천) 페이지 */
+.bmnote{font-size:12.5px;color:var(--brand);font-weight:600;line-height:1.5;margin-top:6px;background:var(--brandBg);border-radius:8px;padding:6px 10px;display:inline-block}
+.bmrow{padding-top:17px;padding-bottom:17px}
+/* 메뉴를 모바일에서도 보이게 (기존 max-820에서 숨김 처리 override) */
+@media(max-width:820px){.navlinks{display:flex}.navlinks a{padding:8px 10px;font-size:13px}}
+@media(max-width:560px){.brand .wm{display:none}.nav-in{gap:8px;padding:11px 13px}.navlinks{gap:2px;margin-left:0}.navlinks a{padding:7px 8px;font-size:12px}}
 `;
 
 const JS = `(function(){var root=document.documentElement,btn=document.getElementById('themeBtn');
@@ -324,10 +330,11 @@ ${published ? `<meta property="article:published_time" content="${published}">\n
 ${extra}`;
 }
 
-const navHtml = (rel) => `<nav class="nav"><div class="nav-in">
-<a class="brand" href="${rel}"><span class="mark">🏠</span><span class="wm">AI <b>쉽게 알려주는</b> 집</span></a>
-<div class="navlinks" id="navlinks">
-<a data-cat="전체" class="on" href="${rel}">📰 최신 AI 소식</a></div>
+const navHtml = (rel, active) => `<nav class="nav"><div class="nav-in">
+<a class="brand" href="${rel}index.html"><span class="mark">🏠</span><span class="wm">AI <b>쉽게 알려주는</b> 집</span></a>
+<div class="navlinks">
+<a class="${active==='home'?'on':''}" href="${rel}index.html">📰 최신 AI 소식</a>
+<a class="${active==='bookmark'?'on':''}" href="${rel}bookmarks.html">🔖 북마크</a></div>
 <div class="nav-r"><button class="icnbtn" id="themeBtn">🌙</button><a class="icnbtn" href="${rel}dashboard.html">대시보드 →</a></div>
 </div></nav>`;
 
@@ -394,7 +401,7 @@ ${head({title:`${BRAND} — 학생도 쉽게 보는 AI 최신소식`, desc, url:
   extra:`<script type="application/ld+json">${JSON.stringify(blogLd)}</script>`})}
 </head>
 <body>
-${navHtml('')}
+${navHtml('', 'home')}
 <main class="wrap">
 <header class="mast"><div class="kick">학생도 쉽게 보는 AI 소식</div>
 <h1>어려운 AI 뉴스,<br><span class="hlk">여기선 쉽게</span> 알려드려요</h1>
@@ -404,6 +411,42 @@ ${listInner}
 <section class="news"><div><h4>매주, 중요한 것만</h4>
 <p>매주 중요한 AI 소식만 골라 학생 눈높이로 쉽게 정리해 드려요. 전체 파이프라인은 운영 대시보드에서 볼 수 있어요.</p></div>
 <div class="cta"><a class="pill" href="dashboard.html">대시보드 열기</a></div></section>
+<footer>수집 → 선별 → 조사 → 관점 → 초안 → 검수 → 발행 · ${BRAND} 운영 시스템<br>© 2026 ${BRAND}</footer>
+</main>
+<script>${JS}</script>
+</body>
+</html>`;
+}
+
+// ---------- 북마크(운영자 추천 글) 페이지 ----------
+function buildBookmarks(picks, byId) {
+  const desc = '운영자가 직접 고른, 다시 볼 만한 AI 소식 모음이에요.';
+  const items = picks.map(pk => ({ pk, p: byId[pk.id] })).filter(x => x.p); // 발행된 글만
+  const rows = items.map(({pk,p})=>`<a class="dgrow bmrow" href="p/${p.id}/">
+<span class="ttl">${escHtml(p.title)}</span>
+${pk.note?`<span class="bmnote">🔖 ${escHtml(pk.note)}</span>`:''}
+<span class="dek">${escHtml(p.angle||'')}</span></a>`).join('\n');
+  const inner = items.length
+    ? `<div class="bmlist">${rows}</div>`
+    : `<div class="empty">아직 추천 글이 없어요. 운영자가 고른 글이 여기에 모입니다.</div>`;
+  const bmLd = { '@context':'https://schema.org','@type':'CollectionPage','name':`북마크 · ${BRAND}`,'description':desc,'url':SITE+'/bookmarks.html','inLanguage':'ko' };
+  return `<!DOCTYPE html>
+<html lang="ko">
+<head>
+${head({title:`🔖 북마크 — ${BRAND}`, desc, url:SITE+'/bookmarks.html', ogImg:SITE+'/assets/og-default.png', type:'website', cssHref:'assets/blog.css',
+  extra:`<script type="application/ld+json">${JSON.stringify(bmLd)}</script>`})}
+</head>
+<body>
+${navHtml('', 'bookmark')}
+<main class="wrap">
+<header class="mast"><div class="kick">운영자 추천</div>
+<h1>🔖 <span class="hlk">북마크</span></h1>
+<p>${escHtml(desc)}</p></header>
+<div class="seclabel"><b>추천 글</b><span>· ${items.length}편</span></div>
+${inner}
+<section class="news"><div><h4>최신 소식도 있어요</h4>
+<p>매일 올라오는 AI 소식은 '최신 AI 소식'에서 날짜별로 볼 수 있어요.</p></div>
+<div class="cta"><a class="pill" href="index.html">최신 소식 보기</a></div></section>
 <footer>수집 → 선별 → 조사 → 관점 → 초안 → 검수 → 발행 · ${BRAND} 운영 시스템<br>© 2026 ${BRAND}</footer>
 </main>
 <script>${JS}</script>
@@ -601,12 +644,16 @@ for (let i = 0; i < posts.length; i++) {
   console.log(`  ✓ p/${p.id}/index.html`);
 }
 
-// 홈 + sitemap/robots/feed
+// 홈 + 북마크 + sitemap/robots/feed
 write('index.html', buildHome(posts));
+let bookmarkPicks = [];
+try { bookmarkPicks = (JSON.parse(read('bookmarks.json')).picks) || []; } catch (_) { /* 없으면 빈 목록 */ }
+const byId = Object.fromEntries(posts.map(p => [p.id, p]));
+write('bookmarks.html', buildBookmarks(bookmarkPicks, byId));
 write('sitemap.xml', buildSitemap(posts));
 write('robots.txt', buildRobots());
 write('feed.xml', buildFeed(posts));
-console.log('  ✓ index.html · sitemap.xml · robots.txt · feed.xml');
+console.log(`  ✓ index.html · bookmarks.html(추천 ${bookmarkPicks.filter(pk=>byId[pk.id]).length}편) · sitemap.xml · robots.txt · feed.xml`);
 
 // OG 이미지(PNG) — Playwright 있으면 생성
 try {
