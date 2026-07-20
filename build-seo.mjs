@@ -258,7 +258,10 @@ const ACSS = ``;   // 매거진 스타일 제거 — 클린 레이아웃은 CSS�
 const CALCSS = `
 /* AI 소식 아젠다(날짜별 카드) — 날짜 박스 + 제목·요약 카드 */
 .agenda{margin-top:2px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:2px 20px;box-shadow:var(--shadow)}
-.drow{display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.drow{display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);scroll-margin-top:78px;border-radius:12px;transition:background .3s}
+.drow:target{background:var(--brandBg)}
+.drow:target .dbox .dd{animation:flashdd 1.1s ease}
+@keyframes flashdd{0%,100%{color:var(--brand)}30%{color:var(--brandD);transform:scale(1.14)}}
 .drow:last-child{border-bottom:0}
 .dbox{flex:none;width:76px;text-align:center;padding-top:3px}
 .dbox .dd{font-family:var(--serif);font-size:27px;font-weight:800;color:var(--brand);line-height:1;letter-spacing:-.5px}
@@ -272,14 +275,9 @@ const CALCSS = `
 .dev .d{font-size:12.5px;color:var(--muted);line-height:1.5;margin-top:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 @media(max-width:680px){.devs{grid-template-columns:1fr}.drow{gap:14px}.dbox{width:50px}.dbox .dd{font-size:22px}.dev .t{font-size:14.5px}}
 /* 콘텐츠 월 달력(데스크톱만) — 칸 안에 제목+요약 · 모바일은 아젠다로 대체 */
+html{scroll-behavior:smooth}
 .calbox2{display:none}
-.desk-older{display:none}
-.mob-agenda{display:block}
-@media(min-width:761px){
-  .calbox2{display:block;position:relative;left:50%;transform:translateX(-50%);width:min(1080px,92vw)}
-  .desk-older{display:block;margin-top:24px}
-  .mob-agenda{display:none}
-}
+@media(min-width:761px){.calbox2{display:block;position:relative;left:50%;transform:translateX(-50%);width:min(1080px,92vw);margin-bottom:26px}}
 .calh{display:flex;align-items:baseline;gap:9px;margin:0 4px 10px}
 .calh b{font-size:16px;color:var(--ink)}
 .calh span{font-size:12px;color:var(--faint)}
@@ -288,6 +286,9 @@ const CALCSS = `
 .calGrid .dow.sun{color:var(--red)}
 .gcell{min-height:116px;border-radius:10px;padding:7px;background:var(--soft);border:1px solid var(--line);overflow:hidden}
 .gcell.has{background:var(--card);border-color:var(--cardBorder)}
+a.gcell{display:block;text-decoration:none;color:inherit;cursor:pointer;transition:border-color .12s,box-shadow .12s}
+a.gcell.has:hover{border-color:var(--brand);box-shadow:var(--shadow)}
+a.gcell.has:hover .t{color:var(--brand)}
 .gnum{font-size:11px;color:var(--faint);font-weight:700;margin-bottom:4px}
 .gcell.has .gnum{color:var(--brand)}
 .gev{display:block;border-left:2px solid var(--brand);padding:1px 0 2px 7px;margin-bottom:6px;text-decoration:none}
@@ -386,15 +387,16 @@ function buildHome(posts) {
   const dates = Object.keys(byDate).filter(Boolean).sort((a,b)=> a<b ? 1 : -1);
 
   // 아젠다 행(모바일·이전 소식 공용): 날짜 박스 + 제목·요약 카드
+  // 아래 2단 아젠다 — 모든 글을 날짜별로 항상 표시(사라지지 않음). 행마다 id로 스크롤 앵커.
   const drow = (dk) => {
     const [Y, M, D] = dk.split('-').map(Number);
     const wd = DOW[new Date(Y, M-1, D).getDay()];
     const cards = byDate[dk].map(p=>`<a class="dev" href="p/${p.id}/"><span class="t">${escHtml(p.title)}</span><span class="d">${escHtml(p.angle||'')}</span></a>`).join('');
-    return `<div class="drow"><div class="dbox"><div class="dd">${D}</div><div class="mm">${M}월</div><div class="wd">${wd}</div></div><div class="devs">${cards}</div></div>`;
+    return `<div class="drow" id="d-${dk}"><div class="dbox"><div class="dd">${D}</div><div class="mm">${M}월</div><div class="wd">${wd}</div></div><div class="devs">${cards}</div></div>`;
   };
   const agendaOf = (ds) => `<div class="agenda">${ds.map(drow).join('')}</div>`;
 
-  // 콘텐츠 월 달력(데스크톱): 최근 달, 칸 안에 제목+요약(2건까지, 넘치면 +N더)
+  // 콘텐츠 월 달력(데스크톱): 최근 달. 칸에 제목+요약 미리보기(2건), 누르면 아래 그 날 글로 스크롤.
   const monthGrid = (ym) => {
     const [Y, M] = ym.split('-').map(Number);
     const firstDow = new Date(Y, M-1, 1).getDay();
@@ -405,24 +407,23 @@ function buildHome(posts) {
     for (let d=1; d<=dim; d++) {
       const key = `${Y}-${String(M).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
       const arts = byDate[key] || [];
-      let inner = `<div class="gnum">${d}</div>`;
-      arts.slice(0,2).forEach(p=>{ inner += `<a class="gev" href="p/${p.id}/"><span class="t">${escHtml(p.title)}</span><span class="d">${escHtml(p.angle||'')}</span></a>`; });
-      if (arts.length>2) inner += `<span class="gmore">+${arts.length-2}더</span>`;
-      cells += `<div class="gcell ${arts.length?'has':'empty'}">${inner}</div>`;
+      if (arts.length) {
+        let inner = `<div class="gnum">${d}</div>`;
+        arts.slice(0,2).forEach(p=>{ inner += `<span class="gev"><span class="t">${escHtml(p.title)}</span><span class="d">${escHtml(p.angle||'')}</span></span>`; });
+        if (arts.length>2) inner += `<span class="gmore">+${arts.length-2}더</span>`;
+        cells += `<a class="gcell has" href="#d-${key}">${inner}</a>`;
+      } else {
+        cells += `<div class="gcell empty"><div class="gnum">${d}</div></div>`;
+      }
     }
-    return `<div class="calbox2"><div class="calh"><b>🗓️ ${Y}년 ${M}월</b><span>소식이 처음 터진 날</span></div><div class="calGrid">${dowRow}${cells}</div></div>`;
+    return `<div class="calbox2"><div class="calh"><b>🗓️ ${Y}년 ${M}월</b><span>소식이 처음 터진 날 · 날짜를 누르면 아래 그 날 글로 이동</span></div><div class="calGrid">${dowRow}${cells}</div></div>`;
   };
 
   let listInner;
   if (!posts.length) {
     listInner = `<div class="empty">첫 글이 곧 올라옵니다.</div>`;
   } else {
-    const latestMonth = dates[0].slice(0,7);
-    const olderDates = dates.filter(d => d.slice(0,7) !== latestMonth);
-    const grid = monthGrid(latestMonth);
-    const older = olderDates.length ? `<div class="desk-older"><div class="olabel">이전 소식</div>${agendaOf(olderDates)}</div>` : '';
-    const mob = `<div class="mob-agenda">${agendaOf(dates)}</div>`;
-    listInner = grid + older + mob;
+    listInner = monthGrid(dates[0].slice(0,7)) + agendaOf(dates);
   }
 
   const blogLd = {
