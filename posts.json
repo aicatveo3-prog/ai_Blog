@@ -54,13 +54,14 @@
       "date": "2026-07-14",
       "type": "B 심층 분석",
       "category": "최신 AI 소식",
-      "stage": "작성중",
+      "stage": "검수중",
       "layout": "feature",
       "readMin": 7,
       "author": "AI 쉽게 알려주는 집",
       "angle": "미국 출판사들이 Google을 고소했어요. 2015년엔 '스니펫만' 약속했는데, Gemini 학습에 책 전체를 썼다는 혐의. Google 내부 문서까지 \"10억~100억 달러 배상금 위험\"이라고 인정했어요.",
       "lens": ["① 그래서 나한테?"],
       "versions": [
+        {"v": "v2", "date": "2026-07-20", "note": "루틴③ 검사 — 미출처 인용 제거, 한국 정보 일반화, 감정어 중립화", "path": "drafts/2026.07.20_google-publishers-lawsuit/v2.md"},
         {"v": "v1", "date": "2026-07-20", "note": "최초 초안", "path": "drafts/2026.07.20_google-publishers-lawsuit/v1.md"}
       ]
     },
@@ -70,13 +71,14 @@
       "date": "2026-07-16",
       "type": "B 심층 분석",
       "category": "최신 AI 소식",
-      "stage": "작성중",
+      "stage": "검수중",
       "layout": "feature",
       "readMin": 7,
       "author": "AI 쉽게 알려주는 집",
       "angle": "중국 스타트업이 2.8조 파라미터 모델 K3를 공개했어요. Arena 평가에서 OpenAI 최신 모델을 능가, 가격은 60% 수준. 기술·가격 동시 우위는 글로벌 AI 구도를 흔들기 시작했어요.",
       "lens": ["① 그래서 나한테?"],
       "versions": [
+        {"v": "v2", "date": "2026-07-20", "note": "루틴③ 검사 — 미출처 한국 기업 반응 삭제, Arena 평가 표현 완화, 판단 톤 객관화", "path": "drafts/2026.07.20_moonshot-kimi-k3/v2.md"},
         {"v": "v1", "date": "2026-07-20", "note": "최초 초안", "path": "drafts/2026.07.20_moonshot-kimi-k3/v1.md"}
       ]
     },
