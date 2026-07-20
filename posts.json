@@ -59,28 +59,71 @@
       "readMin": 7,
       "author": "AI 쉽게 알려주는 집",
       "angle": "미국 출판사들이 Google을 고소했어요. 2015년엔 '스니펫만' 약속했는데, Gemini 학습에 책 전체를 썼다는 혐의. Google 내부 문서까지 \"10억~100억 달러 배상금 위험\"이라고 인정했어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        {"v": "v2", "date": "2026-07-20", "note": "루틴③ 검사 — 미출처 인용 제거, 한국 정보 일반화, 감정어 중립화", "path": "drafts/2026.07.20_google-publishers-lawsuit/v2.md"},
-        {"v": "v1", "date": "2026-07-20", "note": "최초 초안", "path": "drafts/2026.07.20_google-publishers-lawsuit/v1.md"}
+        {
+          "v": "v2",
+          "date": "2026-07-20",
+          "note": "루틴③ 검사 — 미출처 인용 제거, 한국 정보 일반화, 감정어 중립화",
+          "path": "drafts/2026.07.20_google-publishers-lawsuit/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-20",
+          "note": "최초 초안",
+          "path": "drafts/2026.07.20_google-publishers-lawsuit/v1.md"
+        }
       ]
     },
     {
       "id": "moonshot-kimi-k3",
-      "title": "Moonshot AI, Kimi K3 출시 — \"중국 AI가 미국 모델을 이겼어요, 가격도 60%\"",
+      "title": "미국이 3년간 칩을 막았는데 — 중국에서 '세계 4위' AI가 나왔어요",
       "date": "2026-07-16",
       "type": "B 심층 분석",
       "category": "최신 AI 소식",
-      "stage": "검수중",
+      "stage": "발행",
       "layout": "feature",
-      "readMin": 7,
+      "readMin": 9,
       "author": "AI 쉽게 알려주는 집",
-      "angle": "중국 스타트업이 2.8조 파라미터 모델 K3를 공개했어요. Arena 평가에서 OpenAI 최신 모델을 능가, 가격은 60% 수준. 기술·가격 동시 우위는 글로벌 AI 구도를 흔들기 시작했어요.",
-      "lens": ["① 그래서 나한테?"],
+      "angle": "미국 수출 통제 3년 → 중국 Kimi K3 프론티어급 등장. '자체 벤치마크'라는 단서, 독립 검증 부재, 7/27 가중치 공개 대기.",
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        {"v": "v2", "date": "2026-07-20", "note": "루틴③ 검사 — 미출처 한국 기업 반응 삭제, Arena 평가 표현 완화, 판단 톤 객관화", "path": "drafts/2026.07.20_moonshot-kimi-k3/v2.md"},
-        {"v": "v1", "date": "2026-07-20", "note": "최초 초안", "path": "drafts/2026.07.20_moonshot-kimi-k3/v1.md"}
-      ]
+        {
+          "v": "v5",
+          "date": "2026-07-18",
+          "note": "사람 검토 3차 — §5 각 진영을 1~2문장으로 압축(빽빽함 해소), §6 곁가지(투자전략) 삭제하고 핵심 2가지만, §7 '확인/미확인' 목록 삭제(본문과 중복)하고 '앞으로 볼 것'만 남김. 링크 중복 0 유지.",
+          "path": "drafts/2026.07.18_moonshot-kimi-k3/v5.md"
+        },
+        {
+          "v": "v4",
+          "date": "2026-07-18",
+          "note": "사람 검토 2차 — 처음부터 재작성, 쉬움·핵심 우선. MoE 대학 비유 삭제(직설로), 오픈가중치·라이선스 잡음 제거, KDA/AttnRes·변형 등 표에서 삭제, TechCrunch '온도 차' 중복 삭제, 가격·마진 문단의 사업구조 얘기 걷어냄. 규칙 11대로 같은 출처 인라인 중복 링크 제거. 7섹션 유지, 158→분량 축소.",
+          "path": "drafts/2026.07.18_moonshot-kimi-k3/v4.md"
+        },
+        {
+          "v": "v3",
+          "date": "2026-07-18",
+          "note": "사람 검토 — 규칙대로 군더더기·반복·드라마 제거 압축. 반복된 '독립검증 없음'을 핵심 자리만 남김, '근데 잠깐…'/'눈이 커지는 숫자' 드라마 장치 제거(규칙8), KDA/AttnRes 장황한 풀이→한 줄, §5 반응 6소제목→3개로 압축, 빈 '경험 삽입' 플레이스홀더 삭제, 용어사전 중복분(파라미터·벤치마크) 정리. 사실·링크·양쪽 시각 보존.",
+          "path": "drafts/2026.07.18_moonshot-kimi-k3/v3.md"
+        },
+        {
+          "v": "v2",
+          "date": "2026-07-18",
+          "note": "루틴③ 검사 — David Sacks 가짜 인용을 웹 재검증 후 실제 발언(코딩 벤치마크 1위 지적)으로 정정. 그 외 핵심 수치·인용은 웹 재검증 결과 이상 없음 확인.",
+          "path": "drafts/2026.07.18_moonshot-kimi-k3/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-18",
+          "note": "최초 초안",
+          "path": "drafts/2026.07.18_moonshot-kimi-k3/v1.md"
+        }
+      ],
+      "published": "2026-07-18"
     },
     {
       "id": "aisphere-series-c",
@@ -93,15 +136,52 @@
       "readMin": 4,
       "author": "AI 쉽게 알려주는 집",
       "angle": "OpenAI Sora가 비용 문제로 물러난 AI 비디오 시장에 중국 스타트업 AIsphere(PixVerse)가 알리바바 주도 4억 3,900만 달러 투자를 받고 들어왔어요. 3년 만에 20억 달러 기업이 됐는데, 사용자 수는 미검증이고 AI 게임 엔진이라는 목표는 아직 시연조차 없어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        {"v": "v7", "date": "2026-07-18", "note": "발행 — v6에서 3번을 표→불릿(확인/미확인 서술)으로 되돌림(사람 지정). 1·2번 표는 유지. stage 검수중→발행.", "path": "drafts/2026.07.17_aisphere-series-c/v7.md"},
-        {"v": "v6", "date": "2026-07-18", "note": "사람 검토 — v5 내용 유지하며 표 추가.", "path": "drafts/2026.07.17_aisphere-series-c/v6.md"},
-        {"v": "v5", "date": "2026-07-18", "note": "사람 검토 — v3 기준 2곳 수정.", "path": "drafts/2026.07.17_aisphere-series-c/v5.md"},
-        {"v": "v4", "date": "2026-07-18", "note": "사람 검토 — 가치판단·조언 어투 제거.", "path": "drafts/2026.07.17_aisphere-series-c/v4.md"},
-        {"v": "v3", "date": "2026-07-18", "note": "사람 검토 — 쉬운 주제답게 전면 압축(6→4섹션).", "path": "drafts/2026.07.17_aisphere-series-c/v3.md"},
-        {"v": "v2", "date": "2026-07-17", "note": "검사·검증본.", "path": "drafts/2026.07.17_aisphere-series-c/v2.md"},
-        {"v": "v1", "date": "2026-07-17", "note": "최초 초안.", "path": "drafts/2026.07.17_aisphere-series-c/v1.md"}
+        {
+          "v": "v7",
+          "date": "2026-07-18",
+          "note": "발행 — v6에서 3번을 표→불릿(확인/미확인 서술)으로 되돌림(사람 지정). 1·2번 표는 유지. stage 검수중→발행.",
+          "path": "drafts/2026.07.17_aisphere-series-c/v7.md"
+        },
+        {
+          "v": "v6",
+          "date": "2026-07-18",
+          "note": "사람 검토 — v5 내용 유지하며 표 추가.",
+          "path": "drafts/2026.07.17_aisphere-series-c/v6.md"
+        },
+        {
+          "v": "v5",
+          "date": "2026-07-18",
+          "note": "사람 검토 — v3 기준 2곳 수정.",
+          "path": "drafts/2026.07.17_aisphere-series-c/v5.md"
+        },
+        {
+          "v": "v4",
+          "date": "2026-07-18",
+          "note": "사람 검토 — 가치판단·조언 어투 제거.",
+          "path": "drafts/2026.07.17_aisphere-series-c/v4.md"
+        },
+        {
+          "v": "v3",
+          "date": "2026-07-18",
+          "note": "사람 검토 — 쉬운 주제답게 전면 압축(6→4섹션).",
+          "path": "drafts/2026.07.17_aisphere-series-c/v3.md"
+        },
+        {
+          "v": "v2",
+          "date": "2026-07-17",
+          "note": "검사·검증본.",
+          "path": "drafts/2026.07.17_aisphere-series-c/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-17",
+          "note": "최초 초안.",
+          "path": "drafts/2026.07.17_aisphere-series-c/v1.md"
+        }
       ],
       "published": "2026-07-18"
     },
@@ -116,12 +196,34 @@
       "readMin": 3,
       "author": "AI 쉽게 알려주는 집",
       "angle": "틱톡 모회사 바이트댄스가 '디자인 원칙을 이해하는' 이미지 AI Seedream 5.0 Pro를 공개했어요. 한글 텍스트도 된다는데, 독립 검증은 아직 없고 중국 우선 출시라 지켜볼 단계예요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        {"v": "v4", "date": "2026-07-17", "note": "사람 검토 2차.", "path": "drafts/2026.07.16_bytedance-seedream/v4.md"},
-        {"v": "v3", "date": "2026-07-17", "note": "사람 검토 반영.", "path": "drafts/2026.07.16_bytedance-seedream/v3.md"},
-        {"v": "v2", "date": "2026-07-16", "note": "루틴③ 검사.", "path": "drafts/2026.07.16_bytedance-seedream/v2.md"},
-        {"v": "v1", "date": "2026-07-16", "note": "최초 초안.", "path": "drafts/2026.07.16_bytedance-seedream/v1.md"}
+        {
+          "v": "v4",
+          "date": "2026-07-17",
+          "note": "사람 검토 2차.",
+          "path": "drafts/2026.07.16_bytedance-seedream/v4.md"
+        },
+        {
+          "v": "v3",
+          "date": "2026-07-17",
+          "note": "사람 검토 반영.",
+          "path": "drafts/2026.07.16_bytedance-seedream/v3.md"
+        },
+        {
+          "v": "v2",
+          "date": "2026-07-16",
+          "note": "루틴③ 검사.",
+          "path": "drafts/2026.07.16_bytedance-seedream/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-16",
+          "note": "최초 초안.",
+          "path": "drafts/2026.07.16_bytedance-seedream/v1.md"
+        }
       ],
       "published": "2026-07-17"
     },
@@ -136,15 +238,52 @@
       "readMin": 5,
       "author": "AI 쉽게 알려주는 집",
       "angle": "중국 정부가 'AI 의인화 서비스' 규제를 시행하면서 ByteDance·Alibaba가 AI 캐릭터 기능을 종료했어요. 수백만 명의 대화 기록이 삭제되지만, 원래 돈이 안 되던 사업이라 규제가 '적자 사업 정리 명분'이 됐다는 분석도 있어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        {"v": "v7", "date": "2026-07-16", "note": "사람 검토 4차 — 제목 교체 후 발행.", "path": "drafts/2026.07.16_china-ai-companion-regulation/v7.md"},
-        {"v": "v6", "date": "2026-07-16", "note": "사람 검토 4차 — 문장 단위 전면 압축.", "path": "drafts/2026.07.16_china-ai-companion-regulation/v6.md"},
-        {"v": "v5", "date": "2026-07-16", "note": "사람 검토 3차 — 중립화.", "path": "drafts/2026.07.16_china-ai-companion-regulation/v5.md"},
-        {"v": "v4", "date": "2026-07-16", "note": "사람 검토 2차.", "path": "drafts/2026.07.16_china-ai-companion-regulation/v4.md"},
-        {"v": "v3", "date": "2026-07-16", "note": "사람 검토 반영.", "path": "drafts/2026.07.16_china-ai-companion-regulation/v3.md"},
-        {"v": "v2", "date": "2026-07-16", "note": "루틴③ 검사.", "path": "drafts/2026.07.16_china-ai-companion-regulation/v2.md"},
-        {"v": "v1", "date": "2026-07-16", "note": "최초 초안.", "path": "drafts/2026.07.16_china-ai-companion-regulation/v1.md"}
+        {
+          "v": "v7",
+          "date": "2026-07-16",
+          "note": "사람 검토 4차 — 제목 교체 후 발행.",
+          "path": "drafts/2026.07.16_china-ai-companion-regulation/v7.md"
+        },
+        {
+          "v": "v6",
+          "date": "2026-07-16",
+          "note": "사람 검토 4차 — 문장 단위 전면 압축.",
+          "path": "drafts/2026.07.16_china-ai-companion-regulation/v6.md"
+        },
+        {
+          "v": "v5",
+          "date": "2026-07-16",
+          "note": "사람 검토 3차 — 중립화.",
+          "path": "drafts/2026.07.16_china-ai-companion-regulation/v5.md"
+        },
+        {
+          "v": "v4",
+          "date": "2026-07-16",
+          "note": "사람 검토 2차.",
+          "path": "drafts/2026.07.16_china-ai-companion-regulation/v4.md"
+        },
+        {
+          "v": "v3",
+          "date": "2026-07-16",
+          "note": "사람 검토 반영.",
+          "path": "drafts/2026.07.16_china-ai-companion-regulation/v3.md"
+        },
+        {
+          "v": "v2",
+          "date": "2026-07-16",
+          "note": "루틴③ 검사.",
+          "path": "drafts/2026.07.16_china-ai-companion-regulation/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-16",
+          "note": "최초 초안.",
+          "path": "drafts/2026.07.16_china-ai-companion-regulation/v1.md"
+        }
       ],
       "published": "2026-07-16"
     },
@@ -159,10 +298,22 @@
       "readMin": 5,
       "author": "AI 쉽게 알려주는 집",
       "angle": "세계 3대 출판사가 구글을 클래스액션으로 고소했어요. Google Books 1,500만 권이 Gemini 학습에 쓰였다는 혐의인데, 같은 도서관이 2015년엔 공정 이용으로 인정받았어요. Anthropic 15억 달러 합의가 선례가 되고 있어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        {"v": "v2", "date": "2026-07-16", "note": "루틴③ 검사 — 팩트 오류 2건 정정.", "path": "drafts/2026.07.16_google-publisher-lawsuit/v2.md"},
-        {"v": "v1", "date": "2026-07-16", "note": "최초 초안.", "path": "drafts/2026.07.16_google-publisher-lawsuit/v1.md"}
+        {
+          "v": "v2",
+          "date": "2026-07-16",
+          "note": "루틴③ 검사 — 팩트 오류 2건 정정.",
+          "path": "drafts/2026.07.16_google-publisher-lawsuit/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-16",
+          "note": "최초 초안.",
+          "path": "drafts/2026.07.16_google-publisher-lawsuit/v1.md"
+        }
       ]
     },
     {
@@ -177,10 +328,22 @@
       "readMin": 6,
       "author": "AI 쉽게 알려주는 집",
       "angle": "중국 AI 기업 딥시크가 엔비디아·화웨이 칩 의존을 줄이려고 자체 추론 칩을 개발 중이래요. 아직 소식통 기반 보도지만, 세 가지 현실적 장벽과 업계 전체의 '칩 내재화' 트렌드를 짚었어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        {"v": "v2", "date": "2026-07-16", "note": "객관성·리스크 점검.", "path": "drafts/2026.07.16_deepseek-chip/v2.md"},
-        {"v": "v1", "date": "2026-07-16", "note": "최초 초안.", "path": "drafts/2026.07.16_deepseek-chip/v1.md"}
+        {
+          "v": "v2",
+          "date": "2026-07-16",
+          "note": "객관성·리스크 점검.",
+          "path": "drafts/2026.07.16_deepseek-chip/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-16",
+          "note": "최초 초안.",
+          "path": "drafts/2026.07.16_deepseek-chip/v1.md"
+        }
       ]
     },
     {
@@ -195,16 +358,58 @@
       "readMin": 6,
       "author": "AI 쉽게 알려주는 집",
       "angle": "삼성전자가 'GAIA'라는 AI 전용 칩을 만들고 있어요. 10년 만에 PC 시장에 돌아오는 건데, HP·Lenovo가 이미 시제품을 테스트 중이에요. 중저가 AI PC 시장을 노리는 전략과 한계를 짚었어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        {"v": "v8", "date": "2026-07-15", "note": "PIM 설명에 그림(SVG) 추가.", "path": "drafts/2026.07.15_samsung-gaia-chip/v8.md"},
-        {"v": "v7", "date": "2026-07-15", "note": "지켜볼 것 3번 수정.", "path": "drafts/2026.07.15_samsung-gaia-chip/v7.md"},
-        {"v": "v6", "date": "2026-07-15", "note": "'왜 클라우드 놔두고 기기 안에서?' 답 추가.", "path": "drafts/2026.07.15_samsung-gaia-chip/v6.md"},
-        {"v": "v5", "date": "2026-07-15", "note": "4번 소제목 중립화.", "path": "drafts/2026.07.15_samsung-gaia-chip/v5.md"},
-        {"v": "v4", "date": "2026-07-15", "note": "소제목 재미있게.", "path": "drafts/2026.07.15_samsung-gaia-chip/v4.md"},
-        {"v": "v3", "date": "2026-07-15", "note": "PIM 설명 쉽게.", "path": "drafts/2026.07.15_samsung-gaia-chip/v3.md"},
-        {"v": "v2", "date": "2026-07-15", "note": "검토 반영.", "path": "drafts/2026.07.15_samsung-gaia-chip/v2.md"},
-        {"v": "v1", "date": "2026-07-15", "note": "최초 초안.", "path": "drafts/2026.07.15_samsung-gaia-chip/v1.md"}
+        {
+          "v": "v8",
+          "date": "2026-07-15",
+          "note": "PIM 설명에 그림(SVG) 추가.",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v8.md"
+        },
+        {
+          "v": "v7",
+          "date": "2026-07-15",
+          "note": "지켜볼 것 3번 수정.",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v7.md"
+        },
+        {
+          "v": "v6",
+          "date": "2026-07-15",
+          "note": "'왜 클라우드 놔두고 기기 안에서?' 답 추가.",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v6.md"
+        },
+        {
+          "v": "v5",
+          "date": "2026-07-15",
+          "note": "4번 소제목 중립화.",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v5.md"
+        },
+        {
+          "v": "v4",
+          "date": "2026-07-15",
+          "note": "소제목 재미있게.",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v4.md"
+        },
+        {
+          "v": "v3",
+          "date": "2026-07-15",
+          "note": "PIM 설명 쉽게.",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v3.md"
+        },
+        {
+          "v": "v2",
+          "date": "2026-07-15",
+          "note": "검토 반영.",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-15",
+          "note": "최초 초안.",
+          "path": "drafts/2026.07.15_samsung-gaia-chip/v1.md"
+        }
       ]
     },
     {
@@ -219,12 +424,34 @@
       "readMin": 7,
       "author": "AI 쉽게 알려주는 집",
       "angle": "Apple이 OpenAI를 거래 비밀 도용 혐의로 고소했어요. 2년 전 iPhone 파트너였던 두 회사가 법정에 서게 된 배경과, 아직 입증되지 않은 양측 주장을 사실 위주로 정리했어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        {"v": "v4", "date": "2026-07-15", "note": "정확성·중립 보강.", "path": "drafts/2026.07.15_apple-openai-lawsuit/v4.md"},
-        {"v": "v3", "date": "2026-07-15", "note": "리스크 축소 개정.", "path": "drafts/2026.07.15_apple-openai-lawsuit/v3.md"},
-        {"v": "v2", "date": "2026-07-15", "note": "수정 후.", "path": "drafts/2026.07.15_apple-openai-lawsuit/v2.md"},
-        {"v": "v1", "date": "2026-07-15", "note": "수정 전 최초 발행.", "path": "drafts/2026.07.15_apple-openai-lawsuit/v1.md"}
+        {
+          "v": "v4",
+          "date": "2026-07-15",
+          "note": "정확성·중립 보강.",
+          "path": "drafts/2026.07.15_apple-openai-lawsuit/v4.md"
+        },
+        {
+          "v": "v3",
+          "date": "2026-07-15",
+          "note": "리스크 축소 개정.",
+          "path": "drafts/2026.07.15_apple-openai-lawsuit/v3.md"
+        },
+        {
+          "v": "v2",
+          "date": "2026-07-15",
+          "note": "수정 후.",
+          "path": "drafts/2026.07.15_apple-openai-lawsuit/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-15",
+          "note": "수정 전 최초 발행.",
+          "path": "drafts/2026.07.15_apple-openai-lawsuit/v1.md"
+        }
       ]
     },
     {
@@ -239,10 +466,22 @@
       "readMin": 7,
       "author": "AI 쉽게 알려주는 집",
       "angle": "Meta가 6년 동안 실패했던 AI 칩 프로젝트가 드디어 양산에 들어가요. 엔비디아를 대체하는 건 아니지만, 비용 35% 절감과 14GW 컴퓨팅 목표의 핵심이에요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        {"v": "v2", "date": "2026-07-15", "note": "수정 후.", "path": "drafts/2026.07.15_meta-iris-chip/v2.md"},
-        {"v": "v1", "date": "2026-07-15", "note": "수정 전 최초 발행.", "path": "drafts/2026.07.15_meta-iris-chip/v1.md"}
+        {
+          "v": "v2",
+          "date": "2026-07-15",
+          "note": "수정 후.",
+          "path": "drafts/2026.07.15_meta-iris-chip/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-15",
+          "note": "수정 전 최초 발행.",
+          "path": "drafts/2026.07.15_meta-iris-chip/v1.md"
+        }
       ]
     },
     {
@@ -257,9 +496,16 @@
       "readMin": 7,
       "author": "AI 쉽게 알려주는 집",
       "angle": "GPU가 아니라 '전기'가 AI의 새 병목이 됐어요. Gartner는 2027년까지 데이터센터 40%가 전력 부족에 빠질 거라고 해요. 왜 이렇게 됐고, 우리한테 어떤 영향이 있는지 짚었어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        {"v": "v1", "date": "2026-07-14", "note": "최초 발행.", "path": "drafts/2026.07.14_ai-datacenter-power/v1.md"}
+        {
+          "v": "v1",
+          "date": "2026-07-14",
+          "note": "최초 발행.",
+          "path": "drafts/2026.07.14_ai-datacenter-power/v1.md"
+        }
       ]
     },
     {
@@ -274,10 +520,17 @@
       "readMin": 4,
       "author": "AI 쉽게 알려주는 집",
       "angle": "일리노이가 대형 AI 회사한테 외부 안전검사를 시키는 미국 첫 법을 만들었어요. '미국 최초'라는 말의 정확한 범위를 짚었어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "research": "research/2026-07-06-illinois-ai-law.md",
       "versions": [
-        {"v": "v4", "date": "2026-07-14", "note": "v1 소제목 복원 + 어려운 표현 쉽게 + 핵심 압축.", "path": "drafts/2026.07.14_illinois-ai-law/v4.md"}
+        {
+          "v": "v4",
+          "date": "2026-07-14",
+          "note": "v1 소제목 복원 + 어려운 표현 쉽게 + 핵심 압축.",
+          "path": "drafts/2026.07.14_illinois-ai-law/v4.md"
+        }
       ]
     },
     {
@@ -292,9 +545,16 @@
       "readMin": 6,
       "author": "AI 쉽게 알려주는 집",
       "angle": "리서치 회사 SemiAnalysis가 \"엔비디아 차세대 AI 서버랙 Kyber가 2028년으로 1년 이상 늦어진다\"고 구체적으로 주장했어요. 엔비디아는 \"로드맵은 그대로\"라는 한 문장으로 반박했고요. 아직 양쪽 주장뿐, 누가 맞는지 모르는 이 논쟁을 학생도 이해하게 쉽게 풀었어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        {"v": "v1", "date": "2026-07-10", "note": "최초 발행.", "path": "drafts/2026.07.10_nvidia-kyber-delay/v1.md"}
+        {
+          "v": "v1",
+          "date": "2026-07-10",
+          "note": "최초 발행.",
+          "path": "drafts/2026.07.10_nvidia-kyber-delay/v1.md"
+        }
       ]
     },
     {
@@ -309,9 +569,16 @@
       "readMin": 9,
       "author": "AI 쉽게 알려주는 집",
       "angle": "마이크로소프트가 처음으로 자기 AI 7개를 공개했어요. 그런데 \"우리 건 깨끗한 자료로만 배웠다\"던 자랑이 실제 설명서와 어긋났어요. 무슨 일인지 학생도 이해할 수 있게 쉽고 재밌게 풀었어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        {"v": "v5", "date": "2026-07-08", "note": "문단 재구성.", "path": "drafts/2026.07.08_microsoft-mai/v1.md"}
+        {
+          "v": "v5",
+          "date": "2026-07-08",
+          "note": "문단 재구성.",
+          "path": "drafts/2026.07.08_microsoft-mai/v1.md"
+        }
       ]
     },
     {
@@ -325,16 +592,53 @@
       "readMin": 7,
       "author": "AI 쉽게 알려주는 집",
       "angle": "중국이 AI 에이전트만 겨냥한 세계 첫 나라 규제를 시행했어요. AI의 결정을 '얼마나 큰일이냐'에 따라 3단계로 나눠 관리하고, 발효 전 상하이에서 기준 미달 에이전트 14,000여 개가 삭제됐어요. 미국은 아직 누가 규제할지도 못 정한 상태예요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "published": "2026-07-18",
       "versions": [
-        {"v": "v7", "date": "2026-07-18", "note": "발행 — 사람 최종검토·승인.", "path": "drafts/2026.07.18_china-agent-regulation/v7.md"},
-        {"v": "v6", "date": "2026-07-18", "note": "사람 검토.", "path": "drafts/2026.07.18_china-agent-regulation/v6.md"},
-        {"v": "v5", "date": "2026-07-18", "note": "사람 검토.", "path": "drafts/2026.07.18_china-agent-regulation/v5.md"},
-        {"v": "v4", "date": "2026-07-18", "note": "사람 검토.", "path": "drafts/2026.07.18_china-agent-regulation/v4.md"},
-        {"v": "v3", "date": "2026-07-18", "note": "사람 검토.", "path": "drafts/2026.07.18_china-agent-regulation/v3.md"},
-        {"v": "v2", "date": "2026-07-18", "note": "루틴③ 검사.", "path": "drafts/2026.07.18_china-agent-regulation/v2.md"},
-        {"v": "v1", "date": "2026-07-18", "note": "최초 초안.", "path": "drafts/2026.07.18_china-agent-regulation/v1.md"}
+        {
+          "v": "v7",
+          "date": "2026-07-18",
+          "note": "발행 — 사람 최종검토·승인.",
+          "path": "drafts/2026.07.18_china-agent-regulation/v7.md"
+        },
+        {
+          "v": "v6",
+          "date": "2026-07-18",
+          "note": "사람 검토.",
+          "path": "drafts/2026.07.18_china-agent-regulation/v6.md"
+        },
+        {
+          "v": "v5",
+          "date": "2026-07-18",
+          "note": "사람 검토.",
+          "path": "drafts/2026.07.18_china-agent-regulation/v5.md"
+        },
+        {
+          "v": "v4",
+          "date": "2026-07-18",
+          "note": "사람 검토.",
+          "path": "drafts/2026.07.18_china-agent-regulation/v4.md"
+        },
+        {
+          "v": "v3",
+          "date": "2026-07-18",
+          "note": "사람 검토.",
+          "path": "drafts/2026.07.18_china-agent-regulation/v3.md"
+        },
+        {
+          "v": "v2",
+          "date": "2026-07-18",
+          "note": "루틴③ 검사.",
+          "path": "drafts/2026.07.18_china-agent-regulation/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-18",
+          "note": "최초 초안.",
+          "path": "drafts/2026.07.18_china-agent-regulation/v1.md"
+        }
       ]
     },
     {
@@ -348,46 +652,22 @@
       "readMin": 4,
       "author": "AI 쉽게 알려주는 집",
       "angle": "OpenAI 전 CTO Mira Murati가 세운 Thinking Machines Lab이 9,750억(975B) 파라미터 개방가중 모델 Inkling을 공개했어요. 질문당 410억(41B) 개만 활성화해 비용을 줄인 MoE 구조인데, 독립 벤치마크는 아직 나오지 않았어요.",
-      "lens": ["① 그래서 나한테?"],
+      "lens": [
+        "① 그래서 나한테?"
+      ],
       "versions": [
-        {"v": "v2", "date": "2026-07-18", "note": "루틴③ 검사 — 파라미터 수치 10배 오류 정정 등.", "path": "drafts/2026.07.18_thinking-machines-inkling/v2.md"},
-        {"v": "v1", "date": "2026-07-18", "note": "최초 초안.", "path": "drafts/2026.07.18_thinking-machines-inkling/v1.md"}
-      ]
-    },
-    {
-      "id": "grok-4-5",
-      "title": "xAI Grok 4.5 공개 출시 — Opus급 속도·비용 효율 모델",
-      "date": "2026-07-08",
-      "type": "A 속보 브리핑",
-      "category": "최신 AI 소식",
-      "stage": "검수중",
-      "layout": "feature",
-      "readMin": 5,
-      "author": "AI 쉽게 알려주는 집",
-      "angle": "xAI가 Grok 4.5를 공개했어요. Opus급 성능을 더 빠르고 저렴하게 제공하며 코딩·에이전트에 특화됐다는 주장이에요.",
-      "lens": ["① 그래서 나한테?"],
-      "versions": [
-        {"v": "v3", "date": "2026-07-20", "note": "본문 확장 — collect 소스 기반 full draft. writing-guide 적용, 과단정 낮춤·출처 귀속 유지", "path": "drafts/2026.07.20_grok-4-5/v3.md"},
-        {"v": "v2", "date": "2026-07-20", "note": "루틴 ③ 자동 검사(검증) — 과단정 스캔·정직성·정밀표기 적용, v1 수정하여 저장", "path": "drafts/2026.07.20_grok-4-5/v2.md"},
-        {"v": "v1", "date": "2026-07-20", "note": "루틴 ② 초안 — writing-guide 17규칙 적용, crosscheck 후 synthesis", "path": "drafts/2026.07.20_grok-4-5/v1.md"}
-      ]
-    },
-    {
-      "id": "meta-muse-image",
-      "title": "Meta Muse Image 공개 — 에이전트형 이미지 생성 AI",
-      "date": "2026-07-07",
-      "type": "A 속보 브리핑",
-      "category": "최신 AI 소식",
-      "stage": "검수중",
-      "layout": "feature",
-      "readMin": 4,
-      "author": "AI 쉽게 알려주는 집",
-      "angle": "Meta가 Muse Image를 공개했어요. 에이전트 구조로 검색·편집까지 자동 처리하는 이미지 생성 모델입니다.",
-      "lens": ["① 그래서 나한테?"],
-      "versions": [
-        {"v": "v3", "date": "2026-07-20", "note": "본문 확장 — collect 소스 기반 full draft. writing-guide 적용, 과단정 낮춤·출처 귀속 유지", "path": "drafts/2026.07.20_meta-muse-image/v3.md"},
-        {"v": "v2", "date": "2026-07-20", "note": "루틴 ③ 자동 검사(검증) — 과단정 스캔·정직성·정밀표기 적용, v1 수정하여 저장", "path": "drafts/2026.07.20_meta-muse-image/v2.md"},
-        {"v": "v1", "date": "2026-07-20", "note": "루틴 ② 초안 — writing-guide 17규칙 적용, crosscheck 후 synthesis", "path": "drafts/2026.07.20_meta-muse-image/v1.md"}
+        {
+          "v": "v2",
+          "date": "2026-07-18",
+          "note": "루틴③ 검사 — 파라미터 수치 10배 오류 정정 등.",
+          "path": "drafts/2026.07.18_thinking-machines-inkling/v2.md"
+        },
+        {
+          "v": "v1",
+          "date": "2026-07-18",
+          "note": "최초 초안.",
+          "path": "drafts/2026.07.18_thinking-machines-inkling/v1.md"
+        }
       ]
     }
   ]
