@@ -6,7 +6,23 @@
   <atom:link href="https://aicatveo3-prog.github.io/ai_Blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>어려운 AI 뉴스, 학생도 이해하게 쉽게 알려드려요</description>
   <language>ko</language>
-  <lastBuildDate>Thu, 16 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 08 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>일론 머스크의 xAI가 새 AI를 내놓았어요 — 그런데 비교 상대는 OpenAI가 아니라 앤트로픽이었어요</title>
+    <link>https://aicatveo3-prog.github.io/ai_Blog/p/grok-4-5/</link>
+    <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/grok-4-5/</guid>
+    <description>xAI가 Grok 4.5를 공개하며 Claude Opus급 성능에 더 싸고 빠르다고 주장했어요. 그런데 정작 발표 제목은 오픈AI를, 본문 비교는 앤트로픽을 가리켰죠. 성능 주장은 아직 제3자 검증 전이에요.</description>
+    <category>최신 AI 소식</category>
+    <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>메타가 그림 그리는 AI를 내놨어요 — 반가운 사람도, 불안한 사람도 생겼어요</title>
+    <link>https://aicatveo3-prog.github.io/ai_Blog/p/meta-muse-image/</link>
+    <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/meta-muse-image/</guid>
+    <description>Meta가 이미지 생성 AI Muse Image를 공개하며 &quot;누구나 그림을 그릴 수 있다&quot;고 홍보했어요. 같은 발표 안에 일러스트레이터들의 일자리 불안도 함께 언급됐죠. Arena 벤치마크 2위 기록.</description>
+    <category>최신 AI 소식</category>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
   <item>
     <title>미국이 3년간 칩을 막았는데 — 중국에서 &apos;세계 4위&apos; AI가 나왔어요</title>
     <link>https://aicatveo3-prog.github.io/ai_Blog/p/moonshot-kimi-k3/</link>

@@ -54,7 +54,7 @@
       "date": "2026-07-08",
       "type": "B 심층 분석",
       "category": "최신 AI 소식",
-      "stage": "검수중",
+      "stage": "발행",
       "layout": "feature",
       "readMin": 8,
       "author": "AI 쉽게 알려주는 집",
@@ -75,7 +75,8 @@
           "note": "최초 초안",
           "path": "drafts/2026.07.20_grok-4-5/v1.md"
         }
-      ]
+      ],
+      "published": "2026-07-20"
     },
     {
       "id": "meta-muse-image",
@@ -83,7 +84,7 @@
       "date": "2026-07-07",
       "type": "B 심층 분석",
       "category": "최신 AI 소식",
-      "stage": "검수중",
+      "stage": "발행",
       "layout": "feature",
       "readMin": 6,
       "author": "AI 쉽게 알려주는 집",
@@ -104,7 +105,8 @@
           "note": "최초 초안",
           "path": "drafts/2026.07.20_meta-muse-image/v1.md"
         }
-      ]
+      ],
+      "published": "2026-07-20"
     },
     {
       "id": "google-publishers-lawsuit",

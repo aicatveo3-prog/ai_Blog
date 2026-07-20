@@ -65,6 +65,16 @@
       "id": "microsoft-mai",
       "approvedOn": "2026-07-08",
       "note": "기존 발행분 일괄 승인(백필)"
+    },
+    {
+      "id": "grok-4-5",
+      "approvedOn": "2026-07-20",
+      "note": "사람 검토 후 '둘 다 발행하자 최종' 지시 — v1(초안)→v2(루틴② Part B 검사) 거쳐 발행"
+    },
+    {
+      "id": "meta-muse-image",
+      "approvedOn": "2026-07-20",
+      "note": "사람 검토 후 '둘 다 발행하자 최종' 지시 — v1(초안)→v2(루틴② Part B 검사) 거쳐 발행"
     }
   ]
 }
