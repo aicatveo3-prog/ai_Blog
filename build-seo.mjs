@@ -296,31 +296,7 @@ const CALCSS = `
 /* 메뉴를 모바일에서도 보이게 (기존 max-820에서 숨김 처리 override) */
 @media(max-width:820px){.navlinks{display:flex}.navlinks a{padding:8px 10px;font-size:13px}}
 @media(max-width:560px){.brand .wm{display:none}.nav-in{gap:8px;padding:11px 13px}.navlinks{gap:2px;margin-left:0}.navlinks a{padding:7px 8px;font-size:12px}}
-/* 달력 날짜 클릭 → 그 날 카드 패널 */
-.mcg a.mc.has{cursor:pointer}
-.mc.has.sel{box-shadow:0 0 0 3px var(--brandD);position:relative;z-index:1}
-.daypanel{margin-top:12px}
-.dp-hint{text-align:center;color:var(--faint);font-size:12.5px;padding:12px 0 2px}
-.dp-h{display:flex;align-items:baseline;gap:8px;margin:2px 0 2px}
-.dp-h b{font-family:var(--serif);font-size:16px;color:var(--brandD);font-weight:800}
-.dp-h span{font-size:12px;color:var(--faint)}
-.dp-row{display:flex;flex-direction:column;padding:13px 14px;border:1px solid var(--line);border-radius:12px;margin-top:9px;text-decoration:none;color:inherit;background:var(--card);box-shadow:var(--shadow)}
-.dp-row:hover{border-color:var(--brand)}
-.dp-row .dp-t{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--ink);line-height:1.35;letter-spacing:-.3px}
-.dp-row:hover .dp-t{color:var(--brand)}
-.dp-row .dp-d{font-size:12.5px;color:var(--muted);margin-top:5px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 `;
-
-// 홈 달력: 날짜 클릭 시 그 날 카드 패널을 달력 바로 아래에 렌더
-const CALJS = `(function(){var el=document.getElementById('calData');if(!el)return;var data;try{data=JSON.parse(el.textContent);}catch(e){return;}
-var panel=document.getElementById('dayPanel');if(!panel)return;var cells=document.querySelectorAll('.mc.has');
-function fmt(k){var p=k.split('-');return (+p[1])+'월 '+(+p[2])+'일';}
-function esc(s){return (s||'').replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
-function show(k){var arts=data[k]||[];var rows=arts.map(function(a){return '<a class="dp-row" href="'+a.u+'"><span class="dp-t">'+esc(a.t)+'</span><span class="dp-d">'+esc(a.d)+'</span></a>';}).join('');
-panel.innerHTML='<div class="dp-h"><b>'+fmt(k)+'</b><span>소식 '+arts.length+'건</span></div>'+rows;panel.classList.add('on');
-cells.forEach(function(c){c.classList.toggle('sel',c.getAttribute('data-day')===k);});}
-cells.forEach(function(c){c.addEventListener('click',function(e){e.preventDefault();show(c.getAttribute('data-day'));panel.scrollIntoView({behavior:'smooth',block:'nearest'});});});
-})();`;
 
 const JS = `(function(){var root=document.documentElement,btn=document.getElementById('themeBtn');
 var s=localStorage.getItem('vector-theme');if(s)root.setAttribute('data-theme',s);
@@ -404,14 +380,14 @@ function buildHome(posts) {
       const key = `${Y}-${String(M).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
       const arts = byDate[key];
       cells += (arts && arts.length)
-        ? `<a class="mc has" href="#d-${key}" data-day="${key}">${d}<span class="c">${arts.length}</span></a>`
+        ? `<a class="mc has" href="#d-${key}">${d}<span class="c">${arts.length}</span></a>`
         : `<span class="mc">${d}</span>`;
     }
     const dowRow = DOW.map((w,i)=>`<span class="dow${i===0?' sun':''}">${w}</span>`).join('');
     calHtml = `<div class="calbox">
 <div class="ch"><b>🗓️ AI 소식 달력</b><span>${Y}년 ${M}월 · 소식이 처음 터진 날</span></div>
 <div class="mcg">${dowRow}${cells}</div>
-<div class="calhint">진한 날 = 소식 있는 날 · 누르면 그 날 소식이 아래에 바로 펼쳐져요</div>
+<div class="calhint">진한 날 = 소식 있는 날 · 누르면 그 날 글로 이동</div>
 </div>`;
   }
 
@@ -421,12 +397,7 @@ function buildHome(posts) {
     const rows = byDate[dk].map(p=>`<a class="dgrow" href="p/${p.id}/"><span class="ttl">${escHtml(p.title)}</span><span class="dek">${escHtml(p.angle||'')}</span></a>`).join('');
     return `<section class="daygroup" id="d-${dk}"><div class="dgh"><span class="dd">${M}월 ${D}일</span><span class="cnt">소식 ${byDate[dk].length}건</span></div>${rows}</section>`;
   }).join('\n');
-  // 달력 클릭용 데이터 + 그 날 카드가 뜰 패널
-  const calData = {};
-  for (const dk of dates) calData[dk] = byDate[dk].map(p => ({ t:p.title, d:p.angle||'', u:`p/${p.id}/` }));
-  const dayPanel = dates.length ? `<div id="dayPanel" class="daypanel"><div class="dp-hint">달력에서 날짜를 누르면 그 날 소식이 여기에 바로 나와요 👆</div></div>` : '';
-  const calDataScript = dates.length ? `<script id="calData" type="application/json">${JSON.stringify(calData).replace(/</g,'\\u003c')}</script>` : '';
-  const listInner = posts.length ? (calHtml + dayPanel + groups) : `<div class="empty">첫 글이 곧 올라옵니다.</div>`;
+  const listInner = posts.length ? (calHtml + groups) : `<div class="empty">첫 글이 곧 올라옵니다.</div>`;
 
   const blogLd = {
     '@context':'https://schema.org','@type':'Blog','name':BRAND,'description':desc,
@@ -454,8 +425,6 @@ ${listInner}
 <footer>수집 → 선별 → 조사 → 관점 → 초안 → 검수 → 발행 · ${BRAND} 운영 시스템<br>© 2026 ${BRAND}</footer>
 </main>
 <script>${JS}</script>
-${calDataScript}
-<script>${CALJS}</script>
 </body>
 </html>`;
 }
