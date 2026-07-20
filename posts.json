@@ -49,6 +49,38 @@
   ],
   "posts": [
     {
+      "id": "google-publishers-lawsuit",
+      "title": "Google, 저작권 소송 — \"약속한 건 스니펫인데 전체책을 학습했어요\"",
+      "date": "2026-07-14",
+      "type": "B 심층 분석",
+      "category": "최신 AI 소식",
+      "stage": "작성중",
+      "layout": "feature",
+      "readMin": 7,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "미국 출판사들이 Google을 고소했어요. 2015년엔 '스니펫만' 약속했는데, Gemini 학습에 책 전체를 썼다는 혐의. Google 내부 문서까지 \"10억~100억 달러 배상금 위험\"이라고 인정했어요.",
+      "lens": ["① 그래서 나한테?"],
+      "versions": [
+        {"v": "v1", "date": "2026-07-20", "note": "최초 초안", "path": "drafts/2026.07.20_google-publishers-lawsuit/v1.md"}
+      ]
+    },
+    {
+      "id": "moonshot-kimi-k3",
+      "title": "Moonshot AI, Kimi K3 출시 — \"중국 AI가 미국 모델을 이겼어요, 가격도 60%\"",
+      "date": "2026-07-16",
+      "type": "B 심층 분석",
+      "category": "최신 AI 소식",
+      "stage": "작성중",
+      "layout": "feature",
+      "readMin": 7,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "중국 스타트업이 2.8조 파라미터 모델 K3를 공개했어요. Arena 평가에서 OpenAI 최신 모델을 능가, 가격은 60% 수준. 기술·가격 동시 우위는 글로벌 AI 구도를 흔들기 시작했어요.",
+      "lens": ["① 그래서 나한테?"],
+      "versions": [
+        {"v": "v1", "date": "2026-07-20", "note": "최초 초안", "path": "drafts/2026.07.20_moonshot-kimi-k3/v1.md"}
+      ]
+    },
+    {
       "id": "aisphere-series-c",
       "title": "Sora 없는 AI 비디오 시장, 중국 PixVerse가 4억 달러 받고 뛰어들었어요",
       "date": "2026-07-14",

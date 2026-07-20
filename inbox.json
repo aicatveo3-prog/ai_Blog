@@ -1755,6 +1755,7 @@
       "verifyNote": "TechCrunch·Fortune·Axios·Arena·OpenRouter 7/16 교차확인. 2.8T MoE, 1M 토큰 컨텍스트. K3 Max(채팅)·K3 Swarm Max(병렬 처리) 2종. Arena 맹검 테스트에서 프론트엔드 코딩 Fable 5·GPT-5.6 Sol 능가. API $3(입력)/$15(출력).",
       "source": "https://www.axios.com/2026/07/16/moonshot-kimi-ai-china-model-openai-anthropic",
       "status": "인박스",
+      "postId": "moonshot-kimi-k3",
       "tags": [
         "모델",
         "중국",
@@ -1784,6 +1785,7 @@
       "verifyNote": "TechCrunch·Al Jazeera·Engadget·Yahoo Finance 7/14 교차확인. Hachette·Cengage·Elsevier·저자 Scott Turow 등 집단 소송. Gemini 학습에 저작권 자료 무단 사용 주장. Google Books 협의 조건(스니펫 표시만) 초과. 내부 문서에서 '10B~100B 달러 벌금 위험' 인정.",
       "source": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/",
       "status": "인박스",
+      "postId": "google-publishers-lawsuit",
       "tags": [
         "Google",
         "저작권",
