@@ -277,7 +277,7 @@ const CALCSS = `
 /* 콘텐츠 월 달력(데스크톱만) — 칸 안에 제목+요약 · 모바일은 아젠다로 대체 */
 html{scroll-behavior:smooth}
 .calbox2{display:none}
-@media(min-width:761px){.calbox2{display:block;position:relative;left:50%;transform:translateX(-50%);width:min(1080px,92vw);margin-bottom:26px}}
+@media(min-width:761px){.calbox2{display:block;margin-bottom:26px}.calbox2,.agenda{position:relative;left:50%;transform:translateX(-50%);width:min(1080px,92vw)}}
 .calh{display:flex;align-items:baseline;gap:9px;margin:0 4px 10px}
 .calh b{font-size:16px;color:var(--ink)}
 .calh span{font-size:12px;color:var(--faint)}
