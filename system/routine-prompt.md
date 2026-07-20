@@ -32,9 +32,11 @@ system/daily-collection.md 플레이북을 그대로 따른다.
    프레임워크·정책/규제·연구/논문·자금/M&A·논란/소송·하드웨어).
 2. 후보 추출 + 중복 제거(엄격) — 눈대중 말고 세 기준으로 기존과 대조해 이미 있으면 버린다:
    ① source URL이 inbox 기존 항목과 같으면 버림 ② 핵심 고유명사(회사·제품·모델명)가 같은
-   대상의 같은 사건이면 표현 달라도 버림(예: 'Meta Muse Image' 이미 있으면 재수집 금지)
-   ③ posts.json에 있거나 postId 붙은 주제는 재수집 금지. 진짜 새 전개면 새 항목으로 넣되
-   무엇이 새로운지 제목에 명시. (7단계 검증기가 재수집을 제목 유사도·같은 URL로 HARD FAIL.)
+   대상의 '같은 사건'(= firstSeen도 같음)이면 표현 달라도 버림(예: 7/7 발표 'Meta Muse Image'
+   이미 있으면 재수집 금지) ③ posts.json에 있거나 postId 붙은 주제는 재수집 금지.
+   ★ 단, 같은 주제라도 firstSeen(원문 날짜)이 다르면 '새 전개'이니 수집한다(예: "Grok 4.5
+   출시"[7/8] vs "Grok 5 지연"[7/6]) — 새 항목으로 넣되 무엇이 새로운지 제목에 명시.
+   (7단계 검증기: 제목 유사 AND 첫 등장일 일치 = 같은 사건 → HARD FAIL. 날짜 다르면 안 막음.)
 3. 날짜 검증 — system/collection-dating.md 규칙대로 각 후보의 1차 원문을 찾아 게시일을
    2곳+ 교차확인. 확정이면 firstSeen 채우고 verified:true, 못 찾으면 firstSeen:null·
    verified:false(절대 지어내지 말 것). 각 항목에 verifyNote와 source를 남긴다.

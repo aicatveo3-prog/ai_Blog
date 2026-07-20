@@ -169,10 +169,13 @@ for (let i = 0; i < act.length; i++) {
     const dupTitle = jacc(A.sig, B.sig) >= 0.5;
     if (!dupUrl && !dupTitle) continue;
     const recent = String(A.it.surfaced || '') >= DEDUP_FROM || String(B.it.surfaced || '') >= DEDUP_FROM;
+    // 같은 '사건'인지의 결정타는 제목이 아니라 첫 등장일(firstSeen). 같은 주제라도 firstSeen이 다르면
+    //   '새 전개(다른 사건)'라 막지 않는다. HARD은 제목 유사 + firstSeen 일치(=같은 사건)에만.
+    const sameFirst = A.it.firstSeen && B.it.firstSeen && A.it.firstSeen === B.it.firstSeen;
+    const newDev = dupTitle && !sameFirst; // 제목 비슷하지만 날짜 다름 = 새 전개일 수 있음
     const pair = `"${(A.it.title || '').slice(0, 30)}" ≈ "${(B.it.title || '').slice(0, 30)}"${dupUrl ? ' (같은 URL)' : ''}`;
-    // HARD은 '제목 유사'(같은 사건 강한 신호)에만 — 같은 URL만 겹치는 건 소스 공유일 수 있어 오탐 방지로 WARN.
-    if (recent && dupTitle) H('중복', `이미 수집된 소식 재수집(제목 유사) — ${pair}`);
-    else W('중복', `중복 의심(정리 권장) — ${pair}`);
+    if (recent && dupTitle && sameFirst) H('중복', `같은 사건 재수집(제목·첫등장일 일치) — ${pair}`);
+    else W('중복', `중복 의심(정리 권장${newDev ? ' · 첫등장일 다름=새 전개일 수 있음' : ''}) — ${pair}`);
   }
 }
 
