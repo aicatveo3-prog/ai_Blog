@@ -254,6 +254,33 @@ body.feature .doc .trap .trap-h strong{color:var(--warnInk)}
 
 const ACSS = ``;   // 매거진 스타일 제거 — 클린 레이아웃은 CSS에 통합됨
 
+// AI 소식 달력(홈) — 미니 달력 + 날짜별(첫 등장일) 그룹 리스트
+const CALCSS = `
+.calbox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 16px 13px;box-shadow:var(--shadow);margin:2px 0 8px}
+.calbox .ch{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px}
+.calbox .ch b{font-size:15px;color:var(--ink)}
+.calbox .ch span{font-size:12px;color:var(--faint)}
+.mcg{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.mcg .dow{font-size:10.5px;font-weight:700;color:var(--faint);text-align:center;padding-bottom:1px}
+.mcg .dow.sun{color:var(--red)}
+.mcg .mc{aspect-ratio:1;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11px;color:var(--faint);background:var(--soft);text-decoration:none;transition:transform .1s}
+.mcg .mc.blank{background:transparent}
+.mcg .mc.has{background:var(--brand);color:#fff;font-weight:800}
+.mcg a.mc.has:hover{transform:translateY(-1px)}
+.mcg .mc .c{font-size:8.5px;font-weight:700;opacity:.95;line-height:1;margin-top:1px}
+.calhint{font-size:11px;color:var(--faint);text-align:center;margin-top:10px}
+.daygroup{margin-top:26px;scroll-margin-top:78px}
+.dgh{display:flex;align-items:baseline;gap:9px;padding-bottom:7px;border-bottom:2px solid var(--line)}
+.dgh .dd{font-family:var(--serif);font-weight:800;font-size:18px;color:var(--brandD);letter-spacing:-.3px}
+.dgh .cnt{font-size:12px;color:var(--faint);font-weight:600}
+.dgrow{display:flex;flex-direction:column;padding:15px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
+.dgrow:last-child{border-bottom:0}
+.dgrow .ttl{font-family:var(--serif);font-size:17px;font-weight:700;line-height:1.34;color:var(--ink);letter-spacing:-.3px;text-wrap:balance}
+.dgrow .dek{color:var(--muted);font-size:13px;line-height:1.55;margin-top:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.dgrow:hover .ttl{color:var(--brandD)}
+@media(max-width:560px){.calbox{padding:13px 12px 11px}.mcg{gap:4px}.dgrow .ttl{font-size:15.5px}}
+`;
+
 const JS = `(function(){var root=document.documentElement,btn=document.getElementById('themeBtn');
 var s=localStorage.getItem('vector-theme');if(s)root.setAttribute('data-theme',s);
 function cur(){return root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');}
@@ -313,14 +340,46 @@ const pubDate = (p) => p.published
   || (Array.isArray(p.versions) ? p.versions.map(v=>v&&v.date).filter(Boolean).sort().slice(-1)[0] : '')
   || p.date || '';
 
-// ---------- 홈(index.html) ----------
+// ---------- 홈(index.html) — AI 소식 달력(하이브리드: 미니 달력 + 첫 등장일 그룹) ----------
 function buildHome(posts) {
-  const rows = posts.map(p=>`<a class="ixrow" data-cat-item="${escAttr(catOf(p))}" href="p/${p.id}/">
-<span class="num"></span>
-<span class="imain"><span class="top"><span class="ttl">${escHtml(p.title)}</span><span class="date">${escHtml(pubDate(p))}</span></span>
-<span class="dek">${escHtml(p.angle||'')}</span></span></a>`).join('\n');
-  const listInner = posts.length ? rows : `<div class="empty">첫 글이 곧 올라옵니다.</div>`;
   const desc = '매일 나오는 AI 최신 소식을 학생도 이해하도록 쉽게 풀어드려요. 어려운 용어는 빼고, 핵심만 세 줄 요약과 쉬운 해설로.';
+  const DOW = ['일','월','화','수','목','금','토'];
+
+  // 첫 등장일(date=firstSeen)로 그룹화 · 최신 날짜 먼저
+  const byDate = {};
+  for (const p of posts) { const d = p.date || ''; (byDate[d] = byDate[d] || []).push(p); }
+  const dates = Object.keys(byDate).filter(Boolean).sort((a,b)=> a<b ? 1 : -1);
+
+  // 미니 달력 — 가장 최근 글이 속한 달 (소식 있는 날 강조 · 클릭 시 그 날로 이동)
+  let calHtml = '';
+  if (dates.length) {
+    const [Y,M] = dates[0].split('-').map(Number);
+    const firstDow = new Date(Y, M-1, 1).getDay();
+    const dim = new Date(Y, M, 0).getDate();
+    let cells = '';
+    for (let i=0;i<firstDow;i++) cells += `<span class="mc blank"></span>`;
+    for (let d=1; d<=dim; d++) {
+      const key = `${Y}-${String(M).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      const arts = byDate[key];
+      cells += (arts && arts.length)
+        ? `<a class="mc has" href="#d-${key}">${d}<span class="c">${arts.length}</span></a>`
+        : `<span class="mc">${d}</span>`;
+    }
+    const dowRow = DOW.map((w,i)=>`<span class="dow${i===0?' sun':''}">${w}</span>`).join('');
+    calHtml = `<div class="calbox">
+<div class="ch"><b>🗓️ AI 소식 달력</b><span>${Y}년 ${M}월 · 소식이 처음 터진 날</span></div>
+<div class="mcg">${dowRow}${cells}</div>
+<div class="calhint">진한 날 = 소식 있는 날 · 누르면 그 날 글로 이동</div>
+</div>`;
+  }
+
+  // 날짜별 그룹 리스트 (첫 등장일 기준)
+  const groups = dates.map(dk => {
+    const [ , M, D] = dk.split('-').map(Number);
+    const rows = byDate[dk].map(p=>`<a class="dgrow" href="p/${p.id}/"><span class="ttl">${escHtml(p.title)}</span><span class="dek">${escHtml(p.angle||'')}</span></a>`).join('');
+    return `<section class="daygroup" id="d-${dk}"><div class="dgh"><span class="dd">${M}월 ${D}일</span><span class="cnt">소식 ${byDate[dk].length}건</span></div>${rows}</section>`;
+  }).join('\n');
+  const listInner = posts.length ? (calHtml + groups) : `<div class="empty">첫 글이 곧 올라옵니다.</div>`;
 
   const blogLd = {
     '@context':'https://schema.org','@type':'Blog','name':BRAND,'description':desc,
@@ -340,8 +399,8 @@ ${navHtml('')}
 <header class="mast"><div class="kick">학생도 쉽게 보는 AI 소식</div>
 <h1>어려운 AI 뉴스,<br><span class="hlk">여기선 쉽게</span> 알려드려요</h1>
 <p>${escHtml(desc)}</p></header>
-<div class="seclabel"><b>최신 글</b><span>· ${posts.length}편</span></div>
-<div class="ixlist" id="grid">${listInner}</div>
+<div class="seclabel"><b>AI 소식 달력</b><span>· 전체 ${posts.length}편</span></div>
+${listInner}
 <section class="news"><div><h4>매주, 중요한 것만</h4>
 <p>매주 중요한 AI 소식만 골라 학생 눈높이로 쉽게 정리해 드려요. 전체 파이프라인은 운영 대시보드에서 볼 수 있어요.</p></div>
 <div class="cta"><a class="pill" href="dashboard.html">대시보드 열기</a></div></section>
@@ -528,7 +587,7 @@ try {
 } catch (_) { /* inbox.json 없으면 건너뜀 */ }
 
 // 공유 자산
-write('assets/blog.css', CSS + ACSS);
+write('assets/blog.css', CSS + ACSS + CALCSS);
 
 // 글 페이지 + 본문
 const ogJobs = [];
