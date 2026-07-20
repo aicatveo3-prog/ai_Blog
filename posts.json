@@ -315,27 +315,6 @@
       ]
     },
     {
-      "id": "moonshot-kimi-k3",
-      "title": "미국이 3년간 칩을 막았는데 — 중국에서 '세계 4위' AI가 나왔어요",
-      "date": "2026-07-16",
-      "type": "B 심층 분석",
-      "category": "최신 AI 소식",
-      "stage": "발행",
-      "layout": "feature",
-      "readMin": 9,
-      "author": "AI 쉽게 알려주는 집",
-      "angle": "미국 수출 통제 3년 → 중국 Kimi K3 프론티어급 등장. '자체 벤치마크'라는 단서, 독립 검증 부재, 7/27 가중치 공개 대기.",
-      "lens": ["① 그래서 나한테?"],
-      "versions": [
-        {"v": "v5", "date": "2026-07-18", "note": "사람 검토 3차.", "path": "drafts/2026.07.18_moonshot-kimi-k3/v5.md"},
-        {"v": "v4", "date": "2026-07-18", "note": "사람 검토 2차.", "path": "drafts/2026.07.18_moonshot-kimi-k3/v4.md"},
-        {"v": "v3", "date": "2026-07-18", "note": "사람 검토.", "path": "drafts/2026.07.18_moonshot-kimi-k3/v3.md"},
-        {"v": "v2", "date": "2026-07-18", "note": "루틴③ 검사.", "path": "drafts/2026.07.18_moonshot-kimi-k3/v2.md"},
-        {"v": "v1", "date": "2026-07-18", "note": "최초 초안.", "path": "drafts/2026.07.18_moonshot-kimi-k3/v1.md"}
-      ],
-      "published": "2026-07-18"
-    },
-    {
       "id": "china-agent-regulation",
       "title": "중국이 AI 에이전트 전용 규제를 시행했어요 — 발효 전 14,000개가 삭제됐어요",
       "date": "2026-07-15",
@@ -356,23 +335,6 @@
         {"v": "v3", "date": "2026-07-18", "note": "사람 검토.", "path": "drafts/2026.07.18_china-agent-regulation/v3.md"},
         {"v": "v2", "date": "2026-07-18", "note": "루틴③ 검사.", "path": "drafts/2026.07.18_china-agent-regulation/v2.md"},
         {"v": "v1", "date": "2026-07-18", "note": "최초 초안.", "path": "drafts/2026.07.18_china-agent-regulation/v1.md"}
-      ]
-    },
-    {
-      "id": "google-publishers-lawsuit",
-      "title": "출판사들, Google이 \"위험한 줄 알면서\" 책으로 Gemini 학습시켰다며 집단소송",
-      "date": "2026-07-14",
-      "type": "A 속보 브리핑",
-      "category": "최신 AI 소식",
-      "stage": "검수중",
-      "layout": "feature",
-      "readMin": 5,
-      "author": "AI 쉽게 알려주는 집",
-      "angle": "세계 3대 출판사가 Google을 집단소송했어요. Gemini 학습에 책을 무단으로 쓴 혐의인데, Google 내부 문서에 \"$100B 벌금 위험\"이 적혀 있었다는 증거가 나왔어요. 알면서도 진행하고 흔적까지 지웠다는 게 핵심이에요.",
-      "lens": ["① 그래서 나한테?"],
-      "versions": [
-        {"v": "v2", "date": "2026-07-18", "note": "루틴③ 검사 — 가짜 인용 수정 등.", "path": "drafts/2026.07.18_google-publishers-lawsuit/v2.md"},
-        {"v": "v1", "date": "2026-07-18", "note": "최초 초안.", "path": "drafts/2026.07.18_google-publishers-lawsuit/v1.md"}
       ]
     },
     {
