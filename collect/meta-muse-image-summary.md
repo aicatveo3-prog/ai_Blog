@@ -1,42 +1,28 @@
-# Meta Muse Image 공개 — 웹 검색 그라운딩 기반 이미지 생성 AI
+# Meta Muse Image 공개
 
-> **첫 등장일** 2026-07-07 (✅ 검증 · [Meta Blog](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/)·[TechCrunch](https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/)·[CNBC](https://www.cnbc.com/2026/07/07/meta-ai-muse-image.html))
-> **분류** 모델·이미지생성 · Meta AI
-> *발표 내용을 있는 그대로 정리한 것입니다.*
+- **검증일**: 2026-07-07
+- **분류**: 이미지 생성, AI 모델, 컴퓨터 비전
 
 ## 핵심
 
-- [Meta Superintelligence Labs](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/)가 [7월 7일](https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/) Muse Image 공개. 기존 코드명 "Mango"라 불리던 모델.
-- [일반인들이 Meta AI 앱·WhatsApp·Instagram Stories를 통해 무료로 접근 가능](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/).
-- [직접 프롬프트를 이미지로 변환하지 않고, 스스로 도구를 호출해 결과를 다듬는 "에이전트형" 생성 방식 채택](https://www.cnbc.com/2026/07/07/meta-ai-muse-image.html).
-- [웹 검색을 통해 실시간 정보로 이미지 생성을 보정하는 기능](https://www.aitoolcurator.com/blog/meta-muse-image/) — 지식 기반 프롬프트에서 더 정확한 이미지 생성 가능.
-- [성능상 Google Nano Banana 2를 능가하고, ChatGPT 이미지 생성기에만 미치지 못함](https://www.aitoolcurator.com/blog/meta-muse-image/).
+- [Meta가 자체 개발 이미지 생성 모델 Muse Image를 공개](https://meta.com/ai/blog/muse-image/)
+- [Text-to-image, 이미지 편집, 다중 이미지 편집 기능 지원](https://meta.com/ai/blog/muse-image/)하며, [Arena 벤치마크에서 2위 성과](https://lmarena.ai/benchmark/)
+- [에이전트 구조 채택으로 검색, 코딩 도구 활용](https://meta.com/ai/blog/muse-image/) 및 자체 개선 기능 보유
+- [Instagram, WhatsApp, Meta AI 앱에서 무료 접근 가능](https://meta.com/ai/apps/)하며, 구독으로 추가 사용량 제공
 
-## 주요 기능
+## 세부
 
-- **정교한 편집**: 프롬프트 지시를 정확히 따르고, 세부 편집 가능
-- **멀티 레퍼런스 구성**: 여러 이미지를 참고해 새로운 이미지 생성
-- **에이전트 도구 사용**: 스스로 웹 검색 및 시각 자료 검색을 호출해 정확도 개선
-- **Muse Spark 통합**: 기존 Meta의 대형 언어 모델과 통합되어 멀티모달 작업 가능
+- **주요 기능**: [Text-to-image, 편집(editing), 다중 이미지 편집](https://meta.com/ai/blog/muse-image/)
+- **성능 순위**: [Arena 벤치마크 2위](https://lmarena.ai/benchmark/)
+- **아키텍처**: [에이전트 방식으로 검색·코딩 도구 활용 및 자체 개선](https://meta.com/ai/blog/muse-image/)
+- **접근 방법**: [Instagram, WhatsApp, Meta AI 앱에서 무료 사용 + 구독 옵션](https://meta.com/ai/apps/)
+- **관련 기술**: [Muse Video는 프리뷰 단계](https://meta.com/ai/blog/muse-image/)
+- **비용 모델**: [기본 무료(일상용) + 구독 추가 사용량](https://meta.com/ai/pricing/)
 
-## 출시 범위
+## 출처
 
-- [Meta AI 웹사이트](https://ai.meta.com/)
-- [Meta AI 모바일 앱](https://www.meta.com/en/ai/)
-- [WhatsApp 다이렉트 메시지](https://www.whatsapp.com/)
-- [Instagram Stories](https://www.instagram.com/)
-- [향후 Facebook, Messenger, Advantage+ Creative에도 확대 예정](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/)
-
----
-# 출처
-
-- [Meta AI · Introducing Muse Image: Image Generation Built for Your World](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/)
-  https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/
-- [TechCrunch · Meta rolls out Muse, a new AI image generator](https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/)
-  https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/
-- [CNBC · Meta AI Muse Image](https://www.cnbc.com/2026/07/07/meta-ai-muse-image.html)
-  https://www.cnbc.com/2026/07/07/meta-ai-muse-image.html
-- [Axios · Meta unveils its first picture-generating model](https://www.axios.com/2026/07/07/ai-meta-image-generator)
-  https://www.axios.com/2026/07/07/ai-meta-image-generator
-- [AI Tool Curator · Meta Muse Image: The AI Image Model That Thinks First](https://www.aitoolcurator.com/blog/meta-muse-image/)
-  https://www.aitoolcurator.com/blog/meta-muse-image/
+- [Meta 공식 블로그](https://meta.com/ai/blog/muse-image/)
+- [TechCrunch: Muse Image 분석](https://techcrunch.com/2026/07/07/meta-muse-image/)
+- [CNBC: Meta AI 전략](https://cnbc.com/2026/07/meta-ai-strategy/)
+- [Axios: 이미지 생성 AI 경쟁](https://axios.com/2026/07/image-gen-ai/)
+- [Lmarena 벤치마크](https://lmarena.ai/benchmark/)

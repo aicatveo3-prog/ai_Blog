@@ -2022,6 +2022,20 @@
         "자금",
         "헬스테크",
         "의료AI"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/neko-health-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/neko-health.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/neko-health.md"
+        }
       ]
     },
     {
@@ -2036,6 +2050,20 @@
         "자금",
         "신약개발",
         "AI"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/chai-discovery-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/chai-discovery.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/chai-discovery.md"
+        }
       ]
     },
     {
@@ -2050,6 +2078,20 @@
         "xAI",
         "모델",
         "코딩"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/grok-4-5-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/grok-4-5.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/grok-4-5.md"
+        }
       ]
     },
     {
@@ -2064,6 +2106,20 @@
         "Meta",
         "모델",
         "이미지생성"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/meta-muse-image-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/meta-muse-image.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/meta-muse-image.md"
+        }
       ]
     },
     {
@@ -2078,6 +2134,20 @@
         "인프라",
         "에이전트",
         "벡터DB"
+      ],
+      "articleVersions": [
+        {
+          "v": "정리본",
+          "path": "collect/pinecone-nexus-engine-summary.md"
+        },
+        {
+          "v": "자세히",
+          "path": "collect/pinecone-nexus-engine.md"
+        },
+        {
+          "v": "💬 반응",
+          "path": "collect/reactions/pinecone-nexus-engine.md"
+        }
       ]
     }
   ]
