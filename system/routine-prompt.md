@@ -38,14 +38,15 @@ system/daily-collection.md 플레이북을 그대로 따른다.
    "추가한 날짜"이자 최신순 정렬 기준. 빠지면 오늘 추가한 항목이 옛 firstSeen 날짜로
    밀려 내려간다.
 4. 1차 점수·태깅 — prompts/A-scoring.md 루브릭으로 대략 점수·태그.
-5. 세 탭 구축(탭을 만드는 모든 소식에 3탭 전부) — 점수로 자세히·반응을 빼지 않는다.
-   한 소식의 탭을 만들기 시작했으면 정리본·자세히(prompts/J-collect-explainers.md)와
-   반응(prompts/H-reactions-multiangle.md)을 예외 없이 셋 다 만든다.
+5. 세 탭 구축(수집하는 모든 verified 항목에 3탭 전부) — 점수로 자세히·반응을 빼지 않는다.
+   인박스에 등재하는 verified:true 항목은 정리본·자세히(prompts/J-collect-explainers.md)와
+   반응(prompts/H-reactions-multiangle.md)을 예외 없이 셋 다 만든다. 여럿이면 소식당 서브에이전트 병렬.
    - inbox.json의 articleVersions 순서는 반드시 정리본 → 자세히 → 💬 반응.
    - 반응은 5개 각도 섹션을 모두 둔다. 반응이 없는 각도도 삭제하지 말고
      '확인 안 됨(갭)'으로 섹션을 남긴다(각도 축약·1불릿 금지).
-   - 오늘 처리할 여력이 안 되는 소식은 탭을 아예 시작하지 않고 인박스 후보로만 남긴다
-     (빈 3탭 미완 금지).
+   - ★ 수집=3탭. '여력 안 되면 탭 없이 인박스 후보로만'은 폐지(stub만 쌓임). 그날 3탭까지
+     못 만들 소식은 아예 인박스에 넣지 말고 다음 날 다시 수집한다. 7단계 검증기가
+     '오늘 수집한 verified인데 탭 없는 항목'을 HARD FAIL로 막는다.
 6. 인박스 반영 — inbox.json에 append하고 generated 날짜를 갱신.
 7. 검증 게이트(커밋 전 — 반드시) — node validate-collection.mjs 실행.
    HARD FAIL이 하나라도 있으면 커밋 금지. 발행 브랜치 아님·3탭 미완·반응 각도 5개 미만·

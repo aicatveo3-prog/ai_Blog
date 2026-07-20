@@ -138,6 +138,19 @@ for (const it of withTabs) {
   }
 }
 
+// ---------- 신규 수집 항목 3탭 필수 (HARD) ----------
+// 규칙: 수집해 등재하는 verified 항목은 예외 없이 3탭(정리본·자세히·반응)을 갖춘다.
+//   '탭 없이 인박스 후보로만'은 폐지 — stub만 쌓이기 때문(8개 수집 중 3개만 탭 만든 사례).
+//   단, 과거 stub까지 소급하면 대량 실패하므로 이 날짜(surfaced) 이후 수집분만 강제한다.
+const TABS_REQUIRED_FROM = '2026-07-21';
+const missingTabs = items.filter(
+  (it) => it.status !== '폐기' && it.verified === true
+    && String(it.surfaced || '') >= TABS_REQUIRED_FROM
+    && !(Array.isArray(it.articleVersions) && it.articleVersions.length)
+);
+missingTabs.forEach((it) =>
+  H(shortName(it), `수집(surfaced ${it.surfaced})했는데 3탭 없음 — verified 항목은 정리본·자세히·💬반응을 반드시 만든다(3탭 못 만들 소식은 인박스에 넣지 말 것)`));
+
 // ---------- 백로그(참고) — 아직 탭이 하나도 없는 수집 후보 ----------
 const backlog = items.filter(
   (it) => it.status !== '폐기' && !(Array.isArray(it.articleVersions) && it.articleVersions.length)
@@ -155,7 +168,7 @@ if (warn.length) {
   warn.forEach((m) => console.log('  ' + m));
   console.log('');
 }
-console.log(`ℹ️  탭 미착수 수집 후보 ${backlog.length}건 (새 규칙상 3탭 대상 — 순차 구축).`);
+console.log(`ℹ️  탭 미착수 수집 후보 ${backlog.length}건 (${TABS_REQUIRED_FROM} 이전 수집분은 유예 · 이후 수집 verified 항목은 3탭 필수).`);
 
 if (hard.length) {
   console.log(`\n❌ 검증 실패 — 위 HARD FAIL ${hard.length}건을 해결한 뒤 커밋하세요.\n`);
