@@ -1814,7 +1814,7 @@
       "verified": true,
       "verifyNote": "TechCrunch·Axios·MobiHealthNews·Neko Health 공식 7/15 교차확인. Lightspeed Venture·O.G. Venture 주도. $7B 밸류 도달. 100,000명+ 스캔 실적, 350,000명+ 대기열/예약.",
       "source": "https://techcrunch.com/2026/07/15/daniel-eks-body-scanning-startup-neko-health-raises-another-700m/",
-      "status": "인박스",
+      "status": "검수중",
       "tags": [
         "자금",
         "헬스테크",
@@ -1833,7 +1833,8 @@
           "v": "💬 반응",
           "path": "collect/reactions/neko-health.md"
         }
-      ]
+      ],
+      "postId": "neko-health"
     },
     {
       "title": "Chai Discovery, $400M Series C 펀딩 — AI 신약개발 $3.8B 밸류",
@@ -1842,7 +1843,7 @@
       "verified": true,
       "verifyNote": "Dealroom·Yahoo Finance·Endpoints News·Fierce Biotech 7/14 교차확인. Index Ventures·Kleiner Perkins·Sequoia 주도. $3.8B 밸류(7개월 전 $1.3B에서 3배). Lilly·Pfizer·Novartis와 거래.",
       "source": "https://app.dealroom.co/news/note/chai-discovery-raises-400m-series-c-at-3-8b-valuation-for-ai-drug-discovery",
-      "status": "인박스",
+      "status": "검수중",
       "tags": [
         "자금",
         "신약개발",
@@ -1861,7 +1862,8 @@
           "v": "💬 반응",
           "path": "collect/reactions/chai-discovery.md"
         }
-      ]
+      ],
+      "postId": "chai-discovery"
     },
     {
       "title": "xAI Grok 4.5 공개 출시 — Opus급 속도·비용 효율 모델",
