@@ -66,6 +66,7 @@
 - `검수중`의 **v2 + REVIEW.md**를 읽고 최종검토·피드백(필요시 v3).
 - OK하면: `posts.json` `stage:"검수중" → "발행"` + `published`(오늘) + **🔒 `publish-approvals.json`에 승인 등록** → **`node build-seo.mjs`** → 커밋·푸시.
 - **여기가 유일한 사람 게이트.** 승인 없이는 어떤 글도 라이브로 안 나간다 — 이제 **산문이 아니라 기계가 강제**한다: `stage:"발행"`이어도 `publish-approvals.json`에 없으면 build가 건너뛰고 대시보드도 발행으로 안 띄운다. **승인 등록은 사람이 "발행해" 지시할 때만**(루틴·자동 금지).
+- **posts.json 자체도 잠금(강함)** — `githooks/pre-commit`(→`validate-posts.mjs`)이 커밋 때 검사한다: 명단이 줄거나(①) 발행글 상태·발행일이 되돌려지거나(②) 초안이 껍데기(③)면 **커밋 거부**. 루틴이 실수로 명단을 덮어써도 대시보드가 안 무너진다. 사람이 일부러 지우거나(발행 취소 등) 할 땐 우회 스위치(`ALLOW_POSTS_SHRINK=1`/`ALLOW_POSTS_CHANGE=1`)를 붙인다. 서버측 백스톱: `.github/workflows/posts-guard.yml`.
 
 ---
 
@@ -106,6 +107,7 @@
 - 🔎 운영 관전 포인트: ②는 ①이, ③은 ②가 **끝나 push한 뒤** 이어받는다(각 1시간 간격). 어느 날 앞 단계가 오래 걸려 뒤 단계가 "대상 0건"이면 그날은 건너뛰고 **다음 날 자동 이어받음**(자가치유). 자주 비면 간격을 넓힌다.
 
 ## 변경 로그
+- v7 (2026-07-20): **posts.json 보호 잠금 — 강함(Git 문지기)**. 계기: 루틴②가 posts.json을 append가 아니라 통째 교체해 발행글 16편이 사라지고(대시보드 붕괴) 껍데기(세 줄 요약) 초안만 남은 사고 + 루틴이 이미 발행된 moonshot-kimi-k3를 검수중으로 되돌린 회귀. 산문 규칙("append해라")이 지켜지지 않아 **커밋 자체를 기계가 거부**하도록 전환. `validate-posts.mjs` + `githooks/pre-commit`(git `core.hooksPath`) + 서버측 백스톱 `.github/workflows/posts-guard.yml`. 잠금 3개: **①명단 축소 방지**(글 수 감소=거부, 사람 삭제는 `ALLOW_POSTS_SHRINK=1`) **②발행글 보호**(발행→검수중 되돌리기·발행일 삭제·발행글 소실=거부, 사람 조정은 `ALLOW_POSTS_CHANGE=1`) **③껍데기 초안 거부**(작성중·검수중 초안 1500자 미만=거부, 실측 실제 글 최소 2429자·스텁 427자). 세 루틴 0단계에 `git config core.hooksPath githooks` 활성화 추가.
 - v6 (2026-07-20): **중복 재수집 방지 — 기계 탐지**. 산문 대조(제목·URL 눈으로)가 표현 차이를 놓쳐 같은 소식(Muse·Kimi·GPT-5.6·Google소송 등)이 매일 재수집되던 문제. ①2단계 중복 제거를 3기준(source URL·핵심 고유명사·이미 글 된 주제)으로 강화. ②`validate-collection.mjs`가 제목 토큰 자카드≥0.5로 근접 중복 탐지. **같은 '사건'의 결정타는 제목이 아니라 첫 등장일(firstSeen)** — 신규(surfaced≥2026-07-21)가 기존과 **제목 유사 AND firstSeen 일치**면 같은 사건 재수집으로 보고 **HARD FAIL**. **같은 주제라도 firstSeen이 다르면 '새 전개'라 안 막는다**(예: Grok 4.5 출시[7/8] vs Grok 5 지연[7/6]). 기존 누적 중복·같은 URL만 겹침은 WARN(정리 권장).
 - v5 (2026-07-20): **수집 = 3탭 필수(escape 폐지)**. 그동안 '여력 안 되면 탭 없이 인박스 후보로만' 허용이 있어 stub만 쌓였다(8개 수집 중 3개만 탭 만든 사례). 이제 **인박스에 등재하는 verified 항목은 예외 없이 3탭**을 만들고, 못 만들 소식은 아예 등재하지 않는다. 산문이 아니라 검증기로 강제: `validate-collection.mjs`가 `surfaced >= 2026-07-21`인 verified 무탭 항목을 **HARD FAIL**(과거 stub은 소급 유예). daily-collection·routine-prompt 5단계 동시 수정.
 - v4 (2026-07-17): **임시 브랜치 커밋 사고 방지 — 두 겹 안전장치**. (사고: 루틴 ①이 수집물을 세션 임시 브랜치 `claude/jolly-feynman`에 커밋·push해 대시보드에 안 뜸. 원인 = 브랜치 동기화가 '맨 끝 산문 지시'라 건너뛸 수 있었음.) ①**0단계 발행 브랜치 강제 이동**을 세 루틴 모두의 첫 동작으로 신설(임시 브랜치에서 시작하든 곧장 발행 브랜치로 옮겨 작업). ②**`validate-collection.mjs`에 브랜치 가드** — 발행 브랜치가 아니면 커밋 전 HARD FAIL. 옛 'cherry-pick 동기화(구 10단계)'는 폐지. → 산문이 아니라 기계가 강제.

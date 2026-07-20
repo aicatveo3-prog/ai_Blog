@@ -25,7 +25,10 @@ system/daily-collection.md 플레이북을 그대로 따른다.
    그러니 무엇보다 먼저:
      git fetch origin
      git checkout -B claude/github-upload-setup-vimtlp origin/claude/github-upload-setup-vimtlp
+     git config core.hooksPath githooks   # posts.json 보호 잠금 활성화(강함)
    (기본 브랜치가 바뀌었으면 git ls-remote --symref origin HEAD로 확인해 그 이름으로.)
+   git config core.hooksPath githooks 는 posts.json 잠금(명단 축소·발행글 회귀·껍데기 초안)을
+   켠다. 새 세션은 매번 clone되니 이 줄을 빠뜨리면 잠금이 꺼진 채 작업하게 된다.
    이제 모든 커밋·push가 곧장 발행 브랜치로 간다. 빠뜨려도 7단계 검증기가 발행 브랜치가
    아니면 커밋을 HARD FAIL로 막는다.
 1. 수집 — 지난 24시간 AI 소식을 8각도로 웹검색(모델 출시·자동화/노코드·에이전트/

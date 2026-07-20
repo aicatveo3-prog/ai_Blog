@@ -12,8 +12,10 @@
    ```bash
    git fetch origin
    git checkout -B claude/github-upload-setup-vimtlp origin/claude/github-upload-setup-vimtlp
+   git config core.hooksPath githooks   # posts.json 보호 잠금 활성화(강함) — 빠뜨리지 말 것
    ```
    (기본 브랜치가 바뀌었으면 `git ls-remote --symref origin HEAD`로 확인해 그 이름으로 대체.)
+   `git config core.hooksPath githooks`는 **posts.json 잠금(명단 축소·발행글 회귀·껍데기 초안)** 을 켠다. 새 세션은 매번 clone되므로 이 한 줄을 안 켜면 잠금이 없는 상태다(서버측 백스톱 `posts guard` 워크플로가 그래도 한 번 더 잡는다).
    이제 모든 작업·커밋·push가 **곧장 발행 브랜치**로 간다 → 옛 '동기화(cherry-pick)' 단계는 불필요.
    빠뜨려도 검증기(`validate-collection.mjs`)가 발행 브랜치가 아니면 커밋을 **HARD FAIL로 막는다**(8단계).
 

@@ -28,8 +28,10 @@
 ```bash
 git fetch origin
 git checkout -B claude/github-upload-setup-vimtlp origin/claude/github-upload-setup-vimtlp
+git config core.hooksPath githooks   # posts.json 보호 잠금 활성화(강함) — 빠뜨리지 말 것
 ```
 (기본 브랜치가 바뀌었으면 `git ls-remote --symref origin HEAD`로 확인해 그 이름으로.) 이후 모든 커밋·push가 곧장 발행 브랜치로 간다 → 별도 cherry-pick 동기화 불필요.
+`git config core.hooksPath githooks`는 **posts.json 잠금**을 켠다: 발행글을 검수중으로 되돌리거나(잠금②) 명단을 줄이면(잠금①) 커밋이 거부된다. **검사 루틴이 발행글 상태를 바꾸는 건 금지**이므로 이 잠금이 그 실수를 물리적으로 막는다(2026-07-20 moonshot-kimi-k3 회귀 사고). 안 켜도 서버측 `posts guard`가 한 번 더 잡는다.
 
 ## 한 편을 검사하는 순서 (대상마다 반복)
 

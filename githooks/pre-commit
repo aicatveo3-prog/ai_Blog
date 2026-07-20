@@ -1,0 +1,13 @@
+#!/bin/sh
+# posts.json 보호 게이트 (강함/Git 문지기) — validate-posts.mjs 참조.
+# posts.json이 이번 커밋에 포함되면 잠금 3개를 검사하고, 걸리면 커밋을 거부한다.
+# 활성화: git config core.hooksPath githooks   (각 루틴 0단계에서 실행)
+
+if git diff --cached --name-only | grep -q '^posts\.json$'; then
+  node validate-posts.mjs || {
+    echo ""
+    echo "커밋이 잠금에 걸렸습니다. 위 메시지를 확인하세요."
+    exit 1
+  }
+fi
+exit 0

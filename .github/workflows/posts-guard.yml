@@ -1,0 +1,24 @@
+name: posts guard
+
+# 서버측 백스톱(강함). pre-commit hook을 우회하거나 활성화를 빠뜨린 채 push해도
+# GitHub에서 posts.json 잠금(명단 축소·발행글 회귀·껍데기 초안)을 다시 검사해 빨간 X로 알린다.
+
+on:
+  push:
+    paths:
+      - 'posts.json'
+      - 'validate-posts.mjs'
+      - '.github/workflows/posts-guard.yml'
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # HEAD~1 비교용
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: posts.json 잠금 검사
+        run: node validate-posts.mjs --ci
