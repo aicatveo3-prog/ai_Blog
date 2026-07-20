@@ -6,7 +6,23 @@
   <atom:link href="https://aicatveo3-prog.github.io/ai_Blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>어려운 AI 뉴스, 학생도 이해하게 쉽게 알려드려요</description>
   <language>ko</language>
-  <lastBuildDate>Wed, 08 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 16 Jul 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Google Books가 Gemini의 교과서였다? — 대형 출판사 3곳이 Google을 고소했어요</title>
+    <link>https://aicatveo3-prog.github.io/ai_Blog/p/google-publisher-lawsuit/</link>
+    <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/google-publisher-lawsuit/</guid>
+    <description>세계 3대 출판사가 구글을 클래스액션으로 고소했어요. Google Books 1,500만 권이 Gemini 학습에 쓰였다는 혐의인데, 같은 도서관이 2015년엔 공정 이용으로 인정받았어요. Anthropic 15억 달러 합의가 선례가 되고 있어요.</description>
+    <category>최신 AI 소식</category>
+    <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>OpenAI를 떠난 CTO가 만든 첫 모델, 누구나 내려받을 수 있어요</title>
+    <link>https://aicatveo3-prog.github.io/ai_Blog/p/thinking-machines-inkling/</link>
+    <guid isPermaLink="true">https://aicatveo3-prog.github.io/ai_Blog/p/thinking-machines-inkling/</guid>
+    <description>OpenAI 전 CTO Mira Murati가 세운 Thinking Machines Lab이 9,750억(975B) 파라미터 개방가중 모델 Inkling을 공개했어요. 질문당 410억(41B) 개만 활성화해 비용을 줄인 MoE 구조인데, 독립 벤치마크는 아직 나오지 않았어요.</description>
+    <category>최신 AI 소식</category>
+    <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
   <item>
     <title>일론 머스크의 xAI가 새 AI를 내놓았어요 — 그런데 비교 상대는 OpenAI가 아니라 앤트로픽이었어요</title>
     <link>https://aicatveo3-prog.github.io/ai_Blog/p/grok-4-5/</link>

@@ -75,6 +75,16 @@
       "id": "meta-muse-image",
       "approvedOn": "2026-07-20",
       "note": "사람 검토 후 '둘 다 발행하자 최종' 지시 — v1(초안)→v2(루틴② Part B 검사) 거쳐 발행"
+    },
+    {
+      "id": "google-publisher-lawsuit",
+      "approvedOn": "2026-07-20",
+      "note": "사람 지시 발행 — 대시보드 검수중 일괄 발행"
+    },
+    {
+      "id": "thinking-machines-inkling",
+      "approvedOn": "2026-07-20",
+      "note": "사람 지시 발행 — 대시보드 검수중 일괄 발행"
     }
   ]
 }

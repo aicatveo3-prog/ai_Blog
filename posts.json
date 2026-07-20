@@ -109,35 +109,6 @@
       "published": "2026-07-20"
     },
     {
-      "id": "google-publishers-lawsuit",
-      "title": "Google, 저작권 소송 — \"약속한 건 스니펫인데 전체책을 학습했어요\"",
-      "date": "2026-07-14",
-      "type": "B 심층 분석",
-      "category": "최신 AI 소식",
-      "stage": "검수중",
-      "layout": "feature",
-      "readMin": 7,
-      "author": "AI 쉽게 알려주는 집",
-      "angle": "미국 출판사들이 Google을 고소했어요. 2015년엔 '스니펫만' 약속했는데, Gemini 학습에 책 전체를 썼다는 혐의. Google 내부 문서까지 \"10억~100억 달러 배상금 위험\"이라고 인정했어요.",
-      "lens": [
-        "① 그래서 나한테?"
-      ],
-      "versions": [
-        {
-          "v": "v2",
-          "date": "2026-07-20",
-          "note": "루틴③ 검사 — 미출처 인용 제거, 한국 정보 일반화, 감정어 중립화",
-          "path": "drafts/2026.07.20_google-publishers-lawsuit/v2.md"
-        },
-        {
-          "v": "v1",
-          "date": "2026-07-20",
-          "note": "최초 초안",
-          "path": "drafts/2026.07.20_google-publishers-lawsuit/v1.md"
-        }
-      ]
-    },
-    {
       "id": "moonshot-kimi-k3",
       "title": "미국이 3년간 칩을 막았는데 — 중국에서 '세계 4위' AI가 나왔어요",
       "date": "2026-07-16",
@@ -353,7 +324,7 @@
       "date": "2026-07-16",
       "type": "A 속보 브리핑",
       "category": "최신 AI 소식",
-      "stage": "검수중",
+      "stage": "발행",
       "layout": "feature",
       "readMin": 5,
       "author": "AI 쉽게 알려주는 집",
@@ -374,7 +345,8 @@
           "note": "최초 초안.",
           "path": "drafts/2026.07.16_google-publisher-lawsuit/v1.md"
         }
-      ]
+      ],
+      "published": "2026-07-20"
     },
     {
       "id": "deepseek-chip",
@@ -707,7 +679,7 @@
       "date": "2026-07-16",
       "type": "A 속보 브리핑",
       "category": "최신 AI 소식",
-      "stage": "검수중",
+      "stage": "발행",
       "layout": "feature",
       "readMin": 4,
       "author": "AI 쉽게 알려주는 집",
@@ -728,7 +700,8 @@
           "note": "최초 초안.",
           "path": "drafts/2026.07.18_thinking-machines-inkling/v1.md"
         }
-      ]
+      ],
+      "published": "2026-07-20"
     },
     {
       "id": "neko-health",
