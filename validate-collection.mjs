@@ -151,6 +151,31 @@ const missingTabs = items.filter(
 missingTabs.forEach((it) =>
   H(shortName(it), `수집(surfaced ${it.surfaced})했는데 3탭 없음 — verified 항목은 정리본·자세히·💬반응을 반드시 만든다(3탭 못 만들 소식은 인박스에 넣지 말 것)`));
 
+// ---------- 중복 수집 방지 ----------
+// 문제: 산문 대조(제목·URL 눈으로 보기)가 표현 차이를 놓쳐 같은 소식이 매일 재수집됨.
+//   기계로 잡는다 — (1) 같은 source URL, (2) 제목 유의미 토큰 자카드 ≥ 0.5 → 근접 중복.
+//   과거 누적 중복까지 HARD로 잡으면 대량 실패라, 한쪽이 이 날짜(surfaced) 이후 신규면 HARD(재수집 차단),
+//   둘 다 과거면 WARN(정리 권장).
+const DEDUP_FROM = '2026-07-21';
+const STOP_W = new Set('공개 출시 발표 소식 모델 시리즈 신규 the a an of to for and 및 등'.split(' '));
+const sigOf = (t) => new Set(String(t || '').toLowerCase().replace(/[^0-9a-z가-힣 ]+/g, ' ').split(/\s+/).filter((w) => w.length > 1 && !STOP_W.has(w)));
+const urlKey = (u) => String(u || '').toLowerCase().replace(/[^0-9a-z가-힣]+/g, '');
+const jacc = (a, b) => { if (!a.size || !b.size) return 0; let n = 0; for (const x of a) if (b.has(x)) n++; return n / (a.size + b.size - n); };
+const act = items.filter((it) => it.status !== '폐기').map((it) => ({ it, sig: sigOf(it.title), url: urlKey(it.source) }));
+for (let i = 0; i < act.length; i++) {
+  for (let j = i + 1; j < act.length; j++) {
+    const A = act[i], B = act[j];
+    const dupUrl = A.url.length > 8 && A.url === B.url;
+    const dupTitle = jacc(A.sig, B.sig) >= 0.5;
+    if (!dupUrl && !dupTitle) continue;
+    const recent = String(A.it.surfaced || '') >= DEDUP_FROM || String(B.it.surfaced || '') >= DEDUP_FROM;
+    const pair = `"${(A.it.title || '').slice(0, 30)}" ≈ "${(B.it.title || '').slice(0, 30)}"${dupUrl ? ' (같은 URL)' : ''}`;
+    // HARD은 '제목 유사'(같은 사건 강한 신호)에만 — 같은 URL만 겹치는 건 소스 공유일 수 있어 오탐 방지로 WARN.
+    if (recent && dupTitle) H('중복', `이미 수집된 소식 재수집(제목 유사) — ${pair}`);
+    else W('중복', `중복 의심(정리 권장) — ${pair}`);
+  }
+}
+
 // ---------- 백로그(참고) — 아직 탭이 하나도 없는 수집 후보 ----------
 const backlog = items.filter(
   (it) => it.status !== '폐기' && !(Array.isArray(it.articleVersions) && it.articleVersions.length)
