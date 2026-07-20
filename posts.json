@@ -709,7 +709,7 @@
       "date": "2026-07-15",
       "type": "A 속보 브리핑",
       "category": "최신 AI 소식",
-      "stage": "검수중",
+      "stage": "발행",
       "layout": "feature",
       "readMin": 5,
       "author": "AI 쉽게 알려주는 집",
@@ -724,7 +724,8 @@
           "note": "최초 초안.",
           "path": "drafts/2026.07.20_neko-health/v1.md"
         }
-      ]
+      ],
+      "published": "2026-07-20"
     },
     {
       "id": "chai-discovery",
@@ -732,7 +733,7 @@
       "date": "2026-07-14",
       "type": "A 속보 브리핑",
       "category": "최신 AI 소식",
-      "stage": "검수중",
+      "stage": "발행",
       "layout": "feature",
       "readMin": 5,
       "author": "AI 쉽게 알려주는 집",
@@ -747,7 +748,8 @@
           "note": "최초 초안.",
           "path": "drafts/2026.07.20_chai-discovery/v1.md"
         }
-      ]
+      ],
+      "published": "2026-07-20"
     }
   ]
 }

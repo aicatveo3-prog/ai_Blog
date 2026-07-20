@@ -85,6 +85,16 @@
       "id": "thinking-machines-inkling",
       "approvedOn": "2026-07-20",
       "note": "사람 지시 발행 — 대시보드 검수중 일괄 발행"
+    },
+    {
+      "id": "neko-health",
+      "approvedOn": "2026-07-20",
+      "note": "사람 지시 발행 — neko-health·chai-discovery"
+    },
+    {
+      "id": "chai-discovery",
+      "approvedOn": "2026-07-20",
+      "note": "사람 지시 발행 — neko-health·chai-discovery"
     }
   ]
 }
