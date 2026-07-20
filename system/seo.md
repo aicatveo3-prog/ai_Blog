@@ -30,11 +30,11 @@
 
 ```json
 { "id":"<slug>", "title":"...", "date":"YYYY-MM-DD", "type":"B 심층 분석",
-  "category":"인사이트", "stage":"발행", "readMin":14, "author":"Vector",
+  "category":"최신 AI 소식", "stage":"발행", "readMin":14, "author":"Vector",
   "angle":"메타 description으로 쓰임(155자 이내 권장)",
   "versions":[{ "v":"v1","date":"YYYY-MM-DD","note":"...","path":"drafts/<slug>/v1.md" }] }
 ```
-- `category`: 인사이트/리서치/튜토리얼 (홈 내비 필터 + OG 라벨).
+- `category`: **"최신 AI 소식"** 단일 (인사이트/리서치/튜토리얼 폐지). 홈 내비 메뉴 + OG 라벨.
 - `angle`: **메타 설명**이 되므로 한 문장으로 핵심을 담는다.
 - `readMin`: 없으면 홈 카드에 '분 읽기' 생략.
 

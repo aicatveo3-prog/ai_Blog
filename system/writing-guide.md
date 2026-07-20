@@ -256,7 +256,7 @@
 1. 원고를 **`drafts/YYYY.MM.DD_<slug>/v1.md`** 에 저장(폴더명 = 발행일_제목).
    - 고칠 때마다 같은 폴더에 `v2.md`, `v3.md`… 로 **버전을 쌓는다**(수정 전/후 이력 보존). 원본을 덮어쓰지 않는다.
 2. `posts.json`의 `posts`에 항목 추가 — **`stage:"검수중"`으로 넣는다(발행 아님).**
-   `id, title, date, type, category(인사이트/리서치/튜토리얼), stage:"검수중", layout:"feature", readMin, author:"AI 쉽게 알려주는 집", angle, versions:[…]`.
+   `id, title, date, type, category:"최신 AI 소식", stage:"검수중", layout:"feature", readMin, author:"AI 쉽게 알려주는 집", angle, versions:[…]`. (카테고리는 '최신 AI 소식' 단일로 통합됨 — 인사이트/리서치/튜토리얼 폐지.)
    - `versions[0]`이 최신본(대시보드 '초안 보기'가 이걸 연다). 최신본을 배열 맨 앞에 둔다.
    - `angle` = SEO 메타 description(155자 내 권장) + 홈 카드 설명(`.dek`). **글 페이지 본문엔 안 나온다.**
    - `date` = 뉴스 **첫 등장일**(달력·정렬 기준). **`published`(발행일)는 1단계에선 아직 넣지 않는다** — 실제로 발행하는 2단계에서 넣는다.

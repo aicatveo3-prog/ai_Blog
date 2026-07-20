@@ -28,11 +28,9 @@ function metaDesc(s='') {
   const t = s.replace(/\s+/g, ' ').replace(/[*_`#>]/g, '').trim();
   return t.length > 155 ? t.slice(0, 152).trimEnd() + '…' : t;
 }
-function catOf(p) {
-  return p.category || (/(가이드|튜토리얼)/.test(p.type||'') ? '튜토리얼'
-    : /(주간|종합)/.test(p.type||'') ? '리서치' : '인사이트');
-}
-const CAT_EMOJI = { '인사이트':'🧭','리서치':'🔬','튜토리얼':'🛠️','뉴스레터':'📮' };
+// 블로그가 'AI 최신 소식' 단일 카테고리로 통합됨(인사이트/리서치/튜토리얼 폐지).
+function catOf(p) { return p.category || '최신 AI 소식'; }
+const CAT_EMOJI = { '최신 AI 소식':'📰', '뉴스레터':'📮' };
 function isoKST(date) { return `${date}T09:00:00+09:00`; }
 function rfc822(date) { return new Date(`${date}T09:00:00+09:00`).toUTCString(); }
 
@@ -302,10 +300,7 @@ ${extra}`;
 const navHtml = (rel) => `<nav class="nav"><div class="nav-in">
 <a class="brand" href="${rel}"><span class="mark">🏠</span><span class="wm">AI <b>쉽게 알려주는</b> 집</span></a>
 <div class="navlinks" id="navlinks">
-<a data-cat="전체" class="on" href="${rel}">홈</a>
-<a data-cat="인사이트" href="${rel}">인사이트</a>
-<a data-cat="리서치" href="${rel}">리서치</a>
-<a data-cat="튜토리얼" href="${rel}">튜토리얼</a></div>
+<a data-cat="전체" class="on" href="${rel}">📰 최신 AI 소식</a></div>
 <div class="nav-r"><button class="icnbtn" id="themeBtn">🌙</button><a class="icnbtn" href="${rel}dashboard.html">대시보드 →</a></div>
 </div></nav>`;
 
