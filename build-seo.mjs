@@ -256,29 +256,21 @@ const ACSS = ``;   // 매거진 스타일 제거 — 클린 레이아웃은 CSS�
 
 // AI 소식 달력(홈) — 미니 달력 + 날짜별(첫 등장일) 그룹 리스트
 const CALCSS = `
-.calbox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 16px 13px;box-shadow:var(--shadow);margin:2px 0 8px}
-.calbox .ch{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px}
-.calbox .ch b{font-size:15px;color:var(--ink)}
-.calbox .ch span{font-size:12px;color:var(--faint)}
-.mcg{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
-.mcg .dow{font-size:10.5px;font-weight:700;color:var(--faint);text-align:center;padding-bottom:1px}
-.mcg .dow.sun{color:var(--red)}
-.mcg .mc{aspect-ratio:1;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11px;color:var(--faint);background:var(--soft);text-decoration:none;transition:transform .1s}
-.mcg .mc.blank{background:transparent}
-.mcg .mc.has{background:var(--brand);color:#fff;font-weight:800}
-.mcg a.mc.has:hover{transform:translateY(-1px)}
-.mcg .mc .c{font-size:8.5px;font-weight:700;opacity:.95;line-height:1;margin-top:1px}
-.calhint{font-size:11px;color:var(--faint);text-align:center;margin-top:10px}
-.daygroup{margin-top:26px;scroll-margin-top:78px}
-.dgh{display:flex;align-items:baseline;gap:9px;padding-bottom:7px;border-bottom:2px solid var(--line)}
-.dgh .dd{font-family:var(--serif);font-weight:800;font-size:18px;color:var(--brandD);letter-spacing:-.3px}
-.dgh .cnt{font-size:12px;color:var(--faint);font-weight:600}
-.dgrow{display:flex;flex-direction:column;padding:15px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
-.dgrow:last-child{border-bottom:0}
-.dgrow .ttl{font-family:var(--serif);font-size:17px;font-weight:700;line-height:1.34;color:var(--ink);letter-spacing:-.3px;text-wrap:balance}
-.dgrow .dek{color:var(--muted);font-size:13px;line-height:1.55;margin-top:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.dgrow:hover .ttl{color:var(--brandD)}
-@media(max-width:560px){.calbox{padding:13px 12px 11px}.mcg{gap:4px}.dgrow .ttl{font-size:15.5px}}
+/* AI 소식 아젠다(날짜별 카드) — 날짜 박스 + 제목·요약 카드 */
+.agenda{margin-top:2px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:2px 20px;box-shadow:var(--shadow)}
+.drow{display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.drow:last-child{border-bottom:0}
+.dbox{flex:none;width:76px;text-align:center;padding-top:3px}
+.dbox .dd{font-family:var(--serif);font-size:27px;font-weight:800;color:var(--brand);line-height:1;letter-spacing:-.5px}
+.dbox .mm{font-size:11.5px;color:var(--faint);margin-top:3px}
+.dbox .wd{font-size:11px;color:var(--faint);margin-top:1px}
+.devs{flex:1;min-width:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dev{border:1px solid var(--line);border-radius:12px;padding:13px 15px;background:var(--card);text-decoration:none;color:inherit;transition:border-color .12s}
+.dev:hover{border-color:var(--brand)}
+.dev .t{font-family:var(--serif);font-size:15px;font-weight:700;line-height:1.36;color:var(--ink);letter-spacing:-.3px}
+.dev:hover .t{color:var(--brandD)}
+.dev .d{font-size:12.5px;color:var(--muted);line-height:1.5;margin-top:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:680px){.devs{grid-template-columns:1fr}.drow{gap:14px}.dbox{width:50px}.dbox .dd{font-size:22px}.dev .t{font-size:14.5px}}
 /* 북마크(개인 링크 모음) 페이지 */
 .bmgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:16px;margin-top:4px}
 .bmcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:15px 15px 8px;box-shadow:var(--shadow)}
@@ -368,36 +360,14 @@ function buildHome(posts) {
   for (const p of posts) { const d = p.date || ''; (byDate[d] = byDate[d] || []).push(p); }
   const dates = Object.keys(byDate).filter(Boolean).sort((a,b)=> a<b ? 1 : -1);
 
-  // 미니 달력 — 가장 최근 글이 속한 달 (소식 있는 날 강조 · 클릭 시 그 날로 이동)
-  let calHtml = '';
-  if (dates.length) {
-    const [Y,M] = dates[0].split('-').map(Number);
-    const firstDow = new Date(Y, M-1, 1).getDay();
-    const dim = new Date(Y, M, 0).getDate();
-    let cells = '';
-    for (let i=0;i<firstDow;i++) cells += `<span class="mc blank"></span>`;
-    for (let d=1; d<=dim; d++) {
-      const key = `${Y}-${String(M).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-      const arts = byDate[key];
-      cells += (arts && arts.length)
-        ? `<a class="mc has" href="#d-${key}">${d}<span class="c">${arts.length}</span></a>`
-        : `<span class="mc">${d}</span>`;
-    }
-    const dowRow = DOW.map((w,i)=>`<span class="dow${i===0?' sun':''}">${w}</span>`).join('');
-    calHtml = `<div class="calbox">
-<div class="ch"><b>🗓️ AI 소식 달력</b><span>${Y}년 ${M}월 · 소식이 처음 터진 날</span></div>
-<div class="mcg">${dowRow}${cells}</div>
-<div class="calhint">진한 날 = 소식 있는 날 · 누르면 그 날 글로 이동</div>
-</div>`;
-  }
-
-  // 날짜별 그룹 리스트 (첫 등장일 기준)
-  const groups = dates.map(dk => {
-    const [ , M, D] = dk.split('-').map(Number);
-    const rows = byDate[dk].map(p=>`<a class="dgrow" href="p/${p.id}/"><span class="ttl">${escHtml(p.title)}</span><span class="dek">${escHtml(p.angle||'')}</span></a>`).join('');
-    return `<section class="daygroup" id="d-${dk}"><div class="dgh"><span class="dd">${M}월 ${D}일</span><span class="cnt">소식 ${byDate[dk].length}건</span></div>${rows}</section>`;
+  // 아젠다 — 날짜별(첫 등장일) 카드. 왼쪽 날짜 박스 + 오른쪽 제목·요약 카드(안 잘리게).
+  const rows = dates.map(dk => {
+    const [Y, M, D] = dk.split('-').map(Number);
+    const wd = DOW[new Date(Y, M-1, D).getDay()];
+    const cards = byDate[dk].map(p=>`<a class="dev" href="p/${p.id}/"><span class="t">${escHtml(p.title)}</span><span class="d">${escHtml(p.angle||'')}</span></a>`).join('');
+    return `<div class="drow"><div class="dbox"><div class="dd">${D}</div><div class="mm">${M}월</div><div class="wd">${wd}</div></div><div class="devs">${cards}</div></div>`;
   }).join('\n');
-  const listInner = posts.length ? (calHtml + groups) : `<div class="empty">첫 글이 곧 올라옵니다.</div>`;
+  const listInner = posts.length ? `<div class="agenda">${rows}</div>` : `<div class="empty">첫 글이 곧 올라옵니다.</div>`;
 
   const blogLd = {
     '@context':'https://schema.org','@type':'Blog','name':BRAND,'description':desc,
