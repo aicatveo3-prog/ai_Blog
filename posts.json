@@ -49,6 +49,52 @@
   ],
   "posts": [
     {
+      "id": "grok-4-5",
+      "title": "일론 머스크의 xAI가 새 AI를 내놓았어요 — 그런데 비교 상대는 OpenAI가 아니라 앤트로픽이었어요",
+      "date": "2026-07-08",
+      "type": "B 심층 분석",
+      "category": "최신 AI 소식",
+      "stage": "작성중",
+      "layout": "feature",
+      "readMin": 8,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "xAI가 Grok 4.5를 공개하며 Claude Opus급 성능에 더 싸고 빠르다고 주장했어요. 그런데 정작 발표 제목은 오픈AI를, 본문 비교는 앤트로픽을 가리켰죠. 성능 주장은 아직 제3자 검증 전이에요.",
+      "lens": [
+        "① 그래서 나한테?"
+      ],
+      "versions": [
+        {
+          "v": "v1",
+          "date": "2026-07-20",
+          "note": "최초 초안",
+          "path": "drafts/2026.07.20_grok-4-5/v1.md"
+        }
+      ]
+    },
+    {
+      "id": "meta-muse-image",
+      "title": "메타가 그림 그리는 AI를 내놨어요 — 반가운 사람도, 불안한 사람도 생겼어요",
+      "date": "2026-07-07",
+      "type": "B 심층 분석",
+      "category": "최신 AI 소식",
+      "stage": "작성중",
+      "layout": "feature",
+      "readMin": 6,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "Meta가 이미지 생성 AI Muse Image를 공개하며 \"누구나 그림을 그릴 수 있다\"고 홍보했어요. 같은 발표 안에 일러스트레이터들의 일자리 불안도 함께 언급됐죠. Arena 벤치마크 2위 기록.",
+      "lens": [
+        "① 그래서 나한테?"
+      ],
+      "versions": [
+        {
+          "v": "v1",
+          "date": "2026-07-20",
+          "note": "최초 초안",
+          "path": "drafts/2026.07.20_meta-muse-image/v1.md"
+        }
+      ]
+    },
+    {
       "id": "google-publishers-lawsuit",
       "title": "Google, 저작권 소송 — \"약속한 건 스니펫인데 전체책을 학습했어요\"",
       "date": "2026-07-14",

@@ -1889,7 +1889,8 @@
           "v": "💬 반응",
           "path": "collect/reactions/grok-4-5.md"
         }
-      ]
+      ],
+      "postId": "grok-4-5"
     },
     {
       "title": "Meta Muse Image — 이미지 생성 모델 공개",
@@ -1917,7 +1918,8 @@
           "v": "💬 반응",
           "path": "collect/reactions/meta-muse-image.md"
         }
-      ]
+      ],
+      "postId": "meta-muse-image"
     },
     {
       "title": "Pinecone Nexus Engine, 7/1 공개 프리뷰 — AI 에이전트용 지식 컴파일러",
