@@ -1,0 +1,35 @@
+{
+  "date": "2026-07-21",
+  "generated": "2026-07-21T13:20:00+09:00",
+  "note": "Haiku 수집 스테이징. Claude가 검증·인박스 반영 예정. inbox.json·posts.json·drafts 미수정.",
+  "items": [
+    {
+      "slug": "infinity-15m-seed",
+      "title": "Infinity, AI 추론 소프트웨어로 $15M 시드 유치 (Touring Capital·OpenAI·Anthropic 연구자 참여)",
+      "firstSeen": "2026-07-20",
+      "verified": true,
+      "verifyNote": "TechCrunch(2026-07-20) + Yahoo Tech + Business Wire 교차확인. Jeremy Nixon(ex-Google Brain, AGI House) 창업. Ignition 에이전트로 칩 간 추론 커널 자동화. $100M 밸류. d-Matrix 고객.",
+      "source": "https://techcrunch.com/2026/07/20/inference-startup-infinity-raises-15m-from-touring-capital-openai-and-athropic-researchers/",
+      "tags": ["자금", "하드웨어", "에이전트", "추론"],
+      "tabs": {
+        "summary": "collect/infinity-15m-seed-summary.md",
+        "detail": "collect/infinity-15m-seed.md",
+        "reactions": "collect/reactions/infinity-15m-seed.md"
+      }
+    },
+    {
+      "slug": "cuspai-450m-series-b",
+      "title": "CuspAI, AI 재료 발굴로 $450M Series B 유치 ($2.6B 밸류, Bezos·UK 정부 참여)",
+      "firstSeen": "2026-07-20",
+      "verified": true,
+      "verifyNote": "Reuters(2026-07-20) + X/Trending 교차확인. Kleiner Perkins·NEA 주도. Bezos Expeditions, UK Sovereign AI Venture Fund, AMD Ventures 등. AI Materials Foundry(45+ 파트너, Nvidia·Meta 포함) 론칭.",
+      "source": "https://www.reuters.com/business/uk-government-bezos-back-cuspais-450-million-round-startup-seeks-discover-new-2026-07-20/",
+      "tags": ["자금", "연구", "재료과학", "AI"],
+      "tabs": {
+        "summary": "collect/cuspai-450m-series-b-summary.md",
+        "detail": "collect/cuspai-450m-series-b.md",
+        "reactions": "collect/reactions/cuspai-450m-series-b.md"
+      }
+    }
+  ]
+}
