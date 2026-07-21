@@ -10,4 +10,12 @@ if git diff --cached --name-only | grep -q '^posts\.json$'; then
     exit 1
   }
 fi
+# 링크 게이트 — staged된 drafts/*.md의 출처 URL이 가짜(플레이스홀더)·404면 커밋 거부.
+if git diff --cached --name-only | grep -qE '^drafts/.*\.md$'; then
+  node validate-links.mjs || {
+    echo ""
+    echo "링크 검사 실패 — 지어냈거나 없는(404) 출처 URL을 실제 출처로 고치거나 삭제하세요."
+    exit 1
+  }
+fi
 exit 0
