@@ -843,8 +843,10 @@ async function boot(){
       const vs = Array.isArray(p.versions) ? p.versions.map(v=>v&&v.date).filter(Boolean) : [];
       return (vs.length ? vs.sort().slice(-1)[0] : '') || p.published || p.date || '';
     };
+    // 작성일이 같으면(일 단위라 동률) 나중에 추가된 글=더 최근 작성으로 보고 위로.
+    const _oidx = new Map(posts.map((p,i)=>[p.id,i]));
     const ordered = posts.slice().sort((a,b)=>
-      (writeDate(b)||'').localeCompare(writeDate(a)||''));
+      (writeDate(b)||'').localeCompare(writeDate(a)||'') || (_oidx.get(b.id) - _oidx.get(a.id)));
     list.innerHTML = ordered.length ?
       '<div class="artrow arthead"><div>📝 블로그 글</div><div>📱 스레드 글</div></div>' +
       ordered.map(artRow).join('') :

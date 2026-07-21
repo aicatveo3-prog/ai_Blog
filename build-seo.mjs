@@ -451,7 +451,7 @@ function buildHome(posts) {
     const viewDate = monthGrid(dates[0].slice(0,7)) + agendaOf(dates);
     // 뷰 ②: 최신 작성순 — v1/v2 draft(글쓰기) 최신 날짜 기준. 카드 그리드.
     const fmtMD = (s) => { const [ ,m,d] = s.split('-'); return `${+m}/${+d}`; };
-    const writeSorted = posts.slice().sort((a,b)=> (writeDate(b)||'').localeCompare(writeDate(a)||''));
+    const writeSorted = posts.slice().sort((a,b)=> (writeDate(b)||'').localeCompare(writeDate(a)||'') || ((RAW_IDX.get(b.id)||0) - (RAW_IDX.get(a.id)||0)));
     const wcards = writeSorted.map(p=>{
       const wd = writeDate(p);
       return `<a class="wcard" href="p/${p.id}/"><span class="wdate">🗓 ${wd?fmtMD(wd)+' 작성':''}</span><span class="t">${escHtml(p.title)}</span><span class="d">${escHtml(p.angle||'')}</span></a>`;
@@ -672,7 +672,10 @@ const approvedIds = (() => {
   catch { console.warn('  ⚠️ publish-approvals.json 없음/오류 — 승인된 글이 하나도 없는 것으로 처리(발행 0편).'); return new Set(); }
 })();
 
-const stagedForPublish = JSON.parse(read('posts.json')).posts.filter(p => p.stage === '발행');
+const _rawPosts = JSON.parse(read('posts.json')).posts;
+// posts.json 원본(추가) 순서 — 작성일 동률 시 '나중에 추가=더 최근 작성'으로 2차 정렬하는 데 씀.
+const RAW_IDX = new Map(_rawPosts.map((p, i) => [p.id, i]));
+const stagedForPublish = _rawPosts.filter(p => p.stage === '발행');
 const blocked = stagedForPublish.filter(p => !approvedIds.has(p.id));
 if (blocked.length) {
   console.warn(`\n🔒 발행 승인 없음 ${blocked.length}편 — 사이트에 올리지 않고 건너뜁니다:`);
