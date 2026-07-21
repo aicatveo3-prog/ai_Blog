@@ -838,11 +838,13 @@ async function boot(){
     // 없으면 최신 버전 날짜, 그것도 없으면 뉴스 날짜(date). 이러면 발행글의 개요 순서가
     // 실제 사이트 노출 순서와 정확히 일치한다(검수중 등 미발행 글은 최근 작업 날짜 순으로 사이에 놓임).
     // (옛 방식은 posts.json '등록 순서를 뒤집기'라 발행일과 무관하게 어긋났음 — 2026-07-20 수정.)
-    const pubDate = p => p.published
-      || (Array.isArray(p.versions) ? p.versions.map(v=>v&&v.date).filter(Boolean).sort().slice(-1)[0] : '')
-      || p.date || '';
+    // 작성 날짜(최신 버전일) 기준 최신순 — 가장 최근에 '쓴' 글이 위로.
+    const writeDate = p => {
+      const vs = Array.isArray(p.versions) ? p.versions.map(v=>v&&v.date).filter(Boolean) : [];
+      return (vs.length ? vs.sort().slice(-1)[0] : '') || p.published || p.date || '';
+    };
     const ordered = posts.slice().sort((a,b)=>
-      (pubDate(b)||'').localeCompare(pubDate(a)||'') || (b.date||'').localeCompare(a.date||''));
+      (writeDate(b)||'').localeCompare(writeDate(a)||'') || (b.published||'').localeCompare(a.published||''));
     list.innerHTML = ordered.length ?
       '<div class="artrow arthead"><div>📝 블로그 글</div><div>📱 스레드 글</div></div>' +
       ordered.map(artRow).join('') :

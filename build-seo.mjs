@@ -297,6 +297,18 @@ a.gcell.has:hover .t{color:var(--brand)}
 .gev .d{font-size:10.5px;color:var(--muted);line-height:1.32;margin-top:2px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
 .gmore{font-size:10.5px;color:var(--brand);font-weight:700}
 .olabel{font-family:var(--serif);font-weight:800;font-size:15px;color:var(--ink);margin:0 2px 9px}
+/* 정렬 토글(메인) + 최신 작성순 카드 그리드 */
+.sorttoggle{display:inline-flex;gap:3px;background:var(--soft);border-radius:999px;padding:3px;margin:0 0 16px}
+.sorttoggle button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:13px;font-weight:700;padding:7px 14px;border-radius:999px;cursor:pointer;transition:background .12s,color .12s}
+.sorttoggle button.on{background:var(--card);color:var(--brand);box-shadow:var(--shadow)}
+.wgrid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:761px){.wgrid{position:relative;left:50%;transform:translateX(-50%);width:min(1080px,92vw);grid-template-columns:1fr 1fr 1fr}}
+.wcard{border:1px solid var(--line);border-radius:12px;padding:13px 15px;background:var(--card);text-decoration:none;color:inherit;transition:border-color .12s}
+.wcard:hover{border-color:var(--brand)}
+.wcard .wdate{display:block;font-size:11px;color:var(--brand);font-weight:700;margin-bottom:5px}
+.wcard .t{font-family:var(--serif);font-size:15px;font-weight:700;line-height:1.36;color:var(--ink);letter-spacing:-.3px}
+.wcard:hover .t{color:var(--brandD)}
+.wcard .d{font-size:12.5px;color:var(--muted);line-height:1.5;margin-top:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 /* 북마크(개인 링크 모음) 페이지 */
 .bmgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:16px;margin-top:4px}
 .bmcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:15px 15px 8px;box-shadow:var(--shadow)}
@@ -315,6 +327,13 @@ a.gcell.has:hover .t{color:var(--brand)}
 @media(max-width:820px){.navlinks{display:flex}.navlinks a{padding:8px 10px;font-size:13px}}
 @media(max-width:560px){.brand .wm{display:none}.nav-in{gap:8px;padding:11px 13px}.navlinks{gap:2px;margin-left:0}.navlinks a{padding:7px 8px;font-size:12px}}
 `;
+
+// 메인 정렬 토글: 소식 날짜순(달력+아젠다) ↔ 최신 작성순(카드). 선택은 localStorage 기억.
+const HOMEJS = `(function(){var t=document.querySelector('.sorttoggle');if(!t)return;
+var vd=document.getElementById('view-date'),vw=document.getElementById('view-write'),btns=t.querySelectorAll('button');
+function set(v){btns.forEach(function(b){b.classList.toggle('on',b.getAttribute('data-view')===v);});if(vd)vd.hidden=v!=='date';if(vw)vw.hidden=v!=='write';try{localStorage.setItem('home-sort',v);}catch(e){}}
+btns.forEach(function(b){b.addEventListener('click',function(){set(b.getAttribute('data-view'));});});
+var s;try{s=localStorage.getItem('home-sort');}catch(e){}set(s==='write'?'write':'date');})();`;
 
 const JS = `(function(){var root=document.documentElement,btn=document.getElementById('themeBtn');
 var s=localStorage.getItem('vector-theme');if(s)root.setAttribute('data-theme',s);
@@ -423,7 +442,18 @@ function buildHome(posts) {
   if (!posts.length) {
     listInner = `<div class="empty">첫 글이 곧 올라옵니다.</div>`;
   } else {
-    listInner = monthGrid(dates[0].slice(0,7)) + agendaOf(dates);
+    // 뷰 ①: 소식 날짜순(firstSeen) — 달력 + 아젠다
+    const viewDate = monthGrid(dates[0].slice(0,7)) + agendaOf(dates);
+    // 뷰 ②: 최신 작성순(발행/작성일) — 카드 그리드
+    const fmtMD = (s) => { const [ ,m,d] = s.split('-'); return `${+m}/${+d}`; };
+    const writeSorted = posts.slice().sort((a,b)=> (pubDate(b)||'').localeCompare(pubDate(a)||'') || (b.date||'').localeCompare(a.date||''));
+    const wcards = writeSorted.map(p=>{
+      const pd = pubDate(p);
+      return `<a class="wcard" href="p/${p.id}/"><span class="wdate">🗓 ${pd?fmtMD(pd)+' 발행':''}</span><span class="t">${escHtml(p.title)}</span><span class="d">${escHtml(p.angle||'')}</span></a>`;
+    }).join('');
+    const viewWrite = `<div class="wgrid">${wcards}</div>`;
+    const toggle = `<div class="sorttoggle"><button data-view="date">📅 소식 날짜순</button><button data-view="write">🆕 최신 작성순</button></div>`;
+    listInner = `${toggle}<div id="view-date">${viewDate}</div><div id="view-write" hidden>${viewWrite}</div>`;
   }
 
   const blogLd = {
@@ -444,7 +474,7 @@ ${navHtml('', 'home')}
 <header class="mast"><div class="kick">학생도 쉽게 보는 AI 소식</div>
 <h1>어려운 AI 뉴스,<br><span class="hlk">여기선 쉽게</span> 알려드려요</h1>
 <p>${escHtml(desc)}</p></header>
-<div class="seclabel"><b>AI 소식 달력</b><span>· 전체 ${posts.length}편</span></div>
+<div class="seclabel"><b>AI 소식</b><span>· 전체 ${posts.length}편</span></div>
 ${listInner}
 <section class="news"><div><h4>매주, 중요한 것만</h4>
 <p>매주 중요한 AI 소식만 골라 학생 눈높이로 쉽게 정리해 드려요. 전체 파이프라인은 운영 대시보드에서 볼 수 있어요.</p></div>
@@ -452,6 +482,7 @@ ${listInner}
 <footer>수집 → 선별 → 조사 → 관점 → 초안 → 검수 → 발행 · ${BRAND} 운영 시스템<br>© 2026 ${BRAND}</footer>
 </main>
 <script>${JS}</script>
+<script>${HOMEJS}</script>
 </body>
 </html>`;
 }
