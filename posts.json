@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20",
+  "updated": "2026-07-21",
   "stages": [
     "인박스",
     "검토중",
@@ -48,6 +48,52 @@
     }
   ],
   "posts": [
+    {
+      "id": "google-frozen-v2-chip",
+      "title": "Google이 Gemini용 ‘Frozen v2’ 칩을 만든다는데 — 6~10배 효율이 진짜일까?",
+      "date": "2026-07-20",
+      "type": "A 속보 브리핑",
+      "category": "최신 AI 소식",
+      "stage": "검수중",
+      "layout": "feature",
+      "readMin": 4,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "Google이 Gemini 효율을 위해 Frozen v2 칩을 개발 중이라는 보도. 6~10배 효율 목표, 2028년 출시 예정. 수치는 소식통 기반이라 독립 검증 전.",
+      "lens": [
+        "① 그래서 나한테?"
+      ],
+      "versions": [
+        {
+          "v": "v1",
+          "date": "2026-07-21",
+          "note": "최초 초안 (원샷)",
+          "path": "drafts/2026.07.21_google-frozen-v2-chip/v1.md"
+        }
+      ]
+    },
+    {
+      "id": "natural-ai-agent-payments",
+      "title": "AI 에이전트가 돈을 직접 보내게 하겠다는 스타트업, 3천만 달러를 받았어요",
+      "date": "2026-07-20",
+      "type": "A 속보 브리핑",
+      "category": "최신 AI 소식",
+      "stage": "검수중",
+      "layout": "feature",
+      "readMin": 3,
+      "author": "AI 쉽게 알려주는 집",
+      "angle": "Natural이 AI 에이전트 전용 결제 인프라로 Series A $30M 유치. Forerunner 주도, 총 $40M. 에이전트가 자율 송금·수금할 수 있게 하겠다는 목표.",
+      "lens": [
+        "① 그래서 나한테?"
+      ],
+      "versions": [
+        {
+          "v": "v1",
+          "date": "2026-07-21",
+          "note": "최초 초안 (원샷)",
+          "path": "drafts/2026.07.21_natural-ai-agent-payments/v1.md"
+        }
+      ]
+    },
     {
       "id": "grok-4-5",
       "title": "일론 머스크의 xAI가 새 AI를 내놓았어요 — 그런데 비교 상대는 OpenAI가 아니라 앤트로픽이었어요",
