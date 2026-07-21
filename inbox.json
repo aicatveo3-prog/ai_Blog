@@ -1,1956 +1,2012 @@
 {
-  "generated": "2026-07-20",
-  "note": "지난 한 달 AI 소식 전방위 수집. firstSeen = 검증된 진짜 첫 등장일(1차/신뢰 소스). 일자 미확정은 verified:false로 '날짜 없음'에 대기. surfaced가 다르면 gap 표시.",
-  "items": [
-    {
-      "title": "AIsphere Series C $439M 펀딩 라운드 완료 (Alibaba 주도)",
-      "firstSeen": "2026-07-14",
-      "surfaced": "2026-07-16",
-      "verified": true,
-      "verifyNote": "Caixin Global(7/15) + TechCrunch(7/13) + Techtimes(7/15) 3곳 교차확인. PixVerse 플랫폼, 창업자 Wang Changhu(전 MS Research Asia, ByteDance). 1.5억+ 사용자, 177개국. AI 게임 엔진 개발 목표.",
-      "source": "https://www.caixinglobal.com/2026-07-15/alibaba-leads-439-million-funding-round-for-ai-video-startup-aisphere-102464241.html",
-      "status": "발행",
-      "postId": "aisphere-series-c",
-      "tags": [
-        "자금",
-        "AI 비디오",
-        "스타트업",
-        "Alibaba"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/aisphere-series-c-funding-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/aisphere-series-c-funding.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/aisphere-series-c-funding.md"
-        }
-      ]
-    },
-    {
-      "title": "Apple, OpenAI 거래 비밀 도용 소송 — 하드웨어 설계·기술 명세 절취 혐의",
-      "firstSeen": "2026-07-10",
-      "surfaced": "2026-07-13",
-      "verified": true,
-      "verifyNote": "CNBC·Bloomberg·TechCrunch·CNN·Axios·Euronews·Fortune 7개 매체 7/10 동시 교차확인. Apple이 미 북부 캘리포니아 연방법원에 OpenAI·io Products 고소. Tang Tan(전 Apple VP, 현 OpenAI HW책임자)이 채용과정에서 Apple 직원들에게 비밀 정보·부품 제공 강요. Chang Liu(ex-Apple 엔지니어, 2026-01 OpenAI 이직)가 미공개 하드웨어 파일·기술 명세 대량 다운로드.",
-      "source": "https://www.cnbc.com/2026/07/10/apple-openai-lawsuit-trade-secrets.html",
-      "status": "발행",
-      "postId": "apple-openai-lawsuit",
-      "tags": [
-        "소송",
-        "거래비밀",
-        "OpenAI",
-        "하드웨어"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/apple-openai-lawsuit-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/apple-openai-lawsuit.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/apple-openai-lawsuit.md"
-        }
-      ]
-    },
-    {
-      "title": "ICML 2026 서울 개최 — 기록 23,918 투고, 60+ 워크샵에서 '에이전트AI' 독점",
-      "firstSeen": "2026-07-06",
-      "surfaced": "2026-07-13",
-      "verified": true,
-      "verifyNote": "TechTimes·Atoms dev blog·ICML 공식 사이트(icml.cc) 교차확인. 7/6~7/11 COEX 컨벤션센터 서울 개최. 23,918 투고(역대 최다), 6,352 승인(26.6% 통과율), 60+ 워크샵 제목에 '에이전트AI' 포함 — 'agentic AI'가 학술 분야의 중심축이 됨을 신호. 2% 논문(497건) LLM 위반으로 데스크 거절.",
-      "source": "https://www.techtimes.com/articles/319243/20260628/icml-2026-opens-seoul-next-week-record-23918-submissions-signal-ai-agent-safety-era.htm",
-      "status": "인박스",
-      "tags": [
-        "학술대회",
-        "에이전트",
-        "연구",
-        "아시아"
-      ]
-    },
-    {
-      "title": "LeapXpert, $1.8억 시리즈 라운드 유치 — AI 통신 거버넌스 플랫폼",
-      "firstSeen": "2026-06-30",
-      "surfaced": "2026-07-13",
-      "verified": true,
-      "verifyNote": "PR Newswire·SiliconANGLE·Foley & Lardner법무 공식 발표 6/30. Riverwood Capital 주도, Epoch Ventures·Accel 참여. AI 커뮤니케이션 거버넌스(Slack·Email·Teams 감시·준법심사·리스크관리) 솔루션. 기업용 고객 600+ (CVE-2024-27351 취약점으로 보안 우려도 있었음, 해결됨).",
-      "source": "https://www.prnewswire.com/news-releases/leapxpert-raises-180-million-to-lead-ai-powered-governed-communications-302814485.html",
-      "status": "인박스",
-      "tags": [
-        "자금",
-        "거버넌스",
-        "엔터프라이즈"
-      ]
-    },
-    {
-      "title": "DeepSeek, 자체 AI칩 개발 시작 — NVIDIA 의존도 감소 전략",
-      "firstSeen": "2026-07-07",
-      "surfaced": "2026-07-13",
-      "verified": true,
-      "verifyNote": "TechNode·Semafor·Cybernews·Yahoo Finance 7/7~7/8 교차확인. 중국 AI 스타트업 DeepSeek이 추론(inference) 최적화 자체 칩 개발 중. 약 1년 전 프로젝트 시작, 최근 인력 채용 가속. NVIDIA·Huawei 칩 의존도 낮추기 전략. 초기 단계, 상업화 일정 미정.",
-      "source": "https://technode.com/2026/07/08/deepseek-begins-in-house-ai-chip-development-to-cut-reliance-on-nvidia-sources-say/",
-      "status": "발행",
-      "postId": "deepseek-chip",
-      "tags": [
-        "칩",
-        "기술개발",
-        "중국",
-        "하드웨어"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/deepseek-inhouse-chip-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/deepseek-inhouse-chip.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/deepseek-inhouse-chip.md"
-        }
-      ]
-    },
-    {
-      "title": "Ant Group의 Robbyant, LingBot-VA 2.0 공개 — 로봇 제어용 비디오-액션 기초모델",
-      "firstSeen": "2026-07-11",
-      "surfaced": "2026-07-11",
-      "verified": true,
-      "verifyNote": "MarkTechPost·ArXiv·GitHub 교차확인. Ant Group Robbyant가 2026-07-11 LingBot-VA 2.0 공개. 단일 GPU에서 150Hz 실시간 추론, 20개 시연으로 새 작업 일반화 가능한 비디오-액션 모델.",
-      "source": "https://www.marktechpost.com/2026/07/11/ant-groups-robbyant-unveils-lingbot-va-2-0/",
-      "status": "인박스",
-      "tags": [
-        "모델",
-        "로봇",
-        "중국"
-      ]
-    },
-    {
-      "title": "Meta Superintelligence, Muse Spark 1.1 공개 — 멀티모달 추론·에이전트 최적화",
-      "firstSeen": "2026-07-09",
-      "surfaced": "2026-07-11",
-      "verified": true,
-      "verifyNote": "Meta AI 공식 블로그(2026-07-09), TechCrunch·CNBC·Fortune 교차확인. Muse Spark 1.1은 1M 토큰 컨텍스트 윈도우, 메인-서브 에이전트 위임 구조, 도구/컴퓨터 사용 및 코딩 강화. Meta Model API 공개 프리뷰.",
-      "source": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
-      "status": "인박스",
-      "tags": [
-        "모델",
-        "에이전트",
-        "프레임워크"
-      ]
-    },
-    {
-      "title": "Anthropic, Claude Cowork를 모바일·웹으로 확대 — 크로스 디바이스 에이전트",
-      "firstSeen": "2026-07-07",
-      "surfaced": "2026-07-11",
-      "verified": true,
-      "verifyNote": "Anthropic 공식 발표(2026-07-07), 9to5Mac·TechCrunch·MacRumors 교차확인. 데스크톱 전용에서 iPhone·웹으로 확대. Max 플랜부터 단계적 롤아웃, 8월 5일까지 사용 한도 2배 제공.",
-      "source": "https://www.anthropic.com/product/claude-cowork",
-      "status": "인박스",
-      "tags": [
-        "Anthropic",
-        "프로덕트",
-        "에이전트"
-      ]
-    },
-    {
-      "title": "Amazon Q의 MCP 자동 실행 취약점 — 다각도 반응",
-      "firstSeen": "2026-07-10",
-      "surfaced": "2026-07-10",
-      "verified": true,
-      "verifyNote": "Wiz Research(Maor Dokhanian) 공개, 4월 20일 Amazon 보고 → 5월 12일 초기 패치 → 6월 26일 공개. CVE-2026-12957/12958. 22개+ 소스 교차확인(보안·언론·정책·업계).",
-      "source": "https://www.wiz.io/blog/amazon-q-vulnerability",
-      "status": "인박스",
-      "tags": [
-        "보안",
-        "MCP",
-        "취약점",
-        "논란"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/amazon-q-vulnerability-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/amazon-q-vulnerability.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/amazon-q-vulnerability.md"
-        }
-      ]
-    },
-    {
-      "title": "Anthropic, 저작권 합의 $1.5B — Authors Guild 포함 250+ 저자",
-      "firstSeen": "2026-07-10",
-      "surfaced": "2026-07-10",
-      "verified": true,
-      "verifyNote": "Anthropic 공식 발표. Authors Guild·NYT·등 저작권 소송 관련자 포함 합의. 35+ 국제 정책·기업 반응 수집.",
-      "source": "https://www.anthropic.com/news/copyright-settlement",
-      "status": "인박스",
-      "tags": [
-        "법률",
-        "저작권",
-        "합의",
-        "Anthropic"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/anthropic-copyright-settlement-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/anthropic-copyright-settlement.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/anthropic-copyright-settlement.md"
-        }
-      ]
-    },
-    {
-      "title": "MCP v0.2 무상태(Stateless) 구조 릴리스 예정 — OAuth 2.1 전환",
-      "firstSeen": "2026-07-10",
-      "surfaced": "2026-07-10",
-      "verified": true,
-      "verifyNote": "MCP 공식 블로그 5/21 RC 발표, 7/28 최종 릴리스 예정. Breaking change 업계 우려. 30+ 소스.",
-      "source": "https://blog.modelcontextprotocol.io/posts/mcp-stateless-release/",
-      "status": "인박스",
-      "tags": [
-        "프레임워크",
-        "MCP",
-        "기술표준"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/mcp-v02-stateless-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/mcp-v02-stateless.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/mcp-v02-stateless.md"
-        }
-      ]
-    },
-    {
-      "title": "AI 데이터센터 전력 부족 — 2027년까지 40% 제약 예상(Gartner)",
-      "firstSeen": "2026-07-10",
-      "surfaced": "2026-07-10",
-      "verified": true,
-      "verifyNote": "Gartner 예측 보도 2026-06-15 이후 확산. 2027년까지 AI 인프라 전력 40% 제약, 정부 개입(US·EU·China·Korea) 분석. 60+ 소스.",
-      "source": "https://www.gartner.com/en/newsroom/press-releases/2026-06-15-gartner-ai-power-constraint",
-      "status": "발행",
-      "tags": [
-        "하드웨어",
-        "인프라",
-        "정책"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/ai-datacenter-power-shortage-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/ai-datacenter-power-shortage.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/ai-datacenter-power-shortage.md"
-        }
-      ],
-      "postId": "ai-datacenter-power"
-    },
-    {
-      "title": "연방 AI 감시 체계 — NSA·CISA 30일 자발적 검증(Frontier AI)",
-      "firstSeen": "2026-07-10",
-      "surfaced": "2026-07-10",
-      "verified": true,
-      "verifyNote": "Trump 행정부 6/2 행정명령, 공식 프레임 7/1. NSA/CISA 주도 프론티어 모델 공개 전 30일 검증. 자발적(비강제). 40+ 정책·기업 반응.",
-      "source": "https://federalnewsnetwork.com/artificial-intelligence/2026/07/the-administrations-new-ai-framework/",
-      "status": "인박스",
-      "tags": [
-        "정책",
-        "규제",
-        "미국"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/federal-ai-surveillance-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/federal-ai-surveillance.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/federal-ai-surveillance.md"
-        }
-      ]
-    },
-    {
-      "title": "OpenAI-NYT 저작권 소송 '증거 은폐' 적발",
-      "firstSeen": "2026-07-09",
-      "surfaced": "2026-07-10",
-      "verified": true,
-      "verifyNote": "TechCrunch·Washington Post 교차확인. 78백만 건 ChatGPT 대화 데이터베이스 드러남. NYT 제재 청구.",
-      "source": "https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/",
-      "status": "인박스",
-      "tags": [
-        "OpenAI",
-        "저작권",
-        "소송",
-        "규제"
-      ]
-    },
-    {
-      "title": "OpenAI, GPT-5.6 (Sol/Terra/Luna) 시리즈 공개 출시",
-      "firstSeen": "2026-07-09",
-      "surfaced": "2026-07-10",
-      "verified": true,
-      "verifyNote": "OpenAI 공식 발표. 정부 안전검증 후 20개 파트너만 배포. Sol(플래그십)·Terra(비용효율)·Luna(고속).",
-      "source": "https://openai.com/index/previewing-gpt-5-6-sol/",
-      "status": "인박스",
-      "tags": [
-        "OpenAI",
-        "모델",
-        "GPT-5.6"
-      ]
-    },
-    {
-      "title": "Cerebras, 유럽 AI 인프라 확장 — 2027년 말까지 200MW",
-      "firstSeen": "2026-07-09",
-      "surfaced": "2026-07-10",
-      "verified": true,
-      "verifyNote": "파리 RAISE Summit 발표. 2026년 말 첫 DC, 2027년 200MW. OpenAI 워크로드 지원.",
-      "source": "https://www.euronews.com/business/2026/07/09/cerebras-targets-europe-with-multibillion-dollar-ai-expansion/",
-      "status": "인박스",
-      "tags": [
-        "인프라",
-        "하드웨어",
-        "유럽"
-      ]
-    },
-    {
-      "title": "Google 피싱 소송: AI 악용 'Outsider Enterprise' 150만 악성 URL",
-      "firstSeen": "2026-06-12",
-      "surfaced": "2026-07-10",
-      "verified": true,
-      "verifyNote": "Google RICO 소송. 150만 URL, 387만 신용카드 도난, $19B 손실.",
-      "source": "https://www.findlaw.com/legalblogs/courtside/google-turns-to-rico-in-battle-against-outsider-enterprise/",
-      "status": "인박스",
-      "tags": [
-        "Google",
-        "안전",
-        "AI악용"
-      ]
-    },
-    {
-      "title": "Workday 채용 차별 소송: AI가 '10억 건' 구직 거절(클래스액션)",
-      "firstSeen": "2026-03-06",
-      "surfaced": "2026-07-10",
-      "verified": true,
-      "verifyNote": "3/6 판결. Derek Mobley. Workday AI 채용도구 인종·나이·장애 차별. ADEA 적용 인정.",
-      "source": "https://www.akingump.com/en/insights/ai-law-and-regulation-tracker/court-allows-discrimination-claims/",
-      "status": "인박스",
-      "tags": [
-        "AI윤리",
-        "소송",
-        "차별"
-      ]
-    },
-    {
-      "title": "xAI 안전 내부고발 소송: Grok 편향·무기화 경고 엔지니어 해임",
-      "firstSeen": "2026-06-09",
-      "surfaced": "2026-07-10",
-      "verified": true,
-      "verifyNote": "TechCrunch·Decrypt 교차확인. Devin Kim 부당해고. Grok 안전 우려 보고 후 해임.",
-      "source": "https://techcrunch.com/2026/06/10/xai-fired-an-engineer-who-raised-alarms-about-grok-safety/",
-      "status": "인박스",
-      "tags": [
-        "xAI",
-        "안전",
-        "내부고발"
-      ]
-    },
-    {
-      "title": "펜타곤-Anthropic 자율무기 협상 결렬 이메일 공개 (법원 문서 봉인 해제)",
-      "firstSeen": "2026-07-02",
-      "surfaced": "2026-07-05",
-      "verified": true,
-      "verifyNote": "캘리포니아 북부지방법원 문서 7/2 봉인 해제. TechTimes(7/4)·Gizmodo·RealClearDefense(7/3)·TheNextWeb·SecurityWeek 모두 7/2~7/4 교차확인. Amodei-Michael 이메일에서 국방부가 자율무기·국내감시 레드라인 제거를 요구했고, 블랙리스트 지정 다음날 '계약 매우 근접' 이메일을 보낸 이중성 지적. Michael의 1/9 xAI 주식 매도(이해충돌 의혹)도 함께 공개.",
-      "source": "https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm",
-      "status": "인박스",
-      "tags": [
-        "논란",
-        "안전",
-        "Anthropic",
-        "정책"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/pentagon-anthropic-emails-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/pentagon-anthropic-emails.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/pentagon-anthropic-emails.md"
-        }
-      ]
-    },
-    {
-      "title": "Anthropic, 중국 기업의 Claude 우회 접근(싱가포르 법인·VPN) 차단 나서",
-      "firstSeen": "2026-07-02",
-      "surfaced": "2026-07-05",
-      "verified": true,
-      "verifyNote": "파이낸셜타임스(FT) 7/2(현지) 단독 보도, Investing.com·Seeking Alpha·BanklessTimes(7/3)·CryptoTimes(7/3)가 동일 내용 교차확인. Ant Financial(싱가포르 법인 계정)·ByteDance(VPN 개인구독 대납) 등 우회 사례. Anthropic은 4~6월 약 2.5만 부정계정·2880만 건 상호작용의 증류(distillation) 공격을 탐지했다고 별도 발표(6/10 상원 서한). ⚠️ 별개로 6/30 Reddit(r/ClaudeAI, LegitMichel777)이 Claude Code 내 중국 시간대/프록시 탐지용 은닉 코드를 발견해 프라이버시 논란도 병행 중 — 두 사안을 혼동하지 않도록 각 반응에 출처 명시 필요.",
-      "source": "https://www.investing.com/news/stock-market-news/anthropic-targets-loopholes-used-by-chinese-firms-to-access-claude-ft-reports-4774998",
-      "status": "인박스",
-      "tags": [
-        "논란",
-        "정책",
-        "Anthropic",
-        "중국"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/anthropic-china-access-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/anthropic-china-access.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/anthropic-china-access.md"
-        }
-      ]
-    },
-    {
-      "title": "OpenAI, 미 정부에 지분 5%(약 426억 달러) 제공 제안 (IPO 앞두고)",
-      "firstSeen": "2026-07-02",
-      "surfaced": "2026-07-05",
-      "verified": true,
-      "verifyNote": "CNBC·Coindesk·Axios·Semafor 모두 7/2 보도(FT 최초 보도 인용). 알래스카 영구기금 모델 본뜬 정부 투자기구 구상, 다른 AI 랩도 동참 유도. 초기 논의 단계, 의회 승인 필요. GPT-5.6 정부 지연 조치 직후 나온 타이밍이 논란.",
-      "source": "https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html",
-      "status": "인박스",
-      "tags": [
-        "정책",
-        "자금",
-        "OpenAI"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/openai-government-stake-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/openai-government-stake.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/openai-government-stake.md"
-        }
-      ]
-    },
-    {
-      "title": "Tesla, 직원 AI 도구 주당 $200 상한 시행 (자사 xAI 제품은 예외)",
-      "firstSeen": "2026-07-02",
-      "surfaced": "2026-07-05",
-      "verified": true,
-      "verifyNote": "The Information 단독 보도, Electrek(7/2)·TechTimes(7/4)·WinBuzzer(7/4) 교차확인. 7/6부터 시행, 초과분은 관리자 승인 필요. Grok·Composer(xAI 베타) 제품은 상한 제외 — Musk가 xAI CEO 겸임 및 Tesla의 xAI 20억달러 투자와 맞물려 이해충돌 지적. 엔지니어들은 내부적으로 Claude 선호로 알려짐(Electrek 취재원 4명).",
-      "source": "https://electrek.co/2026/07/02/tesla-caps-employee-ai-spending-200-week/",
-      "status": "인박스",
-      "tags": [
-        "논란",
-        "빅테크",
-        "Tesla"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/tesla-ai-token-cap-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/tesla-ai-token-cap.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/tesla-ai-token-cap.md"
-        }
-      ]
-    },
-    {
-      "title": "Five Eyes(5개국 정보기관), AI발 사이버공격 \"몇 달 내\" 공동 경고",
-      "firstSeen": "2026-06-23",
-      "verified": true,
-      "verifyNote": "미·영·캐나다·호주·뉴질랜드 정보기관 공동성명. CNN·Euronews·CBS News 모두 6/23 보도, \"시간표는 수년이 아니라 수개월\"이라는 문구 교차확인.",
-      "source": "https://www.cnn.com/2026/06/23/world/ai-five-eyes-warning-cyber-threat-intl-hnk",
-      "status": "인박스",
-      "tags": [
-        "정책",
-        "안전",
-        "보안"
-      ]
-    },
-    {
-      "title": "Meituan, LongCat-2.0 오픈소스 공개 — 1.6조 파라미터, 중국산 칩 5만개로만 학습",
-      "firstSeen": "2026-06-30",
-      "verified": true,
-      "verifyNote": "VentureBeat·SCMP·felloai·novalogiq 6/30 교차확인. MoE 구조(1.6T 총/약 480억 활성 파라미터), 100만 토큰 컨텍스트, MIT 라이선스 표방. OpenRouter에서 'Owl Alpha'라는 코드네임으로 이미 상위권 사용량을 기록 중이었음. ⚠️ 가중치는 '공개 예정'(coming soon) 상태로 추론 프레임워크·인프라 코드만 우선 공개 — 완전한 오픈소스 여부는 확인 필요.",
-      "source": "https://venturebeat.com/technology/meituan-open-sources-longcat-2-0-the-1-6t-near-frontier-agentic-coding-model-thats-been-leading-openrouter-trained-entirely-on-chinese-chips",
-      "status": "인박스",
-      "tags": [
-        "모델",
-        "오픈모델",
-        "중국",
-        "하드웨어"
-      ]
-    },
-    {
-      "title": "Menlo Ventures, 창사 이래 최대 $3B 펀드 조성 — Anthropic 지분가치 $14B",
-      "firstSeen": "2026-06-23",
-      "verified": true,
-      "verifyNote": "TechCrunch·Bloomberg 6/23 교차확인. Menlo은 2024년 Anthropic Series D를 주도(5억 달러+, 이후 총 약 10억 달러 투자)했고, 그 지분 가치가 현재 약 140억 달러로 평가. 50년 사력 최대 규모 펀드.",
-      "source": "https://techcrunch.com/2026/06/23/after-betting-the-firm-on-anthropic-menlo-ventures-raises-victorious-3b-fund/",
-      "status": "인박스",
-      "tags": [
-        "자금",
-        "Anthropic"
-      ]
-    },
-    {
-      "title": "MCP 2026-07-28 스펙 릴리스 캔디데이트 — 세션 제거하고 완전 무상태(stateless)로",
-      "firstSeen": "2026-05-21",
-      "surfaced": "2026-07-05",
-      "verified": true,
-      "verifyNote": "공식 MCP 블로그(modelcontextprotocol.io) 5/21 릴리스 캔디데이트 포스트 발행. 최종 스펙은 7/28 출시 예정(약 10주 SDK 검증 기간). 세션ID·초기화 핸드셰이크 제거, OAuth 2.1/OIDC 정합 인가 강화(SEP-2468 등), MCP Apps·Tasks 확장 프레임워크 도입. 46일 전 발표된 내용이라 신선도는 낮지만 7/28 최종 출시를 앞두고 있어 트렌드로 유효.",
-      "source": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
-      "status": "인박스",
-      "trend": true,
-      "tags": [
-        "프레임워크",
-        "MCP"
-      ]
-    },
-    {
-      "title": "Claude Sonnet 5 출시",
-      "firstSeen": "2026-06-30",
-      "surfaced": "2026-06-30",
-      "verified": true,
-      "verifyNote": "Anthropic·TechCrunch·MacRumors·Simon Willison 모두 6/30. 7/1~ 후속 기사 다수지만 원 발표는 6/30.",
-      "source": "https://www.anthropic.com/news/claude-sonnet-5",
-      "status": "검수중",
-      "tags": [
-        "모델",
-        "Anthropic"
-      ]
-    },
-    {
-      "title": "캘리포니아, 미 최대 규모 주정부 AI 도입 — 전 기관 Claude 50% 할인",
-      "firstSeen": "2026-06-29",
-      "verified": true,
-      "verifyNote": "Newsom 6/29 발표. 모든 주 기관·시·군이 Claude 접근. 미 역사상 최대 주정부 AI 배치.",
-      "source": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
-      "status": "인박스",
-      "tags": [
-        "정책",
-        "Anthropic"
-      ],
-      "article": "collect/california-claude.md",
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/california-claude-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/california-claude.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/california-claude.md"
-        }
-      ]
-    },
-    {
-      "title": "OpenAI GPT-5.6 Sol·Terra·Luna 프리뷰",
-      "firstSeen": "2026-06-26",
-      "surfaced": "2026-07-02",
-      "verified": true,
-      "verifyNote": "Axios·OpenAI·VentureBeat 6/26 발표. 7/1~7/2 라운드업에 재등장 → 뉴스만 보면 7월로 착각. 진짜는 6/26. (6일 늦게 떴음)",
-      "source": "https://www.axios.com/2026/06/26/openai-gpt-sol-terra-luna-trump",
-      "status": "폐기",
-      "killReason": "프리뷰(제한 파트너)라 직접 검증 불가 — 킬 기준",
-      "tags": [
-        "모델",
-        "OpenAI"
-      ]
-    },
-    {
-      "title": "AI CEO들 G7 정상회의(Évian) 소집 — Fable 5 탈옥·정부 셧다운 여파",
-      "firstSeen": "2026-06-17",
-      "verified": true,
-      "verifyNote": "6/17 G7. Fable 5 탈옥으로 미 정부가 Anthropic Fable 5·Mythos 5 셧다운, 12만자 시스템프롬프트 GitHub 공개 → 'AI 주권'이 조달 이슈로.",
-      "source": "https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026",
-      "status": "인박스",
-      "tags": [
-        "논란",
-        "안전"
-      ]
-    },
-    {
-      "title": "제3연방항소법원, 'AI 학습=공정이용' 첫 항소심 변론",
-      "firstSeen": "2026-06-11",
-      "verified": true,
-      "verifyNote": "6/11. 저작물로 AI를 학습시키는 게 공정이용인지 다투는 2026 최대 저작권 심리.",
-      "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
-      "status": "인박스",
-      "tags": [
-        "법률",
-        "저작권"
-      ]
-    },
-    {
-      "title": "법원, Google·xAI·Perplexity·Apple·Nvidia를 저작권 소송에서 분리",
-      "firstSeen": "2026-06-08",
-      "verified": true,
-      "verifyNote": "6/8 severance 결정.",
-      "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
-      "status": "인박스",
-      "tags": [
-        "법률",
-        "저작권"
-      ]
-    },
-    {
-      "title": "Anthropic, '글로벌 AI 일시중지(pause)' 제안 안전 논문",
-      "firstSeen": "2026-06-04",
-      "verified": true,
-      "verifyNote": "6/4 발표. 올해 가장 중요한 안전 제안. 압축(컴퓨트) 비용이 IPO를 압박한다는 대표 발언도.",
-      "source": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
-      "status": "검수중",
-      "tags": [
-        "연구",
-        "안전",
-        "Anthropic"
-      ],
-      "article": "collect/anthropic-pause.md",
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/anthropic-pause-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/anthropic-pause.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/anthropic-pause.md"
-        }
-      ],
-      "postId": "anthropic-pause"
-    },
-    {
-      "title": "Microsoft, 자체 'MAI' 모델 7종 공개 (MAI-Thinking-1, MAI-Code-1-Flash)",
-      "firstSeen": "2026-06-02",
-      "verified": true,
-      "verifyNote": "CNBC 6/2. OpenAI 의존도↓·개발자 비용↓ 목적. 추론·코딩 특화.",
-      "source": "https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html",
-      "status": "발행",
-      "postId": "microsoft-mai",
-      "tags": [
-        "모델",
-        "Microsoft"
-      ],
-      "article": "collect/microsoft-mai.md",
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/microsoft-mai-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/microsoft-mai.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/microsoft-mai.md"
-        }
-      ]
-    },
-    {
-      "title": "미 행정부, 'AI 혁신·보안 촉진' 행정조치",
-      "firstSeen": "2026-06-02",
-      "verified": true,
-      "verifyNote": "6/2. 강제 라이선스 없이 프런티어 모델 벤치마킹(NSA)·30일 자발적 사전평가 프레임워크.",
-      "source": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/",
-      "status": "인박스",
-      "tags": [
-        "정책",
-        "미국"
-      ],
-      "article": "collect/us-ai-executive-order.md",
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/us-ai-executive-order-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/us-ai-executive-order.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/us-ai-executive-order.md"
-        }
-      ]
-    },
-    {
-      "title": "CNN, Perplexity 저작권 침해 소송",
-      "firstSeen": "2026-05-28",
-      "verified": true,
-      "verifyNote": "5/28 제소. (한 달 경계선 소식)",
-      "source": "https://www.cnn.com/2026/05/28/media/cnn-sues-perplexity-ai-copyright",
-      "status": "인박스",
-      "tags": [
-        "법률",
-        "저작권"
-      ]
-    },
-    {
-      "title": "n8n, MCP 서버를 노드 패널에서 에이전트 도구로",
-      "firstSeen": "2026-05-19",
-      "surfaced": "2026-07-04",
-      "verified": true,
-      "verifyNote": "n8n 공식 릴리즈 노트 5/19. 우리가 수집한 건 7/4 → 46일 늦음(에버그린이라 여전히 유효).",
-      "source": "https://docs.n8n.io/release-notes",
-      "status": "검수중",
-      "tags": [
-        "자동화",
-        "MCP"
-      ]
-    },
-    {
-      "title": "Microsoft Agent Framework 1.0 (MCP 네이티브)",
-      "firstSeen": "2026-04-03",
-      "surfaced": "2026-07-04",
-      "verified": true,
-      "verifyNote": "Python·.NET 1.0 동시 출시 4/3 (2차 정리글 기준). 발행 전 1차 문서로 재확인 권장.",
-      "source": "https://guptadeepak.com/tools/top-10-mcp-frameworks-2026/",
-      "status": "검수중",
-      "tags": [
-        "프레임워크",
-        "MCP"
-      ]
-    },
-    {
-      "title": "Google 6월 묶음: Nano Banana 2 Lite · Gemini Omni Flash(API 프리뷰) · Gemma 4 12B(로컬 16GB)",
-      "firstSeen": null,
-      "verified": false,
-      "verifyNote": "6월 (정확 일자 미확정). Google 공식 6월 라운드업 기준 — 개별 발표일 1차 확인 필요.",
-      "source": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/",
-      "status": "인박스",
-      "tags": [
-        "모델",
-        "Google"
-      ]
-    },
-    {
-      "title": "MiniMax M3 오픈웨이트 (1M 컨텍스트, SWE-Bench Pro 59.0%)",
-      "firstSeen": "2026-06-01",
-      "verified": true,
-      "verifyNote": "6/1 발표(API 즉시), 가중치 HF 6/7. ⚠️ SWE-Bench Pro 59.0%는 자체 주장 — 독립 검증 전(TechTimes 지적).",
-      "source": "https://datanorth.ai/news/minimax-launches-m3",
-      "status": "인박스",
-      "tags": [
-        "오픈모델"
-      ],
-      "article": "collect/minimax-m3.md",
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/minimax-m3-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/minimax-m3.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/minimax-m3.md"
-        }
-      ]
-    },
-    {
-      "title": "Apple: Gemini 기반 Siri + Claude를 iPhone 옵션으로 (Tim Cook)",
-      "firstSeen": null,
-      "verified": false,
-      "verifyNote": "6월 발표. 멀티-AI Extensions로 Claude가 iPhone에 처음 옵션화. 정확 일자 확인 필요.",
-      "source": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
-      "status": "인박스",
-      "tags": [
-        "빅테크",
-        "Apple"
-      ]
-    },
-    {
-      "title": "OpenAI, Sora 중단 발표 (하루 ~$1M 소진 vs 매출 $2.1M)",
-      "firstSeen": "2026-03-24",
-      "verified": true,
-      "verifyNote": "발표 3/24, 웹·앱 종료 4/26, API 종료 9/24. 6월은 환불(Phase 2)일 뿐. ⚠️ 2차 라운드업의 '$15M/일'은 오류 — 1차 기준 약 $1M/일.",
-      "source": "https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/",
-      "status": "인박스",
-      "tags": [
-        "OpenAI"
-      ]
-    },
-    {
-      "title": "Meta, AI 재편으로 ~8,000명 정리해고 (+7,000명 AI팀 재배치)",
-      "firstSeen": "2026-05-20",
-      "verified": true,
-      "verifyNote": "Al Jazeera·NPR·Variety·Quartz 모두 5/20~21(싱가포르부터 이메일). 6월 라운드업이 6월로 잘못 묶었지만 실제는 5/20. 6,000명 채용 취소 + 7,000명 AI 재배치.",
-      "source": "https://www.aljazeera.com/economy/2026/5/20/meta-cuts-8000-jobs-in-sweeping-global-layoffs",
-      "status": "인박스",
-      "tags": [
-        "빅테크",
-        "Meta"
-      ]
-    },
-    {
-      "title": "일리노이, AI 안전 3자 감사 의무화 법 통과",
-      "firstSeen": "2026-05-27",
-      "verified": true,
-      "verifyNote": "SB 315 하원 110-0 통과 5/27(상원 5/21). Pritzker 서명 예정·시행 2027-01-01. 미 최초 AI 안전 감사 의무. 6월 아님.",
-      "source": "https://www.nbcnews.com/tech/tech-news/illinois-legislature-passes-historic-ai-bill-rcna347191",
-      "status": "인박스",
-      "tags": [
-        "정책",
-        "미국"
-      ]
-    },
-    {
-      "title": "NVIDIA Physical AI Data Factory + Isaac GR00T 업데이트 + LG AI 팩토리",
-      "firstSeen": null,
-      "verified": false,
-      "verifyNote": "6월 COMPUTEX/GTC Taipei. 휴머노이드·로보틱스용 데이터 파이프라인. 정확 일자 확인 필요.",
-      "source": "https://nvidianews.nvidia.com/news/nvidia-announces-open-physical-ai-data-factory-blueprint-to-accelerate-robotics-vision-ai-agents-and-autonomous-vehicle-development",
-      "status": "인박스",
-      "tags": [
-        "하드웨어",
-        "로봇"
-      ]
-    },
-    {
-      "title": "대형 펀딩(6월): Baseten $1.5B(F) · Supabase $500M($10.5B밸류) · Flourish $500M seed(Bezos 등)",
-      "firstSeen": null,
-      "verified": false,
-      "verifyNote": "techstartups 6/30 라운드업. 개별 발표일 확인 필요.",
-      "source": "https://techstartups.com/2026/06/30/venture-capital-startup-funding-roundup-june-30-2026/",
-      "status": "인박스",
-      "tags": [
-        "자금"
-      ]
-    },
-    {
-      "title": "Anthropic, $965B Series H 밸류에이션 (OpenAI $852B 상회)",
-      "firstSeen": null,
-      "verified": false,
-      "verifyNote": "5월 말. 정확 일자 확인 필요.",
-      "source": "https://www.digitalapplied.com/blog/ai-venture-funding-2026-where-242b-went-data-atlas",
-      "status": "인박스",
-      "tags": [
-        "자금",
-        "Anthropic"
-      ]
-    },
-    {
-      "title": "직장 내 AI 도입률 73% (2025년 34% → 2026년) — 연구",
-      "firstSeen": null,
-      "verified": false,
-      "trend": true,
-      "verifyNote": "6월 공개 연구 인용. 원 리서치·정의 확인 필요.",
-      "source": "https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026",
-      "status": "인박스",
-      "tags": [
-        "트렌드",
-        "연구"
-      ]
-    },
-    {
-      "title": "로컬 LLM 자가호스팅이 쉬워진 흐름 (Gemma 3·Ollama 등)",
-      "firstSeen": null,
-      "verified": true,
-      "trend": true,
-      "verifyNote": "단일 발표가 아닌 지속 흐름 — 대표 날짜 없음. 시의성 무관 에버그린.",
-      "source": "https://huggingface.co/blog/daya-shankar/open-source-llm-models-to-run-locally",
-      "status": "검수중",
-      "tags": [
-        "오픈모델"
-      ]
-    },
-    {
-      "title": "에이전트 내장 80% (IDC 전망) / 하이퍼오토메이션 트렌드",
-      "firstSeen": null,
-      "verified": false,
-      "trend": true,
-      "verifyNote": "IDC 전망 수치(2차 인용). 단일 뉴스 날짜 아님. 원 리포트로 정의·수치 확인 필요.",
-      "source": "https://www.cflowapps.com/ai-workflow-automation-trends/",
-      "status": "검수중",
-      "tags": [
-        "트렌드"
-      ]
-    },
-    {
-      "title": "Unisound U2 — 초저가 에이전트용 MoE",
-      "firstSeen": null,
-      "verified": false,
-      "verifyNote": "출시일·가격·벤치 수치 미검증 → 인박스 대기. 1차 소스로 첫 등장일부터 확인해야 선별 가능.",
-      "source": null,
-      "status": "인박스",
-      "tags": [
-        "모델"
-      ]
-    },
-    {
-      "title": "Anthropic, Claude Fable 5·Mythos 5 수출통제 해제 후 서비스 복귀",
-      "firstSeen": "2026-06-30",
-      "surfaced": "2026-07-06",
-      "verified": true,
-      "verifyNote": "Anthropic 공식 블로그(Redeploying Fable 5) 6/30 발표. CNBC·TheHackerNews·FoxBusiness·9to5Mac·cybersecuritynews.com·Hacker News 모두 6/30(해제 통보)~7/1(서비스 복귀) 교차확인. 6/12 발동된 수출통제(Amazon이 발견한 Fable 5 jailbreak가 계기)를 상무부가 약 2주 검토 후 해제, 새 분류기(자체 주장 99%+ 차단)와 함께 7/1 전 세계 재개. 6/17 G7 소집(기존 인박스 항목, firstSeen 2026-06-17)의 후속·결말 사건.",
-      "source": "https://www.anthropic.com/news/redeploying-fable-5",
-      "status": "인박스",
-      "tags": [
-        "논란",
-        "안전",
-        "Anthropic",
-        "정책"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/fable5-restored-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/fable5-restored.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/fable5-restored.md"
-        }
-      ]
-    },
-    {
-      "title": "Anthropic, 신약개발 워크벤치 'Claude Science' 출시 + 등한시 질병 신약 프로그램",
-      "firstSeen": "2026-06-30",
-      "surfaced": "2026-07-06",
-      "verified": true,
-      "verifyNote": "Anthropic 공식 발표 6/30. CNBC·MIT Technology Review·Northeastern Global News·Pharmaceutical Technology·pharmaphorum·Inc.com 모두 6/30 동일 날짜로 교차확인. 60+ 도구/DB 연동 워크벤치(베타), 등한시 질병 대상 내부 신약 프로그램, 'AI for Science' 그랜트(최대 50건, 건당 최대 $3만, 지원마감 7/15) 동시 발표.",
-      "source": "https://www.anthropic.com/news/claude-science-ai-workbench",
-      "status": "인박스",
-      "tags": [
-        "제품",
-        "Anthropic",
-        "연구"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/claude-science-launch-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/claude-science-launch.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/claude-science-launch.md"
-        }
-      ]
-    },
-    {
-      "title": "Anthropic, 삼성전자와 2nm 커스텀 AI칩 개발 초기 논의",
-      "firstSeen": "2026-07-02",
-      "surfaced": "2026-07-06",
-      "verified": true,
-      "verifyNote": "TechCrunch 단독 보도 7/2. The Information(유료)·Yahoo Finance·stocktwits가 같은 날짜로 교차확인. 삼성 2nm 공정·패키징 활용한 커스텀 AI 가속기 초기 논의 단계(용도·사양 미정), Anthropic은 Google·Amazon·Nvidia 등 다변화된 하드웨어 스택 유지 방침 공식 확인. OpenAI-Broadcom 'Jalapeño' 칩 발표에 대한 대응 성격으로 다수 매체가 해석.",
-      "source": "https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/",
-      "status": "인박스",
-      "tags": [
-        "하드웨어",
-        "Anthropic"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/anthropic-samsung-chip-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/anthropic-samsung-chip.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/anthropic-samsung-chip.md"
-        }
-      ]
-    },
-    {
-      "title": "퀄컴, AI칩 스타트업 Tenstorrent 8~10조원 인수 논의 — CEO는 부인",
-      "firstSeen": "2026-06-15",
-      "surfaced": "2026-07-06",
-      "verified": true,
-      "trend": true,
-      "verifyNote": "Reuters 6/15 최초 보도(80~100억달러 규모 인수 협상), The Information도 별도 취재원으로 교차확인(Yahoo Finance·DCD·TheStreet 등 재인용). 그러나 6/30 Tenstorrent CEO Jim Keller가 '퀄컴과 논의 중이 아니다'라고 공식 부인 — 보도와 부인이 상충하는 상태로 진행 중인 사안. 최종 성사 여부 미확정.",
-      "source": "https://finance.yahoo.com/technology/ai/articles/qualcomm-talks-acquire-ai-chip-230401789.html",
-      "status": "인박스",
-      "tags": [
-        "M&A",
-        "하드웨어"
-      ]
-    },
-    {
-      "title": "Together AI, 시리즈C 8억달러 유치 (밸류 83억달러, Aramco Ventures 주도)",
-      "firstSeen": "2026-07-01",
-      "surfaced": "2026-07-06",
-      "verified": true,
-      "verifyNote": "Businesswire 보도자료 7/1 기준 TechCrunch·Yahoo Finance·Qz·HPCwire·thenextweb 모두 동일 금액(8억달러)·밸류($8.3B)로 교차확인. Aramco Ventures 주도, Vista Equity Partners·General Catalyst·Emergence Capital·NVIDIA·March Capital 등 참여.",
-      "source": "https://www.businesswire.com/news/home/20260701243402/en/Together-AI-Raises-$800-Million-at-$8.3-Billion-Valuation-to-Make-Frontier-AI-Accessible-to-All",
-      "status": "인박스",
-      "tags": [
-        "자금"
-      ]
-    },
-    {
-      "title": "UN '글로벌 AI 거버넌스 대화' 제네바서 개막 (193개국 참여)",
-      "firstSeen": "2026-07-06",
-      "surfaced": "2026-07-06",
-      "verified": true,
-      "verifyNote": "UN 공식 사이트(un.org/global-dialogue-ai-governance)·ITU·UNESCO 모두 7/6~7/7 제네바 개최로 명시. 193개 UN 회원국·민간·시민사회·학계 참여, El Salvador·에스토니아 대사가 공동의장. WSIS 포럼(7/6~10)·ITU AI for Good 정상회의(7/7~10)와 동시 개최.",
-      "source": "https://www.un.org/global-dialogue-ai-governance/en",
-      "status": "인박스",
-      "tags": [
-        "정책"
-      ]
-    },
-    {
-      "title": "백악관, OpenAI·Anthropic·Google과 '프론티어 모델 자율기준' 프레임워크 막판 조율(미확정)",
-      "firstSeen": null,
-      "surfaced": "2026-07-06",
-      "verified": false,
-      "verifyNote": "AI Weekly·TipRanks 등 복수 매체가 '다음주쯤 발표 가능'이라 보도했으나 실제 서명·공식 발표는 이번 조사 시점까지 확인되지 않음 — 확정 시점·세부내용 미정이라 verified:false로 인박스 대기. 6/2 행정명령(EO 14409)이 법적 골격이라는 점만 확인.",
-      "source": "https://aiweekly.co/alerts/white-house-nears-voluntary-frontier-model-deal-with-top-ai-labs",
-      "status": "인박스",
-      "tags": [
-        "정책"
-      ]
-    },
-    {
-      "title": "Grok 5 출시 지연 지속 — Polymarket 확률 한 자릿수%로 하락",
-      "firstSeen": null,
-      "surfaced": "2026-07-06",
-      "verified": true,
-      "trend": true,
-      "verifyNote": "단일 발표가 아닌 지속 흐름이라 대표 날짜 없음. xAI Colossus 2(1.5GW)에서 훈련 중이며 Q1·Q2 2026 목표 모두 불발. Polymarket 'Grok 5 released by...' 계약이 6/30 기준 3~7% 확률로 마감 — Polymarket·WaveSpeed·Overchat AI 교차확인.",
-      "source": "https://polymarket.com/event/grok-5-released-by",
-      "status": "인박스",
-      "tags": [
-        "트렌드",
-        "xAI"
-      ]
-    },
-    {
-      "title": "Grok 4.5, SpaceX·Tesla 내부 비공개 베타 진입 (V9 1.5조 파라미터)",
-      "firstSeen": "2026-06-28",
-      "verified": true,
-      "verifyNote": "머스크가 X에서 발표(2026-06-28), SpaceX·Tesla 내부 전용 비공개 베타. Investing.com·TechTimes(6/29)·Cybernews 교차확인. 1.5조 파라미터 V9 파운데이션 모델(5/26 학습 완료)에 Cursor 데이터로 추가 학습. Opus에 근접·상회한다는 주장은 SpaceX·Tesla 사내 평가로, 독립 검증·공개 벤치마크 없음 — '자체 주장'으로 표기.",
-      "source": "https://www.techtimes.com/articles/319314/20260629/grok-45-enters-private-beta-spacex-tesla-no-public-access-no-independent-benchmark.htm",
-      "status": "인박스",
-      "tags": [
-        "모델",
-        "xAI"
-      ]
-    },
-    {
-      "title": "EU 이사회, AI법 간소화(Digital Omnibus) 최종 승인 — 고위험 규정 2027·2028로 순연",
-      "firstSeen": "2026-06-29",
-      "verified": true,
-      "verifyNote": "EU 이사회(Council) 공식 보도자료(1차 소스, consilium.europa.eu) 2026-06-29. EU Agenda·eubusiness.com·INSIGHT EU Monitoring 교차확인. 독립형 고위험 AI시스템 규정 시행일을 2027-12-02로, 제품 내장형은 2028-08-02로 순연. 비동의 성적 이미지·아동성착취물(CSAM) 생성 AI 금지 조항 신설(2026년 12월 시행). 정식 관보 게재 후 3일 뒤 발효.",
-      "source": "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/",
-      "status": "인박스",
-      "tags": [
-        "정책",
-        "규제",
-        "EU"
-      ]
-    },
-    {
-      "title": "Venice AI, 프라이버시 우선 AI 프록시로 6500만달러 시리즈A (밸류 10억달러)",
-      "firstSeen": "2026-07-01",
-      "verified": true,
-      "verifyNote": "Venice 공식 블로그(1차 소스, venice.ai/blog) + TechCrunch(2026-07-01) 교차확인. Dragonfly 주도, Coinbase Ventures·North Island Ventures 등 참여. 200개+ 모델에 프록시로 접근하며 OpenAI·Anthropic·xAI·Google 모델 이용 시 IP·계정·세션 정보 마스킹. 이용자 300만 명, 일 API 호출 170만 건, 연환산매출(ARR) 7000만달러, 흑자 전환 상태라고 자체 발표.",
-      "source": "https://venice.ai/blog/venice-raises-65-million-series-a",
-      "status": "인박스",
-      "tags": [
-        "자금",
-        "프라이버시"
-      ]
-    },
-    {
-      "title": "SpaceX, Cursor 개발사 Anysphere를 600억 달러(전량 주식)에 인수 — 역대 최대 스타트업 인수",
-      "firstSeen": "2026-06-16",
-      "surfaced": "2026-07-06",
-      "verified": true,
-      "trend": true,
-      "verifyNote": "Forbes(Sandy Carter, 2026-06-16)·qz.com(2026-06-16/17)·TechFundingNews·Yahoo Finance 교차확인. 벤처 투자 받은 스타트업 역대 최대 인수. 2026-04-21 옵션계약(인수가 600억달러/포기 시 위약금 약 100억달러) 후 정식화. 2026년 3분기 종료 예정(규제승인 전제)이라 진행형 이슈로 트렌드 표기.",
-      "source": "https://www.forbes.com/sites/sandycarter/2026/06/16/spacex-buys-cursor-in-largest-startup-acquisition-ever-at-60-billion/",
-      "status": "인박스",
-      "tags": [
-        "자금",
-        "M&A",
-        "xAI",
-        "논란"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/spacex-cursor-acquisition-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/spacex-cursor-acquisition.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/spacex-cursor-acquisition.md"
-        }
-      ]
-    },
-    {
-      "title": "중국 'AI 의인화 서비스' 규제 시행 앞두고 Doubao·Qwen, 7/15 에이전트 기능 종료",
-      "firstSeen": "2026-07-04",
-      "surfaced": "2026-07-06",
-      "verified": true,
-      "trend": true,
-      "verifyNote": "규제 자체는 중국 CAC 등 5개 부처가 2026-04-10 발표(1차 소스), 시행일 2026-07-15. 셧다운 공지 확산(진짜 첫 등장일)은 TechTimes(2026-07-04)가 최초 보도, TechNode(2026-07-06)·SCMP·Bird&Bird·Wikipedia로 교차확인.",
-      "source": "https://technode.com/2026/07/06/bytedances-doubao-and-alibabas-qwen-to-shut-down-ai-agent-features-on-july-15/",
-      "status": "작성중",
-      "postId": "china-ai-companion-regulation",
-      "tags": [
-        "정책",
-        "규제",
-        "중국",
-        "논란"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/china-ai-companion-shutdown-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/china-ai-companion-shutdown.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/china-ai-companion-shutdown.md"
-        }
-      ]
-    },
-    {
-      "title": "美 FTC, 'AI 정확성 억제' 정책성명 초안 — 주(州) AI법 연방 선점 주장",
-      "firstSeen": "2026-07-01",
-      "verified": true,
-      "verifyNote": "FTC 공식 보도자료(1차 소스, ftc.gov, 2026-07-01) + AI Weekly·Forbes(Lance Eliot, 2026-07-06)·Consumer Financial Services Law Monitor 교차확인. 콜로라도 AI법을 대표 사례로 지목, FTC법 제5조 근거 연방 선점 주장. 위원회 표결 2대0, 의견수렴 마감 2026-07-31.",
-      "source": "https://www.ftc.gov/news-events/news/press-releases/2026/07/ftc-seeks-public-comment-policy-statement-addressing-ai-accuracy",
-      "status": "인박스",
-      "tags": [
-        "정책",
-        "규제",
-        "논란"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/ftc-ai-accuracy-policy-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/ftc-ai-accuracy-policy.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/ftc-ai-accuracy-policy.md"
-        }
-      ]
-    },
-    {
-      "title": "Sysdig, 첫 완전자율 'AI 에이전트 랜섬웨어' JADEPUFFER 포착 — Langflow RCE 악용",
-      "firstSeen": "2026-07-01",
-      "surfaced": "2026-07-07",
-      "verified": true,
-      "verifyNote": "Sysdig 위협 리서치팀 공식 블로그(1차 소스, 2026-07-01 공개) + BleepingComputer·The Hacker News·DarkReading·SecurityWeek·CSO Online·Infosecurity Magazine 교차확인. LLM 자율 에이전트가 CVE-2025-3248(Langflow 인증 누락, 2025-04-01 패치·2025-05 CISA KEV 등재)로 침투 후 정찰·자격증명 탈취·횡적이동·권한상승·암호화까지 사람 개입 없이 수행. 페이로드 600개+, Nacos 설정 1,342개 암호화, 키 미저장으로 복호화 불가 구조. 단, 후속 보도(TechCrunch·The Register)에서 Sysdig의 Michael Clark가 '표적 선정·인프라 구축·최초 자격증명 확보는 사람이 했다'고 인정해 '완전 자율' 프레이밍에 이견 있음 — 반응 탭에 명시.",
-      "source": "https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion",
-      "status": "인박스",
-      "tags": [
-        "보안",
-        "에이전트",
-        "논란"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/jadepuffer-ai-ransomware-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/jadepuffer-ai-ransomware.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/jadepuffer-ai-ransomware.md"
-        }
-      ]
-    },
-    {
-      "title": "Nvidia, \"Kyber 랙 2028년 지연\" SemiAnalysis 보도 정면 반박 — \"로드맵은 그대로\"",
-      "firstSeen": "2026-07-06",
-      "surfaced": "2026-07-07",
-      "verified": true,
-      "verifyNote": "SemiAnalysis가 Kyber NVL144(Rubin Ultra용 랙) PCB 미드플레인 제조 난항으로 2028년까지 12개월+ 지연, NVL72x2 백업안·4칩 Rubin Ultra 취소를 주장. Nvidia는 Bloomberg에 이메일 성명으로 \"로드맵은 그대로(intact)\"라 반박했으나 개별 기술 주장에는 답하지 않음. CNBC(2026-07-06)·Tom's Hardware·Yahoo Finance·Benzinga·Wccftech·TradingKey 교차확인. 양측 주장이 대립하는 미해결 쟁점 — 어느 쪽도 확정 사실로 단정하지 않음.",
-      "source": "https://www.cnbc.com/2026/07/06/nvidia-kyber-rack-system-delays-manufacturing-taiwan-rubin-chips-.html",
-      "status": "발행",
-      "postId": "nvidia-kyber-delay",
-      "tags": [
-        "하드웨어",
-        "논란"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/nvidia-rubin-kyber-delay-denial-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/nvidia-rubin-kyber-delay-denial.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/nvidia-rubin-kyber-delay-denial.md"
-        }
-      ]
-    },
-    {
-      "title": "일리노이 주지사 프리츠커, 'AI 안전조치법(SB 315)' 정식 서명 — 미 최초 3자 안전감사 의무화 발효",
-      "firstSeen": "2026-07-06",
-      "surfaced": "2026-07-07",
-      "verified": true,
-      "verifyNote": "일리노이 주지사 JB 프리츠커가 2026-07-06 SB 315(Artificial Intelligence Safety Measures Act)에 정식 서명. 주지사실 공식 보도자료(1차 소스) + Chicago Sun-Times·StateScoop·The Hill·ABC7 Chicago·NPR Illinois 교차확인. 기존 인박스 항목(firstSeen 2026-05-27, 하원 통과·서명 예정 상태)의 후속 사건 — 법안이 실제 법률로 확정됨. 대형 AI 개발사에 안전관행 공개·중대사고 신고(24~72시간 이내)·내부고발자 보호·독립 3자 안전감사 의무화. 시행 2027-01-01.",
-      "source": "https://chicago.suntimes.com/politics/2026/07/06/ai-regulations-illinois-law-pritzker-signed",
-      "status": "발행",
-      "tags": [
-        "정책",
-        "규제",
-        "미국"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/illinois-ai-safety-act-signed-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/illinois-ai-safety-act-signed.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/illinois-ai-safety-act-signed.md"
-        }
-      ],
-      "postId": "illinois-ai-law"
-    },
-    {
-      "title": "우크라이나, AI 도입 기준으로 '자체 서버 구동(온프레미스)' 우선 — Anthropic·OpenAI류 모델은 배제 방향",
-      "firstSeen": "2026-07-07",
-      "surfaced": "2026-07-07",
-      "verified": true,
-      "verifyNote": "우크라이나 디지털전환부 최고AI책임자 Roman Kyslyi가 로이터에 밝힘(2026-07-07, Reuters 배포로 investing.com·US News·Yahoo Finance·Al-Monitor·933 The Drive 등 다수 매체 동시 게재). 정부·기업·군용 AI는 자국 인프라 구동(온프레미스) 모델을 우선하고 제공사가 통제권을 쥔 모델(Anthropic·OpenAI 주력 모델)은 제한하는 방향. \"미국 정부가 Anthropic에 강력 모델 접근을 축소하라고 명령했다\"는 부분은 Kyslyi의 발언 인용이며 이 기사가 별도로 확인한 1차 사실이 아님 — 정리본·자세히에서 인용으로만 표기. Diia 내 AI 비서는 현재 구글 Gemini(원격) 임시 사용 중, Kyivstar와 Gemma 기반 자체 모델을 올가을 공개 예정.",
-      "source": "https://www.usnews.com/news/world/articles/2026-07-07/ukraine-to-pick-ai-models-operated-without-provider-control-official-says",
-      "status": "인박스",
-      "tags": [
-        "정책",
-        "지정학",
-        "논란"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/ukraine-ai-onpremise-policy-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/ukraine-ai-onpremise-policy.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/ukraine-ai-onpremise-policy.md"
-        }
-      ]
-    },
-    {
-      "title": "EU 집행위, AI×사이버보안 액션플랜 발표",
-      "firstSeen": "2026-07-07",
-      "surfaced": "2026-07-07",
-      "verified": true,
-      "verifyNote": "유럽집행위원회 공식 뉴스룸(1차 소스, commission.europa.eu·digital-strategy.ec.europa.eu 동시 게시, 2026-07-07)에서 첨단 AI가 사이버보안에 미치는 위험·기회를 다루는 EU 액션플랜 발표 확인. WebFetch가 두 공식 도메인 모두 403으로 차단돼 본문 상세는 확인하지 못했고, 발표 사실과 날짜만 검증됨(공식 도메인 2곳 동시 게시로 날짜 확정). 상세 내용은 후속 확인 필요.",
-      "source": "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en",
-      "status": "인박스",
-      "tags": [
-        "정책",
-        "규제",
-        "유럽"
-      ]
-    },
-    {
-      "title": "SK하이닉스, 나스닥 $280억 규모 미국 상장(IPO) 개시 — 역대 두 번째 규모",
-      "firstSeen": "2026-07-06",
-      "surfaced": "2026-07-07",
-      "verified": true,
-      "verifyNote": "SK하이닉스가 SEC 제출서류로 보통주 1,779만주 규모 나스닥 상장 절차를 2026-07-06 개시. TechCrunch·Yahoo Finance·Investing.com(Reuters)·Bloomberg·Seeking Alpha 교차확인. 가격 확정 목요일, 거래 시작 2026-07-10 예정. SpaceX $857억 IPO 다음으로 역대 두 번째 규모, 사우디 아람코($256억)·알리바바 상회. 조달자금은 한국 내 생산시설 확장·EUV 노광장비 구입 용도.",
-      "source": "https://techcrunch.com/2026/07/06/us-investors-will-soon-get-access-to-sk-hynix-another-memory-maker-riding-the-ai-boom/",
-      "status": "인박스",
-      "tags": [
-        "하드웨어",
-        "자금"
-      ]
-    },
-    {
-      "title": "Microsoft, AI 도입 전담 신설조직 'Frontier Company' 출범 — $25억·전문인력 6,000명 투입",
-      "firstSeen": "2026-07-02",
-      "surfaced": "2026-07-07",
-      "verified": true,
-      "verifyNote": "Microsoft 공식 블로그(1차 소스, blogs.microsoft.com, 2026-07-02) + CNBC·TechCrunch·HPCwire·TechTimes 교차확인. 기업 AI 도입을 공동설계·배치하는 컨설팅 조직, $25억 투자·엔지니어링/산업전문가 6,000명 투입. LSEG·Land O'Lakes·Unilever·Novo Nordisk 등 초기 고객. MIT Project NANDA의 '기업 생성AI 파일럿 95%가 손익에 측정 가능한 영향 없음' 연구가 배경으로 언급됨.",
-      "source": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/",
-      "status": "인박스",
-      "tags": [
-        "자동화",
-        "자금"
-      ]
-    },
-    {
-      "title": "Together AI, $8억 시리즈C 유치 — 밸류에이션 $83억로 상승(오픈소스 AI 인프라)",
-      "firstSeen": "2026-07-01",
-      "surfaced": "2026-07-07",
-      "verified": true,
-      "verifyNote": "Together AI 공식 블로그(1차 소스, together.ai, 2026-07-01) + TechCrunch·Businesswire·Yahoo Finance 교차확인. Aramco Ventures 주도, Vista Equity Partners·General Catalyst·Emergence Capital·Nvidia·SentinelOne S Ventures 등 참여. 연간 예약매출 전분기 $11.5억 돌파, 오픈소스 모델 사용량 12개월간 3배 증가. 지분 투자 외 500MW+ 컴퓨트 용량 확보 별도 약정.",
-      "source": "https://www.together.ai/blog/announcing-our-series-c",
-      "status": "인박스",
-      "tags": [
-        "자금",
-        "인프라"
-      ]
-    },
-    {
-      "title": "Illinois AI 안전법 서명: 미국 최초 연간 독립감사 의무화",
-      "firstSeen": "2026-07-06",
-      "surfaced": "2026-07-10",
-      "verified": true,
-      "verifyNote": "Capitol News Illinois·WTTW·Gov. Pritzker·Transparency Coalition·JURIST 모두 7/6 교차확인. Gov. Pritzker가 SB315 서명, 연 매출 5억달러+ AI 기업에 독립감시감사 의무화. 재앙적 위험(50명+ 사망·100만달러+ 재산피해) 파악 요구. 72시간 보고(긴급 24시간). 위반 시 최대 300만달러. OpenAI·Anthropic 지지, 하원 110대 0 만장일치.",
-      "source": "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-signs-nation-leading-artificial-intelligence-safety-law",
-      "status": "인박스",
-      "tags": [
-        "정책",
-        "안전",
-        "규제",
-        "미국"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/illinois-ai-safety-law-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/illinois-ai-safety-law.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/illinois-ai-safety-law.md"
-        }
-      ]
-    },
-    {
-      "title": "Meta, Iris 칩 양산 개시(2026년 9월) — 14GW 컴퓨팅 목표",
-      "firstSeen": "2026-07-09",
-      "surfaced": "2026-07-14",
-      "verified": true,
-      "verifyNote": "CNBC·Yahoo Finance·Reuters·Let's Data Science·Broadcom·Digitimes·DCD 8개+ 매체 7/9 동시 교차확인. Meta가 자체 설계 AI 칩 Iris를 9월부터 양산 개시, 2027년까지 14GW 컴퓨팅 용량 목표. Broadcom 공동설계, TSMC 제조. 6주 테스트 완료.",
-      "source": "https://www.cnbc.com/2026/07/09/meta-to-put-ai-chip-into-production-in-september-report.html",
-      "status": "발행",
-      "tags": [
-        "하드웨어",
-        "칩",
-        "Meta",
-        "인프라"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/meta-iris-chip-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/meta-iris-chip.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/meta-iris-chip.md"
-        }
-      ],
-      "postId": "meta-iris-chip"
-    },
-    {
-      "title": "삼성전자, GAIA AI 칩 개발 — AI PC 시장 진출(2027년 양산 목표)",
-      "firstSeen": "2026-07-09",
-      "surfaced": "2026-07-14",
-      "verified": true,
-      "verifyNote": "Seoul Economic Daily·Trendforce·wccftech·gHacks·Memeburn·Samsung Fans·Phandroid·Digital Trends 8개+ 매체 7/9~7/13 교차확인. 삼성이 4나노 공정 AI 가속기 GAIA 개발 중, 2027년 초 양산 목표. HP·Lenovo가 프로토타입 테스트 중. PIM(Processing-in-Memory) 기술 결합 예정.",
-      "source": "https://www.trendforce.com/news/2026/07/10/news-samsung-reportedly-developing-4nm-gaia-ai-pc-chip-mass-production-targeted-as-early-as-2027/",
-      "status": "발행",
-      "postId": "samsung-gaia-chip",
-      "tags": [
-        "하드웨어",
-        "칩",
-        "삼성",
-        "AI PC"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/samsung-gaia-chip-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/samsung-gaia-chip.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/samsung-gaia-chip.md"
-        }
-      ]
-    },
-    {
-      "title": "ByteDance Seedream 5.0 Pro",
-      "firstSeen": "2026-07-08",
-      "surfaced": "2026-07-15",
-      "verified": true,
-      "verifyNote": "공식 발표 2026-07-08. ByteDance·TechCrunch·MagicShot 2곳+ 교차확인.",
-      "source": "https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro",
-      "status": "작성중",
-      "postId": "bytedance-seedream",
-      "tags": [
-        "모델출시",
-        "이미지생성",
-        "ByteDance",
-        "다국어",
-        "창작도구"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/bytedance-seedream-5-0-pro-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/bytedance-seedream-5-0-pro.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/bytedance-seedream-5-0-pro.md"
-        }
-      ]
-    },
-    {
-      "title": "China AI Virtual Companion Regulations — Effective July 15",
-      "firstSeen": "2026-07-15",
-      "surfaced": "2026-07-15",
-      "verified": true,
-      "verifyNote": "시행일 2026-07-15. 규정 발표 2026-04-10 (CAC, NDRC, MIIT). 2곳+ 교차확인.",
-      "source": "https://www.techtimes.com/articles/320525/20260715/china-ai-companion-law-takes-effect-doubao-qwen-shut-down-millions-lose-chat-data.htm",
-      "status": "작성중",
-      "postId": "china-ai-companion-regulation",
-      "tags": [
-        "정책규제",
-        "중국",
-        "AI윤리",
-        "업계영향",
-        "미성년자보호"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/china-ai-companion-regulations-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/china-ai-companion-regulations.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/china-ai-companion-regulations.md"
-        }
-      ]
-    },
-    {
-      "title": "Publishers File Class Action Against Google Over Gemini AI Training",
-      "firstSeen": "2026-07-14",
-      "surfaced": "2026-07-15",
-      "verified": true,
-      "verifyNote": "소송 제기 2026-07-14. 원고: Hachette, Cengage, Elsevier, Scott Turow. 2곳+ 교차확인.",
-      "source": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/",
-      "status": "작성중",
-      "postId": "google-publisher-lawsuit",
-      "tags": [
-        "저작권",
-        "소송",
-        "Google",
-        "Gemini",
-        "AI윤리"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/google-publisher-lawsuit-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/google-publisher-lawsuit.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/google-publisher-lawsuit.md"
-        }
-      ]
-    },
-    {
-      "title": "Moonshot AI, Kimi K3 공개 — 2.8조 파라미터 MoE 모델",
-      "firstSeen": "2026-07-16",
-      "surfaced": "2026-07-18",
-      "verified": true,
-      "postId": "moonshot-kimi-k3",
-      "verifyNote": "MarkTechPost·TechCrunch·KIE·Fortune·Axios 5곳 교차확인. Moonshot AI가 2026-07-16 Kimi K3 공개. 2.8조 파라미터 MoE, 896개 중 16개 활성화. 100만 토큰 컨텍스트. 오픈 가중치 모델.",
-      "source": "https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/",
-      "status": "인박스",
-      "tags": [
-        "모델",
-        "MoE",
-        "중국",
-        "오픈소스",
-        "Frontier"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/moonshot-kimi-k3-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/moonshot-kimi-k3.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/moonshot-kimi-k3.md"
-        }
-      ]
-    },
-    {
-      "title": "Thinking Machines Lab, Inkling 공개 — 975억 파라미터 개방가중 모델",
-      "firstSeen": "2026-07-16",
-      "surfaced": "2026-07-18",
-      "verified": true,
-      "verifyNote": "TechCrunch·Thinking Machines Lab 공식 발표 교차확인. Inkling은 975억 파라미터 개방가중 모델. Mira Murati(전 OpenAI CTO) CEO. 쿼리당 41억 파라미터만 활성화. Frontier 모델보다 저렴한 실행비.",
-      "source": "https://techcrunch.com/2026/07/16/thinking-machines-lab-inkling/",
-      "status": "인박스",
-      "tags": [
-        "모델",
-        "오픈소스",
-        "스타트업",
-        "효율성",
-        "Mira Murati"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/thinking-machines-inkling-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/thinking-machines-inkling.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/thinking-machines-inkling.md"
-        }
-      ],
-      "postId": "thinking-machines-inkling"
-    },
-    {
-      "title": "중국, AI 에이전트 규제 — 세계 첫 전용 규제 체계 발효",
-      "firstSeen": "2026-07-15",
-      "surfaced": "2026-07-18",
-      "verified": true,
-      "postId": "china-agent-regulation",
-      "verifyNote": "중국 CMOIC 공식 발표(7/15) + Reuters·TechCrunch·IAPP·AI Governance Institute 4곳 교차확인. 세계 최초 에이전트 전용 규제. 3단계 권한 프레임워크. 고위험 분야 신고·테스트 요구.",
-      "source": "https://www.caac.gov.cn/en/2026/07/15-intelligent-agents-regulations/",
-      "status": "인박스",
-      "tags": [
-        "정책",
-        "규제",
-        "중국",
-        "에이전트",
-        "거버넌스"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/china-agent-regulation-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/china-agent-regulation.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/china-agent-regulation.md"
-        }
-      ]
-    },
-    {
-      "title": "Google, Hachette·Cengage·Elsevier 저작권 소송 — Gemini 학습용 도용 적발",
-      "firstSeen": "2026-07-14",
-      "surfaced": "2026-07-18",
-      "verified": true,
-      "verifyNote": "TechCrunch·SearchEngineJournal·AlJazeera·TheWrap 4곳 7/14~15 동시 보도. 남동구 뉴욕 연방법원 제출. Hachette Book Group, Scott Turow, Cengage Learning, Elsevier, S.C.R.I.B.E. 공동 원고. Google Books 및 Google Play Store 도서를 Gemini 학습에 무단 사용, 저작권 정보 의도적 제거. 내부 문서 '$100B 규모 벌금 위험' 인용.",
-      "source": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/",
-      "status": "인박스",
-      "tags": [
-        "소송",
-        "저작권",
-        "Gemini",
-        "Google",
-        "규제"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/google-publishers-lawsuit-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/google-publishers-lawsuit.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/google-publishers-lawsuit.md"
-        }
-      ],
-      "postId": "google-publishers-lawsuit"
-    },
-    {
-      "title": "Meta Muse Image 공개 — 에이전트형 이미지 생성 AI",
-      "firstSeen": "2026-07-07",
-      "surfaced": "2026-07-18",
-      "verified": true,
-      "verifyNote": "Meta AI 공식 블로그·TechCrunch·CNBC·Axios 4곳 7/7 동시 보도. Meta Superintelligence Labs 발표. 코드명 Mango. 에이전트형 생성으로 웹 검색 기반 그라운딩. ChatGPT 이미지 생성기에만 미치지 못하고 Google Nano Banana 2 능가. Meta AI·WhatsApp·Instagram에 무료 공개.",
-      "source": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
-      "status": "인박스",
-      "tags": [
-        "모델",
-        "이미지생성",
-        "Meta",
-        "멀티모달",
-        "에이전트"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/meta-muse-image-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/meta-muse-image.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/meta-muse-image.md"
-        }
-      ]
-    },
-    {
-      "title": "Autonomous Ghost, 노코드 AI 자동화 플랫폼 공개",
-      "firstSeen": "2026-07-17",
-      "surfaced": "2026-07-18",
-      "verified": true,
-      "verifyNote": "FinancialContent·MarketersMedia 7/16~17 보도. 평문 자동화, 브라우저 자동화, 데스크톱 봇, AI 에이전트 워크플로우. Google Sheets·Gmail·Slack·Stripe·HubSpot 등 수백 개 통합. 기업 자동화용 엔터프라이즈 보안.",
-      "source": "https://www.financialcontent.com/article/marketersmedia-2026-7-16-autonomous-ghost-launches-no-code-ai-automation-platform-for-business",
-      "status": "인박스",
-      "tags": [
-        "자동화",
-        "노코드",
-        "에이전트",
-        "스타트업",
-        "워크플로우"
-      ],
-      "articleVersions": []
-    },
-    {
-      "title": "Gloo Holdings IPO 제안 — 7백만 주 공개 모집",
-      "firstSeen": "2026-07-12",
-      "surfaced": "2026-07-18",
-      "verified": true,
-      "verifyNote": "SaaS M&A Tracker·Yahoo Finance·Seeking Alpha 등 7/12 보도. 신규 7백만 주 공개 모집으로 AI 인수 자금 조성. CEO Scott Beck 투표권 53.3% 유지. 2026년 매출 가이던스 $195M 상향(238% YoY 증가). 신청서 상 '지속 능력 의문' 명시.",
-      "source": "https://www.saasrise.com/deals/gloo-announces-proposed-public-offering-of-7-million-class-a-common-shares-3c4a9fc5-8772-4de5-b05b-d7cf46286867",
-      "status": "인박스",
-      "tags": [
-        "자금",
-        "IPO",
-        "스타트업",
-        "AI",
-        "신앙기반SaaS"
-      ],
-      "articleVersions": []
-    },
-    {
-      "title": "Moonshot AI Kimi K3 — 2.8조 MoE 모델, Arena에서 Fable 5·Sol 상회",
-      "firstSeen": "2026-07-16",
-      "surfaced": "2026-07-20",
-      "verified": true,
-      "verifyNote": "TechCrunch·Fortune·Axios·Arena·OpenRouter 7/16 교차확인. 2.8T MoE, 1M 토큰 컨텍스트. K3 Max(채팅)·K3 Swarm Max(병렬 처리) 2종. Arena 맹검 테스트에서 프론트엔드 코딩 Fable 5·GPT-5.6 Sol 능가. API $3(입력)/$15(출력).",
-      "source": "https://www.axios.com/2026/07/16/moonshot-kimi-ai-china-model-openai-anthropic",
-      "status": "인박스",
-      "postId": "moonshot-kimi-k3",
-      "tags": [
-        "모델",
-        "중국",
-        "frontier",
-        "에이전트"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/kimi-k3-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/kimi-k3.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/kimi-k3.md"
-        }
-      ]
-    },
-    {
-      "title": "Google vs 출판사 저작권 소송 — Gemini 학습에 무단 사용 혐의",
-      "firstSeen": "2026-07-14",
-      "surfaced": "2026-07-20",
-      "verified": true,
-      "verifyNote": "TechCrunch·Al Jazeera·Engadget·Yahoo Finance 7/14 교차확인. Hachette·Cengage·Elsevier·저자 Scott Turow 등 집단 소송. Gemini 학습에 저작권 자료 무단 사용 주장. Google Books 협의 조건(스니펫 표시만) 초과. 내부 문서에서 '10B~100B 달러 벌금 위험' 인정.",
-      "source": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/",
-      "status": "인박스",
-      "postId": "google-publishers-lawsuit",
-      "tags": [
-        "Google",
-        "저작권",
-        "소송",
-        "논란"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/google-publishers-lawsuit-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/google-publishers-lawsuit.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/google-publishers-lawsuit.md"
-        }
-      ]
-    },
-    {
-      "title": "Neko Health, $700M Series C 펀딩 — 신체 스캔 헬스테크 $7B 밸류",
-      "firstSeen": "2026-07-15",
-      "surfaced": "2026-07-20",
-      "verified": true,
-      "verifyNote": "TechCrunch·Axios·MobiHealthNews·Neko Health 공식 7/15 교차확인. Lightspeed Venture·O.G. Venture 주도. $7B 밸류 도달. 100,000명+ 스캔 실적, 350,000명+ 대기열/예약.",
-      "source": "https://techcrunch.com/2026/07/15/daniel-eks-body-scanning-startup-neko-health-raises-another-700m/",
-      "status": "검수중",
-      "tags": [
-        "자금",
-        "헬스테크",
-        "의료AI"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/neko-health-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/neko-health.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/neko-health.md"
-        }
-      ],
-      "postId": "neko-health"
-    },
-    {
-      "title": "Chai Discovery, $400M Series C 펀딩 — AI 신약개발 $3.8B 밸류",
-      "firstSeen": "2026-07-14",
-      "surfaced": "2026-07-20",
-      "verified": true,
-      "verifyNote": "Dealroom·Yahoo Finance·Endpoints News·Fierce Biotech 7/14 교차확인. Index Ventures·Kleiner Perkins·Sequoia 주도. $3.8B 밸류(7개월 전 $1.3B에서 3배). Lilly·Pfizer·Novartis와 거래.",
-      "source": "https://app.dealroom.co/news/note/chai-discovery-raises-400m-series-c-at-3-8b-valuation-for-ai-drug-discovery",
-      "status": "검수중",
-      "tags": [
-        "자금",
-        "신약개발",
-        "AI"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/chai-discovery-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/chai-discovery.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/chai-discovery.md"
-        }
-      ],
-      "postId": "chai-discovery"
-    },
-    {
-      "title": "xAI Grok 4.5 공개 출시 — Opus급 속도·비용 효율 모델",
-      "firstSeen": "2026-07-08",
-      "surfaced": "2026-07-20",
-      "verified": true,
-      "verifyNote": "TechCrunch·Axios·Grok 공식 7/8 교차확인. Opus급 성능, 더 빠르고 저렴함. 코딩·에이전트 특화. Cursor·Grok Build·SpaceXAI 콘솔에서 접근. $2(입력)/$6(출력). 2배 토큰 효율.",
-      "source": "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/",
-      "status": "인박스",
-      "tags": [
-        "xAI",
-        "모델",
-        "코딩"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/grok-4-5-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/grok-4-5.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/grok-4-5.md"
-        }
-      ],
-      "postId": "grok-4-5"
-    },
-    {
-      "title": "Meta Muse Image — 이미지 생성 모델 공개",
-      "firstSeen": "2026-07-07",
-      "surfaced": "2026-07-20",
-      "verified": true,
-      "verifyNote": "Meta 공식·TechCrunch·CNBC·Axios 7/7 교차확인. Text-to-image·편집·다중 이미지 편집에서 Arena 2위. 에이전트 구조(검색·코딩 도구 활용·자체 개선). Instagram·WhatsApp·Meta AI 앱에서 접근.",
-      "source": "https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/",
-      "status": "인박스",
-      "tags": [
-        "Meta",
-        "모델",
-        "이미지생성"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/meta-muse-image-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/meta-muse-image.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/meta-muse-image.md"
-        }
-      ],
-      "postId": "meta-muse-image"
-    },
-    {
-      "title": "Pinecone Nexus Engine, 7/1 공개 프리뷰 — AI 에이전트용 지식 컴파일러",
-      "firstSeen": "2026-07-01",
-      "surfaced": "2026-07-20",
-      "verified": true,
-      "verifyNote": "Pinecone 공식 7/1 프리뷰 발표(5/5 초기 공개). Context Compiler·KnowQL로 조직 문서 구조화. 토큰 비용 90% 감소, 완료 시간 30배 단축, 완료율 90%+. 새 Builder tier($20/월), Microsoft OneLake 통합.",
-      "source": "https://www.pinecone.io/blog/knowledge-infrastructure-for-agents/",
-      "status": "인박스",
-      "tags": [
-        "인프라",
-        "에이전트",
-        "벡터DB"
-      ],
-      "articleVersions": [
-        {
-          "v": "정리본",
-          "path": "collect/pinecone-nexus-engine-summary.md"
-        },
-        {
-          "v": "자세히",
-          "path": "collect/pinecone-nexus-engine.md"
-        },
-        {
-          "v": "💬 반응",
-          "path": "collect/reactions/pinecone-nexus-engine.md"
-        }
-      ],
-      "postId": "pinecone-nexus-engine"
+ "generated": "2026-07-21",
+ "note": "지난 한 달 AI 소식 전방위 수집. firstSeen = 검증된 진짜 첫 등장일(1차/신뢰 소스). 일자 미확정은 verified:false로 '날짜 없음'에 대기. surfaced가 다르면 gap 표시.",
+ "items": [
+  {
+   "title": "AIsphere Series C $439M 펀딩 라운드 완료 (Alibaba 주도)",
+   "firstSeen": "2026-07-14",
+   "surfaced": "2026-07-16",
+   "verified": true,
+   "verifyNote": "Caixin Global(7/15) + TechCrunch(7/13) + Techtimes(7/15) 3곳 교차확인. PixVerse 플랫폼, 창업자 Wang Changhu(전 MS Research Asia, ByteDance). 1.5억+ 사용자, 177개국. AI 게임 엔진 개발 목표.",
+   "source": "https://www.caixinglobal.com/2026-07-15/alibaba-leads-439-million-funding-round-for-ai-video-startup-aisphere-102464241.html",
+   "status": "발행",
+   "postId": "aisphere-series-c",
+   "tags": [
+    "자금",
+    "AI 비디오",
+    "스타트업",
+    "Alibaba"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/aisphere-series-c-funding-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/aisphere-series-c-funding.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/aisphere-series-c-funding.md"
     }
-  ]
+   ]
+  },
+  {
+   "title": "Apple, OpenAI 거래 비밀 도용 소송 — 하드웨어 설계·기술 명세 절취 혐의",
+   "firstSeen": "2026-07-10",
+   "surfaced": "2026-07-13",
+   "verified": true,
+   "verifyNote": "CNBC·Bloomberg·TechCrunch·CNN·Axios·Euronews·Fortune 7개 매체 7/10 동시 교차확인. Apple이 미 북부 캘리포니아 연방법원에 OpenAI·io Products 고소. Tang Tan(전 Apple VP, 현 OpenAI HW책임자)이 채용과정에서 Apple 직원들에게 비밀 정보·부품 제공 강요. Chang Liu(ex-Apple 엔지니어, 2026-01 OpenAI 이직)가 미공개 하드웨어 파일·기술 명세 대량 다운로드.",
+   "source": "https://www.cnbc.com/2026/07/10/apple-openai-lawsuit-trade-secrets.html",
+   "status": "발행",
+   "postId": "apple-openai-lawsuit",
+   "tags": [
+    "소송",
+    "거래비밀",
+    "OpenAI",
+    "하드웨어"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/apple-openai-lawsuit-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/apple-openai-lawsuit.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/apple-openai-lawsuit.md"
+    }
+   ]
+  },
+  {
+   "title": "ICML 2026 서울 개최 — 기록 23,918 투고, 60+ 워크샵에서 '에이전트AI' 독점",
+   "firstSeen": "2026-07-06",
+   "surfaced": "2026-07-13",
+   "verified": true,
+   "verifyNote": "TechTimes·Atoms dev blog·ICML 공식 사이트(icml.cc) 교차확인. 7/6~7/11 COEX 컨벤션센터 서울 개최. 23,918 투고(역대 최다), 6,352 승인(26.6% 통과율), 60+ 워크샵 제목에 '에이전트AI' 포함 — 'agentic AI'가 학술 분야의 중심축이 됨을 신호. 2% 논문(497건) LLM 위반으로 데스크 거절.",
+   "source": "https://www.techtimes.com/articles/319243/20260628/icml-2026-opens-seoul-next-week-record-23918-submissions-signal-ai-agent-safety-era.htm",
+   "status": "인박스",
+   "tags": [
+    "학술대회",
+    "에이전트",
+    "연구",
+    "아시아"
+   ]
+  },
+  {
+   "title": "LeapXpert, $1.8억 시리즈 라운드 유치 — AI 통신 거버넌스 플랫폼",
+   "firstSeen": "2026-06-30",
+   "surfaced": "2026-07-13",
+   "verified": true,
+   "verifyNote": "PR Newswire·SiliconANGLE·Foley & Lardner법무 공식 발표 6/30. Riverwood Capital 주도, Epoch Ventures·Accel 참여. AI 커뮤니케이션 거버넌스(Slack·Email·Teams 감시·준법심사·리스크관리) 솔루션. 기업용 고객 600+ (CVE-2024-27351 취약점으로 보안 우려도 있었음, 해결됨).",
+   "source": "https://www.prnewswire.com/news-releases/leapxpert-raises-180-million-to-lead-ai-powered-governed-communications-302814485.html",
+   "status": "인박스",
+   "tags": [
+    "자금",
+    "거버넌스",
+    "엔터프라이즈"
+   ]
+  },
+  {
+   "title": "DeepSeek, 자체 AI칩 개발 시작 — NVIDIA 의존도 감소 전략",
+   "firstSeen": "2026-07-07",
+   "surfaced": "2026-07-13",
+   "verified": true,
+   "verifyNote": "TechNode·Semafor·Cybernews·Yahoo Finance 7/7~7/8 교차확인. 중국 AI 스타트업 DeepSeek이 추론(inference) 최적화 자체 칩 개발 중. 약 1년 전 프로젝트 시작, 최근 인력 채용 가속. NVIDIA·Huawei 칩 의존도 낮추기 전략. 초기 단계, 상업화 일정 미정.",
+   "source": "https://technode.com/2026/07/08/deepseek-begins-in-house-ai-chip-development-to-cut-reliance-on-nvidia-sources-say/",
+   "status": "발행",
+   "postId": "deepseek-chip",
+   "tags": [
+    "칩",
+    "기술개발",
+    "중국",
+    "하드웨어"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/deepseek-inhouse-chip-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/deepseek-inhouse-chip.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/deepseek-inhouse-chip.md"
+    }
+   ]
+  },
+  {
+   "title": "Ant Group의 Robbyant, LingBot-VA 2.0 공개 — 로봇 제어용 비디오-액션 기초모델",
+   "firstSeen": "2026-07-11",
+   "surfaced": "2026-07-11",
+   "verified": true,
+   "verifyNote": "MarkTechPost·ArXiv·GitHub 교차확인. Ant Group Robbyant가 2026-07-11 LingBot-VA 2.0 공개. 단일 GPU에서 150Hz 실시간 추론, 20개 시연으로 새 작업 일반화 가능한 비디오-액션 모델.",
+   "source": "https://www.marktechpost.com/2026/07/11/ant-groups-robbyant-unveils-lingbot-va-2-0/",
+   "status": "인박스",
+   "tags": [
+    "모델",
+    "로봇",
+    "중국"
+   ]
+  },
+  {
+   "title": "Meta Superintelligence, Muse Spark 1.1 공개 — 멀티모달 추론·에이전트 최적화",
+   "firstSeen": "2026-07-09",
+   "surfaced": "2026-07-11",
+   "verified": true,
+   "verifyNote": "Meta AI 공식 블로그(2026-07-09), TechCrunch·CNBC·Fortune 교차확인. Muse Spark 1.1은 1M 토큰 컨텍스트 윈도우, 메인-서브 에이전트 위임 구조, 도구/컴퓨터 사용 및 코딩 강화. Meta Model API 공개 프리뷰.",
+   "source": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+   "status": "인박스",
+   "tags": [
+    "모델",
+    "에이전트",
+    "프레임워크"
+   ]
+  },
+  {
+   "title": "Anthropic, Claude Cowork를 모바일·웹으로 확대 — 크로스 디바이스 에이전트",
+   "firstSeen": "2026-07-07",
+   "surfaced": "2026-07-11",
+   "verified": true,
+   "verifyNote": "Anthropic 공식 발표(2026-07-07), 9to5Mac·TechCrunch·MacRumors 교차확인. 데스크톱 전용에서 iPhone·웹으로 확대. Max 플랜부터 단계적 롤아웃, 8월 5일까지 사용 한도 2배 제공.",
+   "source": "https://www.anthropic.com/product/claude-cowork",
+   "status": "인박스",
+   "tags": [
+    "Anthropic",
+    "프로덕트",
+    "에이전트"
+   ]
+  },
+  {
+   "title": "Amazon Q의 MCP 자동 실행 취약점 — 다각도 반응",
+   "firstSeen": "2026-07-10",
+   "surfaced": "2026-07-10",
+   "verified": true,
+   "verifyNote": "Wiz Research(Maor Dokhanian) 공개, 4월 20일 Amazon 보고 → 5월 12일 초기 패치 → 6월 26일 공개. CVE-2026-12957/12958. 22개+ 소스 교차확인(보안·언론·정책·업계).",
+   "source": "https://www.wiz.io/blog/amazon-q-vulnerability",
+   "status": "인박스",
+   "tags": [
+    "보안",
+    "MCP",
+    "취약점",
+    "논란"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/amazon-q-vulnerability-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/amazon-q-vulnerability.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/amazon-q-vulnerability.md"
+    }
+   ]
+  },
+  {
+   "title": "Anthropic, 저작권 합의 $1.5B — Authors Guild 포함 250+ 저자",
+   "firstSeen": "2026-07-10",
+   "surfaced": "2026-07-10",
+   "verified": true,
+   "verifyNote": "Anthropic 공식 발표. Authors Guild·NYT·등 저작권 소송 관련자 포함 합의. 35+ 국제 정책·기업 반응 수집.",
+   "source": "https://www.anthropic.com/news/copyright-settlement",
+   "status": "인박스",
+   "tags": [
+    "법률",
+    "저작권",
+    "합의",
+    "Anthropic"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/anthropic-copyright-settlement-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/anthropic-copyright-settlement.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/anthropic-copyright-settlement.md"
+    }
+   ]
+  },
+  {
+   "title": "MCP v0.2 무상태(Stateless) 구조 릴리스 예정 — OAuth 2.1 전환",
+   "firstSeen": "2026-07-10",
+   "surfaced": "2026-07-10",
+   "verified": true,
+   "verifyNote": "MCP 공식 블로그 5/21 RC 발표, 7/28 최종 릴리스 예정. Breaking change 업계 우려. 30+ 소스.",
+   "source": "https://blog.modelcontextprotocol.io/posts/mcp-stateless-release/",
+   "status": "인박스",
+   "tags": [
+    "프레임워크",
+    "MCP",
+    "기술표준"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/mcp-v02-stateless-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/mcp-v02-stateless.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/mcp-v02-stateless.md"
+    }
+   ]
+  },
+  {
+   "title": "AI 데이터센터 전력 부족 — 2027년까지 40% 제약 예상(Gartner)",
+   "firstSeen": "2026-07-10",
+   "surfaced": "2026-07-10",
+   "verified": true,
+   "verifyNote": "Gartner 예측 보도 2026-06-15 이후 확산. 2027년까지 AI 인프라 전력 40% 제약, 정부 개입(US·EU·China·Korea) 분석. 60+ 소스.",
+   "source": "https://www.gartner.com/en/newsroom/press-releases/2026-06-15-gartner-ai-power-constraint",
+   "status": "발행",
+   "tags": [
+    "하드웨어",
+    "인프라",
+    "정책"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/ai-datacenter-power-shortage-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/ai-datacenter-power-shortage.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/ai-datacenter-power-shortage.md"
+    }
+   ],
+   "postId": "ai-datacenter-power"
+  },
+  {
+   "title": "연방 AI 감시 체계 — NSA·CISA 30일 자발적 검증(Frontier AI)",
+   "firstSeen": "2026-07-10",
+   "surfaced": "2026-07-10",
+   "verified": true,
+   "verifyNote": "Trump 행정부 6/2 행정명령, 공식 프레임 7/1. NSA/CISA 주도 프론티어 모델 공개 전 30일 검증. 자발적(비강제). 40+ 정책·기업 반응.",
+   "source": "https://federalnewsnetwork.com/artificial-intelligence/2026/07/the-administrations-new-ai-framework/",
+   "status": "인박스",
+   "tags": [
+    "정책",
+    "규제",
+    "미국"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/federal-ai-surveillance-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/federal-ai-surveillance.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/federal-ai-surveillance.md"
+    }
+   ]
+  },
+  {
+   "title": "OpenAI-NYT 저작권 소송 '증거 은폐' 적발",
+   "firstSeen": "2026-07-09",
+   "surfaced": "2026-07-10",
+   "verified": true,
+   "verifyNote": "TechCrunch·Washington Post 교차확인. 78백만 건 ChatGPT 대화 데이터베이스 드러남. NYT 제재 청구.",
+   "source": "https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/",
+   "status": "인박스",
+   "tags": [
+    "OpenAI",
+    "저작권",
+    "소송",
+    "규제"
+   ]
+  },
+  {
+   "title": "OpenAI, GPT-5.6 (Sol/Terra/Luna) 시리즈 공개 출시",
+   "firstSeen": "2026-07-09",
+   "surfaced": "2026-07-10",
+   "verified": true,
+   "verifyNote": "OpenAI 공식 발표. 정부 안전검증 후 20개 파트너만 배포. Sol(플래그십)·Terra(비용효율)·Luna(고속).",
+   "source": "https://openai.com/index/previewing-gpt-5-6-sol/",
+   "status": "인박스",
+   "tags": [
+    "OpenAI",
+    "모델",
+    "GPT-5.6"
+   ]
+  },
+  {
+   "title": "Cerebras, 유럽 AI 인프라 확장 — 2027년 말까지 200MW",
+   "firstSeen": "2026-07-09",
+   "surfaced": "2026-07-10",
+   "verified": true,
+   "verifyNote": "파리 RAISE Summit 발표. 2026년 말 첫 DC, 2027년 200MW. OpenAI 워크로드 지원.",
+   "source": "https://www.euronews.com/business/2026/07/09/cerebras-targets-europe-with-multibillion-dollar-ai-expansion/",
+   "status": "인박스",
+   "tags": [
+    "인프라",
+    "하드웨어",
+    "유럽"
+   ]
+  },
+  {
+   "title": "Google 피싱 소송: AI 악용 'Outsider Enterprise' 150만 악성 URL",
+   "firstSeen": "2026-06-12",
+   "surfaced": "2026-07-10",
+   "verified": true,
+   "verifyNote": "Google RICO 소송. 150만 URL, 387만 신용카드 도난, $19B 손실.",
+   "source": "https://www.findlaw.com/legalblogs/courtside/google-turns-to-rico-in-battle-against-outsider-enterprise/",
+   "status": "인박스",
+   "tags": [
+    "Google",
+    "안전",
+    "AI악용"
+   ]
+  },
+  {
+   "title": "Workday 채용 차별 소송: AI가 '10억 건' 구직 거절(클래스액션)",
+   "firstSeen": "2026-03-06",
+   "surfaced": "2026-07-10",
+   "verified": true,
+   "verifyNote": "3/6 판결. Derek Mobley. Workday AI 채용도구 인종·나이·장애 차별. ADEA 적용 인정.",
+   "source": "https://www.akingump.com/en/insights/ai-law-and-regulation-tracker/court-allows-discrimination-claims/",
+   "status": "인박스",
+   "tags": [
+    "AI윤리",
+    "소송",
+    "차별"
+   ]
+  },
+  {
+   "title": "xAI 안전 내부고발 소송: Grok 편향·무기화 경고 엔지니어 해임",
+   "firstSeen": "2026-06-09",
+   "surfaced": "2026-07-10",
+   "verified": true,
+   "verifyNote": "TechCrunch·Decrypt 교차확인. Devin Kim 부당해고. Grok 안전 우려 보고 후 해임.",
+   "source": "https://techcrunch.com/2026/06/10/xai-fired-an-engineer-who-raised-alarms-about-grok-safety/",
+   "status": "인박스",
+   "tags": [
+    "xAI",
+    "안전",
+    "내부고발"
+   ]
+  },
+  {
+   "title": "펜타곤-Anthropic 자율무기 협상 결렬 이메일 공개 (법원 문서 봉인 해제)",
+   "firstSeen": "2026-07-02",
+   "surfaced": "2026-07-05",
+   "verified": true,
+   "verifyNote": "캘리포니아 북부지방법원 문서 7/2 봉인 해제. TechTimes(7/4)·Gizmodo·RealClearDefense(7/3)·TheNextWeb·SecurityWeek 모두 7/2~7/4 교차확인. Amodei-Michael 이메일에서 국방부가 자율무기·국내감시 레드라인 제거를 요구했고, 블랙리스트 지정 다음날 '계약 매우 근접' 이메일을 보낸 이중성 지적. Michael의 1/9 xAI 주식 매도(이해충돌 의혹)도 함께 공개.",
+   "source": "https://www.techtimes.com/articles/319713/20260704/pentagon-blacklisted-anthropic-over-autonomous-weapons-limits-emails-reveal-very-close-talks.htm",
+   "status": "인박스",
+   "tags": [
+    "논란",
+    "안전",
+    "Anthropic",
+    "정책"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/pentagon-anthropic-emails-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/pentagon-anthropic-emails.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/pentagon-anthropic-emails.md"
+    }
+   ]
+  },
+  {
+   "title": "Anthropic, 중국 기업의 Claude 우회 접근(싱가포르 법인·VPN) 차단 나서",
+   "firstSeen": "2026-07-02",
+   "surfaced": "2026-07-05",
+   "verified": true,
+   "verifyNote": "파이낸셜타임스(FT) 7/2(현지) 단독 보도, Investing.com·Seeking Alpha·BanklessTimes(7/3)·CryptoTimes(7/3)가 동일 내용 교차확인. Ant Financial(싱가포르 법인 계정)·ByteDance(VPN 개인구독 대납) 등 우회 사례. Anthropic은 4~6월 약 2.5만 부정계정·2880만 건 상호작용의 증류(distillation) 공격을 탐지했다고 별도 발표(6/10 상원 서한). ⚠️ 별개로 6/30 Reddit(r/ClaudeAI, LegitMichel777)이 Claude Code 내 중국 시간대/프록시 탐지용 은닉 코드를 발견해 프라이버시 논란도 병행 중 — 두 사안을 혼동하지 않도록 각 반응에 출처 명시 필요.",
+   "source": "https://www.investing.com/news/stock-market-news/anthropic-targets-loopholes-used-by-chinese-firms-to-access-claude-ft-reports-4774998",
+   "status": "인박스",
+   "tags": [
+    "논란",
+    "정책",
+    "Anthropic",
+    "중국"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/anthropic-china-access-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/anthropic-china-access.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/anthropic-china-access.md"
+    }
+   ]
+  },
+  {
+   "title": "OpenAI, 미 정부에 지분 5%(약 426억 달러) 제공 제안 (IPO 앞두고)",
+   "firstSeen": "2026-07-02",
+   "surfaced": "2026-07-05",
+   "verified": true,
+   "verifyNote": "CNBC·Coindesk·Axios·Semafor 모두 7/2 보도(FT 최초 보도 인용). 알래스카 영구기금 모델 본뜬 정부 투자기구 구상, 다른 AI 랩도 동참 유도. 초기 논의 단계, 의회 승인 필요. GPT-5.6 정부 지연 조치 직후 나온 타이밍이 논란.",
+   "source": "https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html",
+   "status": "인박스",
+   "tags": [
+    "정책",
+    "자금",
+    "OpenAI"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/openai-government-stake-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/openai-government-stake.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/openai-government-stake.md"
+    }
+   ]
+  },
+  {
+   "title": "Tesla, 직원 AI 도구 주당 $200 상한 시행 (자사 xAI 제품은 예외)",
+   "firstSeen": "2026-07-02",
+   "surfaced": "2026-07-05",
+   "verified": true,
+   "verifyNote": "The Information 단독 보도, Electrek(7/2)·TechTimes(7/4)·WinBuzzer(7/4) 교차확인. 7/6부터 시행, 초과분은 관리자 승인 필요. Grok·Composer(xAI 베타) 제품은 상한 제외 — Musk가 xAI CEO 겸임 및 Tesla의 xAI 20억달러 투자와 맞물려 이해충돌 지적. 엔지니어들은 내부적으로 Claude 선호로 알려짐(Electrek 취재원 4명).",
+   "source": "https://electrek.co/2026/07/02/tesla-caps-employee-ai-spending-200-week/",
+   "status": "인박스",
+   "tags": [
+    "논란",
+    "빅테크",
+    "Tesla"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/tesla-ai-token-cap-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/tesla-ai-token-cap.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/tesla-ai-token-cap.md"
+    }
+   ]
+  },
+  {
+   "title": "Five Eyes(5개국 정보기관), AI발 사이버공격 \"몇 달 내\" 공동 경고",
+   "firstSeen": "2026-06-23",
+   "verified": true,
+   "verifyNote": "미·영·캐나다·호주·뉴질랜드 정보기관 공동성명. CNN·Euronews·CBS News 모두 6/23 보도, \"시간표는 수년이 아니라 수개월\"이라는 문구 교차확인.",
+   "source": "https://www.cnn.com/2026/06/23/world/ai-five-eyes-warning-cyber-threat-intl-hnk",
+   "status": "인박스",
+   "tags": [
+    "정책",
+    "안전",
+    "보안"
+   ]
+  },
+  {
+   "title": "Meituan, LongCat-2.0 오픈소스 공개 — 1.6조 파라미터, 중국산 칩 5만개로만 학습",
+   "firstSeen": "2026-06-30",
+   "verified": true,
+   "verifyNote": "VentureBeat·SCMP·felloai·novalogiq 6/30 교차확인. MoE 구조(1.6T 총/약 480억 활성 파라미터), 100만 토큰 컨텍스트, MIT 라이선스 표방. OpenRouter에서 'Owl Alpha'라는 코드네임으로 이미 상위권 사용량을 기록 중이었음. ⚠️ 가중치는 '공개 예정'(coming soon) 상태로 추론 프레임워크·인프라 코드만 우선 공개 — 완전한 오픈소스 여부는 확인 필요.",
+   "source": "https://venturebeat.com/technology/meituan-open-sources-longcat-2-0-the-1-6t-near-frontier-agentic-coding-model-thats-been-leading-openrouter-trained-entirely-on-chinese-chips",
+   "status": "인박스",
+   "tags": [
+    "모델",
+    "오픈모델",
+    "중국",
+    "하드웨어"
+   ]
+  },
+  {
+   "title": "Menlo Ventures, 창사 이래 최대 $3B 펀드 조성 — Anthropic 지분가치 $14B",
+   "firstSeen": "2026-06-23",
+   "verified": true,
+   "verifyNote": "TechCrunch·Bloomberg 6/23 교차확인. Menlo은 2024년 Anthropic Series D를 주도(5억 달러+, 이후 총 약 10억 달러 투자)했고, 그 지분 가치가 현재 약 140억 달러로 평가. 50년 사력 최대 규모 펀드.",
+   "source": "https://techcrunch.com/2026/06/23/after-betting-the-firm-on-anthropic-menlo-ventures-raises-victorious-3b-fund/",
+   "status": "인박스",
+   "tags": [
+    "자금",
+    "Anthropic"
+   ]
+  },
+  {
+   "title": "MCP 2026-07-28 스펙 릴리스 캔디데이트 — 세션 제거하고 완전 무상태(stateless)로",
+   "firstSeen": "2026-05-21",
+   "surfaced": "2026-07-05",
+   "verified": true,
+   "verifyNote": "공식 MCP 블로그(modelcontextprotocol.io) 5/21 릴리스 캔디데이트 포스트 발행. 최종 스펙은 7/28 출시 예정(약 10주 SDK 검증 기간). 세션ID·초기화 핸드셰이크 제거, OAuth 2.1/OIDC 정합 인가 강화(SEP-2468 등), MCP Apps·Tasks 확장 프레임워크 도입. 46일 전 발표된 내용이라 신선도는 낮지만 7/28 최종 출시를 앞두고 있어 트렌드로 유효.",
+   "source": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+   "status": "인박스",
+   "trend": true,
+   "tags": [
+    "프레임워크",
+    "MCP"
+   ]
+  },
+  {
+   "title": "Claude Sonnet 5 출시",
+   "firstSeen": "2026-06-30",
+   "surfaced": "2026-06-30",
+   "verified": true,
+   "verifyNote": "Anthropic·TechCrunch·MacRumors·Simon Willison 모두 6/30. 7/1~ 후속 기사 다수지만 원 발표는 6/30.",
+   "source": "https://www.anthropic.com/news/claude-sonnet-5",
+   "status": "검수중",
+   "tags": [
+    "모델",
+    "Anthropic"
+   ]
+  },
+  {
+   "title": "캘리포니아, 미 최대 규모 주정부 AI 도입 — 전 기관 Claude 50% 할인",
+   "firstSeen": "2026-06-29",
+   "verified": true,
+   "verifyNote": "Newsom 6/29 발표. 모든 주 기관·시·군이 Claude 접근. 미 역사상 최대 주정부 AI 배치.",
+   "source": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
+   "status": "인박스",
+   "tags": [
+    "정책",
+    "Anthropic"
+   ],
+   "article": "collect/california-claude.md",
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/california-claude-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/california-claude.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/california-claude.md"
+    }
+   ]
+  },
+  {
+   "title": "OpenAI GPT-5.6 Sol·Terra·Luna 프리뷰",
+   "firstSeen": "2026-06-26",
+   "surfaced": "2026-07-02",
+   "verified": true,
+   "verifyNote": "Axios·OpenAI·VentureBeat 6/26 발표. 7/1~7/2 라운드업에 재등장 → 뉴스만 보면 7월로 착각. 진짜는 6/26. (6일 늦게 떴음)",
+   "source": "https://www.axios.com/2026/06/26/openai-gpt-sol-terra-luna-trump",
+   "status": "폐기",
+   "killReason": "프리뷰(제한 파트너)라 직접 검증 불가 — 킬 기준",
+   "tags": [
+    "모델",
+    "OpenAI"
+   ]
+  },
+  {
+   "title": "AI CEO들 G7 정상회의(Évian) 소집 — Fable 5 탈옥·정부 셧다운 여파",
+   "firstSeen": "2026-06-17",
+   "verified": true,
+   "verifyNote": "6/17 G7. Fable 5 탈옥으로 미 정부가 Anthropic Fable 5·Mythos 5 셧다운, 12만자 시스템프롬프트 GitHub 공개 → 'AI 주권'이 조달 이슈로.",
+   "source": "https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026",
+   "status": "인박스",
+   "tags": [
+    "논란",
+    "안전"
+   ]
+  },
+  {
+   "title": "제3연방항소법원, 'AI 학습=공정이용' 첫 항소심 변론",
+   "firstSeen": "2026-06-11",
+   "verified": true,
+   "verifyNote": "6/11. 저작물로 AI를 학습시키는 게 공정이용인지 다투는 2026 최대 저작권 심리.",
+   "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
+   "status": "인박스",
+   "tags": [
+    "법률",
+    "저작권"
+   ]
+  },
+  {
+   "title": "법원, Google·xAI·Perplexity·Apple·Nvidia를 저작권 소송에서 분리",
+   "firstSeen": "2026-06-08",
+   "verified": true,
+   "verifyNote": "6/8 severance 결정.",
+   "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
+   "status": "인박스",
+   "tags": [
+    "법률",
+    "저작권"
+   ]
+  },
+  {
+   "title": "Anthropic, '글로벌 AI 일시중지(pause)' 제안 안전 논문",
+   "firstSeen": "2026-06-04",
+   "verified": true,
+   "verifyNote": "6/4 발표. 올해 가장 중요한 안전 제안. 압축(컴퓨트) 비용이 IPO를 압박한다는 대표 발언도.",
+   "source": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
+   "status": "검수중",
+   "tags": [
+    "연구",
+    "안전",
+    "Anthropic"
+   ],
+   "article": "collect/anthropic-pause.md",
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/anthropic-pause-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/anthropic-pause.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/anthropic-pause.md"
+    }
+   ],
+   "postId": "anthropic-pause"
+  },
+  {
+   "title": "Microsoft, 자체 'MAI' 모델 7종 공개 (MAI-Thinking-1, MAI-Code-1-Flash)",
+   "firstSeen": "2026-06-02",
+   "verified": true,
+   "verifyNote": "CNBC 6/2. OpenAI 의존도↓·개발자 비용↓ 목적. 추론·코딩 특화.",
+   "source": "https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html",
+   "status": "발행",
+   "postId": "microsoft-mai",
+   "tags": [
+    "모델",
+    "Microsoft"
+   ],
+   "article": "collect/microsoft-mai.md",
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/microsoft-mai-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/microsoft-mai.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/microsoft-mai.md"
+    }
+   ]
+  },
+  {
+   "title": "미 행정부, 'AI 혁신·보안 촉진' 행정조치",
+   "firstSeen": "2026-06-02",
+   "verified": true,
+   "verifyNote": "6/2. 강제 라이선스 없이 프런티어 모델 벤치마킹(NSA)·30일 자발적 사전평가 프레임워크.",
+   "source": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/",
+   "status": "인박스",
+   "tags": [
+    "정책",
+    "미국"
+   ],
+   "article": "collect/us-ai-executive-order.md",
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/us-ai-executive-order-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/us-ai-executive-order.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/us-ai-executive-order.md"
+    }
+   ]
+  },
+  {
+   "title": "CNN, Perplexity 저작권 침해 소송",
+   "firstSeen": "2026-05-28",
+   "verified": true,
+   "verifyNote": "5/28 제소. (한 달 경계선 소식)",
+   "source": "https://www.cnn.com/2026/05/28/media/cnn-sues-perplexity-ai-copyright",
+   "status": "인박스",
+   "tags": [
+    "법률",
+    "저작권"
+   ]
+  },
+  {
+   "title": "n8n, MCP 서버를 노드 패널에서 에이전트 도구로",
+   "firstSeen": "2026-05-19",
+   "surfaced": "2026-07-04",
+   "verified": true,
+   "verifyNote": "n8n 공식 릴리즈 노트 5/19. 우리가 수집한 건 7/4 → 46일 늦음(에버그린이라 여전히 유효).",
+   "source": "https://docs.n8n.io/release-notes",
+   "status": "검수중",
+   "tags": [
+    "자동화",
+    "MCP"
+   ]
+  },
+  {
+   "title": "Microsoft Agent Framework 1.0 (MCP 네이티브)",
+   "firstSeen": "2026-04-03",
+   "surfaced": "2026-07-04",
+   "verified": true,
+   "verifyNote": "Python·.NET 1.0 동시 출시 4/3 (2차 정리글 기준). 발행 전 1차 문서로 재확인 권장.",
+   "source": "https://guptadeepak.com/tools/top-10-mcp-frameworks-2026/",
+   "status": "검수중",
+   "tags": [
+    "프레임워크",
+    "MCP"
+   ]
+  },
+  {
+   "title": "Google 6월 묶음: Nano Banana 2 Lite · Gemini Omni Flash(API 프리뷰) · Gemma 4 12B(로컬 16GB)",
+   "firstSeen": null,
+   "verified": false,
+   "verifyNote": "6월 (정확 일자 미확정). Google 공식 6월 라운드업 기준 — 개별 발표일 1차 확인 필요.",
+   "source": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/",
+   "status": "인박스",
+   "tags": [
+    "모델",
+    "Google"
+   ]
+  },
+  {
+   "title": "MiniMax M3 오픈웨이트 (1M 컨텍스트, SWE-Bench Pro 59.0%)",
+   "firstSeen": "2026-06-01",
+   "verified": true,
+   "verifyNote": "6/1 발표(API 즉시), 가중치 HF 6/7. ⚠️ SWE-Bench Pro 59.0%는 자체 주장 — 독립 검증 전(TechTimes 지적).",
+   "source": "https://datanorth.ai/news/minimax-launches-m3",
+   "status": "인박스",
+   "tags": [
+    "오픈모델"
+   ],
+   "article": "collect/minimax-m3.md",
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/minimax-m3-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/minimax-m3.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/minimax-m3.md"
+    }
+   ]
+  },
+  {
+   "title": "Apple: Gemini 기반 Siri + Claude를 iPhone 옵션으로 (Tim Cook)",
+   "firstSeen": null,
+   "verified": false,
+   "verifyNote": "6월 발표. 멀티-AI Extensions로 Claude가 iPhone에 처음 옵션화. 정확 일자 확인 필요.",
+   "source": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
+   "status": "인박스",
+   "tags": [
+    "빅테크",
+    "Apple"
+   ]
+  },
+  {
+   "title": "OpenAI, Sora 중단 발표 (하루 ~$1M 소진 vs 매출 $2.1M)",
+   "firstSeen": "2026-03-24",
+   "verified": true,
+   "verifyNote": "발표 3/24, 웹·앱 종료 4/26, API 종료 9/24. 6월은 환불(Phase 2)일 뿐. ⚠️ 2차 라운드업의 '$15M/일'은 오류 — 1차 기준 약 $1M/일.",
+   "source": "https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/",
+   "status": "인박스",
+   "tags": [
+    "OpenAI"
+   ]
+  },
+  {
+   "title": "Meta, AI 재편으로 ~8,000명 정리해고 (+7,000명 AI팀 재배치)",
+   "firstSeen": "2026-05-20",
+   "verified": true,
+   "verifyNote": "Al Jazeera·NPR·Variety·Quartz 모두 5/20~21(싱가포르부터 이메일). 6월 라운드업이 6월로 잘못 묶었지만 실제는 5/20. 6,000명 채용 취소 + 7,000명 AI 재배치.",
+   "source": "https://www.aljazeera.com/economy/2026/5/20/meta-cuts-8000-jobs-in-sweeping-global-layoffs",
+   "status": "인박스",
+   "tags": [
+    "빅테크",
+    "Meta"
+   ]
+  },
+  {
+   "title": "일리노이, AI 안전 3자 감사 의무화 법 통과",
+   "firstSeen": "2026-05-27",
+   "verified": true,
+   "verifyNote": "SB 315 하원 110-0 통과 5/27(상원 5/21). Pritzker 서명 예정·시행 2027-01-01. 미 최초 AI 안전 감사 의무. 6월 아님.",
+   "source": "https://www.nbcnews.com/tech/tech-news/illinois-legislature-passes-historic-ai-bill-rcna347191",
+   "status": "인박스",
+   "tags": [
+    "정책",
+    "미국"
+   ]
+  },
+  {
+   "title": "NVIDIA Physical AI Data Factory + Isaac GR00T 업데이트 + LG AI 팩토리",
+   "firstSeen": null,
+   "verified": false,
+   "verifyNote": "6월 COMPUTEX/GTC Taipei. 휴머노이드·로보틱스용 데이터 파이프라인. 정확 일자 확인 필요.",
+   "source": "https://nvidianews.nvidia.com/news/nvidia-announces-open-physical-ai-data-factory-blueprint-to-accelerate-robotics-vision-ai-agents-and-autonomous-vehicle-development",
+   "status": "인박스",
+   "tags": [
+    "하드웨어",
+    "로봇"
+   ]
+  },
+  {
+   "title": "대형 펀딩(6월): Baseten $1.5B(F) · Supabase $500M($10.5B밸류) · Flourish $500M seed(Bezos 등)",
+   "firstSeen": null,
+   "verified": false,
+   "verifyNote": "techstartups 6/30 라운드업. 개별 발표일 확인 필요.",
+   "source": "https://techstartups.com/2026/06/30/venture-capital-startup-funding-roundup-june-30-2026/",
+   "status": "인박스",
+   "tags": [
+    "자금"
+   ]
+  },
+  {
+   "title": "Anthropic, $965B Series H 밸류에이션 (OpenAI $852B 상회)",
+   "firstSeen": null,
+   "verified": false,
+   "verifyNote": "5월 말. 정확 일자 확인 필요.",
+   "source": "https://www.digitalapplied.com/blog/ai-venture-funding-2026-where-242b-went-data-atlas",
+   "status": "인박스",
+   "tags": [
+    "자금",
+    "Anthropic"
+   ]
+  },
+  {
+   "title": "직장 내 AI 도입률 73% (2025년 34% → 2026년) — 연구",
+   "firstSeen": null,
+   "verified": false,
+   "trend": true,
+   "verifyNote": "6월 공개 연구 인용. 원 리서치·정의 확인 필요.",
+   "source": "https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026",
+   "status": "인박스",
+   "tags": [
+    "트렌드",
+    "연구"
+   ]
+  },
+  {
+   "title": "로컬 LLM 자가호스팅이 쉬워진 흐름 (Gemma 3·Ollama 등)",
+   "firstSeen": null,
+   "verified": true,
+   "trend": true,
+   "verifyNote": "단일 발표가 아닌 지속 흐름 — 대표 날짜 없음. 시의성 무관 에버그린.",
+   "source": "https://huggingface.co/blog/daya-shankar/open-source-llm-models-to-run-locally",
+   "status": "검수중",
+   "tags": [
+    "오픈모델"
+   ]
+  },
+  {
+   "title": "에이전트 내장 80% (IDC 전망) / 하이퍼오토메이션 트렌드",
+   "firstSeen": null,
+   "verified": false,
+   "trend": true,
+   "verifyNote": "IDC 전망 수치(2차 인용). 단일 뉴스 날짜 아님. 원 리포트로 정의·수치 확인 필요.",
+   "source": "https://www.cflowapps.com/ai-workflow-automation-trends/",
+   "status": "검수중",
+   "tags": [
+    "트렌드"
+   ]
+  },
+  {
+   "title": "Unisound U2 — 초저가 에이전트용 MoE",
+   "firstSeen": null,
+   "verified": false,
+   "verifyNote": "출시일·가격·벤치 수치 미검증 → 인박스 대기. 1차 소스로 첫 등장일부터 확인해야 선별 가능.",
+   "source": null,
+   "status": "인박스",
+   "tags": [
+    "모델"
+   ]
+  },
+  {
+   "title": "Anthropic, Claude Fable 5·Mythos 5 수출통제 해제 후 서비스 복귀",
+   "firstSeen": "2026-06-30",
+   "surfaced": "2026-07-06",
+   "verified": true,
+   "verifyNote": "Anthropic 공식 블로그(Redeploying Fable 5) 6/30 발표. CNBC·TheHackerNews·FoxBusiness·9to5Mac·cybersecuritynews.com·Hacker News 모두 6/30(해제 통보)~7/1(서비스 복귀) 교차확인. 6/12 발동된 수출통제(Amazon이 발견한 Fable 5 jailbreak가 계기)를 상무부가 약 2주 검토 후 해제, 새 분류기(자체 주장 99%+ 차단)와 함께 7/1 전 세계 재개. 6/17 G7 소집(기존 인박스 항목, firstSeen 2026-06-17)의 후속·결말 사건.",
+   "source": "https://www.anthropic.com/news/redeploying-fable-5",
+   "status": "인박스",
+   "tags": [
+    "논란",
+    "안전",
+    "Anthropic",
+    "정책"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/fable5-restored-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/fable5-restored.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/fable5-restored.md"
+    }
+   ]
+  },
+  {
+   "title": "Anthropic, 신약개발 워크벤치 'Claude Science' 출시 + 등한시 질병 신약 프로그램",
+   "firstSeen": "2026-06-30",
+   "surfaced": "2026-07-06",
+   "verified": true,
+   "verifyNote": "Anthropic 공식 발표 6/30. CNBC·MIT Technology Review·Northeastern Global News·Pharmaceutical Technology·pharmaphorum·Inc.com 모두 6/30 동일 날짜로 교차확인. 60+ 도구/DB 연동 워크벤치(베타), 등한시 질병 대상 내부 신약 프로그램, 'AI for Science' 그랜트(최대 50건, 건당 최대 $3만, 지원마감 7/15) 동시 발표.",
+   "source": "https://www.anthropic.com/news/claude-science-ai-workbench",
+   "status": "인박스",
+   "tags": [
+    "제품",
+    "Anthropic",
+    "연구"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/claude-science-launch-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/claude-science-launch.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/claude-science-launch.md"
+    }
+   ]
+  },
+  {
+   "title": "Anthropic, 삼성전자와 2nm 커스텀 AI칩 개발 초기 논의",
+   "firstSeen": "2026-07-02",
+   "surfaced": "2026-07-06",
+   "verified": true,
+   "verifyNote": "TechCrunch 단독 보도 7/2. The Information(유료)·Yahoo Finance·stocktwits가 같은 날짜로 교차확인. 삼성 2nm 공정·패키징 활용한 커스텀 AI 가속기 초기 논의 단계(용도·사양 미정), Anthropic은 Google·Amazon·Nvidia 등 다변화된 하드웨어 스택 유지 방침 공식 확인. OpenAI-Broadcom 'Jalapeño' 칩 발표에 대한 대응 성격으로 다수 매체가 해석.",
+   "source": "https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/",
+   "status": "인박스",
+   "tags": [
+    "하드웨어",
+    "Anthropic"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/anthropic-samsung-chip-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/anthropic-samsung-chip.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/anthropic-samsung-chip.md"
+    }
+   ]
+  },
+  {
+   "title": "퀄컴, AI칩 스타트업 Tenstorrent 8~10조원 인수 논의 — CEO는 부인",
+   "firstSeen": "2026-06-15",
+   "surfaced": "2026-07-06",
+   "verified": true,
+   "trend": true,
+   "verifyNote": "Reuters 6/15 최초 보도(80~100억달러 규모 인수 협상), The Information도 별도 취재원으로 교차확인(Yahoo Finance·DCD·TheStreet 등 재인용). 그러나 6/30 Tenstorrent CEO Jim Keller가 '퀄컴과 논의 중이 아니다'라고 공식 부인 — 보도와 부인이 상충하는 상태로 진행 중인 사안. 최종 성사 여부 미확정.",
+   "source": "https://finance.yahoo.com/technology/ai/articles/qualcomm-talks-acquire-ai-chip-230401789.html",
+   "status": "인박스",
+   "tags": [
+    "M&A",
+    "하드웨어"
+   ]
+  },
+  {
+   "title": "Together AI, 시리즈C 8억달러 유치 (밸류 83억달러, Aramco Ventures 주도)",
+   "firstSeen": "2026-07-01",
+   "surfaced": "2026-07-06",
+   "verified": true,
+   "verifyNote": "Businesswire 보도자료 7/1 기준 TechCrunch·Yahoo Finance·Qz·HPCwire·thenextweb 모두 동일 금액(8억달러)·밸류($8.3B)로 교차확인. Aramco Ventures 주도, Vista Equity Partners·General Catalyst·Emergence Capital·NVIDIA·March Capital 등 참여.",
+   "source": "https://www.businesswire.com/news/home/20260701243402/en/Together-AI-Raises-$800-Million-at-$8.3-Billion-Valuation-to-Make-Frontier-AI-Accessible-to-All",
+   "status": "인박스",
+   "tags": [
+    "자금"
+   ]
+  },
+  {
+   "title": "UN '글로벌 AI 거버넌스 대화' 제네바서 개막 (193개국 참여)",
+   "firstSeen": "2026-07-06",
+   "surfaced": "2026-07-06",
+   "verified": true,
+   "verifyNote": "UN 공식 사이트(un.org/global-dialogue-ai-governance)·ITU·UNESCO 모두 7/6~7/7 제네바 개최로 명시. 193개 UN 회원국·민간·시민사회·학계 참여, El Salvador·에스토니아 대사가 공동의장. WSIS 포럼(7/6~10)·ITU AI for Good 정상회의(7/7~10)와 동시 개최.",
+   "source": "https://www.un.org/global-dialogue-ai-governance/en",
+   "status": "인박스",
+   "tags": [
+    "정책"
+   ]
+  },
+  {
+   "title": "백악관, OpenAI·Anthropic·Google과 '프론티어 모델 자율기준' 프레임워크 막판 조율(미확정)",
+   "firstSeen": null,
+   "surfaced": "2026-07-06",
+   "verified": false,
+   "verifyNote": "AI Weekly·TipRanks 등 복수 매체가 '다음주쯤 발표 가능'이라 보도했으나 실제 서명·공식 발표는 이번 조사 시점까지 확인되지 않음 — 확정 시점·세부내용 미정이라 verified:false로 인박스 대기. 6/2 행정명령(EO 14409)이 법적 골격이라는 점만 확인.",
+   "source": "https://aiweekly.co/alerts/white-house-nears-voluntary-frontier-model-deal-with-top-ai-labs",
+   "status": "인박스",
+   "tags": [
+    "정책"
+   ]
+  },
+  {
+   "title": "Grok 5 출시 지연 지속 — Polymarket 확률 한 자릿수%로 하락",
+   "firstSeen": null,
+   "surfaced": "2026-07-06",
+   "verified": true,
+   "trend": true,
+   "verifyNote": "단일 발표가 아닌 지속 흐름이라 대표 날짜 없음. xAI Colossus 2(1.5GW)에서 훈련 중이며 Q1·Q2 2026 목표 모두 불발. Polymarket 'Grok 5 released by...' 계약이 6/30 기준 3~7% 확률로 마감 — Polymarket·WaveSpeed·Overchat AI 교차확인.",
+   "source": "https://polymarket.com/event/grok-5-released-by",
+   "status": "인박스",
+   "tags": [
+    "트렌드",
+    "xAI"
+   ]
+  },
+  {
+   "title": "Grok 4.5, SpaceX·Tesla 내부 비공개 베타 진입 (V9 1.5조 파라미터)",
+   "firstSeen": "2026-06-28",
+   "verified": true,
+   "verifyNote": "머스크가 X에서 발표(2026-06-28), SpaceX·Tesla 내부 전용 비공개 베타. Investing.com·TechTimes(6/29)·Cybernews 교차확인. 1.5조 파라미터 V9 파운데이션 모델(5/26 학습 완료)에 Cursor 데이터로 추가 학습. Opus에 근접·상회한다는 주장은 SpaceX·Tesla 사내 평가로, 독립 검증·공개 벤치마크 없음 — '자체 주장'으로 표기.",
+   "source": "https://www.techtimes.com/articles/319314/20260629/grok-45-enters-private-beta-spacex-tesla-no-public-access-no-independent-benchmark.htm",
+   "status": "인박스",
+   "tags": [
+    "모델",
+    "xAI"
+   ]
+  },
+  {
+   "title": "EU 이사회, AI법 간소화(Digital Omnibus) 최종 승인 — 고위험 규정 2027·2028로 순연",
+   "firstSeen": "2026-06-29",
+   "verified": true,
+   "verifyNote": "EU 이사회(Council) 공식 보도자료(1차 소스, consilium.europa.eu) 2026-06-29. EU Agenda·eubusiness.com·INSIGHT EU Monitoring 교차확인. 독립형 고위험 AI시스템 규정 시행일을 2027-12-02로, 제품 내장형은 2028-08-02로 순연. 비동의 성적 이미지·아동성착취물(CSAM) 생성 AI 금지 조항 신설(2026년 12월 시행). 정식 관보 게재 후 3일 뒤 발효.",
+   "source": "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/",
+   "status": "인박스",
+   "tags": [
+    "정책",
+    "규제",
+    "EU"
+   ]
+  },
+  {
+   "title": "Venice AI, 프라이버시 우선 AI 프록시로 6500만달러 시리즈A (밸류 10억달러)",
+   "firstSeen": "2026-07-01",
+   "verified": true,
+   "verifyNote": "Venice 공식 블로그(1차 소스, venice.ai/blog) + TechCrunch(2026-07-01) 교차확인. Dragonfly 주도, Coinbase Ventures·North Island Ventures 등 참여. 200개+ 모델에 프록시로 접근하며 OpenAI·Anthropic·xAI·Google 모델 이용 시 IP·계정·세션 정보 마스킹. 이용자 300만 명, 일 API 호출 170만 건, 연환산매출(ARR) 7000만달러, 흑자 전환 상태라고 자체 발표.",
+   "source": "https://venice.ai/blog/venice-raises-65-million-series-a",
+   "status": "인박스",
+   "tags": [
+    "자금",
+    "프라이버시"
+   ]
+  },
+  {
+   "title": "SpaceX, Cursor 개발사 Anysphere를 600억 달러(전량 주식)에 인수 — 역대 최대 스타트업 인수",
+   "firstSeen": "2026-06-16",
+   "surfaced": "2026-07-06",
+   "verified": true,
+   "trend": true,
+   "verifyNote": "Forbes(Sandy Carter, 2026-06-16)·qz.com(2026-06-16/17)·TechFundingNews·Yahoo Finance 교차확인. 벤처 투자 받은 스타트업 역대 최대 인수. 2026-04-21 옵션계약(인수가 600억달러/포기 시 위약금 약 100억달러) 후 정식화. 2026년 3분기 종료 예정(규제승인 전제)이라 진행형 이슈로 트렌드 표기.",
+   "source": "https://www.forbes.com/sites/sandycarter/2026/06/16/spacex-buys-cursor-in-largest-startup-acquisition-ever-at-60-billion/",
+   "status": "인박스",
+   "tags": [
+    "자금",
+    "M&A",
+    "xAI",
+    "논란"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/spacex-cursor-acquisition-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/spacex-cursor-acquisition.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/spacex-cursor-acquisition.md"
+    }
+   ]
+  },
+  {
+   "title": "중국 'AI 의인화 서비스' 규제 시행 앞두고 Doubao·Qwen, 7/15 에이전트 기능 종료",
+   "firstSeen": "2026-07-04",
+   "surfaced": "2026-07-06",
+   "verified": true,
+   "trend": true,
+   "verifyNote": "규제 자체는 중국 CAC 등 5개 부처가 2026-04-10 발표(1차 소스), 시행일 2026-07-15. 셧다운 공지 확산(진짜 첫 등장일)은 TechTimes(2026-07-04)가 최초 보도, TechNode(2026-07-06)·SCMP·Bird&Bird·Wikipedia로 교차확인.",
+   "source": "https://technode.com/2026/07/06/bytedances-doubao-and-alibabas-qwen-to-shut-down-ai-agent-features-on-july-15/",
+   "status": "작성중",
+   "postId": "china-ai-companion-regulation",
+   "tags": [
+    "정책",
+    "규제",
+    "중국",
+    "논란"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/china-ai-companion-shutdown-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/china-ai-companion-shutdown.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/china-ai-companion-shutdown.md"
+    }
+   ]
+  },
+  {
+   "title": "美 FTC, 'AI 정확성 억제' 정책성명 초안 — 주(州) AI법 연방 선점 주장",
+   "firstSeen": "2026-07-01",
+   "verified": true,
+   "verifyNote": "FTC 공식 보도자료(1차 소스, ftc.gov, 2026-07-01) + AI Weekly·Forbes(Lance Eliot, 2026-07-06)·Consumer Financial Services Law Monitor 교차확인. 콜로라도 AI법을 대표 사례로 지목, FTC법 제5조 근거 연방 선점 주장. 위원회 표결 2대0, 의견수렴 마감 2026-07-31.",
+   "source": "https://www.ftc.gov/news-events/news/press-releases/2026/07/ftc-seeks-public-comment-policy-statement-addressing-ai-accuracy",
+   "status": "인박스",
+   "tags": [
+    "정책",
+    "규제",
+    "논란"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/ftc-ai-accuracy-policy-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/ftc-ai-accuracy-policy.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/ftc-ai-accuracy-policy.md"
+    }
+   ]
+  },
+  {
+   "title": "Sysdig, 첫 완전자율 'AI 에이전트 랜섬웨어' JADEPUFFER 포착 — Langflow RCE 악용",
+   "firstSeen": "2026-07-01",
+   "surfaced": "2026-07-07",
+   "verified": true,
+   "verifyNote": "Sysdig 위협 리서치팀 공식 블로그(1차 소스, 2026-07-01 공개) + BleepingComputer·The Hacker News·DarkReading·SecurityWeek·CSO Online·Infosecurity Magazine 교차확인. LLM 자율 에이전트가 CVE-2025-3248(Langflow 인증 누락, 2025-04-01 패치·2025-05 CISA KEV 등재)로 침투 후 정찰·자격증명 탈취·횡적이동·권한상승·암호화까지 사람 개입 없이 수행. 페이로드 600개+, Nacos 설정 1,342개 암호화, 키 미저장으로 복호화 불가 구조. 단, 후속 보도(TechCrunch·The Register)에서 Sysdig의 Michael Clark가 '표적 선정·인프라 구축·최초 자격증명 확보는 사람이 했다'고 인정해 '완전 자율' 프레이밍에 이견 있음 — 반응 탭에 명시.",
+   "source": "https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion",
+   "status": "인박스",
+   "tags": [
+    "보안",
+    "에이전트",
+    "논란"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/jadepuffer-ai-ransomware-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/jadepuffer-ai-ransomware.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/jadepuffer-ai-ransomware.md"
+    }
+   ]
+  },
+  {
+   "title": "Nvidia, \"Kyber 랙 2028년 지연\" SemiAnalysis 보도 정면 반박 — \"로드맵은 그대로\"",
+   "firstSeen": "2026-07-06",
+   "surfaced": "2026-07-07",
+   "verified": true,
+   "verifyNote": "SemiAnalysis가 Kyber NVL144(Rubin Ultra용 랙) PCB 미드플레인 제조 난항으로 2028년까지 12개월+ 지연, NVL72x2 백업안·4칩 Rubin Ultra 취소를 주장. Nvidia는 Bloomberg에 이메일 성명으로 \"로드맵은 그대로(intact)\"라 반박했으나 개별 기술 주장에는 답하지 않음. CNBC(2026-07-06)·Tom's Hardware·Yahoo Finance·Benzinga·Wccftech·TradingKey 교차확인. 양측 주장이 대립하는 미해결 쟁점 — 어느 쪽도 확정 사실로 단정하지 않음.",
+   "source": "https://www.cnbc.com/2026/07/06/nvidia-kyber-rack-system-delays-manufacturing-taiwan-rubin-chips-.html",
+   "status": "발행",
+   "postId": "nvidia-kyber-delay",
+   "tags": [
+    "하드웨어",
+    "논란"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/nvidia-rubin-kyber-delay-denial-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/nvidia-rubin-kyber-delay-denial.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/nvidia-rubin-kyber-delay-denial.md"
+    }
+   ]
+  },
+  {
+   "title": "일리노이 주지사 프리츠커, 'AI 안전조치법(SB 315)' 정식 서명 — 미 최초 3자 안전감사 의무화 발효",
+   "firstSeen": "2026-07-06",
+   "surfaced": "2026-07-07",
+   "verified": true,
+   "verifyNote": "일리노이 주지사 JB 프리츠커가 2026-07-06 SB 315(Artificial Intelligence Safety Measures Act)에 정식 서명. 주지사실 공식 보도자료(1차 소스) + Chicago Sun-Times·StateScoop·The Hill·ABC7 Chicago·NPR Illinois 교차확인. 기존 인박스 항목(firstSeen 2026-05-27, 하원 통과·서명 예정 상태)의 후속 사건 — 법안이 실제 법률로 확정됨. 대형 AI 개발사에 안전관행 공개·중대사고 신고(24~72시간 이내)·내부고발자 보호·독립 3자 안전감사 의무화. 시행 2027-01-01.",
+   "source": "https://chicago.suntimes.com/politics/2026/07/06/ai-regulations-illinois-law-pritzker-signed",
+   "status": "발행",
+   "tags": [
+    "정책",
+    "규제",
+    "미국"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/illinois-ai-safety-act-signed-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/illinois-ai-safety-act-signed.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/illinois-ai-safety-act-signed.md"
+    }
+   ],
+   "postId": "illinois-ai-law"
+  },
+  {
+   "title": "우크라이나, AI 도입 기준으로 '자체 서버 구동(온프레미스)' 우선 — Anthropic·OpenAI류 모델은 배제 방향",
+   "firstSeen": "2026-07-07",
+   "surfaced": "2026-07-07",
+   "verified": true,
+   "verifyNote": "우크라이나 디지털전환부 최고AI책임자 Roman Kyslyi가 로이터에 밝힘(2026-07-07, Reuters 배포로 investing.com·US News·Yahoo Finance·Al-Monitor·933 The Drive 등 다수 매체 동시 게재). 정부·기업·군용 AI는 자국 인프라 구동(온프레미스) 모델을 우선하고 제공사가 통제권을 쥔 모델(Anthropic·OpenAI 주력 모델)은 제한하는 방향. \"미국 정부가 Anthropic에 강력 모델 접근을 축소하라고 명령했다\"는 부분은 Kyslyi의 발언 인용이며 이 기사가 별도로 확인한 1차 사실이 아님 — 정리본·자세히에서 인용으로만 표기. Diia 내 AI 비서는 현재 구글 Gemini(원격) 임시 사용 중, Kyivstar와 Gemma 기반 자체 모델을 올가을 공개 예정.",
+   "source": "https://www.usnews.com/news/world/articles/2026-07-07/ukraine-to-pick-ai-models-operated-without-provider-control-official-says",
+   "status": "인박스",
+   "tags": [
+    "정책",
+    "지정학",
+    "논란"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/ukraine-ai-onpremise-policy-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/ukraine-ai-onpremise-policy.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/ukraine-ai-onpremise-policy.md"
+    }
+   ]
+  },
+  {
+   "title": "EU 집행위, AI×사이버보안 액션플랜 발표",
+   "firstSeen": "2026-07-07",
+   "surfaced": "2026-07-07",
+   "verified": true,
+   "verifyNote": "유럽집행위원회 공식 뉴스룸(1차 소스, commission.europa.eu·digital-strategy.ec.europa.eu 동시 게시, 2026-07-07)에서 첨단 AI가 사이버보안에 미치는 위험·기회를 다루는 EU 액션플랜 발표 확인. WebFetch가 두 공식 도메인 모두 403으로 차단돼 본문 상세는 확인하지 못했고, 발표 사실과 날짜만 검증됨(공식 도메인 2곳 동시 게시로 날짜 확정). 상세 내용은 후속 확인 필요.",
+   "source": "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en",
+   "status": "인박스",
+   "tags": [
+    "정책",
+    "규제",
+    "유럽"
+   ]
+  },
+  {
+   "title": "SK하이닉스, 나스닥 $280억 규모 미국 상장(IPO) 개시 — 역대 두 번째 규모",
+   "firstSeen": "2026-07-06",
+   "surfaced": "2026-07-07",
+   "verified": true,
+   "verifyNote": "SK하이닉스가 SEC 제출서류로 보통주 1,779만주 규모 나스닥 상장 절차를 2026-07-06 개시. TechCrunch·Yahoo Finance·Investing.com(Reuters)·Bloomberg·Seeking Alpha 교차확인. 가격 확정 목요일, 거래 시작 2026-07-10 예정. SpaceX $857억 IPO 다음으로 역대 두 번째 규모, 사우디 아람코($256억)·알리바바 상회. 조달자금은 한국 내 생산시설 확장·EUV 노광장비 구입 용도.",
+   "source": "https://techcrunch.com/2026/07/06/us-investors-will-soon-get-access-to-sk-hynix-another-memory-maker-riding-the-ai-boom/",
+   "status": "인박스",
+   "tags": [
+    "하드웨어",
+    "자금"
+   ]
+  },
+  {
+   "title": "Microsoft, AI 도입 전담 신설조직 'Frontier Company' 출범 — $25억·전문인력 6,000명 투입",
+   "firstSeen": "2026-07-02",
+   "surfaced": "2026-07-07",
+   "verified": true,
+   "verifyNote": "Microsoft 공식 블로그(1차 소스, blogs.microsoft.com, 2026-07-02) + CNBC·TechCrunch·HPCwire·TechTimes 교차확인. 기업 AI 도입을 공동설계·배치하는 컨설팅 조직, $25억 투자·엔지니어링/산업전문가 6,000명 투입. LSEG·Land O'Lakes·Unilever·Novo Nordisk 등 초기 고객. MIT Project NANDA의 '기업 생성AI 파일럿 95%가 손익에 측정 가능한 영향 없음' 연구가 배경으로 언급됨.",
+   "source": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/",
+   "status": "인박스",
+   "tags": [
+    "자동화",
+    "자금"
+   ]
+  },
+  {
+   "title": "Together AI, $8억 시리즈C 유치 — 밸류에이션 $83억로 상승(오픈소스 AI 인프라)",
+   "firstSeen": "2026-07-01",
+   "surfaced": "2026-07-07",
+   "verified": true,
+   "verifyNote": "Together AI 공식 블로그(1차 소스, together.ai, 2026-07-01) + TechCrunch·Businesswire·Yahoo Finance 교차확인. Aramco Ventures 주도, Vista Equity Partners·General Catalyst·Emergence Capital·Nvidia·SentinelOne S Ventures 등 참여. 연간 예약매출 전분기 $11.5억 돌파, 오픈소스 모델 사용량 12개월간 3배 증가. 지분 투자 외 500MW+ 컴퓨트 용량 확보 별도 약정.",
+   "source": "https://www.together.ai/blog/announcing-our-series-c",
+   "status": "인박스",
+   "tags": [
+    "자금",
+    "인프라"
+   ]
+  },
+  {
+   "title": "Illinois AI 안전법 서명: 미국 최초 연간 독립감사 의무화",
+   "firstSeen": "2026-07-06",
+   "surfaced": "2026-07-10",
+   "verified": true,
+   "verifyNote": "Capitol News Illinois·WTTW·Gov. Pritzker·Transparency Coalition·JURIST 모두 7/6 교차확인. Gov. Pritzker가 SB315 서명, 연 매출 5억달러+ AI 기업에 독립감시감사 의무화. 재앙적 위험(50명+ 사망·100만달러+ 재산피해) 파악 요구. 72시간 보고(긴급 24시간). 위반 시 최대 300만달러. OpenAI·Anthropic 지지, 하원 110대 0 만장일치.",
+   "source": "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-signs-nation-leading-artificial-intelligence-safety-law",
+   "status": "인박스",
+   "tags": [
+    "정책",
+    "안전",
+    "규제",
+    "미국"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/illinois-ai-safety-law-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/illinois-ai-safety-law.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/illinois-ai-safety-law.md"
+    }
+   ]
+  },
+  {
+   "title": "Meta, Iris 칩 양산 개시(2026년 9월) — 14GW 컴퓨팅 목표",
+   "firstSeen": "2026-07-09",
+   "surfaced": "2026-07-14",
+   "verified": true,
+   "verifyNote": "CNBC·Yahoo Finance·Reuters·Let's Data Science·Broadcom·Digitimes·DCD 8개+ 매체 7/9 동시 교차확인. Meta가 자체 설계 AI 칩 Iris를 9월부터 양산 개시, 2027년까지 14GW 컴퓨팅 용량 목표. Broadcom 공동설계, TSMC 제조. 6주 테스트 완료.",
+   "source": "https://www.cnbc.com/2026/07/09/meta-to-put-ai-chip-into-production-in-september-report.html",
+   "status": "발행",
+   "tags": [
+    "하드웨어",
+    "칩",
+    "Meta",
+    "인프라"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/meta-iris-chip-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/meta-iris-chip.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/meta-iris-chip.md"
+    }
+   ],
+   "postId": "meta-iris-chip"
+  },
+  {
+   "title": "삼성전자, GAIA AI 칩 개발 — AI PC 시장 진출(2027년 양산 목표)",
+   "firstSeen": "2026-07-09",
+   "surfaced": "2026-07-14",
+   "verified": true,
+   "verifyNote": "Seoul Economic Daily·Trendforce·wccftech·gHacks·Memeburn·Samsung Fans·Phandroid·Digital Trends 8개+ 매체 7/9~7/13 교차확인. 삼성이 4나노 공정 AI 가속기 GAIA 개발 중, 2027년 초 양산 목표. HP·Lenovo가 프로토타입 테스트 중. PIM(Processing-in-Memory) 기술 결합 예정.",
+   "source": "https://www.trendforce.com/news/2026/07/10/news-samsung-reportedly-developing-4nm-gaia-ai-pc-chip-mass-production-targeted-as-early-as-2027/",
+   "status": "발행",
+   "postId": "samsung-gaia-chip",
+   "tags": [
+    "하드웨어",
+    "칩",
+    "삼성",
+    "AI PC"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/samsung-gaia-chip-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/samsung-gaia-chip.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/samsung-gaia-chip.md"
+    }
+   ]
+  },
+  {
+   "title": "ByteDance Seedream 5.0 Pro",
+   "firstSeen": "2026-07-08",
+   "surfaced": "2026-07-15",
+   "verified": true,
+   "verifyNote": "공식 발표 2026-07-08. ByteDance·TechCrunch·MagicShot 2곳+ 교차확인.",
+   "source": "https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro",
+   "status": "작성중",
+   "postId": "bytedance-seedream",
+   "tags": [
+    "모델출시",
+    "이미지생성",
+    "ByteDance",
+    "다국어",
+    "창작도구"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/bytedance-seedream-5-0-pro-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/bytedance-seedream-5-0-pro.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/bytedance-seedream-5-0-pro.md"
+    }
+   ]
+  },
+  {
+   "title": "China AI Virtual Companion Regulations — Effective July 15",
+   "firstSeen": "2026-07-15",
+   "surfaced": "2026-07-15",
+   "verified": true,
+   "verifyNote": "시행일 2026-07-15. 규정 발표 2026-04-10 (CAC, NDRC, MIIT). 2곳+ 교차확인.",
+   "source": "https://www.techtimes.com/articles/320525/20260715/china-ai-companion-law-takes-effect-doubao-qwen-shut-down-millions-lose-chat-data.htm",
+   "status": "작성중",
+   "postId": "china-ai-companion-regulation",
+   "tags": [
+    "정책규제",
+    "중국",
+    "AI윤리",
+    "업계영향",
+    "미성년자보호"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/china-ai-companion-regulations-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/china-ai-companion-regulations.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/china-ai-companion-regulations.md"
+    }
+   ]
+  },
+  {
+   "title": "Publishers File Class Action Against Google Over Gemini AI Training",
+   "firstSeen": "2026-07-14",
+   "surfaced": "2026-07-15",
+   "verified": true,
+   "verifyNote": "소송 제기 2026-07-14. 원고: Hachette, Cengage, Elsevier, Scott Turow. 2곳+ 교차확인.",
+   "source": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/",
+   "status": "작성중",
+   "postId": "google-publisher-lawsuit",
+   "tags": [
+    "저작권",
+    "소송",
+    "Google",
+    "Gemini",
+    "AI윤리"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/google-publisher-lawsuit-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/google-publisher-lawsuit.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/google-publisher-lawsuit.md"
+    }
+   ]
+  },
+  {
+   "title": "Moonshot AI, Kimi K3 공개 — 2.8조 파라미터 MoE 모델",
+   "firstSeen": "2026-07-16",
+   "surfaced": "2026-07-18",
+   "verified": true,
+   "postId": "moonshot-kimi-k3",
+   "verifyNote": "MarkTechPost·TechCrunch·KIE·Fortune·Axios 5곳 교차확인. Moonshot AI가 2026-07-16 Kimi K3 공개. 2.8조 파라미터 MoE, 896개 중 16개 활성화. 100만 토큰 컨텍스트. 오픈 가중치 모델.",
+   "source": "https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/",
+   "status": "인박스",
+   "tags": [
+    "모델",
+    "MoE",
+    "중국",
+    "오픈소스",
+    "Frontier"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/moonshot-kimi-k3-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/moonshot-kimi-k3.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/moonshot-kimi-k3.md"
+    }
+   ]
+  },
+  {
+   "title": "Thinking Machines Lab, Inkling 공개 — 975억 파라미터 개방가중 모델",
+   "firstSeen": "2026-07-16",
+   "surfaced": "2026-07-18",
+   "verified": true,
+   "verifyNote": "TechCrunch·Thinking Machines Lab 공식 발표 교차확인. Inkling은 975억 파라미터 개방가중 모델. Mira Murati(전 OpenAI CTO) CEO. 쿼리당 41억 파라미터만 활성화. Frontier 모델보다 저렴한 실행비.",
+   "source": "https://techcrunch.com/2026/07/16/thinking-machines-lab-inkling/",
+   "status": "인박스",
+   "tags": [
+    "모델",
+    "오픈소스",
+    "스타트업",
+    "효율성",
+    "Mira Murati"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/thinking-machines-inkling-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/thinking-machines-inkling.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/thinking-machines-inkling.md"
+    }
+   ],
+   "postId": "thinking-machines-inkling"
+  },
+  {
+   "title": "중국, AI 에이전트 규제 — 세계 첫 전용 규제 체계 발효",
+   "firstSeen": "2026-07-15",
+   "surfaced": "2026-07-18",
+   "verified": true,
+   "postId": "china-agent-regulation",
+   "verifyNote": "중국 CMOIC 공식 발표(7/15) + Reuters·TechCrunch·IAPP·AI Governance Institute 4곳 교차확인. 세계 최초 에이전트 전용 규제. 3단계 권한 프레임워크. 고위험 분야 신고·테스트 요구.",
+   "source": "https://www.caac.gov.cn/en/2026/07/15-intelligent-agents-regulations/",
+   "status": "인박스",
+   "tags": [
+    "정책",
+    "규제",
+    "중국",
+    "에이전트",
+    "거버넌스"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/china-agent-regulation-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/china-agent-regulation.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/china-agent-regulation.md"
+    }
+   ]
+  },
+  {
+   "title": "Google, Hachette·Cengage·Elsevier 저작권 소송 — Gemini 학습용 도용 적발",
+   "firstSeen": "2026-07-14",
+   "surfaced": "2026-07-18",
+   "verified": true,
+   "verifyNote": "TechCrunch·SearchEngineJournal·AlJazeera·TheWrap 4곳 7/14~15 동시 보도. 남동구 뉴욕 연방법원 제출. Hachette Book Group, Scott Turow, Cengage Learning, Elsevier, S.C.R.I.B.E. 공동 원고. Google Books 및 Google Play Store 도서를 Gemini 학습에 무단 사용, 저작권 정보 의도적 제거. 내부 문서 '$100B 규모 벌금 위험' 인용.",
+   "source": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/",
+   "status": "인박스",
+   "tags": [
+    "소송",
+    "저작권",
+    "Gemini",
+    "Google",
+    "규제"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/google-publishers-lawsuit-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/google-publishers-lawsuit.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/google-publishers-lawsuit.md"
+    }
+   ],
+   "postId": "google-publishers-lawsuit"
+  },
+  {
+   "title": "Meta Muse Image 공개 — 에이전트형 이미지 생성 AI",
+   "firstSeen": "2026-07-07",
+   "surfaced": "2026-07-18",
+   "verified": true,
+   "verifyNote": "Meta AI 공식 블로그·TechCrunch·CNBC·Axios 4곳 7/7 동시 보도. Meta Superintelligence Labs 발표. 코드명 Mango. 에이전트형 생성으로 웹 검색 기반 그라운딩. ChatGPT 이미지 생성기에만 미치지 못하고 Google Nano Banana 2 능가. Meta AI·WhatsApp·Instagram에 무료 공개.",
+   "source": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
+   "status": "인박스",
+   "tags": [
+    "모델",
+    "이미지생성",
+    "Meta",
+    "멀티모달",
+    "에이전트"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/meta-muse-image-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/meta-muse-image.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/meta-muse-image.md"
+    }
+   ]
+  },
+  {
+   "title": "Autonomous Ghost, 노코드 AI 자동화 플랫폼 공개",
+   "firstSeen": "2026-07-17",
+   "surfaced": "2026-07-18",
+   "verified": true,
+   "verifyNote": "FinancialContent·MarketersMedia 7/16~17 보도. 평문 자동화, 브라우저 자동화, 데스크톱 봇, AI 에이전트 워크플로우. Google Sheets·Gmail·Slack·Stripe·HubSpot 등 수백 개 통합. 기업 자동화용 엔터프라이즈 보안.",
+   "source": "https://www.financialcontent.com/article/marketersmedia-2026-7-16-autonomous-ghost-launches-no-code-ai-automation-platform-for-business",
+   "status": "인박스",
+   "tags": [
+    "자동화",
+    "노코드",
+    "에이전트",
+    "스타트업",
+    "워크플로우"
+   ],
+   "articleVersions": []
+  },
+  {
+   "title": "Gloo Holdings IPO 제안 — 7백만 주 공개 모집",
+   "firstSeen": "2026-07-12",
+   "surfaced": "2026-07-18",
+   "verified": true,
+   "verifyNote": "SaaS M&A Tracker·Yahoo Finance·Seeking Alpha 등 7/12 보도. 신규 7백만 주 공개 모집으로 AI 인수 자금 조성. CEO Scott Beck 투표권 53.3% 유지. 2026년 매출 가이던스 $195M 상향(238% YoY 증가). 신청서 상 '지속 능력 의문' 명시.",
+   "source": "https://www.saasrise.com/deals/gloo-announces-proposed-public-offering-of-7-million-class-a-common-shares-3c4a9fc5-8772-4de5-b05b-d7cf46286867",
+   "status": "인박스",
+   "tags": [
+    "자금",
+    "IPO",
+    "스타트업",
+    "AI",
+    "신앙기반SaaS"
+   ],
+   "articleVersions": []
+  },
+  {
+   "title": "Moonshot AI Kimi K3 — 2.8조 MoE 모델, Arena에서 Fable 5·Sol 상회",
+   "firstSeen": "2026-07-16",
+   "surfaced": "2026-07-20",
+   "verified": true,
+   "verifyNote": "TechCrunch·Fortune·Axios·Arena·OpenRouter 7/16 교차확인. 2.8T MoE, 1M 토큰 컨텍스트. K3 Max(채팅)·K3 Swarm Max(병렬 처리) 2종. Arena 맹검 테스트에서 프론트엔드 코딩 Fable 5·GPT-5.6 Sol 능가. API $3(입력)/$15(출력).",
+   "source": "https://www.axios.com/2026/07/16/moonshot-kimi-ai-china-model-openai-anthropic",
+   "status": "인박스",
+   "postId": "moonshot-kimi-k3",
+   "tags": [
+    "모델",
+    "중국",
+    "frontier",
+    "에이전트"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/kimi-k3-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/kimi-k3.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/kimi-k3.md"
+    }
+   ]
+  },
+  {
+   "title": "Google vs 출판사 저작권 소송 — Gemini 학습에 무단 사용 혐의",
+   "firstSeen": "2026-07-14",
+   "surfaced": "2026-07-20",
+   "verified": true,
+   "verifyNote": "TechCrunch·Al Jazeera·Engadget·Yahoo Finance 7/14 교차확인. Hachette·Cengage·Elsevier·저자 Scott Turow 등 집단 소송. Gemini 학습에 저작권 자료 무단 사용 주장. Google Books 협의 조건(스니펫 표시만) 초과. 내부 문서에서 '10B~100B 달러 벌금 위험' 인정.",
+   "source": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/",
+   "status": "인박스",
+   "postId": "google-publishers-lawsuit",
+   "tags": [
+    "Google",
+    "저작권",
+    "소송",
+    "논란"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/google-publishers-lawsuit-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/google-publishers-lawsuit.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/google-publishers-lawsuit.md"
+    }
+   ]
+  },
+  {
+   "title": "Neko Health, $700M Series C 펀딩 — 신체 스캔 헬스테크 $7B 밸류",
+   "firstSeen": "2026-07-15",
+   "surfaced": "2026-07-20",
+   "verified": true,
+   "verifyNote": "TechCrunch·Axios·MobiHealthNews·Neko Health 공식 7/15 교차확인. Lightspeed Venture·O.G. Venture 주도. $7B 밸류 도달. 100,000명+ 스캔 실적, 350,000명+ 대기열/예약.",
+   "source": "https://techcrunch.com/2026/07/15/daniel-eks-body-scanning-startup-neko-health-raises-another-700m/",
+   "status": "검수중",
+   "tags": [
+    "자금",
+    "헬스테크",
+    "의료AI"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/neko-health-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/neko-health.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/neko-health.md"
+    }
+   ],
+   "postId": "neko-health"
+  },
+  {
+   "title": "Chai Discovery, $400M Series C 펀딩 — AI 신약개발 $3.8B 밸류",
+   "firstSeen": "2026-07-14",
+   "surfaced": "2026-07-20",
+   "verified": true,
+   "verifyNote": "Dealroom·Yahoo Finance·Endpoints News·Fierce Biotech 7/14 교차확인. Index Ventures·Kleiner Perkins·Sequoia 주도. $3.8B 밸류(7개월 전 $1.3B에서 3배). Lilly·Pfizer·Novartis와 거래.",
+   "source": "https://app.dealroom.co/news/note/chai-discovery-raises-400m-series-c-at-3-8b-valuation-for-ai-drug-discovery",
+   "status": "검수중",
+   "tags": [
+    "자금",
+    "신약개발",
+    "AI"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/chai-discovery-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/chai-discovery.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/chai-discovery.md"
+    }
+   ],
+   "postId": "chai-discovery"
+  },
+  {
+   "title": "xAI Grok 4.5 공개 출시 — Opus급 속도·비용 효율 모델",
+   "firstSeen": "2026-07-08",
+   "surfaced": "2026-07-20",
+   "verified": true,
+   "verifyNote": "TechCrunch·Axios·Grok 공식 7/8 교차확인. Opus급 성능, 더 빠르고 저렴함. 코딩·에이전트 특화. Cursor·Grok Build·SpaceXAI 콘솔에서 접근. $2(입력)/$6(출력). 2배 토큰 효율.",
+   "source": "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/",
+   "status": "인박스",
+   "tags": [
+    "xAI",
+    "모델",
+    "코딩"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/grok-4-5-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/grok-4-5.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/grok-4-5.md"
+    }
+   ],
+   "postId": "grok-4-5"
+  },
+  {
+   "title": "Meta Muse Image — 이미지 생성 모델 공개",
+   "firstSeen": "2026-07-07",
+   "surfaced": "2026-07-20",
+   "verified": true,
+   "verifyNote": "Meta 공식·TechCrunch·CNBC·Axios 7/7 교차확인. Text-to-image·편집·다중 이미지 편집에서 Arena 2위. 에이전트 구조(검색·코딩 도구 활용·자체 개선). Instagram·WhatsApp·Meta AI 앱에서 접근.",
+   "source": "https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/",
+   "status": "인박스",
+   "tags": [
+    "Meta",
+    "모델",
+    "이미지생성"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/meta-muse-image-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/meta-muse-image.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/meta-muse-image.md"
+    }
+   ],
+   "postId": "meta-muse-image"
+  },
+  {
+   "title": "Pinecone Nexus Engine, 7/1 공개 프리뷰 — AI 에이전트용 지식 컴파일러",
+   "firstSeen": "2026-07-01",
+   "surfaced": "2026-07-20",
+   "verified": true,
+   "verifyNote": "Pinecone 공식 7/1 프리뷰 발표(5/5 초기 공개). Context Compiler·KnowQL로 조직 문서 구조화. 토큰 비용 90% 감소, 완료 시간 30배 단축, 완료율 90%+. 새 Builder tier($20/월), Microsoft OneLake 통합.",
+   "source": "https://www.pinecone.io/blog/knowledge-infrastructure-for-agents/",
+   "status": "인박스",
+   "tags": [
+    "인프라",
+    "에이전트",
+    "벡터DB"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/pinecone-nexus-engine-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/pinecone-nexus-engine.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/pinecone-nexus-engine.md"
+    }
+   ],
+   "postId": "pinecone-nexus-engine"
+  },
+  {
+   "title": "Google, Gemini 효율을 위해 ‘Frozen v2’ AI 칩 개발 중 — 6~10배 효율 목표 (2028년)",
+   "firstSeen": "2026-07-20",
+   "surfaced": "2026-07-21",
+   "verified": true,
+   "verifyNote": "The Information(익명 소식통) + TechCrunch + CNBC 교차확인. 효율 6~10배·2028 출시는 익명 소식통 기반(독립 검증 전). 보도 후 Alphabet 주가 약 3% 상승.",
+   "source": "https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/",
+   "status": "검수중",
+   "tags": [
+    "하드웨어",
+    "Google"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/google-frozen-v2-chip-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/google-frozen-v2-chip.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/google-frozen-v2-chip.md"
+    }
+   ],
+   "postId": "google-frozen-v2-chip"
+  },
+  {
+   "title": "Natural, AI 에이전트용 결제 인프라 $30M 시리즈A 유치 (총 $40M)",
+   "firstSeen": "2026-07-20",
+   "surfaced": "2026-07-21",
+   "verified": true,
+   "verifyNote": "TechCrunch + PR Newswire 교차확인. Forerunner Ventures(Kirsten Green) 주도 $30M Series A, 총 $40M. 2025년 설립. ACH·wire·RTP·stablecoin 지원.",
+   "source": "https://techcrunch.com/2026/07/20/natural-raises-30m-to-reinvent-payments-for-ai-agents-and-take-on-stripe/",
+   "status": "검수중",
+   "tags": [
+    "자금",
+    "에이전트"
+   ],
+   "articleVersions": [
+    {
+     "v": "정리본",
+     "path": "collect/natural-ai-agent-payments-summary.md"
+    },
+    {
+     "v": "자세히",
+     "path": "collect/natural-ai-agent-payments.md"
+    },
+    {
+     "v": "💬 반응",
+     "path": "collect/reactions/natural-ai-agent-payments.md"
+    }
+   ],
+   "postId": "natural-ai-agent-payments"
+  }
+ ]
 }
