@@ -16,6 +16,10 @@ const ROOT = process.cwd();
 const SITE = 'https://aicatveo3-prog.github.io/ai_Blog';   // 배포 베이스 URL(끝에 / 없음)
 const BRAND = 'AI 쉽게 알려주는 집';
 const TAGLINE = '어려운 AI 뉴스, 학생도 이해하게 쉽게 알려드려요';
+// 외부 출처 링크 제거 모드 — 자동 루틴이 지어낸(존재하지 않는) 출처 URL들이 404를 내서,
+// 링크는 떼고 텍스트만 남기며 '# 출처' 섹션은 통째로 뺀다(2026-07-20). 내부(홈·글) 링크는 유지.
+// 앞으로 링크검사 가드로 '실존 URL'만 통과하게 한 뒤, 실제 링크를 살리려면 이 값을 false로.
+const STRIP_EXTERNAL_LINKS = true;
 
 // ---------- 유틸 ----------
 const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
@@ -37,8 +41,12 @@ function rfc822(date) { return new Date(`${date}T09:00:00+09:00`).toUTCString();
 // ---------- 마크다운 렌더러 (index.html과 동일 규칙) ----------
 function inline(s){const codes=[],links=[];
   s=escHtml(s).replace(/`([^`]+)`/g,(m,c)=>{codes.push(c);return '␞C'+(codes.length-1)+'␞';});
-  s=s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,(m,t,u)=>{t=t.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<em>$2</em>');links.push('<a href="'+escAttr(u)+'" target="_blank" rel="noopener">'+t+'</a>');return '␞L'+(links.length-1)+'␞';});
-  s=s.replace(/(https?:\/\/[^\s<>()]+[^\s<>().,;:])/g,(m)=>{links.push('<a href="'+escAttr(m)+'" target="_blank" rel="noopener">'+m+'</a>');return '␞L'+(links.length-1)+'␞';});
+  s=s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,(m,t,u)=>{t=t.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<em>$2</em>');
+    if(STRIP_EXTERNAL_LINKS && /^https?:\/\//i.test(u)){links.push(t);return '␞L'+(links.length-1)+'␞';}
+    links.push('<a href="'+escAttr(u)+'" target="_blank" rel="noopener">'+t+'</a>');return '␞L'+(links.length-1)+'␞';});
+  s=s.replace(/(https?:\/\/[^\s<>()]+[^\s<>().,;:])/g,(m)=>{
+    if(STRIP_EXTERNAL_LINKS){links.push(m);return '␞L'+(links.length-1)+'␞';}
+    links.push('<a href="'+escAttr(m)+'" target="_blank" rel="noopener">'+m+'</a>');return '␞L'+(links.length-1)+'␞';});
   s=s.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
   s=s.replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<em>$2</em>');
   s=s.replace(/␞C(\d+)␞/g,(m,i)=>'<code>'+codes[+i]+'</code>');
@@ -95,7 +103,14 @@ function prepArticleBody(md){
     if(!fence){ const h=ln.match(/^(#{1,4})(\s+.*)$/); if(h){ ln = '#'.repeat(Math.min(4,h[1].length+1)) + h[2]; } }
     out.push(ln);
   }
+  // 링크 제거 모드: '출처/참고' 섹션(전부 지어낸 URL 목록)을 통째로 제거.
+  if(STRIP_EXTERNAL_LINKS){
+    let f2=false, cut=-1;
+    for(let k=0;k<out.length;k++){ if(/^```/.test(out[k])) f2=!f2; if(!f2 && /^#{1,4}\s*(출처|참고\s*자료|references?|sources?)/i.test(out[k].trim())){ cut=k; break; } }
+    if(cut>=0) out=out.slice(0,cut);
+  }
   while(out.length && out[0].trim()==='') out.shift();
+  while(out.length && out[out.length-1].trim()==='') out.pop();
   return out.join('\n');
 }
 
