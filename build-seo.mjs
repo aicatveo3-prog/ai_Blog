@@ -394,6 +394,11 @@ const bylineHtml = (p) => {
 const pubDate = (p) => p.published
   || (Array.isArray(p.versions) ? p.versions.map(v=>v&&v.date).filter(Boolean).sort().slice(-1)[0] : '')
   || p.date || '';
+// 글 작성 날짜 — v1/v2 등 draft(글쓰기 단계)의 '최신 버전 날짜'. 수집 탭(정리본/자세히/반응)·발행일이 아님.
+const writeDate = (p) => {
+  const vs = Array.isArray(p.versions) ? p.versions.map(v=>v&&v.date).filter(Boolean) : [];
+  return (vs.length ? vs.slice().sort().slice(-1)[0] : '') || p.published || p.date || '';
+};
 
 // ---------- 홈(index.html) — AI 소식 달력(하이브리드: 미니 달력 + 첫 등장일 그룹) ----------
 function buildHome(posts) {
@@ -444,12 +449,12 @@ function buildHome(posts) {
   } else {
     // 뷰 ①: 소식 날짜순(firstSeen) — 달력 + 아젠다
     const viewDate = monthGrid(dates[0].slice(0,7)) + agendaOf(dates);
-    // 뷰 ②: 최신 작성순(발행/작성일) — 카드 그리드
+    // 뷰 ②: 최신 작성순 — v1/v2 draft(글쓰기) 최신 날짜 기준. 카드 그리드.
     const fmtMD = (s) => { const [ ,m,d] = s.split('-'); return `${+m}/${+d}`; };
-    const writeSorted = posts.slice().sort((a,b)=> (pubDate(b)||'').localeCompare(pubDate(a)||'') || (b.date||'').localeCompare(a.date||''));
+    const writeSorted = posts.slice().sort((a,b)=> (writeDate(b)||'').localeCompare(writeDate(a)||''));
     const wcards = writeSorted.map(p=>{
-      const pd = pubDate(p);
-      return `<a class="wcard" href="p/${p.id}/"><span class="wdate">🗓 ${pd?fmtMD(pd)+' 발행':''}</span><span class="t">${escHtml(p.title)}</span><span class="d">${escHtml(p.angle||'')}</span></a>`;
+      const wd = writeDate(p);
+      return `<a class="wcard" href="p/${p.id}/"><span class="wdate">🗓 ${wd?fmtMD(wd)+' 작성':''}</span><span class="t">${escHtml(p.title)}</span><span class="d">${escHtml(p.angle||'')}</span></a>`;
     }).join('');
     const viewWrite = `<div class="wgrid">${wcards}</div>`;
     const toggle = `<div class="sorttoggle"><button data-view="date">📅 소식 날짜순</button><button data-view="write">🆕 최신 작성순</button></div>`;

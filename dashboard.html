@@ -844,7 +844,7 @@ async function boot(){
       return (vs.length ? vs.sort().slice(-1)[0] : '') || p.published || p.date || '';
     };
     const ordered = posts.slice().sort((a,b)=>
-      (writeDate(b)||'').localeCompare(writeDate(a)||'') || (b.published||'').localeCompare(a.published||''));
+      (writeDate(b)||'').localeCompare(writeDate(a)||''));
     list.innerHTML = ordered.length ?
       '<div class="artrow arthead"><div>📝 블로그 글</div><div>📱 스레드 글</div></div>' +
       ordered.map(artRow).join('') :
